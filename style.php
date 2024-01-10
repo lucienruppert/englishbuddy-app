@@ -5,7 +5,7 @@
     }
 
     body {
-        <? print $globalcolor ?>;
+        background-color: green;
     }
     input[type=checkbox] {
         zoom: 1.5;
