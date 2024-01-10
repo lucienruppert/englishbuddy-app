@@ -5,8 +5,9 @@
     }
 
     body {
-        background-color: green;
+        background: green;
     }
+
     input[type=checkbox] {
         zoom: 1.5;
     }
