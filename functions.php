@@ -10,7 +10,6 @@ $ext = "";
 $GLOBALS['szoPackageSize'] = 10;
 $GLOBALS['szoPackageRecordMpLimit'] = 20;
 $GLOBALS['szoPackageRecordBg'] = 'grey';
-
 $GLOBALS['mondatPackageSize'] = 10;
 $GLOBALS['mondatPackageRecordMpLimit'] = 100;
 $GLOBALS['mondatPackageRecordBg'] = 'grey';

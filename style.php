@@ -4,6 +4,9 @@
         border: 1px solid green;
     }
 
+    body {
+        <? print $globalcolor ?>;
+    }
     input[type=checkbox] {
         zoom: 1.5;
     }

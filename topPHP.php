@@ -2,8 +2,8 @@
 
     error_reporting(0);
     $defaultNyelv = 0;
-    $notLoggedInMessage = "Nem vagy bel�pve!";
-    $premiumUserOnlyMessage = "Csak pr�mium felhaszn�l�k sz�m�ra el�rhet�!";
+    $notLoggedInMessage = "Nem vagy belépve!";
+    $premiumUserOnlyMessage = "Csak prémium felhasználók számára elérhető!";
 
     if(!$_SESSION['userObject']){
         session_start();
