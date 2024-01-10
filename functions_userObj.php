@@ -1,6 +1,9 @@
 <?php
+//php7 hiányzó funkciói
+    include_once('./php7/mysql_replacement.php');
+    include_once('./php7/ereg-functions.php');
 
-mysql_connect ('mysql.luciendelmar.com','luciendelmar','4HUJKChdXj');
+mysql_connect ('mysql.luciendelmar.com','luciendelmar','9CUiNwYzV3');
 mysql_select_db('luciendelmar');
 mysql_query("SET NAMES 'latin2'");
 

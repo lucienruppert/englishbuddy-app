@@ -631,4 +631,31 @@ if(!$isAndroid){ ?>
 
 <?php    } ?>
 
+<?php
+    if($userObject)
+        $progressPct = getUserProgress($userObject, $countBasicWords, $packageRecordsBasicWords);
+?>
+
+<?php if($isAndroid){ ?>
+
+<div id='mainDiv' style=<?php print "'border: 0px solid black;position:absolute;top:" . $mainDivtop .";width:100%;text-align:left;" . $mainStyleText . "'"; ?>>
+<?php if($userObject){ ?>
+<table border='0' width='100%' align='left' valign='top' cellpadding='60' cellspacing='40'>
+<tr><td align='center' style=<?php print "'background:" . $globalcolor . ";'" ?>><a href='#' style='color:white;font-size:50pt;' onclick="sajatSzavak();"><b><? print translate("increasevocabulary_android"); ?></a></td></tr>
+<tr><td align='center' style=<?php print "'background:" . $globalcolor . ";'" ?>><a href='#' style='color:white;font-size:50pt;' onclick="alapszokincs();"><b><? print translate("basicvocabulary_android"); ?></a></td></tr>
+<tr><td align='center' style=<?php print "'background:" . $globalcolor . ";'" ?>><a href='#' style='color:white;font-size:50pt;' onclick="peldamondatok();"><b><? print translate("tudastar_android"); ?></a></td></tr>
+<tr><td align='center' style=<?php print "'background:" . $globalcolor . ";'" ?>><a href='#' style='color:white;font-size:50pt;' onclick="intelligensGyakorlo()" ><b><? print translate("intelligensgyakorlo_android"); ?></a></td></tr>
+
+<?php if(!in_array($userObject["status"], array(1, 2))){ ?>
+<tr><td align='center' style='border: 2px solid grey;'><a href='#' style=<?php print "'color:" . $globalcolor . ";font-size:50pt;'" ?> onclick=<?php print $onclick1; ?> ><b><? print translate("sajat_mondatok_10"); ?></a></td></tr>
+<tr><td align='center' style='border: 2px solid grey;'><a href='#' style=<?php print "'color:" . $globalcolor . ";font-size:50pt;'" ?> onclick=<?php print $onclick4; ?> ><b><? print translate("sajat_mondat_szo"); ?></a></td></tr>
+<tr><td align='center' style='border: 2px solid grey;'><a href='#' style=<?php print "'color:" . $globalcolor . ";font-size:50pt;'" ?> onclick=<?php print $onclick3; ?> ><b><? print translate("tanuloszoba"); ?></a></td></tr>
+<tr><td align='center' style='border: 2px solid grey;'><a href='#' style=<?php print "'color:" . $globalcolor . ";font-size:50pt;'" ?> onclick="audioSzoba();"><b><? print translate("audioszoba"); ?></a></td></tr>
+<?php }  ?>
+
+<?php }  ?>
+
+</table>
+
+<?php   } else{   ?>
 
