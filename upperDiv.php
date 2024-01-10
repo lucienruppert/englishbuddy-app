@@ -1,5 +1,5 @@
-<div id='UpperDiv' style='position:relative;width:100%;'>
-    <table align='center' border='0'  width='100%' valign='top' style='background:#B6000A'>
+<div id='UpperDiv' style='position:relative;width:100%;background:#031525'>
+    <table align='center' border='0'  width='100%' valign='top'>
         <tr>
             <td align="right">
                 <?php 
@@ -72,7 +72,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td  align='right' class='loginInput' style=<?php print "'font-size:" . $email_password_title_Size . ";color:white;'"; ?>><?php print translate('subs_Jelszó'); ?></td>
+                                    <td  align='right' class='loginInput' style=<?php print "'font-size:" . $email_password_title_Size . ";color:white;'"; ?>><?php print translate('subs_Jelszï¿½'); ?></td>
                                     <td>
                                     <input class='loginInput' type='password' name='username' id='username' size=<?php print $PasswordSize ?> style=<?php print "'font-size:" . $EmailFieldFontSize . ";color:white;border:1px solid white;background-color:" . $globalcolor . ";'" ?>>
                                 </td>

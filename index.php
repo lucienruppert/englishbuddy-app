@@ -6,7 +6,7 @@
 <HEAD>
     <META HTTP-EQUIV='CHARSET' CONTENT='text/html; charset=ISO-8859-2'>
     <link rel="shortcut icon" type="image/x-icon" href="/images/white.ico">
-    <TITLE>Kikérdező</TITLE>
+    <TITLE>KIKĂRDEZĹ</TITLE>
     <link href="js/jquery-ui.min.css" rel="stylesheet" type="text/css">
     <link rel=stylesheet type='text/css' href='baseStyle.css'>
     <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>

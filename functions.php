@@ -15,8 +15,8 @@ $GLOBALS['mondatPackageSize'] = 10;
 $GLOBALS['mondatPackageRecordMpLimit'] = 100;
 $GLOBALS['mondatPackageRecordBg'] = 'grey';
 
-$tdValue = "background-color:#B6000A;";
-$colorValue = "#B6000A";
+$tdValue = "background-color:#031525;";
+$colorValue = "#031525";
 $GLOBALS['TDBgGlobalColor'] = $tdValue;
 $GLOBALS['globalcolor'] = $colorValue;
 
@@ -24,162 +24,103 @@ include("functions_translation.php");
 
 $isAndroid = false;
 $ua = strtolower($_SERVER['HTTP_USER_AGENT']);
-if(stripos($ua,'android') !== false) { // && stripos($ua,'mobile') !== false) {
+if (stripos($ua, 'android') !== false) { // && stripos($ua,'mobile') !== false) {
     $isAndroid = true;
 }
-if($isAndroid){
-	//$androidText = "EZ ANDROID!";
-	$ButtonFontSize = '50pt';
-	$columnNumber = '1';
-	$columnNumberWords = '1';
-	$cellpadding = '45';
-	$datadivPosition = 'top:1000px';
-	$generalfontColor ='grey';
-	$email_password_title_Size = '40px';
-	$EmailFieldFontSize ='30pt';
-	$FlagHeight ='100';
-	$FlagWidth ='256';
-	$HelloFontSize = '50px';
-	$knowledgeBaseDivFontSize = 'font-size:50;height:200px;';
-	$knowledgeBaseDivHeight = 'width:100%;height:1250;overflow:auto;';
-	$knowledgeBaseDivPosition ='width:100%;background-color:white;position:absolute;top:-50px;left:50%;margin-left:-395px;filter:alpha(opacity=100);opacity:1;z-index:99;display:none;';
-	$knowledgeBaseDivInnerWidth = 'width:100%';
-	$lcasa_font_title = '60pt';
-	$lcasa_font_subtitle = '30pt';
-	$lcasa_column1 = '700';
-	$lcasa_column_percent = '4%';
-	$lcasa_font_text = '26pt';
-	$loginFontSize = '30pt';
-	$logosize1 = '120pt';
-	$logosize2 = '34pt';
-	$mainDivtop = '1100px';
-	$menuFontSize = 'font-size:40pt;color:grey;font-weight:bold;';
-	$menuWidth = '100%';
-	$menuHeight = '250';
-	$menuPosition = 'top:200px';
-	$menuTablecellspacing = '0px';
-	$MiddlePadding = '200px';
-	$PasswordSize ='22';
-	$Padding ='50px';
-	$picWidth = '100px';
-	$RedMenuStyle='background:white;font-size:40pt';
-	$RedMenuStyle='background:white;font-size:40pt';
-	$titleFont = 'font-size:20pt;';
-	$bottomPadding = '150px';
-	$TopRedHeight = '850px';
-	$welcomeFontSize = 'font-size:50pt;color:grey;font-weight:bold;';
-	$welcomeTextTop = '440px';
-	$worddivFontSize = 'font-size:100';
-	$worddivSize = 'width:100%;height:1350;overflow:auto;';
-	$worddivPosition ='background-color:white;position:absolute;top:-100px;left:50%;margin-left:-395px;filter:alpha(opacity=100);opacity:1;z-index:99;display:none;';
-	$xSize='font-size:80;font-weight:bold;color:white';
-	$xWidth='100';
-	$SubscribeFontSize='50px';
-	$SubscribeCheckBoxZoom='3';
-   }
-else{
-	//$androidText = "EZ WINDOWS!";
-	$ButtonFontSize = '10pt';
-	$cellpadding = '10';
-	$columnNumber = '1';
-	$columnNumberWords = '1';
-	$datadivPosition = 'top:310px';
-	$generalfontColor ='grey';
-	$email_password_title_Size = '12px';
-	$EmailFieldFontSize ='10pt';
-	$FlagHeight ='20';
-	$FlagWidth ='40';
-	$HelloFontSize = '26px';
-	$knowledgeBaseDivFontSize = 'font-size:14;height:50px;';
-	$knowledgeBaseDivHeight = 'width:400px;height:400px;overflow:auto;';
-	$knowledgeBaseDivPosition ='width:400px;background-color:white;position:absolute;top:80px;left:50%;margin-left:-200px;filter:alpha(opacity=100);opacity:1;z-index:99;display:none;';
-	$knowledgeBaseDivInnerWidth = '370px';
-	$lcasa_font_title = '60px';
-	$lcasa_font_subtitle = '20pt';
-	$lcasa_column1 = '500';
-	$lcasa_column_percent = '27.7%';
-	$lcasa_font_text = '18px';
-	$loginFontSize = '10pt';
-	$logosize1 = '40pt';
-	$logosize2 = '10pt';
-	$mainDivtop = '220px';
-	$menuFontSize = 'font-size:10pt;color:grey;font-weight:plain;';
-	$menuWidth = '180';
-	$menuHeight = '50';
-	$menuTablecellspacing = '0px';
-	$menuPosition = 'top:140px';
-	$MiddlePadding = '20px';
-	$PasswordSize ='14';
-	$picWidth = '60px';
-	$Padding ='5px';
-	$RedMenuStyle = 'background-color:white;font-size:12pt;';
-	$RedMenuStyle2 = 'background-color:white;font-size:12pt;';
-	$bottomPadding = '20px';
-	$titleFont = 'font-size:12pt;';
-	$TopRedHeight = '155px';
-	$welcomeFontSize = 'font-size:18pt;color:grey;font-weight:bold;';
-	$welcomeTextTop = '115px';
-	$worddivFontSize = 'font-size:14';
-	$worddivSize = 'width:400px;height:445px;overflow:auto;';
-	$worddivPosition ='background-color:white;position:absolute;top:-100px;left:50%;margin-left:-180px;filter:alpha(opacity=100);opacity:1;z-index:99;display:none;';
-	$xSize='font-size:17;font-weight:bold;color:white';
-	$xWidth='20';
-	$SubscribeFontSize='16px';
-	$SubscribeCheckBoxZoom='1';
-
-}
-
-if($isAndroid && $userObject){
-	$TopRedHeight = '300px';
-	$mainDivtop = '560px';
-}
-
+$ButtonFontSize = '10pt';
+$cellpadding = '10';
+$columnNumber = '1';
+$columnNumberWords = '1';
+$datadivPosition = 'top:310px';
+$generalfontColor = 'grey';
+$email_password_title_Size = '12px';
+$EmailFieldFontSize = '10pt';
+$FlagHeight = '20';
+$FlagWidth = '40';
+$HelloFontSize = '26px';
+$knowledgeBaseDivFontSize = 'font-size:14;height:50px;';
+$knowledgeBaseDivHeight = 'width:400px;height:400px;overflow:auto;';
+$knowledgeBaseDivPosition = 'width:400px;background-color:white;position:absolute;top:80px;left:50%;margin-left:-200px;filter:alpha(opacity=100);opacity:1;z-index:99;display:none;';
+$knowledgeBaseDivInnerWidth = '370px';
+$lcasa_font_title = '60px';
+$lcasa_font_subtitle = '20pt';
+$lcasa_column1 = '500';
+$lcasa_column_percent = '27.7%';
+$lcasa_font_text = '18px';
+$loginFontSize = '10pt';
+$logosize1 = '40pt';
+$logosize2 = '10pt';
+$mainDivtop = '220px';
+$menuFontSize = 'font-size:10pt;color:grey;font-weight:plain;';
+$menuWidth = '180';
+$menuHeight = '50';
+$menuTablecellspacing = '0px';
+$menuPosition = 'top:140px';
+$MiddlePadding = '20px';
+$PasswordSize = '14';
+$picWidth = '60px';
+$Padding = '5px';
+$RedMenuStyle = 'background-color:white;font-size:12pt;';
+$RedMenuStyle2 = 'background-color:white;font-size:12pt;';
+$bottomPadding = '20px';
+$titleFont = 'font-size:12pt;';
+$TopRedHeight = '155px';
+$welcomeFontSize = 'font-size:18pt;color:grey;font-weight:bold;';
+$welcomeTextTop = '115px';
+$worddivFontSize = 'font-size:14';
+$worddivSize = 'width:400px;height:445px;overflow:auto;';
+$worddivPosition = 'background-color:white;position:absolute;top:-100px;left:50%;margin-left:-180px;filter:alpha(opacity=100);opacity:1;z-index:99;display:none;';
+$xSize = 'font-size:17;font-weight:bold;color:white';
+$xWidth = '20';
+$SubscribeFontSize = '16px';
+$SubscribeCheckBoxZoom = '1';
 
 function DEBUG($variable)
 {
-	print_r("<pre>");
-	print_r($variable);
-	print_r("</pre>");
+    print_r("<pre>");
+    print_r($variable);
+    print_r("</pre>");
 }
 
 // debug  function
-function mylog($text, $level='i', $file='logs') {
+function mylog($text, $level = 'i', $file = 'logs')
+{
     switch (strtolower($level)) {
         case 'e':
         case 'error':
-            $level='ERROR';
+            $level = 'ERROR';
             break;
         case 'i':
         case 'info':
-            $level='INFO';
+            $level = 'INFO';
             break;
         case 'd':
         case 'debug':
-            $level='DEBUG';
+            $level = 'DEBUG';
             break;
         default:
-            $level='INFO';
+            $level = 'INFO';
     }
-    if(defined("LOG")){
-        error_log(date("[Y-m-d H:i:s]")."\t[".$level."]\t[".basename(__FILE__)."]\t".$text."\n", 3, $file);
+    if (defined("LOG")) {
+        error_log(date("[Y-m-d H:i:s]") . "\t[" . $level . "]\t[" . basename(__FILE__) . "]\t" . $text . "\n", 3, $file);
     }
 }
 
 function getWords($number = 10, $level = 1, $exceptionArray = array())
 {
-    if(!$level){
+    if (!$level) {
         $level = 1;
     }
     $wordsRecordArray = getAllWordsByLevel($level, $exceptionArray);
 
-    if(!$number){
+    if (!$number) {
         $number = 1;
     }
-    if(count($wordsRecordArray) < $number){
+    if (count($wordsRecordArray) < $number) {
         $number = count($wordsRecordArray);
     }
     $returnWordsArray = array();
-    for($i = 1; $i <= $number; $i++){
+    for ($i = 1; $i <= $number; $i++) {
         $genNumber = mt_rand(0, count($wordsRecordArray) - 1);
         $returnWordsArray[] = $wordsRecordArray[$genNumber];
         $wordsRecordArray = array_merge(array_slice($wordsRecordArray, 0, $genNumber), array_slice($wordsRecordArray, $genNumber + 1));
@@ -190,78 +131,72 @@ function getWords($number = 10, $level = 1, $exceptionArray = array())
 function getFirstNWordsByLevel($topN, $actLevel, $langExt)
 {
     $levels = array();
-    if($actLevel == 'list1' || $actLevel == 'list2'){
+    if ($actLevel == 'list1' || $actLevel == 'list2') {
         $list = getLevelList($langExt);
-        foreach($list as $key => $value){
-            if($key > 0 && ($actLevel == 'list1' && $value[1] == 1
-                || $actLevel == 'list2' && $value[1] == 2)){
+        foreach ($list as $key => $value) {
+            if ($key > 0 && ($actLevel == 'list1' && $value[1] == 1
+                || $actLevel == 'list2' && $value[1] == 2)) {
                 $levels[] = $key;
             }
         }
         $where_level = "level_{$langExt} in (" . implode(", ", $levels) . ")";
-    }
-    else if(startsWith($actLevel, 'listFract_') || $actLevel == 'listAll'){
+    } else if (startsWith($actLevel, 'listFract_') || $actLevel == 'listAll') {
         $list = getLevelList($langExt);
-        foreach($list as $key => $value){
-            if($key > 0 && $value[1] == 1){
+        foreach ($list as $key => $value) {
+            if ($key > 0 && $value[1] == 1) {
                 $levels[] = $key;
             }
         }
         $where_level = "level_{$langExt} in (" . implode(", ", $levels) . ")";
-    }
-    else{
+    } else {
         $where_level = "level_{$langExt} = $actLevel";
     }
 
     $query = "SELECT *, level_{$langExt} as level from words where $where_level and word_{$langExt} is not null and word_{$langExt} != '' order by rand() limit $topN";
 
-    if(startsWith($actLevel, 'listFract_')){
+    if (startsWith($actLevel, 'listFract_')) {
         $toNum = (int)substr($actLevel, 10) * 20;
         $query = "SELECT *, level_{$langExt} as level from words where word_{$langExt} is not null and word_{$langExt} != '' and {$where_level} order by id limit {$toNum}";
-    }
-    else if($actLevel == 'listAll'){
+    } else if ($actLevel == 'listAll') {
         $query = "SELECT *, level_{$langExt} as level from words where word_{$langExt} is not null and word_{$langExt} != '' and {$where_level} order by id";
     }
 
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
-    while($row = mysql_fetch_assoc($result)) {
+    while ($row = mysql_fetch_assoc($result)) {
         $records[] = $row;
     }
-    if(startsWith($actLevel, 'listFract_')){
+    if (startsWith($actLevel, 'listFract_')) {
         $records = array_slice($records, -20);
         shuffle($records);
-    }
-    else if($actLevel == 'listAll'){
+    } else if ($actLevel == 'listAll') {
         shuffle($records);
     }
     return $records;
-
 }
 
 function setWordRecordIf($userObject, $tipus, $package, $seconds)
 {
     $query = "select count(*) from word_records where user_id = {$userObject['id']} and tipus = {$tipus} and package_number = " . (int)$package;
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     list($count) = mysql_fetch_row($result);
 
-    if($count > 0){
+    if ($count > 0) {
         $query = "update word_records set best_time = {$seconds} where user_id = {$userObject['id']} and tipus = {$tipus} and package_number = {$package} and best_time > {$seconds}";
-    }
-    else{
+    } else {
         $query = "insert into word_records (user_id, tipus, package_number, best_time) values({$userObject['id']}, {$tipus}, {$package}, {$seconds})";
     }
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
 }
 
@@ -269,12 +204,12 @@ function getPackageRecords($userObject, $tipus)
 {
     $query = "select * from word_records where user_id = {$userObject['id']} and tipus = {$tipus}";
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $records = array();
-    while($row = mysql_fetch_assoc($result)){
+    while ($row = mysql_fetch_assoc($result)) {
         $records[$row['package_number']] = $row;
     }
     return $records;
@@ -288,46 +223,43 @@ function getFirstNWordsByLevelGroupBy($topN, $actLevel, $langExt, $userObject, $
     $szoLevels = array();
     $mondatLevels = array();
 
-    if($actLevel == 'list1' || $actLevel == 'list2'){
+    if ($actLevel == 'list1' || $actLevel == 'list2') {
         $list = getLevelList($langExt);
-        foreach($list as $key => $value){
-            if($key > 0 && ($actLevel == 'list1' && $value[1] == 1
-                || $actLevel == 'list2' && $value[1] == 2)){
+        foreach ($list as $key => $value) {
+            if ($key > 0 && ($actLevel == 'list1' && $value[1] == 1
+                || $actLevel == 'list2' && $value[1] == 2)) {
                 $levels[] = $key;
             }
         }
         $where_level = "w.level_{$langExt} in (" . implode(", ", $levels) . ")";
-    }
-    else if(startsWith($actLevel, 'listFract_') || $actLevel == 'listAll' || $actLevel == 'mumus' || $actLevel == 'tananyagAll'){
+    } else if (startsWith($actLevel, 'listFract_') || $actLevel == 'listAll' || $actLevel == 'mumus' || $actLevel == 'tananyagAll') {
         $list = getLevelList($langExt);
-        foreach($list as $key => $value){
-            if($key > 0
+        foreach ($list as $key => $value) {
+            if (
+                $key > 0
                 && ($source == 'szo' && $value[1] == 1
                     || $source == 'mondat' && $value[1] == 2
                     || $source == 'szomondat' && ($value[1] == 1 || $value[1] == 2))
-                    || $source == 'tananyag' && $value[1] == 2
-                    || $source == 'alapSzo' && $value[1] == 1
-            ){
+                || $source == 'tananyag' && $value[1] == 2
+                || $source == 'alapSzo' && $value[1] == 1
+            ) {
                 $levels[] = $key;
-                if($value[1] == 1){
+                if ($value[1] == 1) {
                     $szoLevels[] = $key;
-                }
-                else if($value[1] == 2){
+                } else if ($value[1] == 2) {
                     $mondatLevels[] = $key;
                 }
             }
         }
-        if($actLevel != 'tananyagAll'){
+        if ($actLevel != 'tananyagAll') {
             $left_join = "left outer join user_words u on w.id = u.word_id and u.user_id = {$userObject['id']}";
             $where_level = "w.level_{$langExt} in (" . implode(", ", $levels) . ") and (w.user_id = {$userObject['id']} or u.id is not null)";
-        }
-        else{
+        } else {
             $levels = array_intersect($levels, $accessableLevels);
             $levels[] = -1;
             $where_level = "w.level_{$langExt} in (" . implode(", ", $levels) . ")";
         }
-    }
-    else{
+    } else {
         $where_level = "w.level_{$langExt} = $actLevel";
     }
 
@@ -339,12 +271,12 @@ function getFirstNWordsByLevelGroupBy($topN, $actLevel, $langExt, $userObject, $
                 and w.word_{$forras_nyelv_ext} is not null and w.word_{$forras_nyelv_ext} != '' and w.word_{$forras_nyelv_ext} != '...'
                 order by rand() limit $topN";
 
-    if(startsWith($actLevel, 'listFract_') || $actLevel == 'listAll' || $actLevel == 'mumus' || $actLevel == 'tananyagAll'){
-        if(startsWith($actLevel, 'listFract_')){
+    if (startsWith($actLevel, 'listFract_') || $actLevel == 'listAll' || $actLevel == 'mumus' || $actLevel == 'tananyagAll') {
+        if (startsWith($actLevel, 'listFract_')) {
             $mult = ($source == 'szo' || $source == 'alapSzo' ? $GLOBALS['szoPackageSize'] : $GLOBALS['mondatPackageSize']);
             $fromNum = ((int)substr($actLevel, 10) - 1) * $mult;
 
-            if($source == 'alapSzo'){
+            if ($source == 'alapSzo') {
                 $query = "SELECT w.*, w.level_{$langExt} as level
                     from words w
                     where w.category = 1 and w.word_{$langExt} is not null and w.word_{$langExt} != '' and w.word_{$langExt} != '...'
@@ -352,8 +284,7 @@ function getFirstNWordsByLevelGroupBy($topN, $actLevel, $langExt, $userObject, $
                     and w.level_{$langExt} in (" . implode(",", $szoLevels) . ")
                     and w.level_{$langExt} != 0
                     order by w.crdti, w.id limit {$fromNum}, {$mult}";
-            }
-            else {
+            } else {
                 $query = "SELECT distinct w.word_{$forras_nyelv_ext}
                     from words w
                     $left_join
@@ -363,8 +294,7 @@ function getFirstNWordsByLevelGroupBy($topN, $actLevel, $langExt, $userObject, $
                     and {$where_level}
                     order by coalesce(u.crdti, w.crdti), w.id limit {$fromNum}, {$mult}";
             }
-        }
-        else if($actLevel == 'listAll'){
+        } else if ($actLevel == 'listAll') {
             $query = "SELECT distinct w.word_{$forras_nyelv_ext}
                 from words w
                 $left_join
@@ -373,8 +303,7 @@ function getFirstNWordsByLevelGroupBy($topN, $actLevel, $langExt, $userObject, $
                 and w.word_{$forras_nyelv_ext} is not null and w.word_{$forras_nyelv_ext} != '' and w.word_{$forras_nyelv_ext} != '...'
                 and {$where_level}
                 order by rand() limit 300";
-        }
-        else if($actLevel == 'mumus'){
+        } else if ($actLevel == 'mumus') {
             $query = "SELECT distinct w.word_{$forras_nyelv_ext}
                 from words w
                 $left_join
@@ -383,8 +312,7 @@ function getFirstNWordsByLevelGroupBy($topN, $actLevel, $langExt, $userObject, $
                 and w.word_{$forras_nyelv_ext} is not null and w.word_{$forras_nyelv_ext} != '' and w.word_{$forras_nyelv_ext} != '...'
                 and {$where_level}
                 order by coalesce(u.crdti, w.crdti), w.id";
-        }
-        else if($actLevel == 'tananyagAll'){
+        } else if ($actLevel == 'tananyagAll') {
             $query = "SELECT distinct w.word_{$forras_nyelv_ext}
                 from words w
                 where w.word_{$langExt} is not null and w.word_{$langExt} != '' and w.word_{$langExt} != '...'
@@ -392,21 +320,20 @@ function getFirstNWordsByLevelGroupBy($topN, $actLevel, $langExt, $userObject, $
                 and {$where_level}";
         }
 
-        if($actLevel == 'tananyagAll'){
+        if ($actLevel == 'tananyagAll') {
             $query = "SELECT *, level_{$langExt} as level
                     from words w
                     where w.word_{$langExt} is not null and w.word_{$langExt} != '' and w.word_{$langExt} != '...'
                     and w.word_{$forras_nyelv_ext} is not null and w.word_{$forras_nyelv_ext} != '' and w.word_{$forras_nyelv_ext} != '...'
                     and {$where_level}";
-        }
-        else if ($source != 'alapSzo'){
+        } else if ($source != 'alapSzo') {
             $result = mysql_query($query);
-            if(!$result){
+            if (!$result) {
                 print mysql_error();
-                exit("Nem sikerült: " . $query);
+                exit("Nem sikerï¿½lt: " . $query);
             }
             $_words = array();
-            while($row = mysql_fetch_row($result)) {
+            while ($row = mysql_fetch_row($result)) {
                 $_words[] = str_replace("'", "''", $row[0]);
             }
             $query = "SELECT *, level_{$langExt} as level
@@ -414,33 +341,31 @@ function getFirstNWordsByLevelGroupBy($topN, $actLevel, $langExt, $userObject, $
                     where w.word_{$forras_nyelv_ext} in ('" . implode("', '", $_words) . "')";
         }
     }
-    
+
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $records = array();
-    while($row = mysql_fetch_assoc($result)) {
-        if($row["word_{$langExt}"] != '' && $row["word_{$langExt}"] != '...' && $row["word_{$forras_nyelv_ext}"] != '' && $row["word_{$forras_nyelv_ext}"] != '...'){
-            if($source == 'alapSzo'){
+    while ($row = mysql_fetch_assoc($result)) {
+        if ($row["word_{$langExt}"] != '' && $row["word_{$langExt}"] != '...' && $row["word_{$forras_nyelv_ext}"] != '' && $row["word_{$forras_nyelv_ext}"] != '...') {
+            if ($source == 'alapSzo') {
                 $records[] = $row;
-            }
-            else{
+            } else {
                 $records[$row["word_{$forras_nyelv_ext}"]][] = $row;
             }
         }
     }
-    if(startsWith($actLevel, 'listFract_') || $actLevel == 'listAll' || $actLevel == 'mumus' || $actLevel == 'tananyagAll'){
-        if($source == 'szomondat'){
+    if (startsWith($actLevel, 'listFract_') || $actLevel == 'listAll' || $actLevel == 'mumus' || $actLevel == 'tananyagAll') {
+        if ($source == 'szomondat') {
             $szoArray = array();
             $mondatArray = array();
-            foreach($records as $record){
-                foreach($record as $_record){
-                    if(in_array($_record['level'], $szoLevels)){
+            foreach ($records as $record) {
+                foreach ($record as $_record) {
+                    if (in_array($_record['level'], $szoLevels)) {
                         array_push($szoArray, $_record);
-                    }
-                    else if(in_array($_record['level'], $mondatLevels)){
+                    } else if (in_array($_record['level'], $mondatLevels)) {
                         array_push($mondatArray, $_record);
                     }
                 }
@@ -448,21 +373,20 @@ function getFirstNWordsByLevelGroupBy($topN, $actLevel, $langExt, $userObject, $
             shuffle($szoArray);
             shuffle($mondatArray);
             $records = array();
-            while(true){
+            while (true) {
                 $szo = array_pop($szoArray);
-                if($szo != null){
+                if ($szo != null) {
                     $records[$szo["word_{$forras_nyelv_ext}"]][] = $szo;
                 }
                 $mondat = array_pop($mondatArray);
-                if($mondat != null){
+                if ($mondat != null) {
                     $records[$mondat["word_{$forras_nyelv_ext}"]][] = $mondat;
                 }
-                if($szo == null && $mondat == null){
+                if ($szo == null && $mondat == null) {
                     break;
                 }
             }
-        }
-        else{
+        } else {
             shuffle($records);
         }
     }
@@ -471,7 +395,7 @@ function getFirstNWordsByLevelGroupBy($topN, $actLevel, $langExt, $userObject, $
 
 function getIntelligentFilteredWords($txt)
 {
-    if(!$txt){
+    if (!$txt) {
         return array();
     }
     $langExt = getLangExtByLangId($GLOBALS['userObject']['nyelv']);
@@ -517,7 +441,7 @@ function getIntelligentFilteredWords($txt)
                     and trim(w.word_{$langExt}) != '...' and trim(w.word_{$forras_nyelv_ext}) != '...'
                 order by rand()";
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
         return false;
     }
@@ -525,11 +449,11 @@ function getIntelligentFilteredWords($txt)
     $forras_list = getLevelList($GLOBALS['userObject']['forras_nyelv']);
     $records = array();
     $cnt = 0;
-    while($row = mysql_fetch_assoc($result)){
-        if($list[$row['level']][1] == 2 || $forras_list[$row['forras_level']][1] == 2){
+    while ($row = mysql_fetch_assoc($result)) {
+        if ($list[$row['level']][1] == 2 || $forras_list[$row['forras_level']][1] == 2) {
             $records[] = $row;
             $cnt++;
-            if($cnt >= 300)
+            if ($cnt >= 300)
                 break;
         }
     }
@@ -538,20 +462,20 @@ function getIntelligentFilteredWords($txt)
 
 function getLastFiveUpdatedWords($date)
 {
-	//$query = "SELECT w.word_angol,w.word_hun FROM `words` w WHERE w.id IN (select id from `WordsUpdate` WHERE Modified>='".$date."')";
-	$query = "SELECT w.word_angol,w.word_hun,wup.Modified FROM `words` w,`WordsUpdate` wup WHERE w.id = wup.id AND w.level_angol <6 AND w.level_angol >0 order by wup.Modified desc limit 5";
+    //$query = "SELECT w.word_angol,w.word_hun FROM `words` w WHERE w.id IN (select id from `WordsUpdate` WHERE Modified>='".$date."')";
+    $query = "SELECT w.word_angol,w.word_hun,wup.Modified FROM `words` w,`WordsUpdate` wup WHERE w.id = wup.id AND w.level_angol <6 AND w.level_angol >0 order by wup.Modified desc limit 5";
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $records = array();
-	$i =0;
-    while($row = mysql_fetch_assoc($result)) {
+    $i = 0;
+    while ($row = mysql_fetch_assoc($result)) {
         $records[$i] = $row;
-		$i++;
+        $i++;
     }
-	return $records;
+    return $records;
 }
 
 function getWordsByWordLevel($wordLevel, $langExt)
@@ -564,13 +488,13 @@ function getWordsByWordLevel($wordLevel, $langExt)
                 where w.level_{$langExt} = $wordLevel
                 and w.word_{$langExt} is not null and w.word_{$langExt} != '' and w.word_{$langExt} != '...'";
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $records = array();
-	
-    while($row = mysql_fetch_assoc($result)) {
+
+    while ($row = mysql_fetch_assoc($result)) {
         $records[$row["word_{$forras_nyelv_ext}"]][] = $row;
     }
     return $records;
@@ -584,8 +508,8 @@ function getNotOwnedWordIds()
     $levels = array();
 
     $list = getLevelList($langExt);
-    foreach($list as $key => $value){
-        if($key > 0 && ($value[1] == 1))
+    foreach ($list as $key => $value) {
+        if ($key > 0 && ($value[1] == 1))
             $levels[] = $key;
     }
     $query = "SELECT distinct w.id
@@ -597,12 +521,12 @@ function getNotOwnedWordIds()
         and w.level_{$langExt} in (" . implode(", ", $levels) . ")
         order by rand()";
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $records = array();
-    while($row = mysql_fetch_row($result)) {
+    while ($row = mysql_fetch_row($result)) {
         $records[] = $row[0];
     }
     return $records;
@@ -616,8 +540,8 @@ function getNotCategorizedWordIds()
     $levels = array();
 
     $list = getLevelList($langExt);
-    foreach($list as $key => $value){
-        if($key > 0 && ($value[1] == 1))
+    foreach ($list as $key => $value) {
+        if ($key > 0 && ($value[1] == 1))
             $levels[] = $key;
     }
     $query = "SELECT distinct w.id
@@ -628,12 +552,12 @@ function getNotCategorizedWordIds()
         and w.category is null
         order by w.id";
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $records = array();
-    while($row = mysql_fetch_row($result)) {
+    while ($row = mysql_fetch_row($result)) {
         $records[] = $row[0];
     }
     return $records;
@@ -643,12 +567,12 @@ function getWordById($id)
 {
     $query = "SELECT * from words where id = " . (int)$id;
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $record = null;
-    while($row = mysql_fetch_assoc($result)) {
+    while ($row = mysql_fetch_assoc($result)) {
         $record = $row;
     }
     return $record;
@@ -658,18 +582,17 @@ function getAllWordsWithLevelExceptions($levelExceptionArray, $orderLang, $lang,
 {
     $langExt = getLangExtByLangId($lang);
     $forras_nyelv_ext = getLangExtByLangId($GLOBALS['userObject']['forras_nyelv']);
-    if($isForEveryLang){
+    if ($isForEveryLang) {
         $langArray = getLangArray();
         $wherePartArray = array();
-        foreach($langArray as $currentLang){
+        foreach ($langArray as $currentLang) {
             $wherePartArray[] = "level_{$currentLang} not in (" . implode(',', $levelExceptionArray) . ")";
         }
         $wherePart = '(' . implode(" or ", $wherePartArray) . ')';
-    }
-    else{
+    } else {
         $wherePart = "level_{$langExt} not in (" . implode(',', $levelExceptionArray) . ")";
     }
-    if($isFilled){
+    if ($isFilled) {
         $wherePart .= " and word_{$langExt} is not null and word_{$langExt} != '' and word_{$langExt} != '...'
                 and word_{$forras_nyelv_ext} is not null and word_{$forras_nyelv_ext} != '' and word_{$forras_nyelv_ext} != '...'";
     }
@@ -679,20 +602,19 @@ function getAllWordsWithLevelExceptions($levelExceptionArray, $orderLang, $lang,
                 from words
                 where {$wherePart}
                 order by ";
-    if($orderLang == 'foreign'){
+    if ($orderLang == 'foreign') {
         $query .= "word_{$langExt}";
-    }
-    else{
+    } else {
         $query .= "word_{$forras_nyelv_ext}";
     }
 
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $records = array();
-    while($row = mysql_fetch_assoc($result)) {
+    while ($row = mysql_fetch_assoc($result)) {
         $records[] = $row;
     }
     return $records;
@@ -705,19 +627,18 @@ function getAllWordsWithLevel($levelArray, $orderLang, $lang)
 
     $levelArray[] = -1;
     $query = "SELECT id, word_{$forras_nyelv_ext}, word_{$langExt} as word_foreign, level_{$langExt} as level, user_id from words where level_{$langExt} in (" . implode(',', $levelArray) . ") and level_{$langExt} != 0 order by ";
-    if($orderLang == 'foreign'){
+    if ($orderLang == 'foreign') {
         $query .= "word_{$langExt}";
-    }
-    else{
+    } else {
         $query .= "word_{$forras_nyelv_ext}";
     }
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $records = array();
-    while($row = mysql_fetch_assoc($result)) {
+    while ($row = mysql_fetch_assoc($result)) {
         $records[] = $row;
     }
     return $records;
@@ -725,7 +646,7 @@ function getAllWordsWithLevel($levelArray, $orderLang, $lang)
 
 function getFirstNWordsForMultiplePractice($topN, $actLevelArray, $langExt)
 {
-    if(!is_array($actLevelArray) || count($actLevelArray) == 0){
+    if (!is_array($actLevelArray) || count($actLevelArray) == 0) {
         return [];
     }
     $forras_nyelv_ext = getLangExtByLangId($GLOBALS['userObject']['forras_nyelv']);
@@ -735,7 +656,7 @@ function getFirstNWordsForMultiplePractice($topN, $actLevelArray, $langExt)
     $mondatLevels = array();
 
     $records = array();
-    foreach($actLevelArray as $actLevel){
+    foreach ($actLevelArray as $actLevel) {
         $query = "SELECT w.*, level_{$langExt} as level
                     from words w
                     where w.level_{$langExt} = $actLevel
@@ -744,18 +665,18 @@ function getFirstNWordsForMultiplePractice($topN, $actLevelArray, $langExt)
                     order by rand() limit $topN";
 
         $result = mysql_query($query);
-        if(!$result){
+        if (!$result) {
             print mysql_error();
-            exit("Nem sikerült: " . $query);
+            exit("Nem sikerï¿½lt: " . $query);
         }
-        while($row = mysql_fetch_assoc($result)) {
-            if($row["word_{$langExt}"] != '' && $row["word_{$langExt}"] != '...' && $row["word_{$forras_nyelv_ext}"] != '' && $row["word_{$forras_nyelv_ext}"] != '...'){
+        while ($row = mysql_fetch_assoc($result)) {
+            if ($row["word_{$langExt}"] != '' && $row["word_{$langExt}"] != '...' && $row["word_{$forras_nyelv_ext}"] != '' && $row["word_{$forras_nyelv_ext}"] != '...') {
                 $records[$row["word_{$forras_nyelv_ext}"]][] = $row;
             }
         }
     }
     shuffle($records);
-    
+
     return $records;
 }
 
@@ -765,17 +686,16 @@ function getHomeWorks($userObject, $user_id, $homeWorkOrder)
     $langExt = getLangExtByLangId($userObject['nyelv']);
     $forras_nyelv_ext = getLangExtByLangId($GLOBALS['userObject']['forras_nyelv']);
 
-    if($homeWorkOrder){
+    if ($homeWorkOrder) {
         $ascDesc = "desc";
-    }
-    else{
+    } else {
         $ascDesc = "asc";
     }
 
-    if($userObject['status'] == 6 || $user_id > 0){
+    if ($userObject['status'] == 6 || $user_id > 0) {
         $where = "level_{$langExt} = 0";
 
-        if($user_id > 0){
+        if ($user_id > 0) {
             $where .= " and user_id = " . (int)$user_id;
         }
 
@@ -784,15 +704,14 @@ function getHomeWorks($userObject, $user_id, $homeWorkOrder)
                     where {$where}
                     order by id $ascDesc limit $recordNum";
     }
-    // ilyenkor nincs ki választva user, csak a saját tanítványai házijait láthatja
-    else if(in_array($userObject['status'], array(4, 5))){
+    // ilyenkor nincs ki vï¿½lasztva user, csak a sajï¿½t tanï¿½tvï¿½nyai hï¿½zijait lï¿½thatja
+    else if (in_array($userObject['status'], array(4, 5))) {
         $query = "SELECT w.id, w.word_{$forras_nyelv_ext}, w.comment_{$forras_nyelv_ext}, w.word_{$langExt} as word_foreign, w.pronunc_{$langExt} as pronunc_foreign, w.comment_{$langExt} as comment_foreign, w.level_{$langExt} as level, w.user_id
                     from words w
                     inner join lmjelentkezok l on w.user_id = l.id and l.tanar_id = {$userObject['id']}
                     where w.level_{$langExt} = 0
                     order by id $ascDesc limit $recordNum";
-    }
-    else{
+    } else {
         $query = "SELECT id, word_{$forras_nyelv_ext}, comment_{$forras_nyelv_ext}, word_{$langExt} as word_foreign, pronunc_{$langExt} as pronunc_foreign, comment_{$langExt} as comment_foreign, level_{$langExt} as level, user_id
                     from words
                     where level_{$langExt} = 0 and user_id = {$userObject['id']}
@@ -800,12 +719,12 @@ function getHomeWorks($userObject, $user_id, $homeWorkOrder)
     }
 
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $records = array();
-    while($row = mysql_fetch_assoc($result)) {
+    while ($row = mysql_fetch_assoc($result)) {
         $records[] = $row;
     }
     return $records;
@@ -825,19 +744,18 @@ function getWordUsers($userObject)
                 order by vezeteknev, keresztnev";
 
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $records = array();
-    while($row = mysql_fetch_assoc($result)) {
-        if(is_null($row['w_id'])){
+    while ($row = mysql_fetch_assoc($result)) {
+        if (is_null($row['w_id'])) {
             $row['num'] = 0;
         }
         $records[] = $row;
     }
     return $records;
-
 }
 
 function getAllWordsByLevel($level, $exceptionArray)
@@ -849,12 +767,12 @@ function getAllWordsByLevel($level, $exceptionArray)
     $query = "SELECT *, level_{$targetLangExt} as level from words where level_{$targetLangExt} = $level and id not in ($exceptionString) and word_{$forrasLangExt} != '...' and word_{$forrasLangExt} != '' and word_{$targetLangExt} != '...' and word_{$targetLangExt} != ''";
 
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $records = array();
-    while($row = mysql_fetch_assoc($result)) {
+    while ($row = mysql_fetch_assoc($result)) {
         $records[] = $row;
     }
     return $records;
@@ -864,20 +782,18 @@ function setHit($id)
 {
     $query = "update words set hits = hits + 1 where id = " . (int)$id;
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
-    }
-    else{
+        exit("Nem sikerï¿½lt: " . $query);
+    } else {
         print "<script>parent.frames[0].location.href = parent.frames[0].location.href;</script>";
     }
-    
 
-	$date = new DateTime();
-	$timestamp = $date->format('Y-m-d H:i:s');
-   	$query = "update WordsUpdate set Modified = '$timestamp' where id = " . (int)$id;
+
+    $date = new DateTime();
+    $timestamp = $date->format('Y-m-d H:i:s');
+    $query = "update WordsUpdate set Modified = '$timestamp' where id = " . (int)$id;
     mysql_query($query);
-    
 }
 
 function getAllTheHits()
@@ -885,13 +801,13 @@ function getAllTheHits()
     $query = "SELECT sum(hits) as allhits from words";
 
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $records = array();
     $count = 0;
-    while($row = mysql_fetch_row($result)) {
+    while ($row = mysql_fetch_row($result)) {
         $count = $row[0];
     }
     return $count;
@@ -900,7 +816,7 @@ function getAllTheHits()
 function getGeneratedWordList($levelTypeArray)
 {
     $resultArray = array();
-    for($i = 0; $i < count($levelTypeArray); $i++){
+    for ($i = 0; $i < count($levelTypeArray); $i++) {
         $actLevel = $levelTypeArray[$i];
         $resultArray = array_merge($resultArray, getFirstNWordsByLevel(1, $actLevel));
     }
@@ -911,7 +827,7 @@ function getIgeragozasTable()
 {
     return "<table border=1>
             <tr>
-                <th>&nbsp;</th><th>JELEN</th><th>MÚLT</th><th>BIRT.NVM</th><th>'ENGEM'</th><th>'TÕLEM'</th><th>LÉTIGE MÚLT</th><th>&nbsp;</th><th>&nbsp;</th>
+                <th>&nbsp;</th><th>JELEN</th><th>Mï¿½LT</th><th>BIRT.NVM</th><th>'ENGEM'</th><th>'Tï¿½LEM'</th><th>Lï¿½TIGE Mï¿½LT</th><th>&nbsp;</th><th>&nbsp;</th>
             </tr>
             <tr>
                 <td><b>ANA</b></td><td>E/A/U+</td><td>+ET</td><td>(T)+I</td><td>BI</td><td>MINNI</td><td>KONT</td><td>ez (f)</td><td>HADA</td>
@@ -946,12 +862,12 @@ function getWordCount()
     $query = "SELECT count(*) from words where level_{$langExt} not in (8)";
 
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $number = 0;
-    while($row = mysql_fetch_row($result)) {
+    while ($row = mysql_fetch_row($result)) {
         $number = $row[0];
     }
     return $number;
@@ -962,12 +878,12 @@ function getAllWordCount()
     $query = "SELECT count(*) from words";
 
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $number = 0;
-    while($row = mysql_fetch_row($result)) {
+    while ($row = mysql_fetch_row($result)) {
         $number = $row[0];
     }
     return $number;
@@ -978,12 +894,12 @@ function getAllSentenceCount()
     $query = "SELECT count(*) from words WHERE `category` = 2";
 
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $number = 0;
-    while($row = mysql_fetch_row($result)) {
+    while ($row = mysql_fetch_row($result)) {
         $number = $row[0];
     }
     return $number;
@@ -1001,15 +917,15 @@ function checkWord($id, $hunWord, $nyelv, $foreignWord)
 
     $levelList = getLevelList($nyelv);
     $levels = array(-1);
-    foreach($levelList as $key => $value){
-        if($key > 0 && $value[1] == 1){
+    foreach ($levelList as $key => $value) {
+        if ($key > 0 && $value[1] == 1) {
             $levels[] = $key;
         }
     }
     $where_level = "level_{$ext} in (" . implode(", ", $levels) . ")";
     $query = "select count(*) from words where word_{$forras_nyelv_ext} = '$hunWord' and word_{$ext} = '{$foreignWord}' and {$where_level} and id != " . (int)$id;
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
         return false;
     }
@@ -1020,45 +936,44 @@ function checkWord($id, $hunWord, $nyelv, $foreignWord)
 
 function storeWord($id, $hunWord, $nyelv, $foreignWord, $foreignComm, $sourceComm, $level, $userId, $category, $forceChangeUserId = false)
 {
-    mylog("storeWord: id:".$id." hunWord:".$hunWord." nyelv:".$nyelv." foreignWord:".$foreignWord." foreignComm:".$foreignComm." sourceComm:".$sourceComm." level".$level." userId".$userId." category".$category." forceChangeUserId".$forceChangeUserId,"d");
+    mylog("storeWord: id:" . $id . " hunWord:" . $hunWord . " nyelv:" . $nyelv . " foreignWord:" . $foreignWord . " foreignComm:" . $foreignComm . " sourceComm:" . $sourceComm . " level" . $level . " userId" . $userId . " category" . $category . " forceChangeUserId" . $forceChangeUserId, "d");
     $forras_nyelv_ext = getLangExtByLangId($GLOBALS['userObject']['forras_nyelv']);
 
-    $hunWord = str_replace("&#241;", "n", str_replace("&#369;", "û", str_replace("&#337;", "õ", aposztrofRepToDb(rtrim($hunWord)))));
+    $hunWord = str_replace("&#241;", "n", str_replace("&#369;", "ï¿½", str_replace("&#337;", "ï¿½", aposztrofRepToDb(rtrim($hunWord)))));
     $foreignWord = aposztrofRepToDb(rtrim($foreignWord));
     $foreignComm = aposztrofRepToDb($foreignComm);
     $sourceComm = aposztrofRepToDb($sourceComm);
 
     $ext = getLangExtByLangId($nyelv);
 
-	$date = new DateTime();
-	$timestamp = $date->format('Y-m-d H:i:s');
+    $date = new DateTime();
+    $timestamp = $date->format('Y-m-d H:i:s');
 
     $category = (int)$category;
-    if($category == 0){
+    if ($category == 0) {
         $category = 'null';
     }
 
-    // új rekordként kezeljük
-    if($id == 0){
+    // ï¿½j rekordkï¿½nt kezeljï¿½k
+    if ($id == 0) {
         $query = "select count(*) from words where word_{$forras_nyelv_ext} = '$hunWord' and level_{$ext} = " . (int)$level . " and (word_{$ext} = '{$foreignWord}' or word_{$ext} = null or word_{$ext} = '' or word_{$ext} = '...')";
         $result = mysql_query($query);
-        if(!$result){
+        if (!$result) {
             print mysql_error();
             return false;
         }
         list($letezik) = mysql_fetch_row($result);
-        if($letezik){
-            if($forceChangeUserId){
+        if ($letezik) {
+            if ($forceChangeUserId) {
                 $addPart = ", level_{$ext} = {$level}, user_id = " . (int)$userId . ", crdti = NOW()";
             }
             $query = "update words set word_{$ext} = '$foreignWord', comment_{$ext} = '$foreignComm', comment_{$forras_nyelv_ext} = '$sourceComm', category = $category $addPart where word_{$forras_nyelv_ext} = '$hunWord' and level_{$ext} = " . (int)$level . " and (word_{$ext} = null or word_{$ext} = '' or word_{$ext} = '...')";
-        }
-        else{
+        } else {
             $langArray = getLangArray();
             $fields = array();
             $values = array();
-            foreach($langArray as $currentLang){
-                if($currentLang != $forras_nyelv_ext and $currentLang != $ext){
+            foreach ($langArray as $currentLang) {
+                if ($currentLang != $forras_nyelv_ext and $currentLang != $ext) {
                     $fields[] = "word_" . $currentLang;
                     $values[] = "'...'";
                 }
@@ -1067,38 +982,34 @@ function storeWord($id, $hunWord, $nyelv, $foreignWord, $foreignComm, $sourceCom
         }
     }
     // update
-    else{
-        if($forceChangeUserId){
+    else {
+        if ($forceChangeUserId) {
             $addPart = ", user_id = " . (int)$userId . ", crdti = NOW()";
         }
         $query = "update words set word_{$forras_nyelv_ext} = '$hunWord', word_{$ext} = '$foreignWord', comment_{$ext} = '$foreignComm', comment_{$forras_nyelv_ext} = '$sourceComm', level_{$ext} = $level, category = $category $addPart where id = " . (int)$id;
     }
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
         return false;
     }
-	
 
-	if($id==0)
-	{
-		$lastID = mysql_insert_id();
-		if($lastID>0)
-		{
-            $query = "INSERT INTO `WordsUpdate` (`id`, `Deleted`)VALUES (".(int)$lastID.",false) ON DUPLICATE KEY UPDATE id = ".(int)$lastID;
-   
-			//$query = "insert into WordsUpdate(id,Deleted) values(".(int)$lastID.",false)";
-			mysql_query($query);
-		}
-	}
-	else
-	{
-        $query = "INSERT INTO `WordsUpdate` (`id`, `Deleted`)VALUES (".(int)$id.",false) ON DUPLICATE KEY UPDATE id = ".(int)$id;
-		//$query = "update WordsUpdate set Modified = '$timestamp' where id = " . (int)$id;
-		mysql_query($query);
-	}
-	
-	
+
+    if ($id == 0) {
+        $lastID = mysql_insert_id();
+        if ($lastID > 0) {
+            $query = "INSERT INTO `WordsUpdate` (`id`, `Deleted`)VALUES (" . (int)$lastID . ",false) ON DUPLICATE KEY UPDATE id = " . (int)$lastID;
+
+            //$query = "insert into WordsUpdate(id,Deleted) values(".(int)$lastID.",false)";
+            mysql_query($query);
+        }
+    } else {
+        $query = "INSERT INTO `WordsUpdate` (`id`, `Deleted`)VALUES (" . (int)$id . ",false) ON DUPLICATE KEY UPDATE id = " . (int)$id;
+        //$query = "update WordsUpdate set Modified = '$timestamp' where id = " . (int)$id;
+        mysql_query($query);
+    }
+
+
     return true;
 }
 
@@ -1106,7 +1017,7 @@ function storeUserWord($wordId, $userId)
 {
     $query = "insert into user_words (user_id, word_id) values(" . (int)$userId . ", " . (int)$wordId . ")";
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
         return false;
     }
@@ -1115,11 +1026,11 @@ function storeUserWord($wordId, $userId)
 
 function deleteWord($id, $nyelv, $forras_nyelv, $isCheckNeed)
 {
-    if($isCheckNeed){
+    if ($isCheckNeed) {
         $langArray = getLangArray();
         $ext = array();
-        foreach($langArray as $key => $value){
-            if($key != $nyelv && $key != $forras_nyelv){
+        foreach ($langArray as $key => $value) {
+            if ($key != $nyelv && $key != $forras_nyelv) {
                 $ext[] = "word_{$value} is not null and word_{$value} != '' and word_{$value} != '...'";
             }
         }
@@ -1127,30 +1038,30 @@ function deleteWord($id, $nyelv, $forras_nyelv, $isCheckNeed)
         $query = "select count(*) from words where id = " . (int)$id . " and (" . implode(' or ', $ext) . ")";
 
         $result = mysql_query($query);
-        if(!$result){
+        if (!$result) {
             print mysql_error();
             return -1;
         }
         list($nemtorlendo) = mysql_fetch_row($result);
 
-        if($nemtorlendo){
+        if ($nemtorlendo) {
             return 0;
         }
     }
     $query = "delete from words where id = " . (int)$id;
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
         return -1;
     }
-	
-	$date = new DateTime();
-	$timestamp = $date->format('Y-m-d H:i:s');
-	$query = "update WordsUpdate set Modified = '$timestamp', Deleted = true where id = " . (int)$id;
-	//$query = "delete from WordsUpdate where id = " . (int)$id;
-	mysql_query($query);
-	
-		
+
+    $date = new DateTime();
+    $timestamp = $date->format('Y-m-d H:i:s');
+    $query = "update WordsUpdate set Modified = '$timestamp', Deleted = true where id = " . (int)$id;
+    //$query = "delete from WordsUpdate where id = " . (int)$id;
+    mysql_query($query);
+
+
     return 1;
 }
 
@@ -1158,7 +1069,7 @@ function setWordCategory($wordId, $category)
 {
     $query = "update words set category = " . (int)$category . " where id = " . (int)$wordId;
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
         return false;
     }
@@ -1173,7 +1084,7 @@ function getWord($id, $lang)
 
     $query = "select id, word_{$forras_nyelv_ext}, comment_{$forras_nyelv_ext}, word_{$langExt} as word_foreign, pronunc_{$langExt} as pronunc_foreign, comment_{$langExt} as comment_foreign, level_{$langExt} as level, category from words where id = " . (int)$id;
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
         return false;
     }
@@ -1187,12 +1098,12 @@ function getWordsByHun($userObject, $txt, $lang)
     $forras_nyelv_ext = getLangExtByLangId($GLOBALS['userObject']['forras_nyelv']);
     $langArray = getLangArray();
     $otherLangsExt = array();
-    foreach($langArray as $currentLang){
-        if($currentLang == $forras_nyelv_ext || $currentLang == $langExt) continue;
+    foreach ($langArray as $currentLang) {
+        if ($currentLang == $forras_nyelv_ext || $currentLang == $langExt) continue;
         $otherLangsExt[] = "w.word_{$currentLang} as word_for_{$currentLang}";
     }
     $txt = aposztrofRepToDb(mb_strtolower($txt, 'UTF-8'));
-    $txt = str_replace(chr(195) . chr(177), '&#241;', $txt);    
+    $txt = str_replace(chr(195) . chr(177), '&#241;', $txt);
     $spec_chars = "([/ ?,!.%])";
     mysql_query("SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'");
     $query = "select w.id, w.word_{$forras_nyelv_ext} as word_hun, w.comment_{$forras_nyelv_ext} as comment_hun,
@@ -1219,7 +1130,7 @@ function getWordsByHun($userObject, $txt, $lang)
                     /*and (w.level_{$langExt} != 0 or l.status in (1, 4, 5, 6))*/
                 order by word_foreign";
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
         return false;
     }
@@ -1227,22 +1138,20 @@ function getWordsByHun($userObject, $txt, $lang)
     $records1 = array();
     $records2 = array();
     $records3 = array();
-    while($row = mysql_fetch_assoc($result)){
+    while ($row = mysql_fetch_assoc($result)) {
         $row['level_category'] = (($row['level'] > 0) ? $list[$row['level']][1] : 0);
         $row['level_title'] = (($row['level'] > 0) ? $list[$row['level']][0] : '');
         $row['other_langs'] = array();
-        foreach($langArray as $currentLang){
-            if(isset($row['word_for_' . $currentLang])){
+        foreach ($langArray as $currentLang) {
+            if (isset($row['word_for_' . $currentLang])) {
                 $row['other_langs'][$currentLang] = $row['word_for_' . $currentLang];
             }
         }
-        if($list[$row['level']][1] == 1 && $row['level'] > 0){
+        if ($list[$row['level']][1] == 1 && $row['level'] > 0) {
             $records1[] = $row;
-        }
-        else if($list[$row['level']][1] == 2){
+        } else if ($list[$row['level']][1] == 2) {
             $records2[] = $row;
-        }
-        else if(!isset($list[$row['level']]) || $row['level'] == 0){
+        } else if (!isset($list[$row['level']]) || $row['level'] == 0) {
             $records3[] = $row;
         }
     }
@@ -1256,13 +1165,13 @@ function getWordsByFor($userObject, $txt, $lang)
     $forras_nyelv_ext = getLangExtByLangId($GLOBALS['userObject']['forras_nyelv']);
     $langArray = getLangArray();
     $otherLangsExt = array();
-    foreach($langArray as $currentLang){
-        if($currentLang == $forras_nyelv_ext || $currentLang == $langExt) continue;
+    foreach ($langArray as $currentLang) {
+        if ($currentLang == $forras_nyelv_ext || $currentLang == $langExt) continue;
         $otherLangsExt[] = "w.word_{$currentLang} as word_for_{$currentLang}";
     }
     $txt = aposztrofRepToDb(mb_strtolower($txt, 'UTF-8'));
     //$spec_chars = "(&#241;|&#191;|&#161;|[/ ?,!.])";
-/*
+    /*
 print "lalala: ";
 for($i = 0; $i < 5; $i++){
     print ord($txt[$i]) . ";";
@@ -1295,7 +1204,7 @@ for($i = 0; $i < 5; $i++){
                     /*and (w.level_{$langExt} != 0 or l.status in (1, 4, 5, 6))*/
                 order by word_foreign";
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
         return false;
     }
@@ -1303,22 +1212,20 @@ for($i = 0; $i < 5; $i++){
     $records1 = array();
     $records2 = array();
     $records3 = array();
-    while($row = mysql_fetch_assoc($result)){
+    while ($row = mysql_fetch_assoc($result)) {
         $row['level_category'] = (($row['level'] > 0) ? $list[$row['level']][1] : 0);
         $row['level_title'] = (($row['level'] > 0) ? $list[$row['level']][0] : '');
         $row['other_langs'] = array();
-        foreach($langArray as $currentLang){
-            if(isset($row['word_for_' . $currentLang])){
+        foreach ($langArray as $currentLang) {
+            if (isset($row['word_for_' . $currentLang])) {
                 $row['other_langs'][$currentLang] = $row['word_for_' . $currentLang];
             }
         }
-        if($list[$row['level']][1] == 1 && $row['level'] > 0){
+        if ($list[$row['level']][1] == 1 && $row['level'] > 0) {
             $records1[] = $row;
-        }
-        else if($list[$row['level']][1] == 2){
+        } else if ($list[$row['level']][1] == 2) {
             $records2[] = $row;
-        }
-        else if(!isset($list[$row['level']]) || $row['level'] == 0){
+        } else if (!isset($list[$row['level']]) || $row['level'] == 0) {
             $records3[] = $row;
         }
     }
@@ -1332,19 +1239,18 @@ function incUserWordHitByDay($userObject)
 
     $query = "select count(*) from user_hits where user_id = $userId and datum = '$datum'";
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
         return false;
     }
     list($cnt) = mysql_fetch_row($result);
-    if($cnt > 0){
+    if ($cnt > 0) {
         $query = "update user_hits set hits = hits + 1 where user_id = $userId and datum = '$datum'";
-    }
-    else{
+    } else {
         $query = "insert into user_hits (user_id, datum, hits) values ($userId, '$datum', 1)";
     }
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
         return false;
     }
@@ -1354,13 +1260,13 @@ function incUserWordHitByDay($userObject)
 function getUserWordHitByDay($userObject, $datum = null)
 {
     $userId = (int)$userObject['id'];
-    if(is_null($datum)){
-        $datum = date("Y-m-d") ;
+    if (is_null($datum)) {
+        $datum = date("Y-m-d");
     }
 
     $query = "select hits from user_hits where user_id = $userId and datum = '$datum'";
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
         return false;
     }
@@ -1371,24 +1277,23 @@ function getUserWordHitByDay($userObject, $datum = null)
 
 function incUserWordHit($userObject, $isSentenceNotWord)
 {
-    if($isSentenceNotWord){
+    if ($isSentenceNotWord) {
         $field = "sentence_hits";
-    }
-    else{
+    } else {
         $field = "word_hits";
     }
     $query = "update lmjelentkezok set {$field} = {$field} + 1 where id = " . (int)$userObject['id'];
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
         return false;
     }
 
     $query = "SELECT {$field} from lmjelentkezok where id = " . (int)$userObject['id'];
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $row = mysql_fetch_row($result);
     return $row[0];
@@ -1396,17 +1301,16 @@ function incUserWordHit($userObject, $isSentenceNotWord)
 
 function getUserWordHit($userObject, $isSentenceNotWord)
 {
-    if($isSentenceNotWord){
+    if ($isSentenceNotWord) {
         $field = "sentence_hits";
-    }
-    else{
+    } else {
         $field = "word_hits";
     }
     $query = "SELECT {$field} from lmjelentkezok where id = " . (int)$userObject['id'];
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $row = mysql_fetch_row($result);
     return $row[0];
@@ -1417,12 +1321,12 @@ function getLevelComment($selectedLevel, $lang, $needEncode)
     $langExt = getLangExtByLangId($lang);
     $langSource = getLangExtByLangId($GLOBALS['userObject']['forras_nyelv']);
     $query = "SELECT rule_{$langExt}_{$langSource} as rule from level_rules where level = $selectedLevel";
-    if($needEncode)
+    if ($needEncode)
         mysql_query("SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'");
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $row = mysql_fetch_row($result);
     return $row[0];
@@ -1437,22 +1341,21 @@ function setLevelComment($selectedLevel, $rule, $lang)
 
     $query = "SELECT count(*) from level_rules where level = $selectedLevel";
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     list($count) = mysql_fetch_row($result);
 
-    if($count == 0){
+    if ($count == 0) {
         $query = "insert into level_rules (rule_{$langExt}_{$langSource}, level) values ('$rule', $selectedLevel)";
-    }
-    else{
+    } else {
         $query = "update level_rules set rule_{$langExt}_{$langSource} = '$rule' where level = $selectedLevel";
     }
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
 }
 
@@ -1460,7 +1363,7 @@ function getOwnWordCount($userObject, $goodLevelArray)
 {
     $langExt = getLangExtByLangId($userObject['nyelv']);
     $forras_nyelv_ext = getLangExtByLangId($GLOBALS['userObject']['forras_nyelv']);
-    if(count($goodLevelArray) > 1){
+    if (count($goodLevelArray) > 1) {
         $where = " and w.level_{$langExt} in (" . implode(", ", $goodLevelArray) . ")";
     }
 
@@ -1472,9 +1375,9 @@ function getOwnWordCount($userObject, $goodLevelArray)
                     and w.word_{$langExt} is not null and w.word_{$langExt} != '' and w.word_{$langExt} != '...'
                     $where";
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $row = mysql_fetch_row($result);
     return $row[0];
@@ -1491,10 +1394,10 @@ function getBasicWordCount($userObject)
                     and w.word_{$langExt} is not null and w.word_{$langExt} != '' and w.word_{$langExt} != '...'";
 
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
         deb(debug_backtrace());
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $row = mysql_fetch_row($result);
     return $row[0];
@@ -1505,11 +1408,11 @@ function getAllUserOwnWordCount()
     $forras_nyelv_ext = getLangExtByLangId($GLOBALS['userObject']['forras_nyelv']);
     $sqlPart = array();
     $langArray = getLangArray();
-    foreach($langArray as $langId => $langText){
+    foreach ($langArray as $langId => $langText) {
         $levelList = getLevelList($langId);
         $goodLevelArray = array(-1);
-        foreach((array)$levelList as $key => $value){
-            if($value[1] == 1 && $key != 0){
+        foreach ((array)$levelList as $key => $value) {
+            if ($value[1] == 1 && $key != 0) {
                 $goodLevelArray[] = $key;
             }
         }
@@ -1535,12 +1438,12 @@ function getAllUserOwnWordCount()
                 group by j.id";
 
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $return = array();
-    while(list($id, $count) = mysql_fetch_row($result)){
+    while (list($id, $count) = mysql_fetch_row($result)) {
         $return[$id] += $count;
     }
     return $return;
@@ -1558,28 +1461,27 @@ function getUserWords($userObject, $level, $orderLang, $useMarked = false)
                     and w.word_{$langExt} is not null and w.word_{$langExt} != ''
                     and w.level_{$langExt} > 0
                     order by ";
-    if($useMarked){
+    if ($useMarked) {
         $query .= "my_is_marked desc, ";
     }
 
-    if($orderLang == 'foreign'){
+    if ($orderLang == 'foreign') {
         $query .= "word_{$langExt}";
-    }
-    else{
+    } else {
         $query .= "word_{$forras_nyelv_ext}";
     }
 
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
 
     $levelList = getLevelList($userObject['nyelv']);
 
     $return = array();
-    while($row = mysql_fetch_assoc($result)){
-        if($levelList[$row['level']][1] == $level){
+    while ($row = mysql_fetch_assoc($result)) {
+        if ($levelList[$row['level']][1] == $level) {
             $return[] = $row;
         }
     }
@@ -1590,9 +1492,9 @@ function getUserWordId($wordId, $userId)
 {
     $sql = "select id from user_words where user_id = " . (int)$userId . " and word_id = " . (int)$wordId;
     $result = mysql_query($sql);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $sql);
+        exit("Nem sikerï¿½lt: " . $sql);
     }
     $row = mysql_fetch_row($result);
     return $row[0];
@@ -1600,10 +1502,9 @@ function getUserWordId($wordId, $userId)
 
 function markUserWord($wordId, $userWordId, $userId, $isChecked)
 {
-    if($userWordId > 0){
+    if ($userWordId > 0) {
         $sql = "update user_words set is_marked = " . ($isChecked ? 1 : 0) . " where id = $userWordId and user_id = " . (int)$userId;
-    }
-    else{
+    } else {
         $sql = "update words set is_marked = " . ($isChecked ? 1 : 0) . " where id = $wordId and user_id = " . (int)$userId;
     }
     mysql_query($sql);
@@ -1620,15 +1521,15 @@ function removeUserWord($userId, $wordId)
 function getLevelLangIndep($dbLevel)
 {
     static $levelListArray;
-    if(!is_array($levelListArray)){
+    if (!is_array($levelListArray)) {
         $langArray = getLangArray();
         $levelListArray = array();
-        foreach($langArray as $lang){
+        foreach ($langArray as $lang) {
             $levelListArray[$lang] = getLevelList($lang);
         }
     }
-    foreach($levelListArray as $levelList){
-        if(array_key_exists($dbLevel, $levelList)){
+    foreach ($levelListArray as $levelList) {
+        if (array_key_exists($dbLevel, $levelList)) {
             return $levelList[$dbLevel][1];
         }
     }
@@ -1638,682 +1539,687 @@ function getLevelList($lang)
 {
     $userObject = $GLOBALS['userObject'];
 
-    if($userObject['forras_nyelv'] == 0){
+    if ($userObject['forras_nyelv'] == 0) {
         $list['angol'] = array(
-        '0'  => array('Level 0', 1),
-        '153'=> array('Angol fonetikus átírás, kiejtés', 3),
-        '74' => array('A fõnevek', 3),
-        '60' => array('A névelõk', 3),
-        '75' => array('A fõnevek megszámlálhatósága', 3),
-        '76' => array('A fõnevek többesszáma', 3),
-        '1'  => array('fõnév', 1),
-        '8'  => array('Mutató névmások', 3),
-        '13' => array('Egyszerû néhányszavasok', 2),
-        '77' => array('A melléknevek', 3),
-        '78' => array('A melléknevek fokozása', 3),
-        '2'  => array('melléknév', 1),
-        '120'=> array('Elöljárószavak', 3),
-        '6'  => array('elöljárószó', 1),
-        '88' => array('A létige szükségessége, az elsõ két alak', 3),
-        '91' => array('A létige tagadása', 3),
-        '232'=> array('Személyek és számok', 3),
-        '152'=> array('Személyes és birtokos névmások', 3),
-        '200'=> array('Létigés mondatok', 2),
-        '92' => array('Kérdõszórend, az eldöntendõ kérdés', 3),
-        '93' => array('Kérdõszavas kérdések', 3),
-        '209'=> array('A létige ragozása', 3),
-        '94' => array('Helyhatározó szavak', 3),
-        '126'=> array('Birtokos szerkezet', 3),
-        '59' => array('Birtokos szerkezet', 2),
-        '127'=> array('A "milyen" kérdés', 3),
-        '36' => array('Milyen-kérdések', 2),
-        '157'=> array('Határozók sorrendje', 3),
-        '38' => array('Létigés mondatok (haladóbb)', 2),
-        '97' => array('Számok', 3),
-        '11' => array('szám', 1),
-        '98' => array('Az óra, napszakok', 3),
-        '188'=> array('Az óra, számok', 2),
-        '159'=> array('Konkrét dologról állítjuk, hogy van?', 3),
-        '187'=> array('"There is"-es szerkezet', 3),
-        '41' => array('"There is"-es szerkezet', 2),
-        '160'=> array('Létezés vagy cselekvés?', 3),
-        '229'=> array('Az "igeidõ" fogalma', 3),
-        '154'=> array('Egyszerû jelen kijelentés/felszólítás', 3),
-        '5'  => array('ige', 1),
-        '15' => array('Egyszerû jelen', 2),
-        '156'=> array('Két ige összekötése', 3),
-        '162'=> array('Egyszerû jelen kérdés', 3),
-        '226'=> array('Kérdõszavas szerkezetek', 3),
-        '164'=> array('Egyszerû jelen tagadás', 3),
-        '114'=> array('Személyes névmás tárgy, részes, visszaható', 3),
-        '230'=> array('A három "van"-os szerkezet', 3),
-        '166'=> array('Egyszerû múlt', 3),
-        '18' => array('Egyszerû múlt', 2),
-        '167'=> array('Egyszerû jövõ', 3),
-        '21' => array('Egyszerû jövõ', 2),
-        '999' => array('Összefoglalás: egyszerû mondatok', 2),
-        '158'=> array('Tell-say-talk-speak-discuss', 3),
-        '163'=> array('Alanyra kérdezés', 3),
-        '193'=> array('Alanyra kérdezõ mondatok', 2),
-        '186'=> array('Összehasonlítások', 3),
-        '70' => array('Összehasonlítások', 2),
-        '228'=> array('"It+is+mnév+to+ige" szerkezet', 3),
-        '165'=> array('Segédigék', 3),
-        '37' => array('Segédigés mondatok', 2),
-        '185'=> array('"Ami(t)"-es mellékmondatok', 3),
-        '69' => array('"Ami(t)"-es mondatok', 2),
-        '177'=> array('Folyamatos jelen', 3),
-        '24' => array('Folyamatos jelen', 2),
-        '178'=> array('Befejezett jelen', 3),
-        '27' => array('Befejezett jelen', 2),
-        '189'=> array('"There is" más igeidõkben', 3),
-        '190'=> array('"There is" más igeidõkben', 2),
-        '227'=> array('A segédigék múltideje', 3),
-        '355'=> array('Segédigés mondatok múlt ideje', 2),
-        '182'=> array('Befejezett Múlt', 3),
-        '64' => array('Befejezett Múlt', 2),
-        '146'=> array('Szenvedõ szerkezet', 3),
-        '30' => array('Szenvedõ szerkezet', 2),
-        '356'=> array('Segédigés szenvedõ szerkezet', 2),
-        '138'=> array('Folyamatos múlt', 3),
-        '139'=> array('Folyamatos múlt', 2),
-        '180'=> array('Folyamatos jövõ', 3),
-        '181'=> array('Folyamatos jövõ', 2),
-        '143'=> array('Feltételes mód', 3),
-        '31' => array('Feltételes mód', 2),
-        '194'=> array('Befejezett folyamatos jelen', 3),
-        '195'=> array('Befejezett folyamatos jelen', 2),
-        '179'=> array('Mûveltetés', 3),
-        '34' => array('Mûveltetés', 2),
-        '110'=> array('Igenevek', 3),
-        '224'=> array('Igeneves mondatok', 2),
-        '183'=> array('Befejezett folyamatos múlt', 3),
-        '125'=> array('Befejezett folyamatos múlt', 2),
-        '184'=> array('Függõ beszéd', 3),
-        '49' => array('Függõ beszéd', 2),
-        '207'=> array('Befejezett jövõ', 3),
-        '208'=> array('Befejezett jövõ', 2),
-        '369'=> array('"Mit gondolsz" típusú mondatok', 2),
-        '238'=> array('A melléknevek sorrendje', 3),
-        '246'=> array('Sok kis apróság 1.', 3),
-        '364'=> array('Sok kis apróság 2.', 3),
-        '46' => array('névmás', 1),
-        '3'  => array('határozószó', 1),
-        '39' => array('kifejezés', 1),
-        '205'=> array('szófordulat', 1));
+            '0'  => array('Level 0', 1),
+            '153' => array('Angol fonetikus ï¿½tï¿½rï¿½s, kiejtï¿½s', 3),
+            '74' => array('A fï¿½nevek', 3),
+            '60' => array('A nï¿½velï¿½k', 3),
+            '75' => array('A fï¿½nevek megszï¿½mlï¿½lhatï¿½sï¿½ga', 3),
+            '76' => array('A fï¿½nevek tï¿½bbesszï¿½ma', 3),
+            '1'  => array('fï¿½nï¿½v', 1),
+            '8'  => array('Mutatï¿½ nï¿½vmï¿½sok', 3),
+            '13' => array('Egyszerï¿½ nï¿½hï¿½nyszavasok', 2),
+            '77' => array('A mellï¿½knevek', 3),
+            '78' => array('A mellï¿½knevek fokozï¿½sa', 3),
+            '2'  => array('mellï¿½knï¿½v', 1),
+            '120' => array('Elï¿½ljï¿½rï¿½szavak', 3),
+            '6'  => array('elï¿½ljï¿½rï¿½szï¿½', 1),
+            '88' => array('A lï¿½tige szï¿½ksï¿½gessï¿½ge, az elsï¿½ kï¿½t alak', 3),
+            '91' => array('A lï¿½tige tagadï¿½sa', 3),
+            '232' => array('Szemï¿½lyek ï¿½s szï¿½mok', 3),
+            '152' => array('Szemï¿½lyes ï¿½s birtokos nï¿½vmï¿½sok', 3),
+            '200' => array('Lï¿½tigï¿½s mondatok', 2),
+            '92' => array('Kï¿½rdï¿½szï¿½rend, az eldï¿½ntendï¿½ kï¿½rdï¿½s', 3),
+            '93' => array('Kï¿½rdï¿½szavas kï¿½rdï¿½sek', 3),
+            '209' => array('A lï¿½tige ragozï¿½sa', 3),
+            '94' => array('Helyhatï¿½rozï¿½ szavak', 3),
+            '126' => array('Birtokos szerkezet', 3),
+            '59' => array('Birtokos szerkezet', 2),
+            '127' => array('A "milyen" kï¿½rdï¿½s', 3),
+            '36' => array('Milyen-kï¿½rdï¿½sek', 2),
+            '157' => array('Hatï¿½rozï¿½k sorrendje', 3),
+            '38' => array('Lï¿½tigï¿½s mondatok (haladï¿½bb)', 2),
+            '97' => array('Szï¿½mok', 3),
+            '11' => array('szï¿½m', 1),
+            '98' => array('Az ï¿½ra, napszakok', 3),
+            '188' => array('Az ï¿½ra, szï¿½mok', 2),
+            '159' => array('Konkrï¿½t dologrï¿½l ï¿½llï¿½tjuk, hogy van?', 3),
+            '187' => array('"There is"-es szerkezet', 3),
+            '41' => array('"There is"-es szerkezet', 2),
+            '160' => array('Lï¿½tezï¿½s vagy cselekvï¿½s?', 3),
+            '229' => array('Az "igeidï¿½" fogalma', 3),
+            '154' => array('Egyszerï¿½ jelen kijelentï¿½s/felszï¿½lï¿½tï¿½s', 3),
+            '5'  => array('ige', 1),
+            '15' => array('Egyszerï¿½ jelen', 2),
+            '156' => array('Kï¿½t ige ï¿½sszekï¿½tï¿½se', 3),
+            '162' => array('Egyszerï¿½ jelen kï¿½rdï¿½s', 3),
+            '226' => array('Kï¿½rdï¿½szavas szerkezetek', 3),
+            '164' => array('Egyszerï¿½ jelen tagadï¿½s', 3),
+            '114' => array('Szemï¿½lyes nï¿½vmï¿½s tï¿½rgy, rï¿½szes, visszahatï¿½', 3),
+            '230' => array('A hï¿½rom "van"-os szerkezet', 3),
+            '166' => array('Egyszerï¿½ mï¿½lt', 3),
+            '18' => array('Egyszerï¿½ mï¿½lt', 2),
+            '167' => array('Egyszerï¿½ jï¿½vï¿½', 3),
+            '21' => array('Egyszerï¿½ jï¿½vï¿½', 2),
+            '999' => array('ï¿½sszefoglalï¿½s: egyszerï¿½ mondatok', 2),
+            '158' => array('Tell-say-talk-speak-discuss', 3),
+            '163' => array('Alanyra kï¿½rdezï¿½s', 3),
+            '193' => array('Alanyra kï¿½rdezï¿½ mondatok', 2),
+            '186' => array('ï¿½sszehasonlï¿½tï¿½sok', 3),
+            '70' => array('ï¿½sszehasonlï¿½tï¿½sok', 2),
+            '228' => array('"It+is+mnï¿½v+to+ige" szerkezet', 3),
+            '165' => array('Segï¿½digï¿½k', 3),
+            '37' => array('Segï¿½digï¿½s mondatok', 2),
+            '185' => array('"Ami(t)"-es mellï¿½kmondatok', 3),
+            '69' => array('"Ami(t)"-es mondatok', 2),
+            '177' => array('Folyamatos jelen', 3),
+            '24' => array('Folyamatos jelen', 2),
+            '178' => array('Befejezett jelen', 3),
+            '27' => array('Befejezett jelen', 2),
+            '189' => array('"There is" mï¿½s igeidï¿½kben', 3),
+            '190' => array('"There is" mï¿½s igeidï¿½kben', 2),
+            '227' => array('A segï¿½digï¿½k mï¿½ltideje', 3),
+            '355' => array('Segï¿½digï¿½s mondatok mï¿½lt ideje', 2),
+            '182' => array('Befejezett Mï¿½lt', 3),
+            '64' => array('Befejezett Mï¿½lt', 2),
+            '146' => array('Szenvedï¿½ szerkezet', 3),
+            '30' => array('Szenvedï¿½ szerkezet', 2),
+            '356' => array('Segï¿½digï¿½s szenvedï¿½ szerkezet', 2),
+            '138' => array('Folyamatos mï¿½lt', 3),
+            '139' => array('Folyamatos mï¿½lt', 2),
+            '180' => array('Folyamatos jï¿½vï¿½', 3),
+            '181' => array('Folyamatos jï¿½vï¿½', 2),
+            '143' => array('Feltï¿½teles mï¿½d', 3),
+            '31' => array('Feltï¿½teles mï¿½d', 2),
+            '194' => array('Befejezett folyamatos jelen', 3),
+            '195' => array('Befejezett folyamatos jelen', 2),
+            '179' => array('Mï¿½veltetï¿½s', 3),
+            '34' => array('Mï¿½veltetï¿½s', 2),
+            '110' => array('Igenevek', 3),
+            '224' => array('Igeneves mondatok', 2),
+            '183' => array('Befejezett folyamatos mï¿½lt', 3),
+            '125' => array('Befejezett folyamatos mï¿½lt', 2),
+            '184' => array('Fï¿½ggï¿½ beszï¿½d', 3),
+            '49' => array('Fï¿½ggï¿½ beszï¿½d', 2),
+            '207' => array('Befejezett jï¿½vï¿½', 3),
+            '208' => array('Befejezett jï¿½vï¿½', 2),
+            '369' => array('"Mit gondolsz" tï¿½pusï¿½ mondatok', 2),
+            '238' => array('A mellï¿½knevek sorrendje', 3),
+            '246' => array('Sok kis aprï¿½sï¿½g 1.', 3),
+            '364' => array('Sok kis aprï¿½sï¿½g 2.', 3),
+            '46' => array('nï¿½vmï¿½s', 1),
+            '3'  => array('hatï¿½rozï¿½szï¿½', 1),
+            '39' => array('kifejezï¿½s', 1),
+            '205' => array('szï¿½fordulat', 1)
+        );
 
         $list['spanyol'] = array(
-        '0'  => array('Level 0', 1),
-        '53' => array('Spanyol Ábécé', 3),
-        '81' => array('ábécé', 1),
-        '82' => array('Kiejtés', 3),
-        '174'=> array('Hangsúly', 3),
-        '84' => array('Névelõ', 3),
-        '176'=> array('Fõnév', 3),
-        '85' => array('Melléknév', 3),
-        '86' => array('Személyes névmás alany eset + a "ser" ige', 3),
-        '200'=> array('"Ser"', 2),
-        '199'=> array('Tagadás és az eldöntendõ kérdés', 3),
-        '88' => array('"Estar" + "Hay" használata', 3),
-        '38' => array('"Estar"', 2),
-        '41' => array('"Hay"', 2),
-        '120'=> array('Elöljárószavak I.', 3),
-        '95' => array('Kérdõszavak és a kiegészítendõ kérdés', 3),
-        '96' => array('kérdõszó', 1),
-        '231'=> array('Qué? vagy Cuál?', 3),
-        '97' => array('Számok', 3),
-        '11' => array('szám', 1),
-        '98' => array('Az óra', 3),
-        '99' => array('Óra', 2),
-        '101'=> array('Birtokos szerkezet és névmások', 3),
-        '59' => array('Birtokos szerkezet', 2),
-        '8'  => array('Mutató névmások és itt/ott', 3),
-        '102'=> array('Szabályos igék jelen ideje', 3),
-        '103'=> array('ige', 1),
-        '58' => array('ige-ragozott', 1),
-        '363'=> array('"hablar" conjugated', 1),
-        '111'=> array('A rendhagyó igék', 3),
-        '113'=> array('Melléknév fokozás', 3),
-        '206'=> array('Összehasonlítás', 3),
-        '70' => array('Összehasonlítás', 2),
-        '114'=> array('Személyes névmás tárgy, részes', 3),
-        '116'=> array('"Me gusta" jellegû mondatok', 3),
-        '66' => array('"Me gusta"', 2),
-        '129'=> array('Visszaható igék és névmások', 3),
-        '130'=> array('Visszaható', 2),
-        '234'=> array('Felszólító mód I.', 3),
-        '235'=> array('Felszólító mód I.', 2),
-        '192'=> array('Elöljárószavak II.', 3),
-        '6'  => array('elöljárószó', 1),
-        '136'=> array('Igenevek', 3),
-        '117'=> array('Közeljövõ - ir+a+infinitivo', 3),
-        '79' => array('Közeljövõ - ir+a+infinitivo', 2),
-        '118'=> array('Haber és a Közelmúlt', 3),
-        '67' => array('Közelmúlt', 2),
-        '177'=> array('Folyamatos jelen', 3),
-        '24' => array('Folyamatos jelen', 2),
-        '210'=> array('Szükségesség, kötelesség', 3),
-        '233'=> array('Szükségesség, kötelesség', 2),
-        '121'=> array('Határozatlan névmások', 3),
-        '122'=> array('Határozatlan névmás', 2),
-        '123'=> array('Rendhagyó igék 2.', 3),
-        '15' => array('Jelen idõ', 2),
-        '370'=> array('Személyes névmásos mondatok', 2),
-        '191'=> array('Elöljárószavak II.', 3),
-        '137'=> array('Elbeszélõ múlt', 3),
-        '18' => array('Elbeszélõ múlt', 2),
-        '360'=> array('Elöljárószavak III.', 3),
-        '138'=> array('Folyamatos múlt', 3),
-        '139'=> array('Folyamatos múlt', 2),
-        '202'=> array('Vonatkozó névmások', 3),
-        '236'=> array('Vonatkozó névmás', 2),
-        '172'=> array('Régmúlt', 3),
-        '237'=> array('Régmúlt', 2),
-        '140'=> array('Felszólító mód II.', 3),
-        '141'=> array('Felszólító II.', 2),
-        '142'=> array('Jövõ idõ', 3),
-        '21' => array('Jövõ idõ', 2),
-        '143'=> array('Feltételes mód', 3),
-        '277'=> array('Feltételes mód múlt idõ', 3),
-        '133'=> array('Feltételes mondatok', 3),
-        '31' => array('Feltételes mód', 2),
-        '146'=> array('Szenvedõ szerkezet', 3),
-        '30' => array('Szenvedõ', 2),
-        '131'=> array('Igei körülírások: Gerundio', 3),
-        '223'=> array('Gerundio', 2),
-        '132'=> array('Igei körülírások: Infinitivo', 3),
-        '134'=> array('Infinitivo', 2),
-        '74' => array('Igei körülírások: Participio', 3),
-        '135'=> array('Participio', 2),
-        '366'=> array('Változást kifejezõ igék', 3),
-        '367'=> array('Változást kifejezõ igék', 2),
-        '144'=> array('Kötõmód jelen idõ', 3),
-        '211'=> array('Kötõmód használata I.', 3),
-        '212'=> array('Kötõmód használata II.', 3),
-        '168'=> array('Kötõmód jelen', 2),
-        '145'=> array('A kötõmód folyamatos múltja', 3),
-        '247'=> array('Kötõmód folyamatos múlt', 2),
-        '239'=> array('A kötõmód közel- és régmúlt', 3),
-        '365'=> array('Kötõmód közelmúlt', 2),
-        '147'=> array('Függõ beszéd', 3),
-        '148'=> array('Függõ beszéd', 2),
-        '150'=> array('Igeidõ egyeztetés a kötõmódban', 3),
-        '151'=> array('Egyeztetés a kötõmódban', 2),
-        '170'=> array('Befejezett jövõ idõ', 3),
-        '171'=> array('Befejezett jövõ idõ', 2),
-        '1'  => array('fõnév', 1),
-        '2'  => array('melléknév', 1),
-        '3'  => array('határozószó', 1),
-        '71' => array('névmás', 1),
-        '39' => array('kifejezés', 1),
-        '205'=> array('szófordulat', 1),
-        '204'=> array('Se', 3),
-        '362'=> array('"Se"-s mondatok', 2),
-        '359'=> array('Lo', 3));
-    }
-    else if($userObject['forras_nyelv'] == 2){
+            '0'  => array('Level 0', 1),
+            '53' => array('Spanyol ï¿½bï¿½cï¿½', 3),
+            '81' => array('ï¿½bï¿½cï¿½', 1),
+            '82' => array('Kiejtï¿½s', 3),
+            '174' => array('Hangsï¿½ly', 3),
+            '84' => array('Nï¿½velï¿½', 3),
+            '176' => array('Fï¿½nï¿½v', 3),
+            '85' => array('Mellï¿½knï¿½v', 3),
+            '86' => array('Szemï¿½lyes nï¿½vmï¿½s alany eset + a "ser" ige', 3),
+            '200' => array('"Ser"', 2),
+            '199' => array('Tagadï¿½s ï¿½s az eldï¿½ntendï¿½ kï¿½rdï¿½s', 3),
+            '88' => array('"Estar" + "Hay" hasznï¿½lata', 3),
+            '38' => array('"Estar"', 2),
+            '41' => array('"Hay"', 2),
+            '120' => array('Elï¿½ljï¿½rï¿½szavak I.', 3),
+            '95' => array('Kï¿½rdï¿½szavak ï¿½s a kiegï¿½szï¿½tendï¿½ kï¿½rdï¿½s', 3),
+            '96' => array('kï¿½rdï¿½szï¿½', 1),
+            '231' => array('Quï¿½? vagy Cuï¿½l?', 3),
+            '97' => array('Szï¿½mok', 3),
+            '11' => array('szï¿½m', 1),
+            '98' => array('Az ï¿½ra', 3),
+            '99' => array('ï¿½ra', 2),
+            '101' => array('Birtokos szerkezet ï¿½s nï¿½vmï¿½sok', 3),
+            '59' => array('Birtokos szerkezet', 2),
+            '8'  => array('Mutatï¿½ nï¿½vmï¿½sok ï¿½s itt/ott', 3),
+            '102' => array('Szabï¿½lyos igï¿½k jelen ideje', 3),
+            '103' => array('ige', 1),
+            '58' => array('ige-ragozott', 1),
+            '363' => array('"hablar" conjugated', 1),
+            '111' => array('A rendhagyï¿½ igï¿½k', 3),
+            '113' => array('Mellï¿½knï¿½v fokozï¿½s', 3),
+            '206' => array('ï¿½sszehasonlï¿½tï¿½s', 3),
+            '70' => array('ï¿½sszehasonlï¿½tï¿½s', 2),
+            '114' => array('Szemï¿½lyes nï¿½vmï¿½s tï¿½rgy, rï¿½szes', 3),
+            '116' => array('"Me gusta" jellegï¿½ mondatok', 3),
+            '66' => array('"Me gusta"', 2),
+            '129' => array('Visszahatï¿½ igï¿½k ï¿½s nï¿½vmï¿½sok', 3),
+            '130' => array('Visszahatï¿½', 2),
+            '234' => array('Felszï¿½lï¿½tï¿½ mï¿½d I.', 3),
+            '235' => array('Felszï¿½lï¿½tï¿½ mï¿½d I.', 2),
+            '192' => array('Elï¿½ljï¿½rï¿½szavak II.', 3),
+            '6'  => array('elï¿½ljï¿½rï¿½szï¿½', 1),
+            '136' => array('Igenevek', 3),
+            '117' => array('Kï¿½zeljï¿½vï¿½ - ir+a+infinitivo', 3),
+            '79' => array('Kï¿½zeljï¿½vï¿½ - ir+a+infinitivo', 2),
+            '118' => array('Haber ï¿½s a Kï¿½zelmï¿½lt', 3),
+            '67' => array('Kï¿½zelmï¿½lt', 2),
+            '177' => array('Folyamatos jelen', 3),
+            '24' => array('Folyamatos jelen', 2),
+            '210' => array('Szï¿½ksï¿½gessï¿½g, kï¿½telessï¿½g', 3),
+            '233' => array('Szï¿½ksï¿½gessï¿½g, kï¿½telessï¿½g', 2),
+            '121' => array('Hatï¿½rozatlan nï¿½vmï¿½sok', 3),
+            '122' => array('Hatï¿½rozatlan nï¿½vmï¿½s', 2),
+            '123' => array('Rendhagyï¿½ igï¿½k 2.', 3),
+            '15' => array('Jelen idï¿½', 2),
+            '370' => array('Szemï¿½lyes nï¿½vmï¿½sos mondatok', 2),
+            '191' => array('Elï¿½ljï¿½rï¿½szavak II.', 3),
+            '137' => array('Elbeszï¿½lï¿½ mï¿½lt', 3),
+            '18' => array('Elbeszï¿½lï¿½ mï¿½lt', 2),
+            '360' => array('Elï¿½ljï¿½rï¿½szavak III.', 3),
+            '138' => array('Folyamatos mï¿½lt', 3),
+            '139' => array('Folyamatos mï¿½lt', 2),
+            '202' => array('Vonatkozï¿½ nï¿½vmï¿½sok', 3),
+            '236' => array('Vonatkozï¿½ nï¿½vmï¿½s', 2),
+            '172' => array('Rï¿½gmï¿½lt', 3),
+            '237' => array('Rï¿½gmï¿½lt', 2),
+            '140' => array('Felszï¿½lï¿½tï¿½ mï¿½d II.', 3),
+            '141' => array('Felszï¿½lï¿½tï¿½ II.', 2),
+            '142' => array('Jï¿½vï¿½ idï¿½', 3),
+            '21' => array('Jï¿½vï¿½ idï¿½', 2),
+            '143' => array('Feltï¿½teles mï¿½d', 3),
+            '277' => array('Feltï¿½teles mï¿½d mï¿½lt idï¿½', 3),
+            '133' => array('Feltï¿½teles mondatok', 3),
+            '31' => array('Feltï¿½teles mï¿½d', 2),
+            '146' => array('Szenvedï¿½ szerkezet', 3),
+            '30' => array('Szenvedï¿½', 2),
+            '131' => array('Igei kï¿½rï¿½lï¿½rï¿½sok: Gerundio', 3),
+            '223' => array('Gerundio', 2),
+            '132' => array('Igei kï¿½rï¿½lï¿½rï¿½sok: Infinitivo', 3),
+            '134' => array('Infinitivo', 2),
+            '74' => array('Igei kï¿½rï¿½lï¿½rï¿½sok: Participio', 3),
+            '135' => array('Participio', 2),
+            '366' => array('Vï¿½ltozï¿½st kifejezï¿½ igï¿½k', 3),
+            '367' => array('Vï¿½ltozï¿½st kifejezï¿½ igï¿½k', 2),
+            '144' => array('Kï¿½tï¿½mï¿½d jelen idï¿½', 3),
+            '211' => array('Kï¿½tï¿½mï¿½d hasznï¿½lata I.', 3),
+            '212' => array('Kï¿½tï¿½mï¿½d hasznï¿½lata II.', 3),
+            '168' => array('Kï¿½tï¿½mï¿½d jelen', 2),
+            '145' => array('A kï¿½tï¿½mï¿½d folyamatos mï¿½ltja', 3),
+            '247' => array('Kï¿½tï¿½mï¿½d folyamatos mï¿½lt', 2),
+            '239' => array('A kï¿½tï¿½mï¿½d kï¿½zel- ï¿½s rï¿½gmï¿½lt', 3),
+            '365' => array('Kï¿½tï¿½mï¿½d kï¿½zelmï¿½lt', 2),
+            '147' => array('Fï¿½ggï¿½ beszï¿½d', 3),
+            '148' => array('Fï¿½ggï¿½ beszï¿½d', 2),
+            '150' => array('Igeidï¿½ egyeztetï¿½s a kï¿½tï¿½mï¿½dban', 3),
+            '151' => array('Egyeztetï¿½s a kï¿½tï¿½mï¿½dban', 2),
+            '170' => array('Befejezett jï¿½vï¿½ idï¿½', 3),
+            '171' => array('Befejezett jï¿½vï¿½ idï¿½', 2),
+            '1'  => array('fï¿½nï¿½v', 1),
+            '2'  => array('mellï¿½knï¿½v', 1),
+            '3'  => array('hatï¿½rozï¿½szï¿½', 1),
+            '71' => array('nï¿½vmï¿½s', 1),
+            '39' => array('kifejezï¿½s', 1),
+            '205' => array('szï¿½fordulat', 1),
+            '204' => array('Se', 3),
+            '362' => array('"Se"-s mondatok', 2),
+            '359' => array('Lo', 3)
+        );
+    } else if ($userObject['forras_nyelv'] == 2) {
         $list['angol'] = array(
-        '0'  => array('Level 0', 1),
-        '153'=> array('Transcripción fonética, pronunciación', 3),
-        '60' => array('Artículos', 3),
-        '75' => array('Sustantivos contables y incontables', 3),
-        '76' => array('El plural de los sustantivos', 3),
-        '1'  => array('Sustantivo', 1),
-        '8'  => array('Pronombres demostrativos', 3),
-        '13' => array('Artículo/Pronombre+sustantive', 2),
-        '77' => array('Adjetivos', 3),
-        '78' => array('Los grados de los adjetivos', 3),
-        '2'  => array('Adjectivo', 1),
-        '120'=> array('Las preposiciónes', 3),
-        '6'  => array('Preposición', 1),
-        '88' => array('El verbo "be"', 3),
-        '200'=> array('Frases con "be"', 2),
-        '91' => array('Negación de "be"', 3),
-        '152'=> array('Pronombres personales', 3),
-        '92' => array('Preguntas simples', 3),
-        '209'=> array('Conjugación de Be', 3),
-        '94' => array('Adverbios de lugar', 3),
-        '126'=> array('Expresar posesión', 3),
-        '59' => array('Expresar posesión', 2),
-        '127'=> array('Preguntas "cómo"', 3),
-        '36' => array('Preguntas "cómo"', 2),
-        '157'=> array('El ordern de los adverbios', 3),
-        '38' => array('Frases con "be" (adelanto)', 2),
-        '97' => array('Números', 3),
-        '11' => array('Número', 1),
-        '98' => array('La hora', 3),
-        '188'=> array('La hora', 2),
-        '187'=> array('"Hay"', 3),
-        '41' => array('"Hay"', 2),
-        '154'=> array('Presente: afirmaciones/imperativos', 3),
-        '5'  => array('Verbo', 1),
-        '156'=> array('Conectar dos verbos', 3),
-        '162'=> array('Present simple: preguntas', 3),
-        '164'=> array('Present simple: negaciones', 3),
-        '15' => array('Presente', 2),
-        '114'=> array('Pronombres personales', 3),
-        '166'=> array('Past simple', 3),
-        '18' => array('Past simple', 2),
-        '167'=> array('Future simple', 3),
-        '21' => array('Future simple', 2),
-        '158'=> array('Tell-say-talk-speak-discuss', 3),
-        '163'=> array('Preguntas sobre el sujeto', 3),
-        '193'=> array('Preguntas sobre el sujeto', 2),
-        '186'=> array('La comparación', 3),
-        '70' => array('La comparación', 2),
-        '228'=> array('"It+is+adjetivo+to+verbo"', 3),
-        '165'=> array('Verbos auxiliares', 3),
-        '37' => array('Verbos auxiliares', 2),
-        '355'=> array('Verbos auxiliares (pasado)', 2),
-        '185'=> array('What-that-which', 3),
-        '69' => array('What-that-which', 2),
-        '177'=> array('Present continuous', 3),
-        '24' => array('Present continuous', 2),
-        '178'=> array('Present perfect', 3),
-        '27' => array('Present perfect', 2),
-        '189'=> array('"Hay" en otros tiempos', 3),
-        '190'=> array('"Hay" en otros tiempos', 2),
-        '227'=> array('Auxiliares en pasado', 3),
-        '182'=> array('Past perfect', 3),
-        '64' => array('Past perfect', 2),
-        '146'=> array('Voz pasiva', 3),
-        '30' => array('Voz pasiva', 2),
-        '356'=> array('Voz pasiva y auxiliar', 2),
-        '138'=> array('Past continuous', 3),
-        '139'=> array('Past continuous', 2),
-        '180'=> array('Future continuous', 3),
-        '181'=> array('Future continuous', 2),
-        '143'=> array('Condicional', 3),
-        '31' => array('Condicional', 2),
-        '194'=> array('Present perfect continuous', 3),
-        '195'=> array('Present perfect continuous', 2),
-        '179'=> array('Causitive', 3),
-        '34' => array('Causative', 2),
-        '110'=> array('Participio', 3),
-        '224'=> array('Participio', 2),
-        '183'=> array('Past perfect continuous', 3),
-        '125'=> array('Past perfect continuous', 2),
-        '184'=> array('Estilo indirecto', 3),
-        '49' => array('Estilo indirecto', 2),
-        '207'=> array('Futuro perfecto', 3),
-        '208'=> array('Futuro perfecto', 2),
-        '238'=> array('El orden de los adjetivos', 3),
-        '246'=> array('Cosas peque&#241;as', 3),
-        '72' => array('Frases con verbos', 2),
-        '46' => array('Otro', 1),
-        '3'  => array('Adverbio', 1),
-        '39' => array('Expresión', 1),
-        '205'=> array('Words used together', 1));
-    }
-    else if($userObject['forras_nyelv'] == 1){
+            '0'  => array('Level 0', 1),
+            '153' => array('Transcripciï¿½n fonï¿½tica, pronunciaciï¿½n', 3),
+            '60' => array('Artï¿½culos', 3),
+            '75' => array('Sustantivos contables y incontables', 3),
+            '76' => array('El plural de los sustantivos', 3),
+            '1'  => array('Sustantivo', 1),
+            '8'  => array('Pronombres demostrativos', 3),
+            '13' => array('Artï¿½culo/Pronombre+sustantive', 2),
+            '77' => array('Adjetivos', 3),
+            '78' => array('Los grados de los adjetivos', 3),
+            '2'  => array('Adjectivo', 1),
+            '120' => array('Las preposiciï¿½nes', 3),
+            '6'  => array('Preposiciï¿½n', 1),
+            '88' => array('El verbo "be"', 3),
+            '200' => array('Frases con "be"', 2),
+            '91' => array('Negaciï¿½n de "be"', 3),
+            '152' => array('Pronombres personales', 3),
+            '92' => array('Preguntas simples', 3),
+            '209' => array('Conjugaciï¿½n de Be', 3),
+            '94' => array('Adverbios de lugar', 3),
+            '126' => array('Expresar posesiï¿½n', 3),
+            '59' => array('Expresar posesiï¿½n', 2),
+            '127' => array('Preguntas "cï¿½mo"', 3),
+            '36' => array('Preguntas "cï¿½mo"', 2),
+            '157' => array('El ordern de los adverbios', 3),
+            '38' => array('Frases con "be" (adelanto)', 2),
+            '97' => array('Nï¿½meros', 3),
+            '11' => array('Nï¿½mero', 1),
+            '98' => array('La hora', 3),
+            '188' => array('La hora', 2),
+            '187' => array('"Hay"', 3),
+            '41' => array('"Hay"', 2),
+            '154' => array('Presente: afirmaciones/imperativos', 3),
+            '5'  => array('Verbo', 1),
+            '156' => array('Conectar dos verbos', 3),
+            '162' => array('Present simple: preguntas', 3),
+            '164' => array('Present simple: negaciones', 3),
+            '15' => array('Presente', 2),
+            '114' => array('Pronombres personales', 3),
+            '166' => array('Past simple', 3),
+            '18' => array('Past simple', 2),
+            '167' => array('Future simple', 3),
+            '21' => array('Future simple', 2),
+            '158' => array('Tell-say-talk-speak-discuss', 3),
+            '163' => array('Preguntas sobre el sujeto', 3),
+            '193' => array('Preguntas sobre el sujeto', 2),
+            '186' => array('La comparaciï¿½n', 3),
+            '70' => array('La comparaciï¿½n', 2),
+            '228' => array('"It+is+adjetivo+to+verbo"', 3),
+            '165' => array('Verbos auxiliares', 3),
+            '37' => array('Verbos auxiliares', 2),
+            '355' => array('Verbos auxiliares (pasado)', 2),
+            '185' => array('What-that-which', 3),
+            '69' => array('What-that-which', 2),
+            '177' => array('Present continuous', 3),
+            '24' => array('Present continuous', 2),
+            '178' => array('Present perfect', 3),
+            '27' => array('Present perfect', 2),
+            '189' => array('"Hay" en otros tiempos', 3),
+            '190' => array('"Hay" en otros tiempos', 2),
+            '227' => array('Auxiliares en pasado', 3),
+            '182' => array('Past perfect', 3),
+            '64' => array('Past perfect', 2),
+            '146' => array('Voz pasiva', 3),
+            '30' => array('Voz pasiva', 2),
+            '356' => array('Voz pasiva y auxiliar', 2),
+            '138' => array('Past continuous', 3),
+            '139' => array('Past continuous', 2),
+            '180' => array('Future continuous', 3),
+            '181' => array('Future continuous', 2),
+            '143' => array('Condicional', 3),
+            '31' => array('Condicional', 2),
+            '194' => array('Present perfect continuous', 3),
+            '195' => array('Present perfect continuous', 2),
+            '179' => array('Causitive', 3),
+            '34' => array('Causative', 2),
+            '110' => array('Participio', 3),
+            '224' => array('Participio', 2),
+            '183' => array('Past perfect continuous', 3),
+            '125' => array('Past perfect continuous', 2),
+            '184' => array('Estilo indirecto', 3),
+            '49' => array('Estilo indirecto', 2),
+            '207' => array('Futuro perfecto', 3),
+            '208' => array('Futuro perfecto', 2),
+            '238' => array('El orden de los adjetivos', 3),
+            '246' => array('Cosas peque&#241;as', 3),
+            '72' => array('Frases con verbos', 2),
+            '46' => array('Otro', 1),
+            '3'  => array('Adverbio', 1),
+            '39' => array('Expresiï¿½n', 1),
+            '205' => array('Words used together', 1)
+        );
+    } else if ($userObject['forras_nyelv'] == 1) {
         $list['spanyol'] = array(
             '0'  => array('Level 0', 1),
             '53' => array('Alphabet', 3),
             '82' => array('Pronunciation', 3),
-            '174'=> array('Stress', 3),
+            '174' => array('Stress', 3),
             '84' => array('The Article', 3),
-            '176'=> array('The Noun', 3),
+            '176' => array('The Noun', 3),
             '85' => array('Adjectives', 3),
             '86' => array('Personal pronoun + "ser"', 3),
-            '200'=> array('"Ser"', 2),
-            '199'=> array('Negations and Yes-No Questions', 3),
+            '200' => array('"Ser"', 2),
+            '199' => array('Negations and Yes-No Questions', 3),
             '88' => array('Use of "Estar" + "Hay"', 3),
             '38' => array('"Estar"', 2),
             '41' => array('"Hay"', 2),
-            '120'=> array('Prepositions I.', 3),
+            '120' => array('Prepositions I.', 3),
             '95' => array('Question words and Wh-Questions', 3),
-            '231'=> array('Qué? or Cuál?', 3),
+            '231' => array('Quï¿½? or Cuï¿½l?', 3),
             '97' => array('Numbers', 3),
             '11' => array('numbers', 1),
             '98' => array('The Clock', 3),
-            '101'=> array('Possessive structure and pronouns', 3),
+            '101' => array('Possessive structure and pronouns', 3),
             '59' => array('Possessive structure', 2),
             '8'  => array('Demonstrative and here/there', 3),
-            '102'=> array('Regular Verbs in Present', 3),
-            '103'=> array('verb', 1),
+            '102' => array('Regular Verbs in Present', 3),
+            '103' => array('verb', 1),
             '58' => array('verb-conjugated', 1),
-            '363'=> array('"hablar" conjugated', 1),
-            '111'=> array('Iregular verbs', 3),
-            '113'=> array('Adjective forms', 3),
-            '206'=> array('Comparison', 3),
+            '363' => array('"hablar" conjugated', 1),
+            '111' => array('Iregular verbs', 3),
+            '113' => array('Adjective forms', 3),
+            '206' => array('Comparison', 3),
             '70' => array('Comparison', 2),
-            '114'=> array('Accusative and dative cases', 3),
-            '116'=> array('"Me gusta" type sentences', 3),
+            '114' => array('Accusative and dative cases', 3),
+            '116' => array('"Me gusta" type sentences', 3),
             '66' => array('"Me gusta"', 2),
-            '129'=> array('Reflexive verbs and pronouns', 3),
-            '130'=> array('Reflexive', 2),
-            '234'=> array('Imperative I.', 3),
-            '235'=> array('Imperative I.', 2),
-            '192'=> array('Prepositions II.', 3),
+            '129' => array('Reflexive verbs and pronouns', 3),
+            '130' => array('Reflexive', 2),
+            '234' => array('Imperative I.', 3),
+            '235' => array('Imperative I.', 2),
+            '192' => array('Prepositions II.', 3),
             '6'  => array('preposition', 1),
-            '136'=> array('Participles', 3),
-            '117'=> array('Ir+a+infinitivo', 3),
+            '136' => array('Participles', 3),
+            '117' => array('Ir+a+infinitivo', 3),
             '79' => array('ir+a+infinitivo', 2),
-            '118'=> array('Haber and Present Perfect', 3),
+            '118' => array('Haber and Present Perfect', 3),
             '67' => array('Present perfect', 2),
-            '177'=> array('"Present Continuous"', 3),
+            '177' => array('"Present Continuous"', 3),
             '24' => array('Present continuous', 2),
-            '210'=> array('Obligation', 3),
-            '121'=> array('Indefinite pronouns', 3),
-            '122'=> array('Indefinite pronouns', 2),
-            '123'=> array('Irregular verbs 2.', 3),
+            '210' => array('Obligation', 3),
+            '121' => array('Indefinite pronouns', 3),
+            '122' => array('Indefinite pronouns', 2),
+            '123' => array('Irregular verbs 2.', 3),
             '15' => array('Present Simple', 2),
-            '191'=> array('Prepositions II.', 3),
-            '137'=> array('Past Simple', 3),
+            '191' => array('Prepositions II.', 3),
+            '137' => array('Past Simple', 3),
             '18' => array('Past simple', 2),
-            '360'=> array('Prepositions III.', 3),
-            '138'=> array('Past Continuous', 3),
-            '139'=> array('Past continuous', 2),
-            '202'=> array('Relative Pronouns', 3),
-            '236'=> array('Relative pronouns', 2),
-            '172'=> array('Past Perfect', 3),
-            '237'=> array('Past perfect', 2),
-            '140'=> array('Imperative II.', 3),
-            '141'=> array('Imperative II.', 2),
-            '142'=> array('Future Simple', 3),
+            '360' => array('Prepositions III.', 3),
+            '138' => array('Past Continuous', 3),
+            '139' => array('Past continuous', 2),
+            '202' => array('Relative Pronouns', 3),
+            '236' => array('Relative pronouns', 2),
+            '172' => array('Past Perfect', 3),
+            '237' => array('Past perfect', 2),
+            '140' => array('Imperative II.', 3),
+            '141' => array('Imperative II.', 2),
+            '142' => array('Future Simple', 3),
             '21' => array('Future Simple', 2),
-            '143'=> array('Conditional', 3),
-            '277'=> array('Conditional past tense', 3),
-            '133'=> array('Conditional sentences', 3),
+            '143' => array('Conditional', 3),
+            '277' => array('Conditional past tense', 3),
+            '133' => array('Conditional sentences', 3),
             '31' => array('Conditional', 2),
-            '146'=> array('Passive Voice', 3),
+            '146' => array('Passive Voice', 3),
             '30' => array('Passive voice', 2),
-            '131'=> array('Gerundio', 3),
-            '223'=> array('gerundio', 2),
-            '132'=> array('Infinitivo', 3),
-            '134'=> array('infinitivo', 2),
+            '131' => array('Gerundio', 3),
+            '223' => array('gerundio', 2),
+            '132' => array('Infinitivo', 3),
+            '134' => array('infinitivo', 2),
             '74' => array('Participio', 3),
-            '135'=> array('participio', 2),
-            '366'=> array('Future Continuous', 3),
-            '367'=> array('Future continuous', 2),
-            '144'=> array('Subjuntivo Present', 3),
-            '211'=> array('Use of Subjuntivo I.', 3),
-            '212'=> array('Use of Subjuntivo II.', 3),
-            '168'=> array('Subjuntivo Present', 2),
-            '145'=> array('Subjuntivo Past Continuous', 3),
-            '247'=> array('Subjuntivo Past Continuous', 2),
-            '365'=> array('Subjuntivo Present Perfect', 2),
-            '239'=> array('Subjuntivo Past Perfect and Simple Past', 3),
-            '371'=> array('Subjuntivo Past Perfect', 2),
-            '147'=> array('Reported Speech', 3),
-            '148'=> array('Reported speech', 2),
-            '150'=> array('Tense Agreement in Subjuntivo', 3),
-            '151'=> array('Tense agreement in subjuntivo', 2),
-            '170'=> array('Future Perfect Continuous', 3),
-            '171'=> array('Future perfect continuous', 2),
+            '135' => array('participio', 2),
+            '366' => array('Future Continuous', 3),
+            '367' => array('Future continuous', 2),
+            '144' => array('Subjuntivo Present', 3),
+            '211' => array('Use of Subjuntivo I.', 3),
+            '212' => array('Use of Subjuntivo II.', 3),
+            '168' => array('Subjuntivo Present', 2),
+            '145' => array('Subjuntivo Past Continuous', 3),
+            '247' => array('Subjuntivo Past Continuous', 2),
+            '365' => array('Subjuntivo Present Perfect', 2),
+            '239' => array('Subjuntivo Past Perfect and Simple Past', 3),
+            '371' => array('Subjuntivo Past Perfect', 2),
+            '147' => array('Reported Speech', 3),
+            '148' => array('Reported speech', 2),
+            '150' => array('Tense Agreement in Subjuntivo', 3),
+            '151' => array('Tense agreement in subjuntivo', 2),
+            '170' => array('Future Perfect Continuous', 3),
+            '171' => array('Future perfect continuous', 2),
             '1'  => array('noun', 1),
             '2'  => array('adjective', 1),
             '3'  => array('adverb', 1),
             '71' => array('pronoun', 1),
             '39' => array('expression', 1),
-            '205'=> array('just words', 1),
-            '204'=> array('Se', 3),
-            '362'=> array('"Se" sentences', 2),
-            '359'=> array('General Subject', 3));
+            '205' => array('just words', 1),
+            '204' => array('Se', 3),
+            '362' => array('"Se" sentences', 2),
+            '359' => array('General Subject', 3)
+        );
     }
 
     $list['arab'] = array(
-    '0'  => array('Level 0', 1),
-    '259'=> array('* Independent Pronouns (p7)', 1),
-    '349'=> array('* Some basic words (p7)', 1),
-    '346'=> array('This-that pronouns', 1),
-    '347'=> array('"This/that is" examples', 1),
-    '348'=> array('"This/that guy" examples', 1),
-    '258'=> array('"Have" conj. (present)', 1),
-    '263'=> array('"Want" conj. (past)', 1),
-    '260'=> array('"Do" conj. (present)', 1),
-    '350'=> array('Verbs 1.', 1),
-    '351'=> array('Verbs 2.', 1),
-    '352'=> array('Verbs 3.', 1),
-    '353'=> array('Verbs 4.', 1),
-    '283'=> array('I (future)', 1),
-    '286'=> array('I (future /ending)', 1),
-    '282'=> array('I (past)', 1),
-    '285'=> array('I (past /ending)', 1),
-    '256'=> array('I (present) 1.', 1),
-    '284'=> array('I (present /ending)', 1),
-    '287'=> array('I (present) 2.', 1),
-    '288'=> array('I (present) 3.', 1),
-    '290'=> array('I (present) 4.', 1),
-    '275'=> array('Verbs /suffix', 1),
-    '361'=> array('"Want to" sentences', 1),
-    '279'=> array('Nouns 1.', 1),
-    '294'=> array('Nouns 2.', 1),
-    '262'=> array('Possessive Pronouns', 1),
-    '254'=> array('Possessed nouns 1.', 1),
-    '291'=> array('Possessed nouns 2.', 1),
-    '292'=> array('Possessed nouns 3.', 1),
-    '293'=> array('Possessed nouns 4.', 1),
-    '276'=> array('"To me" pronouns', 1),
-    '273'=> array('Conversational 1.', 1),
-    '289'=> array('Conversational 2.', 1),
-    '302'=> array('Greetings 1.', 1),
-    '301'=> array('Greetings 2.', 1),
-    '272'=> array('Greetings 3.', 1),
-    '281'=> array('Adjectives 1.', 1),
-    '280'=> array('Places', 1),
-    '265'=> array('Days', 1),
-    '255'=> array('Basic Numbers', 1),
-    '249'=> array('Basic Words', 2),
-    '7'  => array('Numbers', 2),
-    '264'=> array('Ordinal Numbers', 2),
-    '56' => array('Verbs - present DOUBLE-CHECK', 2),
-    '270'=> array('Verbs - past', 2),
-    '271'=> array('Verbs - future', 2),
-    '5'  => array('Verbs - conj.', 2),
-    '257'=> array('Verbs - Imperative', 2),
-    '274'=> array('LATEFA - KÉRDÉSEK', 2),
-    '200'=> array('BE statements', 2),
-    '50' => array('BE questions', 2),
-    '14' => array('BE negations', 2),
-    '41' => array('"Can"-sentences', 2),
-    '278'=> array('"Lets"... sentences', 2),
-    '37' => array('Segédigés mondatok', 2),
-    '15' => array('Present statements', 2),
-    '17' => array('Present questions', 2),
-    '16' => array('Present negations', 2),
-    '18' => array('Past statements TO SORT', 2),
-    '20' => array('Past questions', 2),
-    '19' => array('Past negations', 2),
-    '21' => array('Future statements TO SORT', 2),
-    '23' => array('Future questions', 2),
-    '22' => array('Future negations', 2),
-    '1'  => array('Nouns', 2),
-    '2'  => array('Adjectives', 2),
-    '6'  => array('Preposition', 2),
-    '46' => array('Other things', 2),
-    '3'  => array('Adverb', 2),
-    '39' => array('Expressions', 2),
-    '31' => array('Conditional', 2),
-    '74' => array('Sentences for my lessons', 3),
-    '187'=> array('There is', 3),
-    '156'=> array('Verb + verb', 3),
-    '267'=> array('Imperatives', 3),
-    '261'=> array('Some rules', 3),
-    '266'=> array('Negations', 3));
+        '0'  => array('Level 0', 1),
+        '259' => array('* Independent Pronouns (p7)', 1),
+        '349' => array('* Some basic words (p7)', 1),
+        '346' => array('This-that pronouns', 1),
+        '347' => array('"This/that is" examples', 1),
+        '348' => array('"This/that guy" examples', 1),
+        '258' => array('"Have" conj. (present)', 1),
+        '263' => array('"Want" conj. (past)', 1),
+        '260' => array('"Do" conj. (present)', 1),
+        '350' => array('Verbs 1.', 1),
+        '351' => array('Verbs 2.', 1),
+        '352' => array('Verbs 3.', 1),
+        '353' => array('Verbs 4.', 1),
+        '283' => array('I (future)', 1),
+        '286' => array('I (future /ending)', 1),
+        '282' => array('I (past)', 1),
+        '285' => array('I (past /ending)', 1),
+        '256' => array('I (present) 1.', 1),
+        '284' => array('I (present /ending)', 1),
+        '287' => array('I (present) 2.', 1),
+        '288' => array('I (present) 3.', 1),
+        '290' => array('I (present) 4.', 1),
+        '275' => array('Verbs /suffix', 1),
+        '361' => array('"Want to" sentences', 1),
+        '279' => array('Nouns 1.', 1),
+        '294' => array('Nouns 2.', 1),
+        '262' => array('Possessive Pronouns', 1),
+        '254' => array('Possessed nouns 1.', 1),
+        '291' => array('Possessed nouns 2.', 1),
+        '292' => array('Possessed nouns 3.', 1),
+        '293' => array('Possessed nouns 4.', 1),
+        '276' => array('"To me" pronouns', 1),
+        '273' => array('Conversational 1.', 1),
+        '289' => array('Conversational 2.', 1),
+        '302' => array('Greetings 1.', 1),
+        '301' => array('Greetings 2.', 1),
+        '272' => array('Greetings 3.', 1),
+        '281' => array('Adjectives 1.', 1),
+        '280' => array('Places', 1),
+        '265' => array('Days', 1),
+        '255' => array('Basic Numbers', 1),
+        '249' => array('Basic Words', 2),
+        '7'  => array('Numbers', 2),
+        '264' => array('Ordinal Numbers', 2),
+        '56' => array('Verbs - present DOUBLE-CHECK', 2),
+        '270' => array('Verbs - past', 2),
+        '271' => array('Verbs - future', 2),
+        '5'  => array('Verbs - conj.', 2),
+        '257' => array('Verbs - Imperative', 2),
+        '274' => array('LATEFA - Kï¿½RDï¿½SEK', 2),
+        '200' => array('BE statements', 2),
+        '50' => array('BE questions', 2),
+        '14' => array('BE negations', 2),
+        '41' => array('"Can"-sentences', 2),
+        '278' => array('"Lets"... sentences', 2),
+        '37' => array('Segï¿½digï¿½s mondatok', 2),
+        '15' => array('Present statements', 2),
+        '17' => array('Present questions', 2),
+        '16' => array('Present negations', 2),
+        '18' => array('Past statements TO SORT', 2),
+        '20' => array('Past questions', 2),
+        '19' => array('Past negations', 2),
+        '21' => array('Future statements TO SORT', 2),
+        '23' => array('Future questions', 2),
+        '22' => array('Future negations', 2),
+        '1'  => array('Nouns', 2),
+        '2'  => array('Adjectives', 2),
+        '6'  => array('Preposition', 2),
+        '46' => array('Other things', 2),
+        '3'  => array('Adverb', 2),
+        '39' => array('Expressions', 2),
+        '31' => array('Conditional', 2),
+        '74' => array('Sentences for my lessons', 3),
+        '187' => array('There is', 3),
+        '156' => array('Verb + verb', 3),
+        '267' => array('Imperatives', 3),
+        '261' => array('Some rules', 3),
+        '266' => array('Negations', 3)
+    );
 
     $list['nemet'] = array(
-    '0'  => array('Level 0', 1),
-    '153'=> array('A német ábécé: kiejtés', 3),
-    '196'=> array('A német ábécé: magánhangzók', 3),
-    '197'=> array('A német ábécé: telefonos betûzés', 3),
-    '198'=> array('A német ábécé: rövid vagy hosszú a magánhangzó?', 3),
-    '154'=> array('Jelen idejû ragozás', 3),
-    '239'=> array('Szófordulat', 1),
-    '213'=> array('Jelen idejû igés mondatok', 2),
-    '123'=> array('Tõhangváltós igék', 3),
-    '214'=> array('Tõhangváltós igés mondatok', 2),
-    '90' => array('Az ige helye a mondatban - egyenes, fordított és KATI-szórend', 3),
-    '215'=> array('Szórend gyakorlás - mondatok', 2),
-    '88' => array('Kijelentõ mondat', 3),
-    '216'=> array('Kijelentõ mondatok', 2),
-    '140'=> array('Felszólító mondat', 3),
-    '217'=> array('Felszólító mondatok', 2),
-    '102'=> array('Kérdõ mondat - eldöntendõ vagy kiegészítendõ', 3),
-    '218'=> array('Kérdõ mondatok', 2),
-    '111'=> array('Elváló és nem-elváló igék', 3),
-    '219'=> array('Elváló és nem-elváló igés mondatok', 2),
-    '165'=> array('Módbeli segédigék', 3),
-    '220'=> array('Módbeli segédigés mondatok', 2),
-    '129'=> array('Visszaható igék', 3),
-    '221'=> array('Visszaható igés mondatok', 2),
-    '116'=> array('Vonzatos igék', 3),
-    '222'=> array('Vonzatos igés mondatok', 2),
-    '240'=> array('Múltidejû mondatok', 2),
-    '1'  => array('Fõnevek', 1),
-    '2'  => array('Melléknevek', 1),
-    '6'  => array('Elöljárószavak', 1),
-    '11' => array('Számok (alap)', 1),
-    '9'  => array('Személyes, birtokos és kérdõ névmások', 1),
-    '5'  => array('Igék', 1),
-    '35' => array('Segédigék', 1),
-    '55' => array('Igék rendhagyó alakjai', 1),
-    '39' => array('Kifejezések', 1),
-    '46' => array('Kötõszavak, kérdõnévmások stb.', 1),
-    '3'  => array('Határozószók', 1),
-    '244'=> array('Múlt idõ', 3),
-    '242'=> array('Múlt idõ', 2),
-    '245'=> array('Feltételes Mód', 3),
-    '243'=> array('Feltételes Mód', 2));
+        '0'  => array('Level 0', 1),
+        '153' => array('A nï¿½met ï¿½bï¿½cï¿½: kiejtï¿½s', 3),
+        '196' => array('A nï¿½met ï¿½bï¿½cï¿½: magï¿½nhangzï¿½k', 3),
+        '197' => array('A nï¿½met ï¿½bï¿½cï¿½: telefonos betï¿½zï¿½s', 3),
+        '198' => array('A nï¿½met ï¿½bï¿½cï¿½: rï¿½vid vagy hosszï¿½ a magï¿½nhangzï¿½?', 3),
+        '154' => array('Jelen idejï¿½ ragozï¿½s', 3),
+        '239' => array('Szï¿½fordulat', 1),
+        '213' => array('Jelen idejï¿½ igï¿½s mondatok', 2),
+        '123' => array('Tï¿½hangvï¿½ltï¿½s igï¿½k', 3),
+        '214' => array('Tï¿½hangvï¿½ltï¿½s igï¿½s mondatok', 2),
+        '90' => array('Az ige helye a mondatban - egyenes, fordï¿½tott ï¿½s KATI-szï¿½rend', 3),
+        '215' => array('Szï¿½rend gyakorlï¿½s - mondatok', 2),
+        '88' => array('Kijelentï¿½ mondat', 3),
+        '216' => array('Kijelentï¿½ mondatok', 2),
+        '140' => array('Felszï¿½lï¿½tï¿½ mondat', 3),
+        '217' => array('Felszï¿½lï¿½tï¿½ mondatok', 2),
+        '102' => array('Kï¿½rdï¿½ mondat - eldï¿½ntendï¿½ vagy kiegï¿½szï¿½tendï¿½', 3),
+        '218' => array('Kï¿½rdï¿½ mondatok', 2),
+        '111' => array('Elvï¿½lï¿½ ï¿½s nem-elvï¿½lï¿½ igï¿½k', 3),
+        '219' => array('Elvï¿½lï¿½ ï¿½s nem-elvï¿½lï¿½ igï¿½s mondatok', 2),
+        '165' => array('Mï¿½dbeli segï¿½digï¿½k', 3),
+        '220' => array('Mï¿½dbeli segï¿½digï¿½s mondatok', 2),
+        '129' => array('Visszahatï¿½ igï¿½k', 3),
+        '221' => array('Visszahatï¿½ igï¿½s mondatok', 2),
+        '116' => array('Vonzatos igï¿½k', 3),
+        '222' => array('Vonzatos igï¿½s mondatok', 2),
+        '240' => array('Mï¿½ltidejï¿½ mondatok', 2),
+        '1'  => array('Fï¿½nevek', 1),
+        '2'  => array('Mellï¿½knevek', 1),
+        '6'  => array('Elï¿½ljï¿½rï¿½szavak', 1),
+        '11' => array('Szï¿½mok (alap)', 1),
+        '9'  => array('Szemï¿½lyes, birtokos ï¿½s kï¿½rdï¿½ nï¿½vmï¿½sok', 1),
+        '5'  => array('Igï¿½k', 1),
+        '35' => array('Segï¿½digï¿½k', 1),
+        '55' => array('Igï¿½k rendhagyï¿½ alakjai', 1),
+        '39' => array('Kifejezï¿½sek', 1),
+        '46' => array('Kï¿½tï¿½szavak, kï¿½rdï¿½nï¿½vmï¿½sok stb.', 1),
+        '3'  => array('Hatï¿½rozï¿½szï¿½k', 1),
+        '244' => array('Mï¿½lt idï¿½', 3),
+        '242' => array('Mï¿½lt idï¿½', 2),
+        '245' => array('Feltï¿½teles Mï¿½d', 3),
+        '243' => array('Feltï¿½teles Mï¿½d', 2)
+    );
 
-   $list['francia'] = array(
-    '0'  => array('Level 0', 1),
-    '153'=> array('Angol fonetikus átírás, kiejtés', 3),
-    '74' => array('A fõnevek', 3),
-    '60' => array('A névelõk', 3),
-    '75' => array('A fõnevek megszámlálhatósága', 3),
-    '76' => array('A fõnevek többesszáma', 3),
-    '1'  => array('fõnév', 1),
-    '8'  => array('Mutató névmások', 3),
-    '13' => array('Névelõ/Mutatószó+fõnév', 2),
-    '77' => array('A melléknevek', 3),
-    '78' => array('A melléknevek fokozása', 3),
-    '2'  => array('melléknév', 1),
-    '12' => array('Fõnév+Melléknév', 2),
-    '120'=> array('Elöljárószavak', 3),
-    '6'  => array('elöljárószó', 1),
-    '88' => array('A létige szükségessége, az elsõ két alak', 3),
-    '200'=> array('Létigés kijelentések (fõnév-mnév)', 2),
-    '201'=> array('Létigés kijelentések (fõnév-mnév-hat)', 2),
-    '91' => array('A létige tagadása', 3),
-    '14' => array('Létigés tagadások', 2),
-    '232'=> array('Személyek és számok', 3),
-    '152'=> array('Személyes és birtokos névmások', 3),
-    '51' => array('Személyes névmásos-létigés mondatok', 2),
-    '92' => array('Kérdõszórend, az eldöntendõ kérdés', 3),
-    '93' => array('Kérdõszavas kérdések', 3),
-    '50' => array('Létigés kérdések (eldöntendõ', 2),
-    '56' => array('Létigés kérdések (kérdõszavas)', 2),
-    '209'=> array('A létige ragozása', 3),
-    '94' => array('Helyhatározó szavak', 3),
-    '126'=> array('Birtokos szerkezetek', 3),
-    '59' => array('Birtokos szerkezetek', 2),
-    '127'=> array('A "milyen" kérdések', 3),
-    '36' => array('Milyen-kérdések', 2),
-    '157'=> array('Határozók sorrendje', 3),
-    '38' => array(' Létigés mondatok (haladóbb)', 2),
-    '97' => array('Számok', 3),
-    '11' => array('szám', 1),
-    '98' => array('Az óra, napszakok', 3),
-    '188'=> array('Az óra, számok', 2),
-    '159'=> array('Konkrét dologról állítjuk, hogy van?', 3),
-    '187'=> array('"There is"-es szerkezet', 3),
-    '41' => array('"There is"-es kijelentések', 2),
-    '54' => array('"There is"-es kérdések', 2),
-    '225'=> array('"There is"-es tagadások', 2),
-    '160'=> array('Létezés vagy cselekvés?', 3),
-    '229'=> array('Az "igeidõ" fogalma', 3),
-    '154'=> array('Egyszerû jelen kijelentés/felszólítás', 3),
-    '5'  => array('ige', 1),
-    '15' => array('Egyszerû jelen kijelentés/felszólítás', 2),
-    '156'=> array('Két ige összekötése', 3),
-    '162'=> array('Egyszerû jelen kérdés', 3),
-    '17' => array('Egyszerû jelen kérdés', 2),
-    '226'=> array('Kérdõszavas szerkezetek', 3),
-    '164'=> array('Egyszerû jelen tagadás', 3),
-    '16' => array('Egyszerû jelen tagadás', 2),
-    '114'=> array('Személyes névmás tárgy, részes, visszaható', 3),
-    '230'=> array('A három "van"-os szerkezet', 3),
-    '166'=> array('Egyszerû múlt', 3),
-    '18' => array('Egyszerû múlt: Kijelentés', 2),
-    '20' => array('Egyszerû múlt: Kérdés', 2),
-    '19' => array('Egyszerû múlt: Tagadás', 2),
-    '167'=> array('Egyszerû jövõ', 3),
-    '21' => array('Egyszerû jövõ: Kijelentés', 2),
-    '23' => array('Egyszerû jövõ: Kérdés', 2),
-    '22' => array('Egyszerû jövõ: Tagadás', 2),
-    '158'=> array('Tell-say-talk-speak-discuss', 3),
-    '163'=> array('Alanyra kérdezés', 3),
-    '193'=> array('Alanyra kérdezõ mondatok', 2),
-    '186'=> array('"Mint"-es mondatok', 3),
-    '70' => array('"Mint"-es mondatok', 2),
-    '228'=> array('"It + is + melléknév + to + ige" szerkezet', 3),
-    '165'=> array('Segédigék', 3),
-    '37' => array('Segédigés mondatok', 2),
-    '185'=> array('"Ami(t)"-es mellékmondatok', 3),
-    '69' => array('"Ami(t)"-es mondatok', 2),
-    '177'=> array('Folyamatos jelen', 3),
-    '24' => array('Folyamatos jelen', 2),
-    '178'=> array('Befejezett jelen', 3),
-    '27' => array('Befejezett jelen', 2),
-    '227'=> array('A segédigék múltideje, az ige 3. alakja', 3),
-    '189'=> array('"There is" más igeidõkben', 3),
-    '190'=> array('"There is" más igeidõkben', 2),
-    '182'=> array('Befejezett Múlt', 3),
-    '64' => array('Befejezett Múlt', 2),
-    '205'=> array('Szófordulat', 2),
-    '146'=> array('Szenvedõ szerkezet', 3),
-    '30' => array('Szenvedõ szerkezet (egyszerû)', 2),
-    '241'=> array('Szenvedõ szerkezet (összetett)', 2),
-    '138'=> array('Folyamatos múlt', 3),
-    '139'=> array('Folyamatos múlt', 2),
-    '180'=> array('Folyamatos jövõ', 3),
-    '181'=> array('Folyamatos jövõ', 2),
-    '143'=> array('Feltételes mód', 3),
-    '31' => array('Feltételes mód', 2),
-    '194'=> array('Befejezett folyamatos jelen', 3),
-    '195'=> array('Befejezett folyamatos jelen', 2),
-    '179'=> array('Mûveltetés', 3),
-    '34' => array('Mûveltetés', 2),
-    '110'=> array('Melléknévi és fõnévi igenevek', 3),
-    '224'=> array('Melléknévi igeneves mondatok', 2),
-    '183'=> array('Befejezett folyamatos múlt', 3),
-    '125'=> array('Befejezett folyamatos múlt', 2),
-    '184'=> array('Függõ beszéd', 3),
-    '49' => array('Függõ beszéd', 2),
-    '207'=> array('Befejezett jövõ', 3),
-    '208'=> array('Befejezett jövõ', 2),
-    '238'=> array('A melléknevek sorrendje', 3),
-    '246'=> array('Sok kis apróság', 3),
-    '72' => array('Ige nélküli mondatok', 2),
-    '46' => array('egyéb', 1),
-    '3'  => array('határozószó', 1),
-    '39' => array('kifejezés', 1));
+    $list['francia'] = array(
+        '0'  => array('Level 0', 1),
+        '153' => array('Angol fonetikus ï¿½tï¿½rï¿½s, kiejtï¿½s', 3),
+        '74' => array('A fï¿½nevek', 3),
+        '60' => array('A nï¿½velï¿½k', 3),
+        '75' => array('A fï¿½nevek megszï¿½mlï¿½lhatï¿½sï¿½ga', 3),
+        '76' => array('A fï¿½nevek tï¿½bbesszï¿½ma', 3),
+        '1'  => array('fï¿½nï¿½v', 1),
+        '8'  => array('Mutatï¿½ nï¿½vmï¿½sok', 3),
+        '13' => array('Nï¿½velï¿½/Mutatï¿½szï¿½+fï¿½nï¿½v', 2),
+        '77' => array('A mellï¿½knevek', 3),
+        '78' => array('A mellï¿½knevek fokozï¿½sa', 3),
+        '2'  => array('mellï¿½knï¿½v', 1),
+        '12' => array('Fï¿½nï¿½v+Mellï¿½knï¿½v', 2),
+        '120' => array('Elï¿½ljï¿½rï¿½szavak', 3),
+        '6'  => array('elï¿½ljï¿½rï¿½szï¿½', 1),
+        '88' => array('A lï¿½tige szï¿½ksï¿½gessï¿½ge, az elsï¿½ kï¿½t alak', 3),
+        '200' => array('Lï¿½tigï¿½s kijelentï¿½sek (fï¿½nï¿½v-mnï¿½v)', 2),
+        '201' => array('Lï¿½tigï¿½s kijelentï¿½sek (fï¿½nï¿½v-mnï¿½v-hat)', 2),
+        '91' => array('A lï¿½tige tagadï¿½sa', 3),
+        '14' => array('Lï¿½tigï¿½s tagadï¿½sok', 2),
+        '232' => array('Szemï¿½lyek ï¿½s szï¿½mok', 3),
+        '152' => array('Szemï¿½lyes ï¿½s birtokos nï¿½vmï¿½sok', 3),
+        '51' => array('Szemï¿½lyes nï¿½vmï¿½sos-lï¿½tigï¿½s mondatok', 2),
+        '92' => array('Kï¿½rdï¿½szï¿½rend, az eldï¿½ntendï¿½ kï¿½rdï¿½s', 3),
+        '93' => array('Kï¿½rdï¿½szavas kï¿½rdï¿½sek', 3),
+        '50' => array('Lï¿½tigï¿½s kï¿½rdï¿½sek (eldï¿½ntendï¿½', 2),
+        '56' => array('Lï¿½tigï¿½s kï¿½rdï¿½sek (kï¿½rdï¿½szavas)', 2),
+        '209' => array('A lï¿½tige ragozï¿½sa', 3),
+        '94' => array('Helyhatï¿½rozï¿½ szavak', 3),
+        '126' => array('Birtokos szerkezetek', 3),
+        '59' => array('Birtokos szerkezetek', 2),
+        '127' => array('A "milyen" kï¿½rdï¿½sek', 3),
+        '36' => array('Milyen-kï¿½rdï¿½sek', 2),
+        '157' => array('Hatï¿½rozï¿½k sorrendje', 3),
+        '38' => array(' Lï¿½tigï¿½s mondatok (haladï¿½bb)', 2),
+        '97' => array('Szï¿½mok', 3),
+        '11' => array('szï¿½m', 1),
+        '98' => array('Az ï¿½ra, napszakok', 3),
+        '188' => array('Az ï¿½ra, szï¿½mok', 2),
+        '159' => array('Konkrï¿½t dologrï¿½l ï¿½llï¿½tjuk, hogy van?', 3),
+        '187' => array('"There is"-es szerkezet', 3),
+        '41' => array('"There is"-es kijelentï¿½sek', 2),
+        '54' => array('"There is"-es kï¿½rdï¿½sek', 2),
+        '225' => array('"There is"-es tagadï¿½sok', 2),
+        '160' => array('Lï¿½tezï¿½s vagy cselekvï¿½s?', 3),
+        '229' => array('Az "igeidï¿½" fogalma', 3),
+        '154' => array('Egyszerï¿½ jelen kijelentï¿½s/felszï¿½lï¿½tï¿½s', 3),
+        '5'  => array('ige', 1),
+        '15' => array('Egyszerï¿½ jelen kijelentï¿½s/felszï¿½lï¿½tï¿½s', 2),
+        '156' => array('Kï¿½t ige ï¿½sszekï¿½tï¿½se', 3),
+        '162' => array('Egyszerï¿½ jelen kï¿½rdï¿½s', 3),
+        '17' => array('Egyszerï¿½ jelen kï¿½rdï¿½s', 2),
+        '226' => array('Kï¿½rdï¿½szavas szerkezetek', 3),
+        '164' => array('Egyszerï¿½ jelen tagadï¿½s', 3),
+        '16' => array('Egyszerï¿½ jelen tagadï¿½s', 2),
+        '114' => array('Szemï¿½lyes nï¿½vmï¿½s tï¿½rgy, rï¿½szes, visszahatï¿½', 3),
+        '230' => array('A hï¿½rom "van"-os szerkezet', 3),
+        '166' => array('Egyszerï¿½ mï¿½lt', 3),
+        '18' => array('Egyszerï¿½ mï¿½lt: Kijelentï¿½s', 2),
+        '20' => array('Egyszerï¿½ mï¿½lt: Kï¿½rdï¿½s', 2),
+        '19' => array('Egyszerï¿½ mï¿½lt: Tagadï¿½s', 2),
+        '167' => array('Egyszerï¿½ jï¿½vï¿½', 3),
+        '21' => array('Egyszerï¿½ jï¿½vï¿½: Kijelentï¿½s', 2),
+        '23' => array('Egyszerï¿½ jï¿½vï¿½: Kï¿½rdï¿½s', 2),
+        '22' => array('Egyszerï¿½ jï¿½vï¿½: Tagadï¿½s', 2),
+        '158' => array('Tell-say-talk-speak-discuss', 3),
+        '163' => array('Alanyra kï¿½rdezï¿½s', 3),
+        '193' => array('Alanyra kï¿½rdezï¿½ mondatok', 2),
+        '186' => array('"Mint"-es mondatok', 3),
+        '70' => array('"Mint"-es mondatok', 2),
+        '228' => array('"It + is + mellï¿½knï¿½v + to + ige" szerkezet', 3),
+        '165' => array('Segï¿½digï¿½k', 3),
+        '37' => array('Segï¿½digï¿½s mondatok', 2),
+        '185' => array('"Ami(t)"-es mellï¿½kmondatok', 3),
+        '69' => array('"Ami(t)"-es mondatok', 2),
+        '177' => array('Folyamatos jelen', 3),
+        '24' => array('Folyamatos jelen', 2),
+        '178' => array('Befejezett jelen', 3),
+        '27' => array('Befejezett jelen', 2),
+        '227' => array('A segï¿½digï¿½k mï¿½ltideje, az ige 3. alakja', 3),
+        '189' => array('"There is" mï¿½s igeidï¿½kben', 3),
+        '190' => array('"There is" mï¿½s igeidï¿½kben', 2),
+        '182' => array('Befejezett Mï¿½lt', 3),
+        '64' => array('Befejezett Mï¿½lt', 2),
+        '205' => array('Szï¿½fordulat', 2),
+        '146' => array('Szenvedï¿½ szerkezet', 3),
+        '30' => array('Szenvedï¿½ szerkezet (egyszerï¿½)', 2),
+        '241' => array('Szenvedï¿½ szerkezet (ï¿½sszetett)', 2),
+        '138' => array('Folyamatos mï¿½lt', 3),
+        '139' => array('Folyamatos mï¿½lt', 2),
+        '180' => array('Folyamatos jï¿½vï¿½', 3),
+        '181' => array('Folyamatos jï¿½vï¿½', 2),
+        '143' => array('Feltï¿½teles mï¿½d', 3),
+        '31' => array('Feltï¿½teles mï¿½d', 2),
+        '194' => array('Befejezett folyamatos jelen', 3),
+        '195' => array('Befejezett folyamatos jelen', 2),
+        '179' => array('Mï¿½veltetï¿½s', 3),
+        '34' => array('Mï¿½veltetï¿½s', 2),
+        '110' => array('Mellï¿½knï¿½vi ï¿½s fï¿½nï¿½vi igenevek', 3),
+        '224' => array('Mellï¿½knï¿½vi igeneves mondatok', 2),
+        '183' => array('Befejezett folyamatos mï¿½lt', 3),
+        '125' => array('Befejezett folyamatos mï¿½lt', 2),
+        '184' => array('Fï¿½ggï¿½ beszï¿½d', 3),
+        '49' => array('Fï¿½ggï¿½ beszï¿½d', 2),
+        '207' => array('Befejezett jï¿½vï¿½', 3),
+        '208' => array('Befejezett jï¿½vï¿½', 2),
+        '238' => array('A mellï¿½knevek sorrendje', 3),
+        '246' => array('Sok kis aprï¿½sï¿½g', 3),
+        '72' => array('Ige nï¿½lkï¿½li mondatok', 2),
+        '46' => array('egyï¿½b', 1),
+        '3'  => array('hatï¿½rozï¿½szï¿½', 1),
+        '39' => array('kifejezï¿½s', 1)
+    );
 
     $list['hun'] = array(
-    '0'  => array('LEVEL 0', 1),
-    '372'=> array('Alfabeto', 3),
-    '1'  => array('Sustantivos', 1),
-    '10' => array('Névelõ + fõnév', 1),
-    '2'  => array('Melléknevek', 1),
-    '12' => array('Névelõ + fõnév + Melléknév', 1),
-    '13' => array('Névelõ/Mutatószó+fõnév', 1),
-    '14' => array('Mutatószó + létige + névelõ + fõnév', 1),
-    '9'  => array('Névmások', 1),
-    '5'  => array('Igék (szótári alak)', 1),
-    '4'  => array('Igék (ragozott)', 1),
-    '6'  => array('Elöljárószavak', 1),
-    '11' => array('Számok (alap)', 1),
-    '7'  => array('Számok', 1),
-    '3'  => array('Határozószók, mutatószók, egyéb', 1));
+        '0'  => array('LEVEL 0', 1),
+        '372' => array('Alfabeto', 3),
+        '1'  => array('Sustantivos', 1),
+        '10' => array('Nï¿½velï¿½ + fï¿½nï¿½v', 1),
+        '2'  => array('Mellï¿½knevek', 1),
+        '12' => array('Nï¿½velï¿½ + fï¿½nï¿½v + Mellï¿½knï¿½v', 1),
+        '13' => array('Nï¿½velï¿½/Mutatï¿½szï¿½+fï¿½nï¿½v', 1),
+        '14' => array('Mutatï¿½szï¿½ + lï¿½tige + nï¿½velï¿½ + fï¿½nï¿½v', 1),
+        '9'  => array('Nï¿½vmï¿½sok', 1),
+        '5'  => array('Igï¿½k (szï¿½tï¿½ri alak)', 1),
+        '4'  => array('Igï¿½k (ragozott)', 1),
+        '6'  => array('Elï¿½ljï¿½rï¿½szavak', 1),
+        '11' => array('Szï¿½mok (alap)', 1),
+        '7'  => array('Szï¿½mok', 1),
+        '3'  => array('Hatï¿½rozï¿½szï¿½k, mutatï¿½szï¿½k, egyï¿½b', 1)
+    );
 
 
 
     $langArray = getLangArray();
-    if(array_key_exists($lang, $langArray)){
+    if (array_key_exists($lang, $langArray)) {
         return $list[$langArray[$lang]];
-    }
-    else{
+    } else {
         return $list[$lang];
     }
 }
@@ -2323,12 +2229,12 @@ function getWordCountList($lang)
     $langExt = getLangExtByLangId($lang);
     $query = "SELECT level_{$langExt} as level, count(*) from words where word_{$langExt} is not null and word_{$langExt} != '' and word_{$langExt} != '...' group by level_{$langExt}";
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $returnList = array();
-    while($row = mysql_fetch_row($result)){
+    while ($row = mysql_fetch_row($result)) {
         $returnList[$row[0]] = $row[1];
     }
     return $returnList;
@@ -2336,290 +2242,270 @@ function getWordCountList($lang)
 
 function ajaxSearchPrint($lang)
 {
-	global $globalcolor;
-	global $TDBgGlobalColor;
+    global $globalcolor;
+    global $TDBgGlobalColor;
 ?>
 
     <script type="text/javascript">
-    var ajaxSearchId = 0;
-    var searchTimeout = null;
-    var responseObject = null;
-    function getAjaxResponse(target, callbackFunction)
-    {
-        if (window.XMLHttpRequest){ // code for IE7+, Firefox, Chrome, Opera, Safari
-            xmlhttp=new XMLHttpRequest();
+        var ajaxSearchId = 0;
+        var searchTimeout = null;
+        var responseObject = null;
+
+        function getAjaxResponse(target, callbackFunction) {
+            if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+            } else { // code for IE6, IE5
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    responseObject = JSON.parse(xmlhttp.responseText);
+                    if (callbackFunction != null) {
+                        callbackFunction(responseObject);
+                    }
+                }
+            }
+            xmlhttp.open("GET", target, true);
+            xmlhttp.setRequestHeader("Content-Type", "text/plain;charset=ISO-8859-2");
+            xmlhttp.send();
         }
-        else{ // code for IE6, IE5
-            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+
+        function getMeaning(responseObject) {
+            if (responseObject.items.length > 0) {
+                var myObj = responseObject.items[0];
+                document.getElementById('moreMeaningDiv').innerHTML = getMoreMeaningDivContent(responseObject);
+                document.getElementById('moreMeaningDiv').style.display = 'block';
+                $('#linkSave').show();
+
+                ajaxSearchId = myObj.id;
+            } else {
+                document.getElementById("ajaxSearchOutput").style.display = 'block';
+                document.getElementById("ajaxSearchOutput").innerHTML = <?php print "'" . translate('nincs_talalat') . "!'"; ?>;
+                ajaxSearchId = 0;
+            }
+            ajaxSearchCallback(responseObject);
+            document.getElementById("ajaxSearchInput").select();
         }
-        xmlhttp.onreadystatechange = function()
-                                        {
-                                            if (xmlhttp.readyState==4 && xmlhttp.status==200)
-                                            {
-                                                responseObject = JSON.parse(xmlhttp.responseText);
-                                                if(callbackFunction != null){
-                                                    callbackFunction(responseObject);
-                                                }
-                                            }
-                                        }
-        xmlhttp.open("GET", target, true);
-        xmlhttp.setRequestHeader("Content-Type", "text/plain;charset=ISO-8859-2");
-        xmlhttp.send();
-    }
 
-    function getMeaning(responseObject)
-    {
-        if(responseObject.items.length > 0){
-            var myObj = responseObject.items[0];
-            document.getElementById('moreMeaningDiv').innerHTML = getMoreMeaningDivContent(responseObject);
-            document.getElementById('moreMeaningDiv').style.display='block';
-            $('#linkSave').show();
-
-            ajaxSearchId = myObj.id;
-        }
-        else{
-            document.getElementById("ajaxSearchOutput").style.display = 'block';
-            document.getElementById("ajaxSearchOutput").innerHTML = <?php print "'" . translate('nincs_talalat') . "!'"; ?>;
-            ajaxSearchId = 0;
-        }
-        ajaxSearchCallback(responseObject);
-        document.getElementById("ajaxSearchInput").select();
-    }
-
-    function getMoreMeaningPart(responseObject)
-    {
-        if(responseObject.items.length > 1
-            || (responseObject.items.length > 0
-                && (responseObject.items[0].pronunc_foreign.length > 0 || responseObject.items[0].comment_foreign.length > 0 || responseObject.searchedWord != responseObject.items[0].word_hun && responseObject.searchedWord != responseObject.items[0].word_foreign))){
-            return " <a href='#' style='color:white;font-weight:bold;font-size:20px;' onmouseover=\"if(document.getElementById('moreMeaningDiv').style.display == 'none'){ if(document.getElementById('moreMeaningDiv').innerHTML.length==0){document.getElementById('moreMeaningDiv').innerHTML = getMoreMeaningDivContent(responseObject);} document.getElementById('moreMeaningDiv').style.display='block';$('#linkSave').show();}\" onmouseout=\"document.getElementById('moreMeaningDiv').style.display='none';$('#linkSave').hide();$('#ajaxSearchOutput').hide();\">&rarr;</a>";
-        }
-        else{
-            return '';
-        }
-    }
-
-    function getMoreMeaningDivContent(responseObject)
-    {
-        var str = "<table class='meaningTableClass' cellpadding=5>";
-        if(responseObject.items.length > 0){
-            var isChanged = null;
-            for(var i = 0; i < responseObject.items.length; i++){
-                responseObject.items[i].word_hun = decode_utf8(responseObject.items[i].word_hun);
-                responseObject.items[i].word_foreign = decode_utf8(responseObject.items[i].word_foreign);
-                //responseObject.items[i].pronunc_foreign = ""/*decode_utf8(responseObject.items[i].pronunc_foreign)*/;
-                responseObject.items[i].comment_foreign = decode_utf8(responseObject.items[i].comment_foreign);
-                responseObject.items[i].comment_hun = decode_utf8(responseObject.items[i].comment_hun);
-
-                var levelClass = 'meaningCell';
-                var levelAClass = 'meaningA';
-                var levelAStyle = 'font-weight:bold;color:white;';
-                if(responseObject.items[i].level_category != 1){
-                    levelClass = 'meaningLevel2Cell';
-                    levelAClass = 'meaningLevel2A';
-                    levelAStyle = 'font-weight:normal;color:white;';
-                    if(isChanged === false){
-                        str +="<tr><td colspan='3'><hr></td></tr>";
-                    }
-                    isChanged = true;
-                }
-                else{
-                    isChanged = false;
-                }
-                str += "<tr>";
-<?php if(in_array($GLOBALS['userObject']['status'], array(4, 5, 6))){ ?>
-                var divStr = '';
-                for(var prop in responseObject.items[i].other_langs){
-                    divStr += decode_utf8(eval("responseObject.items[i].other_langs." + prop)) + "&nbsp;(" + decode_utf8(prop) + ")&nbsp;&nbsp;";
-                }
-                var txt_left = "";
-                if(responseObject.items[i].comment_hun){
-                    if(responseObject.items[i].comment_hun){
-                        txt_left = " (" + responseObject.items[i].comment_hun + ")";
-                    }
-                    else{
-                        txt_left = " (" + responseObject.items[i].comment_hun + ")";
-                    }
-                }
-                txt_left = "<span style='font-weight:normal;color:white;'>" + txt_left + "</span>";
-
-                var txt_right = "";
-                if(responseObject.items[i].comment_foreign){
-                    if(responseObject.items[i].comment_foreign){
-                        txt_right = " (" + responseObject.items[i].comment_foreign + ")";
-                    }
-                    else{
-                        txt_right = " (" + responseObject.items[i].comment_foreign + ")";
-                    }
-                }
-                txt_right = "<span style='font-weight:normal;color:white;'>" + txt_right + "</span>";
-
-                str += "<td style='width:48%'><a href='#' class='" + levelAClass + "' style='" + levelAStyle + "' onmouseover=\"moreMeaningWordMouseOver('" + divStr
-                    + "')\" onmouseout=\"moreMeaningWordMouseOut()\" onclick=\"if(typeof window.wordLink == 'function'){ wordLink(" + responseObject.items[i].id + ", 0) }\">" + responseObject.items[i].word_hun + "</a>"
-                    + txt_left
-                    + (responseObject.items[i].level_category == 1 ? " <font size='1'>(" + responseObject.items[i].level_title + ")</font>" : "")
-                    + "</td>";
-
-                str += "<td class='" + levelClass + "'>" + responseObject.items[i].word_foreign + txt_right;
-<?php } else {?>
-                var txt_left = "";
-                if(responseObject.items[i].comment_hun){
-                    if(responseObject.items[i].comment_hun){
-                        txt_left = " (" + responseObject.items[i].comment_hun + ")";
-                    }
-                    else{
-                        txt_left = " (" + responseObject.items[i].comment_hun + ")";
-                    }
-                }
-                txt_left = "<span style='font-weight:normal;color:white;'>" + txt_left + "</span>";
-
-                var txt_right = "";
-                if(responseObject.items[i].comment_foreign){
-                    if(responseObject.items[i].comment_foreign){
-                        txt_right = " (" + responseObject.items[i].comment_foreign + ")";
-                    }
-                    else{
-                        txt_right = " (" + responseObject.items[i].comment_foreign + ")";
-                    }
-                }
-                txt_right = "<span style='font-weight:normal;color:white;'>" + txt_right + "</span>";
-
-                str += "<td style='width:48%;font-style:normal;" + levelAStyle + "' class='" + levelClass + "'>" + responseObject.items[i].word_hun
-                    + txt_left
-                    + (responseObject.items[i].level_category == 1 ? " <font size='1'>(" + responseObject.items[i].level_title + ")</font>" : "")
-                    + "</td>";
-
-                str += "<td class='" + levelClass + "'>" + responseObject.items[i].word_foreign + txt_right;
-<?php } ?>
-                if(responseObject.items[i].level_category == 1){
-                    str += "</td><td><span class='btnAjaxDivSave' style='color:<? print $globalcolor;?>;' onclick='event.stopPropagation();setUserWordById(" + responseObject.items[i].id + ")'>" + <?php print "'" . translate("ajaxDivSave") . "'"; ?> + "</span>";
-                }
-                str += "</td></tr>";
+        function getMoreMeaningPart(responseObject) {
+            if (responseObject.items.length > 1 ||
+                (responseObject.items.length > 0 &&
+                    (responseObject.items[0].pronunc_foreign.length > 0 || responseObject.items[0].comment_foreign.length > 0 || responseObject.searchedWord != responseObject.items[0].word_hun && responseObject.searchedWord != responseObject.items[0].word_foreign))) {
+                return " <a href='#' style='color:white;font-weight:bold;font-size:20px;' onmouseover=\"if(document.getElementById('moreMeaningDiv').style.display == 'none'){ if(document.getElementById('moreMeaningDiv').innerHTML.length==0){document.getElementById('moreMeaningDiv').innerHTML = getMoreMeaningDivContent(responseObject);} document.getElementById('moreMeaningDiv').style.display='block';$('#linkSave').show();}\" onmouseout=\"document.getElementById('moreMeaningDiv').style.display='none';$('#linkSave').hide();$('#ajaxSearchOutput').hide();\">&rarr;</a>";
+            } else {
+                return '';
             }
         }
-        str += "</table>";
-        return str;
-    }
 
-    function decode_utf8( s )
-    {
-        return decodeURIComponent( escape( s ) );
-    }
+        function getMoreMeaningDivContent(responseObject) {
+            var str = "<table class='meaningTableClass' cellpadding=5>";
+            if (responseObject.items.length > 0) {
+                var isChanged = null;
+                for (var i = 0; i < responseObject.items.length; i++) {
+                    responseObject.items[i].word_hun = decode_utf8(responseObject.items[i].word_hun);
+                    responseObject.items[i].word_foreign = decode_utf8(responseObject.items[i].word_foreign);
+                    //responseObject.items[i].pronunc_foreign = ""/*decode_utf8(responseObject.items[i].pronunc_foreign)*/;
+                    responseObject.items[i].comment_foreign = decode_utf8(responseObject.items[i].comment_foreign);
+                    responseObject.items[i].comment_hun = decode_utf8(responseObject.items[i].comment_hun);
 
-    function moreMeaningWordMouseOver(str)
-    {
-        if(document.getElementById('ajax_other_langs') != null){
-            document.getElementById('ajax_other_langs').innerHTML = str;
-            document.getElementById('ajax_other_langs').style.display = "block";
-        }
-        else{
-            alert('Még várj, mert az oldal nem töltõdött be teljesen!');
-        }
-    }
+                    var levelClass = 'meaningCell';
+                    var levelAClass = 'meaningA';
+                    var levelAStyle = 'font-weight:bold;color:white;';
+                    if (responseObject.items[i].level_category != 1) {
+                        levelClass = 'meaningLevel2Cell';
+                        levelAClass = 'meaningLevel2A';
+                        levelAStyle = 'font-weight:normal;color:white;';
+                        if (isChanged === false) {
+                            str += "<tr><td colspan='3'><hr></td></tr>";
+                        }
+                        isChanged = true;
+                    } else {
+                        isChanged = false;
+                    }
+                    str += "<tr>";
+                    <?php if (in_array($GLOBALS['userObject']['status'], array(4, 5, 6))) { ?>
+                        var divStr = '';
+                        for (var prop in responseObject.items[i].other_langs) {
+                            divStr += decode_utf8(eval("responseObject.items[i].other_langs." + prop)) + "&nbsp;(" + decode_utf8(prop) + ")&nbsp;&nbsp;";
+                        }
+                        var txt_left = "";
+                        if (responseObject.items[i].comment_hun) {
+                            if (responseObject.items[i].comment_hun) {
+                                txt_left = " (" + responseObject.items[i].comment_hun + ")";
+                            } else {
+                                txt_left = " (" + responseObject.items[i].comment_hun + ")";
+                            }
+                        }
+                        txt_left = "<span style='font-weight:normal;color:white;'>" + txt_left + "</span>";
 
-    function moreMeaningWordMouseOut()
-    {
-        document.getElementById('ajax_other_langs').style.display = "none";
-    }
+                        var txt_right = "";
+                        if (responseObject.items[i].comment_foreign) {
+                            if (responseObject.items[i].comment_foreign) {
+                                txt_right = " (" + responseObject.items[i].comment_foreign + ")";
+                            } else {
+                                txt_right = " (" + responseObject.items[i].comment_foreign + ")";
+                            }
+                        }
+                        txt_right = "<span style='font-weight:normal;color:white;'>" + txt_right + "</span>";
 
-    function getLevelInfo(level, sorsz)
-    {
-        if(!(level > 0)){
-            getLevelInfoCallback(null);
-            return;
-        }
-        getAjaxResponse('meaningSearch_server.php?getLevel=1&selectedLevel=' + level + '&sorsz=' + sorsz, getLevelInfoCallback);
-    }
+                        str += "<td style='width:48%'><a href='#' class='" + levelAClass + "' style='" + levelAStyle + "' onmouseover=\"moreMeaningWordMouseOver('" + divStr +
+                            "')\" onmouseout=\"moreMeaningWordMouseOut()\" onclick=\"if(typeof window.wordLink == 'function'){ wordLink(" + responseObject.items[i].id + ", 0) }\">" + responseObject.items[i].word_hun + "</a>" +
+                            txt_left +
+                            (responseObject.items[i].level_category == 1 ? " <font size='1'>(" + responseObject.items[i].level_title + ")</font>" : "") +
+                            "</td>";
 
-    function setUserWord(word)
-    {
-        if(!(word.length > 0)){
-            setUserWordCallback(null);
-            return;
+                        str += "<td class='" + levelClass + "'>" + responseObject.items[i].word_foreign + txt_right;
+                    <?php } else { ?>
+                        var txt_left = "";
+                        if (responseObject.items[i].comment_hun) {
+                            if (responseObject.items[i].comment_hun) {
+                                txt_left = " (" + responseObject.items[i].comment_hun + ")";
+                            } else {
+                                txt_left = " (" + responseObject.items[i].comment_hun + ")";
+                            }
+                        }
+                        txt_left = "<span style='font-weight:normal;color:white;'>" + txt_left + "</span>";
+
+                        var txt_right = "";
+                        if (responseObject.items[i].comment_foreign) {
+                            if (responseObject.items[i].comment_foreign) {
+                                txt_right = " (" + responseObject.items[i].comment_foreign + ")";
+                            } else {
+                                txt_right = " (" + responseObject.items[i].comment_foreign + ")";
+                            }
+                        }
+                        txt_right = "<span style='font-weight:normal;color:white;'>" + txt_right + "</span>";
+
+                        str += "<td style='width:48%;font-style:normal;" + levelAStyle + "' class='" + levelClass + "'>" + responseObject.items[i].word_hun +
+                            txt_left +
+                            (responseObject.items[i].level_category == 1 ? " <font size='1'>(" + responseObject.items[i].level_title + ")</font>" : "") +
+                            "</td>";
+
+                        str += "<td class='" + levelClass + "'>" + responseObject.items[i].word_foreign + txt_right;
+                    <?php } ?>
+                    if (responseObject.items[i].level_category == 1) {
+                        str += "</td><td><span class='btnAjaxDivSave' style='color:<? print $globalcolor; ?>;' onclick='event.stopPropagation();setUserWordById(" + responseObject.items[i].id + ")'>" + <?php print "'" . translate("ajaxDivSave") . "'"; ?> + "</span>";
+                    }
+                    str += "</td></tr>";
+                }
+            }
+            str += "</table>";
+            return str;
         }
-        var url = 'meaningSearch_server.php?setUserWord=1&word=' + encodeURIComponent(word) + '&lang=' + <?php print $lang; ?>;
-        if(typeof(dictionaryUser) !== 'undefined' && dictionaryUser > 0){
-            url += "&dictionaryUser=" + dictionaryUser;
+
+        function decode_utf8(s) {
+            return decodeURIComponent(escape(s));
         }
-        getAjaxResponse(url, setUserWordCallback);
-    }
-    
-    function setUserWordById(id)
-    {
-        <?php
-			global $globalcolor;
-            if(!$GLOBALS['userObject']){
+
+        function moreMeaningWordMouseOver(str) {
+            if (document.getElementById('ajax_other_langs') != null) {
+                document.getElementById('ajax_other_langs').innerHTML = str;
+                document.getElementById('ajax_other_langs').style.display = "block";
+            } else {
+                alert('Mï¿½g vï¿½rj, mert az oldal nem tï¿½ltï¿½dï¿½tt be teljesen!');
+            }
+        }
+
+        function moreMeaningWordMouseOut() {
+            document.getElementById('ajax_other_langs').style.display = "none";
+        }
+
+        function getLevelInfo(level, sorsz) {
+            if (!(level > 0)) {
+                getLevelInfoCallback(null);
+                return;
+            }
+            getAjaxResponse('meaningSearch_server.php?getLevel=1&selectedLevel=' + level + '&sorsz=' + sorsz, getLevelInfoCallback);
+        }
+
+        function setUserWord(word) {
+            if (!(word.length > 0)) {
+                setUserWordCallback(null);
+                return;
+            }
+            var url = 'meaningSearch_server.php?setUserWord=1&word=' + encodeURIComponent(word) + '&lang=' + <?php print $lang; ?>;
+            if (typeof(dictionaryUser) !== 'undefined' && dictionaryUser > 0) {
+                url += "&dictionaryUser=" + dictionaryUser;
+            }
+            getAjaxResponse(url, setUserWordCallback);
+        }
+
+        function setUserWordById(id) {
+            <?php
+            global $globalcolor;
+            if (!$GLOBALS['userObject']) {
                 print "alert('" . translate('ajaxDivSaveLoginMessage') . "'); return;";
             }
-        ?>
-        id = parseInt(id, 10);
-        if(isNaN(id)){
-            return;
+            ?>
+            id = parseInt(id, 10);
+            if (isNaN(id)) {
+                return;
+            }
+            var url = 'meaningSearch_server.php?setUserWord=1&id=' + id;
+            if (typeof dictionaryUser !== 'undefined' && dictionaryUser > 0) {
+                url += "&dictionaryUser=" + dictionaryUser;
+            }
+            getAjaxResponse(url, setUserWordCallback);
         }
-        var url = 'meaningSearch_server.php?setUserWord=1&id=' + id;
-        if(typeof dictionaryUser !== 'undefined' && dictionaryUser > 0){
-            url += "&dictionaryUser=" + dictionaryUser;
-        }
-        getAjaxResponse(url, setUserWordCallback);
-    }
 
-    function setUserWordCallback(responseObject){
-        if(responseObject && responseObject.result == 1){
-            document.getElementById("ajaxSearchOutput").innerHTML = <?php print "'" . translate('word_saved') . "'"; ?>;
+        function setUserWordCallback(responseObject) {
+            if (responseObject && responseObject.result == 1) {
+                document.getElementById("ajaxSearchOutput").innerHTML = <?php print "'" . translate('word_saved') . "'"; ?>;
+            } else if (responseObject && responseObject.result == 666) {
+                alert(<?php print "'" . translate('ajaxDivSaveLoginMessage') . "'"; ?>);
+            } else {
+                document.getElementById("ajaxSearchOutput").innerHTML = <?php print "'" . translate('not_successful') . "'"; ?>;
+            }
+            document.getElementById("ajaxSearchOutput").style.display = 'block';
         }
-        else if(responseObject && responseObject.result == 666){
-            alert(<?php print "'" . translate('ajaxDivSaveLoginMessage') . "'"; ?>);
-        }
-        else{
-            document.getElementById("ajaxSearchOutput").innerHTML = <?php print "'" . translate('not_successful') . "'"; ?>;
-        }
-        document.getElementById("ajaxSearchOutput").style.display = 'block';
-    }
 
-    function getLevelInfoCallback(responseObject){
-        if(responseObject){
-            document.getElementById("ruleTitleSpan").innerHTML = responseObject.sorsz + '. ' + decode_utf8(responseObject.title);
-            document.getElementById("ruleTextContainer").innerHTML = "<div style='position:absolute;top:0;left:0;width:100%;height:100%;'></div>" + decode_utf8(responseObject.text);
-            document.getElementById("ruleId").value = responseObject.id;
-            document.getElementById("ruleDiv").style.display = 'block';
+        function getLevelInfoCallback(responseObject) {
+            if (responseObject) {
+                document.getElementById("ruleTitleSpan").innerHTML = responseObject.sorsz + '. ' + decode_utf8(responseObject.title);
+                document.getElementById("ruleTextContainer").innerHTML = "<div style='position:absolute;top:0;left:0;width:100%;height:100%;'></div>" + decode_utf8(responseObject.text);
+                document.getElementById("ruleId").value = responseObject.id;
+                document.getElementById("ruleDiv").style.display = 'block';
+            }
         }
-    }
 
-    function getTimeoutTextAjax(val)
-    {
-        document.getElementById("ajaxSearchOutput").innerHTML = "";
-        document.getElementById("ajaxSearchOutput").style.display = 'none';
-        if(encodeURIComponent(val) == ""){
-            return;
+        function getTimeoutTextAjax(val) {
+            document.getElementById("ajaxSearchOutput").innerHTML = "";
+            document.getElementById("ajaxSearchOutput").style.display = 'none';
+            if (encodeURIComponent(val) == "") {
+                return;
+            }
+            document.getElementById('moreMeaningDiv').innerHTML = '';
+            document.getElementById('moreMeaningDiv').style.display = 'none';
+            $('#linkSave').hide();
+            $('#ajaxSearchOutput').hide();
+            lastWordLookedUp = val;
+            return "getAjaxResponse(\"meaningSearch_server.php?getMeaning=1&txt=" + encodeURIComponent(val) + "&lang=" + <?php print $lang; ?> + "\", getMeaning)";
         }
-        document.getElementById('moreMeaningDiv').innerHTML = '';
-        document.getElementById('moreMeaningDiv').style.display='none';
-        $('#linkSave').hide();
-        $('#ajaxSearchOutput').hide();
-        lastWordLookedUp = val;
-        return "getAjaxResponse(\"meaningSearch_server.php?getMeaning=1&txt=" + encodeURIComponent(val) + "&lang=" + <?php print $lang; ?> + "\", getMeaning)";
-    }
-    var lastWordLookedUp = null;
+        var lastWordLookedUp = null;
     </script>
-	<table id="ajaxTable" border='0' align='center' cellpadding='3' cellspacing=0 onclick="event.stopPropagation();" style="width:800px">
+    <table id="ajaxTable" border='0' align='center' cellpadding='3' cellspacing=0 onclick="event.stopPropagation();" style="width:800px">
         <tr>
-        <td id='ajaxTableFirstTd' align='right' valign='top'><a id="ajax" title=<?php print "'" . translate("info_ajax") . "'" ?> href='#' style='color:white;font-size:12pt;'>?</td>
-        <td style='<? print $GLOBALS['TDBgGlobalColor'];?>;width:150px;' align='left'>
-            <div class='ajaxSearchTxtContainer' style='background:<?print $GLOBALS['globalcolor'];?>'>
-                <span class="fa fa-search"></span>
-                <input type='text' name='ajaxSearchInput' id='ajaxSearchInput' placeholder=<?php print "'" . translate('search') . "...'"; ?> onclick="event.stopPropagation();" onblur="this.value = '';$('#ajaxSearchOutput').hide();" onkeyup="
+            <td id='ajaxTableFirstTd' align='right' valign='top'><a id="ajax" title=<?php print "'" . translate("info_ajax") . "'" ?> href='#' style='color:white;font-size:12pt;'>?</td>
+            <td style='<? print $GLOBALS['TDBgGlobalColor']; ?>;width:150px;' align='left'>
+                <div class='ajaxSearchTxtContainer' style='background:<? print $GLOBALS['globalcolor']; ?>'>
+                    <span class="fa fa-search"></span>
+                    <input type='text' name='ajaxSearchInput' id='ajaxSearchInput' placeholder=<?php print "'" . translate('search') . "...'"; ?> onclick="event.stopPropagation();" onblur="this.value = '';$('#ajaxSearchOutput').hide();" onkeyup="
                     if (searchTimeout != undefined){
                         clearTimeout(searchTimeout);
                     }
                     searchTimeout = setTimeout(getTimeoutTextAjax(this.value), 2000);
                     " />
-            </div>
-        </td>
-        <td align='left' width='110' style='<?print $GLOBALS['TDBgGlobalColor'];?>color:white'><a id='linkSave' style='display:none' href='#' onclick="event.stopPropagation();setUserWord(lastWordLookedUp);"><font color='white'><b><?php print translate('ment'); ?></a></td>
-        <td align='left' colspan='2' valign='center' height='30' style='<?print $GLOBALS['TDBgGlobalColor'];?>color:<?print $GLOBALS['globalcolor'];?>'><b>.<div id='ajaxSearchOutput' style='display:none;'></div></td>
+                </div>
+            </td>
+            <td align='left' width='110' style='<? print $GLOBALS['TDBgGlobalColor']; ?>color:white'><a id='linkSave' style='display:none' href='#' onclick="event.stopPropagation();setUserWord(lastWordLookedUp);">
+                    <font color='white'><b><?php print translate('ment'); ?>
+                </a></td>
+            <td align='left' colspan='2' valign='center' height='30' style='<? print $GLOBALS['TDBgGlobalColor']; ?>color:<? print $GLOBALS['globalcolor']; ?>'><b>.<div id='ajaxSearchOutput' style='display:none;'></div>
+            </td>
         </tr>
     </table>
     <div id='moreMeaningDiv' style='position:absolute;left:50%;margin-left:-250px;width:500px;display:none;z-index:100;background:#B6000A none repeat scroll 0 0;' onclick="event.stopPropagation();this.style.display = 'none';$('#linkSave').hide();$('#ajaxSearchOutput').hide();"></div>
-    <div id='ajax_other_langs' style='<?echo $GLOBALS['TDBgGlobalColor'];?>color:white;position:absolute;top:10px;left:50%;margin-left:-190px;width:550px;filter:alpha(opacity=100);opacity:1;z-index:101;font-size:10pt;'></div>
+    <div id='ajax_other_langs' style='<? echo $GLOBALS['TDBgGlobalColor']; ?>color:white;position:absolute;top:10px;left:50%;margin-left:-190px;width:550px;filter:alpha(opacity=100);opacity:1;z-index:101;font-size:10pt;'></div>
 <?php
 }
 
@@ -2627,44 +2513,39 @@ function ajaxTimerPrint()
 {
 ?>
     <script type="text/javascript">
-    function setUserTimeoutAjax()
-    {
-        return "getAjaxResponse('meaningSearch_server.php?setUserTime=1', setUserTimeoutCallback)";
-    }
+        function setUserTimeoutAjax() {
+            return "getAjaxResponse('meaningSearch_server.php?setUserTime=1', setUserTimeoutCallback)";
+        }
 
-    function setUserTimeoutCallback(responseObject)
-    {
-        bodyOnload();
-    }
+        function setUserTimeoutCallback(responseObject) {
+            bodyOnload();
+        }
 
-    function bodyOnload()
-    {
-        setTimeout(setUserTimeoutAjax(), 20000);
-    }
+        function bodyOnload() {
+            setTimeout(setUserTimeoutAjax(), 20000);
+        }
 
-    window.onload = bodyOnload;
+        window.onload = bodyOnload;
     </script>
 <?php
 }
 
 function setUserTime($userObject, $lastUpdateTime)
 {
-    // ha még nem tároltuk le a session-be a last update-et, akkor most kezdjük el a számolást
-    if(!$lastUpdateTime){
+    // ha mï¿½g nem tï¿½roltuk le a session-be a last update-et, akkor most kezdjï¿½k el a szï¿½molï¿½st
+    if (!$lastUpdateTime) {
         return time();
     }
 
     $elapsedSec = time() - $lastUpdateTime;
 
-    if($elapsedSec >= 30 && $elapsedSec <= 10 * 60){
+    if ($elapsedSec >= 30 && $elapsedSec <= 10 * 60) {
         $query = "update lmjelentkezok set time_used = time_used + {$elapsedSec} where id = " . (int)$userObject['id'];
         $result = mysql_query($query);
         return time();
-    }
-    else if($elapsedSec < 30){
+    } else if ($elapsedSec < 30) {
         return $lastUpdateTime;
-    }
-    else if($elapsedSec > 10 * 60){
+    } else if ($elapsedSec > 10 * 60) {
         return time();
     }
 }
@@ -2673,9 +2554,9 @@ function getUsedTime($id)
 {
     $query = "select time_used from lmjelentkezok where id = " . (int)$id;
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     list($time_used) = mysql_fetch_row($result);
     return getTimeFormattedString($time_used);
@@ -2683,8 +2564,8 @@ function getUsedTime($id)
 
 function getTimeFormattedString($sec)
 {
-    $unith =3600;        // Num of seconds in an Hour...
-    $unitm =60;            // Num of seconds in a min...
+    $unith = 3600;        // Num of seconds in an Hour...
+    $unitm = 60;            // Num of seconds in a min...
 
     $hh = intval($sec / $unith);    // '/' given value by num sec in hour... output = HOURS
     $ss_remaining = ($sec - ($hh * $unith));        // '*' number of hours by seconds, then '-' from given value... output = REMAINING seconds
@@ -2698,11 +2579,11 @@ function getTimeFormattedString($sec)
 function getWordMeaningAjaxObject($userObject, $txt, $lang)
 {
     $list = getLevelList($userObject['nyelv']);
-    $txt = mb_convert_encoding($txt,"UTF-8","auto");
+    $txt = mb_convert_encoding($txt, "UTF-8", "auto");
     list($records1, $records2, $records3) = getWordsByHun($userObject, $txt, $lang);
 
     $show = 1;
-    if(count($records1) + count($records2) + count($records3) == 0) $show = 2;
+    if (count($records1) + count($records2) + count($records3) == 0) $show = 2;
 
     list($records4, $records5, $records6) = getWordsByFor($userObject, $txt, $lang);
 
@@ -2724,175 +2605,175 @@ function getWordMeaningAjaxObject($userObject, $txt, $lang)
     $records = array();
     $ids = array();
 
-    foreach((array)$kitoltottNemKifejezesSzavak as $curRec){
-        if(!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
+    foreach ((array)$kitoltottNemKifejezesSzavak as $curRec) {
+        if (!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
             continue;
-        if(($curRec["word_hun"] == $txt || $curRec["word_foreign"] == $txt) && !in_array($curRec['id'], $ids)){
+        if (($curRec["word_hun"] == $txt || $curRec["word_foreign"] == $txt) && !in_array($curRec['id'], $ids)) {
             $records[] = $curRec;
             $ids[] = $curRec['id'];
         }
     }
-    foreach((array)$kitoltottKifejezesSzavak as $curRec){
-        if(!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
+    foreach ((array)$kitoltottKifejezesSzavak as $curRec) {
+        if (!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
             continue;
-        if(($curRec["word_hun"] == $txt || $curRec["word_foreign"] == $txt) && !in_array($curRec['id'], $ids)){
+        if (($curRec["word_hun"] == $txt || $curRec["word_foreign"] == $txt) && !in_array($curRec['id'], $ids)) {
             $records[] = $curRec;
             $ids[] = $curRec['id'];
         }
     }
-    foreach((array)$nemKitoltottNemKifejezesSzavak as $curRec){
-        if(!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
+    foreach ((array)$nemKitoltottNemKifejezesSzavak as $curRec) {
+        if (!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
             continue;
-        if(($curRec["word_hun"] == $txt || $curRec["word_foreign"] == $txt) && !in_array($curRec['id'], $ids)){
+        if (($curRec["word_hun"] == $txt || $curRec["word_foreign"] == $txt) && !in_array($curRec['id'], $ids)) {
             $records[] = $curRec;
             $ids[] = $curRec['id'];
         }
     }
-    foreach((array)$nemKitoltottKifejezesSzavak as $curRec){
-        if(!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
+    foreach ((array)$nemKitoltottKifejezesSzavak as $curRec) {
+        if (!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
             continue;
-        if(($curRec["word_hun"] == $txt || $curRec["word_foreign"] == $txt) && !in_array($curRec['id'], $ids)){
-            $records[] = $curRec;
-            $ids[] = $curRec['id'];
-        }
-    }
-
-    foreach((array)$kitoltottNemOsszetettMondatok as $curRec){
-        if(!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
-            continue;
-        if(($curRec["word_hun"] == $txt || $curRec["word_foreign"] == $txt) && !in_array($curRec['id'], $ids)){
+        if (($curRec["word_hun"] == $txt || $curRec["word_foreign"] == $txt) && !in_array($curRec['id'], $ids)) {
             $records[] = $curRec;
             $ids[] = $curRec['id'];
         }
     }
 
-    foreach((array)$kitoltottOsszetettMondatok as $curRec){
-        if(!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
+    foreach ((array)$kitoltottNemOsszetettMondatok as $curRec) {
+        if (!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
             continue;
-        if(($curRec["word_hun"] == $txt || $curRec["word_foreign"] == $txt) && !in_array($curRec['id'], $ids)){
+        if (($curRec["word_hun"] == $txt || $curRec["word_foreign"] == $txt) && !in_array($curRec['id'], $ids)) {
             $records[] = $curRec;
             $ids[] = $curRec['id'];
         }
     }
 
-    foreach((array)$nemKitoltottNemOsszetettMondatok as $curRec){
-        if(!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
+    foreach ((array)$kitoltottOsszetettMondatok as $curRec) {
+        if (!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
             continue;
-        if(($curRec["word_hun"] == $txt || $curRec["word_foreign"] == $txt) && !in_array($curRec['id'], $ids)){
+        if (($curRec["word_hun"] == $txt || $curRec["word_foreign"] == $txt) && !in_array($curRec['id'], $ids)) {
             $records[] = $curRec;
             $ids[] = $curRec['id'];
         }
     }
 
-    foreach((array)$nemKitoltottOsszetettMondatok as $curRec){
-        if(!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
+    foreach ((array)$nemKitoltottNemOsszetettMondatok as $curRec) {
+        if (!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
             continue;
-        if(($curRec["word_hun"] == $txt || $curRec["word_foreign"] == $txt) && !in_array($curRec['id'], $ids)){
+        if (($curRec["word_hun"] == $txt || $curRec["word_foreign"] == $txt) && !in_array($curRec['id'], $ids)) {
             $records[] = $curRec;
             $ids[] = $curRec['id'];
         }
     }
 
-    foreach((array)$records3 as $curRec){
-        if(!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
+    foreach ((array)$nemKitoltottOsszetettMondatok as $curRec) {
+        if (!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
             continue;
-        if(($curRec["word_hun"] == $txt || $curRec["word_foreign"] == $txt) && !in_array($curRec['id'], $ids)){
-            $records[] = $curRec;
-            $ids[] = $curRec['id'];
-        }
-    }
-    foreach((array)$records6 as $curRec){
-        if(!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
-            continue;
-        if(($curRec["word_hun"] == $txt || $curRec["word_foreign"] == $txt) && !in_array($curRec['id'], $ids)){
+        if (($curRec["word_hun"] == $txt || $curRec["word_foreign"] == $txt) && !in_array($curRec['id'], $ids)) {
             $records[] = $curRec;
             $ids[] = $curRec['id'];
         }
     }
 
-/**********************************************************************************************/
-
-    foreach((array)$kitoltottNemKifejezesSzavak as $curRec){
-        if(!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
+    foreach ((array)$records3 as $curRec) {
+        if (!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
             continue;
-        if(!in_array($curRec['id'], $ids)){
+        if (($curRec["word_hun"] == $txt || $curRec["word_foreign"] == $txt) && !in_array($curRec['id'], $ids)) {
             $records[] = $curRec;
             $ids[] = $curRec['id'];
         }
     }
-    foreach((array)$kitoltottKifejezesSzavak as $curRec){
-        if(!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
+    foreach ((array)$records6 as $curRec) {
+        if (!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
             continue;
-        if(!in_array($curRec['id'], $ids)){
-            $records[] = $curRec;
-            $ids[] = $curRec['id'];
-        }
-    }
-    foreach((array)$nemKitoltottNemKifejezesSzavak as $curRec){
-        if(!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
-            continue;
-        if(!in_array($curRec['id'], $ids)){
-            $records[] = $curRec;
-            $ids[] = $curRec['id'];
-        }
-    }
-    foreach((array)$nemKitoltottKifejezesSzavak as $curRec){
-        if(!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
-            continue;
-        if(!in_array($curRec['id'], $ids)){
+        if (($curRec["word_hun"] == $txt || $curRec["word_foreign"] == $txt) && !in_array($curRec['id'], $ids)) {
             $records[] = $curRec;
             $ids[] = $curRec['id'];
         }
     }
 
-    foreach((array)$kitoltottNemOsszetettMondatok as $curRec){
-        if(!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
+    /**********************************************************************************************/
+
+    foreach ((array)$kitoltottNemKifejezesSzavak as $curRec) {
+        if (!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
             continue;
-        if(!in_array($curRec['id'], $ids)){
+        if (!in_array($curRec['id'], $ids)) {
+            $records[] = $curRec;
+            $ids[] = $curRec['id'];
+        }
+    }
+    foreach ((array)$kitoltottKifejezesSzavak as $curRec) {
+        if (!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
+            continue;
+        if (!in_array($curRec['id'], $ids)) {
+            $records[] = $curRec;
+            $ids[] = $curRec['id'];
+        }
+    }
+    foreach ((array)$nemKitoltottNemKifejezesSzavak as $curRec) {
+        if (!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
+            continue;
+        if (!in_array($curRec['id'], $ids)) {
+            $records[] = $curRec;
+            $ids[] = $curRec['id'];
+        }
+    }
+    foreach ((array)$nemKitoltottKifejezesSzavak as $curRec) {
+        if (!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
+            continue;
+        if (!in_array($curRec['id'], $ids)) {
             $records[] = $curRec;
             $ids[] = $curRec['id'];
         }
     }
 
-    foreach((array)$kitoltottOsszetettMondatok as $curRec){
-        if(!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
+    foreach ((array)$kitoltottNemOsszetettMondatok as $curRec) {
+        if (!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
             continue;
-        if(!in_array($curRec['id'], $ids)){
+        if (!in_array($curRec['id'], $ids)) {
             $records[] = $curRec;
             $ids[] = $curRec['id'];
         }
     }
 
-    foreach((array)$nemKitoltottNemOsszetettMondatok as $curRec){
-        if(!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
+    foreach ((array)$kitoltottOsszetettMondatok as $curRec) {
+        if (!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
             continue;
-        if(!in_array($curRec['id'], $ids)){
+        if (!in_array($curRec['id'], $ids)) {
             $records[] = $curRec;
             $ids[] = $curRec['id'];
         }
     }
 
-    foreach((array)$nemKitoltottOsszetettMondatok as $curRec){
-        if(!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
+    foreach ((array)$nemKitoltottNemOsszetettMondatok as $curRec) {
+        if (!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
             continue;
-        if(!in_array($curRec['id'], $ids)){
+        if (!in_array($curRec['id'], $ids)) {
             $records[] = $curRec;
             $ids[] = $curRec['id'];
         }
     }
 
-    foreach((array)$records3 as $curRec){
-        if(!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
+    foreach ((array)$nemKitoltottOsszetettMondatok as $curRec) {
+        if (!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
             continue;
-        if(!in_array($curRec['id'], $ids)){
+        if (!in_array($curRec['id'], $ids)) {
             $records[] = $curRec;
             $ids[] = $curRec['id'];
         }
     }
-    foreach((array)$records6 as $curRec){
-        if(!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
+
+    foreach ((array)$records3 as $curRec) {
+        if (!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
             continue;
-        if(!in_array($curRec['id'], $ids)){
+        if (!in_array($curRec['id'], $ids)) {
+            $records[] = $curRec;
+            $ids[] = $curRec['id'];
+        }
+    }
+    foreach ((array)$records6 as $curRec) {
+        if (!in_array($GLOBALS['userObject']['status'], array(4, 5, 6)) && ($curRec["word_hun"] == '...' || $curRec["word_foreign"] == '...'))
+            continue;
+        if (!in_array($curRec['id'], $ids)) {
             $records[] = $curRec;
             $ids[] = $curRec['id'];
         }
@@ -2907,22 +2788,19 @@ function getWordMeaningAjaxObject($userObject, $txt, $lang)
 
 function routeHitArray($hitArray, $levelToTheEnd, &$array1, &$array2, &$array3, &$array4)
 {
-    foreach((array)$hitArray as $curRec){
-        // kitöltött
-        if($curRec['word_hun'] != null && $curRec['word_hun'] != '' && $curRec['word_hun'] != '...' && $curRec['word_foreign'] != null && $curRec['word_foreign'] != '' && $curRec['word_foreign'] != '...'){
-            // kifejezés
-            if($curRec['level'] == $levelToTheEnd){
+    foreach ((array)$hitArray as $curRec) {
+        // kitï¿½ltï¿½tt
+        if ($curRec['word_hun'] != null && $curRec['word_hun'] != '' && $curRec['word_hun'] != '...' && $curRec['word_foreign'] != null && $curRec['word_foreign'] != '' && $curRec['word_foreign'] != '...') {
+            // kifejezï¿½s
+            if ($curRec['level'] == $levelToTheEnd) {
                 $array1[] = $curRec;
-            }
-            else{
+            } else {
                 $array2[] = $curRec;
             }
-        }
-        else{
-            if($curRec['level'] == $levelToTheEnd){
+        } else {
+            if ($curRec['level'] == $levelToTheEnd) {
                 $array3[] = $curRec;
-            }
-            else{
+            } else {
                 $array4[] = $curRec;
             }
         }
@@ -2934,26 +2812,26 @@ function setUserWord($userObject, $word, $lang)
 {
     $record = getWordMeaningAjaxObject($userObject, $word, $lang);
     $userId = $userObject['id'];
-    foreach($record['items'] as $item){
-        // csak az 1-es levelûeket mentjük el
-        if($item['level_category'] !== 1){
+    foreach ($record['items'] as $item) {
+        // csak az 1-es levelï¿½eket mentjï¿½k el
+        if ($item['level_category'] !== 1) {
             continue;
         }
         $wordId = $item['id'];
         $query = "select count(*) from user_words where user_id = {$userId} and word_id = {$wordId}";
         $result = mysql_query($query);
-        if(!$result){
+        if (!$result) {
             print mysql_error();
-            exit("Nem sikerült: " . $query);
+            exit("Nem sikerï¿½lt: " . $query);
         }
         list($exist) = mysql_fetch_row($result);
 
-        if(!$exist){
+        if (!$exist) {
             $query = "insert into user_words (user_id, word_id) values ({$userId}, {$wordId})";
             $result = mysql_query($query);
-            if(!$result){
+            if (!$result) {
                 print mysql_error();
-                exit("Nem sikerült: " . $query);
+                exit("Nem sikerï¿½lt: " . $query);
             }
         }
     }
@@ -2965,24 +2843,25 @@ function setUserWordById($userObject, $id)
     $userId = $userObject['id'];
     $query = "select count(*) from user_words where user_id = {$userId} and word_id = {$wordId}";
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     list($exist) = mysql_fetch_row($result);
 
-    if(!$exist){
+    if (!$exist) {
         $query = "insert into user_words (user_id, word_id) values ({$userId}, {$wordId})";
         $result = mysql_query($query);
-        if(!$result){
+        if (!$result) {
             print mysql_error();
-            exit("Nem sikerült: " . $query);
+            exit("Nem sikerï¿½lt: " . $query);
         }
     }
 }
 
 
-function deb($array){
+function deb($array)
+{
     print "<pre>";
     print_r($array);
     print "</pre>";
@@ -2993,21 +2872,21 @@ function deleteUser($userId)
 {
     $query = "delete from word_records where user_id = {$userId}";
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
         return false;
     }
 
     $query = "delete from user_words where user_id = {$userId}";
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
         return false;
     }
 
     $query = "delete from lmjelentkezok where id = {$userId}";
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
         return false;
     }
@@ -3017,11 +2896,11 @@ function deleteUser($userId)
 
 function createUser($userArray, &$message)
 {
-    if(!$userArray['jelszo'] or !$userArray['vezeteknev'] or !$userArray['keresztnev'] or !$userArray['email']){
-        $message = "A vezetéknév, keresztnév, jelszó és email kitöltése kötelezõ!";
+    if (!$userArray['jelszo'] or !$userArray['vezeteknev'] or !$userArray['keresztnev'] or !$userArray['email']) {
+        $message = "A vezetï¿½knï¿½v, keresztnï¿½v, jelszï¿½ ï¿½s email kitï¿½ltï¿½se kï¿½telezï¿½!";
         return false;
     }
-    foreach($userArray as $key => $value){
+    foreach ($userArray as $key => $value) {
         $userArray[$key] = str_replace("'", "''", $value);
     }
     $userArray['send_mail'] = (int)$userArray['send_mail'];
@@ -3034,16 +2913,16 @@ function createUser($userArray, &$message)
     $query = "select count(*) as nr from lmjelentkezok where email = '{$userArray['email']}'";
 
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $number = 0;
-    while($row = mysql_fetch_assoc($result)) {
+    while ($row = mysql_fetch_assoc($result)) {
         $number = $row['nr'];
     }
-    if($number > 0){
-        $message = "Ezzel az e-mail címmel már van regisztrált felhasználó!";
+    if ($number > 0) {
+        $message = "Ezzel az e-mail cï¿½mmel mï¿½r van regisztrï¿½lt felhasznï¿½lï¿½!";
         return false;
     }
     $hash = bin2hex(mcrypt_create_iv(22, MCRYPT_DEV_URANDOM));
@@ -3052,19 +2931,19 @@ function createUser($userArray, &$message)
                     , '{$userArray['program_start_date']}', '{$userArray['program_end_date']}', '{$userArray['client_data']}', {$userArray['send_mail']}, {$userArray['forras_nyelv']}, {$userArray['nyelv']}, {$userArray['max_level']}, {$userArray['status']}, " . (int)$userArray['tanar'] . ", '{$userArray['payment']}', '{$userArray['hazi_feladat']}', '{$userArray['next_lesson']}', '{$hash}')";
 
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
         return false;
     }
     $query = "select id from lmjelentkezok where email = '{$userArray['email']}'";
 
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $id = 0;
-    while($row = mysql_fetch_row($result)) {
+    while ($row = mysql_fetch_row($result)) {
         $id = $row[0];
     }
 
@@ -3073,11 +2952,11 @@ function createUser($userArray, &$message)
 
 function createUser2($userArray, &$message)
 {
-    if(!$userArray['jelszo'] or !$userArray['vezeteknev'] or !$userArray['keresztnev'] or !$userArray['email']){
-        $message = "A vezetéknév, keresztnév, jelszó és email kitöltése kötelezõ!";
+    if (!$userArray['jelszo'] or !$userArray['vezeteknev'] or !$userArray['keresztnev'] or !$userArray['email']) {
+        $message = "A vezetï¿½knï¿½v, keresztnï¿½v, jelszï¿½ ï¿½s email kitï¿½ltï¿½se kï¿½telezï¿½!";
         return false;
     }
-    foreach($userArray as $key => $value){
+    foreach ($userArray as $key => $value) {
         $userArray[$key] = str_replace("'", "''", $value);
     }
     $userArray['nyelv'] = (int)$userArray['nyelv'];
@@ -3089,42 +2968,42 @@ function createUser2($userArray, &$message)
     $query = "select count(*) as nr from lmjelentkezok where email = '{$userArray['email']}'";
 
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $number = 0;
-    while($row = mysql_fetch_assoc($result)) {
+    while ($row = mysql_fetch_assoc($result)) {
         $number = $row['nr'];
     }
-    if($number > 0){
-        $message = "Ezzel az e-mail címmel már van regisztrált felhasználó!";
+    if ($number > 0) {
+        $message = "Ezzel az e-mail cï¿½mmel mï¿½r van regisztrï¿½lt felhasznï¿½lï¿½!";
         return false;
     }
 
-	$start = date('Y-m-d', strtotime('0 years'));
-	$end = date('Y-m-d', strtotime('+1 years'));
-	$max_level = 1000;
+    $start = date('Y-m-d', strtotime('0 years'));
+    $end = date('Y-m-d', strtotime('+1 years'));
+    $max_level = 1000;
 
     $hash = bin2hex(mcrypt_create_iv(22, MCRYPT_DEV_URANDOM));
     $query = "insert into lmjelentkezok (jelszo, vezeteknev, keresztnev, email, forras_nyelv, nyelv, status, subscribe_length, send_mail,max_level,program_start_date,program_end_date, hash)
                 values('{$userArray['jelszo']}', '{$userArray['vezeteknev']}', '{$userArray['keresztnev']}', '{$userArray['email']}',
                     {$userArray['forras_nyelv']}, {$userArray['nyelv']}, {$userArray['status']}, {$userArray['subscribe_length']}, {$userArray['send_mail']},{$max_level},'{$start}','{$end}', '{$hash}')";
 
-	$result = mysql_query($query);
-    if(!$result){
+    $result = mysql_query($query);
+    if (!$result) {
         print mysql_error();
         return false;
     }
     $query = "select id from lmjelentkezok where email = '{$userArray['email']}'";
 
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $id = 0;
-    while($row = mysql_fetch_row($result)) {
+    while ($row = mysql_fetch_row($result)) {
         $id = $row[0];
     }
 
@@ -3133,50 +3012,50 @@ function createUser2($userArray, &$message)
 
 function modifyUser($storeArray, &$message)
 {
-    if(isset($storeArray['email'])) $fields['email'] = "'" . $storeArray['email'] . "'";
-    if(isset($storeArray['jelszo'])) $fields['jelszo'] = "'" . $storeArray['jelszo'] . "'";
-    if(isset($storeArray['vezeteknev'])) $fields['vezeteknev'] = "'" . $storeArray['vezeteknev'] . "'";
-    if(isset($storeArray['keresztnev'])) $fields['keresztnev'] = "'" . $storeArray['keresztnev'] . "'";
-    if(isset($storeArray['program_start_date'])) $fields['program_start_date'] = "'" . $storeArray['program_start_date'] . "'";
-    if(isset($storeArray['program_end_date'])) $fields['program_end_date'] = "'" . $storeArray['program_end_date'] . "'";
-    if(isset($storeArray['client_data'])) $fields['client_data'] = "'" . $storeArray['client_data'] . "'";
-    if(isset($storeArray['send_mail'])) $fields['send_mail'] = (int)$storeArray['send_mail'];
-    if(isset($storeArray['forras_nyelv'])) $fields['forras_nyelv'] = (int)$storeArray['forras_nyelv'];
-    if(isset($storeArray['nyelv'])) $fields['nyelv'] = (int)$storeArray['nyelv'];
-    if(isset($storeArray['max_level'])) $fields['max_level'] = (int)$storeArray['max_level'];
-    if(isset($storeArray['status'])) $fields['status'] = (int)$storeArray['status'];
-    if(isset($storeArray['tanar'])) $fields['tanar_id'] = (int)$storeArray['tanar'];
-    if(isset($storeArray['payment'])) $fields['payment'] = "'" . $storeArray['payment'] . "'";
-    if(isset($storeArray['hazi_feladat'])) $fields['hazi_feladat'] = "'" . $storeArray['hazi_feladat'] . "'";
-    if(isset($storeArray['next_lesson'])) $fields['next_lesson'] = "'" . $storeArray['next_lesson'] . "'";    
+    if (isset($storeArray['email'])) $fields['email'] = "'" . $storeArray['email'] . "'";
+    if (isset($storeArray['jelszo'])) $fields['jelszo'] = "'" . $storeArray['jelszo'] . "'";
+    if (isset($storeArray['vezeteknev'])) $fields['vezeteknev'] = "'" . $storeArray['vezeteknev'] . "'";
+    if (isset($storeArray['keresztnev'])) $fields['keresztnev'] = "'" . $storeArray['keresztnev'] . "'";
+    if (isset($storeArray['program_start_date'])) $fields['program_start_date'] = "'" . $storeArray['program_start_date'] . "'";
+    if (isset($storeArray['program_end_date'])) $fields['program_end_date'] = "'" . $storeArray['program_end_date'] . "'";
+    if (isset($storeArray['client_data'])) $fields['client_data'] = "'" . $storeArray['client_data'] . "'";
+    if (isset($storeArray['send_mail'])) $fields['send_mail'] = (int)$storeArray['send_mail'];
+    if (isset($storeArray['forras_nyelv'])) $fields['forras_nyelv'] = (int)$storeArray['forras_nyelv'];
+    if (isset($storeArray['nyelv'])) $fields['nyelv'] = (int)$storeArray['nyelv'];
+    if (isset($storeArray['max_level'])) $fields['max_level'] = (int)$storeArray['max_level'];
+    if (isset($storeArray['status'])) $fields['status'] = (int)$storeArray['status'];
+    if (isset($storeArray['tanar'])) $fields['tanar_id'] = (int)$storeArray['tanar'];
+    if (isset($storeArray['payment'])) $fields['payment'] = "'" . $storeArray['payment'] . "'";
+    if (isset($storeArray['hazi_feladat'])) $fields['hazi_feladat'] = "'" . $storeArray['hazi_feladat'] . "'";
+    if (isset($storeArray['next_lesson'])) $fields['next_lesson'] = "'" . $storeArray['next_lesson'] . "'";
 
-    if(isset($storeArray['email'])){
+    if (isset($storeArray['email'])) {
         $query = "select count(*) as nr from lmjelentkezok where email = '{$storeArray['email']}' and id != " . (int)$storeArray['id'];
 
         $result = mysql_query($query);
-        if(!$result){
+        if (!$result) {
             print mysql_error();
-            exit("Nem sikerült: " . $query);
+            exit("Nem sikerï¿½lt: " . $query);
         }
         $number = 0;
-        while($row = mysql_fetch_assoc($result)) {
+        while ($row = mysql_fetch_assoc($result)) {
             $number = $row['nr'];
         }
-        if($number > 0){
-            $message = "Ezzel az e-mail címmel már van regisztrált felhasználó!";
+        if ($number > 0) {
+            $message = "Ezzel az e-mail cï¿½mmel mï¿½r van regisztrï¿½lt felhasznï¿½lï¿½!";
             return false;
         }
     }
 
     $sqlString = array();
-    foreach($fields as $key => $value){
+    foreach ($fields as $key => $value) {
         $sqlString[] = "$key = $value";
     }
     $sql = "update lmjelentkezok set " . implode(', ', $sqlString) . "
                 where id = " . (int)$storeArray['id'];
 
     $result = mysql_query($sql);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
         return false;
     }
@@ -3185,18 +3064,18 @@ function modifyUser($storeArray, &$message)
 
 function getFinanceById($id)
 {
-    if(strlen($id) == 0){
+    if (strlen($id) == 0) {
         return false;
     }
 
     $query = "SELECT f.*, u.vezeteknev, u.keresztnev from finance f inner join lmjelentkezok u on f.user_id = u.id where f.ID = '$id'";
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $financeObject = false;
-    while($row = mysql_fetch_assoc($result)) {
+    while ($row = mysql_fetch_assoc($result)) {
         $financeObject = $row;
     }
     return $financeObject;
@@ -3205,20 +3084,19 @@ function getFinanceById($id)
 
 function createFinance($userArray, &$message)
 {
-    foreach($userArray as $key => $value){
+    foreach ($userArray as $key => $value) {
         $userArray[$key] = str_replace("'", "''", $value);
     }
     // fifty-fifty
-    if((int)$userArray['time_package'] == 1){
+    if ((int)$userArray['time_package'] == 1) {
         $userArray['payable_to_teacher'] = 2500;
         $userArray['payable_to_boss'] = 2500;
     }
-    // 3500ft (tanáré) - 1500ft (bossé)
-    else if((int)$userArray['time_package'] == 2){
+    // 3500ft (tanï¿½rï¿½) - 1500ft (bossï¿½)
+    else if ((int)$userArray['time_package'] == 2) {
         $userArray['payable_to_teacher'] = 3500;
         $userArray['payable_to_boss'] = 1500;
-    }
-    else{
+    } else {
         $userArray['payable_to_teacher'] = 0;
         $userArray['payable_to_boss'] = 0;
     }
@@ -3227,19 +3105,19 @@ function createFinance($userArray, &$message)
                     ,  " . (int)$userArray['time_package'] . ",  " . (int)$userArray['payable_to_teacher'] . ",  " . (int)$userArray['payable_to_boss'] . ", '{$userArray['lesson_date']}')";
 
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print $query . ' ' . mysql_error();
         return false;
     }
     $query = "select max(id) from finance where user_id = '{$userArray['user_id']}' and payment_date = '{$userArray['payment_date']}'";
 
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print $query . ' ' . mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $id = 0;
-    while($row = mysql_fetch_row($result)) {
+    while ($row = mysql_fetch_row($result)) {
         $id = $row[0];
     }
 
@@ -3248,36 +3126,35 @@ function createFinance($userArray, &$message)
 
 function modifyFinance($storeArray, &$message)
 {
-    if(isset($storeArray['user_id'])) $fields['user_id'] = (int)$storeArray['user_id'];
-    if(isset($storeArray['payment_date'])) $fields['payment_date'] = "'" . $storeArray['payment_date'] . "'";
-    if(isset($storeArray['time_package'])) $fields['time_package'] = (int)$storeArray['time_package'];
-    if(isset($storeArray['paid_to_who'])) $fields['paid_to_who'] = (int)$storeArray['paid_to_who'];
-    if(isset($storeArray['lesson_date'])) $fields['lesson_date'] = "'" . $storeArray['lesson_date'] . "'";
+    if (isset($storeArray['user_id'])) $fields['user_id'] = (int)$storeArray['user_id'];
+    if (isset($storeArray['payment_date'])) $fields['payment_date'] = "'" . $storeArray['payment_date'] . "'";
+    if (isset($storeArray['time_package'])) $fields['time_package'] = (int)$storeArray['time_package'];
+    if (isset($storeArray['paid_to_who'])) $fields['paid_to_who'] = (int)$storeArray['paid_to_who'];
+    if (isset($storeArray['lesson_date'])) $fields['lesson_date'] = "'" . $storeArray['lesson_date'] . "'";
 
     // fifty-fifty
-    if((int)$fields['time_package'] == 1){
+    if ((int)$fields['time_package'] == 1) {
         $fields['payable_to_teacher'] = 2500;
         $fields['payable_to_boss'] = 2500;
     }
-    // 3500ft (tanáré) - 1500ft (bossé)
-    else if((int)$fields['time_package'] == 2){
+    // 3500ft (tanï¿½rï¿½) - 1500ft (bossï¿½)
+    else if ((int)$fields['time_package'] == 2) {
         $fields['payable_to_teacher'] = 3500;
         $fields['payable_to_boss'] = 1500;
-    }
-    else if(isset($fields['time_package'])){
+    } else if (isset($fields['time_package'])) {
         $fields['payable_to_teacher'] = 0;
         $fields['payable_to_boss'] = 0;
     }
 
     $sqlString = array();
-    foreach($fields as $key => $value){
+    foreach ($fields as $key => $value) {
         $sqlString[] = "$key = $value";
     }
     $sql = "update finance set " . implode(', ', $sqlString) . "
                 where id = " . (int)$storeArray['id'];
 
     $result = mysql_query($sql);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
         return false;
     }
@@ -3286,19 +3163,18 @@ function modifyFinance($storeArray, &$message)
 
 function deleteFinance($financeId)
 {
-    if(is_array($financeId)){
+    if (is_array($financeId)) {
         $ids = array();
-        foreach($financeId as $id){
+        foreach ($financeId as $id) {
             $ids[] = (int)$id;
         }
         $query = "delete from finance where id in (" . implode(", ", $ids) . ")";
-    }
-    else{
+    } else {
         $query = "delete from finance where id = {$financeId}";
     }
 
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
         return false;
     }
@@ -3308,51 +3184,48 @@ function deleteFinance($financeId)
 function getFinances($teacherId)
 {
     $query = "select f.*, u.vezeteknev, u.keresztnev from finance f inner join lmjelentkezok u on f.user_id = u.id";
-    if($teacherId > 0){
+    if ($teacherId > 0) {
         $query .= " where u.tanar_id = {$teacherId}";
-    }
-    else{
+    } else {
         $query .= " where u.tanar_id = 0";
     }
     $query .= " order by f.payment_date desc";
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print $query . ' ' . mysql_error();
         return false;
     }
     $resultArray = array();
-    while($row = mysql_fetch_assoc($result)){
+    while ($row = mysql_fetch_assoc($result)) {
         $resultArray[] = $row;
     }
     return $resultArray;
-
 }
 
 function getFinancesByStudent($studentId)
 {
     $query = "select f.*, u.vezeteknev, u.keresztnev from finance f inner join lmjelentkezok u on f.user_id = u.id";
-    if($studentId > 0){
+    if ($studentId > 0) {
         $query .= " where u.id = {$studentId}";
     }
     $query .= " order by f.payment_date desc";
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print $query . ' ' . mysql_error();
         return false;
     }
     $resultArray = array();
-    while($row = mysql_fetch_assoc($result)){
+    while ($row = mysql_fetch_assoc($result)) {
         $resultArray[] = $row;
     }
     return $resultArray;
-
 }
 
 function getBalance($userId)
 {
     $query = "select sum(f.amount) as amount from finance f inner join lmjelentkezok u on f.user_id = u.id where u.tanar_id = {$userId} and f.paid_to_who = 1";
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print $query . ' ' . mysql_error();
         return false;
     }
@@ -3360,19 +3233,18 @@ function getBalance($userId)
 
     $query = "select sum(f.payable_to_teacher) as amount from finance f inner join lmjelentkezok u on f.user_id = u.id where u.tanar_id = {$userId}";
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print $query . ' ' . mysql_error();
         return false;
     }
     list($penz_tanarnak) = mysql_fetch_row($result);
 
     return ((int)$penz_tanarnal - (int)$penz_tanarnak);
-
 }
 
 function getUsersByLanguage($lang)
 {
-    if($lang > 0){
+    if ($lang > 0) {
         $where = "where nyelv = {$lang}";
     }
     $query = "select *, datediff(now(), program_start_date) as eltelt_napok
@@ -3381,12 +3253,12 @@ function getUsersByLanguage($lang)
                 order by vezeteknev, keresztnev";
 
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $resultArray = array();
-    while($row = mysql_fetch_assoc($result)) {
+    while ($row = mysql_fetch_assoc($result)) {
         $resultArray[] = $row;
     }
     return $resultArray;
@@ -3399,12 +3271,12 @@ function getUsersByTeacher($user_id)
                 where tanar_id = {$user_id}
                 order by vezeteknev, keresztnev";
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $resultArray = array();
-    while($row = mysql_fetch_assoc($result)) {
+    while ($row = mysql_fetch_assoc($result)) {
         $resultArray[] = $row;
     }
     return $resultArray;
@@ -3418,12 +3290,12 @@ function getUsersByStatusArray($statusArray)
                 where status in (" . implode(', ', $statusArray) . ")
                 order by keresztnev";
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $resultArray = array();
-    while($row = mysql_fetch_assoc($result)) {
+    while ($row = mysql_fetch_assoc($result)) {
         $resultArray[$row['id']] = $row;
     }
     return $resultArray;
@@ -3446,20 +3318,19 @@ function isPrevArrow($selectedLevel, $userObject, $isPeldamondatok)
 {
     $levelList = getLevelList($_SESSION['userObject']['nyelv']);
     $isPrev = false;
-    if($isPeldamondatok){
+    if ($isPeldamondatok) {
         $goodArray = array(2);
-    }
-    else{
+    } else {
         $goodArray = array(1, 2, 3);
     }
-    if(in_array($selectedLevel, array_keys($levelList))){
+    if (in_array($selectedLevel, array_keys($levelList))) {
         reset($levelList);
-        while (current($levelList) && key($levelList) != $selectedLevel){
+        while (current($levelList) && key($levelList) != $selectedLevel) {
             next($levelList);
         }
-        while(prev($levelList)){
+        while (prev($levelList)) {
             $currentOne = current($levelList);
-            if(!in_array($currentOne[1], $goodArray) || key($levelList) == '0'){
+            if (!in_array($currentOne[1], $goodArray) || key($levelList) == '0') {
                 continue;
             }
             $isPrev = true;
@@ -3473,27 +3344,26 @@ function isNextArrow($selectedLevel, $userObject, $isPeldamondatok)
 {
     $levelList = getLevelList($_SESSION['userObject']['nyelv']);
     $isNext = false;
-    if($isPeldamondatok){
+    if ($isPeldamondatok) {
         $goodArray = array(2);
-    }
-    else{
+    } else {
         $goodArray = array(1, 2, 3);
     }
-    if(in_array($selectedLevel, array_keys($levelList))){
-        if($selectedLevel == $userObject['max_level']){
+    if (in_array($selectedLevel, array_keys($levelList))) {
+        if ($selectedLevel == $userObject['max_level']) {
             return false;
         }
         $isMaxLevel = false;
         reset($levelList);
-        while (current($levelList) && key($levelList) != $selectedLevel){
-            if(key($levelList) == $userObject['max_level']){
+        while (current($levelList) && key($levelList) != $selectedLevel) {
+            if (key($levelList) == $userObject['max_level']) {
                 return false;
             }
             next($levelList);
         }
-        while(next($levelList)){
+        while (next($levelList)) {
             $currentOne = current($levelList);
-            if(!in_array($currentOne[1], $goodArray) || key($levelList) == '0'){
+            if (!in_array($currentOne[1], $goodArray) || key($levelList) == '0') {
                 continue;
             }
             $isNext = true;
@@ -3505,7 +3375,7 @@ function isNextArrow($selectedLevel, $userObject, $isPeldamondatok)
 
 function endiMail($to, $subject, $body, $fromName, $fromEmail, $hiddenAddresses = array(), $userNames = array(), $userLogins = array(), $charcode = 'ISO-8859-2', $userEmails = array())
 {
-    // a levélküldés levágja a body utolsó két karakterét, tudja a hóhér hogy miért
+    // a levï¿½lkï¿½ldï¿½s levï¿½gja a body utolsï¿½ kï¿½t karakterï¿½t, tudja a hï¿½hï¿½r hogy miï¿½rt
     $body = str_replace(chr(13) . chr(10), "<br>", $body);
     $body = "<span style='font-family:Arial;'>" . $body . '</span>  ';
     $body = "<HTML><head><META HTTP-EQUIV='CHARSET' CONTENT='text/html; charset=$charcode'></head><body>" . $body . "</body></html>  ";
@@ -3513,16 +3383,16 @@ function endiMail($to, $subject, $body, $fromName, $fromEmail, $hiddenAddresses 
     $headers = "From: $fromName <$fromEmail>\n";
     $headers .= "Reply-To: $fromName <$fromEmail>\n";
     $headers .= "MIME-Version: 1.0\n";
-//    $headers .= "Content-Type: multipart/alternative; boundary=\"$mime_boundary\"\r\n";
+    //    $headers .= "Content-Type: multipart/alternative; boundary=\"$mime_boundary\"\r\n";
     $headers .= "Content-Type: text/html\n";
-    if(count((array)$hiddenAddresses) > 0){
-        for($i = 0; $i < count((array)$hiddenAddresses); $i++){
-            if(count($userNames) == count($hiddenAddresses) and count($userNames) > 0){
+    if (count((array)$hiddenAddresses) > 0) {
+        for ($i = 0; $i < count((array)$hiddenAddresses); $i++) {
+            if (count($userNames) == count($hiddenAddresses) and count($userNames) > 0) {
                 $body2 = str_replace('<nameVar />', $userNames[$i], $body);
                 $body2 = str_replace('<loginVar />', $userLogins[$i], $body2);
                 $body2 = str_replace('<emailVar />', $userEmails[$i], $body2);
             }
-            if(!mail($hiddenAddresses[$i], $subject, $body2, $headers)){
+            if (!mail($hiddenAddresses[$i], $subject, $body2, $headers)) {
                 return false;
             }
         }
@@ -3531,7 +3401,7 @@ function endiMail($to, $subject, $body, $fromName, $fromEmail, $hiddenAddresses 
         // $headers .= "BCC: " . implode(',', $hiddenAddresses) . "\r\n";
     }
     set_time_limit(0);
-    if(!mail($to, $subject, $body, $headers)){
+    if (!mail($to, $subject, $body, $headers)) {
         return false;
     }
     return true;
@@ -3542,27 +3412,27 @@ function subscribeBody($nev, $email, $jelszo, $nyelv, $subscribe_length)
     return "
 Szia!
 
-Üdvözlünk nyelvgyakorlóink táborában!
+ï¿½dvï¿½zlï¿½nk nyelvgyakorlï¿½ink tï¿½borï¿½ban!
 
-Javasoljuk, hogy szánj idõt a program megismerésére, ha valami nem megy, a kis kérdõjelekkel felhozható instrukciók segíthetnek.
-Ha ezen kívül van kérdésed, írj emailt nyugodtan, minden visszajelzést megköszönünk, hiszen folyamatosan törekszünk a még jobb
-felhasználói élmény létrehozására.
+Javasoljuk, hogy szï¿½nj idï¿½t a program megismerï¿½sï¿½re, ha valami nem megy, a kis kï¿½rdï¿½jelekkel felhozhatï¿½ instrukciï¿½k segï¿½thetnek.
+Ha ezen kï¿½vï¿½l van kï¿½rdï¿½sed, ï¿½rj emailt nyugodtan, minden visszajelzï¿½st megkï¿½szï¿½nï¿½nk, hiszen folyamatosan tï¿½rekszï¿½nk a mï¿½g jobb
+felhasznï¿½lï¿½i ï¿½lmï¿½ny lï¿½trehozï¿½sï¿½ra.
 
-A weboldal Google Chrome, Mozilla Firefox és Microsoft Edge Böngészõkre van optimalizálva, az Internet Explorert
-nem ajánljuk használatra.
+A weboldal Google Chrome, Mozilla Firefox ï¿½s Microsoft Edge Bï¿½ngï¿½szï¿½kre van optimalizï¿½lva, az Internet Explorert
+nem ajï¿½nljuk hasznï¿½latra.
 
-Ha a regisztrációnál bejelölted, minden reggel a Napi Kvízzel köszöntünk emailben. Ezt a beállításokban bármikor kikapcsolhatod.
+Ha a regisztrï¿½ciï¿½nï¿½l bejelï¿½lted, minden reggel a Napi Kvï¿½zzel kï¿½szï¿½ntï¿½nk emailben. Ezt a beï¿½llï¿½tï¿½sokban bï¿½rmikor kikapcsolhatod.
 
-Ha androidos (pl. Samsung) okostelefonod van, a regisztrácóddal a Google Playbõl letölthetõ lingocasa alkalmazás használatára is jogosult lettél.
+Ha androidos (pl. Samsung) okostelefonod van, a regisztrï¿½cï¿½ddal a Google Playbï¿½l letï¿½lthetï¿½ lingocasa alkalmazï¿½s hasznï¿½latï¿½ra is jogosult lettï¿½l.
 
-Eredményes tanulást kíván,
+Eredmï¿½nyes tanulï¿½st kï¿½vï¿½n,
 A <a href='https://www.lingocasa.com'>lingocasa.com</a> csapata
 
 <u>Adataid</u><br>
-Név: $nev
+Nï¿½v: $nev
 E-mail: $email
-Jelszó: $jelszo
-Választott nyelv: $nyelv";
+Jelszï¿½: $jelszo
+Vï¿½lasztott nyelv: $nyelv";
 }
 
 function subscribeBodyENG($nev, $email, $jelszo, $nyelv, $subscribe_length)
@@ -3584,10 +3454,10 @@ Have fun with learning,
 <a href='https://www.lingocasa.com'>lingocasa.com</a> team
 
 <u>Your personal data:</u><br>
-Név: $nev
+Nï¿½v: $nev
 E-mail: $email
-Jelszó: $jelszo
-Választott nyelv: $nyelv";
+Jelszï¿½: $jelszo
+Vï¿½lasztott nyelv: $nyelv";
 }
 
 function subscribeBodyESP($nev, $email, $jelszo, $nyelv, $subscribe_length)
@@ -3595,13 +3465,13 @@ function subscribeBodyESP($nev, $email, $jelszo, $nyelv, $subscribe_length)
     return "
 Bienvenid@ en el tribu de nuestros estudiantes de idiomas.
 
-Te recomendamos que tomes tu tiempo para conocer bien la aplicación. Si algo no está claro pinchando en las pequenas interrogaciones saldrá ayuda. Si aún tienes dudas escríbenos un e-mail. Te agradeceremos todo tipo de comentario o crítica ya que seguimos procurando mejorar la experiencia de usuario.
+Te recomendamos que tomes tu tiempo para conocer bien la aplicaciï¿½n. Si algo no estï¿½ claro pinchando en las pequenas interrogaciones saldrï¿½ ayuda. Si aï¿½n tienes dudas escrï¿½benos un e-mail. Te agradeceremos todo tipo de comentario o crï¿½tica ya que seguimos procurando mejorar la experiencia de usuario.
 
-La página está optimizada para Google Chrome, Mozilla Firefox y Microsoft Edge. No recomendamos el uso de Internet Explorer.
+La pï¿½gina estï¿½ optimizada para Google Chrome, Mozilla Firefox y Microsoft Edge. No recomendamos el uso de Internet Explorer.
 
-Si durante la suscripción has marcado la opción, cada manana te saludaremos con ''Reto del Día''. Puedes apagar esta función en cualquier momento en los ajustes.
+Si durante la suscripciï¿½n has marcado la opciï¿½n, cada manana te saludaremos con ''Reto del Dï¿½a''. Puedes apagar esta funciï¿½n en cualquier momento en los ajustes.
 
-Para dispositivos con Android la aplicación está disponible en Google Play. Con tu suscripción tienes derecho a descargarla.
+Para dispositivos con Android la aplicaciï¿½n estï¿½ disponible en Google Play. Con tu suscripciï¿½n tienes derecho a descargarla.
 
 Disfruta aprendiendo,
 <a href='https://www.lingocasa.com'>lingocasa.com</a>
@@ -3619,17 +3489,17 @@ function array_utf8_encode_recursive($dat)
         return utf8_encode($dat);
     }
     if (is_object($dat)) {
-        $ovs= get_object_vars($dat);
-        $new=$dat;
-        foreach ($ovs as $k =>$v){
-            $new->$k=array_utf8_encode_recursive($new->$k);
+        $ovs = get_object_vars($dat);
+        $new = $dat;
+        foreach ($ovs as $k => $v) {
+            $new->$k = array_utf8_encode_recursive($new->$k);
         }
         return $new;
     }
 
     if (!is_array($dat)) return $dat;
     $ret = array();
-    foreach($dat as $i=>$d) $ret[$i] = array_utf8_encode_recursive($d);
+    foreach ($dat as $i => $d) $ret[$i] = array_utf8_encode_recursive($d);
     return $ret;
 }
 
@@ -3639,27 +3509,26 @@ function array_utf8_decode_recursive($dat)
         return utf8_decode($dat);
     }
     if (is_object($dat)) {
-        $ovs= get_object_vars($dat);
-        $new=$dat;
-        foreach ($ovs as $k =>$v)    {
-            $new->$k=array_utf8_decode_recursive($new->$k);
+        $ovs = get_object_vars($dat);
+        $new = $dat;
+        foreach ($ovs as $k => $v) {
+            $new->$k = array_utf8_decode_recursive($new->$k);
         }
         return $new;
     }
 
     if (!is_array($dat)) return $dat;
     $ret = array();
-    foreach($dat as $i=>$d) $ret[$i] = array_utf8_decode_recursive($d);
+    foreach ($dat as $i => $d) $ret[$i] = array_utf8_decode_recursive($d);
     return $ret;
 }
 
 function translate($word)
 {
     global $trans;
-    if(array_key_exists($word, (array)$trans)){
+    if (array_key_exists($word, (array)$trans)) {
         return $trans[$word];
-    }
-    else{
+    } else {
         return $word;
     }
 }
@@ -3672,45 +3541,45 @@ function getLangExtByLangId($langId)
 
 function getLangArray()
 {
-    // a sorrend az, amilyen sorrendben a lucien váltja a nyelveket a fõoldalon
+    // a sorrend az, amilyen sorrendben a lucien vï¿½ltja a nyelveket a fï¿½oldalon
     $langArray = array(
-            1 => 'angol',
-            2 => 'spanyol',
-            4 => 'nemet',
-            5 => 'francia',
-            3 => 'arab',
-            0 => 'hun'
-        );
+        1 => 'angol',
+        2 => 'spanyol',
+        4 => 'nemet',
+        5 => 'francia',
+        3 => 'arab',
+        0 => 'hun'
+    );
     return $langArray;
 }
 
 function getLangTitles()
 {
-    // a sorrend az, amilyen sorrendben a lucien váltja a nyelveket a fõoldalon
+    // a sorrend az, amilyen sorrendben a lucien vï¿½ltja a nyelveket a fï¿½oldalon
     $langArray = array(
-            1 => 'angol',
-            2 => 'spanyol',
-            4 => 'német',
-            5 => 'francia',
-            3 => 'arab',
-            0 => 'magyar'
-        );
+        1 => 'angol',
+        2 => 'spanyol',
+        4 => 'nï¿½met',
+        5 => 'francia',
+        3 => 'arab',
+        0 => 'magyar'
+    );
     return $langArray;
 }
 
 function getClientsLocalLangs()
 {
     return array(
-                    0 => 'hun',
-                    1 => 'eng',
-                    2 => 'esp',
-                    3 => 'arb',
-                    4 => 'ger',
-                    5 => 'fra'
-                );
+        0 => 'hun',
+        1 => 'eng',
+        2 => 'esp',
+        3 => 'arb',
+        4 => 'ger',
+        5 => 'fra'
+    );
 }
 
-function array_sort($array, $on, $order=SORT_ASC)
+function array_sort($array, $on, $order = SORT_ASC)
 {
     $new_array = array();
     $sortable_array = array();
@@ -3731,15 +3600,15 @@ function array_sort($array, $on, $order=SORT_ASC)
         switch ($order) {
             case SORT_ASC:
                 asort($sortable_array);
-            break;
+                break;
             case SORT_DESC:
                 arsort($sortable_array);
-            break;
+                break;
         }
 
         $i = 0;
         foreach ($sortable_array as $k => $v) {
-            $new_array[$i++] = $array[$k];            
+            $new_array[$i++] = $array[$k];
         }
     }
 
@@ -3748,20 +3617,20 @@ function array_sort($array, $on, $order=SORT_ASC)
 
 function getUserProgress($userObject, $countBasicWords = null, $packageRecordsBasicWords = null)
 {
-    if($countBasicWords == null)
+    if ($countBasicWords == null)
         $countBasicWords = getBasicWordCount($userObject);
-    if($packageRecordsBasicWords == null)
+    if ($packageRecordsBasicWords == null)
         $packageRecordsBasicWords = getPackageRecords($userObject, 4);
 
     $partRowNumber = (int)($countBasicWords / $GLOBALS['szoPackageSize']);
-    if($partRowNumber * $GLOBALS['szoPackageSize'] < $countBasicWords){
+    if ($partRowNumber * $GLOBALS['szoPackageSize'] < $countBasicWords) {
         $partRowNumber++;
     }
     $cntCsomag = 0;
     $sumCsomagProgress = 0;
-    for($i = 1; $i <= $partRowNumber; $i++){
+    for ($i = 1; $i <= $partRowNumber; $i++) {
         $cntCsomag++;
-        if($packageRecordsBasicWords[$i]['best_time'] > 0){
+        if ($packageRecordsBasicWords[$i]['best_time'] > 0) {
             $sumCsomagProgress += (($packageRecordsBasicWords[$i]['best_time'] <= $GLOBALS['szoPackageRecordMpLimit']) ? 1 : ((float)$GLOBALS['szoPackageRecordMpLimit'] / $packageRecordsBasicWords[$i]['best_time']));
         }
     }
@@ -3777,19 +3646,19 @@ function getDailyQuiz()
         inner join words w on q.word_id = w.id
         where q.datum = '$datum'";
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $row = mysql_fetch_assoc($result);
-    if($row){
+    if ($row) {
         return $row;
     }
 
     $list = getLevelList(1);
     $levels = array();
-    foreach($list as $key => $value){
-        if($key > 0 && $value[1] == 2){
+    foreach ($list as $key => $value) {
+        if ($key > 0 && $value[1] == 2) {
             $levels[] = $key;
         }
     }
@@ -3804,17 +3673,17 @@ function getDailyQuiz()
         order by rand() limit 1";
 
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     list($wordId) = mysql_fetch_row($result);
-    if($wordId > 0) {
+    if ($wordId > 0) {
         $query = "insert into daily_quiz (word_id, datum) values ($wordId, '$datum')";
         $result = mysql_query($query);
-        if(!$result){
+        if (!$result) {
             print mysql_error();
-            exit("Nem sikerült: " . $query);
+            exit("Nem sikerï¿½lt: " . $query);
         }
         return getDailyQuiz();
     }
@@ -3822,10 +3691,10 @@ function getDailyQuiz()
 
 function changePassword($userId, $settingArray)
 {
-    if(!$userId){
+    if (!$userId) {
         return false;
     }
-    if($settingArray['newPassword'] != $settingArray['confirmNewPassword']){
+    if ($settingArray['newPassword'] != $settingArray['confirmNewPassword']) {
         print "<script>alert('" . translate('passwordMismatch') . "');</script>";
         return false;
     }
@@ -3834,15 +3703,15 @@ function changePassword($userId, $settingArray)
     $query = "select count(*) as NR from lmjelentkezok where jelszo = '$jelszo' and id = " . (int)$userId;
 
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $number = 0;
-    while($row = mysql_fetch_assoc($result)) {
+    while ($row = mysql_fetch_assoc($result)) {
         $number = $row['NR'];
     }
-    if($number < 1){
+    if ($number < 1) {
         print "<script>alert('" . translate('origPwBad') . "');</script>";
         return false;
     }
@@ -3850,7 +3719,7 @@ function changePassword($userId, $settingArray)
     $query = "update lmjelentkezok set jelszo = '$ujJelszo' where id = " . (int)$userId;
 
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
         return false;
     }

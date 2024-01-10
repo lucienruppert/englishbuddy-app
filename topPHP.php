@@ -2,8 +2,8 @@
 
     error_reporting(0);
     $defaultNyelv = 0;
-    $notLoggedInMessage = "Nem vagy belépve!";
-    $premiumUserOnlyMessage = "Csak prémium felhasználók számára elérhetõ!";
+    $notLoggedInMessage = "Nem vagy belï¿½pve!";
+    $premiumUserOnlyMessage = "Csak prï¿½mium felhasznï¿½lï¿½k szï¿½mï¿½ra elï¿½rhetï¿½!";
 
     if(!$_SESSION['userObject']){
         session_start();
@@ -33,11 +33,11 @@
                 $GLOBALS['userObject']['forras_nyelv'] = $_SESSION['userObject']['forras_nyelv'];
             }
             else{
-                print "<script>alert('Elõfizetésed lejárt, kérlek lépj kapcsolatba a program üzemeltetõjével!');</script>";
+                print "<script>alert('Elï¿½fizetï¿½sed lejï¿½rt, kï¿½rlek lï¿½pj kapcsolatba a program ï¿½zemeltetï¿½jï¿½vel!');</script>";
             }
         }
         else{
-            print "<script>alert('A megadott felhasznó nem létezik!');</script>";
+            print "<script>alert('A megadott felhasznÃ¡lÃ³ nem lÃ©tezik!');</script>";
         }
     }
 
