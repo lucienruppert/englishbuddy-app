@@ -1,11 +1,12 @@
 <style>
-
+/* 
     * {
         border: 1px solid green;
-    }
+    } */
 
     body {
-        background: green;
+        background: <? print $dark ?>;
+;
     }
 
     input[type=checkbox] {

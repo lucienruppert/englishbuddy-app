@@ -14,10 +14,13 @@ $GLOBALS['mondatPackageSize'] = 10;
 $GLOBALS['mondatPackageRecordMpLimit'] = 100;
 $GLOBALS['mondatPackageRecordBg'] = 'grey';
 
-$tdValue = "background-color:#031525;";
-$colorValue = "#031525";
+$tdValue = "background-color:#293d55;";
+$colorValue = "#293d55";
 $GLOBALS['TDBgGlobalColor'] = $tdValue;
 $GLOBALS['globalcolor'] = $colorValue;
+
+$dark = "#031525";
+$medium = "#293d55";
 
 include("functions_translation.php");
 
