@@ -80,11 +80,11 @@ if($_REQUEST['store'] == 1){
 
     if(!checkWord(0, $hunWord, $_SESSION['userObject']['nyelv'], $forWord)){
         if(!storeWord(0, $hunWord, $_SESSION['userObject']['nyelv'], $forWord, '', '', 0, $userId, 0)){
-            print "<script>alert('Rögzítés nem sikerült!')</script>";
+            print "<script>alert('Rï¿½gzï¿½tï¿½s nem sikerï¿½lt!')</script>";
         }
     }
     else{
-        print "<script>alert('Ez a szó már megtalálható a tudástárban, onnan kimentheted a szótáradba!')</script>";
+        print "<script>alert('Ez a szï¿½ mï¿½r megtalï¿½lhatï¿½ a tudï¿½stï¿½rban, onnan kimentheted a szï¿½tï¿½radba!')</script>";
     }
     if($_SESSION['wordLearning_direction'] == 1){
         //$words = $_SESSION['wordLearning_words_simple'];
@@ -218,7 +218,7 @@ else if($clickSource == 'intelligent' && $filterChanged){
     $_SESSION['cbMultiPractice'] = null;
 }
 else if($_REQUEST['actionType'] == 'multiPractice' || ($_REQUEST['isOtherPackage'] && $_SESSION['cbMultiPractice'])){
-    // ennyi szót veszünk elõ minden kategóriából
+    // ennyi szï¿½t veszï¿½nk elï¿½ minden kategï¿½riï¿½bï¿½l
     $COUNT = 6;
 
     if(!$_REQUEST['isOtherPackage'])
@@ -402,8 +402,8 @@ print "<div name='quickLearning' id='quickLearning' style=". $quickLearningPosit
 print "<table border='0' width='800' cellspacing=0 cellpadding=0>";
 /*
 print "<tr><td width='250'></td><td align='right' height='30' style='background-color:white;'>";
-if($showNumber != 'Kész, ügyes vagy!'){
-//    print "\n<a href='#' style='color:black;' onclick=\"event.stopPropagation();\" onmouseover=\"document.getElementById('levelRuleDiv').style.visibility = 'visible';\" onmouseout=\"document.getElementById('levelRuleDiv').style.visibility = 'hidden';\">Szabályok</a>";
+if($showNumber != 'Kï¿½sz, ï¿½gyes vagy!'){
+//    print "\n<a href='#' style='color:black;' onclick=\"event.stopPropagation();\" onmouseover=\"document.getElementById('levelRuleDiv').style.visibility = 'visible';\" onmouseout=\"document.getElementById('levelRuleDiv').style.visibility = 'hidden';\">Szabï¿½lyok</a>";
     print "&nbsp;";
 }
 else{
@@ -426,7 +426,7 @@ else
 print "<tr>";
 
 print "<td width='50' align='left' valign='middle' style='background-color:grey;'>
-            <span id=\"prevLevelSpan\" style='background-color:grey;$ArrowFontSize;font-weight:bold;color:white;cursor:pointer;${style}' onclick=\"
+            <span id=\"prevLevelSpan\" style='background-color:grey;$ArrowFontSize;font-weight:bold;color:white;cursor:pointer;$style' onclick=\"
                 event.stopPropagation();
                 location.href='main.php?content=changeLevelPage&direction=prev&selectedLevel=' + selectedLevel + '&source=' + source + '&clickSource=" . $_REQUEST['clickSource'] . "';
             \">&nbsp;&laquo;</span>
@@ -437,7 +437,7 @@ if($clickSource == "intelligent"){
 }
 else{
     if(in_array($_SESSION['selectedLevel2'], array('list1', 'list2'))){
-        print "Összes";
+        print "ï¿½sszes";
     }
     if(startsWith($_SESSION['selectedLevel2'], 'listFract_')){
         $i = (int)substr($_SESSION['selectedLevel2'], 10);
@@ -448,9 +448,9 @@ else{
             $mult = $GLOBALS['mondatPackageSize'];
         }
         $text = (($i - 1) * $mult + 1) . " - " . ($i * $mult);
-        // ez azt írja ki, hogy 1860-1870
+        // ez azt Ã­rja ki, hogy 1860-1870
         //print $text;
-        // ez azt írja ki, hogy 187, mint kint a csomag száma
+        // ez azt Ã­rja ki, hogy 187, mint kint a csomag szÃ¡ma
         print $i . ". " .  translate("csomag");
     }
     else if($_SESSION['cbMultiPractice']){}
@@ -460,7 +460,7 @@ else{
 }
 print "</td>";
 print "<td width='50' align='right' valign='middle' style='background-color:grey;'>
-            <span id=\"nextLevelSpan\" style='background-color:grey;$ArrowFontSize;font-weight:bold;color:white;cursor:pointer;${style}' onclick=\"
+            <span id=\"nextLevelSpan\" style='background-color:grey;$ArrowFontSize;font-weight:bold;color:white;cursor:pointer;$style' onclick=\"
                 event.stopPropagation();
                 location.href='main.php?content=changeLevelPage&direction=next&selectedLevel=' + selectedLevel + '&source=' + source + '&clickSource=" . $_REQUEST['clickSource'] . "';
             \">&raquo;&nbsp;</span>
@@ -471,7 +471,7 @@ print "<tr><td align='center' height='20'><p>";
 if($_REQUEST['selectedLevel'] > 0 || in_array($_REQUEST['selectedLevel'], array('list1', 'list2')) || $_REQUEST['againPractise']){
     print "<a href='#' onclick=\"
          document.onclick=null;
-         location.href='main.php?content=wordLearning_quick&directionChange=1';\"><b>Fordítva kérdezzen!</a>";
+         location.href='main.php?content=wordLearning_quick&directionChange=1';\"><b>Fordï¿½tva kï¿½rdezzen!</a>";
 }
 print "</td></tr>";
 */
@@ -712,7 +712,7 @@ if($showNumber != $KESZ_UGYES_VAGY && $userObject['status'] != 2) {
 print "</td><td></td></tr>";
 
 print "<tr><td colspan='5' valign='bottom' align='center' height='50' style='font-size:14pt;color:#A05A36;'><b>
-Hangosan mondd ki mindkét mondatot, a képernyõrõl el nézve!</td></tr>";
+Hangosan mondd ki mindkï¿½t mondatot, a kï¿½pernyï¿½rï¿½l el nï¿½zve!</td></tr>";
 */
 print "</table>";
 
@@ -732,7 +732,7 @@ if(!isNextArrow($selectedLevel, $userObject, ($_REQUEST['clickSource'] == "sente
 print "</script>";
 
 
-// a kikommentezés azért kellett, mert az utolsó csomagban lehet, hogy soha nincs annyi szó, amennyi a $GLOBALS...-ban van, ezért annak soha nem mértük az idejét
+// a kikommentezÃ©s azÃ©rt kellett, mert az utolsÃ³ csomagban lehet, hogy soha nincs annyi szï¿½, amennyi a $GLOBALS...-ban van, ezï¿½rt annak soha nem mÃ©rtÃ©k az idejÃ©t
 if($_REQUEST['packageStart'] && ((($source == 'szo' || $source == 'alapSzo') /*&& $showNumber == $GLOBALS['szoPackageSize']*/) || ($source == 'mondat' /*&& $showNumber == $GLOBALS['mondatPackageSize']*/))){
     //print "<script>alert('learningStartTime');</script>";
     $_SESSION['learningStartTime'] = time();

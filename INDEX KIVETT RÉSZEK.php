@@ -657,5 +657,5 @@ if(!$isAndroid){ ?>
 
 </table>
 
-<?php   } else{   ?>
+<?php   } else{  } ?>
 

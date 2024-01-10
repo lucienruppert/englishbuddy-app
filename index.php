@@ -6,9 +6,8 @@
 <HEAD>
     <META HTTP-EQUIV='CHARSET' CONTENT='text/html; charset=ISO-8859-2'>
     <link rel="shortcut icon" type="image/x-icon" href="/images/white.ico">
-    <TITLE>INGLish</TITLE>
+    <TITLE>Kikérdező</TITLE>
     <link href="js/jquery-ui.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="index.css">
     <link rel=stylesheet type='text/css' href='baseStyle.css'>
     <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
@@ -43,7 +42,7 @@ include_once('knowledgeBaseDiv.php');
 include_once('sentencePracticeDiv2.php');
 ?>
 
-<!-- Ez itt kell, hogy a tanulószoba működjön! -->
+<!-- Ez itt kell, hogy a tanulďż˝szoba mďż˝kďż˝djďż˝n! -->
 <form name='submitForm' id='submitForm' action='main.php' method='post'>
     <input type='hidden' name='firstVisit' value='1'>
     <input type='hidden' name='content' value=''>
