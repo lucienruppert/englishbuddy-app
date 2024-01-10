@@ -4,6 +4,10 @@
         border: 1px solid green;
     } */
 
+    #ajaxTable {
+        background: <? print $dark ?>;
+    }
+
     body {
         background: <? print $dark ?>;
 ;

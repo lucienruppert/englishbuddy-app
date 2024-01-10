@@ -2487,7 +2487,7 @@ function ajaxSearchPrint($lang)
     </script>
     <table id="ajaxTable" border='0' align='center' cellpadding='3' cellspacing=0 onclick="event.stopPropagation();" style="width:800px">
         <tr>
-            <td id='ajaxTableFirstTd' align='right' valign='top'><a id="ajax" title=<?php print "'" . translate("info_ajax") . "'" ?> href='#' style='color:white;font-size:12pt;'>?</td>
+            <td id='ajaxTableFirstTd' align='right' valign='top'><a id="ajax" title=<?php print "'" . translate("info_ajax") . "'" ?> href='#' style='color:white;font-size:12pt;'></td>
             <td style='<? print $GLOBALS['TDBgGlobalColor']; ?>;width:150px;' align='left'>
                 <div class='ajaxSearchTxtContainer' style='background:<? print $GLOBALS['globalcolor']; ?>'>
                     <span class="fa fa-search"></span>
