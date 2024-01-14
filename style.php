@@ -154,7 +154,6 @@
 
     .meaningA {
         font-size: 15px;
-        font-family: arial;
     }
 
     .meaningLevel2Cell {
@@ -164,7 +163,6 @@
     .meaningLevel2A {
         font-weight: normal;
         font-size: 15px;
-        font-family: arial;
     }
 
     .ajaxLangChoose {
@@ -213,86 +211,77 @@
         text-align: center;
         background-color: <?php print $highlight ?>;
         border-radius: 5px;
-        padding: 10px 0;
+        padding: 12px 0;
         cursor: pointer;
+        letter-spacing: 2px;
+    }
+
+    .login-button {
+        font-size: 20px;
     }
 
     table {
-        font-family: arial;
         font-size: 12;
         color: grey;
         text-align: left
     }
 
     span {
-        font-family: arial;
         font-size: 12;
         color: grey;
         text-align: left
     }
 
     A {
-        font-family: Tahoma;
-        font-size: 12
+        text-decoration: none;
     }
 
     A:link {
         text-decoration: none;
-        color: grey;
+        color: white;
     }
 
     A:active {
         text-decoration: none;
-        color: grey;
+        color: white;
     }
 
     A:visited {
         text-decoration: none;
-        color: grey;
+        color: white;
     }
 
     A:hover {
-        text-decoration: underline;
-        color: grey;
+        text-decoration: none;
+        color: white;
     }
 
     A.selected {
-        font-family: Tahoma;
-        font-size: 12;
-        color: grey;
+        text-decoration: none;
+        color: white;
     }
 
     A.selected:link {
         text-decoration: none;
-        color: grey;
+        color: white;
     }
 
     A.selected:active {
         text-decoration: none;
-        color: grey;
+        color: white;
     }
 
     A.selected:visited {
         text-decoration: none;
-        color: grey;
+        color: white;
     }
 
     A.selected:hover {
-        text-decoration: underline;
-        color: grey;
-    }
-
-    body {
-        font-family: Tahoma;
-        background-color: #ffffff;
-        scrollbar-track-color: white;
-        scrollbar-face-color: silver;
-        scrollbar-highlight-color: black;
-        scrollbar-shadow-color: gray
+        text-decoration: none;
+        color: white;
     }
 
     div#igeragozasDiv table {
-        font-family: Tahoma;
         font-size: 16;
         color: grey;
         text-align: left

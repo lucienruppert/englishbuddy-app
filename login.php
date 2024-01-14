@@ -8,7 +8,7 @@
           <td class="button">
             <input type='hidden' name='actionType' value='login'>
             <input style='display:none' type='submit'>
-            <a href='#' onclick="if(!$('.loginInput').is(':visible')){ $('.loginInput').show(); } else{ $('#formLogin').submit(); }"><?php print translate('enter'); ?></a>
+            <a href='#' class="login-button" onclick="if(!$('.loginInput').is(':visible')){ $('.loginInput').show(); } else{ $('#formLogin').submit(); }"><?php print translate('enter'); ?></a>
           </td>
         </tr>
         <tr>
