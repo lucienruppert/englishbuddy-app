@@ -6,18 +6,9 @@
     }
 ?>
 <style>
-    <?php if($isAndroid){ ?>
-    .meaningTableClass{
-        color:white;font-size:20px;font-weight:bold;background:<?php print "" . $globalcolor . ""; ?>;width:80%
-    }
-    .meaningTableClass a.meaningA {
-        font-size: 20px !important;
-    }
-    <?php } else { ?>
     .meaningTableClass{
         color:white;font-size:14px;font-weight:bold;background:<?php print "" . $globalcolor . ""; ?>;width:100%
     }
-    <?php } ?>
     .meaningTableClass td{
         vertical-align:top;
     }

@@ -5,40 +5,28 @@
 			<?php if($userObject) { ?>
                 <table border='0' align='center' valign='top' cellspacing='0'>
                     <tr>
-                        <td align='right' width='152' style=<?php print "'border-radius: 10px 10px 0px 0px;padding-right:10px;background:" . $globalcolor . ";'"; ?>><a id="SajatSzotar" title=<?php print "'" . translate("info_sajatszotar") . "'" ?> href='#' style='color:white;font-size:12pt;'>?</a></td>
-                        <td width='6' style='background-color:white;'></td>
-                        <td align='right' width='152' style=<?php print "'border-radius: 10px 10px 0px 0px;padding-right:10px;background:" . $globalcolor . ";'"; ?>><a id="AlapSzokincs" title=<?php print "'" . translate("info_alapszokincs") . "'" ?> href='#' style='color:white;font-size:12pt;'>?</a></td>
-                        <td width='6' style='background-color:white;'></td>
-                        <td align='right' width='152' style=<?php print "'border-radius: 10px 10px 0px 0px;padding-right:10px;background:" . $globalcolor . ";'"; ?>><a id="NyelvtaniPeldatar" title=<?php print "'" . translate("info_nyelvtanipeldatar") . "'" ?> href='#' style='color:white;font-size:12pt;'>?</b></a></td>
-                        <td width='6' style='background-color:white;'></td>
-                        <td align='right' width='152' style=<?php print "'border-radius: 10px 10px 0px 0px;padding-right:10px;background:" . $globalcolor . ";'"; ?>><a id="IntelligensGyakorlo" title=<?php print "'" . translate("info_intelligensgyakorlo") . "'" ?> href='#' style='color:white;font-size:12pt;'>?</a></td>
-                    </tr>
-
-                    <tr>
-                        <td valign='top' align='center' style=<?php print "'border-radius: 0px 0px 10px 10px;padding-bottom:20px;background:" . $globalcolor . ";'"; ?>><a href='#' style='color:white;font-size:15pt;' onclick="sajatSzavak();"><? print translate("increasevocabulary"); ?></a></td>
-                        <td style='background-color:white;'></td>
-                        <td valign='top' align='center' style=<?php print "'border-radius: 0px 0px 10px 10px;padding-bottom:20px;background:" . $globalcolor . ";'"; ?>><a href='#' style='color:white;font-size:15pt;' onclick="alapszokincs();"><? print translate("basicvocabulary"); ?></a></td>
-                        <td style='background-color:white;'></td>
-                        <td valign='top' align='center' style=<?php print "'border-radius: 0px 0px 10px 10px;padding-bottom:20px;background:" . $globalcolor . ";'"; ?>><a href='#' style='color:white;font-size:15pt;' onclick="peldamondatok();"><? print translate("tudastar"); ?></a></td>
-                        <td style='background-color:white;'></td>
-                        <td valign='top' align='center' style=<?php print "'border-radius: 0px 0px 10px 10px;padding-bottom:20px;background:" . $globalcolor . ";'"; ?>><a href='#' style='color:white;font-size:15pt;' onclick="intelligensGyakorlo()" ><? print translate("intelligensgyakorlo"); ?></a></td>
+                        <td valign='top'  width='152' align='center' style=<?php print "'border-radius: 10px;padding: 20px 10px 20px 0;background:" . $globalcolor . ";'"; ?>><a href='#' style='color:white;font-size:15pt;' onclick="sajatSzavak();"><? print translate("increasevocabulary"); ?></a></td>
+                        <td width='6'></td>
+                        <td valign='top'  width='161' align='center' style=<?php print "'border-radius: 10px;padding: 20px 10px 20px 0;background:" . $globalcolor . ";'"; ?>><a href='#' style='color:white;font-size:15pt;' onclick="alapszokincs();"><? print translate("basicvocabulary"); ?></a></td>
+                        <td width='6'></td>
+                        <td valign='top'  width='161' align='center' style=<?php print "'border-radius: 10px;padding: 20px 10px 20px 0;background:" . $globalcolor . ";'"; ?>><a href='#' style='color:white;font-size:15pt;' onclick="peldamondatok();"><? print translate("tudastar"); ?></a></td>
+                        <td width='6'></td>
+                        <td valign='top'  width='161' align='center' style=<?php print "'border-radius: 10px;padding: 20px 10px 20px 0;background:" . $globalcolor . ";'"; ?>><a href='#' style='color:white;font-size:15pt;' onclick="intelligensGyakorlo()" ><? print translate("intelligensgyakorlo"); ?></a></td>
                     </tr>
                 </table>
                 <?php } ?>    
                 <?php if($userObject && !in_array($userObject["status"], array(1, 2))){ ?>
-                    <?php if(!$isAndroid) {  ?>
                     <table border='0' align='left' valign='top' cellspacing='0' style='padding-top:10px'>
                         <tr>
-                            <td height='40' width='161' align='center' style=<?php print "'border: 2px solid " . $globalcolor . ";'"; ?>><a href='#' style=<?php print "'color:" . $globalcolor . ";font-size:10pt;'"; ?> onclick=<?php print $onclick1; ?> ><b><? print translate("sajat_mondatok_10"); ?></a></td>
-                            <td width='3' style='background:white;'></td>
-                            <td width='161' align='center' style=<?php print "'border: 2px solid " . $globalcolor . ";'"; ?>><a href='#' style=<?php print "'color:" . $globalcolor . ";font-size:10pt;'"; ?> onclick=<?php print $onclick4; ?> ><b><? print translate("sajat_mondat_szo"); ?></a></td>
-                            <td width='3' style='background:white;'></td>
-                            <td width='161' align='center' style=<?php print "'border: 2px solid " . $globalcolor . ";'"; ?>><a id="aTanuloszoba" href='#' style=<?php print "'color:" . $globalcolor . ";font-size:10pt;'"; ?> title=<?php print "'" . translate("") . "'" ?> onclick=<?php print $onclick3; ?> ><b><? print translate("tanuloszoba"); ?></a></td>
-                            <td width='3' style='background:white;'></td>
-                            <td width='161' align='center' style=<?php print "'border: 2px solid " . $globalcolor . ";'"; ?>><a style=<?php print "'color:" . $globalcolor . ";font-size:10pt;'"; ?> onclick="audioSzoba();" href="#"><b><? print translate("audioszoba"); ?></a></td>
+                            <td height='40' width='161' align='center' style=<?php print "'border: 2px solid " . $globalcolor . ";'"; ?>><a href='#' style='font-size:10pt;color:<?php print $highlight ?>;' onclick=<?php print $onclick1; ?> ><b><? print translate("sajat_mondatok_10"); ?></a></td>
+                            <td width='6'></td>
+                            <td width='161' align='center' style=<?php print "'border: 2px solid " . $globalcolor . ";'"; ?>><a href='#' style='font-size:10pt;color:<?php print $highlight ?>;' onclick=<?php print $onclick4; ?> ><b><? print translate("sajat_mondat_szo"); ?></a></td>
+                            <td width='6'></td>
+                            <td width='161' align='center' style=<?php print "'border: 2px solid " . $globalcolor . ";'"; ?>><a id="aTanuloszoba" href='#' style='font-size:10pt;color:<?php print $highlight ?>' title=<?php print "'" . translate("") . "'" ?> onclick=<?php print $onclick3; ?> ><b><? print translate("tanuloszoba"); ?></a></td>
+                            <td width='6'></td>
+                            <td width='161' align='center' style=<?php print "'border: 2px solid " . $globalcolor . ";'"; ?>><a style='font-size:10pt;color:<?php print $highlight ?>' onclick="audioSzoba();" href="#"><b><? print translate("audioszoba"); ?></a></td>
                     </tr>
                     </table>
-                    <?php } ?>
                 <?php } ?>
             </td>
         </tr>
@@ -53,7 +41,7 @@
                     </tr>
                     <tr>
                         <td colspan='3' valign='center' align='center' style=<?php print "'padding-bottom:10px;font-size:14pt;color:white;border-bottom: 1px solid " . $globalcolor . ";background:" . $globalcolor . ";'"; ?>>
-                        <? print translate("Legújabb szavak"); ?>
+                        <? print translate("legujabb_szavak"); ?>
                         </td>
                     </tr>
                     <tr>
@@ -95,7 +83,7 @@
         <tr>
             <td valign='top' align='center' style='padding-top:10'>
                 <table border='0' align='center' valign='center' style=<?php print "'border: 1px solid " . $globalcolor . ";'"; ?> cellpadding='0' cellspacing='0'>
-                <tr><td colspan='3' align='right' style=<?php print "'padding-top:5px;padding-right:10px;background:" . $globalcolor . ";'"; ?>><a id="SzorgalomMutato" title=<?php print "'" . translate("info_szorgalommutato") . "'" ?> href='#' style='color:white;font-size:12pt;'>?</a></td></tr>
+                <tr><td colspan='3' align='right' style=<?php print "'padding-top:5px;padding-right:10px;background:" . $globalcolor . ";'"; ?>><a id="SzorgalomMutato" title=<?php print "'" . translate("info_szorgalommutato") . "'" ?> href='#' style='color:white;font-size:12pt;'></a></td></tr>
                 <tr><td colspan='3' valign='center' align='center' style=<?php print "'padding-bottom:10px;font-size:20pt;color:white;border-bottom: 1px solid " . $globalcolor . ";background:" . $globalcolor . ";'"; ?>>
                 <? print translate("myperformance"); ?></td>
                 </tr>

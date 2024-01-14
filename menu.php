@@ -95,6 +95,7 @@ img{
 #financeDiv{
             position:absolute;top:35px;left:50%;margin-left:-405px;display:none;background-color:white;
             -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0, 0, 0); 
             filter:alpha(opacity=100); /* IE's opacity*/opacity:1;z-index:100;padding:5px;border:1px solid grey;
             }
 #igeragozasDiv{
@@ -136,7 +137,7 @@ img{
     display:none;    
 }
 </style>
-<link rel="stylesheet" type='text/css' href='baseStyle.css'>
+<link rel="stylesheet" type='text/css' href='style.css'>
 <link rel="stylesheet" type="text/css" href="css/superfish.css" />
 <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="js/hoverIntent.js"></script>
@@ -153,7 +154,7 @@ img{
 
 <?php
     if($userObject['id'] == 1){
-      $wordManagementText = "Szótár";
+      $wordManagementText = "Szï¿½tï¿½r";
     }
     else{
       $wordManagementText = "Bevitel";
@@ -212,12 +213,12 @@ img{
 <?php include("ajaxSearch.php"); ?>
 
 <?php if($userObject['nyelv'] == 2 || $userObject['forras_nyelv'] == 2){ ?>
-    <div id='ragozas'><a href='#' onclick="window.open('http://www.wordreference.com/conj/ESverbs.aspx?v=' + ragozasWord,'Ragozás','fullscreen=yes,toolbar=no,status=no,menubar=no,resizable=yes,location=no,scrollbars=yes')"><font color='white'><?php print translate('ragozas'); ?></a></div>
+    <div id='ragozas'><a href='#' onclick="window.open('http://www.wordreference.com/conj/ESverbs.aspx?v=' + ragozasWord,'Ragozï¿½s','fullscreen=yes,toolbar=no,status=no,menubar=no,resizable=yes,location=no,scrollbars=yes')"><font color='white'><?php print translate('ragozas'); ?></a></div>
     <div id='spec_chars_ajax'><a href='#' onclick="document.getElementById('ajaxSearchInput').value += '&#241;';"><font color='white'>&ntilde;</a></div>
 <?php
     }
 
-    // itt rakjuk ki a felsõ sor linkjeit a hozzájuk tartozó div-ekkel együtt
+    // itt rakjuk ki a felsï¿½ sor linkjeit a hozzï¿½juk tartozï¿½ div-ekkel egyï¿½tt
 
     $upperRowObject = getUpperRowObject();
     print "<div id='upperRowDiv'><table border='0' cellpadding='8' style='border: 0px solid #f2f2f2;background-color:#f2f2f2;' onclick='event.stopPropagation();'><tr>";
@@ -448,7 +449,7 @@ img{
             <div id='igeragozasDiv' style='display:none;' onclick=\"event.stopPropagation();this.style.display = 'none';\">{include_file}</div>
             </td>";
 
-        // az elsõ index a célnyelv, a második a forrásnyelv
+        // az elsï¿½ index a cï¿½lnyelv, a mï¿½sodik a forrï¿½snyelv
         $obj['igeragozas']['langs'][2][0] = 'verbos.html';
         $obj['igeragozas']['langs'][2][1] = 'verbos_eng.php';
 

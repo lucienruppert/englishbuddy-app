@@ -1,6 +1,7 @@
 <?php
 
 include_once('functions.php');
+include_once('functions_levels.php');
 
 if(!$userObject || !in_array($userObject['status'], array(4, 5, 6))){
     include_once('index.php');
@@ -45,7 +46,7 @@ if($_POST['actionType'] == "saveForm"){
 		
 		
 		if($_POST['forras_nyelv'] == 0) {
-			$subject = "Üdvözöl a lingocasa!";
+			$subject = "ï¿½dvï¿½zï¿½l a lingocasa!";
 			$body = subscribeBody($nev, htmlspecialchars($_POST['email']), htmlspecialchars($_POST['username']), $langTitles[$_POST['nyelv']], (int)$_POST['subscribe_length']);
 			
 		}
@@ -80,7 +81,7 @@ if($_POST['actionType'] == "saveForm"){
 }
 else if($_POST['actionType'] == "deleteForm"){
     if(!deleteUser($_POST['userId'])){
-        print "<script>alert('Felhasználó törlése nem sikerült');</script>";
+        print "<script>alert('Felhasznï¿½lï¿½ tï¿½rlï¿½se nem sikerï¿½lt');</script>";
     }
     else{
         $_POST['userId'] = null;
@@ -131,7 +132,7 @@ else{
 $tanarok = getUsersByStatusArray(array(4, 5));
 
 $levelList = getLevelList($selectedUser['nyelv']);
-$statusList = array(1 => 'Free trial', 2 => 'Course student', 3 => 'Skype student', 4 => 'Tanár', 5 => 'Curriculum író', 6 => 'Admin');
+$statusList = array(1 => 'Free trial', 2 => 'Course student', 3 => 'Skype student', 4 => 'Tanï¿½r', 5 => 'Curriculum ï¿½rï¿½', 6 => 'Admin');
 
 $userWordCounts = getAllUserOwnWordCount();
 
@@ -165,16 +166,16 @@ print "<input type='hidden' name='next_lesson' value=''>";
 print "<table style='border: 1px solid' align='center' width='700'><tr><td colspan=3>";
 print "<table border='1' style='border: 1px solid'>";
 print "<tr>
-        <th>&nbsp;Vezetéknév</th>
-        <th>&nbsp;Keresztnév</th>
-        <th>&nbsp;Forrás nyelv</th>
+        <th>&nbsp;Vezetï¿½knï¿½v</th>
+        <th>&nbsp;Keresztnï¿½v</th>
+        <th>&nbsp;Forrï¿½s nyelv</th>
         <th>&nbsp;Nyelv</th>
         <th>&nbsp;Start/Limit</th>
         <th>&nbsp;Email</th>
-        <th>&nbsp;Jelszó</th>
-        <th>&nbsp;Státusz</th>";
+        <th>&nbsp;Jelszï¿½</th>
+        <th>&nbsp;Stï¿½tusz</th>";
 if($userObject['status'] == 6){
-    print "<th>&nbsp;Tanár</th>";
+    print "<th>&nbsp;Tanï¿½r</th>";
 }
 print "<th><input type='button' value='Ment' onclick=\"
     this.form.actionType.value='saveForm';
@@ -190,7 +191,7 @@ print "<th><input type='button' value='Ment' onclick=\"
     this.form.submit();\"></th>";
 
 if($userObject['status'] == 6){
-    print "<th><input type='button' value='Új' onclick=\"this.form.actionType.value='newRecord';this.form.submit();\"></th>";
+    print "<th><input type='button' value='ï¿½j' onclick=\"this.form.actionType.value='newRecord';this.form.submit();\"></th>";
 }
 print "</tr>";
 
@@ -261,8 +262,8 @@ if($userObject['status'] == 6){
     print "<td>$tanarText</td>";
 }
 if($userObject['status'] == 6){
-    print "<td><input type='button' name='deleteBtn' value='Töröl' onclick=\"
-        if(confirm('Biztos szeretnéd törölni a felhasználót?')){
+    print "<td><input type='button' name='deleteBtn' value='Tï¿½rï¿½l' onclick=\"
+        if(confirm('Biztos szeretnï¿½d tï¿½rï¿½lni a felhasznï¿½lï¿½t?')){
             this.form.actionType.value='deleteForm';
             this.form.submit();
         }
@@ -328,7 +329,7 @@ foreach($jelentkezok_ordered as $jelentkezo){
         $ideje = (int)$napja . " napja " . (int)$oraja . " oraja " . (int)$perce . " perce";
     }
     else{
-        $ideje = "Még soha.";
+        $ideje = "Mï¿½g soha.";
     }
 
 //    $timeFromLastLogin =
@@ -390,7 +391,7 @@ print "</td></tr>";
 
 print "<tr><td colspan='2'>";
 print "<input type='text' name='txtNextLesson' size='25' style='font-size:14px;font-weight:300;background-color:WHITE;color:BLACK' id='txtNextLesson' value='{$selectedUser['next_lesson']}'>";
-print "<input type='button' name='payments' id='payments' value='Befizetések' onclick=\"
+print "<input type='button' name='payments' id='payments' value='Befizetï¿½sek' onclick=\"
         document.forms['userSelectFormForFinance'].selectedStudent.value = " . (int)$selectedUser['id'] . ";
         if(document.forms['wordManagement']){
             document.forms['userSelectFormForFinance'].dictionaryUser.value = document.forms['wordManagement'].dictionaryUser.value;

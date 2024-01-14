@@ -2,7 +2,7 @@
 include_once('functions.php');
 ?>
 
-<link rel=stylesheet type='text/css' href='baseStyle.css'>
+<link rel=stylesheet type='text/css' href='style.css'>
 <table cellpadding=8 border='1' cellspacing='0' align='center'>
 <tr>
 <td width='100' valign='middle' align='center' style='font-size:22;color:<?php print($globalcolor)?>;'><b>PRESENT</td>

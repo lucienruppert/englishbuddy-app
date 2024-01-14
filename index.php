@@ -6,9 +6,8 @@
 <HEAD>
     <META HTTP-EQUIV='CHARSET' CONTENT='text/html; charset=ISO-8859-2'>
     <link rel="shortcut icon" type="image/x-icon" href="/images/white.ico">
-    <TITLE>KIKÉRDEZŐ</TITLE>
+    <TITLE>KIKERDEZO</TITLE>
     <link href="js/jquery-ui.min.css" rel="stylesheet" type="text/css">
-    <link rel=stylesheet type='text/css' href='baseStyle.css'>
     <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <?php
@@ -20,10 +19,10 @@
 <BODY style='margin:0px;'>
 
 <?php
-    include_once('upperDiv.php');
+    include_once('header.php');
     include_once('ifElse.php');
     include_once('welcomeTextDiv.php');
-    include_once('ajaxDiv.php');
+    // include_once('ajaxDiv.php');
     include_once('mainDiv.php');
 ?>
 
