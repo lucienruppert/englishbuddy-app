@@ -124,7 +124,7 @@ $trans['subs_Kérjük, töltse ki adatait!'] = "Itt az ingyenes funkciók használatá
 $trans['subs_Vezetéknév'] = "Vezetéknév";
 $trans['subs_Keresztnév'] = "Keresztnév";
 $trans['subs_E-mail'] = "E-mail";
-$trans['subs_Jelszó'] = "Jelszó";
+$trans['subs_Jelszo'] = "Jelszó";
 $trans['subs_Tanulandó nyelv'] = "Tanulandó nyelv";
 $trans['subs_Elõfizetési idõ'] = "Elõfizetési idõ";
 $trans['subs_hónap'] = "hónap";
@@ -241,5 +241,7 @@ $trans["Angol brit"] = "Angol brit";
 $trans["Angol halado"] = "Angol haladó";
 $trans["Angol BP"] = "Angol BP";
 $trans["Angol ECL"] = "Angol ECL";
+$trans["legujabb_szavak"] = "Legújabb szavak";
 
-?>
+$trans["tandijak"] = "Tandíj";
+$trans["tanulok"] = "Tanulók";

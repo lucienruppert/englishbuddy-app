@@ -588,7 +588,7 @@ if($showNumber != $KESZ_UGYES_VAGY){
     print "</tr>";
 	// ezt kopizd itt
 	print "<tr><td colspan = '4' align='center' width='100%' style='border: 2px solid $globalcolor;padding-right:10px;background:$globalcolor;'><a id='kikerdezo_info' title=";
-	print "'" . translate("kikerdezo_info") . "' href='#' style='color:white;font-size:12pt;'>?</a></td></tr>";
+	print "'" . translate("kikerdezo_info") . "' href='#' style='color:white;font-size:12pt;'></a></td></tr>";
 	// eddig :)
 
     print "</table>";

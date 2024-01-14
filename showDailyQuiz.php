@@ -26,12 +26,12 @@
     else if($_SESSION['language'] == 'hun'){
         $title = $record['word_hun'];
         $imgSrc = "http://www.lingocasa.com/images/quiz_hun_.gif";
-        $description = "Hogy mondod angolul? Klikkelj a megoldáshoz!";
+        $description = "Hogy mondod angolul? Klikkelj a megoldï¿½shoz!";
     }
     else if($_SESSION['language'] == 'esp'){
         $title = $record['word_spanyol'];
         $imgSrc = "http://www.lingocasa.com/images/quiz_esp_.gif";
-        $description = "&#191;Cómo se dice en inglés? Haz clic para la solución";
+        $description = "&#191;Cï¿½mo se dice en inglï¿½s? Haz clic para la soluciï¿½n";
     }
     $url = "www.lingocasa.com";
 
@@ -64,7 +64,6 @@
             height:300px;
         }
     </style>
-    <link rel=stylesheet type='text/css' href='baseStyle.css'>
     <script>
         var lang = <?php print $lang; ?>;
         //location.href = 'http://www.lingocasa.com?langChange=' + lang;

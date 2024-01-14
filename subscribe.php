@@ -48,11 +48,11 @@
         }
         else if(createUser2($user, $message)){
             $to = $_POST['email'];
-			//$subject = "Üdvözöl a lingocasa";
+			//$subject = "ï¿½dvï¿½zï¿½l a lingocasa";
             $langTitles = getLangTitles();
 			$nyelv = $user['forras_nyelv'];
 			if($nyelv == 0) {
-				$subject = "Üdvözöl a lingocasa!";
+				$subject = "ï¿½dvï¿½zï¿½l a lingocasa!";
 				$body = subscribeBody($user['vezeteknev'] . ' ' . $user['keresztnev'], htmlspecialchars($user['email']), htmlspecialchars($user['jelszo']), $langTitles[$user['nyelv']], (int)$user['subscribe_length']);
 
 			}
@@ -91,7 +91,7 @@
 
 <HTML>
 <HEAD>
-<link rel=stylesheet type='text/css' href='baseStyle.css'>
+<link rel=stylesheet type='text/css' href='style.css'>
 <?php
         print "<meta http-equiv=\"content-type\" content=\"text-html; charset=$CHARSET\">";
 
@@ -103,16 +103,16 @@
 <FORM action='subscribe.php' method='POST'>
 <input type='hidden' name='actionType' id='actionType' value='subscribe'>
 <table align='center' border='0' cellspacing='10px'>
-<tr><td align='left' colspan='2' style='padding-top:10%;padding-bottom:30px;font-size:<?php print($SubscribeFontSize);?>;'><font color='white'><?php print translate("subs_Üdvözöljük!") ?></font></td></tr>
-<tr><td align='left' colspan='2' style='padding-bottom:10%;font-size:<?php print($SubscribeFontSize);?>;'><font color='white'><?php print translate("subs_Kérjük, töltse ki adatait!") ?></td></tr>
-<tr><td align='right' valign='center' style='font-size:<?php print($SubscribeFontSize);?>;'><font color='white'><?php print translate("subs_Vezetéknév") ?>* </td><td><input type='text' size='12' name='firstname' style='font-size:<?php print($SubscribeFontSize);?>;' value=<?php print "'{$_POST['firstname']}'"; ?>></td></tr>
-<tr><td align='right' valign='center' style='20px;font-size:<?php print($SubscribeFontSize);?>;'><font color='white'><?php print translate("subs_Keresztnév") ?>* </td><td><input type='text' size='12' name='secondname' style='font-size:<?php print($SubscribeFontSize);?>;' value=<?php print "'{$_POST['secondname']}'"; ?>></td></tr>
+<tr><td align='left' colspan='2' style='padding-top:10%;padding-bottom:30px;font-size:<?php print($SubscribeFontSize);?>;'><font color='white'><?php print translate("subs_ï¿½dvï¿½zï¿½ljï¿½k!") ?></font></td></tr>
+<tr><td align='left' colspan='2' style='padding-bottom:10%;font-size:<?php print($SubscribeFontSize);?>;'><font color='white'><?php print translate("subs_Kï¿½rjï¿½k, tï¿½ltse ki adatait!") ?></td></tr>
+<tr><td align='right' valign='center' style='font-size:<?php print($SubscribeFontSize);?>;'><font color='white'><?php print translate("subs_Vezetï¿½knï¿½v") ?>* </td><td><input type='text' size='12' name='firstname' style='font-size:<?php print($SubscribeFontSize);?>;' value=<?php print "'{$_POST['firstname']}'"; ?>></td></tr>
+<tr><td align='right' valign='center' style='20px;font-size:<?php print($SubscribeFontSize);?>;'><font color='white'><?php print translate("subs_Keresztnï¿½v") ?>* </td><td><input type='text' size='12' name='secondname' style='font-size:<?php print($SubscribeFontSize);?>;' value=<?php print "'{$_POST['secondname']}'"; ?>></td></tr>
 <tr><td align='right' valign='center' style='20px;font-size:<?php print($SubscribeFontSize);?>;'><font color='white'><?php print translate("subs_E-mail") ?>* </td><td><input type='text' size='12' name='email' style='font-size:<?php print($SubscribeFontSize);?>;' value=<?php print "'{$_POST['email']}'"; ?>></td></tr>
-<tr><td align='right' valign='center' style='20px;font-size:<?php print($SubscribeFontSize);?>;'><font color='white'><?php print translate("subs_Jelszó") ?>* </td><td><input type='text' size='12' name='login' style='font-size:<?php print($SubscribeFontSize);?>;' value=<?php print "'{$_POST['login']}'"; ?>></td></tr>
+<tr><td align='right' valign='center' style='20px;font-size:<?php print($SubscribeFontSize);?>;'><font color='white'><?php print translate("subs_Jelszï¿½") ?>* </td><td><input type='text' size='12' name='login' style='font-size:<?php print($SubscribeFontSize);?>;' value=<?php print "'{$_POST['login']}'"; ?>></td></tr>
 
 <?php if($_SESSION['page_nyelv'] == 0){ ?>
 <tr>
-    <td align='right' style='font-size:<?php print($SubscribeFontSize);?>;'><font color='white'><?php print translate("subs_Tanulandó nyelv") ?>* </td>
+    <td align='right' style='font-size:<?php print($SubscribeFontSize);?>;'><font color='white'><?php print translate("subs_Tanulandï¿½ nyelv") ?>* </td>
     <td>
         <select name='nyelv' style='font-size:<?php print($SubscribeFontSize);?>;'>
             <?php
@@ -136,20 +136,20 @@
 <tr><td align='right' style='font-size:<?php print($SubscribeFontSize);?>;'><font color='white'><?php print translate("subs_SendMail") ?>: </td><td><input type='checkbox' style='zoom:<?php print($SubscribeCheckBoxZoom);?>;' name='send_mail' value="1" checked="checked"></td></tr>
 <!--
 <tr>
-    <td align='right'><font size='3' color='white'><?php print translate("subs_Elõfizetési idõ") ?>*: </td><td>
+    <td align='right'><font size='3' color='white'><?php print translate("subs_Elï¿½fizetï¿½si idï¿½") ?>*: </td><td>
         <select name='subscribe_length'>
         <?php
         for($i = 1; $i <= 12; $i++){
             print "<option value='{$i}'>{$i}</option>";
         }
         ?>
-        </select> <?php print translate("subs_hónap") ?>
+        </select> <?php print translate("subs_hï¿½nap") ?>
     </td>
 </tr>
 -->
 <tr><td align='center' colspan='2' style='font-size:<?php print($SubscribeFontSize);?>;'><font color='white'><br><br><?php print translate("subs_text2") ?><br><br></td></tr>
 <tr><td align='center' colspan='2'>
-<input type='button' style='padding-left:80px;padding-right:80px;padding-top:10px;padding-bottom:10px;font-size:<?php print($SubscribeFontSize);?>;' value=<?php print "'" . translate("subs_Elküld") . "'" ?> onclick="
+<input type='button' style='padding-left:80px;padding-right:80px;padding-top:10px;padding-bottom:10px;font-size:<?php print($SubscribeFontSize);?>;' value=<?php print "'" . translate("subs_Elkï¿½ld") . "'" ?> onclick="
     with(document.forms[0]){
         actionType.value = 'subscribe';
         submit();

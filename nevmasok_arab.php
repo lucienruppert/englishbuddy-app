@@ -1,7 +1,6 @@
 <?php
 include_once('functions.php');
 ?>
-<link rel=stylesheet type='text/css' href='baseStyle.css'>
 <table cellpadding=10 border='1' cellspacing='0' align='center' style='background-color:white;color:grey;font-size:14;'>
 <tr>
     <td valign='top' width='80'><font size='4'><B></td>

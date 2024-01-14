@@ -1,227 +1,227 @@
 <?php
 include_once('functions.php');
 ?>
-<body><link rel=stylesheet type='text/css' href='baseStyle.css'>
+<body>
 
 <table border='0' width='100%' cellpadding='20'>
 <tr><td align='center' style=<?php print "'line-height:150%;color:" . $globalcolor . ";font-size:24px'"; ?>>
-<b>Általános szerzõdési feltételek
-<br>Adatvédelmi nyilatkozat</b>
+<b>ï¿½ltalï¿½nos szerzï¿½dï¿½si feltï¿½telek
+<br>Adatvï¿½delmi nyilatkozat</b>
 </td></tr>
 <tr><td style='font-size:18px;padding-left:100px;padding-right:100px;line-height:150%;'>
-A jelen általános szerzõdési feltételek - a továbbiakban: "ÁSZF" - Ruppert Endre egyéni vállalkozó.- a továbbiakban: "Szolgáltató" - által a www.
-lingocasa.com honlapon keresztül nyújtott szolgáltatás - a továbbiakban: "Szolgáltatás" - igénybevételének feltételeit szabályozza.
+A jelen ï¿½ltalï¿½nos szerzï¿½dï¿½si feltï¿½telek - a tovï¿½bbiakban: "ï¿½SZF" - Ruppert Endre egyï¿½ni vï¿½llalkozï¿½.- a tovï¿½bbiakban: "Szolgï¿½ltatï¿½" - ï¿½ltal a www.
+lingocasa.com honlapon keresztï¿½l nyï¿½jtott szolgï¿½ltatï¿½s - a tovï¿½bbiakban: "Szolgï¿½ltatï¿½s" - igï¿½nybevï¿½telï¿½nek feltï¿½teleit szabï¿½lyozza.
 <br><br>
-<b>1. A Szolgáltatás nyújtója:</b>
+<b>1. A Szolgï¿½ltatï¿½s nyï¿½jtï¿½ja:</b>
 <br><br>
-Név: Ruppert Endre Zoltán
-<br>Székhely: 1148 Budapest, Nagy Lajos Király útja 37/B
-<br>Adószám: 66668912142
-<br>Email cím: hello@lingocasa.com
-<br>Telefonszám: +36(70)398-4354
+Nï¿½v: Ruppert Endre Zoltï¿½n
+<br>Szï¿½khely: 1148 Budapest, Nagy Lajos Kirï¿½ly ï¿½tja 37/B
+<br>Adï¿½szï¿½m: 66668912142
+<br>Email cï¿½m: hello@lingocasa.com
+<br>Telefonszï¿½m: +36(70)398-4354
 <br><br>
-<b>2. A Szolgáltatás leírása</b>
+<b>2. A Szolgï¿½ltatï¿½s leï¿½rï¿½sa</b>
 <br><br>
-A Szolgáltató által nyújtott szolgáltatáson keresztül a Szolgáltató gyakorlási lehetõséget nyújt nyelvtanulásban a Szolgáltatás tagjainak (a továbbiakban: "Tag").
+A Szolgï¿½ltatï¿½ ï¿½ltal nyï¿½jtott szolgï¿½ltatï¿½son keresztï¿½l a Szolgï¿½ltatï¿½ gyakorlï¿½si lehetï¿½sï¿½get nyï¿½jt nyelvtanulï¿½sban a Szolgï¿½ltatï¿½s tagjainak (a tovï¿½bbiakban: "Tag").
 <br><br>
-A Szolgáltatás célja, hogy a tagokat segítse nyelvi készségeik fejlesztésében.
+A Szolgï¿½ltatï¿½s cï¿½lja, hogy a tagokat segï¿½tse nyelvi kï¿½szsï¿½geik fejlesztï¿½sï¿½ben.
 <br><br>
-<b>3. A szerzõdés tárgya</b>
+<b>3. A szerzï¿½dï¿½s tï¿½rgya</b>
 <br><br>
-Jelen szerzõdés alapján a Tag megbízza a Szolgáltatót a Szolgáltatás keretében nyelvtanulást segítõ
-anyagok elkészítésével és a Szolgáltatáson keresztül történõ rendelkezésre bocsátásával. A szerzõdés tárgyát képezik egyrészt a Szolgáltatáson keresztül, a szerzõdés megkötésének idõpontjában hozzáférhetõ anyagok, valamint a Szolgáltató által késõbb elkészített anyagok. A Szolgáltatás kizárólagos nyújtója Ruppert Endre Zoltán egyéni vállalkozó, aki a megbízást kifejezetten elfogadja.
+Jelen szerzï¿½dï¿½s alapjï¿½n a Tag megbï¿½zza a Szolgï¿½ltatï¿½t a Szolgï¿½ltatï¿½s keretï¿½ben nyelvtanulï¿½st segï¿½tï¿½
+anyagok elkï¿½szï¿½tï¿½sï¿½vel ï¿½s a Szolgï¿½ltatï¿½son keresztï¿½l tï¿½rtï¿½nï¿½ rendelkezï¿½sre bocsï¿½tï¿½sï¿½val. A szerzï¿½dï¿½s tï¿½rgyï¿½t kï¿½pezik egyrï¿½szt a Szolgï¿½ltatï¿½son keresztï¿½l, a szerzï¿½dï¿½s megkï¿½tï¿½sï¿½nek idï¿½pontjï¿½ban hozzï¿½fï¿½rhetï¿½ anyagok, valamint a Szolgï¿½ltatï¿½ ï¿½ltal kï¿½sï¿½bb elkï¿½szï¿½tett anyagok. A Szolgï¿½ltatï¿½s kizï¿½rï¿½lagos nyï¿½jtï¿½ja Ruppert Endre Zoltï¿½n egyï¿½ni vï¿½llalkozï¿½, aki a megbï¿½zï¿½st kifejezetten elfogadja.
 <br><br>
-A fenti Szolgáltatáson kívül a Szolgáltató esetileg egyéni ajánlatokat tesz közzé a honlapon. Ezen ajánlatokra vonatkozó szerzõdés a Szerzõdõ Felek között ráutaló magatartással, a "Megrendelem" gomb lenyomásával jön létre az Egyéb szolgáltatás adatlapja szerinti tartalommal és áron. Az egyéb szolgáltatások kizárólagos nyújtója Ruppert Endre Zoltán egyéni vállalkozó.
+A fenti Szolgï¿½ltatï¿½son kï¿½vï¿½l a Szolgï¿½ltatï¿½ esetileg egyï¿½ni ajï¿½nlatokat tesz kï¿½zzï¿½ a honlapon. Ezen ajï¿½nlatokra vonatkozï¿½ szerzï¿½dï¿½s a Szerzï¿½dï¿½ Felek kï¿½zï¿½tt rï¿½utalï¿½ magatartï¿½ssal, a "Megrendelem" gomb lenyomï¿½sï¿½val jï¿½n lï¿½tre az Egyï¿½b szolgï¿½ltatï¿½s adatlapja szerinti tartalommal ï¿½s ï¿½ron. Az egyï¿½b szolgï¿½ltatï¿½sok kizï¿½rï¿½lagos nyï¿½jtï¿½ja Ruppert Endre Zoltï¿½n egyï¿½ni vï¿½llalkozï¿½.
 <br><br>
-<b>4. A szerzõdés létrejötte</b>
+<b>4. A szerzï¿½dï¿½s lï¿½trejï¿½tte</b>
 <br><br>
-Jelen szerzõdés a Szolgáltató és a Tag - a továbbiakban együtt: "Szerzõdõ Felek" - között ráutaló magatartással, a Tag által a www.lingocasa.com/ weboldalon, vagy annak aloldalán található jelentkezési lap kitöltésével, és a "Megrendelem" gomb lenyomásával jön létre.
+Jelen szerzï¿½dï¿½s a Szolgï¿½ltatï¿½ ï¿½s a Tag - a tovï¿½bbiakban egyï¿½tt: "Szerzï¿½dï¿½ Felek" - kï¿½zï¿½tt rï¿½utalï¿½ magatartï¿½ssal, a Tag ï¿½ltal a www.lingocasa.com/ weboldalon, vagy annak aloldalï¿½n talï¿½lhatï¿½ jelentkezï¿½si lap kitï¿½ltï¿½sï¿½vel, ï¿½s a "Megrendelem" gomb lenyomï¿½sï¿½val jï¿½n lï¿½tre.
 <br><br>
-A Tag jelen szerzõdés elfogadásával nyilatkozik arról, hogy cselekvõképessége, illetve szerzõdéskötési képessége nincs korlátozva.
+A Tag jelen szerzï¿½dï¿½s elfogadï¿½sï¿½val nyilatkozik arrï¿½l, hogy cselekvï¿½kï¿½pessï¿½ge, illetve szerzï¿½dï¿½skï¿½tï¿½si kï¿½pessï¿½ge nincs korlï¿½tozva.
 <br><br>
-A jelentkezés során a látogató által megadott adatoknak hiánytalannak és valósnak kell lenniük. A látogató nyilatkozik arról, hogy az így megadott adatok hiánytalanok és valósak.
+A jelentkezï¿½s sorï¿½n a lï¿½togatï¿½ ï¿½ltal megadott adatoknak hiï¿½nytalannak ï¿½s valï¿½snak kell lenniï¿½k. A lï¿½togatï¿½ nyilatkozik arrï¿½l, hogy az ï¿½gy megadott adatok hiï¿½nytalanok ï¿½s valï¿½sak.
 <br><br>
-Jelen Szerzõdés elfogadásával a Tag kifejezetten hozzájárul ahhoz, hogy a Szolgáltató a szerzõdésszerû teljesítést a szerzõdés megkötése után azonnal megkezdje.
+Jelen Szerzï¿½dï¿½s elfogadï¿½sï¿½val a Tag kifejezetten hozzï¿½jï¿½rul ahhoz, hogy a Szolgï¿½ltatï¿½ a szerzï¿½dï¿½sszerï¿½ teljesï¿½tï¿½st a szerzï¿½dï¿½s megkï¿½tï¿½se utï¿½n azonnal megkezdje.
 <br><br>
-<b>5. Jelentkezés visszaigazolása</b>
+<b>5. Jelentkezï¿½s visszaigazolï¿½sa</b>
 <br><br>
-A Szolgáltató a beérkezett regisztrációkat haladéktalanul megvizsgálja, és azok megérkezését visszaigazolja. A Szolgáltató fenntartja magának a jogot, hogy a beérkezett regisztrációt indoklás nélkül elutasítsa. Az elfogadott regisztrációk elektronikus levélben kerülnek visszaigazolásra.
+A Szolgï¿½ltatï¿½ a beï¿½rkezett regisztrï¿½ciï¿½kat haladï¿½ktalanul megvizsgï¿½lja, ï¿½s azok megï¿½rkezï¿½sï¿½t visszaigazolja. A Szolgï¿½ltatï¿½ fenntartja magï¿½nak a jogot, hogy a beï¿½rkezett regisztrï¿½ciï¿½t indoklï¿½s nï¿½lkï¿½l elutasï¿½tsa. Az elfogadott regisztrï¿½ciï¿½k elektronikus levï¿½lben kerï¿½lnek visszaigazolï¿½sra.
 <br><br>
-<b>6. A részvételi díj mértéke</b>
+<b>6. A rï¿½szvï¿½teli dï¿½j mï¿½rtï¿½ke</b>
 <br><br>
-A Szolgáltatás nyújtásáért a Szolgáltató 5000 Ft bruttó havi megbízási díjra jogosult. A megbízási díj a szerzõdéses szolgáltatás teljes ellenértékét tartalmazza.
+A Szolgï¿½ltatï¿½s nyï¿½jtï¿½sï¿½ï¿½rt a Szolgï¿½ltatï¿½ 5000 Ft bruttï¿½ havi megbï¿½zï¿½si dï¿½jra jogosult. A megbï¿½zï¿½si dï¿½j a szerzï¿½dï¿½ses szolgï¿½ltatï¿½s teljes ellenï¿½rtï¿½kï¿½t tartalmazza.
 <br><br>
-<b>7. A megbízási díj teljesítése</b>
+<b>7. A megbï¿½zï¿½si dï¿½j teljesï¿½tï¿½se</b>
 <br><br>
-A regisztráció során a jelentkezõ PayPal vagy banki utalás segítségével teljesíti a szolgáltatás díját és a Szolgáltató weboldalon a számlázási címen kívül más adatot nem kell megadnia.
+A regisztrï¿½ciï¿½ sorï¿½n a jelentkezï¿½ PayPal vagy banki utalï¿½s segï¿½tsï¿½gï¿½vel teljesï¿½ti a szolgï¿½ltatï¿½s dï¿½jï¿½t ï¿½s a Szolgï¿½ltatï¿½ weboldalon a szï¿½mlï¿½zï¿½si cï¿½men kï¿½vï¿½l mï¿½s adatot nem kell megadnia.
 <br><br>
-<b>8. Számlázás</b>
+<b>8. Szï¿½mlï¿½zï¿½s</b>
 <br><br>
-A megbízási díj megérkezését követõ 15 napon belül a Szolgáltató elektronikus számlát köteles kiállítani, amelyet elektronikus levélben juttat el a Taghoz. A honlapon keresztül megrendelt Egyéb szolgáltatások díjának levonását követõ 15 napon belül a Szolgáltató elektronikus számlát köteles kiállítani, amelyet szintén elektronikus levélben juttat el Taghoz. A Tag az elektronikus számla kiállítását kifejezetten elfogadja.
+A megbï¿½zï¿½si dï¿½j megï¿½rkezï¿½sï¿½t kï¿½vetï¿½ 15 napon belï¿½l a Szolgï¿½ltatï¿½ elektronikus szï¿½mlï¿½t kï¿½teles kiï¿½llï¿½tani, amelyet elektronikus levï¿½lben juttat el a Taghoz. A honlapon keresztï¿½l megrendelt Egyï¿½b szolgï¿½ltatï¿½sok dï¿½jï¿½nak levonï¿½sï¿½t kï¿½vetï¿½ 15 napon belï¿½l a Szolgï¿½ltatï¿½ elektronikus szï¿½mlï¿½t kï¿½teles kiï¿½llï¿½tani, amelyet szintï¿½n elektronikus levï¿½lben juttat el Taghoz. A Tag az elektronikus szï¿½mla kiï¿½llï¿½tï¿½sï¿½t kifejezetten elfogadja.
 <br><br>
-<b>9. Felmondás kezdeményezése</b>
+<b>9. Felmondï¿½s kezdemï¿½nyezï¿½se</b>
 <br><br>
-A Tag a Szolgáltatás nyújtására vonatkozó szerzõdés felmondását a Résztvevõi fiókon keresztül, vagy a felmondást tartalmazó jognyilatkozatát a hello@lingocasa.com emailcímre elküldve kezdeményezheti. A felmondást tartalmazó nyilatkozatmintát jelen szerzõdés 1. számú melléklete tartalmazza. A Szolgáltatás felmondása ellenére a Résztvevõi fiókban - annak törléséig - a Tag által korábban megvásárolt kiadványok elektronikus mûpéldányai
-továbbra is hozzáférhetõek maradnak.
+A Tag a Szolgï¿½ltatï¿½s nyï¿½jtï¿½sï¿½ra vonatkozï¿½ szerzï¿½dï¿½s felmondï¿½sï¿½t a Rï¿½sztvevï¿½i fiï¿½kon keresztï¿½l, vagy a felmondï¿½st tartalmazï¿½ jognyilatkozatï¿½t a hello@lingocasa.com emailcï¿½mre elkï¿½ldve kezdemï¿½nyezheti. A felmondï¿½st tartalmazï¿½ nyilatkozatmintï¿½t jelen szerzï¿½dï¿½s 1. szï¿½mï¿½ mellï¿½klete tartalmazza. A Szolgï¿½ltatï¿½s felmondï¿½sa ellenï¿½re a Rï¿½sztvevï¿½i fiï¿½kban - annak tï¿½rlï¿½sï¿½ig - a Tag ï¿½ltal korï¿½bban megvï¿½sï¿½rolt kiadvï¿½nyok elektronikus mï¿½pï¿½ldï¿½nyai
+tovï¿½bbra is hozzï¿½fï¿½rhetï¿½ek maradnak.
 <br><br>
-<b>10. A fogyasztókat megilletõ felmondási, illetve elállási jog</b>
+<b>10. A fogyasztï¿½kat megilletï¿½ felmondï¿½si, illetve elï¿½llï¿½si jog</b>
 <br><br>
-A fogyasztónak minõsülõ Tag a szerzõdés megkötését követõ 14 naptári napon belül azonnali hatállyal, indoklás nélkül felmondhatja a Szolgáltatás nyújtására vonatkozó szerzõdést. A Szolgáltató elállás vagy felmondás esetén korábban megfizetett megbízási díjat a Tag bankszámlájára visszafizeti.
+A fogyasztï¿½nak minï¿½sï¿½lï¿½ Tag a szerzï¿½dï¿½s megkï¿½tï¿½sï¿½t kï¿½vetï¿½ 14 naptï¿½ri napon belï¿½l azonnali hatï¿½llyal, indoklï¿½s nï¿½lkï¿½l felmondhatja a Szolgï¿½ltatï¿½s nyï¿½jtï¿½sï¿½ra vonatkozï¿½ szerzï¿½dï¿½st. A Szolgï¿½ltatï¿½ elï¿½llï¿½s vagy felmondï¿½s esetï¿½n korï¿½bban megfizetett megbï¿½zï¿½si dï¿½jat a Tag bankszï¿½mlï¿½jï¿½ra visszafizeti.
 <br><br>
-<b>11. Rendes felmondás</b>
+<b>11. Rendes felmondï¿½s</b>
 <br><br>
-A Szerzõdõ Felek bármelyike - jelen szerzõdés 9. pontjába foglalt rendelkezésekkel összhangban - a szerzõdés megkötését követõ 14. nap után azt bármikor felmondhatja azzal, hogy a felmondási idõ utolsó napja a megbízási díj levonását követõ harmincadik napra esik.
+A Szerzï¿½dï¿½ Felek bï¿½rmelyike - jelen szerzï¿½dï¿½s 9. pontjï¿½ba foglalt rendelkezï¿½sekkel ï¿½sszhangban - a szerzï¿½dï¿½s megkï¿½tï¿½sï¿½t kï¿½vetï¿½ 14. nap utï¿½n azt bï¿½rmikor felmondhatja azzal, hogy a felmondï¿½si idï¿½ utolsï¿½ napja a megbï¿½zï¿½si dï¿½j levonï¿½sï¿½t kï¿½vetï¿½ harmincadik napra esik.
 <br><br>
-<b>12. Rendkívüli felmondás</b>
+<b>12. Rendkï¿½vï¿½li felmondï¿½s</b>
 <br><br>
-A Szerzõdõ Felek a jelen szerzõdést a másik félhez intézett egyoldalú jognyilatkozattal, azonnali hatállyal abban az esetben mondhatják fel, ha a másik fél a jelen szerzõdésbõl eredõ lényeges kötelezettségét ismételten vagy súlyosan megszegi.
+A Szerzï¿½dï¿½ Felek a jelen szerzï¿½dï¿½st a mï¿½sik fï¿½lhez intï¿½zett egyoldalï¿½ jognyilatkozattal, azonnali hatï¿½llyal abban az esetben mondhatjï¿½k fel, ha a mï¿½sik fï¿½l a jelen szerzï¿½dï¿½sbï¿½l eredï¿½ lï¿½nyeges kï¿½telezettsï¿½gï¿½t ismï¿½telten vagy sï¿½lyosan megszegi.
 <br><br>
-<b>13. Kártérítési felelõsség kizárása</b>
+<b>13. Kï¿½rtï¿½rï¿½tï¿½si felelï¿½ssï¿½g kizï¿½rï¿½sa</b>
 <br><br>
-A Szolgáltató a szerzõdés teljesítésével összefüggésben bekövetkezõ károkért való kártérítési felelõsségét az irányadó jogszabályok által lehetõvé tett legteljesebb mértékben kizárja.
+A Szolgï¿½ltatï¿½ a szerzï¿½dï¿½s teljesï¿½tï¿½sï¿½vel ï¿½sszefï¿½ggï¿½sben bekï¿½vetkezï¿½ kï¿½rokï¿½rt valï¿½ kï¿½rtï¿½rï¿½tï¿½si felelï¿½ssï¿½gï¿½t az irï¿½nyadï¿½ jogszabï¿½lyok ï¿½ltal lehetï¿½vï¿½ tett legteljesebb mï¿½rtï¿½kben kizï¿½rja.
 <br><br>
-<b>14. Szerzõi jogok</b>
+<b>14. Szerzï¿½i jogok</b>
 <br><br>
-A Szerzõdõ Felek kijelentik, hogy a www.lingocasa.com weboldal, annak elemei és az azon keresztül közzétett vagy értékesített, szerzõi mûnek minõsülõ összes anyag a Szolgáltató tulajdonát képezi. Jelen szerzõdés egyetlen része sem értelmezhetõ úgy, hogy az alapján a Tag felhasználási, vagy egyéb szerzõi vagyoni jogot szerez ezen anyagok részére vagy egészére. A Tag a Szolgáltató szerzõi jogainak megsértése esetére 100 000 Ft összegû kötbér megfizetésére vállal kötelezettséget.
+A Szerzï¿½dï¿½ Felek kijelentik, hogy a www.lingocasa.com weboldal, annak elemei ï¿½s az azon keresztï¿½l kï¿½zzï¿½tett vagy ï¿½rtï¿½kesï¿½tett, szerzï¿½i mï¿½nek minï¿½sï¿½lï¿½ ï¿½sszes anyag a Szolgï¿½ltatï¿½ tulajdonï¿½t kï¿½pezi. Jelen szerzï¿½dï¿½s egyetlen rï¿½sze sem ï¿½rtelmezhetï¿½ ï¿½gy, hogy az alapjï¿½n a Tag felhasznï¿½lï¿½si, vagy egyï¿½b szerzï¿½i vagyoni jogot szerez ezen anyagok rï¿½szï¿½re vagy egï¿½szï¿½re. A Tag a Szolgï¿½ltatï¿½ szerzï¿½i jogainak megsï¿½rtï¿½se esetï¿½re 100 000 Ft ï¿½sszegï¿½ kï¿½tbï¿½r megfizetï¿½sï¿½re vï¿½llal kï¿½telezettsï¿½get.
 <br><br>
-<b>15. Teljességi záradék</b>
+<b>15. Teljessï¿½gi zï¿½radï¿½k</b>
 <br><br>
-A jelen szerzõdés a benne szabályozott jogviszony tekintetében a Szerzõdõ Felek teljes megállapodását tartalmazza, és bármely esetleges korábbi szóbeli vagy írásbeli megállapodást hatálytalanít.
+A jelen szerzï¿½dï¿½s a benne szabï¿½lyozott jogviszony tekintetï¿½ben a Szerzï¿½dï¿½ Felek teljes megï¿½llapodï¿½sï¿½t tartalmazza, ï¿½s bï¿½rmely esetleges korï¿½bbi szï¿½beli vagy ï¿½rï¿½sbeli megï¿½llapodï¿½st hatï¿½lytalanï¿½t.
 <br><br>
-<b>16. A szerzõdés hatálya</b>
+<b>16. A szerzï¿½dï¿½s hatï¿½lya</b>
 <br><br>
-A szerzõdés határozatlan idõtartamra jött létre.
+A szerzï¿½dï¿½s hatï¿½rozatlan idï¿½tartamra jï¿½tt lï¿½tre.
 <br><br>
-<b>17. Szerzõdésre irányadó jog és záró rendelkezések</b>
+<b>17. Szerzï¿½dï¿½sre irï¿½nyadï¿½ jog ï¿½s zï¿½rï¿½ rendelkezï¿½sek</b>
 <br><br>
-A felek a jelen szerzõdésben nem rendezett kérdések tárgyában a Ptk. és az egyéb hatályos magyar jogszabályok vonatkozó rendelkezéseit tekintik irányadónak.
+A felek a jelen szerzï¿½dï¿½sben nem rendezett kï¿½rdï¿½sek tï¿½rgyï¿½ban a Ptk. ï¿½s az egyï¿½b hatï¿½lyos magyar jogszabï¿½lyok vonatkozï¿½ rendelkezï¿½seit tekintik irï¿½nyadï¿½nak.
 <br><br>
-A Szerzõdõ Felek kijelentik, hogy a szerzõdés teljesítésének országa Magyarország.
+A Szerzï¿½dï¿½ Felek kijelentik, hogy a szerzï¿½dï¿½s teljesï¿½tï¿½sï¿½nek orszï¿½ga Magyarorszï¿½g.
 <br><br>
-<b>18. Panaszkezelés</b>
+<b>18. Panaszkezelï¿½s</b>
 <br><br>
-A Tag Szolgáltatással kapcsolatos panaszait a Szolgáltató következõ elektronikus levelezési címére küldheti: hello@lingocasa.com
+A Tag Szolgï¿½ltatï¿½ssal kapcsolatos panaszait a Szolgï¿½ltatï¿½ kï¿½vetkezï¿½ elektronikus levelezï¿½si cï¿½mï¿½re kï¿½ldheti: hello@lingocasa.com
 <br><br>
-A vásárló a fentieken túl panaszával, észrevételével a következõ szervekhez is fordulhat:
+A vï¿½sï¿½rlï¿½ a fentieken tï¿½l panaszï¿½val, ï¿½szrevï¿½telï¿½vel a kï¿½vetkezï¿½ szervekhez is fordulhat:
 <br><br>
-Budapest Fõváros Önkormányzata Fõpolgármesteri Hivatal Jegyzõje: 1052 Budapest, Városház u. 9-11.
+Budapest Fï¿½vï¿½ros ï¿½nkormï¿½nyzata Fï¿½polgï¿½rmesteri Hivatal Jegyzï¿½je: 1052 Budapest, Vï¿½roshï¿½z u. 9-11.
 <br><br>
-Továbbá:
+Tovï¿½bbï¿½:
 <br><br>
-Pest Megyei Kereskedelmi és Iparkamara Békéltetõ Testülete:
-<br>Levelezési cím: 1119 Budapest, Etele út 59-61. II. em. 240.
+Pest Megyei Kereskedelmi ï¿½s Iparkamara Bï¿½kï¿½ltetï¿½ Testï¿½lete:
+<br>Levelezï¿½si cï¿½m: 1119 Budapest, Etele ï¿½t 59-61. II. em. 240.
 <br><br>
-Pest Megyei Kormányhivatal Fogyasztóvédelmi Felügyelõsége:
-<br>Levelezési cím: 1052 Budapest, V. kerület Városház utca 7.
+Pest Megyei Kormï¿½nyhivatal Fogyasztï¿½vï¿½delmi Felï¿½gyelï¿½sï¿½ge:
+<br>Levelezï¿½si cï¿½m: 1052 Budapest, V. kerï¿½let Vï¿½roshï¿½z utca 7.
 <br><br>
-<b>19. A Szolgáltató által igénybevett tárhelyszolgáltató adatai:</b>
+<b>19. A Szolgï¿½ltatï¿½ ï¿½ltal igï¿½nybevett tï¿½rhelyszolgï¿½ltatï¿½ adatai:</b>
 <br><br>
 webtar.hu
-<br>Port Kft. 9200, Mosonmagyaróvár, Szent István király út 60.
+<br>Port Kft. 9200, Mosonmagyarï¿½vï¿½r, Szent Istvï¿½n kirï¿½ly ï¿½t 60.
 <br><br>
-Jelen Általános Szerzõdési Feltételek folyamatosan hozzáférhetõek és szabadon letölthetõek a www.lingocasa.com/aszf.php weboldalon.
+Jelen ï¿½ltalï¿½nos Szerzï¿½dï¿½si Feltï¿½telek folyamatosan hozzï¿½fï¿½rhetï¿½ek ï¿½s szabadon letï¿½lthetï¿½ek a www.lingocasa.com/aszf.php weboldalon.
 <br><br>
-1. sz. melléklet:
+1. sz. mellï¿½klet:
 <br><br>
-<b>Elállási/Felmondási nyilatkozatminta</b>
+<b>Elï¿½llï¿½si/Felmondï¿½si nyilatkozatminta</b>
 <br><br>
-(csak a szerzõdéstõl való elállási/felmondási szándék esetén töltse ki és juttassa vissza)
+(csak a szerzï¿½dï¿½stï¿½l valï¿½ elï¿½llï¿½si/felmondï¿½si szï¿½ndï¿½k esetï¿½n tï¿½ltse ki ï¿½s juttassa vissza)
 <br><br>
-Címzett: *
+Cï¿½mzett: *
 <br><br>
-Alulírott/ak kijelentem/kijelentjük, hogy gyakorlom/gyakoroljuk elállási/felmondási jogomat/jogunkat az alábbi termék/ek adásvételére vagy az alábbi szolgáltatás nyújtására irányuló szerzõdés tekintetében: *
+Alulï¿½rott/ak kijelentem/kijelentjï¿½k, hogy gyakorlom/gyakoroljuk elï¿½llï¿½si/felmondï¿½si jogomat/jogunkat az alï¿½bbi termï¿½k/ek adï¿½svï¿½telï¿½re vagy az alï¿½bbi szolgï¿½ltatï¿½s nyï¿½jtï¿½sï¿½ra irï¿½nyulï¿½ szerzï¿½dï¿½s tekintetï¿½ben: *
 <br><br>
-Szerzõdéskötés idõpontja/átvétel idõpontja: *
-A fogyasztó(k) neve:
-A fogyasztó(k) címe:
-A fogyasztó(k) aláírása: (kizárólag papíron tett nyilatkozat esetén)
+Szerzï¿½dï¿½skï¿½tï¿½s idï¿½pontja/ï¿½tvï¿½tel idï¿½pontja: *
+A fogyasztï¿½(k) neve:
+A fogyasztï¿½(k) cï¿½me:
+A fogyasztï¿½(k) alï¿½ï¿½rï¿½sa: (kizï¿½rï¿½lag papï¿½ron tett nyilatkozat esetï¿½n)
 <br><br>
 Kelt:
 </td></tr>
 <tr><td align='center' style=<?php print "'line-height:150%;color:" . $globalcolor . ";font-size:24px'"; ?>>
-<b>Adatvédelmi nyilatkozat</b>
+<b>Adatvï¿½delmi nyilatkozat</b>
 </td></tr>
 <tr><td style='font-size:18px;padding-left:100px;padding-right:100px;line-height:150%;'>
-<b>1. A nyilatkozat célja</b>
+<b>1. A nyilatkozat cï¿½lja</b>
 <br><br>
-1.1 Jelen adatvédelmi nyilatkozat célja, hogy Ruppert Endre Zoltán egyéni vállalkozó (Székhely: 1148 Budapest, Nagy Lajos Király útja 37/B;
-Adószám: 66668912142) által a www.lingocasa.com internetes oldalon alkalmazott adatvédelmi és adatkezelési elveket rögzítse.
+1.1 Jelen adatvï¿½delmi nyilatkozat cï¿½lja, hogy Ruppert Endre Zoltï¿½n egyï¿½ni vï¿½llalkozï¿½ (Szï¿½khely: 1148 Budapest, Nagy Lajos Kirï¿½ly ï¿½tja 37/B;
+Adï¿½szï¿½m: 66668912142) ï¿½ltal a www.lingocasa.com internetes oldalon alkalmazott adatvï¿½delmi ï¿½s adatkezelï¿½si elveket rï¿½gzï¿½tse.
 <br><br>
-<b>2. Adatkezelõ megnevezése</b>
+<b>2. Adatkezelï¿½ megnevezï¿½se</b>
 <br><br>
-Név: Ruppert Endre Zoltán egyéni vállalkozó
-<br>Székhely: 1148 Budapest, Nagy Lajos Király útja 37/B
-<br>Telefonszám: +36(70)398-4354
-<br>Email cím: hello@lingocasa.com
-<br>Adatkezelési nyilvántartási szám: NAIH-102855/2016.
+Nï¿½v: Ruppert Endre Zoltï¿½n egyï¿½ni vï¿½llalkozï¿½
+<br>Szï¿½khely: 1148 Budapest, Nagy Lajos Kirï¿½ly ï¿½tja 37/B
+<br>Telefonszï¿½m: +36(70)398-4354
+<br>Email cï¿½m: hello@lingocasa.com
+<br>Adatkezelï¿½si nyilvï¿½ntartï¿½si szï¿½m: NAIH-102855/2016.
 <br><br>
-<b>3. A kezelt személyes adatok köre:</b>
+<b>3. A kezelt szemï¿½lyes adatok kï¿½re:</b>
 <br><br>
-3.1) A felhasználói fiók létrehozása elõtt a felhasználó a következõ személyes adatait köteles megadni:
+3.1) A felhasznï¿½lï¿½i fiï¿½k lï¿½trehozï¿½sa elï¿½tt a felhasznï¿½lï¿½ a kï¿½vetkezï¿½ szemï¿½lyes adatait kï¿½teles megadni:
 <br><br>
-Név
-<br>Számlacím
-<br>Email cím
-<br>Jelszó
-<br>Tanulandó nyelv
+Nï¿½v
+<br>Szï¿½mlacï¿½m
+<br>Email cï¿½m
+<br>Jelszï¿½
+<br>Tanulandï¿½ nyelv
 <br><br>
-<b>4. Az adatkezelés jogalapja, módja és célja</b>
+<b>4. Az adatkezelï¿½s jogalapja, mï¿½dja ï¿½s cï¿½lja</b>
 <br><br>
-4.1) Az adatkezelõ jogalapja a felhasználó személyes adatainak kezelésére a felhasználó önkéntes hozzájárulása saját személyes adatainak kezeléséhez az információs önrendelkezési jogról és az információszabadságról szóló 2011. évi CXII. törvény. (Infotv.) 5.§ (1) bek. a) pontja alapján.
+4.1) Az adatkezelï¿½ jogalapja a felhasznï¿½lï¿½ szemï¿½lyes adatainak kezelï¿½sï¿½re a felhasznï¿½lï¿½ ï¿½nkï¿½ntes hozzï¿½jï¿½rulï¿½sa sajï¿½t szemï¿½lyes adatainak kezelï¿½sï¿½hez az informï¿½ciï¿½s ï¿½nrendelkezï¿½si jogrï¿½l ï¿½s az informï¿½ciï¿½szabadsï¿½grï¿½l szï¿½lï¿½ 2011. ï¿½vi CXII. tï¿½rvï¿½ny. (Infotv.) 5.ï¿½ (1) bek. a) pontja alapjï¿½n.
 <br><br>
-4.2) Az adatkezelõ jogszabályi felhatalmazás alapján, a szolgáltatás nyújtására irányuló szerzõdésbõl származó díjak számlázása céljából kezelheti az információs társadalommal összefüggõ szolgáltatás igénybevételével kapcsolatos természetes személyazonosító adatokat, lakcímet, valamint a szolgáltatás igénybevételének idõpontjára, idõtartamára és helyére vonatkozó adatokat.
+4.2) Az adatkezelï¿½ jogszabï¿½lyi felhatalmazï¿½s alapjï¿½n, a szolgï¿½ltatï¿½s nyï¿½jtï¿½sï¿½ra irï¿½nyulï¿½ szerzï¿½dï¿½sbï¿½l szï¿½rmazï¿½ dï¿½jak szï¿½mlï¿½zï¿½sa cï¿½ljï¿½bï¿½l kezelheti az informï¿½ciï¿½s tï¿½rsadalommal ï¿½sszefï¿½ggï¿½ szolgï¿½ltatï¿½s igï¿½nybevï¿½telï¿½vel kapcsolatos termï¿½szetes szemï¿½lyazonosï¿½tï¿½ adatokat, lakcï¿½met, valamint a szolgï¿½ltatï¿½s igï¿½nybevï¿½telï¿½nek idï¿½pontjï¿½ra, idï¿½tartamï¿½ra ï¿½s helyï¿½re vonatkozï¿½ adatokat.
 <br><br>
-4.3) A személyes adatok kezelésére kizárólag célhoz kötötten kerül sor. A személyes adatok kezelésének célja a www.lingocasa.com honlapon keresztül biztosított szolgáltatások nyújtása, ezekkel kapcsolatban hírlevelek küldése, oktatóanyagok továbbítása a felhasználóknak, az ügyfeleinkkel való kapcsolattartás, és számlák kiállítása.
+4.3) A szemï¿½lyes adatok kezelï¿½sï¿½re kizï¿½rï¿½lag cï¿½lhoz kï¿½tï¿½tten kerï¿½l sor. A szemï¿½lyes adatok kezelï¿½sï¿½nek cï¿½lja a www.lingocasa.com honlapon keresztï¿½l biztosï¿½tott szolgï¿½ltatï¿½sok nyï¿½jtï¿½sa, ezekkel kapcsolatban hï¿½rlevelek kï¿½ldï¿½se, oktatï¿½anyagok tovï¿½bbï¿½tï¿½sa a felhasznï¿½lï¿½knak, az ï¿½gyfeleinkkel valï¿½ kapcsolattartï¿½s, ï¿½s szï¿½mlï¿½k kiï¿½llï¿½tï¿½sa.
 <br><br>
-4.4) Az automatikusan rögzítésre kerülõ adatok célja statisztikakészítés, az informatikai rendszer technikai fejlesztése, a felhasználók jogainak védelme.
+4.4) Az automatikusan rï¿½gzï¿½tï¿½sre kerï¿½lï¿½ adatok cï¿½lja statisztikakï¿½szï¿½tï¿½s, az informatikai rendszer technikai fejlesztï¿½se, a felhasznï¿½lï¿½k jogainak vï¿½delme.
 <br><br>
-4.5) Az adatkezelõ a megadott személyes adatokat az e pontokban leírt céloktól eltérõ célokra nem használja fel. Személyes adatok harmadik személynek, vagy hatóságok számára történõ kiadása - jogszabály eltérõ rendelkezése hiányában - kizárólag a felhasználó elõzetes, kifejezett hozzájárulása esetén lehetséges.
+4.5) Az adatkezelï¿½ a megadott szemï¿½lyes adatokat az e pontokban leï¿½rt cï¿½loktï¿½l eltï¿½rï¿½ cï¿½lokra nem hasznï¿½lja fel. Szemï¿½lyes adatok harmadik szemï¿½lynek, vagy hatï¿½sï¿½gok szï¿½mï¿½ra tï¿½rtï¿½nï¿½ kiadï¿½sa - jogszabï¿½ly eltï¿½rï¿½ rendelkezï¿½se hiï¿½nyï¿½ban - kizï¿½rï¿½lag a felhasznï¿½lï¿½ elï¿½zetes, kifejezett hozzï¿½jï¿½rulï¿½sa esetï¿½n lehetsï¿½ges.
 <br><br>
-<b>5. Az adatkezelés idõtartama</b>
+<b>5. Az adatkezelï¿½s idï¿½tartama</b>
 <br><br>
-5.1) A regisztráció és www.lingocasa.com internetes oldal szolgáltatásainak használata során megadott személyes adatok kezelése a felhasználói fiók (tanulói fiók) vagy a díjmentes szolgáltatások igénybevételéhez szükséges egyszerû regisztráció törléséig tart.
+5.1) A regisztrï¿½ciï¿½ ï¿½s www.lingocasa.com internetes oldal szolgï¿½ltatï¿½sainak hasznï¿½lata sorï¿½n megadott szemï¿½lyes adatok kezelï¿½se a felhasznï¿½lï¿½i fiï¿½k (tanulï¿½i fiï¿½k) vagy a dï¿½jmentes szolgï¿½ltatï¿½sok igï¿½nybevï¿½telï¿½hez szï¿½ksï¿½ges egyszerï¿½ regisztrï¿½ciï¿½ tï¿½rlï¿½sï¿½ig tart.
 <br><br>
-5.2) Fenti rendelkezések nem érintik a jogszabályokban (pl. számviteli jogszabályokban) meghatározott megõrzési kötelezettségek teljesítését.
+5.2) Fenti rendelkezï¿½sek nem ï¿½rintik a jogszabï¿½lyokban (pl. szï¿½mviteli jogszabï¿½lyokban) meghatï¿½rozott megï¿½rzï¿½si kï¿½telezettsï¿½gek teljesï¿½tï¿½sï¿½t.
 <br><br>
-<b>6. Személyes adatok továbbítása és feldolgozása</b>
+<b>6. Szemï¿½lyes adatok tovï¿½bbï¿½tï¿½sa ï¿½s feldolgozï¿½sa</b>
 <br><br>
-6.1) A www.lingocasa.com internetes oldal szolgáltatásainak használata során az adatkezelõ a Felhasználó személyes adatait nem továbbítja.
+6.1) A www.lingocasa.com internetes oldal szolgï¿½ltatï¿½sainak hasznï¿½lata sorï¿½n az adatkezelï¿½ a Felhasznï¿½lï¿½ szemï¿½lyes adatait nem tovï¿½bbï¿½tja.
 <br><br>
-6.2) A felhasználóra vonatkozó személyes adatok továbbítására kizárólag törvényben kötelezõen meghatározott esetben, illetve a Felhasználó kifejezett hozzájárulása alapján kerülhet sor.
+6.2) A felhasznï¿½lï¿½ra vonatkozï¿½ szemï¿½lyes adatok tovï¿½bbï¿½tï¿½sï¿½ra kizï¿½rï¿½lag tï¿½rvï¿½nyben kï¿½telezï¿½en meghatï¿½rozott esetben, illetve a Felhasznï¿½lï¿½ kifejezett hozzï¿½jï¿½rulï¿½sa alapjï¿½n kerï¿½lhet sor.
 <br><br>
-6.3) A www.lingocasa.com internetes oldal szolgáltatásainak használata során az adatkezelõ a következõ adatfeldolgozókat veheti igénybe:
+6.3) A www.lingocasa.com internetes oldal szolgï¿½ltatï¿½sainak hasznï¿½lata sorï¿½n az adatkezelï¿½ a kï¿½vetkezï¿½ adatfeldolgozï¿½kat veheti igï¿½nybe:
 <br><br>
 webtar.hu
-<br>Port Kft. 9200, Mosonmagyaróvár, Szent István király út 60.
+<br>Port Kft. 9200, Mosonmagyarï¿½vï¿½r, Szent Istvï¿½n kirï¿½ly ï¿½t 60.
 <br><br>
 Magyar Posta Zrt.
 <br><br>
-<b>7. Felhasználói jogok és jogérvényesítési lehetõségek</b>
+<b>7. Felhasznï¿½lï¿½i jogok ï¿½s jogï¿½rvï¿½nyesï¿½tï¿½si lehetï¿½sï¿½gek</b>
 <br><br>
-7.1) Az érintett kérelmére az adatkezelõ tájékoztatást ad az érintett általa kezelt adatairól, azok forrásáról, az adatkezelés céljáról, jogalapjáról, idõtartamáról, továbbá arról, hogy kik és milyen célból kapják vagy kapták meg adatait. Az adatkezelõ a kérelem benyújtásától számított 30 napon belül elektronikus úton adja meg a kért tájékoztatást.
+7.1) Az ï¿½rintett kï¿½relmï¿½re az adatkezelï¿½ tï¿½jï¿½koztatï¿½st ad az ï¿½rintett ï¿½ltala kezelt adatairï¿½l, azok forrï¿½sï¿½rï¿½l, az adatkezelï¿½s cï¿½ljï¿½rï¿½l, jogalapjï¿½rï¿½l, idï¿½tartamï¿½rï¿½l, tovï¿½bbï¿½ arrï¿½l, hogy kik ï¿½s milyen cï¿½lbï¿½l kapjï¿½k vagy kaptï¿½k meg adatait. Az adatkezelï¿½ a kï¿½relem benyï¿½jtï¿½sï¿½tï¿½l szï¿½mï¿½tott 30 napon belï¿½l elektronikus ï¿½ton adja meg a kï¿½rt tï¿½jï¿½koztatï¿½st.
 <br><br>
-7.2) A felhasználó jogosult a helytelenül rögzített személyes adatainak helyesbítését kérni.
+7.2) A felhasznï¿½lï¿½ jogosult a helytelenï¿½l rï¿½gzï¿½tett szemï¿½lyes adatainak helyesbï¿½tï¿½sï¿½t kï¿½rni.
 <br><br>
-7.3) A felhasználó jogosult személyes adatainak törlését kérni. A törlés nem vonatkozik a jogszabályok (pl. számviteli szabályozás) alapján szükséges adatkezelésekre, azokat Szolgáltató a szükséges idõtartamig megõrzi.
+7.3) A felhasznï¿½lï¿½ jogosult szemï¿½lyes adatainak tï¿½rlï¿½sï¿½t kï¿½rni. A tï¿½rlï¿½s nem vonatkozik a jogszabï¿½lyok (pl. szï¿½mviteli szabï¿½lyozï¿½s) alapjï¿½n szï¿½ksï¿½ges adatkezelï¿½sekre, azokat Szolgï¿½ltatï¿½ a szï¿½ksï¿½ges idï¿½tartamig megï¿½rzi.
 <br><br>
-7.4) Az érintett a jelen nyilatkozatban ismertetett jogait az alábbi elérhetõségen keresztül gyakorolhatja:
+7.4) Az ï¿½rintett a jelen nyilatkozatban ismertetett jogait az alï¿½bbi elï¿½rhetï¿½sï¿½gen keresztï¿½l gyakorolhatja:
 <br><br>
-Levelezési cím: 1148 Budapest, Nagy Lajos Király útja 37/B
+Levelezï¿½si cï¿½m: 1148 Budapest, Nagy Lajos Kirï¿½ly ï¿½tja 37/B
 <br>Email: hello@lingocasa.com
 <br><br>
-7.5) A felhasználó az Infotv., valamint a Polgári Törvénykönyv alapján bíróság elõtt érvényesítheti jogait, továbbá Nemzeti Adatvédelmi és Információszabadság Hatósághoz (NAIH) (1125 Budapest, Szilágyi Erzsébet fasor 22/C) fordulhat az adatkezelõ adatkezelési gyakorlatával kapcsolatban felmerült panasza esetén.
+7.5) A felhasznï¿½lï¿½ az Infotv., valamint a Polgï¿½ri Tï¿½rvï¿½nykï¿½nyv alapjï¿½n bï¿½rï¿½sï¿½g elï¿½tt ï¿½rvï¿½nyesï¿½theti jogait, tovï¿½bbï¿½ Nemzeti Adatvï¿½delmi ï¿½s Informï¿½ciï¿½szabadsï¿½g Hatï¿½sï¿½ghoz (NAIH) (1125 Budapest, Szilï¿½gyi Erzsï¿½bet fasor 22/C) fordulhat az adatkezelï¿½ adatkezelï¿½si gyakorlatï¿½val kapcsolatban felmerï¿½lt panasza esetï¿½n.
 <br><br>
-<b>8. Hírlevelek</b>
+<b>8. Hï¿½rlevelek</b>
 <br><br>
-8.1) A regisztráció során megadott elektronikus levélcímekre hirdetést vagy reklámot (hírlevél) tartalmazó leveleket az adatkezelõ csak a felhasználó kifejezett hozzájárulásával, a jogszabályi elõírásoknak megfelelõ esetekben és módon küld. A felhasználó bármikor leiratkozhat a hírlevélrõl a hírlevél alján elhelyezett link segítségével.
+8.1) A regisztrï¿½ciï¿½ sorï¿½n megadott elektronikus levï¿½lcï¿½mekre hirdetï¿½st vagy reklï¿½mot (hï¿½rlevï¿½l) tartalmazï¿½ leveleket az adatkezelï¿½ csak a felhasznï¿½lï¿½ kifejezett hozzï¿½jï¿½rulï¿½sï¿½val, a jogszabï¿½lyi elï¿½ï¿½rï¿½soknak megfelelï¿½ esetekben ï¿½s mï¿½don kï¿½ld. A felhasznï¿½lï¿½ bï¿½rmikor leiratkozhat a hï¿½rlevï¿½lrï¿½l a hï¿½rlevï¿½l aljï¿½n elhelyezett link segï¿½tsï¿½gï¿½vel.
 <br><br>
-<b>9. Záró rendelkezések</b>
+<b>9. Zï¿½rï¿½ rendelkezï¿½sek</b>
 <br><br>
-9.1) Az adatkezelõ kötelezi magát, hogy gondoskodik az általa kezelt személyes adatok biztonságáról, megteszi azokat a technikai intézkedéseket, amelyek biztosítják, hogy a felvett, tárolt, illetve kezelt adatok védettek legyenek, illetõleg mindent megtesz annak érdekében, hogy megakadályozza azok megsemmisülését, jogosulatlan felhasználását és jogosulatlan megváltoztatását.
+9.1) Az adatkezelï¿½ kï¿½telezi magï¿½t, hogy gondoskodik az ï¿½ltala kezelt szemï¿½lyes adatok biztonsï¿½gï¿½rï¿½l, megteszi azokat a technikai intï¿½zkedï¿½seket, amelyek biztosï¿½tjï¿½k, hogy a felvett, tï¿½rolt, illetve kezelt adatok vï¿½dettek legyenek, illetï¿½leg mindent megtesz annak ï¿½rdekï¿½ben, hogy megakadï¿½lyozza azok megsemmisï¿½lï¿½sï¿½t, jogosulatlan felhasznï¿½lï¿½sï¿½t ï¿½s jogosulatlan megvï¿½ltoztatï¿½sï¿½t.
 <br><br>
-9.2) Az adatkezelõ fenntartja a jogot, hogy jelen nyilatkozatot a felhasználók értesítése mellett egyoldalúan módosítsa. Az adatkezelõ jelen adatvédelmi nyilatkozat módosításairól szóló tájékoztatást közzéteszi a www.lingocasa.com weboldalon. A módosítás hatályba lépését követõen a felhasználó a szolgáltatás használatával, ráutaló magatartással tudomásul veszi a módosított nyilatkozatban foglaltakat.
+9.2) Az adatkezelï¿½ fenntartja a jogot, hogy jelen nyilatkozatot a felhasznï¿½lï¿½k ï¿½rtesï¿½tï¿½se mellett egyoldalï¿½an mï¿½dosï¿½tsa. Az adatkezelï¿½ jelen adatvï¿½delmi nyilatkozat mï¿½dosï¿½tï¿½sairï¿½l szï¿½lï¿½ tï¿½jï¿½koztatï¿½st kï¿½zzï¿½teszi a www.lingocasa.com weboldalon. A mï¿½dosï¿½tï¿½s hatï¿½lyba lï¿½pï¿½sï¿½t kï¿½vetï¿½en a felhasznï¿½lï¿½ a szolgï¿½ltatï¿½s hasznï¿½latï¿½val, rï¿½utalï¿½ magatartï¿½ssal tudomï¿½sul veszi a mï¿½dosï¿½tott nyilatkozatban foglaltakat.
 <br><br>
-Ruppert Endre egyéni vállalkozó
+Ruppert Endre egyï¿½ni vï¿½llalkozï¿½
 </td></tr>
 </table>
 

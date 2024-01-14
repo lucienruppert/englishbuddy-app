@@ -36,7 +36,6 @@ switch($_REQUEST['actionType']){
 <html>
 <head>
 <meta http-equiv="content-type" content="text-html; charset=iso-8859-2">
-<link rel=stylesheet type='text/css' href='baseStyle.css'>
 </head>
 <body>
 <form method='POST' action='subMain.php'>
@@ -45,7 +44,7 @@ switch($_REQUEST['actionType']){
 <?php include_once($includeFile); ?>
 
 </td><td width='20%'>
-<input type='button' name='orderButton' value='Váltás' onclick="
+<input type='button' name='orderButton' value='Vďż˝ltďż˝s' onclick="
 if(document.forms[0].orderLang.value == 'hun'){
     document.forms[0].orderLang.value='foreign';
 }

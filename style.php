@@ -1,16 +1,11 @@
 <style>
-/* 
-    * {
-        border: 1px solid green;
-    } */
-
-    #ajaxTable {
-        background: <? print $dark ?>;
+    #header {
+        /* border: 1px solid green; */
+        width: 100%;
     }
 
     body {
         background: <? print $dark ?>;
-;
     }
 
     input[type=checkbox] {
@@ -206,5 +201,125 @@
         z-index: 100;
         padding: 5px;
         border: 1px solid grey;
+    }
+
+    .login {
+        display: flex;
+        justify-content: center;
+        margin-top: 300px;
+    }
+
+    .button {
+        text-align: center;
+        background-color: <?php print $highlight ?>;
+        border-radius: 5px;
+        padding: 10px 0;
+        cursor: pointer;
+    }
+
+    table {
+        font-family: arial;
+        font-size: 12;
+        color: grey;
+        text-align: left
+    }
+
+    span {
+        font-family: arial;
+        font-size: 12;
+        color: grey;
+        text-align: left
+    }
+
+    A {
+        font-family: Tahoma;
+        font-size: 12
+    }
+
+    A:link {
+        text-decoration: none;
+        color: grey;
+    }
+
+    A:active {
+        text-decoration: none;
+        color: grey;
+    }
+
+    A:visited {
+        text-decoration: none;
+        color: grey;
+    }
+
+    A:hover {
+        text-decoration: underline;
+        color: grey;
+    }
+
+    A.selected {
+        font-family: Tahoma;
+        font-size: 12;
+        color: grey;
+    }
+
+    A.selected:link {
+        text-decoration: none;
+        color: grey;
+    }
+
+    A.selected:active {
+        text-decoration: none;
+        color: grey;
+    }
+
+    A.selected:visited {
+        text-decoration: none;
+        color: grey;
+    }
+
+    A.selected:hover {
+        text-decoration: underline;
+        color: grey;
+    }
+
+    body {
+        font-family: Tahoma;
+        background-color: #ffffff;
+        scrollbar-track-color: white;
+        scrollbar-face-color: silver;
+        scrollbar-highlight-color: black;
+        scrollbar-shadow-color: gray
+    }
+
+    div#igeragozasDiv table {
+        font-family: Tahoma;
+        font-size: 16;
+        color: grey;
+        text-align: left
+    }
+
+    .ajaxSearchTxt {
+        position: relative;
+        color: #aaa;
+    }
+
+    .ajaxSearchTxtContainer {
+        position: relative;
+    }
+
+    .ajaxSearchTxtContainer input {
+        background: #fcfcfc;
+        border: 1px solid #aaa;
+        border-radius: 5px;
+        box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
+        text-indent: 23px;
+        position: relative;
+    }
+
+    .ajaxSearchTxtContainer .fa-search {
+        position: absolute;
+        top: 3px;
+        left: 5px;
+        z-index: 50;
     }
 </style>

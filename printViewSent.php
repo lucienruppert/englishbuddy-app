@@ -65,7 +65,6 @@ print "<html>
 <head>
 <title>Sentence print view</title>
 <meta http-equiv=\"content-type\" content=\"text-html;\">
-<link rel=stylesheet type='text/css' href='baseStyle.css'>
 </head>";
 print "<body>";
 print "<table border=0 align='left' style='width:700'>
