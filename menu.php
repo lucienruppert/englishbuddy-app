@@ -25,13 +25,12 @@ if ($isAndroid) {
 ?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-
-<?php
+<head>
+    <?php
     include_once('style-menu.php');
-?>
-
-<link rel="stylesheet" type='text/css' href='style.css'>
+    ?>
 <link rel="stylesheet" type="text/css" href="css/superfish.css" />
+</head>
 <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="js/hoverIntent.js"></script>
 <script type="text/javascript" src="js/superfish.js"></script>

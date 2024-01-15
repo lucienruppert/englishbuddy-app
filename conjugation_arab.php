@@ -3,8 +3,6 @@
 include_once('functions.php');
 ?>
 
-
-<link rel=stylesheet type='text/css' href='style.css'>
 <table cellpadding=6 border='0' cellspacing='1' align='center'>
     <tr><a name='back'></a>
         <td style='font-size:20;color:<?php print($globalcolor)?>;'>

@@ -2,7 +2,6 @@
 include_once('functions.php');
 ?>
 
-<link rel=stylesheet type='text/css' href='style.css'>
 <table cellpadding=8 border='1' cellspacing='0' align='left'>
 <tr valign='middle' align='center'>
 <td width='100' style='font-size:30;color:grey;'><b>PAST<font size=2><br>only suffixes</td>
