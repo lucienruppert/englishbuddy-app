@@ -40,13 +40,13 @@ $wordForeign = $currentWord['word_' . $ext];
 <div name='quickLearning' id='quickLearning'>
     <table border='0' width='800' cellspacing=0 cellpadding=0><tr><td width='50' align='left' valign='middle' style='background-color:grey;'>
         <tr>
-            <td align='center' height='50' valign='center' style='width:100%;font-size:20pt;color:white;background-color:grey'>Kategoriz�l�s</td>
+            <td align='center' height='50' valign='center' style='width:100%;font-size:20pt;color:white;background-color:<?php print $colorValue; ?>'>Kategoriz�l�s</td>
         </tr>
         <tr>
             <td align='center' valign='center' height='40' style='font-size:16pt;color:grey;font-weight:bold;'><?php print $wordCount; ?></td>
         </tr>
         <tr>
-            <td height='100' align='center' valign='top'><span id='origSpan' style=<?php print "'font-size:24pt;color:" . $globalcolor . ";font-weight:bold;'"; ?>><?php print $wordOrig; ?></span></td>
+            <td height='100' align='center' valign='top'><span id='origSpan' style=<?php print "'font-size:24pt;color:" . $highlight . ";font-weight:bold;'"; ?>><?php print $wordOrig; ?></span></td>
         </tr>
         <tr>
             <td height='50' align='center' valign='top'>

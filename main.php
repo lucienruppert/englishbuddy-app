@@ -37,11 +37,8 @@ $_SESSION['lastMessageUpdateTime'] = setUserTime($userObject, $_SESSION['lastMes
 <style>
     #content {
         position: absolute;
-        top: 65px;
-        width: 300px;
-        left: 50%;
-        margin-left: -400px;
-        border: 0px solid white;
+        top: 57px;
+        left:0;
         z-index: 50;
     }
 

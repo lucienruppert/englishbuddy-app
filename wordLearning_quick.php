@@ -398,13 +398,13 @@ else
 
 print "<tr>";
 
-print "<td width='50' align='left' valign='middle' style='background-color:grey;'>
-            <span id=\"prevLevelSpan\" style='background-color:grey;$ArrowFontSize;font-weight:bold;color:white;cursor:pointer;$style' onclick=\"
+print "<td width='50' align='left' valign='middle' style='background-color:$colorValue;'>
+            <span id=\"prevLevelSpan\" style='background-color:$colorValue;$ArrowFontSize;font-weight:bold;color:white;cursor:pointer;$style' onclick=\"
                 event.stopPropagation();
                 location.href='main.php?content=changeLevelPage&direction=prev&selectedLevel=' + selectedLevel + '&source=' + source + '&clickSource=" . $_REQUEST['clickSource'] . "';
             \">&nbsp;&laquo;</span>
         </td>";
-print "<td  colspan='3' align='center' height='50' valign='center' style='font-size:20pt;color:white;background-color:grey'>";
+print "<td  colspan='3' align='center' height='50' valign='center' style='font-size:20pt;color:white;background-color:$colorValue'>";
 if ($clickSource == "intelligent") {
     print "<input type='text'  size='15' style='border:1px solid #ffffff;background:grey;color:#ffffff;font-size:16pt' id='txtIntelligent' value='" . htmlentities($filter, ENT_QUOTES) . "'>";
 } else {
@@ -429,8 +429,8 @@ if ($clickSource == "intelligent") {
     }
 }
 print "</td>";
-print "<td width='50' align='right' valign='middle' style='background-color:grey;'>
-            <span id=\"nextLevelSpan\" style='background-color:grey;$ArrowFontSize;font-weight:bold;color:white;cursor:pointer;$style' onclick=\"
+print "<td width='50' align='right' valign='middle' style='background-color:$colorValue;'>
+            <span id=\"nextLevelSpan\" style='background-color:$colorValue;$ArrowFontSize;font-weight:bold;color:white;cursor:pointer;$style' onclick=\"
                 event.stopPropagation();
                 location.href='main.php?content=changeLevelPage&direction=next&selectedLevel=' + selectedLevel + '&source=' + source + '&clickSource=" . $_REQUEST['clickSource'] . "';
             \">&raquo;&nbsp;</span>
@@ -499,10 +499,10 @@ if ($_SESSION['wordLearning_direction'] == 1) {
     $isNeedAudioPart = ($levels[$words[0]["level"]][1] == 1) && ($ext == "angol");
 }
 if (($showNumber == $KESZ_UGYES_VAGY) && $seconds > 0) {
-    print "<span id='origSpan' style='font-size:20pt;color:$globalcolor;' title=\"$title1\" onclick=\"event.stopPropagation();\">{$seconds} " . translate('masodperc') . "</span>";
+    print "<span id='origSpan' style='font-size:20pt;color:$highlight;' title=\"$title1\" onclick=\"event.stopPropagation();\">{$seconds} " . translate('masodperc') . "</span>";
 } else {
     print "
-        <span id='origSpan' style='$questionedlineFontSize;' onclick=\"event.stopPropagation();\">{$word1}</span>
+        <span id='origSpan' style='$questionedlineFontSize;color:$highlight;' onclick=\"event.stopPropagation();\">{$word1}</span>
     ";
     if ($title1 != "()" && !$_SESSION['cbMultiPractice']) {
         print "
@@ -548,20 +548,14 @@ if ($showNumber != $KESZ_UGYES_VAGY) {
         $nbspk .= '&nbsp;';
     }
     print "<td align='center' valign='center'>";
-    //print "\n<div id='levelRuleDiv' style='visibility:hidden'>{$_SESSION['wordLearning_level_rule']}</div>";
     print "<table><tr>";
-    print "\n<td align='center' valign='center' style='background-color:grey;padding:10px 10px;cursor:pointer;width:70px;height:100px' onclick=\"event.stopPropagation();betu1_Click();\"><span style=" . $nemtudtamFontSize . ">" . translate('betu1') . "</span></td>";
+    print "\n<td align='center' valign='center' style='background-color:$colorValue;padding:10px 10px;cursor:pointer;width:70px;height:100px' onclick=\"event.stopPropagation();betu1_Click();\"><span style=" . $nemtudtamFontSize . ">" . translate('betu1') . "</span></td>";
     print "\n<td align='center' valign='center' style='background-color:$globalcolor;padding:10px 10px;cursor:pointer;' onclick=\"event.stopPropagation();location.href='main.php?content=wordLearning_quick&inbetween=1&stillPract=1';\"><span style=" . $nemtudtamFontSize . ">" . translate('nem_tudtam') . "</span></td>";
     if ($clickSource != "sentencePractice" && $clickSource != "basicWordPractice" && $clickSource != "sentencePractice2" && $clickSource != "intelligent") {
-        print "\n<td align='center' valign='center' style='background-color:grey;padding:10px 10px;cursor:pointer;width:70px;' onclick=\"event.stopPropagation();mumus2_Click();\"><span style=" . $nemtudtamFontSize . ">" . translate('mumus2') . "</span></td>";
-        print "\n<td align='center' valign='center' style='background-color:grey;padding:10px 10px;cursor:pointer;width:70px;' onclick=\"event.stopPropagation();remove_Click();\"><span style=" . $nemtudtamFontSize . ">" . translate('remove') . "</span></td>";
+        print "\n<td align='center' valign='center' style='background-color:$colorValue;padding:10px 10px;cursor:pointer;width:70px;' onclick=\"event.stopPropagation();mumus2_Click();\"><span style=" . $nemtudtamFontSize . ">" . translate('mumus2') . "</span></td>";
+        print "\n<td align='center' valign='center' style='background-color:$colorValue;padding:10px 10px;cursor:pointer;width:70px;' onclick=\"event.stopPropagation();remove_Click();\"><span style=" . $nemtudtamFontSize . ">" . translate('remove') . "</span></td>";
     }
     print "</tr>";
-    // ezt kopizd itt
-    print "<tr><td colspan = '4' align='center' width='100%' style='border: 2px solid $globalcolor;padding-right:10px;background:$globalcolor;'><a id='kikerdezo_info' title=";
-    print "'" . translate("kikerdezo_info") . "' href='#' style='color:white;font-size:12pt;'></a></td></tr>";
-    // eddig :)
-
     print "</table>";
     print "</td>";
 } else {
