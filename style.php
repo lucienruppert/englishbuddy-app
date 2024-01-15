@@ -1,314 +1,333 @@
 <style>
-    #header {
-        /* border: 1px solid green; */
-        width: 100%;
-    }
+  /* border: 1px solid green; */
+  #header {
+    width: 100%;
+  }
 
-    body {
-        background: <? print $dark ?>;
-    }
+  body {
+    background: <? print $dark ?>;
+  }
 
-    input[type=checkbox] {
-        zoom: 1.5;
-    }
+  input[type=checkbox] {
+    zoom: 1.5;
+  }
 
-    img.imgLangChange {
-        cursor: pointer !important;
-    }
+  img.imgLangChange {
+    cursor: pointer !important;
+  }
 
-    .ui-tooltip {
-        white-space: pre-line;
-        content: attr(title);
-    }
+  .ui-tooltip {
+    white-space: pre-line;
+    content: attr(title);
+  }
 
-    input:-webkit-autofill {
-        -webkit-box-shadow: 0 0 0 1000px <? print $globalcolor ?> inset;
-        -webkit-text-fill-color: #FFFFFF;
-    }
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px <? print $globalcolor ?> inset;
+    -webkit-text-fill-color: #FFFFFF;
+  }
 
-    #knowledgeBaseDiv {
-        display: none;
-        position: absolute;
-        top: -200px;
-        left: 50%;
-        margin-left: -200px;
-        background-color: white;
-        filter: alpha(opacity=100);
-        opacity: 1;
-        z-index: 99;
-    }
+  #knowledgeBaseDiv {
+    display: none;
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    margin-left: -200px;
+    background-color: white;
+    filter: alpha(opacity=100);
+    opacity: 1;
+    z-index: 99;
+  }
 
-    #wordPracticeDiv {
-        display: none;
-        position: absolute;
-        top: -200px;
-        left: 50%;
-        margin-left: -200px;
-        background-color: white;
-        filter: alpha(opacity=100);
-        opacity: 1;
-        z-index: 99;
-    }
+  #wordPracticeDiv {
+    display: none;
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    margin-left: -200px;
+    background-color: white;
+    filter: alpha(opacity=100);
+    opacity: 1;
+    z-index: 99;
+  }
 
-    #vocabularyDiv {
-        display: none;
-        position: absolute;
-        top: -200px;
-        left: 50%;
-        margin-left: -200px;
-        background-color: white;
-        filter: alpha(opacity=100);
-        opacity: 1;
-        z-index: 99;
-    }
+  #vocabularyDiv {
+    display: none;
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    margin-left: -200px;
+    background-color: white;
+    filter: alpha(opacity=100);
+    opacity: 1;
+    z-index: 99;
+  }
 
-    #sentencePracticeDiv {
-        display: none;
-        position: absolute;
-        top: -200px;
-        left: 50%;
-        margin-left: -200px;
-        background-color: white;
-        filter: alpha(opacity=100);
-        opacity: 1;
-        z-index: 99;
-    }
+  #sentencePracticeDiv {
+    display: none;
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    margin-left: -200px;
+    background-color: white;
+    filter: alpha(opacity=100);
+    opacity: 1;
+    z-index: 99;
+  }
 
-    #tblPerformance tr:first-child td {
-        font-weight: bold;
-        color: <? print $globalcolor ?>;
-    }
+  #tblPerformance tr:first-child td {
+    font-weight: bold;
+    color: <? print $globalcolor ?>;
+  }
 
-    #tblPerformance td:last-child {
-        text-align: right;
-        padding-left: 4px;
-        font-size: 10pt;
-    }
+  #tblPerformance td:last-child {
+    text-align: right;
+    padding-left: 4px;
+    font-size: 10pt;
+  }
 
-    #moreMeaningDiv {
-        position: absolute;
-        overflow: auto;
-        background-color: <? print $globalcolor ?>;
-        color: white;
-        filter: alpha(opacity=100);
-        /* IE's opacity*/
-        opacity: 1;
-        z-index: 99;
-        margin-left: -250px;
-        top: 30px;
-        left: 50%;
-        width: 500px;
-        height: 400px;
-    }
+  #moreMeaningDiv {
+    position: absolute;
+    overflow: auto;
+    background-color: <? print $globalcolor ?>;
+    color: white;
+    filter: alpha(opacity=100);
+    /* IE's opacity*/
+    opacity: 1;
+    z-index: 99;
+    margin-left: -250px;
+    top: 30px;
+    left: 50%;
+    width: 500px;
+    height: 400px;
+  }
 
-    .btnAjaxDivSave {
-        border: 1px solid grey;
-        background: white;
-        cursor: pointer;
-        <?php
-        if ($isAndroid) {
-            print "font-size:20pt; padding: 1px 20px;";
-        } else {
-            print "padding: 1px 3px;";
-        }
-        ?>
+  .btnAjaxDivSave {
+    border: 1px solid grey;
+    background: white;
+    cursor: pointer;
+    <?php
+    if ($isAndroid) {
+      print "font-size:20pt; padding: 1px 20px;";
+    } else {
+      print "padding: 1px 3px;";
     }
+    ?>
+  }
 
-    #ajaxSearchOutput {
-        position: absolute;
-        overflow: auto;
-        top: 8px;
-        left: 50%;
-        margin-left: 140px;
-        width: 100px;
-        height: 22px;
-        text-align: center;
-        background-color: <? print $globalcolor ?>;
-        color: white;
-        filter: alpha(opacity=100);
-        opacity: 1;
-        z-index: 99;
-    }
+  #ajaxSearchOutput {
+    position: absolute;
+    overflow: auto;
+    top: 8px;
+    left: 50%;
+    margin-left: 140px;
+    width: 100px;
+    height: 22px;
+    text-align: center;
+    background-color: <? print $globalcolor ?>;
+    color: white;
+    filter: alpha(opacity=100);
+    opacity: 1;
+    z-index: 99;
+  }
 
-    #ajaxSearchInput {
-        font-size: 12pt;
-    }
+  #ajaxSearchInput {
+    font-size: 12pt;
+  }
 
-    #ajaxDiv {
-        border: 0px solid black;
-        position: absolute;
-        left: 50%;
-        text-align: left;
-        margin-left: -140px;
-        top: 0px;
-        width: 280px;
-    }
+  #ajaxDiv {
+    border: 0px solid black;
+    position: absolute;
+    left: 50%;
+    text-align: left;
+    margin-left: -140px;
+    top: 0px;
+    width: 280px;
+  }
 
-    .fa-search {
-        font-size: 14pt;
-    }
+  .fa-search {
+    font-size: 14pt;
+  }
 
-    .meaningCell {
-        font-style: italic;
-    }
+  .meaningCell {
+    font-style: italic;
+  }
 
-    .meaningA {
-        font-size: 15px;
-    }
+  .meaningA {
+    font-size: 15px;
+  }
 
-    .meaningLevel2Cell {
-        font-weight: normal;
-    }
+  .meaningLevel2Cell {
+    font-weight: normal;
+  }
 
-    .meaningLevel2A {
-        font-weight: normal;
-        font-size: 15px;
-    }
+  .meaningLevel2A {
+    font-weight: normal;
+    font-size: 15px;
+  }
 
-    .ajaxLangChoose {
-        cursor: pointer;
-        color: white;
-    }
+  .ajaxLangChoose {
+    cursor: pointer;
+    color: white;
+  }
 
-    #clientDiv {
-        position: absolute;
-        top: 35px;
-        left: 50%;
-        margin-left: -405px;
-        display: none;
-        background-color: white;
-        filter: alpha(opacity=100);
-        /* IE's opacity*/
-        opacity: 1;
-        z-index: 99;
-        padding: 5px;
-        border: 1px solid grey;
-    }
+  #clientDiv {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    margin-left: -405px;
+    display: none;
+    background-color: white;
+    filter: alpha(opacity=100);
+    /* IE's opacity*/
+    opacity: 1;
+    z-index: 99;
+    padding: 5px;
+    border: 1px solid grey;
+  }
 
-    #financeDiv {
-        position: absolute;
-        top: 35px;
-        left: 50%;
-        margin-left: -405px;
-        display: none;
-        background-color: white;
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translateX(-50%);
-        filter: alpha(opacity=100);
-        opacity: 1;
-        z-index: 100;
-        padding: 5px;
-        border: 1px solid grey;
-    }
+  #financeDiv {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    margin-left: -405px;
+    display: none;
+    background-color: white;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translateX(-50%);
+    filter: alpha(opacity=100);
+    opacity: 1;
+    z-index: 100;
+    padding: 5px;
+    border: 1px solid grey;
+  }
 
-    .login {
-        display: flex;
-        justify-content: center;
-        margin-top: 300px;
-    }
+  .login {
+    display: flex;
+    justify-content: center;
+    margin-top: 300px;
+    width: 100vw;
+  }
 
-    .button {
-        text-align: center;
-        background-color: <?php print $highlight ?>;
-        border-radius: 5px;
-        padding: 12px 0;
-        cursor: pointer;
-        letter-spacing: 2px;
-    }
+  /* .login * {
+    border: 1px solid green;
+  } */
 
-    .login-button {
-        font-size: 20px;
-    }
+  .button {
+    text-align: center;
+    background-color: <?php print $highlight ?>;
+    border-radius: 5px;
+    padding: 12px;
+    cursor: pointer;
+    letter-spacing: 2px;
+  }
 
-    table {
-        font-size: 12;
-        color: grey;
-        text-align: left
-    }
+  .login-controls {
+    width: 300px;
+  }
 
-    span {
-        font-size: 12;
-        color: grey;
-        text-align: left
-    }
+  .login-button {
+    font-size: 20px;
+  }
 
-    A {
-        text-decoration: none;
-    }
+  .login-field {
+    margin-top: 5px;
+    font-size:1.2rem;
+    border-radius: 5px;
+    color:grey;
+    border:1px solid grey;
+    width:100%;
+    background-color: <?php print $dark ?>;
+  }
 
-    A:link {
-        text-decoration: none;
-        color: white;
-    }
+  table {
+    font-size: 12;
+    color: grey;
+    text-align: left
+  }
 
-    A:active {
-        text-decoration: none;
-        color: white;
-    }
+  span {
+    font-size: 12;
+    color: grey;
+    text-align: left
+  }
 
-    A:visited {
-        text-decoration: none;
-        color: white;
-    }
+  A {
+    text-decoration: none;
+  }
 
-    A:hover {
-        text-decoration: none;
-        color: white;
-    }
+  A:link {
+    text-decoration: none;
+    color: white;
+  }
 
-    A.selected {
-        text-decoration: none;
-        color: white;
-    }
+  A:active {
+    text-decoration: none;
+    color: white;
+  }
 
-    A.selected:link {
-        text-decoration: none;
-        color: white;
-    }
+  A:visited {
+    text-decoration: none;
+    color: white;
+  }
 
-    A.selected:active {
-        text-decoration: none;
-        color: white;
-    }
+  A:hover {
+    text-decoration: none;
+    color: white;
+  }
 
-    A.selected:visited {
-        text-decoration: none;
-        color: white;
-    }
+  A.selected {
+    text-decoration: none;
+    color: white;
+  }
 
-    A.selected:hover {
-        text-decoration: none;
-        color: white;
-    }
+  A.selected:link {
+    text-decoration: none;
+    color: white;
+  }
 
-    div#igeragozasDiv table {
-        font-size: 16;
-        color: grey;
-        text-align: left
-    }
+  A.selected:active {
+    text-decoration: none;
+    color: white;
+  }
 
-    .ajaxSearchTxt {
-        position: relative;
-        color: #aaa;
-    }
+  A.selected:visited {
+    text-decoration: none;
+    color: white;
+  }
 
-    .ajaxSearchTxtContainer {
-        position: relative;
-    }
+  A.selected:hover {
+    text-decoration: none;
+    color: white;
+  }
 
-    .ajaxSearchTxtContainer input {
-        background: #fcfcfc;
-        border: 1px solid #aaa;
-        border-radius: 5px;
-        box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
-        text-indent: 23px;
-        position: relative;
-    }
+  div#igeragozasDiv table {
+    font-size: 16;
+    color: grey;
+    text-align: left
+  }
 
-    .ajaxSearchTxtContainer .fa-search {
-        position: absolute;
-        top: 3px;
-        left: 5px;
-        z-index: 50;
-    }
+  .ajaxSearchTxt {
+    position: relative;
+    color: #aaa;
+  }
+
+  .ajaxSearchTxtContainer {
+    position: relative;
+  }
+
+  .ajaxSearchTxtContainer input {
+    background: #fcfcfc;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
+    text-indent: 23px;
+    position: relative;
+  }
+
+  .ajaxSearchTxtContainer .fa-search {
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    z-index: 50;
+  }
 </style>
