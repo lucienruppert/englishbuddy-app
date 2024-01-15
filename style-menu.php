@@ -1,8 +1,7 @@
 <style>
   body {
-    margin: 0;
-    padding: 0;
-    background-color: red;
+    background: <? print $dark ?>;
+    font-family:arial;
   }
 
   img {
