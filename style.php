@@ -331,4 +331,20 @@
     left: 5px;
     z-index: 50;
   }
+
+  .navigation {
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 20px 20px;
+     <?php if ($userObject) { ?>
+    border-bottom: 1px solid <?php print $highlight ?>;
+     <?php } ?>
+  }
+
+  .logout {
+    font-weight: bold;
+  }
+
 </style>

@@ -66,7 +66,6 @@ $lcasa_font_subtitle = '20pt';
 $lcasa_column1 = '500';
 $lcasa_column_percent = '27.7%';
 $lcasa_font_text = '18px';
-$loginFontSize = '10pt';
 $logosize1 = '40pt';
 $logosize2 = '10pt';
 $mainDivtop = '220px';
