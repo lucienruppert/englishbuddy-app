@@ -1,5 +1,12 @@
-<div>
 	<div class="navigation">
+		<span class="welcome">
+			<?php
+			if ($userObject)
+				print translate('szia') . "&nbsp;" . $userObject['keresztnev'] . "!";
+			else
+				print "";
+			?>
+		</span>
 		<?php
 		if ($userObject && in_array($userObject['status'], array(4, 5, 6))) {
 		?>
@@ -13,4 +20,4 @@
 		<?php } ?>
 	</div>
 	<?php include_once('login.php'); ?>
-</div>
+	</div>

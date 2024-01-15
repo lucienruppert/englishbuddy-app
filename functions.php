@@ -82,8 +82,6 @@ $RedMenuStyle2 = 'background-color:white;font-size:12pt;';
 $bottomPadding = '20px';
 $titleFont = 'font-size:12pt;';
 $TopRedHeight = '155px';
-$welcomeFontSize = 'font-size:18pt;color:grey;font-weight:bold;';
-$welcomeTextTop = '115px';
 $worddivFontSize = 'font-size:14';
 $worddivSize = 'width:400px;height:445px;overflow:auto;';
 $worddivPosition = 'background-color:white;position:absolute;top:-100px;left:50%;margin-left:-180px;filter:alpha(opacity=100);opacity:1;z-index:99;display:none;';

@@ -61,4 +61,12 @@
     text-decoration: none;
     color: white;
   }
+
+  .welcome {
+    color: white;
+    font-size: 14px;
+    text-align: left;
+    width: 100%;
+    font-weight: bold;
+  }
 </style>
