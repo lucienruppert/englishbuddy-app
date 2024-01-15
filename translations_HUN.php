@@ -12,7 +12,7 @@ $trans['mondat_gyakorlas'] = "mondatgyakorlás";
 $trans['utoljara_vett_tananyag'] = "Utolsó vett tananyag";
 $trans['feladatok_kovetkezo_orara'] = "Házi feladat";
 
-$trans['fooldal'] = "fõoldal";
+$trans['fooldal'] = "Fõoldal";
 $trans['igeragozas'] = "Igeragozás";
 $trans['abece'] = "Ábécé";
 $trans['kiejtes'] = "Kiejtés";

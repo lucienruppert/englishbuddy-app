@@ -17,7 +17,7 @@ if($_REQUEST['store'] == 1){
     $category = $_REQUEST['category'];
 
     if(!setWordCategory($selectedId, $category)){
-        print "<script>alert('Rögzítés nem sikerült!')</script>";
+        print "<script>alert('Rï¿½gzï¿½tï¿½s nem sikerï¿½lt!')</script>";
     }
 }
 
@@ -40,7 +40,7 @@ $wordForeign = $currentWord['word_' . $ext];
 <div name='quickLearning' id='quickLearning'>
     <table border='0' width='800' cellspacing=0 cellpadding=0><tr><td width='50' align='left' valign='middle' style='background-color:grey;'>
         <tr>
-            <td align='center' height='50' valign='center' style='width:100%;font-size:20pt;color:white;background-color:grey'>Kategorizálás</td>
+            <td align='center' height='50' valign='center' style='width:100%;font-size:20pt;color:white;background-color:grey'>Kategorizï¿½lï¿½s</td>
         </tr>
         <tr>
             <td align='center' valign='center' height='40' style='font-size:16pt;color:grey;font-weight:bold;'><?php print $wordCount; ?></td>
@@ -54,9 +54,9 @@ $wordForeign = $currentWord['word_' . $ext];
             </td>
         </tr>
         <tr>
-            <td align='center' valign='top' style='background-color:;height:40px;white-space: nowrap;' onclick="event.stopPropagation();">
+            <td align='center' valign='top' style='height:40px;white-space: nowrap;' onclick="event.stopPropagation();">
                 <input type="button" style=<?php print "'background:" . $globalcolor . ";color:white;font-weight:plain;font-size:18px;border: 0px solid;cursor:pointer;'"; ?> class="btnCategory" value="alap" onclick="store(1)">&nbsp;
-                <input type="button" style=<?php print "'background:" . $globalcolor . ";color:white;font-weight:plain;font-size:18px;border: 0px solid;cursor:pointer;'"; ?> class="btnCategory" value="választékos" onclick="store(2)">&nbsp;
+                <input type="button" style=<?php print "'background:" . $globalcolor . ";color:white;font-weight:plain;font-size:18px;border: 0px solid;cursor:pointer;'"; ?> class="btnCategory" value="vï¿½lasztï¿½kos" onclick="store(2)">&nbsp;
                 <input type="button" style=<?php print "'background:" . $globalcolor . ";color:white;font-weight:plain;font-size:18px;border: 0px solid;cursor:pointer;'"; ?> class="btnCategory" value="ritka" onclick="store(3)">
             </td>
         </tr>

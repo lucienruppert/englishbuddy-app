@@ -6,7 +6,8 @@
 
   body {
     background: <? print $dark ?>;
-    font-family:arial;
+    font-family: arial;
+    margin: 0;
   }
 
   input[type=checkbox] {
@@ -252,55 +253,6 @@
     text-align: left
   }
 
-  A {
-    text-decoration: none;
-  }
-
-  A:link {
-    text-decoration: none;
-    color: white;
-  }
-
-  A:active {
-    text-decoration: none;
-    color: white;
-  }
-
-  A:visited {
-    text-decoration: none;
-    color: white;
-  }
-
-  A:hover {
-    text-decoration: none;
-    color: white;
-  }
-
-  A.selected {
-    text-decoration: none;
-    color: white;
-  }
-
-  A.selected:link {
-    text-decoration: none;
-    color: white;
-  }
-
-  A.selected:active {
-    text-decoration: none;
-    color: white;
-  }
-
-  A.selected:visited {
-    text-decoration: none;
-    color: white;
-  }
-
-  A.selected:hover {
-    text-decoration: none;
-    color: white;
-  }
-
   div#igeragozasDiv table {
     font-size: 16;
     color: grey;
@@ -330,21 +282,6 @@
     top: 3px;
     left: 5px;
     z-index: 50;
-  }
-
-  .navigation {
-    font-size: 14px;
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px;
-    padding: 20px 20px;
-     <?php if ($userObject) { ?>
-    border-bottom: 1px solid <?php print $highlight ?>;
-     <?php } ?>
-  }
-
-  .logout {
-    font-weight: bold;
   }
 
 </style>

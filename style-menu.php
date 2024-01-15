@@ -1,7 +1,8 @@
 <style>
   body {
     background: <? print $dark ?>;
-    font-family:arial;
+    font-family: arial;
+    margin: 0;
   }
 
   img {
@@ -96,14 +97,6 @@
     font-weight: normal;
     font-size: 15px;
     font-family: arial;
-  }
-
-  #upperRowDiv {
-    position: absolute;
-    width: 800px;
-    top: 0px;
-    left: 50%;
-    margin-left: -335px;
   }
 
   #szorendtable {
