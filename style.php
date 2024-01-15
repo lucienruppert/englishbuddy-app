@@ -6,6 +6,7 @@
 
   body {
     background: <? print $dark ?>;
+    font-family:arial;
   }
 
   input[type=checkbox] {
