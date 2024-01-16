@@ -154,7 +154,7 @@ if ($_REQUEST['store'] == 1) {
             $seconds = time() - $_SESSION['learningStartTime'];
             $package = (int)substr($_SESSION['selectedLevel2'], 10);
             $tipus = ($_SESSION['source'] == 'szo' ? 1 : ($_SESSION['source'] == 'mondat' ? 2 : ($_SESSION['source'] == 'szomondat' ? 3 : ($_SESSION['source'] == 'alapSzo' ? 4 :
-                            0))));
+                0))));
             setWordRecordIf($userObject, $tipus, $package, $seconds);
             $_SESSION['learningStartTime'] = 0;
         }
@@ -298,6 +298,9 @@ print "
         max-width: 500px;
         white-space: pre-line;
     }
+    #quickLearning {
+        width: 100vw;
+    }
 </style>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script>
@@ -371,19 +374,8 @@ print "
 </script>
 
 <?php
-print "<div name='quickLearning' id='quickLearning' style=" . $quickLearningPosition . ">";
-print "<table border='0' width='800' cellspacing=0 cellpadding=0>";
-/*
-print "<tr><td width='250'></td><td align='right' height='30' style='background-color:white;'>";
-if($showNumber != 'K�sz, �gyes vagy!'){
-//    print "\n<a href='#' style='color:black;' onclick=\"event.stopPropagation();\" onmouseover=\"document.getElementById('levelRuleDiv').style.visibility = 'visible';\" onmouseout=\"document.getElementById('levelRuleDiv').style.visibility = 'hidden';\">Szab�lyok</a>";
-    print "&nbsp;";
-}
-else{
-    print "&nbsp;";
-}
-print "</td><td></td></tr>";
-*/
+print "<div name='quickLearning' id='quickLearning' style=" . $quickLearningStyle . ">";
+print "<table width='100%' cellspacing=0 cellpadding=0>";
 
 $isArrowsHidden = $clickSource == 'wordPractice'
     || $clickSource == 'basicWordPractice'

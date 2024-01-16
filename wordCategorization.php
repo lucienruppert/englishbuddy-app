@@ -38,7 +38,7 @@ $wordForeign = $currentWord['word_' . $ext];
 </style>
 
 <div name='quickLearning' id='quickLearning'>
-    <table border='0' width='800' cellspacing=0 cellpadding=0><tr><td width='50' align='left' valign='middle' style='background-color:grey;'>
+    <table cellspacing=0 cellpadding=0><tr><td width='50' align='left' valign='middle' style='background-color:grey;'>
         <tr>
             <td align='center' height='50' valign='center' style='width:100%;font-size:20pt;color:white;background-color:<?php print $colorValue; ?>'>Kategoriz�l�s</td>
         </tr>

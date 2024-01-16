@@ -10,7 +10,7 @@ $homePosition = 'position:absolute;top:12px;left:50%;margin-left:-398px';
 $timePosition = 'position:absolute;top:10px;left:50%;margin-left:240px';
 $statsPosition = 'position:absolute;top:10px;left:50%;margin-left:150px';
 $logoutPosition = 'position:absolute;top:12px;left:50%;margin-left:315px';
-$quickLearningPosition = 'position:absolute;top:0px;margin-left:0px';
+$quickLearningStyle = 'position:absolute;top:0px;';
 
 ?>
 
