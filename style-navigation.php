@@ -10,60 +10,27 @@
   }
 
   .logout {
-    font-weight: bold;
+    color: <?php print $highlight ?>;
   }
 
-  A {
-    text-decoration: none;
-  }
-
-  A:link {
-    text-decoration: none;
+  .menu-button {
     color: white;
   }
 
-  A:active {
-    text-decoration: none;
-    color: white;
-  }
-
-  A:visited {
-    text-decoration: none;
-    color: white;
-  }
-
-  A:hover {
-    text-decoration: none;
-    color: white;
-  }
-
-  A.selected {
-    text-decoration: none;
-    color: white;
-  }
-
-  A.selected:link {
-    text-decoration: none;
-    color: white;
-  }
-
-  A.selected:active {
-    text-decoration: none;
-    color: white;
-  }
-
+  A,
+  A:link,
+  A:active,
+  A:visited,
+  A:hover,
+  A.selected,
+  A.selected:link,
+  A.selected:active,
   A.selected:visited {
     text-decoration: none;
-    color: white;
-  }
-
-  A.selected:hover {
-    text-decoration: none;
-    color: white;
   }
 
   .welcome {
-    color: white;
+    color: <?php print $highlight ?>;
     font-size: 14px;
     text-align: left;
     width: 100%;

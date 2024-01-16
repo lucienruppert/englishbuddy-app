@@ -229,15 +229,20 @@
 
   .login-button {
     font-size: 20px;
+    color: white;
+  }
+
+  .menu-link {
+    color: white;
   }
 
   .login-field {
     margin-top: 5px;
-    font-size:1.2rem;
+    font-size: 1.2rem;
     border-radius: 5px;
-    color:grey;
-    border:1px solid grey;
-    width:100%;
+    color: grey;
+    border: 1px solid grey;
+    width: 100%;
     background-color: <?php print $dark ?>;
   }
 
@@ -283,5 +288,4 @@
     left: 5px;
     z-index: 50;
   }
-
 </style>

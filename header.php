@@ -10,8 +10,8 @@
 		<?php
 		if ($userObject && in_array($userObject['status'], array(4, 5, 6))) {
 		?>
-			<a href='#' onclick="p_Click(event)"><?php print translate('tandijak'); ?></a>
-			<a href='#' onclick="t_Click(event)"><?php print translate('tanulok'); ?></a>
+			<a href='#' class="menu-button" onclick="p_Click(event)"><?php print translate('tandijak'); ?></a>
+			<a href='#' class="menu-button" onclick="t_Click(event)"><?php print translate('tanulok'); ?></a>
 		<?php }
 		if ($userObject) {
 		?>

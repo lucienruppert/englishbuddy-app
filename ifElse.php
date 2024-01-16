@@ -36,7 +36,7 @@
             $onclick2 = "\"submitToMain('wordManagementKitolto');\"";
             $onclick3 = "\"submitToMain('wordManagement');\"";
             $onclick4 = "\"lowerSelectOnChange('listAll', 'szomondat', 'wordSentencePractice');\"";
-            $style = "'font-size:13pt;color:$globalcolor;'";
+            $style = "'font-size:13pt;color:red'";
             $imgstyle = "'cursor:pointer;'";
         }
         else{
