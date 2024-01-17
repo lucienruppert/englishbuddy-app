@@ -31,11 +31,11 @@ $GLOBALS['mondatPackageSize'] = 10;
 $GLOBALS['mondatPackageRecordMpLimit'] = 100;
 $GLOBALS['mondatPackageRecordBg'] = 'grey';
 
-$dark = "#031525";
-$highlight = "#e97816";
+$dark = "#031525"; // dark blue
+$highlight = "#e97816"; // orange
 
 $tdValue = "background-color:#031525";
-$colorValue = "#293d55";
+$colorValue = "#293d55"; // medium blue
 $GLOBALS['TDBgGlobalColor'] = $tdValue;
 $GLOBALS['globalcolor'] = $colorValue;
 

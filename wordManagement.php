@@ -88,7 +88,7 @@ $(document).ready(function () {
                 location.reload();
             }
         ).fail(function() {
-            alert( "Hiba történt!" );
+            alert( "Hiba tï¿½rtï¿½nt!" );
         });
     });
 });
@@ -108,7 +108,7 @@ print "<form id='wordManagement' name='wordManagement' method='post'>";
 print "<input type='hidden' name='userId' value='{$_POST['userId']}'>";
 print "<input type='hidden' name='recordId' value='" . $wordRecord['id'] . "'>";
 print "<input type='hidden' name='homeWorkOrder' value='" . (int)$_POST['homeWorkOrder'] . "'>";
-print "<table width=800 style='border: 1px solid' align=left><tr><td  style='border: 1px solid' align='center' valign='top'><table>";
+print "<table class='word-management' width='100%' style='border: 1px solid;margin-top:36px;' align=left><tr><td  style='border: 1px solid' align='center' valign='top'><table>";
 
 $forWord = $wordRecord['word_foreign'];
 if($userObject['nyelv'] == 2){
@@ -148,9 +148,9 @@ print "<tr><td align=left style='vertical-align:top'><input type='button' name='
         alert('" . translate('both_field_required') . "');
         return false;
     }
-    /* A 2. rész azért >0, mert ha felül Level0 van kiválasztva, alul meg valami más, akkor is menteni kell, és az alsót kell figyelembe venni */
+    /* A 2. rï¿½sz azï¿½rt >0, mert ha felï¿½l Level0 van kivï¿½lasztva, alul meg valami mï¿½s, akkor is menteni kell, ï¿½s az alsï¿½t kell figyelembe venni */
     if(document.forms['wordManagement'].levelSelection && document.forms['wordManagement'].levelSelection.value != -1 && document.forms['wordManagement'].levelSelection2.value > 0){
-        alert('Csak egy level-t választhatsz ki!');
+        alert('Csak egy level-t vï¿½laszthatsz ki!');
         return false;
     }
     document.forms['wordManagement'].actionType.value='store';
@@ -180,7 +180,7 @@ if($userHasAccess){
     <select id='categorySelection' name='categorySelection'>
         <option value=''></option>
         <option value='1' " . ($wordRecord['category'] == 1 ? 'selected' : '') . ">alap</option>
-        <option value='2' " . ($wordRecord['category'] == 2 ? 'selected' : '') . ">választékos</option>
+        <option value='2' " . ($wordRecord['category'] == 2 ? 'selected' : '') . ">vï¿½lasztï¿½kos</option>
         <option value='3' " . ($wordRecord['category'] == 3 ? 'selected' : '') . ">ritka</option>
     </select>
     </td>";
@@ -227,7 +227,7 @@ if(!$_REQUEST['orderLang']){
 
 $wordUsers = getWordUsers($_SESSION['userObject']);
 
-/* Szótár rész */
+/* Szï¿½tï¿½r rï¿½sz */
 print "<table width='400' align='center' style='border: 1px solid'><tr>";
 
 if(!$userHasAccess){
@@ -261,10 +261,10 @@ this.form.submit();
     if($userHasAccess){ ?>
     <td>
     <select style='width:120px' name='dictionaryShow' onchange='this.form.submit();'>
-        <option value='1' <?php print $dictionaryShowSelected[0]; ?>>Kitöltetlen
+        <option value='1' <?php print $dictionaryShowSelected[0]; ?>>Kitï¿½ltetlen
         <option value='2' <?php print $dictionaryShowSelected[1]; ?>>Minden
-        <option value='3' <?php print $dictionaryShowSelected[2]; ?>>Level nélküliek
-        <option value='4' <?php print $dictionaryShowSelected[3]; ?>>Saját
+        <option value='3' <?php print $dictionaryShowSelected[2]; ?>>Level nï¿½lkï¿½liek
+        <option value='4' <?php print $dictionaryShowSelected[3]; ?>>Sajï¿½t
     </select>
     </td>
 <?php 
@@ -395,7 +395,7 @@ if($_REQUEST['dictionaryShow'] == 1 && $_REQUEST['kitolto']){
         }
     }
 }
-// level nélküliek
+// level nï¿½lkï¿½liek
 else if($_REQUEST['dictionaryShow'] == 3){
     $exceptionArray = array(-1);
     $words = getAllWordsWithLevelExceptions($exceptionArray, $_REQUEST['orderLang'], $_SESSION['userObject']['nyelv'], false, true);
@@ -456,12 +456,12 @@ else if($_REQUEST['dictionaryShow'] == 2 || ($_REQUEST['dictionaryShow'] == 4 &&
             $hfCount++;
         }
     }
-    // ha tanár vagy admin
+    // ha tanï¿½r vagy admin
     if($userHasAccess){
-        // ha nincs emberre leszûrve
+        // ha nincs emberre leszï¿½rve
         if(!$_REQUEST['dictionaryUser']){
             $words = getAllWordsWithLevelExceptions($exceptionArray, $_REQUEST['orderLang'], $_SESSION['userObject']['nyelv']);
-            // 1-es levelûek
+            // 1-es levelï¿½ek
             for($i = 0; $i < count($words); $i++){
                 $forrasWord = $words[$i]["word_{$forras_nyelv_ext}"];
                 if($forrasWord && $words[$i]['word_foreign'] && $optionArray[$words[$i]['level']][1] == 1 && ($_REQUEST['dictionaryLevel'] <= 0 || $_REQUEST['dictionaryLevel'] == $words[$i]['level'])){
@@ -508,7 +508,7 @@ else if($_REQUEST['dictionaryShow'] == 2 || ($_REQUEST['dictionaryShow'] == 4 &&
                     $wordCount++;
                 }
             }
-            // 2-es levelûek
+            // 2-es levelï¿½ek
             for($i = 0; $i < count($words); $i++){
                 $forrasWord = $words[$i]["word_{$forras_nyelv_ext}"];
                 if($forrasWord && $words[$i]['word_foreign'] && $optionArray[$words[$i]['level']][1] == 2 && ($_REQUEST['dictionaryLevel'] <= 0 || $_REQUEST['dictionaryLevel'] == $words[$i]['level'])){
@@ -616,7 +616,7 @@ else if($_REQUEST['dictionaryShow'] == 2 || ($_REQUEST['dictionaryShow'] == 4 &&
 print "Nyelv: ". deb($userObject['nyelv']);
 print "Orderlang: ". deb($userObject['orderLang']);
 */
-                // angol nyelv esetén
+                // angol nyelv esetï¿½n
                 if($userObject['nyelv'] == 1){
                     $pronLink = "<a href=\"http://www.howjsay.com/index.php?word=" . urlencode($pronLinkWord) . "&submit=Submit\" target='_blank'>
                                     <img src='images/speaker.jpg' alt='Pronunciation' height='10' width='10'>

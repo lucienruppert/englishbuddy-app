@@ -147,9 +147,11 @@
 
   #nyelvtansorminta {
     position: absolute;
-    top: 42px;
+    top: 57px;
     left: 50%;
-    margin-left: -97px;
+    margin-left: -87px;
+    background-color: <?php print $colorValue ?>;
+    z-index: 60;
   }
 
   #time {
@@ -308,5 +310,9 @@
 
   #ajaxTable #ajaxTableFirstTd {
     display: none;
+  }
+
+  a {
+    color: white;
   }
 </style>
