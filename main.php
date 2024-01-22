@@ -54,12 +54,16 @@ $_SESSION['lastMessageUpdateTime'] = setUserTime($userObject, $_SESSION['lastMes
 
     .word-management {
         margin-top: 30px;
-        background-color: <?php print $colorValue ?>;
     }
 
-    .word-management * {
-        color: white;
+    .word-management select {
+        color: black;
     }
+
+    /* .word-management * {
+        border: 1px solid red;
+    } */
+
 </style>
 
 <BODY>

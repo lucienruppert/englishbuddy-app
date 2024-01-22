@@ -149,9 +149,10 @@
     position: absolute;
     top: 57px;
     left: 50%;
-    margin-left: -87px;
-    background-color: <?php print $colorValue ?>;
+    margin-left: -85px;
+    padding-top: 7px;
     z-index: 60;
+    
   }
 
   #time {

@@ -108,7 +108,7 @@ print "<form id='wordManagement' name='wordManagement' method='post'>";
 print "<input type='hidden' name='userId' value='{$_POST['userId']}'>";
 print "<input type='hidden' name='recordId' value='" . $wordRecord['id'] . "'>";
 print "<input type='hidden' name='homeWorkOrder' value='" . (int)$_POST['homeWorkOrder'] . "'>";
-print "<table class='word-management' width='100%' style='border: 1px solid;margin-top:36px;' align=left><tr><td  style='border: 1px solid' align='center' valign='top'><table>";
+print "<table class='word-management' width='100%' style='border: 1px solid" . $highlight . ";margin-top:36px;' align=left><tr><td  style='border: 1px solid' align='center' valign='top'><table>";
 
 $forWord = $wordRecord['word_foreign'];
 if($userObject['nyelv'] == 2){
@@ -133,10 +133,10 @@ if($_REQUEST['kitolto']){
     $readonly = 'readonly';
 }
 
-print "\n<tr><td><b>" . $nyelvText . ": </td><td><textarea name='foreignWord' rows='4' cols='37'>" . $forWord . "</textarea></td></tr>";
-print "\n<tr $hideStyle><td><b>" . translate("cel_komment") . ": </td><td><input type='text' size='38' name='foreignComm' value='" . $wordRecord['comment_foreign'] . "'></td></tr>";
-print "\n<tr><td><b>{$forrasNyelvText}: </td><td><textarea name='hunWord' rows='4' cols='37' $readonly>" . $sourceWord . "</textarea></td></tr>";
-print "\n<tr $hideStyle><td><b>" . translate("forras_komment") . ": </td><td><input type='text' size='38' name='sourceComm' value='" . $wordRecord["comment_{$forras_nyelv_ext}"] . "'></td></tr>";
+print "\n<tr><td style='color:" . $highlight . ";'>" . $nyelvText . "</td><td><textarea name='foreignWord' rows='4' cols='37'>" . $forWord . "</textarea></td></tr>";
+print "\n<tr $hideStyle><td style='color:" . $highlight . ";'>" . translate("cel_komment") . "</td><td><input type='text' size='38' name='foreignComm' value='" . $wordRecord['comment_foreign'] . "'></td></tr>";
+print "\n<tr><td style='color:" . $highlight . ";'>{$forrasNyelvText}</td><td><textarea name='hunWord' rows='4' cols='37' $readonly>" . $sourceWord . "</textarea></td></tr>";
+print "\n<tr $hideStyle><td style='color:" . $highlight . ";'>" . translate("forras_komment") . "</td><td><input type='text' size='38' name='sourceComm' value='" . $wordRecord["comment_{$forras_nyelv_ext}"] . "'></td></tr>";
 
 if($userHasAccess){
     $optionArray = getLevelList($userObject['nyelv']);
