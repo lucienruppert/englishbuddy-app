@@ -60,10 +60,31 @@ $_SESSION['lastMessageUpdateTime'] = setUserTime($userObject, $_SESSION['lastMes
         color: black;
     }
 
+    textarea,
+    input[type='text'] {
+        background-color: <?php print $dark ?>;
+    }
+
+    input[type='text'] {
+        border: none;
+        border: 1px solid grey;
+    }
+
+    input[type='button'] {
+        text-align: center;
+        background-color: <?php print $dark ?>;
+        border: 1px solid <?php print $highlight ?>;
+        border-radius: 2px;
+        padding: 2px 12px;
+        cursor: pointer;
+        letter-spacing: 2px;
+        color: white;
+        font-size: 11px;
+    }
+
     /* .word-management * {
         border: 1px solid red;
     } */
-
 </style>
 
 <BODY>
