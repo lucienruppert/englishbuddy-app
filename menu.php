@@ -102,7 +102,7 @@ if ($userObject['id'] == 1) {
             else{
                 document.getElementById('clientDiv').style.display = 'none';
                 document.getElementById('mainDiv').style.display = 'block';
-            } " style="font-weight:bold;">t</a>
+            } "><?php print translate('tanulok'); ?></a>
     </div>
   <?php } ?>
 
@@ -118,7 +118,7 @@ if ($userObject['id'] == 1) {
             else{
                 document.getElementById('financeDiv').style.display = 'none';
                 document.getElementById('mainDiv').style.display = 'block';
-            } " style="font-weight:bold;">p</a>
+            } "><?php print translate('tandijak'); ?></a>
     </div>
   <?php } ?>
 

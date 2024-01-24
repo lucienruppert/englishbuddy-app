@@ -149,7 +149,7 @@
     position: absolute;
     top: 57px;
     left: 50%;
-    margin-left: -85px;
+    margin-left: -100px;
     padding-top: 7px;
     z-index: 60;
     
@@ -164,16 +164,16 @@
 
   #tanitvanyok {
     position: absolute;
-    top: 12px;
+    top: 20px;
     left: 50%;
-    margin-left: 200px;
+    margin-left: 395px;
   }
 
   #finance {
     position: absolute;
-    top: 12px;
+    top: 20px;
     left: 50%;
-    margin-left: 100px;
+    margin-left: 340px;
   }
 
   #logout {

@@ -140,13 +140,13 @@ print "<tr><td align=left style='vertical-align:top'><input type='button' name='
     }
     /* A 2. r�sz az�rt >0, mert ha fel�l Level0 van kiv�lasztva, alul meg valami m�s, akkor is menteni kell, �s az als�t kell figyelembe venni */
     if(document.forms['wordManagement'].levelSelection && document.forms['wordManagement'].levelSelection.value != -1 && document.forms['wordManagement'].levelSelection2.value > 0){
-        alert('Csak egy level-t v�laszthatsz ki!');
+        alert('Csak egy level-t valaszthatsz ki!');
         return false;
     }
     document.forms['wordManagement'].actionType.value='store';
     document.forms['wordManagement'].submit();\"></td>";
 if ($userHasAccess) {
-    print "<td align='right'><select name='levelSelection2'>";
+    print "<td align='right'><select name='levelSelection2' style='color:white;background-color:" . $dark . ";>";
     print "<option value='-1'>";
     foreach ($optionArray as $key => $value) {
         if ($value[1] != 1) {
@@ -165,11 +165,11 @@ if ($userHasAccess) {
         }
     }
     print "</select>
-    <select id='categorySelection' name='categorySelection'>
+    <select id='categorySelection' name='categorySelection' style='color:white;background-color:" . $dark . ";>
         <option value=''></option>
-        <option value='1' " . ($wordRecord['category'] == 1 ? 'selected' : '') . ">alap</option>
-        <option value='2' " . ($wordRecord['category'] == 2 ? 'selected' : '') . ">v�laszt�kos</option>
-        <option value='3' " . ($wordRecord['category'] == 3 ? 'selected' : '') . ">ritka</option>
+        <option value='1' " . ($wordRecord['category'] == 1 ? 'selected' : '') . ">basic</option>
+        <option value='2' " . ($wordRecord['category'] == 2 ? 'selected' : '') . ">sophisticated</option>
+        <option value='3' " . ($wordRecord['category'] == 3 ? 'selected' : '') . ">rare</option>
     </select>
     </td>";
 
@@ -179,7 +179,7 @@ if ($userHasAccess) {
         document.forms['wordManagement'].actionType.value='delete';
         document.forms['wordManagement'].submit();\"></td>
 
-    <td align='right'><select name='levelSelection' size='12'>";
+    <td align='right'><select name='levelSelection' size='12' style='color:white;background-color:" . $dark . ";>";
     print "<option value='-1' selected>";
     foreach ($optionArray as $key => $value) {
         if ($value[1] != 2) {
@@ -244,11 +244,11 @@ this.form.submit();
 
 if ($userHasAccess) { ?>
     <td>
-        <select style='width:120px' name='dictionaryShow' onchange='this.form.submit();'>
-            <option value='1' <?php print $dictionaryShowSelected[0]; ?>>Kit�ltetlen
-            <option value='2' <?php print $dictionaryShowSelected[1]; ?>>Minden
-            <option value='3' <?php print $dictionaryShowSelected[2]; ?>>Level n�lk�liek
-            <option value='4' <?php print $dictionaryShowSelected[3]; ?>>Saj�t
+        <select style='width:120px;color:white;background-color:<?php print $dark ?>;' name='dictionaryShow' onchange='this.form.submit();'>
+            <option value='1' <?php print $dictionaryShowSelected[0]; ?>>Not filled out
+            <option value='2' <?php print $dictionaryShowSelected[1]; ?>>All
+            <option value='3' <?php print $dictionaryShowSelected[2]; ?>>Without levels
+            <option value='4' <?php print $dictionaryShowSelected[3]; ?>>Your own
         </select>
     </td>
 <?php
@@ -267,7 +267,8 @@ if ($userHasAccess) { ?>
 <input type='hidden' name='orderLang' value=<?php print "'{$_REQUEST['orderLang']}'"; ?>>
 
 
-<td><input type='button' value=<?php print "'" . translate('frissit') . "'"; ?> onclick="document.forms['wordManagement'].submit()"></td>
+<td><input type='button' value=<?php print "'" . translate('frissit') . "'"; ?> onclick=" document.forms['wordManagement'].submit()">
+</td>
 <td><input type='button' value=<?php print "'" . translate('sorrend') . "'"; ?> onclick="document.forms['wordManagement'].homeWorkOrder.value = 1 - document.forms['wordManagement'].homeWorkOrder.value;document.forms['wordManagement'].submit()"></td>
 <!--<td align='right'><span id='hfCountSpan' style='font-size:14pt;color:#1568A2'></span><span id='wordCountSpan' style='font-size:14pt'></span></td>-->
 </tr>
@@ -276,7 +277,7 @@ if ($userHasAccess) { ?>
 
     if ($userHasAccess && ($_REQUEST['dictionaryShow'] == 2 || $_REQUEST['dictionaryShow'] == 4)) {
         print "\n<td colspan='5' style='white-space: nowrap'>";
-        print "\n<select name='dictionaryUser' onchange='this.form.submit();'>";
+        print "\n<select style='color:white;background-color:" . $dark . ";' name='dictionaryUser' onchange='this.form.submit();'>";
         print "\n<option value='0'>";
         foreach ($wordUsers as $user) {
             if ($user['nyelv'] != $userObject['nyelv']) {
@@ -483,15 +484,15 @@ if ($userHasAccess) { ?>
                             $allWordCount = $wordCount + $hfCount;
                             if ($userHasAccess) {
                                 if ($_REQUEST['orderLang'] == 'hun') {
-                                    print "\n<tr><td style='vertical-align:top'><a name='link{$allWordCount}' href='#' onclick=\"wordLink(" . (int)$words[$i]['id'] . ", {$allWordCount});\" style='color:black'>{$forrasWord}</a></td><td style='vertical-align:top'><a href='#' onclick=\"wordLink(" . (int)$words[$i]['id'] . ", {$allWordCount});\" style='color:black'>{$words[$i]['word_foreign']}</a></td></tr>";
+                                    print "\n<tr><td style='vertical-align:top'><a name='link{$allWordCount}' href='#' onclick=\"wordLink(" . (int)$words[$i]['id'] . ", {$allWordCount});\" style='color:white'>{$forrasWord}</a></td><td style='vertical-align:top'><a href='#' onclick=\"wordLink(" . (int)$words[$i]['id'] . ", {$allWordCount});\" style='color:white'>{$words[$i]['word_foreign']}</a></td></tr>";
                                 } else {
-                                    print "\n<tr><td style='vertical-align:top'><a name='link{$allWordCount}' href='#' onclick=\"wordLink(" . (int)$words[$i]['id'] . ", {$allWordCount});\" style='color:black'>{$words[$i]['word_foreign']}</a></td><td style='vertical-align:top'><a href='#' onclick=\"wordLink(" . (int)$words[$i]['id'] . ", {$allWordCount});\" style='color:black'>{$forrasWord}</a></td></tr>";
+                                    print "\n<tr><td style='vertical-align:top'><a name='link{$allWordCount}' href='#' onclick=\"wordLink(" . (int)$words[$i]['id'] . ", {$allWordCount});\" style='color:white'>{$words[$i]['word_foreign']}</a></td><td style='vertical-align:top'><a href='#' onclick=\"wordLink(" . (int)$words[$i]['id'] . ", {$allWordCount});\" style='color:white'>{$forrasWord}</a></td></tr>";
                                 }
                             } else {
                                 if ($_REQUEST['orderLang'] == 'hun') {
-                                    print "\n<tr><td style='vertical-align:top;color:black'>{$forrasWord}</td><td style='vertical-align:top;color:black'>{$words[$i]['word_foreign']}</td></tr>";
+                                    print "\n<tr><td style='vertical-align:top;color:white'>{$forrasWord}</td><td style='vertical-align:top;color:white'>{$words[$i]['word_foreign']}</td></tr>";
                                 } else {
-                                    print "\n<tr><td style='vertical-align:top;color:black'>{$words[$i]['word_foreign']}</td><td style='vertical-align:top;color:black'>{$forrasWord}</td></tr>";
+                                    print "\n<tr><td style='vertical-align:top;color:white'>{$words[$i]['word_foreign']}</td><td style='vertical-align:top;color:white'>{$forrasWord}</td></tr>";
                                 }
                             }
                             $wordCount++;
@@ -526,15 +527,15 @@ if ($userHasAccess) { ?>
 
                             if ($userHasAccess) {
                                 if ($_REQUEST['orderLang'] == 'hun') {
-                                    print "\n<tr><td style='vertical-align:top' $title2><a name='link{$allWordCount}' href='#' onclick=\"wordLink(" . (int)$words[$i]['id'] . ", {$allWordCount});\" style='color:black'>{$word2}</a></td><td style='vertical-align:top' $title><a href='#' onclick=\"wordLink(" . (int)$words[$i]['id'] . ", {$allWordCount});\" style='color:black'>{$word1}</a></td><td><input type='checkbox' class='cbMark' data-wid='" . (int)$words[$i]['id'] . "' data-uwid='" . (int)$words[$i]['uw_id'] . "' data-user='" . (int)$_REQUEST['dictionaryUser'] . "' " . ($words[$i]['my_is_marked'] == 1 ? "checked" : "") . "></td></tr>";
+                                    print "\n<tr><td style='vertical-align:top' $title2><a name='link{$allWordCount}' href='#' onclick=\"wordLink(" . (int)$words[$i]['id'] . ", {$allWordCount});\" style='color:white'>{$word2}</a></td><td style='vertical-align:top' $title><a href='#' onclick=\"wordLink(" . (int)$words[$i]['id'] . ", {$allWordCount});\" style='color:white'>{$word1}</a></td><td><input type='checkbox' class='cbMark' data-wid='" . (int)$words[$i]['id'] . "' data-uwid='" . (int)$words[$i]['uw_id'] . "' data-user='" . (int)$_REQUEST['dictionaryUser'] . "' " . ($words[$i]['my_is_marked'] == 1 ? "checked" : "") . "></td></tr>";
                                 } else {
-                                    print "\n<tr><td style='vertical-align:top' $title><a name='link{$allWordCount}' href='#' onclick=\"wordLink(" . (int)$words[$i]['id'] . ", {$allWordCount});\" style='color:black'>{$word1}</a></td><td style='vertical-align:top' $title2><a href='#' onclick=\"wordLink(" . (int)$words[$i]['id'] . ", {$allWordCount});\" style='color:black'>{$word2}</a></td><td><input type='checkbox' class='cbMark' data-wid='" . (int)$words[$i]['id'] . "' data-uwid='" . (int)$words[$i]['uw_id'] . "' data-user='" . (int)$_REQUEST['dictionaryUser'] . "' " . ($words[$i]['my_is_marked'] == 1 ? "checked" : "") . "></td></tr>";
+                                    print "\n<tr><td style='vertical-align:top' $title><a name='link{$allWordCount}' href='#' onclick=\"wordLink(" . (int)$words[$i]['id'] . ", {$allWordCount});\" style='color:white'>{$word1}</a></td><td style='vertical-align:top' $title2><a href='#' onclick=\"wordLink(" . (int)$words[$i]['id'] . ", {$allWordCount});\" style='color:white'>{$word2}</a></td><td><input type='checkbox' class='cbMark' data-wid='" . (int)$words[$i]['id'] . "' data-uwid='" . (int)$words[$i]['uw_id'] . "' data-user='" . (int)$_REQUEST['dictionaryUser'] . "' " . ($words[$i]['my_is_marked'] == 1 ? "checked" : "") . "></td></tr>";
                                 }
                             } else {
                                 if ($_REQUEST['orderLang'] == 'hun') {
-                                    print "\n<tr><td style='vertical-align:top;color:black' $title2>{$word2}</td><td style='vertical-align:top;color:black' $title>{$word1}</td></tr>";
+                                    print "\n<tr><td style='vertical-align:top;color:white' $title2>{$word2}</td><td style='vertical-align:top;color:white' $title>{$word1}</td></tr>";
                                 } else {
-                                    print "\n<tr><td style='vertical-align:top;color:black' $title>{$word1}</td><td style='vertical-align:top;color:black' $title2>{$word2}</td></tr>";
+                                    print "\n<tr><td style='vertical-align:top;color:white' $title>{$word1}</td><td style='vertical-align:top;color:white' $title2>{$word2}</td></tr>";
                                 }
                             }
                             $wordCount++;

@@ -82,6 +82,7 @@ $_SESSION['lastMessageUpdateTime'] = setUserTime($userObject, $_SESSION['lastMes
         font-size: 11px;
     }
 
+    
     /* .word-management * {
         border: 1px solid red;
     } */
