@@ -9,7 +9,7 @@
     <?php } ?>
   }
 
-  .logout {
+  .logout, .home {
     color: <?php print $highlight ?>;
   }
 

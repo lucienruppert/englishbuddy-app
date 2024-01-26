@@ -15,7 +15,6 @@
 		<?php }
 		if ($userObject) {
 		?>
-			<a href='#'><?php print translate('UJ GOMB'); ?></a>
 			<a href='#' class="logout" onclick="event.stopPropagation();location.href='logout.php'"><?php print translate('kijelentkezes'); ?>
 			</a>
 		<?php } ?>

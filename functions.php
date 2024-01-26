@@ -68,7 +68,6 @@ $lcasa_column_percent = '27.7%';
 $lcasa_font_text = '18px';
 $logosize1 = '40pt';
 $logosize2 = '10pt';
-$mainDivtop = '220px';
 $menuFontSize = 'font-size:10pt;color:grey;font-weight:plain;';
 $menuWidth = '180';
 $menuHeight = '50';
@@ -89,12 +88,6 @@ $xSize = 'font-size:17;font-weight:bold;color:white';
 $xWidth = '20';
 $SubscribeFontSize = '16px';
 $SubscribeCheckBoxZoom = '1';
-
-if ($isAndroid && $userObject) {
-    $TopRedHeight = '300px';
-    $mainDivtop = '560px';
-}
-
 
 function DEBUG($variable)
 {

@@ -46,7 +46,7 @@ if ($userObject['id'] == 1) {
 
 <div class="navigation">
   <div>
-    <a href="index.php"><?php print translate('fooldal'); ?></a>
+    <a href="index.php" class="home"><?php print translate('fooldal'); ?></a>
   </div>
   <?php
   $upperRowObject = getLinksForPractice();

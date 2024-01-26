@@ -221,7 +221,7 @@
     position: absolute;
     top: 35px;
     left: 50%;
-    margin-left: -405px;
+    margin-left: 0px;
     display: none;
     background-color: white;
     -webkit-transform: translate3d(0, 0, 0);
