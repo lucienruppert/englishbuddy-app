@@ -40,7 +40,7 @@ $trans['rogzitem_hazimba'] = "Rögzítem a házimba";
 
 $trans['kovetkezo_ora'] = "Következõ óra";
 
-$trans['sajat_mondatok'] = "MONDATAIM";
+$trans['sajat_mondatok'] = "Mondataim";
 $trans['sajat_mondatok_10'] = "Saját mondatok";
 $trans['sajat_mondatok_all'] = "(ÖSSZES)";
 
@@ -49,15 +49,15 @@ $trans['kategorizalas'] = "szólisták";
 $trans['peldamondatok'] = "(ÖSSZES)";
 $trans['peldamondatok_all'] = "Példamondatok (összes)";
 $trans['tudastar_title'] = "tudástár";
-$trans['tudastar'] = "NYELVTANI<br>PÉLDATÁR";
-$trans['tudastar2'] = "NYELVTANI PÉLDATÁR";
+$trans['tudastar'] = "Nyelvtani példatár";
+$trans['tudastar2'] = "Nyelvtani példatár";
 $trans['tanuloszoba'] = "Tanulószoba";
 $trans['kitolto'] = "kitöltõ";
 $trans['sajat_mondat_szo'] = "Összgyakorló";
 
 $trans['funkcio_skype'] = "A funkció csak Skype-os tanulók számára érhetõ el!";
 
-$trans['vocabulary'] = "ALAPSZÓKINCS";
+$trans['vocabulary'] = "Alapszókincs";
 $trans['mumus'] = "MUMUS";
 $trans['sajat_szavak_all'] = "ÖSSZES";
 $trans['nem_tudtam'] = "nem tudtam";
@@ -91,14 +91,14 @@ $trans['remove'] = "kivesz";
 $trans['ajaxDivSave'] = "Ment";
 $trans['ajaxDivSaveLoginMessage'] = "Be kell lépned a szavak mentéséhez.";
 $trans['audioszoba'] = "Audiószoba";
-$trans['increasevocabulary'] = "SAJÁT<br>SZÓTÁR";
-$trans['increasevocabulary2'] = "SAJÁT SZÓTÁR";
-$trans['increasevocabulary_android'] = "SAJÁT SZÓTÁR";
-$trans['intelligensgyakorlo'] = "INTELLIGENS<br>GYAKORLÓ";
-$trans['intelligensgyakorlo2'] = "INTELLIGENS GYAKORLÓ";
+$trans['increasevocabulary'] = "Saját szótár";
+$trans['increasevocabulary2'] = "Saját szótár";
+$trans['increasevocabulary_android'] = "Saját szótár";
+$trans['intelligensgyakorlo'] = "Intelligens gyakorló";
+$trans['intelligensgyakorlo2'] = "Intelligens gyakorló";
 
 $trans['myperformance'] = "Szorgalom mutató";
-$trans['szotar'] = "SZÓTÁR";
+$trans['szotar'] = "Szótár";
 $trans['savedwords'] = "Mentett Szavaim";
 $trans['words'] = "szó";
 $trans['basicwords'] = "a leggyakoribb 3000 szó";
@@ -108,14 +108,14 @@ $trans['dailyclicks'] = "napi klikkek száma";
 $trans['useofdictionary'] = "Szótárhasználat";
 $trans['napikviz'] = "Napi Kvíz";
 $trans['napikviz_br'] = "Napi<br>Kvíz";
-$trans['basicvocabulary'] = "ALAP<br>SZÓKINCS";
-$trans['basicvocabulary2'] = "ALAP SZÓKINCS";
+$trans['basicvocabulary'] = "Alap szókincs";
+$trans['basicvocabulary2'] = "Alap szókincs";
 $trans['kikerdezo'] = "lingocasa";
 $trans['onlinetutor'] = "ÉLETSZAGÚ NYELVGYAKORLÁS";
 
-$trans['basicvocabulary_android'] = "ALAP SZÓKINCS";
-$trans['tudastar_android'] = "NYELVTANI PÉLDATÁR";
-$trans['intelligensgyakorlo_android'] = "INTELLIGENS GYAKORLÓ";
+$trans['basicvocabulary_android'] = "Alap szókincs";
+$trans['tudastar_android'] = "Nyelvtani példatár";
+$trans['intelligensgyakorlo_android'] = "Intelligens gyakorló";
 
 $trans['subscribe'] = "REGISZTRÁCIÓ";
 

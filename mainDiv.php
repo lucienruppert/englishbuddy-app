@@ -1,18 +1,23 @@
 <div id='mainDiv' style=<?php print "width:100%;' . $mainStyleText . '"; ?>>
-  <?php if ($userObject) { ?>
-    <a href='#' class="menu-button" onclick="sajatSzavak();"><? print translate("increasevocabulary"); ?></a>
-    <a href='#' class="menu-button" onclick="alapszokincs();"><? print translate("basicvocabulary"); ?></a>
-    <a href='#' class="menu-button" onclick="peldamondatok();"><? print translate("tudastar"); ?></a>
-    <a href='#' class="menu-button" onclick="intelligensGyakorlo()"><? print translate("intelligensgyakorlo"); ?></a>
-  <?php } ?>
-  <?php if ($userObject && !in_array($userObject["status"], array(1, 2))) { ?>
-    <a href='#' class="menu-button" onclick=<?php print $onclick1; ?>><? print translate("sajat_mondatok_10"); ?></a>
-    <a href='#' class="menu-button" onclick=<?php print $onclick4; ?>><? print translate("sajat_mondat_szo"); ?></a>
-    <a id="aTanuloszoba" href='#' class="menu-button" title=<?php print "'" . translate("") . "'" ?> onclick=<?php print $onclick3; ?>><? print translate("tanuloszoba"); ?></a>
-    <a class="menu-button" onclick="audioSzoba();" href="#"><? print translate("audioszoba"); ?></a>
-  <?php } ?>
-
-  <?php if ($userObject) { ?>
+  <span class="welcome submenu">
+    <?php if ($userObject) { ?>
+      <a href='#' class=" menu-button-smaller" onclick="sajatSzavak();"><? print translate("increasevocabulary"); ?></a>
+      <a href='#' class="menu-button-smaller" onclick="alapszokincs();"><? print translate("basicvocabulary"); ?></a>
+      <a href='#' class="menu-button-smaller" onclick="peldamondatok();"><? print translate("tudastar"); ?></a>
+      <a href='#' class="menu-button-smaller" onclick="intelligensGyakorlo()"><? print translate("intelligensgyakorlo"); ?></a>
+    <?php } ?>
+    <?php if ($userObject && !in_array($userObject["status"], array(1, 2))) { ?>
+      <a href='#' class="menu-button-smaller" onclick=<?php print $onclick1; ?>><? print translate("sajat_mondatok_10"); ?></a>
+      <a href='#' class="menu-button-smaller" onclick=<?php print $onclick4; ?>><? print translate("sajat_mondat_szo"); ?></a>
+      <a class="menu-button-smaller" onclick="audioSzoba();" href="#"><? print translate("audioszoba"); ?></a>
+    <?php } 
+     if ($userObject) { ?>
+  </span>
+  <span class="classroom submenu">
+    <a id="aTanuloszoba" href='#' class="button classroom-button" title=<?php print "'" . translate("") . "'" ?> onclick=<?php print $onclick3; ?>><? print translate("tanuloszoba"); ?></a>
+  </span>
+    <?php } 
+  if ($userObject) { ?>
     <table width='100%' align='center' valign='center' style=<?php print "'border: 1px solid " . $globalcolor . ";'"; ?> cellpadding='0' cellspacing='0'>
       <tr>
         <td colspan='3' align='right' style=<?php print "'padding-top:5px;padding-right:10px;background:" . $globalcolor . ";'"; ?>><a id="legujjabbszavak" href='#' style='color:white;font-size:12pt;'></a>
@@ -24,17 +29,17 @@
         </td>
       </tr>
       <tr>
-        <td valign="top" align='left' style='padding-left:250px;padding-top:10px;padding-bottom:10px;font-size:10pt;'>
-          <?php print "<font color='grey'>" .
-          $five_days_ago = strtotime('-5 days');
-          $five_days_formatted = date('Y-m-d', $five_days_ago);
-          if ($userObject["forras_nyelv"] == 0 && $userObject["nyelv"] == 1) {
-            $updated_words = getLastFiveUpdatedWords($five_days_formatted);
-            foreach ($updated_words as $row) {
-              print("<p><b>" . $row["word_angol"] . "</b>&nbsp;-&nbsp;" . $row["word_hun"] . "</p>");
-            }
+        <?php
+        print "<td valign='top' align='left' style='padding-left:250px;padding-top:10px;padding-bottom:10px;font-size:10pt;'><font color='grey'>";
+        $five_days_ago = strtotime('-5 days');
+        $five_days_formatted = date('Y-m-d', $five_days_ago);
+        if ($userObject["forras_nyelv"] == 0 && $userObject["nyelv"] == 1) {
+          $updated_words = getLastFiveUpdatedWords($five_days_formatted);
+          foreach ($updated_words as $row) {
+            print("<p><b>" . $row["word_angol"] . "</b>&nbsp;-&nbsp;" . $row["word_hun"] . "</p>");
           }
-          print "</font>" ?>
+        } ?>
+        </font>
         </td>
       </tr>
     </table>

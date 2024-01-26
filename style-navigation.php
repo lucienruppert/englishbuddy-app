@@ -9,13 +9,11 @@
     <?php } ?>
   }
 
-  .logout, .home {
+  .logout,
+  .home {
     color: <?php print $highlight ?>;
   }
 
-  .menu-button {
-    color: white;
-  }
 
   A,
   A:link,
@@ -29,11 +27,40 @@
     text-decoration: none;
   }
 
+  .menu-button {
+    color: white;
+  }
+
+  .menu-button-smaller {
+    color: <?php print $colorValue ?>;
+    font-weight: normal;
+  }
+
   .welcome {
     color: <?php print $highlight ?>;
     font-size: 14px;
     text-align: left;
     width: 100%;
     font-weight: bold;
+  }
+
+  .submenu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .classroom {
+    margin: 30px 0 100px 0;
+  }
+
+  .classroom-button {
+    color: white;
+    padding: 7px 10px;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    font-size: 14px;
   }
 </style>

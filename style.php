@@ -291,6 +291,12 @@
 
   #mainDiv {
     position: absolute;
-    top: 100;
+    top: 70;
+    width: 100%;
   }
+
+  /* #mainDiv * {
+    border: 1px solid red;
+  } */
+
 </style>
