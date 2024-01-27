@@ -92,7 +92,7 @@ if ($userObject['id'] == 1) {
 
   <?php if (in_array($userObject['status'], array(5, 6)) && $_REQUEST['content'] != 'wordLearning_quick') { ?>
     <div id='tanitvanyok'>
-      <a href='#' onclick="
+      <a href='#' class="admin-info-board" onclick="
             event.stopPropagation();
             if(document.getElementById('clientDiv').style.display == 'none'){
                 document.getElementById('clientDiv').style.display = 'block';
@@ -108,7 +108,7 @@ if ($userObject['id'] == 1) {
 
   <?php if (in_array($userObject['status'], array(5, 6)) && $_REQUEST['content'] != 'wordLearning_quick') { ?>
     <div id='finance'>
-      <a href='#' onclick="
+      <a href='#' class="admin-info-board" onclick="
             event.stopPropagation();
             if(document.getElementById('financeDiv').style.display == 'none'){
                 document.getElementById('financeDiv').style.display = 'block';

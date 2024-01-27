@@ -206,7 +206,7 @@
   .login {
     display: flex;
     justify-content: center;
-    margin-top: 300px;
+    margin-top: 100px;
     width: 100vw;
   }
 

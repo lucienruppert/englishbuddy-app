@@ -166,14 +166,18 @@
     position: absolute;
     top: 20px;
     left: 50%;
-    margin-left: 395px;
+    margin-left: 155px;
   }
 
   #finance {
     position: absolute;
     top: 20px;
     left: 50%;
-    margin-left: 340px;
+    margin-left: 100px;
+  }
+
+  .admin-info-board {
+   color: <?php print $colorValue ?>
   }
 
   #logout {
@@ -206,7 +210,7 @@
     position: absolute;
     top: 35px;
     left: 50%;
-    margin-left: -405px;
+    margin-left: -500px;
     display: none;
     background-color: white;
     filter: alpha(opacity=100);
@@ -221,7 +225,7 @@
     position: absolute;
     top: 35px;
     left: 50%;
-    margin-left: 0px;
+    margin-left: -500px;
     display: none;
     background-color: white;
     -webkit-transform: translate3d(0, 0, 0);

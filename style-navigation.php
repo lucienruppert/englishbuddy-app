@@ -52,6 +52,10 @@
     text-align: center;
   }
 
+  .admin-menu {
+    margin-top: 10px;
+  }
+
   .classroom {
     margin: 30px 0 100px 0;
   }
