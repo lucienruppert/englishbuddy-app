@@ -38,7 +38,7 @@
     $title = $i . '. ' . $level[$_REQUEST['selectedLevel']][0];
 
     if(!$text){
-        $text = "Nincs szöveg";
+        $text = "Nincs szï¿½veg";
     }
 
 ?>
@@ -65,7 +65,7 @@
             <table width='800px' border='0' class='envelopeTable'>
             <tr>
                 <td width='100'></td>
-                <td align='left' valign='top' style='color:black;font-size:12pt;' height='300'>";
+                <td align='left' valign='top' style='font-size:12pt;color:white' height='300'>";
     if($userHasAccess){
         if(!$_REQUEST['isRuleEdit']){
             print "<span onclick=\"document.forms['ruleForm'].isRuleEdit.value=1; document.forms['ruleForm'].submit();\">{$text}</span>";
@@ -73,7 +73,7 @@
         else{
             $text = str_replace("<br>", chr(13) . chr(10), $text);
             print "<textarea name='txtRule' rows=15 cols=100>{$text}</textarea>";
-            print "<br><input type='submit' value='Rögzít'>";
+            print "<br><input type='submit' value='Rogzzt'>";
             print "<input type='hidden' name='storeRule' value='1'>";
         }
     }

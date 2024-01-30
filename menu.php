@@ -90,9 +90,9 @@ if ($userObject['id'] == 1) {
   ?>
 </div>
 
-  <?php if (in_array($userObject['status'], array(5, 6)) && $_REQUEST['content'] != 'wordLearning_quick') { ?>
-    <div id='tanitvanyok'>
-      <a href='#' class="admin-info-board" onclick="
+<?php if (in_array($userObject['status'], array(5, 6)) && $_REQUEST['content'] != 'wordLearning_quick') { ?>
+  <div id='tanitvanyok'>
+    <a href='#' class="admin-info-board" onclick="
             event.stopPropagation();
             if(document.getElementById('clientDiv').style.display == 'none'){
                 document.getElementById('clientDiv').style.display = 'block';
@@ -103,12 +103,12 @@ if ($userObject['id'] == 1) {
                 document.getElementById('clientDiv').style.display = 'none';
                 document.getElementById('mainDiv').style.display = 'block';
             } "><?php print translate('tanulok'); ?></a>
-    </div>
-  <?php } ?>
+  </div>
+<?php } ?>
 
-  <?php if (in_array($userObject['status'], array(5, 6)) && $_REQUEST['content'] != 'wordLearning_quick') { ?>
-    <div id='finance'>
-      <a href='#' class="admin-info-board" onclick="
+<?php if (in_array($userObject['status'], array(5, 6)) && $_REQUEST['content'] != 'wordLearning_quick') { ?>
+  <div id='finance'>
+    <a href='#' class="admin-info-board" onclick="
             event.stopPropagation();
             if(document.getElementById('financeDiv').style.display == 'none'){
                 document.getElementById('financeDiv').style.display = 'block';
@@ -119,76 +119,76 @@ if ($userObject['id'] == 1) {
                 document.getElementById('financeDiv').style.display = 'none';
                 document.getElementById('mainDiv').style.display = 'block';
             } "><?php print translate('tandijak'); ?></a>
-    </div>
-  <?php } ?>
+  </div>
+<?php } ?>
 
+<?php
+if ($_REQUEST['sourcePage'] == 'clients') {
+  $clientStyleText = "style='display:block'";
+  $mainStyleText = "style='display:none'";
+  $financeStyleText = "style='display:none'";
+} else if ($_REQUEST['sourcePage'] == 'finance') {
+  $clientStyleText = "style='display:none'";
+  $mainStyleText = "style='display:none'";
+  $financeStyleText = "style='display:block'";
+} else {
+  $clientStyleText = "style='display:none'";
+  $mainStyleText = "style='display:block'";
+  $financeStyleText = "style='display:none'";
+}
+
+//    if(in_array($userObject['status'], array(5, 6))){
+if (in_array($userObject['status'], array(5, 6))) {
+  print "\n<div id='clientDiv' {$clientStyleText}>\n";
+  $formAction = "main.php?content=" . $_REQUEST['content'];
+  include('clients.php');
+  print "\n</div>";
+}
+if (in_array($userObject['status'], array(5, 6))) {
+  print "\n<div id='financeDiv' {$financeStyleText}>\n";
+  $formAction = "main.php?content=" . $_REQUEST['content'];
+  include('finance.php');
+  print "\n</div>";
+}
+
+if ($_REQUEST['content'] == "wordLearning_quick") {
+  $style = "style='display:none'";
+} else
+  $style = "";
+?>
+
+<div id='nyelvtansorminta' <?php print $style; ?>>
   <?php
-  if ($_REQUEST['sourcePage'] == 'clients') {
-    $clientStyleText = "style='display:block'";
-    $mainStyleText = "style='display:none'";
-    $financeStyleText = "style='display:none'";
-  } else if ($_REQUEST['sourcePage'] == 'finance') {
-    $clientStyleText = "style='display:none'";
-    $mainStyleText = "style='display:none'";
-    $financeStyleText = "style='display:block'";
-  } else {
-    $clientStyleText = "style='display:none'";
-    $mainStyleText = "style='display:block'";
-    $financeStyleText = "style='display:none'";
-  }
+  $list = getLevelList($userObject['nyelv']);
+  $levels = array();
+  $levelIndex = 0;
+  $bontasLimit = 10;
+  $isLevelMaxed = ($userObject['max_level'] == 0);
 
-  //    if(in_array($userObject['status'], array(5, 6))){
-  if (in_array($userObject['status'], array(5, 6))) {
-    print "\n<div id='clientDiv' {$clientStyleText}>\n";
-    $formAction = "main.php?content=" . $_REQUEST['content'];
-    include('clients.php');
-    print "\n</div>";
-  }
-  if (in_array($userObject['status'], array(5, 6))) {
-    print "\n<div id='financeDiv' {$financeStyleText}>\n";
-    $formAction = "main.php?content=" . $_REQUEST['content'];
-    include('finance.php');
-    print "\n</div>";
-  }
-
-  if ($_REQUEST['content'] == "wordLearning_quick") {
-    $style = "style='display:none'";
-  } else
-    $style = "";
-  ?>
-
-  <div id='nyelvtansorminta' <?php print $style; ?>>
-    <?php
-    $list = getLevelList($userObject['nyelv']);
-    $levels = array();
-    $levelIndex = 0;
-    $bontasLimit = 10;
-    $isLevelMaxed = ($userObject['max_level'] == 0);
-
-    foreach ($list as $key => $value) {
-      if (in_array($value[1], array(1, 2, 3)) && $key > 0) {
-        if (!in_array($value[1], array(1, 2))) {
-          if (count($levels[$levelIndex]) >= $bontasLimit) {
-            $levelIndex++;
-          }
-          $levels[$levelIndex][] = array($key, $value[0], $isLevelMaxed);
+  foreach ($list as $key => $value) {
+    if (in_array($value[1], array(1, 2, 3)) && $key > 0) {
+      if (!in_array($value[1], array(1, 2))) {
+        if (count($levels[$levelIndex]) >= $bontasLimit) {
+          $levelIndex++;
         }
-        if ($userObject['max_level'] == $key) {
-          $isLevelMaxed = true;
-        }
+        $levels[$levelIndex][] = array($key, $value[0], $isLevelMaxed);
+      }
+      if ($userObject['max_level'] == $key) {
+        $isLevelMaxed = true;
       }
     }
-    print "\n<ul class=\"sf-menu\">";
-    $i = 1;
-    foreach ($levels as $key => $level) {
-      print "\n<li>";
-      print "\n<a href=\"#\" onclick=\"event.stopPropagation();\">" . ($key * 10 + 1) . " - " . ($key * 10 + $bontasLimit) . "</a>";
-      print "\n<ul>";
-      foreach ($level as $sublevel) {
-        print "\n<li><a href=\"#\" ";
-        if (!$sublevel[2]) {
-          $styleText = "style=\"color:#fff\"";
-          print "onclick=\"
+  }
+  print "\n<ul class=\"sf-menu\">";
+  $i = 1;
+  foreach ($levels as $key => $level) {
+    print "\n<li>";
+    print "\n<a href=\"#\" onclick=\"event.stopPropagation();\">" . ($key * 10 + 1) . " - " . ($key * 10 + $bontasLimit) . "</a>";
+    print "\n<ul>";
+    foreach ($level as $sublevel) {
+      print "\n<li><a href=\"#\" ";
+      if (!$sublevel[2]) {
+        $styleText = "style=\"color:#fff\"";
+        print "onclick=\"
                         event.stopPropagation();
                         if(document.getElementById('ruleId').value == '{$sublevel[0]}'){
                             document.getElementById('ruleDiv').style.display = 'none';
@@ -198,48 +198,48 @@ if ($userObject['id'] == 1) {
                             getLevelInfo('{$sublevel[0]}', {$i});
                         }
                 \"";
-        } else {
-          $styleText = "style=\"color:#aaa\"";
-        }
-        print " {$styleText}>" . ($i++) . ". {$sublevel[1]}</a></li>";
-        /*
+      } else {
+        $styleText = "style=\"color:#aaa\"";
+      }
+      print " {$styleText}>" . ($i++) . ". {$sublevel[1]}</a></li>";
+      /*
             if($sublevel[0] == $userObject['max_level']){
                 $isUserLevelGood = false;
             }
             */
-      }
-      print "\n</ul>";
     }
     print "\n</ul>";
-    ?>
-  </div>
+  }
+  print "\n</ul>";
+  ?>
+</div>
 
-  <div id='ruleDiv' onclick="event.stopPropagation();this.style.display='none'">
-    <input type='hidden' name='ruleId' id='ruleId' value=''>
-    <table width='800px' border='0' cellspacing='0' cellpadding='0'>
-      <tr>
-        <td style='background-color:grey;' height='50' align='center' colspan='3'><span id='ruleTitleSpan' style='background-color:grey;font-size:20pt;color:white;'></span></td>
-      </tr>
-      <tr>
-        <td height='50' colspan='3'></td>
-      </tr>
-      <tr>
-        <td width='100'></td>
-        <td align='left' valign='top' style='color:black;font-size:12pt;' height='300'>
-          <span id='ruleTextContainer'></span>
-        </td>
-        <td width='100'></td>
-      </tr>
-    </table>
-  </div>
+<div id='ruleDiv' onclick="event.stopPropagation();this.style.display='none'">
+  <input type='hidden' name='ruleId' id='ruleId' value=''>
+  <table width='100%' border='0' cellspacing='0' cellpadding='0' style='background-color:<?php print $colorValue ?>;'>
+    <tr>
+      <td style='background-color:<?php print $highlight ?>;' height='50' align='center' colspan='3'><span id='ruleTitleSpan' style='font-size:20pt;color:white;'></span></td>
+    </tr>
+    <tr>
+      <td height='50' colspan='3'></td>
+    </tr>
+    <tr>
+      <td width='100'></td>
+      <td align='left' valign='top' style='color:black;font-size:12pt;' height='300'>
+        <span id='ruleTextContainer'></span>
+      </td>
+      <td width='100'></td>
+    </tr>
+  </table>
+</div>
 
-  <?php
-  function getLinksForPractice()
-  {
+<?php
+function getLinksForPractice()
+{
 
-    /*if(!$GLOBALS['isAndroid'])*/ {
+  /*if(!$GLOBALS['isAndroid'])*/ {
 
-      $obj['igeragozas']['content'] = "<div id='igeragozas'>
+    $obj['igeragozas']['content'] = "<div id='igeragozas'>
            <a href='#' onclick=\"
             event.stopPropagation();
             if(document.getElementById('igeragozasDiv').style.display == 'none'){
@@ -253,27 +253,27 @@ if ($userObject['id'] == 1) {
             <div id='igeragozasDiv' style='display:none;' onclick=\"event.stopPropagation();this.style.display = 'none';\">{include_file}</div>
             </div>";
 
-      // az elso index a celnyelv, a masodik a forrasnyelv
-      $obj['igeragozas']['langs'][2][0] = 'verbos.html';
-      $obj['igeragozas']['langs'][2][1] = 'verbos_eng.php';
+    // az elso index a celnyelv, a masodik a forrasnyelv
+    $obj['igeragozas']['langs'][2][0] = 'verbos.html';
+    $obj['igeragozas']['langs'][2][1] = 'verbos_eng.php';
 
-      $obj['igeragozas']['langs'][3][0] = 'conjugation_arab3.php';
+    $obj['igeragozas']['langs'][3][0] = 'conjugation_arab3.php';
 
-      $obj['abc']['content'] = "<td id='abc'><a href='#' style=\"font-weight:normal;\" onmouseover=\"document.getElementById('abctable').style.visibility = 'visible';\" onmouseout=\"document.getElementById('abctable').style.visibility = 'hidden';\">" . translate('abece') . "</a>
+    $obj['abc']['content'] = "<td id='abc'><a href='#' style=\"font-weight:normal;\" onmouseover=\"document.getElementById('abctable').style.visibility = 'visible';\" onmouseout=\"document.getElementById('abctable').style.visibility = 'hidden';\">" . translate('abece') . "</a>
                                     <div id='abctable'>{include_file}</div></td>";
 
-      $obj['abc']['langs'][2][0] = 'abc.html';
-      $obj['abc']['langs'][2][1] = 'abc.html';
+    $obj['abc']['langs'][2][0] = 'abc.html';
+    $obj['abc']['langs'][2][1] = 'abc.html';
 
-      $obj['kiejtes']['content'] = "<td id='kiejtes'><a href='#' style=\"font-weight:normal;\" onmouseover=\"document.getElementById('kiejtestable').style.visibility = 'visible';\" onmouseout=\"document.getElementById('kiejtestable').style.visibility = 'hidden';\">" . translate('kiejtes') . "</a>
+    $obj['kiejtes']['content'] = "<td id='kiejtes'><a href='#' style=\"font-weight:normal;\" onmouseover=\"document.getElementById('kiejtestable').style.visibility = 'visible';\" onmouseout=\"document.getElementById('kiejtestable').style.visibility = 'hidden';\">" . translate('kiejtes') . "</a>
                                         <div id='kiejtestable'>{include_file}</div></td>";
 
-      $obj['kiejtes']['langs'][2][0] = 'kiejtes.html';
-      $obj['kiejtes']['langs'][2][1] = 'kiejtes.html';
+    $obj['kiejtes']['langs'][2][0] = 'kiejtes.html';
+    $obj['kiejtes']['langs'][2][1] = 'kiejtes.html';
 
-      $obj['kiejtes']['langs'][3][0] = 'hardsounds_arab.php';
+    $obj['kiejtes']['langs'][3][0] = 'hardsounds_arab.php';
 
-      $obj['szorend']['content'] = "<td id='szorend' style=\"font-weight:normal;\"><a href='#' onclick=\"
+    $obj['szorend']['content'] = "<td id='szorend' style=\"font-weight:normal;\"><a href='#' onclick=\"
                                                 event.stopPropagation();
                                                 if(document.getElementById('szorendtable').style.display == 'none'){
                                                     document.getElementById('szorendtable').style.display = 'block';
@@ -284,33 +284,33 @@ if ($userObject['id'] == 1) {
                                                 \">" . translate('szorend') . "</a>
                                             <div id='szorendtable' style='display:none' onclick=\"event.stopPropagation();this.style.display = 'none';\">{include_file}</div></td>";
 
-      $obj['szorend']['langs'][2][0] = 'szorend_sp.html';
-      $obj['szorend']['langs'][2][1] = 'szorend_sp.html';
+    $obj['szorend']['langs'][2][0] = 'szorend_sp.html';
+    $obj['szorend']['langs'][2][1] = 'szorend_sp.html';
 
-      $obj['szorend2']['content'] = "<td id='szorend2' style=\"font-weight:normal;\"><a href='#' onmouseover=\"document.getElementById('szorendtable2').style.display = 'block';\"
+    $obj['szorend2']['content'] = "<td id='szorend2' style=\"font-weight:normal;\"><a href='#' onmouseover=\"document.getElementById('szorendtable2').style.display = 'block';\"
                                                     onmouseout=\"document.getElementById('szorendtable2').style.display = 'none';\"
                                                 \">" . translate('szorend2') . "</a>
                                             <div id='szorendtable2'>{include_file}</div></td>";
-      $obj['szorend2']['langs'][1][0] = 'szorend.html';
-      $obj['szorend2']['langs'][1][2] = 'szorend_esp.html';
+    $obj['szorend2']['langs'][1][0] = 'szorend.html';
+    $obj['szorend2']['langs'][1][2] = 'szorend_esp.html';
 
-      $obj['szorend2']['langs'][4][0] = 'szorend_ger.html';
+    $obj['szorend2']['langs'][4][0] = 'szorend_ger.html';
 
-      $obj['nevmasok']['content'] = "<td id='nevmasok'><a href='#' style=\"font-weight:normal;\" onmouseover=\"document.getElementById('nevmasoktable').style.visibility = 'visible';\" onmouseout=\"document.getElementById('nevmasoktable').style.visibility = 'hidden';\">" . translate('nevmasok') . "</a>
+    $obj['nevmasok']['content'] = "<td id='nevmasok'><a href='#' style=\"font-weight:normal;\" onmouseover=\"document.getElementById('nevmasoktable').style.visibility = 'visible';\" onmouseout=\"document.getElementById('nevmasoktable').style.visibility = 'hidden';\">" . translate('nevmasok') . "</a>
                                         <div id='nevmasoktable'>{include_file}</div></td>";
-      $obj['nevmasok']['langs'][1][0] = 'nevmasok_eng.html';
-      $obj['nevmasok']['langs'][1][2] = 'nevmasok_eng_esp.html';
-      $obj['nevmasok']['langs'][2][0] = 'nevmasok.html';
-      $obj['nevmasok']['langs'][2][1] = 'nevmasok.html';
-      $obj['nevmasok']['langs'][3][0] = 'nevmasok_arab.php';
-      $obj['nevmasok']['langs'][4][0] = 'nevmasok_ger.html';
+    $obj['nevmasok']['langs'][1][0] = 'nevmasok_eng.html';
+    $obj['nevmasok']['langs'][1][2] = 'nevmasok_eng_esp.html';
+    $obj['nevmasok']['langs'][2][0] = 'nevmasok.html';
+    $obj['nevmasok']['langs'][2][1] = 'nevmasok.html';
+    $obj['nevmasok']['langs'][3][0] = 'nevmasok_arab.php';
+    $obj['nevmasok']['langs'][4][0] = 'nevmasok_ger.html';
 
-      $obj['rendhagyo']['content'] = "<td id='nevmasok'><a href='http://www.englishpage.com/irregularverbs/irregularverbs.html' style=\"font-weight:normal;\" target='_blank'  >" . translate('rendhagyo_igek') . "</a></td>";
-      $obj['rendhagyo']['langs'][1][0] = 'nevmasok_eng.html';
-      $obj['rendhagyo']['langs'][1][2] = 'nevmasok_eng_esp.html';
-    }
-
-    return $obj;
+    $obj['rendhagyo']['content'] = "<td id='nevmasok'><a href='http://www.englishpage.com/irregularverbs/irregularverbs.html' style=\"font-weight:normal;\" target='_blank'  >" . translate('rendhagyo_igek') . "</a></td>";
+    $obj['rendhagyo']['langs'][1][0] = 'nevmasok_eng.html';
+    $obj['rendhagyo']['langs'][1][2] = 'nevmasok_eng_esp.html';
   }
 
-  ?>
+  return $obj;
+}
+
+?>
