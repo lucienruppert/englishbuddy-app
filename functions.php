@@ -1812,13 +1812,13 @@ function ajaxSearchPrint($lang)
         <tr>
             <td id='ajaxTableFirstTd' align='right' valign='top'><a id="ajax" title=<?php print "'" . translate("info_ajax") . "'" ?> href='#' style='color:white;font-size:12pt;'></td>
             <td style='<? print $GLOBALS['TDBgGlobalColor']; ?>;width:150px;' align='left'>
-                <div class='ajaxSearchTxtContainer' style='background:<? print $GLOBALS['globalcolor']; ?>'>
+                <div class='ajaxSearchTxtContainer'>
                     <span class="fa fa-search"></span>
                     <input type='text' name='ajaxSearchInput' id='ajaxSearchInput' placeholder=<?php print "'" . translate('search') . "...'"; ?> onclick="event.stopPropagation();" onblur="this.value = '';$('#ajaxSearchOutput').hide();" onkeyup="
                     if (searchTimeout != undefined){
                         clearTimeout(searchTimeout);
                     }
-                    searchTimeout = setTimeout(getTimeoutTextAjax(this.value), 2000);
+                    searchTimeout = setTimeout(getTimeoutTextAjax(this.value), 3000);
                     " />
                 </div>
             </td>

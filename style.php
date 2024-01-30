@@ -132,10 +132,6 @@
     z-index: 99;
   }
 
-  #ajaxSearchInput {
-    font-size: 12pt;
-  }
-
   #ajaxDiv {
     border: 0px solid black;
     position: absolute;
@@ -144,6 +140,10 @@
     margin-left: -140px;
     top: 0px;
     width: 280px;
+  }
+
+  #ajaxSearchInput {
+    font-size: 12pt;
   }
 
   .fa-search {
@@ -298,5 +298,4 @@
   /* #mainDiv * {
     border: 1px solid red;
   } */
-
 </style>

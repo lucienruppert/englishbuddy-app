@@ -149,10 +149,10 @@
     position: absolute;
     top: 57px;
     left: 50%;
-    margin-left: -100px;
+    margin-left: -170px;
     padding-top: 7px;
     z-index: 60;
-    
+
   }
 
   #time {
@@ -177,7 +177,7 @@
   }
 
   .admin-info-board {
-   color: <?php print $colorValue ?>
+    color: <?php print $colorValue ?>
   }
 
   #logout {
@@ -257,9 +257,14 @@
 
   #ajaxMeaningSearch {
     position: absolute;
-    top: 35px;
+    top: 60px;
     left: 50%;
     margin-left: -400px;
+    z-index: 60;
+  }
+
+  input[type='text'] {
+    color: white;
   }
 
   #moreMeaningDiv {

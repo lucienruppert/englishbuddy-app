@@ -60,13 +60,13 @@ if ($userObject['id'] == 1) {
   }
   ?>
 
-  <div id='stats' style=<?php echo "\"{$statsPosition}\"" ?>>
+  <!-- <div id='stats' style=<?php echo "\"{$statsPosition}\"" ?>>
     <table border='0' width='150px'>
       <tr>
         <td align='right' style=<?php print "'font-size:14;color:" . $globalcolor . ";'"; ?>><b><?php print(getUserWordHitByDay($userObject)); ?></td>
       </tr>
     </table>
-  </div>
+  </div> -->
   <script>
     var selectedLevel = <?php print "'" . ($_REQUEST['selectedLevel'] ? $_REQUEST['selectedLevel'] : -1) . "'"; ?>;
     var source = <?php
