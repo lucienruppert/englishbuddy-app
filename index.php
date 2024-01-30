@@ -23,6 +23,7 @@ include_once('topPHP.php');
     <?php
     include_once('header.php');
     include_once('ifElse.php');
+    // include_once('ajaxDiv.php');
     include_once('mainDiv.php');
     ?>
 

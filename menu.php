@@ -60,7 +60,7 @@ if ($userObject['id'] == 1) {
   }
   ?>
 
-  <!-- <div id='stats' style=<?php echo "\"{$statsPosition}\"" ?>>
+  <div id='stats' style=<?php echo "\"{$statsPosition}\"" ?>>
     <table border='0' width='150px'>
       <tr>
         <td align='right' style=<?php print "'font-size:14;color:" . $globalcolor . ";'"; ?>><b><?php print(getUserWordHitByDay($userObject)); ?></td>
@@ -88,7 +88,7 @@ if ($userObject['id'] == 1) {
   <?php
   }
   ?>
-</div> -->
+</div>
 
   <?php if (in_array($userObject['status'], array(5, 6)) && $_REQUEST['content'] != 'wordLearning_quick') { ?>
     <div id='tanitvanyok'>
