@@ -291,11 +291,20 @@
 
   #mainDiv {
     position: absolute;
-    top: 70;
+    display: flex;
+    flex-direction: column;
+    top: 20;
     width: 100%;
+    z-index: 90;
   }
 
   /* #mainDiv * {
     border: 1px solid red;
   } */
+
+  .logout,
+  .home {
+    color: <?php print $highlight ?>;
+  }
+
 </style>

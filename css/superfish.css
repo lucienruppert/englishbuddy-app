@@ -24,7 +24,7 @@ ul.sf-menu li li li.sfHover ul { left: 10em; top: 0; }
 .sf-menu li li li { background: #031525; }
 .sf-menu li:hover, .sf-menu li.sfHover,
 .sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active { background: 031525; outline: 0; }
-.sf-menu a.sf-with-ul { padding-right: 2.25em; min-width: 1px; }
+.sf-menu a.sf-with-ul { padding-right: 1.5em; min-width: 1px; }
 .sf-sub-indicator { position: absolute; display: block; right: .75em; top: 1.05em; width: 10px; height: 10px; text-indent: -999em; overflow: hidden; background: url('../images/arrows-ffffff.png') no-repeat -10px -100px; }
 a > .sf-sub-indicator { top: .8em; background-position: 0 -100px; }
 a:focus > .sf-sub-indicator,

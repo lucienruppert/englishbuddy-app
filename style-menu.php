@@ -149,7 +149,7 @@
     position: absolute;
     top: 57px;
     left: 50%;
-    margin-left: -170px;
+    margin-left: -110px;
     padding-top: 7px;
     z-index: 60;
 
@@ -208,7 +208,7 @@
   #ruleTextContainer {
     color: white !important;
   }
-  
+
   #clientDiv {
     position: absolute;
     top: 35px;
@@ -260,9 +260,9 @@
 
   #ajaxMeaningSearch {
     position: absolute;
-    top: 60px;
+    top: 40px;
     left: 50%;
-    margin-left: -400px;
+    margin-left: -315px;
     z-index: 60;
   }
 

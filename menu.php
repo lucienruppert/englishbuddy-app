@@ -44,10 +44,8 @@ if ($userObject['id'] == 1) {
 }
 ?>
 
-<div class="navigation">
-  <div>
+<div class="navigation-menu">
     <a href="index.php" class="home"><?php print translate('fooldal'); ?></a>
-  </div>
   <?php
   $upperRowObject = getLinksForPractice();
   if (is_array($upperRowObject) && !in_array($userObject["status"], array(1, 2))) {

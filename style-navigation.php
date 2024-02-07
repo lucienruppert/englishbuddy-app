@@ -1,20 +1,4 @@
 <style>
-  .navigation {
-    font-size: 14px;
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px;
-    padding: 20px 20px;
-    <?php if ($userObject) { ?>border-bottom: 1px solid <?php print $highlight ?>;
-    <?php } ?>
-  }
-
-  .logout,
-  .home {
-    color: <?php print $highlight ?>;
-  }
-
-
   A,
   A:link,
   A:active,
@@ -27,33 +11,49 @@
     text-decoration: none;
   }
 
-  .menu-button {
+  .white-color {
     color: white;
   }
 
-  .menu-button-smaller {
+  .medium-color {
     color: <?php print $colorValue ?>;
-    font-weight: normal;
   }
 
   .welcome {
     color: <?php print $highlight ?>;
     font-size: 14px;
     text-align: left;
-    width: 100%;
     font-weight: bold;
+  }
+
+  .navigation-mainDiv {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .navigation-menu {
+    position: absolute;
+    flex: display;
+    flex-direction: row;
+    top: 20px;
+    left: 50%;
+    margin-left: -428px;
+  }
+
+  .navigation-menu * {
+    padding-left: 30px;
   }
 
   .submenu {
     display: flex;
     justify-content: center;
     gap: 20px;
-    width: 100%;
     text-align: center;
   }
 
   .admin-menu {
-    margin-top: 10px;
+    margin-top: 40px;
   }
 
   .classroom {
