@@ -152,8 +152,11 @@
     margin-left: -110px;
     padding-top: 7px;
     z-index: 60;
-
   }
+
+  /* #nyelvtansorminta ul li a {
+    line-height: 20px;
+  } */
 
   #time {
     position: absolute;
@@ -280,14 +283,10 @@
     /* IE's opacity*/
     opacity: 1;
     z-index: 99;
-    <?php
-    if ($isAndroid) {
-      print "height:400px;";
-    } else {
-      print "width:500px;";
-      print "left:50%;margin-left:-400px;height:400px;";
-    }
-    ?>
+    width: 500px;
+    left: 50%;
+    margin-left: -400px;
+    height: 400px;
   }
 
   .btnAjaxDivSave {
@@ -307,16 +306,14 @@
   #ajaxSearchOutput {
     position: absolute;
     overflow: auto;
-    top: 8px;
+    /* top: 8px; */
     left: 50%;
-    margin-left: -200px;
+    margin-left: -100px;
     width: 100px;
     height: 22px;
     text-align: center;
-    background: <?php print "'" . $globalcolor . "'"; ?>;
     color: white;
     filter: alpha(opacity=100);
-    /* IE's opacity*/
     opacity: 1;
     z-index: 99;
   }

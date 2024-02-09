@@ -123,9 +123,9 @@ if ($_REQUEST['kitolto']) {
     $readonly = 'readonly';
 }
 
-print "\n<tr><td style='font-size:0.8rem;color:" . $highlight . ";'>" . $nyelvText . "</td><td><textarea name='foreignWord' rows='4' cols='29'>" . $forWord . "</textarea></td></tr>";
+print "\n<tr><td style='font-size:0.8rem;color:" . $highlight . ";'>" . $nyelvText . "</td><td><textarea name='foreignWord' style='color:white' rows='4' cols='29'>" . $forWord . "</textarea></td></tr>";
 print "\n<tr $hideStyle><td style='font-size:0.8rem;color:" . $highlight . ";'>" . translate("cel_komment") . "</td><td><input type='text' size='35' name='foreignComm' value='" . $wordRecord['comment_foreign'] . "'></td></tr>";
-print "\n<tr><td style='font-size:0.8rem;color:" . $highlight . ";'>{$forrasNyelvText}</td><td><textarea name='hunWord' rows='4' cols='29' $readonly>" . $sourceWord . "</textarea></td></tr>";
+print "\n<tr><td style='font-size:0.8rem;color:" . $highlight . ";'>{$forrasNyelvText}</td><td><textarea name='hunWord' style='color:white' rows='4' cols='29' $readonly>" . $sourceWord . "</textarea></td></tr>";
 print "\n<tr $hideStyle><td style='font-size:0.8rem;color:" . $highlight . ";'>" . translate("forras_komment") . "</td><td><input type='text' size='35' name='sourceComm' value='" . $wordRecord["comment_{$forras_nyelv_ext}"] . "'></td></tr>";
 
 if ($userHasAccess) {

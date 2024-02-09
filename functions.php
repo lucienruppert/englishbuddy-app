@@ -1822,8 +1822,8 @@ function ajaxSearchPrint($lang)
                     " />
                 </div>
             </td>
-            <td align='left' width='110' style='<? print $GLOBALS['TDBgGlobalColor']; ?>color:white'><a id='linkSave' style='display:none' href='#' onclick="event.stopPropagation();setUserWord(lastWordLookedUp);">
-                    <font color='white'><b><?php print translate('ment'); ?>
+            <td style='padding-left:0'><a id='linkSave' style='display:none;color:white;padding-left:0' href='#' onclick="event.stopPropagation();setUserWord(lastWordLookedUp);">
+                    <b><?php print translate('ment'); ?>
                 </a></td>
             <td align='left' colspan='2' valign='center' height='30' style='<? print $GLOBALS['TDBgGlobalColor']; ?>color:<? print $GLOBALS['globalcolor']; ?>'><b>
                     <div id='ajaxSearchOutput' style='display:none;'></div>
