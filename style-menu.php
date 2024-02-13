@@ -118,10 +118,11 @@
   #szorendtable2 {
     position: absolute;
     overflow: auto;
-    height: 390px;
-    top: 25px;
+    height: 410px;
+    width: 700px;
+    top: 35px;
     left: 50%;
-    margin-left: -472px;
+    margin-left: -120px;
     display: none;
     background-color: white;
     filter: alpha(opacity=100);
@@ -265,7 +266,8 @@
     position: absolute;
     top: 40px;
     left: 50%;
-    margin-left: -315px;
+    margin-left: -160px;
+    /* EZT NE VÁLTOZTASD MEG! */
     z-index: 60;
   }
 
@@ -325,4 +327,5 @@
   a {
     color: white;
   }
+
 </style>

@@ -39,9 +39,6 @@
     top: 20px;
     left: 50%;
     margin-left: -428px;
-  }
-
-  .navigation-menu * {
     padding-left: 30px;
   }
 

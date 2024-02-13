@@ -1605,6 +1605,8 @@ function ajaxSearchPrint($lang)
                 ajaxSearchId = myObj.id;
             } else {
                 document.getElementById("ajaxSearchOutput").style.display = 'block';
+                document.getElementById("ajaxSearchOutput").style.marginLeft = '-230px';
+                document.getElementById("ajaxSearchOutput").style.marginTop = '-8px';
                 document.getElementById("ajaxSearchOutput").innerHTML = <?php print "'" . translate('nincs_talalat') . "!'"; ?>;
                 ajaxSearchId = 0;
             }
