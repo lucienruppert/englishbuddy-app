@@ -25,11 +25,11 @@ ini_set('memory_limit', '1024M');
 $ext = "";
 $GLOBALS['szoPackageSize'] = 10;
 $GLOBALS['szoPackageRecordMpLimit'] = 20;
-$GLOBALS['szoPackageRecordBg'] = 'grey';
+$GLOBALS['szoPackageRecordBg'] = "#e97816";
 
 $GLOBALS['mondatPackageSize'] = 10;
 $GLOBALS['mondatPackageRecordMpLimit'] = 100;
-$GLOBALS['mondatPackageRecordBg'] = 'grey';
+$GLOBALS['mondatPackageRecordBg'] = "#e97816";
 
 $dark = "#031525"; // dark blue
 $highlight = "#e97816"; // orange

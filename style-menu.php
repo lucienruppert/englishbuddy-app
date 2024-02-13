@@ -49,13 +49,48 @@
     z-index: 99;
   }
 
-  #nevmasoktable {
+  #szorendtable {
     position: absolute;
+    overflow: auto;
     top: 25px;
     left: 50%;
     margin-left: -472px;
-    visibility: hidden;
+    display: none;
     background-color: white;
+    filter: alpha(opacity=100);
+    /* IE's opacity*/
+    opacity: 1;
+    z-index: 99;
+    padding: 5px;
+    border: 1px solid grey;
+  }
+
+  #szorendtable2 {
+    position: absolute;
+    overflow: auto;
+    height: 410px;
+    width: 700px;
+    top: 35px;
+    left: 50%;
+    margin-left: -120px;
+    display: none;
+    background-color: <?php print $dark ?>;
+    filter: alpha(opacity=100);
+    /* IE's opacity*/
+    opacity: 1;
+    z-index: 99;
+    padding: 5px;
+  }
+
+  #nevmasoktable {
+    position: absolute;
+    height: 430px;
+    width: 700px;
+    top: 35px;
+    left: 50%;
+    margin-left: -120px;
+    visibility: hidden;
+    background-color: <?php print $dark ?>;
     filter: alpha(opacity=100);
     /* IE's opacity*/
     opacity: 1;
@@ -97,39 +132,6 @@
     font-weight: normal;
     font-size: 15px;
     font-family: arial;
-  }
-
-  #szorendtable {
-    position: absolute;
-    overflow: auto;
-    top: 25px;
-    left: 50%;
-    margin-left: -472px;
-    display: none;
-    background-color: white;
-    filter: alpha(opacity=100);
-    /* IE's opacity*/
-    opacity: 1;
-    z-index: 99;
-    padding: 5px;
-    border: 1px solid grey;
-  }
-
-  #szorendtable2 {
-    position: absolute;
-    overflow: auto;
-    height: 410px;
-    width: 700px;
-    top: 35px;
-    left: 50%;
-    margin-left: -120px;
-    display: none;
-    background-color: white;
-    filter: alpha(opacity=100);
-    /* IE's opacity*/
-    opacity: 1;
-    z-index: 99;
-    padding: 5px;
   }
 
   #arrow_balra {
@@ -327,5 +329,4 @@
   a {
     color: white;
   }
-
 </style>
