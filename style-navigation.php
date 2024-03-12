@@ -26,12 +26,6 @@
     font-weight: bold;
   }
 
-  .navigation-mainDiv {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-  }
-
   .navigation-menu {
     position: absolute;
     flex: display;
@@ -42,19 +36,20 @@
     padding-left: 30px;
   }
 
-  .submenu {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    text-align: center;
+  @media (max-width: 768px) {
+    .mobile-menu a {
+      font-size: 40px;
+      color: red;
+    }
+  }
+
+  .mobile-menu a {
+    font-size: 40px;
+    color: red;
   }
 
   .admin-menu {
     margin-top: 40px;
-  }
-
-  .classroom {
-    margin: 30px 0 100px 0;
   }
 
   .classroom-button {
@@ -63,5 +58,63 @@
     letter-spacing: 1px;
     border-radius: 3px;
     font-size: 14px;
+  }
+
+  .navigation-mainDiv {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: none;
+    padding-right: 30px;
+    cursor: pointer;
+  }
+
+  .submenu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .classroom {
+    margin: 30px 0 100px 0;
+  }
+
+  .show-menu {
+    display: inline;
+  }
+
+  @media (max-width: 768px) {
+    .hamburger {
+      display: inline-block;
+    }
+
+    .submenu,
+    .navigation-mainDiv {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .classroom,
+    .hello,
+    .submenu {
+      display: none;
+    }
+
+    .submenu {
+      padding: 30px 30px 0 0;
+    }
+
+    .submenu * {
+      font-size: 30px;
+    }
+
+    .show-menu {
+      display: none;
+    }
+
   }
 </style>

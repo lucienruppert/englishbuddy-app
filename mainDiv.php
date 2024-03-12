@@ -2,24 +2,25 @@
 <div id='mainDiv' style=<?php print "' . $mainStyleText . '"; ?>>
   <?php if ($userObject) { ?>
     <div class="navigation-mainDiv">
-      <span class="welcome">
-      <?php
-      if ($userObject)
-        print translate('szia') . "&nbsp;" . $userObject['keresztnev'] . "!";
-      else
-        print "";
-      ?>
+      <span class="welcome hello">
+        <?php
+        if ($userObject)
+          print translate('szia') . "&nbsp;" . $userObject['keresztnev'] . "!";
+        else
+          print "";
+        ?>
       </span>
-      <span class="welcome submenu">
+      <span class='hamburger'><img src='images/hamburger.png' width="30px" height="30px" onclick="toggleMenu();"></span>
+      <span class="welcome submenu" style="display:<?php echo $_SESSION['isShown'] ? 'none' : 'flex'; ?>">
         <a href='#' class="medium-color" onclick="sajatSzavak();"><? print translate("increasevocabulary"); ?></a>
         <a href='#' class="medium-color" onclick="alapszokincs();"><? print translate("basicvocabulary"); ?></a>
         <a href='#' class="medium-color" onclick="peldamondatok();"><? print translate("tudastar"); ?></a>
-        <a href='#' class="medium-color" onclick="intelligensGyakorlo()"><? print translate("intelligensgyakorlo"); ?></a>
+        <a href='#' class="medium-color show-menu" onclick="intelligensGyakorlo()"><? print translate("intelligensgyakorlo"); ?></a>
       <?php } ?>
       <?php if ($userObject && !in_array($userObject["status"], array(1, 2))) { ?>
         <a href='#' class="medium-color" onclick=<?php print $onclick1; ?>><? print translate("sajat_mondatok_10"); ?></a>
         <a href='#' class="medium-color" onclick=<?php print $onclick4; ?>><? print translate("sajat_mondat_szo"); ?></a>
-        <a class="medium-color" onclick="audioSzoba();" href="#"><? print translate("audioszoba"); ?></a>
+        <a class="medium-color show-menu" onclick="audioSzoba();" href="#"><? print translate("audioszoba"); ?></a>
         <?php
         if ($userObject && in_array($userObject['status'], array(4, 5, 6))) {
         ?>
@@ -35,16 +36,12 @@
     </div>
   <?php } ?>
 
-  <?php if ($userObject) { ?>
+  <?php if ($userObject['status'] == 6) { ?>
     <div class="submenu admin-menu">
-      <?php if (!in_array($userObject["status"], array(1, 2))) { ?>
-        <a href='#' class="menu-link" onclick=<?php print $onclick2; ?>><? print translate("kitolto"); ?></a>
-        <a href='#' class="menu-link" onclick="tudastar();"><? print translate("tudastar_title"); ?></a>
-      <?php } ?>
+      <a href='#' class="menu-link" onclick=<?php print $onclick2; ?>><? print translate("kitolto"); ?></a>
+      <a href='#' class="menu-link" onclick="tudastar();"><? print translate("tudastar_title"); ?></a>
       <a href='#' class="menu-link" onclick="szotarFeltoltes();"><? print translate("feltoltes"); ?></a>
-      <?php if ($userObject['status'] == 6) { ?>
-        <a href='#' class="menu-link" onclick="location.href='main.php?content=wordCategorize&source=welcome'"><? print translate("kategorizalas"); ?></a>
-      <?php }  ?>
+      <a href='#' class="menu-link" onclick="location.href='main.php?content=wordCategorize&source=welcome'"><? print translate("kategorizalas"); ?></a>
     </div>
   <?php }  ?>
 

@@ -29,7 +29,7 @@ $GLOBALS['szoPackageRecordBg'] = "#e97816";
 
 $GLOBALS['mondatPackageSize'] = 10;
 $GLOBALS['mondatPackageRecordMpLimit'] = 100;
-$GLOBALS['mondatPackageRecordBg'] = "#e97816";
+$GLOBALS['mondatPackageRecordBg'] = "transparent";
 
 $dark = "#031525"; // dark blue
 $highlight = "#e97816"; // orange
@@ -81,10 +81,10 @@ $RedMenuStyle2 = 'background-color:white;font-size:12pt;';
 $bottomPadding = '20px';
 $titleFont = 'font-size:12pt;';
 $TopRedHeight = '155px';
-$worddivFontSize = 'font-size:14';
-$worddivSize = 'width:400px;height:445px;overflow:auto;';
+$worddivFontSize = 'font-size:20';
+$worddivSize = 'height:445px;overflow:auto;';
 $worddivPosition = 'background-color:white;position:absolute;top:-100px;left:50%;margin-left:-180px;filter:alpha(opacity=100);opacity:1;z-index:99;display:none;';
-$xSize = 'font-size:17;font-weight:bold;color:white';
+$xSize = 'font-size:25;font-weight:bold;color:white';
 $xWidth = '20';
 $SubscribeFontSize = '16px';
 $SubscribeCheckBoxZoom = '1';

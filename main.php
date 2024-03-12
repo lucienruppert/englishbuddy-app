@@ -22,13 +22,11 @@ if (!$userObject) {
 }
 
 $_SESSION['lastMessageUpdateTime'] = setUserTime($userObject, $_SESSION['lastMessageUpdateTime']);
+$_SESSION['isShown'] = true;
 ?>
 
-
 <HTML>
-
 <HEAD>
-
     <meta http-equiv="X-UA-Compatible" content="IE=8"> <!-- IE8 mode -->
     <META HTTP-EQUIV='CHARSET' CONTENT='text/html; charset=ISO-8859-2'>
     <link rel="shortcut icon" type="image/x-icon" href="/images/lingocasa.ico">

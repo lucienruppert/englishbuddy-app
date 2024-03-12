@@ -147,6 +147,17 @@
   //     }
   // }
 
+  function toggleMenu() {
+    $.post("update_session.php", {
+        isShown: <?php echo json_encode($_SESSION['isShown'] ? 0 : 1); ?>
+      })
+      .done(function() {
+        location.reload();
+      });
+      const menu = document.getElementById("submenu");
+      console.log(menu);
+  }
+
   function submitToMain(content) {
     <?php if ($userObject && $userObject['status'] != 1) { ?>
       document.forms['submitForm'].content.value = content;

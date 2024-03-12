@@ -233,6 +233,12 @@
     width: 300px;
   }
 
+  @media (max-width: 768px) {
+    .login-controls {
+      width: 95vw;
+    }
+  }
+
   .login-button {
     font-size: 20px;
     color: white;

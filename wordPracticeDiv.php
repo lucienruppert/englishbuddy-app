@@ -1,14 +1,13 @@
-<div id='wordPracticeDiv' style='background-color:#031525;position:absolute;top:100px;left:50%;margin-left:-170px;filter:alpha(opacity=100);opacity:1;z-index:99;display:none;border: 1px solid grey;'>
+<div id='wordPracticeDiv' style='background-color:#031525;position:absolute;top:80px;left:50%;margin-left:-165px;filter:alpha(opacity=100);opacity:1;z-index:99;display:none;border: 1px solid grey;'>
     <table border='0'>
         <tr>
             <td></td>
-            <td></td>
-            <td align='center' width=<?php echo "\"{$xWidth}\"" ?> style=<?php print "'background:" . $globalcolor . "'"; ?>><a href='#' onmouseover="document.getElementById('wordPracticeDiv').style.display = 'none';" style=<?php echo "\"{$xSize}\"" ?>>&nbsp;X&nbsp;</a></td>
+            <td align='right' width=<?php echo "\"{$xWidth}\"" ?> style=<?php print "'background:" . $globalcolor . "'"; ?>><a href='#' onmouseover="document.getElementById('wordPracticeDiv').style.display = 'none';" style=<?php echo "\"{$xSize}\"" ?>>&nbsp;X&nbsp;</a></td>
         </tr>
         <tr>
             <td colspan='3'>
                 <div style=<?php echo "\"{$worddivSize}\"" ?>>
-                    <table border='0' width='330' cellspacing='0' cellpadding='10'>
+                    <table border='0' cellspacing='0' cellpadding='10'>
                         <?php
                         $partRowNumber = (int)($countOwnWords / $GLOBALS['szoPackageSize']);
                         if ($partRowNumber * $GLOBALS['szoPackageSize'] < $countOwnWords) {
@@ -22,10 +21,7 @@
                         }
 
                         $cellBlocks[] = "<td style='{$recordBg}'><a style='{$worddivFontSize};color:white;white-space:nowrap;' href='#' onclick=\"lowerSelectOnChange('listAll', 'szo', 'wordPractice');\">" . translate("sajat_szavak_all") . "</a></td><td style='{$recordBg}'>&nbsp;</td><td style='{$recordBg}'>&nbsp;</td>";
-                        $cellBlocks[] = "<td style='{$recordBg}'><a style='{$worddivFontSize};color:white;white-space:nowrap;' href='#' onclick=\"lowerSelectOnChange('mumus', 'szo', 'wordPractice');\">" . strtoupper(translate('mumus')) . "</a></td><td style='{$recordBg}'>&nbsp;</td>
-                <td style='{$recordBg}'>
-                    $mumusPrint
-                </td>";
+                        $cellBlocks[] = "<td style='{$recordBg}'><a style='{$worddivFontSize};color:white;white-space:nowrap;' href='#' onclick=\"lowerSelectOnChange('mumus', 'szo', 'wordPractice');\">" . strtoupper(translate('mumus')) . "</a></td><td style='{$recordBg}'>&nbsp;</td>";
 
                         $forSortArray = array();
                         for ($i = 1; $i <= $partRowNumber; $i++) {
@@ -39,7 +35,6 @@
                             if ($packageRecords[$i]['best_time'] > 0 && $packageRecords[$i]['best_time'] < $GLOBALS['szoPackageRecordMpLimit']) {
                                 $recordBg .= 'background:' . $GLOBALS['szoPackageRecordBg'];
                             }
-                            $printLink = " <a href='#' style='color:white;' onclick=\"window.open('printViewSent.php?source=szo&pkg=listFract_{$i}','Mondatok','fullscreen=yes,toolbar=no,status=no,menubar=no,resizable=yes,location=no,scrollbars=yes')\">print</a>";
                             $cell = "
                 <td style='{$recordBg}'><a href='#' style='{$worddivFontSize};color:white;white-space:nowrap;' onclick=\"lowerSelectOnChange('listFract_{$i}', 'szo', 'wordPractice');\">{$text}</a></td>
                 <td align='right' style='{$worddivFontSize};color:white;{$recordBg};white-space:nowrap;'>{$addText}</td>
