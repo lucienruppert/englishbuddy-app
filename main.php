@@ -22,7 +22,7 @@ if (!$userObject) {
 }
 
 $_SESSION['lastMessageUpdateTime'] = setUserTime($userObject, $_SESSION['lastMessageUpdateTime']);
-$_SESSION['isShown'] = true;
+$_SESSION['isShown'] = false;
 ?>
 
 <HTML>

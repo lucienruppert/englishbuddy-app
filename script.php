@@ -154,8 +154,6 @@
       .done(function() {
         location.reload();
       });
-      const menu = document.getElementById("submenu");
-      console.log(menu);
   }
 
   function submitToMain(content) {
