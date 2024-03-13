@@ -26,8 +26,10 @@ $_SESSION['isShown'] = true;
 ?>
 
 <HTML>
+
 <HEAD>
     <meta http-equiv="X-UA-Compatible" content="IE=8"> <!-- IE8 mode -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <META HTTP-EQUIV='CHARSET' CONTENT='text/html; charset=ISO-8859-2'>
     <link rel="shortcut icon" type="image/x-icon" href="/images/lingocasa.ico">
     <?php ajaxTimerPrint(); ?>
@@ -80,7 +82,7 @@ $_SESSION['isShown'] = true;
         font-size: 11px;
     }
 
-    
+
     /* .word-management * {
         border: 1px solid red;
     } */

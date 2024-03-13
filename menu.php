@@ -285,7 +285,7 @@ function getLinksForPractice()
     $obj['szorend']['langs'][2][0] = 'szorend_sp.html';
     $obj['szorend']['langs'][2][1] = 'szorend_sp.html';
 
-    $obj['szorend2']['content'] = "<td id='szorend2' style=\"font-weight:normal;\"><a href='#' style=\"margin-left:30px;\" onmouseover=\"document.getElementById('szorendtable2').style.display = 'block';\"
+    $obj['szorend2']['content'] = "<td id='szorend2' style=\"font-weight:normal;\"><a href='#' class='hide-on-mobile'  style=\"margin-left:30px;\" onmouseover=\"document.getElementById('szorendtable2').style.display = 'block';\"
                                                     onmouseout=\"document.getElementById('szorendtable2').style.display = 'none';\"
                                                 \">" . translate('szorend2') . "</a>
                                             <div id='szorendtable2'>{include_file}</div></td>";
@@ -294,7 +294,7 @@ function getLinksForPractice()
 
     $obj['szorend2']['langs'][4][0] = 'szorend_ger.html';
 
-    $obj['nevmasok']['content'] = "<td id='nevmasok'><a href='#' style=\"font-weight:normal;margin-left:30px;\" onmouseover=\"document.getElementById('nevmasoktable').style.visibility = 'visible';\" onmouseout=\"document.getElementById('nevmasoktable').style.visibility = 'hidden';\">" . translate('nevmasok') . "</a>
+    $obj['nevmasok']['content'] = "<td id='nevmasok'><a href='#' class='hide-on-mobile' style=\"font-weight:normal;margin-left:30px;\" onmouseover=\"document.getElementById('nevmasoktable').style.visibility = 'visible';\" onmouseout=\"document.getElementById('nevmasoktable').style.visibility = 'hidden';\">" . translate('nevmasok') . "</a>
                                         <div id='nevmasoktable'>{include_file}</div></td>";
     $obj['nevmasok']['langs'][1][0] = 'nevmasok_eng.html';
     $obj['nevmasok']['langs'][1][2] = 'nevmasok_eng_esp.html';
@@ -303,7 +303,7 @@ function getLinksForPractice()
     $obj['nevmasok']['langs'][3][0] = 'nevmasok_arab.php';
     $obj['nevmasok']['langs'][4][0] = 'nevmasok_ger.html';
 
-    $obj['rendhagyo']['content'] = "<td id='nevmasok''><a href='http://www.englishpage.com/irregularverbs/irregularverbs.html' style=\"font-weight:normal;margin-left:30px;\" target='_blank'  >" . translate('rendhagyo_igek') . "</a></td>";
+    $obj['rendhagyo']['content'] = "<td id='nevmasok''><a href='http://www.englishpage.com/irregularverbs/irregularverbs.html' class='hide-on-mobile' style=\"font-weight:normal;margin-left:30px;\" target='_blank'  >" . translate('rendhagyo_igek') . "</a></td>";
     $obj['rendhagyo']['langs'][1][0] = 'nevmasok_eng.html';
     $obj['rendhagyo']['langs'][1][2] = 'nevmasok_eng_esp.html';
   }

@@ -26,6 +26,15 @@
     font-weight: bold;
   }
 
+  .mobile-menu a {
+    font-size: 40px;
+    color: red;
+  }
+
+  .hide-on-mobile {
+    display: inline-block;
+  }
+
   .navigation-menu {
     position: absolute;
     flex: display;
@@ -41,11 +50,19 @@
       font-size: 40px;
       color: red;
     }
-  }
 
-  .mobile-menu a {
-    font-size: 40px;
-    color: red;
+    .hide-on-mobile {
+      display: none;
+    }
+
+    .navigation-menu {
+      position: absolute;
+      flex: display;
+      flex-direction: row;
+      top: 20px;
+      left: 0;
+      margin-left: 0;
+    }
   }
 
   .admin-menu {
