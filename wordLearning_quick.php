@@ -28,25 +28,13 @@ $ua = strtolower($_SERVER['HTTP_USER_AGENT']);
 if (stripos($ua, 'android') !== false) { // && stripos($ua,'mobile') !== false) {
     $GLOBALS['isAndroid'] = true;
 }
-if ($isAndroid) {
-    //$androidText = "EZ ANDROID!";
-    $questionedlineFontSize = 'font-size:60pt';
-    $questionedlineFontSize2 = 'font-size:20pt';
-    $solutionlineFontSize = 'font-size:90pt';
-    $ArrowFontSize = 'font-size:120pt';
-    $nemtudtamFontSize = 'font-size:70pt;color:white;';
-    $nemtudtamWidth = '0px';
-    $MiddleHeight = '630px';
-} else {
-    //$androidText = "EZ NEM ANDROID!";
-    $questionedlineFontSize = 'font-size:20pt';
-    $questionedlineFontSize2 = 'font-size:10pt';
-    $solutionlineFontSize = 'font-size:30pt';
-    $ArrowFontSize = 'font-size:40pt';
-    $nemtudtamFontSize = 'font-size:20pt;color:white;';
-    $nemtudtamWidth = '50px';
-    $MiddleHeight = '100px';
-}
+
+$questionedlineFontSize = 'font-size:20pt';
+$questionedlineFontSize2 = 'font-size:10pt';
+$solutionlineFontSize = 'font-size:30pt';
+$ArrowFontSize = 'font-size:40pt';
+$nemtudtamFontSize = 'font-size:20pt;color:white;';
+$MiddleHeight = '100px';
 
 // ha mondatokat gyakorlok
 if ($selLevel == 'list2' || $levels[$selLevel][1] == 2) {
@@ -298,9 +286,14 @@ print "
         max-width: 500px;
         white-space: pre-line;
     }
+
     #quickLearning {
         width: 100vw;
     }
+/* 
+    #quickLearning * {
+        border: 1px solid red;
+    } */
 </style>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script>
@@ -390,7 +383,7 @@ else
 
 print "<tr>";
 
-print "<td width='50' align='left' valign='middle' style='background-color:$colorValue;'>
+print "<td width='20px' align='left' valign='middle' style='background-color:$colorValue;'>
             <span id=\"prevLevelSpan\" style='background-color:$colorValue;$ArrowFontSize;font-weight:bold;color:white;cursor:pointer;$style' onclick=\"
                 event.stopPropagation();
                 location.href='main.php?content=changeLevelPage&direction=prev&selectedLevel=' + selectedLevel + '&source=' + source + '&clickSource=" . $_REQUEST['clickSource'] . "';
@@ -421,7 +414,7 @@ if ($clickSource == "intelligent") {
     }
 }
 print "</td>";
-print "<td width='50' align='right' valign='middle' style='background-color:$colorValue;'>
+print "<td width='20px' align='right' valign='middle' style='background-color:$colorValue;'>
             <span id=\"nextLevelSpan\" style='background-color:$colorValue;$ArrowFontSize;font-weight:bold;color:white;cursor:pointer;$style' onclick=\"
                 event.stopPropagation();
                 location.href='main.php?content=changeLevelPage&direction=next&selectedLevel=' + selectedLevel + '&source=' + source + '&clickSource=" . $_REQUEST['clickSource'] . "';
@@ -503,11 +496,6 @@ if (($showNumber == $KESZ_UGYES_VAGY) && $seconds > 0) {
     }
 }
 print "</td><td></td></tr><tr><td height='$MiddleHeight' colspan='5' align='center' valign='center'>";
-if ($isNeedAudioPart) {
-    $audio_part = "<a href=\"http://www.howjsay.com/index.php?word=" . urlencode($audio_word) . "&submit=Submit\" target='_blank'>
-                                    <img src='images/speaker.jpg' alt='Pronunciation' height='15' width='15'>
-                                </a>";
-}
 print "<script>var jelentes = \"{$word2}\";</script>";
 ?>
 <script>
@@ -534,18 +522,18 @@ print "<span id='elsoBetuSpan' style='display:none;$solutionlineFontSize;color:$
 print "<span id='jelentesSpan' style='display:none;$solutionlineFontSize;color:$globalcolor;' onclick=\"event.stopPropagation();\">{$word2} {$title2}{$audio_part}</span>";
 print "</td></tr>";
 
-print "<tr><td height='40px'></td><td width=" . $nemtudtamWidth . "></td>";
+print "<tr><td></td>";
 if ($showNumber != $KESZ_UGYES_VAGY) {
     for ($i = 0; $i < 100; $i++) {
         $nbspk .= '&nbsp;';
     }
     print "<td align='center' valign='center'>";
     print "<table><tr>";
-    print "\n<td align='center' valign='center' style='background-color:$colorValue;padding:10px 10px;cursor:pointer;width:70px;height:100px' onclick=\"event.stopPropagation();betu1_Click();\"><span style=" . $nemtudtamFontSize . ">" . translate('betu1') . "</span></td>";
-    print "\n<td align='center' valign='center' style='background-color:$globalcolor;padding:10px 10px;cursor:pointer;' onclick=\"event.stopPropagation();location.href='main.php?content=wordLearning_quick&inbetween=1&stillPract=1';\"><span style=" . $nemtudtamFontSize . ">" . translate('nem_tudtam') . "</span></td>";
+    print "\n<td align='center' valign='center' style='background-color:$colorValue;padding:10px 10px;cursor:pointer;width:150px;height:70px;border-radius:20px;border: 5px solid " . $dark . "' onclick=\"event.stopPropagation();betu1_Click();\"><span style=" . $nemtudtamFontSize . ">" . translate('betu1') . "</span></td>";
+    print "\n<td align='center' valign='center' style='background-color:$globalcolor;padding:10px 10px;cursor:pointer;border-radius:20px;width:150px;border: 5px solid " . $dark . "' onclick=\"event.stopPropagation();location.href='main.php?content=wordLearning_quick&inbetween=1&stillPract=1';\"><span style=" . $nemtudtamFontSize . ">" . translate('nem_tudtam') . "</span></td>";
     if ($clickSource != "sentencePractice" && $clickSource != "basicWordPractice" && $clickSource != "sentencePractice2" && $clickSource != "intelligent") {
-        print "\n<td align='center' valign='center' style='background-color:$colorValue;padding:10px 10px;cursor:pointer;width:70px;' onclick=\"event.stopPropagation();mumus2_Click();\"><span style=" . $nemtudtamFontSize . ">" . translate('mumus2') . "</span></td>";
-        print "\n<td align='center' valign='center' style='background-color:$colorValue;padding:10px 10px;cursor:pointer;width:70px;' onclick=\"event.stopPropagation();remove_Click();\"><span style=" . $nemtudtamFontSize . ">" . translate('remove') . "</span></td>";
+        print "\n<td align='center' valign='center' class='show-button' style='background-color:$colorValue;padding:10px 10px;cursor:pointer;width:150px;border-radius:20px;border: 5px solid " . $dark . "' onclick=\"event.stopPropagation();mumus2_Click();\"><span style=" . $nemtudtamFontSize . ">" . translate('mumus2') . "</span></td>";
+        print "\n<td align='center' valign='center' class='show-button' style='background-color:$colorValue;padding:10px 10px;cursor:pointer;width:150px;border-radius:20px;border: 5px solid " . $dark . "' onclick=\"event.stopPropagation();remove_Click();\"><span style=" . $nemtudtamFontSize . ">" . translate('remove') . "</span></td>";
     }
     print "</tr>";
     print "</table>";
@@ -634,38 +622,9 @@ if ($showNumber != $KESZ_UGYES_VAGY) {
         if ($clickSource != "intelligent")
             print "\n<br><a href='#' style=" . $nemtudtamFontSize . " onclick=\"event.stopPropagation(); location.href='main.php?content=wordLearning_quick&packageStart=1&selectedLevel={$newSelectedLevel}&source={$_SESSION['source']}&clickSource={$clickSource}&isOtherPackage=1';\">" . translate('masik_csomag') . "</a><br><br>";
     }
-    print "</td>";
+    print "</td><td></td>";
 }
-print "<td width=" . $nemtudtamWidth . "></td><td></td></tr>";
-/*
-print "<tr><td></td><td colspan='3' align='center' height='20' onclick=\"event.stopPropagation();\">\n<span align='center' style='width:100%;cursor:pointer;' onclick='doOnClickBody();'>{$nbspk}</span></td><td></td></tr>";
-print "<tr><td height=''></td><td align='center' valign='top' colspan='3'>";
-
-if(!$GLOBALS['isAndroid']){
-if($showNumber != $KESZ_UGYES_VAGY && $userObject['status'] != 2) {
-    print "<B>" . translate('szo_mondatba') . "
-        <form name='sentenceForm' id='sentenceForm' method='post'>
-        <textarea name='sentence' rows=2 cols=31 onclick=\"event.stopPropagation();clearit(this, 0);\">" . translate($ext) . "</textarea>
-
-        <textarea name='sentenceHun' rows=2 cols=31 onclick=\"event.stopPropagation();clearit(this, 1);\">" . translate('magyar') . "</textarea>
-        <input type='hidden' name='content' value='wordLearning_quick'>
-        <input type='hidden' name='store' value='1'>
-        </form>";
-    print "\n<a href='#' onclick=\"event.stopPropagation();
-            if(document.forms['sentenceForm'].sentence.value != '" . translate($ext) . "' && document.forms['sentenceForm'].sentenceHun.value != '" . translate('magyar') . "'){
-                document.forms['sentenceForm'].submit();
-            }
-            else{
-                alert('" . translate('required_fields') . "');
-            }
-            \">" . translate('rogzitem_hazimba') . "</a>";
-}
-}
-print "</td><td></td></tr>";
-
-print "<tr><td colspan='5' valign='bottom' align='center' height='50' style='font-size:14pt;color:#A05A36;'><b>
-Hangosan mondd ki mindk�t mondatot, a k�perny�r�l el n�zve!</td></tr>";
-*/
+print "</tr>";
 print "</table>";
 
 print "</div>";

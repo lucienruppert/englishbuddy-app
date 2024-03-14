@@ -295,7 +295,7 @@ function getLinksForPractice()
     $obj['szorend2']['langs'][4][0] = 'szorend_ger.html';
 
     $obj['nevmasok']['content'] = "<td id='nevmasok'><a href='#' class='hide-on-mobile' style=\"font-weight:normal;margin-left:30px;\" onmouseover=\"document.getElementById('nevmasoktable').style.visibility = 'visible';\" onmouseout=\"document.getElementById('nevmasoktable').style.visibility = 'hidden';\">" . translate('nevmasok') . "</a>
-                                        <div id='nevmasoktable'>{include_file}</div></td>";
+                                        <div id='nevmasoktable' class='hide-on-mobile'>{include_file}</div></td>";
     $obj['nevmasok']['langs'][1][0] = 'nevmasok_eng.html';
     $obj['nevmasok']['langs'][1][2] = 'nevmasok_eng_esp.html';
     $obj['nevmasok']['langs'][2][0] = 'nevmasok.html';

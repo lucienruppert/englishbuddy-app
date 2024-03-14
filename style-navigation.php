@@ -104,6 +104,10 @@
     display: inline;
   }
 
+  .show-button {
+    display: block;
+  }
+
   @media (max-width: 768px) {
     .hamburger {
       display: inline-block;
@@ -117,7 +121,9 @@
 
     .classroom,
     .hello,
-    .submenu {
+    .submenu,
+    .show-button,
+    .show-menu {
       display: none;
     }
 
@@ -127,10 +133,6 @@
 
     .submenu * {
       font-size: 30px;
-    }
-
-    .show-menu {
-      display: none;
     }
 
   }

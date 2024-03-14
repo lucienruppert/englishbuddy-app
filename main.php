@@ -28,9 +28,8 @@ $_SESSION['isShown'] = false;
 <HTML>
 
 <HEAD>
-    <meta http-equiv="X-UA-Compatible" content="IE=8"> <!-- IE8 mode -->
+    <meta HTTP-EQUIV='CHARSET' CONTENT='text/html; charset=ISO-8859-2'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <META HTTP-EQUIV='CHARSET' CONTENT='text/html; charset=ISO-8859-2'>
     <link rel="shortcut icon" type="image/x-icon" href="/images/lingocasa.ico">
     <?php ajaxTimerPrint(); ?>
 </HEAD>
@@ -82,18 +81,11 @@ $_SESSION['isShown'] = false;
         font-size: 11px;
     }
 
-
-    /* .word-management * {
-        border: 1px solid red;
-    } */
 </style>
 
 <BODY>
     <?php
     include('menu.php');
-    if ($GLOBALS['welcomeText']) {
-        print "<div id='welcome'><span style='font-size:15pt;color:yellow'>Szia {$userObject['keresztnev']}!</span></div>";
-    }
     ?>
     <div id="content">
         <?php
