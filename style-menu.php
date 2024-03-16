@@ -198,16 +198,15 @@
     overflow: auto;
     height: 400px;
     width: 830px;
-    top: 65px;
+    top: 90px;
     left: 50%;
     margin-left: -415px;
     display: none;
     background-color: <?php print $dark ?>;
-    z-index: 10;
+    z-index: 55;
     filter: alpha(opacity=100);
     /* IE's opacity*/
     opacity: 1;
-    z-index: 99;
     padding: 5px;
   }
 
@@ -230,6 +229,10 @@
     border: 1px solid grey;
   }
 
+  #clientDiv {
+    color: black;
+  }
+  
   #financeDiv {
     position: absolute;
     top: 35px;

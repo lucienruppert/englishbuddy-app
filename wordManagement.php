@@ -573,13 +573,6 @@ if ($userHasAccess) { ?>
 print "Nyelv: ". deb($userObject['nyelv']);
 print "Orderlang: ". deb($userObject['orderLang']);
 */
-                        // angol nyelv eset�n
-                        if ($userObject['nyelv'] == 1) {
-                            $pronLink = "<a href=\"http://www.howjsay.com/index.php?word=" . urlencode($pronLinkWord) . "&submit=Submit\" target='_blank'>
-                                    <img src='images/speaker.jpg' alt='Pronunciation' height='10' width='10'>
-                                </a>";
-                        }
-
                         if ($_REQUEST['orderLang'] == 'hun') {
                             print "\n<tr><td style='vertical-align:top' $title2>{$word2}</td><td style='vertical-align:top' $title>{$word1} {$pronLink}</td><td><input type='checkbox' class='cbMark' data-wid='" . (int)$words[$i]['id'] . "' data-uwid='" . (int)$words[$i]['uw_id'] . "' " . ($words[$i]['my_is_marked'] == 1 ? "checked" : "") . "></td></tr>";
                         } else {

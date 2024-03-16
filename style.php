@@ -193,6 +193,10 @@
     border: 1px solid grey;
   }
 
+  #clientDiv {
+    color: black;
+  }
+
   #financeDiv {
     position: absolute;
     top: 35px;

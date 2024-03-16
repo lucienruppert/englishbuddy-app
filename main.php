@@ -81,6 +81,9 @@ $_SESSION['isShown'] = false;
         font-size: 11px;
     }
 
+    .allWordsTable * {
+        color: white;
+    }
 </style>
 
 <BODY>
