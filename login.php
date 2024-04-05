@@ -4,10 +4,10 @@
   ?>
     <form id="login-form" action='index.php' method='POST'>
       <div class="login-controls">
-        <div class="button">
+        <div class="button" onclick="if(!$('.login-input').is(':visible')){ $('.login-input').show(); } else{ $('#login-form').submit(); }">
           <input type='hidden' name='actionType' value='login'>
           <input style='display:none' type='submit'>
-          <a href='#' class="login-button" onclick="if(!$('.login-input').is(':visible')){ $('.login-input').show(); } else{ $('#login-form').submit(); }"><?php print translate('enter'); ?></a>
+          <a href='#' class="login-button"><?php print translate('enter'); ?></a>
         </div>
         <div class='login-input'>
           <div>

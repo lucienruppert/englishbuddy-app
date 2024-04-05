@@ -139,6 +139,7 @@ print "<tr><td align=left style='vertical-align:top'><input type='button' name='
         return false;
     }
     /* A 2. r�sz az�rt >0, mert ha fel�l Level0 van kiv�lasztva, alul meg valami m�s, akkor is menteni kell, �s az als�t kell figyelembe venni */
+    console.log(document.forms['wordManagement'].levelSelection);
     if(document.forms['wordManagement'].levelSelection && document.forms['wordManagement'].levelSelection.value != -1 && document.forms['wordManagement'].levelSelection2.value > 0){
         alert('Csak egy level-t valaszthatsz ki!');
         return false;
@@ -146,7 +147,7 @@ print "<tr><td align=left style='vertical-align:top'><input type='button' name='
     document.forms['wordManagement'].actionType.value='store';
     document.forms['wordManagement'].submit();\"></td>";
 if ($userHasAccess) {
-    print "<td align='right'><select name='levelSelection2' style='color:white;background-color:" . $dark . ";>";
+    print "<td align='right'><select name='levelSelection2' style='color:white;background-color: $dark ;'>";
     print "<option value='-1'>";
     foreach ($optionArray as $key => $value) {
         if ($value[1] != 1) {
@@ -165,7 +166,7 @@ if ($userHasAccess) {
         }
     }
     print "</select>
-    <select id='categorySelection' name='categorySelection' style='color:white;background-color:" . $dark . ";>
+    <select id='categorySelection' name='categorySelection' style='color:white;background-color:" . $dark . ";'>
         <option value=''></option>
         <option value='1' " . ($wordRecord['category'] == 1 ? 'selected' : '') . ">basic</option>
         <option value='2' " . ($wordRecord['category'] == 2 ? 'selected' : '') . ">sophisticated</option>
@@ -179,7 +180,7 @@ if ($userHasAccess) {
         document.forms['wordManagement'].actionType.value='delete';
         document.forms['wordManagement'].submit();\"></td>
 
-    <td align='right'><select name='levelSelection' size='12' style='color:white;background-color:" . $dark . ";>";
+    <td align='right'><select name='levelSelection' size='12' style='color:white;background-color:" . $dark . ";'>";
     print "<option value='-1' selected>";
     foreach ($optionArray as $key => $value) {
         if ($value[1] != 2) {
@@ -423,9 +424,9 @@ if ($userHasAccess) { ?>
                     }
 
                     if ($_REQUEST['orderLang'] == 'hun') {
-                        print "\n<tr><td style='vertical-align:top' $title2><a name='link{$hfCount}' id ='link3_{$hfCount}' href='#' onclick=\"wordLink(" . (int)$homeWorks[$i]['id'] . ", {$hfCount});\" style='color:$globalcolor'>{$homeWork2}</a></td><td style='vertical-align:top' $title><a href='#' onclick=\"wordLink(" . (int)$homeWorks[$i]['id'] . ", {$hfCount});\" style='color:$globalcolor'>{$homeWork1}</a></td></tr>";
+                        print "\n<tr><td style='vertical-align:top' $title2><a name='link{$hfCount}' id ='link3_{$hfCount}' href='#' onclick=\"wordLink(" . (int)$homeWorks[$i]['id'] . ", {$hfCount});\" style='color:$highlight'>{$homeWork2}</a></td><td style='vertical-align:top' $title><a href='#' onclick=\"wordLink(" . (int)$homeWorks[$i]['id'] . ", {$hfCount});\" style='color:$highlight'>{$homeWork1}</a></td></tr>";
                     } else {
-                        print "\n<tr><td style='vertical-align:top' $title><a name='link{$hfCount}' id ='link3_{$hfCount}' href='#' onclick=\"wordLink(" . (int)$homeWorks[$i]['id'] . ", {$hfCount});\" style='color:$globalcolor'>{$homeWork1}</a></td><td style='vertical-align:top' $title2><a href='#' onclick=\"wordLink(" . (int)$homeWorks[$i]['id'] . ", {$hfCount});\" style='color:$globalcolor'>{$homeWork2}</a></td></tr>";
+                        print "\n<tr><td style='vertical-align:top' $title><a name='link{$hfCount}' id ='link3_{$hfCount}' href='#' onclick=\"wordLink(" . (int)$homeWorks[$i]['id'] . ", {$hfCount});\" style='color:$highlight'>{$homeWork1}</a></td><td style='vertical-align:top' $title2><a href='#' onclick=\"wordLink(" . (int)$homeWorks[$i]['id'] . ", {$hfCount});\" style='color:$highlight'>{$homeWork2}</a></td></tr>";
                     }
                     $hfCount++;
                 }
