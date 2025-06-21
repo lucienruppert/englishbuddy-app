@@ -2,7 +2,7 @@
 
 include_once('functions.php');
 
-if(!$userObject || !in_array($userObject['status'], array(4, 5, 6))){
+if (!$userObject || !in_array($userObject['status'], array(4, 5, 6))) {
     include_once('index.php');
     exit;
 }
@@ -10,19 +10,24 @@ if(!$userObject || !in_array($userObject['status'], array(4, 5, 6))){
 ?>
 
 <script>
-    $(document).ready(function () {
-        $("#btnDeleteMulti").click(function () {
+    $(document).ready(function() {
+        $("#btnDeleteMulti").click(function() {
             $(".deleteInputGhost").remove();
-            if(!confirm('Biztos szeretnéd törölni a becheck-elt finance rekordokat?')){
+            if (!confirm('Biztos szeretnéd törölni a becheck-elt finance rekordokat?')) {
                 return false;
             }
             var isChecked = false;
-            $(".cbDelete:checked").each(function () {
+            $(".cbDelete:checked").each(function() {
                 var id = $(this).data('id');
-                $('<input />', { type: 'hidden', name: 'idsToDelete[]', value: id, class: 'deleteInputGhost' }).appendTo($("#formSelectedRecord"));
+                $('<input />', {
+                    type: 'hidden',
+                    name: 'idsToDelete[]',
+                    value: id,
+                    class: 'deleteInputGhost'
+                }).appendTo($("#formSelectedRecord"));
                 isChecked = true;
             });
-            if(isChecked){
+            if (isChecked) {
                 $("#formSelectedRecord #actionType").val('deleteMultiFinanceForm');
                 $("#formSelectedRecord").submit();
             }
@@ -34,64 +39,59 @@ if(!$userObject || !in_array($userObject['status'], array(4, 5, 6))){
 
 $localLangs = getClientsLocalLangs();
 
-if($userObject['status'] == 6){
+if ($userObject['status'] == 6) {
     $canEdit = true;
-}
-else{
+} else {
     $canEdit = false;
 }
 
-if($_POST['actionType'] == "saveFinanceForm"){
+if ($_POST['actionType'] == "saveFinanceForm") {
     $storeArray = array();
     $storeArray['id'] = $_POST['financeId'];
-    if(isset($_POST['user_id'])) $storeArray['user_id'] = $_POST['user_id'];
-    if(isset($_POST['payment_date'])) $storeArray['payment_date'] = $_POST['payment_date'];
-    if(isset($_POST['time_package'])) $storeArray['time_package'] = $_POST['time_package'];
-    if(isset($_POST['paid_to_who'])) $storeArray['paid_to_who'] = $_POST['paid_to_who'];
-    if(isset($_POST['lesson_date'])) $storeArray['lesson_date'] = $_POST['lesson_date'];
-    if($_POST['isNewFinanceRecord']){
+    if (isset($_POST['user_id'])) $storeArray['user_id'] = $_POST['user_id'];
+    if (isset($_POST['payment_date'])) $storeArray['payment_date'] = $_POST['payment_date'];
+    if (isset($_POST['time_package'])) $storeArray['time_package'] = $_POST['time_package'];
+    if (isset($_POST['paid_to_who'])) $storeArray['paid_to_who'] = $_POST['paid_to_who'];
+    $storeArray['lesson_date'] = $_POST['lesson_date'];
+    if (strlen($storeArray['lesson_date']) === 0)
+        $storeArray['lesson_date'] = "00-00-00";
+    if ($_POST['isNewFinanceRecord']) {
         $storeArray['amount'] = 5000;
-        for($i = 0; $i < $_POST['package_number']; $i++){
+        for ($i = 0; $i < $_POST['package_number']; $i++) {
             $_POST['financeId'] = createFinance($storeArray, $message);
-            if(!$_POST['financeId']){
+            if (!$_POST['financeId']) {
                 print "<script>alert('{$message}');</script>";
-            }
-            else{
+            } else {
                 $_POST['isNewFinanceRecord'] = "0";
             }
         }
-    }
-    else{
-        if(!modifyFinance($storeArray, $message)){
+    } else {
+        if (!modifyFinance($storeArray, $message)) {
             print "<script>alert('{$message}');</script>";
         }
     }
-}
-else if($_POST['actionType'] == "deleteFinanceForm"){
-    if(!deleteFinance($_POST['financeId'])){
-        print "<script>alert('Finance rekord törlése nem sikerült');</script>";
+} else if ($_POST['actionType'] == "deleteFinanceForm") {
+    if (!deleteFinance($_POST['financeId'])) {
+        print "<script>alert('Finance rekord törlése nem sikerï¿½lt');</script>";
     }
-}
-else if($_POST['actionType'] == "deleteMultiFinanceForm"){
-    if(!deleteFinance($_POST['idsToDelete'])){
-        print "<script>alert('Finance rekord törlése nem sikerült');</script>";
+} else if ($_POST['actionType'] == "deleteMultiFinanceForm") {
+    if (!deleteFinance($_POST['idsToDelete'])) {
+        print "<script>alert('Finance rekord törlése nem sikerï¿½lt');</script>";
     }
-}
-else if($_POST['actionType'] == "newFinanceRecord"){
+} else if ($_POST['actionType'] == "newFinanceRecord") {
     $_POST['financeId'] = 0;
     $selectedFinance['send_mail'] = 1;
 }
 
-if(!$_POST['financeId']){
+if (!$_POST['financeId']) {
     $_POST['isNewFinanceRecord'] = "1";
 }
 
-if($_POST['financeId'] > 0){
+if ($_POST['financeId'] > 0) {
     $selectedFinance = getFinanceById($_POST['financeId']);
-}
-else{
+} else {
     $selectedFinance['payment_date'] = date("Y-m-d H");
-    if($_POST['actionType'] == "saveFinanceForm" && $_POST['isNewFinanceRecord']){
+    if ($_POST['actionType'] == "saveFinanceForm" && $_POST['isNewFinanceRecord']) {
         $selectedFinance['nev'] = $_POST['nev'];
         $selectedFinance['forras_nyelv'] = $_POST['forras_nyelv'];
         $selectedFinance['nyelv'] = $_POST['nyelv'];
@@ -105,33 +105,30 @@ else{
         $selectedFinance['hazi_feladat'] = $_POST['taHaziFeladat'];
         $selectedFinance['next_lesson'] = $_POST['txtNextLesson'];
         $selectedFinance['send_mail'] = $_POST['send_mail'];
+        $selectedFinance['lesson_date'] = date("Y-m-d");
     }
 }
 
 $jelentkezokForFilter = array();
-if(in_array($userObject['status'], array(6))){
-    if($_POST['selectedStudent'] > 0){
+if (in_array($userObject['status'], array(6))) {
+    if ($_POST['selectedStudent'] > 0) {
         $jelentkezok = array();
         $jelentkezok[] = getUserObjById($_POST['selectedStudent']);
         $finances = getFinancesByStudent($_POST['selectedStudent']);
-    }
-    else if($_POST['selectedTeacher'] > 0){
+    } else if ($_POST['selectedTeacher'] > 0) {
         $jelentkezok = getUsersByTeacher($_POST['selectedTeacher']);
         $finances = getFinances($_POST['selectedTeacher']);
-    }
-    else{
+    } else {
         $jelentkezok = getUsersByLanguage(0);
         $finances = getFinances(0);
     }
     $jelentkezokForFilter = getUsersByLanguage(0);
-}
-else if(in_array($userObject['status'], array(4, 5))){
-    if($_POST['selectedStudent'] > 0){
+} else if (in_array($userObject['status'], array(4, 5))) {
+    if ($_POST['selectedStudent'] > 0) {
         $jelentkezok = array();
         $jelentkezok[] = getUserObjById($_POST['selectedStudent']);
         $finances = getFinancesByStudent($_POST['selectedStudent']);
-    }
-    else{
+    } else {
         $jelentkezok = getUsersByTeacher($userObject['id']);
         $finances = getFinances($userObject['id']);
     }
@@ -141,12 +138,14 @@ else if(in_array($userObject['status'], array(4, 5))){
 $selectedFinance['payment_date'] = substr($selectedFinance['payment_date'], 0, 13);
 
 ?>
-<script>window.jQuery || document.write("<script src='js/jquery-1.11.1.min.js' type='text/javascript'>\x3C/script>")</script>
+<script>
+    window.jQuery || document.write("<script src='js/jquery-1.11.1.min.js' type='text/javascript'>\x3C/script>")
+</script>
 <script src="js/jquery.maskedinput.min.js" type="text/javascript"></script>
 <script>
-jQuery(function($){
-   $("#txtNextLesson").mask("9999.99.99 99:99");
-});
+    jQuery(function($) {
+        $("#txtNextLesson").mask("9999.99.99 99:99");
+    });
 </script>
 <?php
 
@@ -161,7 +160,7 @@ print "<input type='hidden' name='dictionaryUser' value=''>";
 print "<input type='hidden' name='homeWorkOrder' value=''>";
 print "<input type='hidden' name='selectedTeacher' value='{$_POST['selectedTeacher']}'>";
 print "<input type='hidden' name='selectedStudent' value='{$_POST['selectedStudent']}'>";
-if($userObject['status'] == 6){
+if ($userObject['status'] == 6) {
     print "<input type='hidden' name='payment' value=''>";
 }
 print "<input type='hidden' name='hazi_feladat' value=''>";
@@ -169,10 +168,9 @@ print "<input type='hidden' name='next_lesson' value=''>";
 print "<table style='border: 1px solid' align='center' width='800'><tr><td colspan=3>";
 print "<table border=1 cellpadding=1>";
 
-if($userObject['status'] != 6 && !$selectedFinance['id']){
+if ($userObject['status'] != 6 && !$selectedFinance['id']) {
     $disabled = "disabled";
-}
-else{
+} else {
     $disabled = "";
 }
 $mentGomb = "<input type='button' value='Ment' $disabled onclick=\"
@@ -183,22 +181,20 @@ $mentGomb = "<input type='button' value='Ment' $disabled onclick=\"
             this.form.homeWorkOrder.value = document.forms['wordManagement'].homeWorkOrder.value;
         }
         this.form.submit();\">";
-if($userObject['status'] == 6){
-    if($_POST['selectedTeacher'] > 0){
+if ($userObject['status'] == 6) {
+    if ($_POST['selectedTeacher'] > 0) {
         $balance = getBalance($_POST['selectedTeacher']);
-    }
-    else{
+    } else {
         $balance = 0;
     }
-}
-else{
+} else {
     $balance = getBalance($userObject['id']);
 }
-if($userObject['status'] == 6){
+if ($userObject['status'] == 6) {
     print "<tr>
             <th>&nbsp;Név</th>
             <th>&nbsp;Fizetési dátum</th>";
-    if(!$selectedFinance['id']){
+    if (!$selectedFinance['id']) {
         print "<th>&nbsp;Csomag db</th>";
     }
     print "<th>&nbsp;Skype perc</th>";
@@ -214,8 +210,7 @@ if($userObject['status'] == 6){
     print "<th><input type='button' value='Új' onclick=\"this.form.actionType.value='newFinanceRecord';this.form.submit();\"></th>";
     print "<th rowspan=2 style='font-size:16px;color:red;'>&nbsp;Balance: {$balance}</th>";
     print "</tr>";
-}
-else{
+} else {
     print "<tr>
             <th>&nbsp;Név</th>
             <th>&nbsp;Fizetési dátum</th>
@@ -242,27 +237,25 @@ else{
     print "\n</select></tr>";
 }
 */
-if(!$_POST['financeId'] && $userObject['status'] == 6){
+if (!$_POST['financeId'] && $userObject['status'] == 6) {
 
     $nevText = "<select name='user_id' id='nev'>\n<option value='0'>";
     $selected = '';
-    foreach($jelentkezok as $jelentkezo){
-        if($selectedFinance['user_id'] == $jelentkezo['id']){
+    foreach ($jelentkezok as $jelentkezo) {
+        if ($selectedFinance['user_id'] == $jelentkezo['id']) {
             $selected = "selected";
-        }
-        else{
+        } else {
             $selected = "";
         }
         $nevText .= "\n<option value='{$jelentkezo['id']}' {$selected}>{$jelentkezo['vezeteknev']} {$jelentkezo['keresztnev']}";
     }
-}
-else{
+} else {
     $nevText = $selectedFinance['vezeteknev'] . ' ' . $selectedFinance['keresztnev'];
 }
-if($userObject['status'] == 6){
+if ($userObject['status'] == 6) {
     $programStartDateText = "\n<input type='text' name='payment_date' value='" . substr($selectedFinance['payment_date'], 0, 10) . "' size='8'>";
     $csomagSzamText = "\n<select name='package_number'>";
-    for($i = 1; $i <= 20; $i++){
+    for ($i = 1; $i <= 20; $i++) {
         $csomagSzamText .= "\n<option value='{$i}'>{$i}";
     }
     $csomagSzamText .= "\n</select>";
@@ -274,16 +267,14 @@ if($userObject['status'] == 6){
     $kinekUtalvaText .= "\n<option value='1' " . ($selectedFinance['paid_to_who'] == '1' ? 'selected' : '') . ">Tanár";
     $kinekUtalvaText .= "\n<option value='2' " . ($selectedFinance['paid_to_who'] != '1' ? 'selected' : '') . ">Kikérdezõ";
     $kinekUtalvaText .= "\n</select>";
-}
-else{
+} else {
     $programStartDateText = substr($selectedFinance['payment_date'], 0, 10);
     $skypePercText = $selectedFinance['time_package'] == 1 ? '60' : ($selectedFinance['time_package'] == 2 ? '90' : '-');
     $kinekUtalvaText = $selectedFinance['paid_to_who'] == 1 ? 'Tanár' : ($selectedFinance['paid_to_who'] == 2 ? 'Kikérdezõ' : '-');
 }
-if($userObject['status'] != 6 && !$selectedFinance['id']){
+if ($userObject['status'] != 6 && !$selectedFinance['id']) {
     $disabled = "disabled";
-}
-else{
+} else {
     $disabled = "";
 }
 $lessonDateText = "\n<input type='text' name='lesson_date' id='lesson_date_text' value='" . substr($selectedFinance['lesson_date'], 0, 10) . "' size='13' {$disabled}>";
@@ -291,15 +282,15 @@ $lessonDateText = "\n<input type='text' name='lesson_date' id='lesson_date_text'
 print "<tr>
         <td>&nbsp;$nevText</td>";
 print "<td>&nbsp;$programStartDateText</td>";
-if($userObject['status'] == 6){
-    if(!$selectedFinance['id']){
+if ($userObject['status'] == 6) {
+    if (!$selectedFinance['id']) {
         print "<td>&nbsp;$csomagSzamText</td>";
     }
 }
 print "<td>&nbsp;$skypePercText</td>";
 print "<td>&nbsp;$kinekUtalvaText</td>";
 print "<td>&nbsp;$lessonDateText</td>";
-if($userObject['status'] == 6){
+if ($userObject['status'] == 6) {
     print "<td><input type='button' name='deleteBtn' value='Töröl' onclick=\"
         if(confirm('Biztos szeretnéd törölni a finance rekordot?')){
             this.form.actionType.value='deleteFinanceForm';
@@ -322,17 +313,16 @@ print "<form id='userSelectFormForFinance' name='userSelectFormForFinance' actio
             <input type='hidden' name='homeWorkOrder' value=''>
             <input type='hidden' name='comment' value=''>";
 print "\n<table style='width:100%'><tr><td><select name='selectedStudent' onchange=\"document.forms['userSelectFormForFinance'].submit();\"><option value=''>";
-foreach($jelentkezokForFilter as $jelentkezo){
-    if($_POST['selectedStudent'] == $jelentkezo['id']){
+foreach ($jelentkezokForFilter as $jelentkezo) {
+    if ($_POST['selectedStudent'] == $jelentkezo['id']) {
         $selected = 'selected';
-    }
-    else{
+    } else {
         $selected = '';
     }
     print "\n<option value='{$jelentkezo['id']}' $selected>{$jelentkezo['vezeteknev']} {$jelentkezo['keresztnev']}";
 }
 print "\n</select></td>";
-if($userObject['status'] == 6){
+if ($userObject['status'] == 6) {
     $teachers = getUsersByStatusArray(array(4, 5));
     print "<td><select name='selectedTeacher' onchange=\"
         this.form.comment.value=document.getElementById('taComment').value;
@@ -343,11 +333,10 @@ if($userObject['status'] == 6){
         this.form.submit();
      \">
         <option value=''>";
-    foreach($teachers as $teacher){
-        if($_POST['selectedTeacher'] > 0 && $teacher['id'] == $_POST['selectedTeacher']){
+    foreach ($teachers as $teacher) {
+        if ($_POST['selectedTeacher'] > 0 && $teacher['id'] == $_POST['selectedTeacher']) {
             $selected = 'selected';
-        }
-        else{
+        } else {
             $selected = '';
         }
         print "\n<option value='{$teacher['id']}' $selected>{$teacher['keresztnev']}";
@@ -359,7 +348,7 @@ print "\n<input type='button' name='students' id='students' value='Tanítványok' 
                                                                                             if(document.forms['wordManagement']){
                                                                                                 document.forms['userSelectForm'].dictionaryUser.value = document.forms['wordManagement'].dictionaryUser.value;
                                                                                                 document.forms['userSelectForm'].homeWorkOrder.value = document.forms['wordManagement'].homeWorkOrder.value;
-                                                                                            }
+ }
                                                                                             document.forms['userSelectForm'].submit();\">";
 print "\n</td>";
 print "\n<td style='text-align:right;width:100%'>";
@@ -370,9 +359,9 @@ print "</tr></table>";
 print "</form>";
 
 print "<table border=1 cellpadding=2 width='100%'>";
-    print "<tr>
-        <th>Név</th>
-        <th>Fizetési dátum</th>
+print "<tr>
+        <th>Névv</th>
+        <th>Fizetetésitum</th>
         <th>Összeg</th>
         <th>Skype perc</th>
         <th>Kinek utalva</th>
@@ -382,21 +371,20 @@ print "<table border=1 cellpadding=2 width='100%'>";
         <th></th>
         </tr>";
 
-foreach((array)$finances as $finance){
-    if(!$finance['time_package']) $time_package_text = '-';
-    else if($finance['time_package'] == 1) $time_package_text = '60';
-    else if($finance['time_package'] == 2) $time_package_text = '90';
+foreach ((array)$finances as $finance) {
+    if (!$finance['time_package']) $time_package_text = '-';
+    else if ($finance['time_package'] == 1) $time_package_text = '60';
+    else if ($finance['time_package'] == 2) $time_package_text = '90';
     else $time_package_text = 'Namostmivan?';
 
-    if(!$finance['paid_to_who']) $paid_to_who_text = '-';
-    else if($finance['paid_to_who'] == 1) $paid_to_who_text = 'tanár';
-    else if($finance['paid_to_who'] == 2) $paid_to_who_text = 'kikérdezõ';
+    if (!$finance['paid_to_who']) $paid_to_who_text = '-';
+    else if ($finance['paid_to_who'] == 1) $paid_to_who_text = 'tanár';
+    else if ($finance['paid_to_who'] == 2) $paid_to_who_text = 'kikérdezõ½';
     else $paid_to_who_text = 'Namostmivan?';
-    
-    if(strlen($finance['lesson_date']) > 4 && $finance['lesson_date'][0] != '0'){
+
+    if (strlen($finance['lesson_date']) > 4 && $finance['lesson_date'][0] != '0') {
         $style = 'background-color:#FDA8AC;';
-    }
-    else{
+    } else {
         $style = '';
     }
 

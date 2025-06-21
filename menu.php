@@ -166,8 +166,10 @@ if ($_REQUEST['content'] == "wordLearning_quick") {
   foreach ($list as $key => $value) {
     if (in_array($value[1], array(1, 2, 3)) && $key > 0) {
       if (!in_array($value[1], array(1, 2))) {
-        if (count($levels[$levelIndex]) >= $bontasLimit) {
-          $levelIndex++;
+        if($levels[$levelIndex] != null) {
+          if (count($levels[$levelIndex]) >= $bontasLimit) {
+            $levelIndex++;
+          }
         }
         $levels[$levelIndex][] = array($key, $value[0], $isLevelMaxed);
       }

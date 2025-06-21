@@ -1,16 +1,12 @@
 <?php
 error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT);
-if ($_POST['actionType'] == 'firstVisit') {
-    ini_set('session.cookie_lifetime', 0);
-    ini_set('session.gc_maxlifetime', 60 * 60);
-}
-if (!$_SESSION['userObject']) {
+// if ($_POST['actionType'] == 'firstVisit') {
+//     ini_set('session.cookie_lifetime', 0);
+//     ini_set('session.gc_maxlifetime', 60 * 60);
+// }
+//if (!$_SESSION['userObject']) {
     session_start();
-}
-
-if (!$userObject && $_SESSION['userObject']) {
-    $userObject = $_SESSION['userObject'];
-}
+//}
 
 include('functions.php');
 if (!$userObject && $_SESSION['userObject']) {

@@ -832,7 +832,7 @@ function getGeneratedWordList($levelTypeArray)
     $resultArray = array();
     for ($i = 0; $i < count($levelTypeArray); $i++) {
         $actLevel = $levelTypeArray[$i];
-        $resultArray = array_merge($resultArray, getFirstNWordsByLevel(1, $actLevel));
+        //$resultArray = array_merge($resultArray, getFirstNWordsByLevel(1, $actLevel));
     }
     return $resultArray;
 }
@@ -870,22 +870,22 @@ function getIgeragozasTable()
         </table><p>&nbsp;";
 }
 
-function getWordCount()
-{
-    $langExt = getLangExtByLangId($userObject['nyelv']);
-    $query = "SELECT count(*) from words where level_{$langExt} not in (8)";
+// function getWordCount()
+// {
+//     $langExt = getLangExtByLangId($userObject['nyelv']);
+//     $query = "SELECT count(*) from words where level_{$langExt} not in (8)";
 
-    $result = mysql_query($query);
-    if (!$result) {
-        print mysql_error();
-        exit("Nem siker�lt: " . $query);
-    }
-    $number = 0;
-    while ($row = mysql_fetch_row($result)) {
-        $number = $row[0];
-    }
-    return $number;
-}
+//     $result = mysql_query($query);
+//     if (!$result) {
+//         print mysql_error();
+//         exit("Nem siker�lt: " . $query);
+//     }
+//     $number = 0;
+//     while ($row = mysql_fetch_row($result)) {
+//         $number = $row[0];
+//     }
+//     return $number;
+// }
 
 function getAllWordCount()
 {
@@ -924,8 +924,8 @@ function checkWord($id, $hunWord, $nyelv, $foreignWord)
 
     $hunWord = aposztrofRepToDb($hunWord);
     $foreignWord = aposztrofRepToDb($foreignWord);
-    $foreignPron = aposztrofRepToDb($foreignPron);
-    $foreignComm = aposztrofRepToDb($foreignComm);
+    // $foreignPron = aposztrofRepToDb($foreignPron);
+    // $foreignComm = aposztrofRepToDb($foreignComm);
 
     $ext = getLangExtByLangId($nyelv);
 
@@ -2253,7 +2253,7 @@ function createUser($userArray, &$message)
         $message = "Ezzel az e-mail c�mmel m�r van regisztr�lt felhaszn�l�!";
         return false;
     }
-    $hash = bin2hex(mcrypt_create_iv(22, MCRYPT_DEV_URANDOM));
+    $hash = bin2hex(random_bytes(22));
     $query = "insert into lmjelentkezok (jelszo, vezeteknev, keresztnev, email, program_start_date, program_end_date, client_data, send_mail, forras_nyelv, nyelv, max_level, status, tanar_id, payment, hazi_feladat, next_lesson, hash)
                 values('{$userArray['jelszo']}', '{$userArray['vezeteknev']}', '{$userArray['keresztnev']}', '{$userArray['email']}'
                     , '{$userArray['program_start_date']}', '{$userArray['program_end_date']}', '{$userArray['client_data']}', {$userArray['send_mail']}, {$userArray['forras_nyelv']}, {$userArray['nyelv']}, {$userArray['max_level']}, {$userArray['status']}, " . (int)$userArray['tanar'] . ", '{$userArray['payment']}', '{$userArray['hazi_feladat']}', '{$userArray['next_lesson']}', '{$hash}')";
@@ -2313,7 +2313,7 @@ function createUser2($userArray, &$message)
     $end = date('Y-m-d', strtotime('+1 years'));
     $max_level = 1000;
 
-    $hash = bin2hex(mcrypt_create_iv(22, MCRYPT_DEV_URANDOM));
+    $hash = bin2hex(random_bytes(22));
     $query = "insert into lmjelentkezok (jelszo, vezeteknev, keresztnev, email, forras_nyelv, nyelv, status, subscribe_length, send_mail,max_level,program_start_date,program_end_date, hash)
                 values('{$userArray['jelszo']}', '{$userArray['vezeteknev']}', '{$userArray['keresztnev']}', '{$userArray['email']}',
                     {$userArray['forras_nyelv']}, {$userArray['nyelv']}, {$userArray['status']}, {$userArray['subscribe_length']}, {$userArray['send_mail']},{$max_level},'{$start}','{$end}', '{$hash}')";
@@ -2814,7 +2814,7 @@ Idioma: $nyelv";
 function array_utf8_encode_recursive($dat)
 {
     if (is_string($dat)) {
-        return utf8_encode($dat);
+        return mb_convert_encoding($dat, 'UTF-8', 'ISO-8859-1');
     }
     if (is_object($dat)) {
         $ovs = get_object_vars($dat);
@@ -2834,7 +2834,7 @@ function array_utf8_encode_recursive($dat)
 function array_utf8_decode_recursive($dat)
 {
     if (is_string($dat)) {
-        return utf8_decode($dat);
+        return mb_convert_encoding($dat, 'UTF-8', 'ISO-8859-1');
     }
     if (is_object($dat)) {
         $ovs = get_object_vars($dat);

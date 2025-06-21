@@ -103,7 +103,7 @@ if($_POST['userId'] > 0){
 }
 else{
     $selectedUser['program_start_date'] = date("Y-m-d H");
-    $selectedUser['program_end_date'] = date('Y-m-d H',strtotime(date("Y-m-d", mktime()) . " + 365 day"));
+    $selectedUser['program_end_date'] = date('Y-m-d H',strtotime(date("Y-m-d", time()) . " + 365 day"));
     if($_POST['actionType'] == "saveForm" && $_POST['isNewRecord']){
         $selectedUser['vezeteknev'] = $_POST['vezeteknev'];
         $selectedUser['keresztnev'] = $_POST['keresztnev'];
