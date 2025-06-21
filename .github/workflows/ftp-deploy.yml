@@ -10,6 +10,7 @@ jobs:
   deploy:
     name: Deploy to Remote Server
     runs-on: ubuntu-latest
+    timeout-minutes: 30 # Add a timeout to prevent hung jobs
 
     steps:
       - name: Checkout code
@@ -17,18 +18,66 @@ jobs:
         with:
           fetch-depth: 0 # Fetches all history for all branches and tags
 
-      - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      # Adding a delay to ensure stable connection
+      - name: Wait before connection
+        run: sleep 10
+
+      # Test FTP connection before deploying
+      - name: Test FTP Connection
+        run: |
+          echo "Testing connection to FTP server..."
+          curl -v --retry 3 --retry-delay 10 --retry-max-time 60 "ftp://${{ secrets.FTP_SERVER }}" --user "${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}" || echo "Connection test completed"
+
+      # First attempt
+      - name: FTP Deploy (Attempt 1)
+        id: deploy1
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        continue-on-error: true
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /httpd/www/luciendelmar.com/html/inglis/
           local-dir: ./ # Uploads everything from the repository
-          # exclude: |  # Uncomment and add files to exclude if needed
-          #   .git*/**
-          #   .git*
-          #   **/.git*/**
-          #   **/.git*
-          #   .github/**
-          #   README.md
+          dangerous-clean-slate: false # Don't delete files on server
+          state-name: .ftp-deploy-sync-state.json
+          protocol: ftp # Explicitly set protocol
+          port: 21 # Standard FTP port
+          exclude: |
+            .git*/**
+            .git*
+            **/.git*/**
+            **/.git*
+            .github/**
+            README.md
+            logs/**
+
+      # If first attempt fails, wait and try again
+      - name: Wait and retry
+        if: steps.deploy1.outcome == 'failure'
+        run: |
+          echo "First deployment attempt failed, waiting 30 seconds before retry..."
+          sleep 30
+
+      # Second attempt if first fails
+      - name: FTP Deploy (Attempt 2)
+        if: steps.deploy1.outcome == 'failure'
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /httpd/www/luciendelmar.com/html/inglis/
+          local-dir: ./ # Uploads everything from the repository
+          dangerous-clean-slate: false # Don't delete files on server
+          state-name: .ftp-deploy-sync-state.json
+          protocol: ftp # Explicitly set protocol
+          port: 21 # Standard FTP port
+          exclude: |
+            .git*/**
+            .git*
+            **/.git*/**
+            **/.git*
+            .github/**
+            README.md
+            logs/**
