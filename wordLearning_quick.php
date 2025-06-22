@@ -88,9 +88,9 @@ if (isset($_REQUEST['store']) && $_REQUEST['store'] == 1) {
     || (isset($_REQUEST['againPractise']) && $_REQUEST['againPractise'])
     && (!isset($_REQUEST['isOtherPackage']) || !$_SESSION['cbMultiPractice'])
 ) {
-    if (in_array($_REQUEST['selectedLevel'], array('list1', 'list2')) || startsWith($_REQUEST['selectedLevel'], 'listFract_') || $_REQUEST['selectedLevel'] == 'listAll' || $_REQUEST['selectedLevel'] == 'mumus' || $_REQUEST['selectedLevel'] == 'tananyagAll') {
+    if (isset($_REQUEST['selectedLevel']) && (in_array($_REQUEST['selectedLevel'], array('list1', 'list2')) || startsWith($_REQUEST['selectedLevel'], 'listFract_') || $_REQUEST['selectedLevel'] == 'listAll' || $_REQUEST['selectedLevel'] == 'mumus' || $_REQUEST['selectedLevel'] == 'tananyagAll')) {
         $_SESSION['selectedLevel2'] = $_REQUEST['selectedLevel'];
-    } else if ($_REQUEST['selectedLevel'] > 0) {
+    } else if (isset($_REQUEST['selectedLevel']) && $_REQUEST['selectedLevel'] > 0) {
         $_SESSION['selectedLevel2'] = $_REQUEST['selectedLevel'];
         $_SESSION['wordLearning_level_rule'] = getLevelComment($selectedLevel, $userObject['nyelv'], false);
     } else {
