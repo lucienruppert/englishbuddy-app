@@ -290,7 +290,8 @@ print "
     #quickLearning {
         width: 100vw;
     }
-/* 
+
+    /* 
     #quickLearning * {
         border: 1px solid red;
     } */
@@ -518,6 +519,9 @@ print "<script>var jelentes = \"{$word2}\";</script>";
 
 
 <?php
+// Initialize audio_part variable
+$audio_part = '';
+
 print "<span id='elsoBetuSpan' style='display:none;$solutionlineFontSize;color:$globalcolor;' onclick=\"event.stopPropagation();\"></span>";
 print "<span id='jelentesSpan' style='display:none;$solutionlineFontSize;color:$globalcolor;' onclick=\"event.stopPropagation();\">{$word2} {$title2}{$audio_part}</span>";
 print "</td></tr>";
