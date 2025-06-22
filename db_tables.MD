@@ -188,3 +188,11 @@ CREATE TABLE `user_hits` (
     FOREIGN KEY (`user_id`) REFERENCES `lmjelentkezok`(`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 ```
+
+# Database Connection Details
+
+The database credentials are in
+
+The connection is made using the legacy mysql_connect() function in functions_userObj.php:
+
+Note: This application uses the old mysql_* functions which are deprecated. It should be updated to use mysqli or PDO for better security.

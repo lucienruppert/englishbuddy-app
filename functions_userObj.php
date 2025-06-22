@@ -3,8 +3,8 @@
     include_once('./php7/mysql_replacement.php');
     include_once('./php7/ereg-functions.php');
 
-mysql_connect ('mysql.luciendelmar.com','luciendelmar','9CUiNwYzV3');
-mysql_select_db('luciendelmar');
+mysql_connect ('mysql.englishbuddy.hu', 'englishb_admin', 'klyIrNNauZ2K*2W1');
+mysql_select_db('englishb_learning_app');
 mysql_query("SET NAMES 'latin2'");
 
 function getUserObj($email, $username)
@@ -19,7 +19,7 @@ function getUserObj($email, $username)
     $result = mysql_query($query);
     if(!$result){
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $userObject = false;
     while($row = mysql_fetch_assoc($result)) {
@@ -30,7 +30,7 @@ function getUserObj($email, $username)
         $result = mysql_query($sql);
         if(!$result){
             print mysql_error();
-            exit("Nem sikerült: " . $sql);
+            exit("Nem sikerï¿½lt: " . $sql);
         }
     }
     return $userObject;
@@ -47,7 +47,7 @@ function getUserObjByHash($hash)
     $result = mysql_query($query);
     if(!$result){
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $userObject = false;
     while($row = mysql_fetch_assoc($result)) {
@@ -58,7 +58,7 @@ function getUserObjByHash($hash)
         $result = mysql_query($sql);
         if(!$result){
             print mysql_error();
-            exit("Nem sikerült: " . $sql);
+            exit("Nem sikerï¿½lt: " . $sql);
         }
     }
     return $userObject;
@@ -74,7 +74,7 @@ function getUserObjById($id)
     $result = mysql_query($query);
     if(!$result){
         print mysql_error();
-        exit("Nem sikerült: " . $query);
+        exit("Nem sikerï¿½lt: " . $query);
     }
     $userObject = false;
     while($row = mysql_fetch_assoc($result)) {
