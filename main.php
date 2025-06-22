@@ -1,5 +1,6 @@
 <?php
-error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
+//error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
+error_reporting(0);
 // Initialize userObject
 $userObject = null;
 
