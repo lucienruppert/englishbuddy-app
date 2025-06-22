@@ -162,7 +162,7 @@ if (isset($_REQUEST['store']) && $_REQUEST['store'] == 1) {
     if (!$_REQUEST['againPractise'])
         $_SESSION['cbMultiPractice'] = null;
 } else if ($clickSource == 'intelligent' && $filterChanged) {
-    if ($_REQUEST['source']) {
+    if (isset($_REQUEST['source'])) {
         $_SESSION['source'] = $_REQUEST['source'];
     } else {
         $_REQUEST['source'] = $_SESSION['source'];
@@ -187,7 +187,7 @@ if (isset($_REQUEST['store']) && $_REQUEST['store'] == 1) {
         $_SESSION['wordLearning_words_groupby'] = $wordsGroupBy;
     }
     $_SESSION['cbMultiPractice'] = null;
-} else if ($_REQUEST['actionType'] == 'multiPractice' || ($_REQUEST['isOtherPackage'] && $_SESSION['cbMultiPractice'])) {
+} else if ((isset($_REQUEST['actionType']) && $_REQUEST['actionType'] == 'multiPractice') || (isset($_REQUEST['isOtherPackage']) && $_REQUEST['isOtherPackage'] && $_SESSION['cbMultiPractice'])) {
     // ennyi sz�t vesz�nk el� minden kateg�ri�b�l
     $COUNT = 6;
 
