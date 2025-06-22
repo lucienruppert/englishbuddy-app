@@ -1,5 +1,6 @@
 <?php
-error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING & ~E_DEPRECATED & ~E_STRICT);
+error_reporting(0); // Turn off all error reporting
+ini_set('display_errors', 0); // Don't display errors on screen
 
 define("LOG", "1");
 //define("DEBUG", "1");
