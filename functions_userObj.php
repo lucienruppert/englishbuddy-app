@@ -8,9 +8,17 @@ include_once('./php7/mysql_replacement.php');
 include_once('./php7/ereg-functions.php');
 
 // Try database connection with error handling
-$conn = @mysql_connect('mysql.englishbuddy.hu', 'englishb_admin', 'klyIrNNauZ2K*2W1');
+$db_host = '185.65.68.10'; // Remote database IP address
+$db_user = 'englishb_admin';
+$db_pass = 'klyIrNNauZ2K*2W1';
+
+$conn = @mysql_connect($db_host, $db_user, $db_pass);
 if (!$conn) {
-    die("Connection failed: " . mysql_error());
+    die("Connection failed: " . mysql_error() . "\n" .
+        "Error details:\n" .
+        "- Attempted to connect to: " . $db_host . "\n" .
+        "- Make sure the host is correct in cPanel > Remote MySQL\n" .
+        "- Make sure this server's IP is allowed in Remote MySQL Access Hosts");
 }
 
 // Try selecting database
