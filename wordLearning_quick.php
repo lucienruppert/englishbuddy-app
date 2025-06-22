@@ -187,12 +187,15 @@ if (isset($_REQUEST['store']) && $_REQUEST['store'] == 1) {
         $_SESSION['wordLearning_words_groupby'] = $wordsGroupBy;
     }
     $_SESSION['cbMultiPractice'] = null;
-} else if ((isset($_REQUEST['actionType']) && $_REQUEST['actionType'] == 'multiPractice') || (isset($_REQUEST['isOtherPackage']) && $_REQUEST['isOtherPackage'] && $_SESSION['cbMultiPractice'])) {
+} else if ((isset($_REQUEST['actionType']) && $_REQUEST['actionType'] == 'multiPractice')
+    || (isset($_REQUEST['isOtherPackage']) && $_REQUEST['isOtherPackage'] && isset($_SESSION['cbMultiPractice']) && $_SESSION['cbMultiPractice'])
+) {
     // ennyi sz�t vesz�nk el� minden kateg�ri�b�l
     $COUNT = 6;
 
-    if (!$_REQUEST['isOtherPackage'])
+    if (!isset($_REQUEST['isOtherPackage']) || !$_REQUEST['isOtherPackage']) {
         $_SESSION['cbMultiPractice'] = $_REQUEST['cbMultiPractice'];
+    }
 
     if ($_REQUEST['source']) {
         $_SESSION['source'] = $_REQUEST['source'];
@@ -230,14 +233,14 @@ if (isset($_REQUEST['store']) && $_REQUEST['store'] == 1) {
         $_SESSION['wordLearning_direction'] = $defaultDirection;
     }
 } else if (is_array($_SESSION['wordLearning_words_groupby'])) {
-    if ($_REQUEST['inbetween'] == 1) {
+    if (isset($_REQUEST['inbetween']) && $_REQUEST['inbetween'] == 1) {
         if ($_SESSION['wordLearning_direction'] != 1) {
             $current_word = array_shift($_SESSION['wordLearning_words_groupby']);
-            if ($_REQUEST['stillPract'] == 1) {
+            if (isset($_REQUEST['stillPract']) && $_REQUEST['stillPract'] == 1) {
                 $_SESSION['wordLearning_words_groupby'][] = $current_word;
             }
         }
-    } else if ($_REQUEST['directionChange'] == 1) {
+    } else if (isset($_REQUEST['directionChange']) && $_REQUEST['directionChange'] == 1) {
         $_SESSION['wordLearning_direction'] = 1 - $_SESSION['wordLearning_direction'];
     }
 
