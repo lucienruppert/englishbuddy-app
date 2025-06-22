@@ -1,34 +1,43 @@
 <?php
-// Enable error reporting for debugging
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+// Only show errors for non-AJAX requests
+if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) || strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) !== 'xmlhttprequest') {
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+} else {
+    error_reporting(0);
+    ini_set('display_errors', 0);
+}
 
 //php7 hiányzó funkciói
 include_once('./php7/mysql_replacement.php');
 include_once('./php7/ereg-functions.php');
 
-// Try database connection with error handling
-$db_host = '185.65.68.10'; // Remote database IP address
+// Database connection configuration
+$db_host = '185.65.68.10';
 $db_user = 'englishb_admin';
 $db_pass = 'klyIrNNauZ2K*2W1';
 
-$conn = @mysql_connect($db_host, $db_user, $db_pass);
-if (!$conn) {
-    die("Connection failed: " . mysql_error() . "\n" .
-        "Error details:\n" .
-        "- Attempted to connect to: " . $db_host . "\n" .
-        "- Make sure the host is correct in cPanel > Remote MySQL\n" .
-        "- Make sure this server's IP is allowed in Remote MySQL Access Hosts");
-}
+// Try database connection with error handling
+try {
+    $conn = @mysql_connect($db_host, $db_user, $db_pass);
+    if (!$conn) {
+        throw new Exception(mysql_error());
+    }
 
-// Try selecting database
-if (!@mysql_select_db('englishb_learning_app')) {
-    die("Database selection failed: " . mysql_error());
-}
+    if (!@mysql_select_db('englishb_learning_app')) {
+        throw new Exception(mysql_error());
+    }
 
-// Try setting character set
-if (!@mysql_query("SET NAMES 'latin2'")) {
-    die("Setting character set failed: " . mysql_error());
+    if (!@mysql_query("SET NAMES 'latin2'")) {
+        throw new Exception(mysql_error());
+    }
+} catch (Exception $e) {
+    if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest') {
+        header('Content-Type: application/json');
+        die(json_encode(['error' => 'Database connection failed']));
+    } else {
+        die("Connection failed: " . $e->getMessage());
+    }
 }
 
 function getUserObj($email, $username)
