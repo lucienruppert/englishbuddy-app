@@ -48,7 +48,7 @@ $userHits = getUserWordHitByDay($userObject);
 $seconds = 0;
 
 //print "SESSIONDIRECTION: " . $_SESSION['wordLearning_direction'];
-if ($_REQUEST['store'] == 1) {
+if (isset($_REQUEST['store']) && $_REQUEST['store'] == 1) {
     if ($_SESSION['wordLearning_direction'] == 1) {
         $hunWord = $_REQUEST['sentenceHun'];
         $forWord = $_REQUEST['sentence']; //$_SESSION['wordLearning_words_simple'][0]['word_'. $ext];
@@ -79,13 +79,14 @@ if ($_REQUEST['store'] == 1) {
     } else {
         $showNumber = count($words);
     }
-} else if (($_REQUEST['selectedLevel'] > 0
+} else if ((isset($_REQUEST['selectedLevel']) && ($_REQUEST['selectedLevel'] > 0
         || in_array($_REQUEST['selectedLevel'], array('list1', 'list2'))
         || startsWith($_REQUEST['selectedLevel'], 'listFract_')
         || $_REQUEST['selectedLevel'] == 'listAll'
         || $_REQUEST['selectedLevel'] == 'mumus'
-        || $_REQUEST['selectedLevel'] == 'tananyagAll'
-        || $_REQUEST['againPractise']) && (!$_REQUEST['isOtherPackage'] || !$_SESSION['cbMultiPractice'])
+        || $_REQUEST['selectedLevel'] == 'tananyagAll'))
+    || (isset($_REQUEST['againPractise']) && $_REQUEST['againPractise'])
+    && (!isset($_REQUEST['isOtherPackage']) || !$_SESSION['cbMultiPractice'])
 ) {
     if (in_array($_REQUEST['selectedLevel'], array('list1', 'list2')) || startsWith($_REQUEST['selectedLevel'], 'listFract_') || $_REQUEST['selectedLevel'] == 'listAll' || $_REQUEST['selectedLevel'] == 'mumus' || $_REQUEST['selectedLevel'] == 'tananyagAll') {
         $_SESSION['selectedLevel2'] = $_REQUEST['selectedLevel'];
