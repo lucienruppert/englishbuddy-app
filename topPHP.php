@@ -6,9 +6,14 @@ $defaultNyelv = 0;
 $notLoggedInMessage = "Nem vagy belépve!";
 $premiumUserOnlyMessage = "Csak prémium felhasználók számára elérhető!";
 
-if (!$_SESSION['userObject']) {
+// Start session at the beginning before any session operations
+if (session_status() === PHP_SESSION_NONE) {
+    // Set session parameters before starting the session
+    ini_set('session.cookie_lifetime', 0);
+    ini_set('session.gc_maxlifetime', 3600); // 60 * 60
     session_start();
 }
+
 include_once('functions_userObj.php');
 include_once('translations_HUN.php');
 
@@ -20,12 +25,7 @@ if ($userObject === NULL) {
 
 require_once('functions_userObj.php');
 if (isset($_REQUEST['actionType']) && $_REQUEST['actionType'] == 'login') {
-    ini_set('session.cookie_lifetime', 0);
-    ini_set('session.gc_maxlifetime', 60 * 60);
-    session_start();
-    if (($_GET['h'] && ($_SESSION['userObject'] = $GLOBALS['userObject'] = $userObject = getUserObjByHash($_GET['h'])))
-        || ($_SESSION['userObject'] = $GLOBALS['userObject'] = $userObject = getUserObj($_REQUEST['email'], $_REQUEST['username']))
-    ) {
+    if ((isset($_GET['h']) && ($_SESSION['userObject'] = $GLOBALS['userObject'] = $userObject = getUserObjByHash($_GET['h']))) || ($_SESSION['userObject'] = $GLOBALS['userObject'] = $userObject = getUserObj($_REQUEST['email'], $_REQUEST['username']))) {
         if ($userObject['status'] == 1) {
             //print "<script>alert('El�fizet�sed m�g nem ker�lt aktiv�l�sra!');</script>";
         } else if ($userObject['program_end_date'] >= date("Y-m-d 00:00:00")) {
