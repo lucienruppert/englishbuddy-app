@@ -78,6 +78,14 @@
    - datum (date)
    - hits
 
+9. `level_rules` - Rules for language levels
+   - id (PK)
+   - level
+   - lang
+   - rule_text
+   - examples
+   - crdti (creation date)
+
 # SQL Create Statements
 
 ```sql
@@ -186,6 +194,16 @@ CREATE TABLE `user_hits` (
     `hits` INT DEFAULT 0,
     PRIMARY KEY (`user_id`, `datum`),
     FOREIGN KEY (`user_id`) REFERENCES `lmjelentkezok`(`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Create level_rules table
+CREATE TABLE `level_rules` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `level` INT NOT NULL,
+    `lang` VARCHAR(3) NOT NULL,
+    `rule_text` TEXT NOT NULL,
+    `examples` TEXT,
+    `crdti` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 ```
 
