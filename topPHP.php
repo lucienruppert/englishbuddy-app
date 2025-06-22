@@ -12,7 +12,7 @@ if (!$_SESSION['userObject']) {
 include_once('functions_userObj.php');
 include_once('translations_HUN.php');
 
-$userObject = $_SESSION['userObject'];
+$userObject = isset($_SESSION['userObject']) ? $_SESSION['userObject'] : null;
 $isAndroid = 0;
 if ($userObject === NULL) {
     $userObject = 0;
@@ -43,7 +43,7 @@ if (!$userObject) {
     if (isset($_GET["langChange"])) {
         $defaultNyelv = (int)$_GET["langChange"];
         setcookie('preflanguage', $defaultNyelv);
-    } else if ($_COOKIE['preflanguage']) {
+    } else if (isset($_COOKIE['preflanguage'])) {
         $defaultNyelv = (int)$_COOKIE['preflanguage'];
         setcookie('preflanguage', $defaultNyelv);
     }
