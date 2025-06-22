@@ -396,7 +396,7 @@ print "<tr>";
 print "<td width='20px' align='left' valign='middle' style='background-color:$colorValue;'>
             <span id=\"prevLevelSpan\" style='background-color:$colorValue;$ArrowFontSize;font-weight:bold;color:white;cursor:pointer;$style' onclick=\"
                 event.stopPropagation();
-                location.href='main.php?content=changeLevelPage&direction=prev&selectedLevel=' + selectedLevel + '&source=' + source + '&clickSource=" . $_REQUEST['clickSource'] . "';
+                location.href='main.php?content=changeLevelPage&direction=prev&selectedLevel=' + selectedLevel + '&source=' + source + '&clickSource=" . (isset($_REQUEST['clickSource']) ? $_REQUEST['clickSource'] : '') . "';
             \">&nbsp;&laquo;</span>
         </td>";
 print "<td  colspan='3' align='center' height='50' valign='center' style='font-size:20pt;color:white;background-color:$colorValue'>";
@@ -427,7 +427,7 @@ print "</td>";
 print "<td width='20px' align='right' valign='middle' style='background-color:$colorValue;'>
             <span id=\"nextLevelSpan\" style='background-color:$colorValue;$ArrowFontSize;font-weight:bold;color:white;cursor:pointer;$style' onclick=\"
                 event.stopPropagation();
-                location.href='main.php?content=changeLevelPage&direction=next&selectedLevel=' + selectedLevel + '&source=' + source + '&clickSource=" . $_REQUEST['clickSource'] . "';
+                location.href='main.php?content=changeLevelPage&direction=next&selectedLevel=' + selectedLevel + '&source=' + source + '&clickSource=" . (isset($_REQUEST['clickSource']) ? $_REQUEST['clickSource'] : '') . "';
             \">&raquo;&nbsp;</span>
         </td>";
 print "</tr>";
@@ -536,6 +536,8 @@ print "<span id='jelentesSpan' style='display:none;$solutionlineFontSize;color:$
 print "</td></tr>";
 
 print "<tr><td></td>";
+// Initialize $nbspk
+$nbspk = '';
 if ($showNumber != $KESZ_UGYES_VAGY) {
     for ($i = 0; $i < 100; $i++) {
         $nbspk .= '&nbsp;';
