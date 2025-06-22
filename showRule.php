@@ -73,7 +73,7 @@
         else{
             $text = str_replace("<br>", chr(13) . chr(10), $text);
             print "<textarea name='txtRule' style='color:white' rows=15 cols=100>{$text}</textarea>";
-            print "<br><input type='submit' value='Rogzzt'>";
+            print "<br><input type='submit' value='Rögzít'>";
             print "<input type='hidden' name='storeRule' value='1'>";
         }
     }
