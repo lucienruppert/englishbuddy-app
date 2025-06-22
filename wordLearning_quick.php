@@ -19,8 +19,9 @@ $selLevel = isset($_REQUEST['selectedLevel']) ? $_REQUEST['selectedLevel'] : (is
 $clickSource = isset($_REQUEST['clickSource']) ? $_REQUEST['clickSource'] : (isset($_SESSION['clickSource']) ? $_SESSION['clickSource'] : null);
 $_SESSION['clickSource'] = $clickSource;
 
-$filter = $_REQUEST['filter'] ? $_REQUEST['filter'] : $_SESSION['intelligentFilterWord'];
-$filterChanged = !$_SESSION['intelligentFilterWord'] || $filter != $_SESSION['intelligentFilterWord'];
+// Initialize filter with proper checks
+$filter = isset($_REQUEST['filter']) ? $_REQUEST['filter'] : (isset($_SESSION['intelligentFilterWord']) ? $_SESSION['intelligentFilterWord'] : '');
+$filterChanged = !isset($_SESSION['intelligentFilterWord']) || $filter != $_SESSION['intelligentFilterWord'];
 $_SESSION['intelligentFilterWord'] = $filter;
 
 $GLOBALS['isAndroid'] = false;
