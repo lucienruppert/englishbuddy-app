@@ -10,7 +10,7 @@
           print "";
         ?>
       </span>
-      <span class='hamburger'><img src='images/hamburger.png' width="30px" height="30px" onclick="toggleMenu();"></span>
+      <span class='hamburger'><img src='images/hamburger.svg' width="30px" height="30px" onclick="toggleMenu();"></span>
       <span style="display:<?php echo $_SESSION['isShown'] ? 'none' : 'flex'; ?>" class="welcome submenu">
         <a href='#' class="medium-color" onclick="sajatSzavak();"><? print translate("increasevocabulary"); ?></a>
         <a href='#' class="medium-color" onclick="alapszokincs();"><? print translate("basicvocabulary"); ?></a>
