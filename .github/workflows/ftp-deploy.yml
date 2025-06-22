@@ -37,7 +37,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /home/englishb/public_html/app/
+          server-dir: /public_html/app/
           local-dir: ./ # Uploads everything from the repository
           dangerous-clean-slate: false # Don't delete files on server
           state-name: .ftp-deploy-sync-state.json
@@ -67,7 +67,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /home/englishb/public_html/app/
+          server-dir: /public_html/app/
           local-dir: ./ # Uploads everything from the repository
           dangerous-clean-slate: false # Don't delete files on server
           state-name: .ftp-deploy-sync-state.json
