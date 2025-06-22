@@ -45,7 +45,7 @@ if ($userObject['id'] == 1) {
 ?>
 
 <div class="navigation-menu">
-    <a href="index.php" class="home mobile-menu"><?php print translate('fooldal'); ?></a>
+  <a href="index.php" class="home mobile-menu"><?php print translate('fooldal'); ?></a>
   <?php
   $upperRowObject = getLinksForPractice();
   if (is_array($upperRowObject) && !in_array($userObject["status"], array(1, 2))) {
@@ -121,6 +121,10 @@ if ($userObject['id'] == 1) {
 <?php } ?>
 
 <?php
+if (!isset($_REQUEST['sourcePage'])) {
+  $_REQUEST['sourcePage'] = '';
+}
+
 if ($_REQUEST['sourcePage'] == 'clients') {
   $clientStyleText = "style='display:block'";
   $mainStyleText = "style='display:none'";
@@ -166,7 +170,7 @@ if ($_REQUEST['content'] == "wordLearning_quick") {
   foreach ($list as $key => $value) {
     if (in_array($value[1], array(1, 2, 3)) && $key > 0) {
       if (!in_array($value[1], array(1, 2))) {
-        if($levels[$levelIndex] != null) {
+        if ($levels[$levelIndex] != null) {
           if (count($levels[$levelIndex]) >= $bontasLimit) {
             $levelIndex++;
           }

@@ -2,6 +2,14 @@
 
 include_once('functions.php');
 
+// Initialize request variables
+if (!isset($_POST['actionType'])) {
+    $_POST['actionType'] = '';
+}
+if (!isset($_REQUEST['wordIdToEdit'])) {
+    $_REQUEST['wordIdToEdit'] = 0;
+}
+
 if (!$userObject) {
     include_once('index.php');
     exit;
