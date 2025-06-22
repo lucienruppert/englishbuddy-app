@@ -61,18 +61,21 @@ if ($_POST['actionType'] == 'store') {
     }
 }
 
-if ($_REQUEST['wordIdToEdit'] > 0) {
-    $wordRecord = getWord((int)$_REQUEST['wordIdToEdit'], $_SESSION['userObject']['nyelv']);
-}
-
-// Initialize $wordRecord with default values
+// Initialize $wordRecord with default values first
 $wordRecord = array(
     'id' => '',
     'word_foreign' => '',
     'comment_foreign' => '',
     "word_{$forras_nyelv_ext}" => '',
-    "comment_{$forras_nyelv_ext}" => ''
+    "comment_{$forras_nyelv_ext}" => '',
+    'level' => 0,  // Initialize level with default value
+    'category' => 0
 );
+
+// Then override with actual values if editing an existing word
+if ($_REQUEST['wordIdToEdit'] > 0) {
+    $wordRecord = array_merge($wordRecord, getWord((int)$_REQUEST['wordIdToEdit'], $_SESSION['userObject']['nyelv']));
+}
 
 $nyelvText = ucfirst(translate(getLangExtByLangId($userObject['nyelv'])));
 $forrasNyelvText = ucfirst(translate(getLangExtByLangId($userObject['forras_nyelv'])));
