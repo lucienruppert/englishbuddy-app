@@ -8,7 +8,7 @@ include_once('topPHP.php');
     <META HTTP-EQUIV='CHARSET' CONTENT='text/html; charset=ISO-8859-2'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="/images/white.ico">
-    <TITLE>INGLIS</TITLE>
+    <TITLE>EnglishBuddy</TITLE>
     <link href="js/jquery-ui.min.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
