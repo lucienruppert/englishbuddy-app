@@ -14,9 +14,9 @@ $defaultDirection = 0;
 $showNumber = 0;
 
 $levels = getLevelList($userObject['nyelv']);
-$selectedLevel = $_REQUEST['selectedLevel'] ? $_REQUEST['selectedLevel'] : $_SESSION['selectedLevel'];
-$selLevel = $_REQUEST['selectedLevel'] ? $_REQUEST['selectedLevel'] : $_SESSION['selectedLevel2'];
-$clickSource = $_REQUEST['clickSource'] ? $_REQUEST['clickSource'] : $_SESSION['clickSource'];
+$selectedLevel = isset($_REQUEST['selectedLevel']) ? $_REQUEST['selectedLevel'] : (isset($_SESSION['selectedLevel']) ? $_SESSION['selectedLevel'] : null);
+$selLevel = isset($_REQUEST['selectedLevel']) ? $_REQUEST['selectedLevel'] : (isset($_SESSION['selectedLevel2']) ? $_SESSION['selectedLevel2'] : null);
+$clickSource = isset($_REQUEST['clickSource']) ? $_REQUEST['clickSource'] : (isset($_SESSION['clickSource']) ? $_SESSION['clickSource'] : null);
 $_SESSION['clickSource'] = $clickSource;
 
 $filter = $_REQUEST['filter'] ? $_REQUEST['filter'] : $_SESSION['intelligentFilterWord'];
