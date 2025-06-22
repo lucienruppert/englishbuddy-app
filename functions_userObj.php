@@ -1,15 +1,31 @@
 <?php
-//php7 hiányzó funkciói
-    include_once('./php7/mysql_replacement.php');
-    include_once('./php7/ereg-functions.php');
+// Enable error reporting for debugging
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-mysql_connect ('mysql.englishbuddy.hu', 'englishb_admin', 'klyIrNNauZ2K*2W1');
-mysql_select_db('englishb_learning_app');
-mysql_query("SET NAMES 'latin2'");
+//php7 hiányzó funkciói
+include_once('./php7/mysql_replacement.php');
+include_once('./php7/ereg-functions.php');
+
+// Try database connection with error handling
+$conn = @mysql_connect('mysql.englishbuddy.hu', 'englishb_admin', 'klyIrNNauZ2K*2W1');
+if (!$conn) {
+    die("Connection failed: " . mysql_error());
+}
+
+// Try selecting database
+if (!@mysql_select_db('englishb_learning_app')) {
+    die("Database selection failed: " . mysql_error());
+}
+
+// Try setting character set
+if (!@mysql_query("SET NAMES 'latin2'")) {
+    die("Setting character set failed: " . mysql_error());
+}
 
 function getUserObj($email, $username)
 {
-    if(strlen($username) == 0 || strlen($email) == 0){
+    if (strlen($username) == 0 || strlen($email) == 0) {
         return false;
     }
     $email = aposztrofRepToDb($email);
@@ -17,18 +33,18 @@ function getUserObj($email, $username)
 
     $query = "SELECT * from lmjelentkezok where email = '$email' and jelszo = '$username'";
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
         exit("Nem siker�lt: " . $query);
     }
     $userObject = false;
-    while($row = mysql_fetch_assoc($result)) {
+    while ($row = mysql_fetch_assoc($result)) {
         $userObject = $row;
     }
-    if($userObject && $userObject['program_end_date'] >= date("Y-m-d 00:00:00")){
+    if ($userObject && $userObject['program_end_date'] >= date("Y-m-d 00:00:00")) {
         $sql = "update lmjelentkezok set last_login_date = now() where id = " . $userObject['id'];
         $result = mysql_query($sql);
-        if(!$result){
+        if (!$result) {
             print mysql_error();
             exit("Nem siker�lt: " . $sql);
         }
@@ -38,25 +54,25 @@ function getUserObj($email, $username)
 
 function getUserObjByHash($hash)
 {
-    if(strlen($hash) == 0){
+    if (strlen($hash) == 0) {
         return false;
     }
     $hash = aposztrofRepToDb($hash);
 
     $query = "SELECT * from lmjelentkezok where hash = '$hash'";
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
         exit("Nem siker�lt: " . $query);
     }
     $userObject = false;
-    while($row = mysql_fetch_assoc($result)) {
+    while ($row = mysql_fetch_assoc($result)) {
         $userObject = $row;
     }
-    if($userObject && $userObject['program_end_date'] >= date("Y-m-d 00:00:00")){
+    if ($userObject && $userObject['program_end_date'] >= date("Y-m-d 00:00:00")) {
         $sql = "update lmjelentkezok set last_login_date = now() where id = " . $userObject['id'];
         $result = mysql_query($sql);
-        if(!$result){
+        if (!$result) {
             print mysql_error();
             exit("Nem siker�lt: " . $sql);
         }
@@ -66,18 +82,18 @@ function getUserObjByHash($hash)
 
 function getUserObjById($id)
 {
-    if(strlen($id) == 0){
+    if (strlen($id) == 0) {
         return false;
     }
 
     $query = "SELECT * from lmjelentkezok where ID = '$id'";
     $result = mysql_query($query);
-    if(!$result){
+    if (!$result) {
         print mysql_error();
         exit("Nem siker�lt: " . $query);
     }
     $userObject = false;
-    while($row = mysql_fetch_assoc($result)) {
+    while ($row = mysql_fetch_assoc($result)) {
         $userObject = $row;
     }
     return $userObject;
@@ -91,5 +107,3 @@ function aposztrofRepToDb($word)
 
     return $word;
 }
-
-?>
