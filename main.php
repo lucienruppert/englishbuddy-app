@@ -71,8 +71,8 @@ $_SESSION['isShown'] = false;
 
     input[type='button'] {
         text-align: center;
-        background-color: <?php print $dark ?>;
-        border: 1px solid <?php print $highlight ?>;
+        background-color: <?php echo $dark; ?>;
+        border: 1px solid <?php echo $highlight; ?>;
         border-radius: 2px;
         padding: 2px 12px;
         cursor: pointer;
