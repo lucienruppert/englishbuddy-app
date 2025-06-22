@@ -57,47 +57,22 @@ if ($_REQUEST['wordIdToEdit'] > 0) {
     $wordRecord = getWord((int)$_REQUEST['wordIdToEdit'], $_SESSION['userObject']['nyelv']);
 }
 
-if (!isset($_POST['homeWorkOrder'])) {
-    $_REQUEST['homeWorkOrder'] = $_POST['homeWorkOrder'] = 1;
-}
+// Initialize $wordRecord with default values
+$wordRecord = array(
+    'id' => '',
+    'word_foreign' => '',
+    'comment_foreign' => '',
+    "word_{$forras_nyelv_ext}" => '',
+    "comment_{$forras_nyelv_ext}" => ''
+);
 
-?>
-<script>
-    $(document).ready(function() {
-        $('.cbMark').change(function() {
-            var wid = $(this).data('wid');
-            var uwid = $(this).data('uwid');
-            var userid = $(this).data('user');
-            $.post(
-                "markWordForUser.php", {
-                    wordId: wid,
-                    userWordId: uwid,
-                    isChecked: $(this).is(":checked"),
-                    userId: userid
-                },
-                function(data, status) {
-                    location.reload();
-                }
-            ).fail(function() {
-                alert("Hiba t�rt�nt!");
-            });
-        });
-    });
-
-    function wordLink(id, sorszam) {
-        document.forms['wordManagement'].action += "#link" + sorszam;
-        document.forms['wordManagement'].wordIdToEdit.value = id;
-        document.forms['wordManagement'].submit();
-    }
-</script>
-<?php
 $nyelvText = ucfirst(translate(getLangExtByLangId($userObject['nyelv'])));
 $forrasNyelvText = ucfirst(translate(getLangExtByLangId($userObject['forras_nyelv'])));
 
 print "<form id='wordManagement' name='wordManagement' method='post'>";
-print "<input type='hidden' name='userId' value='{$_POST['userId']}'>";
+print "<input type='hidden' name='userId' value='" . (isset($_POST['userId']) ? htmlspecialchars($_POST['userId']) : '') . "'>";
 print "<input type='hidden' name='recordId' value='" . $wordRecord['id'] . "'>";
-print "<input type='hidden' name='homeWorkOrder' value='" . (int)$_POST['homeWorkOrder'] . "'>";
+print "<input type='hidden' name='homeWorkOrder' value='" . (isset($_POST['homeWorkOrder']) ? (int)$_POST['homeWorkOrder'] : 0) . "'>";
 print "<table class='word-management' width='100%' style='border: 1px solid" . $highlight . ";margin-top:36px;' align=left><tr><td  style='border: 1px solid' align='center' valign='top'><table>";
 
 $forWord = $wordRecord['word_foreign'];
@@ -119,14 +94,14 @@ if (!$userHasAccess) {
     $hideStyle = "style='display:none'";
 }
 $readonly = '';
-if ($_REQUEST['kitolto']) {
+if (isset($_REQUEST['kitolto']) && $_REQUEST['kitolto']) {
     $readonly = 'readonly';
 }
 
-print "\n<tr><td style='font-size:0.8rem;color:" . $highlight . ";'>" . $nyelvText . "</td><td><textarea name='foreignWord' style='color:white' rows='4' cols='29'>" . $forWord . "</textarea></td></tr>";
-print "\n<tr $hideStyle><td style='font-size:0.8rem;color:" . $highlight . ";'>" . translate("cel_komment") . "</td><td><input type='text' size='35' name='foreignComm' value='" . $wordRecord['comment_foreign'] . "'></td></tr>";
-print "\n<tr><td style='font-size:0.8rem;color:" . $highlight . ";'>{$forrasNyelvText}</td><td><textarea name='hunWord' style='color:white' rows='4' cols='29' $readonly>" . $sourceWord . "</textarea></td></tr>";
-print "\n<tr $hideStyle><td style='font-size:0.8rem;color:" . $highlight . ";'>" . translate("forras_komment") . "</td><td><input type='text' size='35' name='sourceComm' value='" . $wordRecord["comment_{$forras_nyelv_ext}"] . "'></td></tr>";
+print "\n<tr><td style='font-size:0.8rem;color:" . $highlight . ";'>" . $nyelvText . "</td><td><textarea name='foreignWord' style='color:white' rows='4' cols='29'>" . htmlspecialchars($forWord) . "</textarea></td></tr>";
+print "\n<tr $hideStyle><td style='font-size:0.8rem;color:" . $highlight . ";'>" . translate("cel_komment") . "</td><td><input type='text' size='35' name='foreignComm' value='" . htmlspecialchars($wordRecord['comment_foreign']) . "'></td></tr>";
+print "\n<tr><td style='font-size:0.8rem;color:" . $highlight . ";'>{$forrasNyelvText}</td><td><textarea name='hunWord' style='color:white' rows='4' cols='29' $readonly>" . htmlspecialchars($sourceWord) . "</textarea></td></tr>";
+print "\n<tr $hideStyle><td style='font-size:0.8rem;color:" . $highlight . ";'>" . translate("forras_komment") . "</td><td><input type='text' size='35' name='sourceComm' value='" . htmlspecialchars($wordRecord["comment_{$forras_nyelv_ext}"]) . "'></td></tr>";
 
 if ($userHasAccess) {
     $optionArray = getLevelList($userObject['nyelv']);
