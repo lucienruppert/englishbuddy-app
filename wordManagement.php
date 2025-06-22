@@ -10,6 +10,14 @@ if (!isset($_REQUEST['wordIdToEdit'])) {
     $_REQUEST['wordIdToEdit'] = 0;
 }
 
+// Initialize additional request variables to prevent undefined array key warnings
+$_REQUEST['dictionaryShow'] = isset($_REQUEST['dictionaryShow']) ? $_REQUEST['dictionaryShow'] : '';
+$_REQUEST['kitolto'] = isset($_REQUEST['kitolto']) ? $_REQUEST['kitolto'] : '';
+$_REQUEST['orderLang'] = isset($_REQUEST['orderLang']) ? $_REQUEST['orderLang'] : '';
+$_REQUEST['dictionaryUser'] = isset($_REQUEST['dictionaryUser']) ? (int)$_REQUEST['dictionaryUser'] : 0;
+$_REQUEST['autorefresh'] = isset($_REQUEST['autorefresh']) ? $_REQUEST['autorefresh'] : '';
+$_REQUEST['dictionaryLevel'] = isset($_REQUEST['dictionaryLevel']) ? (int)$_REQUEST['dictionaryLevel'] : -1;
+
 if (!$userObject) {
     include_once('index.php');
     exit;
