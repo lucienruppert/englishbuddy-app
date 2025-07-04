@@ -12,6 +12,9 @@ if (!$userObject) {
 
 $userHasAccess = ((int)$userObject['id'] == 1 || (int)$userObject['status'] == 5 || (int)$userObject['status'] == 6);
 
+// Initialize isRuleEdit
+$_REQUEST['isRuleEdit'] = $_REQUEST['isRuleEdit'] ?? '';
+
 if (isset($_POST['storeRule']) && $_POST['storeRule']) {
     setLevelComment($_POST['selectedLevel'], $_POST['txtRule'], $userObject['nyelv']);
     $_REQUEST['isRuleEdit'] = '';
