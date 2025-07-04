@@ -12,7 +12,7 @@ if (!$userObject) {
 
 $userHasAccess = ((int)$userObject['id'] == 1 || (int)$userObject['status'] == 5 || (int)$userObject['status'] == 6);
 
-if ($_POST['storeRule']) {
+if (isset($_POST['storeRule']) && $_POST['storeRule']) {
     setLevelComment($_POST['selectedLevel'], $_POST['txtRule'], $userObject['nyelv']);
     $_REQUEST['isRuleEdit'] = '';
 }
@@ -66,7 +66,7 @@ if (!$text) {
                 <td width='100'></td>
                 <td align='left' valign='top' style='font-size:12pt;color:white' height='300'>";
     if ($userHasAccess) {
-        if (!isset($_REQUEST['isRuleEdit']) || !$_REQUEST['isRuleEdit']) {
+        if (!isset($_REQUEST['isRuleEdit']) || empty($_REQUEST['isRuleEdit'])) {
             print "<span onclick=\"document.forms['ruleForm'].isRuleEdit.value=1; document.forms['ruleForm'].submit();\">{$text}</span>";
         } else {
             $text = str_replace("<br>", chr(13) . chr(10), $text);
