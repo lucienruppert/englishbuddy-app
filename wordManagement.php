@@ -9,6 +9,9 @@ if (!isset($_POST['actionType'])) {
 if (!isset($_REQUEST['wordIdToEdit'])) {
     $_REQUEST['wordIdToEdit'] = 0;
 }
+if (!isset($_REQUEST['homeWorkOrder'])) {
+    $_REQUEST['homeWorkOrder'] = 0;
+}
 
 // Initialize additional request variables to prevent undefined array key warnings
 $_REQUEST['dictionaryShow'] = isset($_REQUEST['dictionaryShow']) ? $_REQUEST['dictionaryShow'] : '';
@@ -569,9 +572,9 @@ print "Nyelv: ". deb($userObject['nyelv']);
 print "Orderlang: ". deb($userObject['orderLang']);
 */
                         if ($_REQUEST['orderLang'] == 'hun') {
-                            print "\n<tr><td style='vertical-align:top' $title2>{$word2}</td><td style='vertical-align:top' $title>{$word1} {$pronLink}</td><td><input type='checkbox' class='cbMark' data-wid='" . (int)$words[$i]['id'] . "' data-uwid='" . (int)$words[$i]['uw_id'] . "' " . ($words[$i]['my_is_marked'] == 1 ? "checked" : "") . "></td></tr>";
+                            print "\n<tr><td style='vertical-align:top' $title2>{$word2}</td><td style='vertical-align:top' $title>{$word1}</td><td><input type='checkbox' class='cbMark' data-wid='" . (int)$words[$i]['id'] . "' data-uwid='" . (int)$words[$i]['uw_id'] . "' " . ($words[$i]['my_is_marked'] == 1 ? "checked" : "") . "></td></tr>";
                         } else {
-                            print "\n<tr><td style='vertical-align:top' $title>{$word1} {$pronLink}</td><td style='vertical-align:top' $title2>{$word2}</td><td><input type='checkbox' class='cbMark' data-wid='" . (int)$words[$i]['id'] . "' data-uwid='" . (int)$words[$i]['uw_id'] . "' " . ($words[$i]['my_is_marked'] == 1 ? "checked" : "") . "></td></tr>";
+                            print "\n<tr><td style='vertical-align:top' $title>{$word1}</td><td style='vertical-align:top' $title2>{$word2}</td><td><input type='checkbox' class='cbMark' data-wid='" . (int)$words[$i]['id'] . "' data-uwid='" . (int)$words[$i]['uw_id'] . "' " . ($words[$i]['my_is_marked'] == 1 ? "checked" : "") . "></td></tr>";
                         }
                         $wordCount++;
                     }
