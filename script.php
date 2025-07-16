@@ -137,15 +137,16 @@
   //     location.href = "index.php?langChange=" + lang;
   // }
 
-  // var clearbox = new Array(); // global variable
-  // clearbox[0] = 0;
-  // clearbox[1] = 0;
-  // function clearit(obj, num) {
-  //     if (clearbox[num] == 0) {
-  //         obj.value = "";
-  //         clearbox[num] = 1;
-  //     }
-  // }
+  var clearbox = new Array(); // global variable
+  clearbox[0] = 0;
+  clearbox[1] = 0;
+
+  function clearit(obj, num) {
+    if (clearbox[num] == 0) {
+      obj.value = "";
+      clearbox[num] = 1;
+    }
+  }
 
   function toggleMenu() {
     $.post("update_session.php", {
