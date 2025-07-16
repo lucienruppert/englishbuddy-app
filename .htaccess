@@ -1,2 +1,27 @@
-AddCharset ISO-8859-2 .html
-Header set Content-Type "text/html; charset=ISO-8859-2"
+# Set default charset
+AddDefaultCharset ISO-8859-2
+AddCharset ISO-8859-2 .html .php .css .js
+
+# Set content types with proper charset
+<FilesMatch "\.(html|php)$">
+    Header set Content-Type "text/html; charset=ISO-8859-2"
+</FilesMatch>
+
+<FilesMatch "\.css$">
+    Header set Content-Type "text/css; charset=ISO-8859-2"
+</FilesMatch>
+
+<FilesMatch "\.js$">
+    Header set Content-Type "application/javascript; charset=ISO-8859-2"
+</FilesMatch>
+
+# Prevent MIME type sniffing
+Header always set X-Content-Type-Options "nosniff"
+
+# Enable caching for static assets
+<FilesMatch "\.(js|css)$">
+    Header set Cache-Control "public, max-age=31536000"
+</FilesMatch>
+
+# Force PHP to use ISO-8859-2
+php_value default_charset "ISO-8859-2"

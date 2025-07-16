@@ -9,13 +9,32 @@ include_once('topPHP.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="/images/white.ico">
     <TITLE>EnglishBuddy</TITLE>
-    <link href="js/jquery-ui.min.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <link href="./js/jquery-ui.min.css" rel="stylesheet" type="text/css">
     <?php
-    include_once('script.php');
     include_once('style.php');
     include_once('style-navigation.php');
+    ?>
+    <script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
+    <script>
+        // Check if jQuery loaded correctly
+        window.addEventListener('load', function() {
+            if (typeof jQuery === 'undefined') {
+                console.error('jQuery failed to load. Loading from CDN as fallback...');
+                var script = document.createElement('script');
+                script.src = 'https://code.jquery.com/jquery-1.11.1.min.js';
+                script.onload = function() {
+                    // Load jQuery UI after jQuery loads
+                    var uiScript = document.createElement('script');
+                    uiScript.src = 'https://code.jquery.com/ui/1.11.1/jquery-ui.min.js';
+                    document.head.appendChild(uiScript);
+                };
+                document.head.appendChild(script);
+            }
+        });
+    </script>
+    <script type="text/javascript" src="./js/jquery-ui.min.js"></script>
+    <?php
+    include_once('script.php');
     ?>
 </HEAD>
 
