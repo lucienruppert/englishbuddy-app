@@ -66,10 +66,10 @@ if ($userObject['id'] == 1) {
     </table>
   </div> -->
   <script>
-    var selectedLevel = <?php print "'" . (isset($_REQUEST['selectedLevel']) ? $_REQUEST['selectedLevel'] : -1) . "'"; ?>;
+    var selectedLevel = <?php print "'" . ($_REQUEST['selectedLevel'] ? $_REQUEST['selectedLevel'] : -1) . "'"; ?>;
     var source = <?php
                   print "'";
-                  print isset($_REQUEST['source']) ? $_REQUEST['source'] : (isset($_SESSION['source']) ? $_SESSION['source'] : '');
+                  print $_REQUEST['source'] ? $_REQUEST['source'] : ($_SESSION['source'] ? $_SESSION['source'] : '');
                   print "'";  ?>;
     var ragozasWord = '';
   </script>
