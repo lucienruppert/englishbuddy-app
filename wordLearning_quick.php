@@ -452,7 +452,9 @@ if ($clickSource == "intelligent") {
         print $i . ". " .  translate("csomag");
     } else if ($_SESSION['cbMultiPractice']) {
     } else {
-        print $levels[$_SESSION['selectedLevel2']][0];
+        if (isset($_SESSION['selectedLevel2']) && isset($levels[$_SESSION['selectedLevel2']]) && isset($levels[$_SESSION['selectedLevel2']][0])) {
+            print $levels[$_SESSION['selectedLevel2']][0];
+        }
     }
 }
 print "</td>";
