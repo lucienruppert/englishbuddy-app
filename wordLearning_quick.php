@@ -594,8 +594,9 @@ if ($showNumber != $KESZ_UGYES_VAGY) {
             if (('listFract_' . $i) == $selLevel)
                 continue;
 
+            $best_time = isset($packageRecordsBasicWords[$i]) && isset($packageRecordsBasicWords[$i]['best_time']) ? $packageRecordsBasicWords[$i]['best_time'] : 0;
             $forSortArray[] = array(
-                'ido' => $packageRecordsBasicWords[$i]['best_time'] > 0 ? $packageRecordsBasicWords[$i]['best_time'] : 999999,
+                'ido' => $best_time > 0 ? $best_time : 999999,
                 'szam' => $i
             );
         }
