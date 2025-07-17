@@ -562,9 +562,11 @@ if (($showNumber == $KESZ_UGYES_VAGY) && $seconds > 0) {
     }
 }
 print "</td><td></td></tr><tr><td height='$MiddleHeight' colspan='5' align='center' valign='center'>";
-print "<script>var jelentes = \"" . (isset($word2) ? htmlspecialchars($word2, ENT_QUOTES) : '') . "\";</script>";
+// DEBUG MARKER 3
+print "<script type='text/javascript'>var jelentes = \"" . (isset($word2) ? htmlspecialchars($word2, ENT_QUOTES) : '') . "\";</script>";
 ?>
-<script>
+<!-- DEBUG MARKER 1 -->
+<script type="text/javascript">
     function mumus2_Click() {
         $.ajax({
             url: "mumus_store.php",
@@ -589,6 +591,7 @@ print "<script>var jelentes = \"" . (isset($word2) ? htmlspecialchars($word2, EN
         });
     }
 
+    // DEBUG MARKER 2
     function remove_Click() {
         $.ajax({
             url: "remove_word.php",
