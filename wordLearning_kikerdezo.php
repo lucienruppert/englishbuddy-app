@@ -8,10 +8,10 @@ if (!$userObject) {
 $ext = getLangExtByLangId($userObject['nyelv']);
 $forras_nyelv_ext = getLangExtByLangId($GLOBALS['userObject']['forras_nyelv']);
 
-if (!is_array($_SESSION['wordLearning_kikerdezo']) || $_REQUEST['source'] == 'welcome') {
+if (!is_array($_SESSION['wordLearning_kikerdezo']) || (isset($_REQUEST['source']) && $_REQUEST['source'] == 'welcome')) {
     $_SESSION['wordLearning_kikerdezo'] = getNotOwnedWordIds();
 }
-if ($_REQUEST['store'] == 1) {
+if (isset($_REQUEST['store']) && $_REQUEST['store'] == 1) {
     $selectedId = $_REQUEST['selectedId'];
     $userId = (int)$userObject['id'];
 
