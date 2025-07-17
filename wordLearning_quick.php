@@ -276,6 +276,8 @@ print "<script type='text/javascript'>
 $(document).ready(function() {
     $('#ajaxMeaningSearch').hide();
     $('#nyelvtansorminta').hide();
+    $('.search-box').hide();  // Hide any search box elements
+    $('input[type=\"search\"]').hide();  // Hide any search inputs
 " . (($_SESSION['source'] == 'alapSzo' || $_SESSION['source'] == 'szo') ? "    $('#nyelvtansorminta').hide();\n" : "") . "
 });
 </script>";
