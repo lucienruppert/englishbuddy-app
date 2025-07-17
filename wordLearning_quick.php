@@ -148,11 +148,14 @@ if (isset($_REQUEST['store']) && $_REQUEST['store'] == 1) {
 
     if (count($words) == 0) {
         $showNumber = $KESZ_UGYES_VAGY;
-        if (startsWith($_SESSION['selectedLevel2'], 'listFract_') && $_SESSION['learningStartTime'] > 0) {
+        if (
+            isset($_SESSION['selectedLevel2']) && startsWith($_SESSION['selectedLevel2'], 'listFract_') &&
+            isset($_SESSION['learningStartTime']) && $_SESSION['learningStartTime'] > 0
+        ) {
             $seconds = time() - $_SESSION['learningStartTime'];
             $package = (int)substr($_SESSION['selectedLevel2'], 10);
-            $tipus = ($_SESSION['source'] == 'szo' ? 1 : ($_SESSION['source'] == 'mondat' ? 2 : ($_SESSION['source'] == 'szomondat' ? 3 : ($_SESSION['source'] == 'alapSzo' ? 4 :
-                0))));
+            $tipus = (isset($_SESSION['source']) ?
+                ($_SESSION['source'] == 'szo' ? 1 : ($_SESSION['source'] == 'mondat' ? 2 : ($_SESSION['source'] == 'szomondat' ? 3 : ($_SESSION['source'] == 'alapSzo' ? 4 : 0)))) : 0);
             setWordRecordIf($userObject, $tipus, $package, $seconds);
             $_SESSION['learningStartTime'] = 0;
         }
@@ -277,49 +280,44 @@ if (isset($_REQUEST['store']) && $_REQUEST['store'] == 1) {
     $_SESSION['cbMultiPractice'] = null;
 }
 
-print "<script type='text/javascript'>
-function getAjaxResponse(target, callbackFunction) {
-    if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
-        xmlhttp = new XMLHttpRequest();
-    } else { // code for IE6, IE5
-        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    xmlhttp.onreadystatechange = function() {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            var responseObject = JSON.parse(xmlhttp.responseText);
-            if (callbackFunction != null) {
-                callbackFunction(responseObject);
-            }
-        }
-    }
-    xmlhttp.open("GET", target, true);
-    xmlhttp.setRequestHeader("Content-Type", "text/plain;charset=ISO-8859-2");
-    xmlhttp.send();
-}
-
-var xmlhttp;
+echo <<<'HTML'
+<script type="text/javascript">
 function getAjaxResponse(target, callbackFunction) {
     $.ajax({
         url: target,
-        type: 'GET',
-        contentType: 'text/plain;charset=ISO-8859-2',
+        type: "GET",
+        contentType: "text/plain;charset=ISO-8859-2",
         success: function(data) {
-            var responseObject = JSON.parse(data);
-            if (callbackFunction != null) {
-                callbackFunction(responseObject);
+            try {
+                var responseObject = JSON.parse(data);
+                if (callbackFunction != null) {
+                    callbackFunction(responseObject);
+                }
+            } catch (e) {
+                console.error("Error parsing JSON:", e);
             }
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.error("AJAX error:", textStatus, errorThrown);
         }
     });
 }
 
 $(document).ready(function() {
-    $('#ajaxMeaningSearch').hide();
-    $('#nyelvtansorminta').hide();
-    $('.search-box').hide();  // Hide any search box elements
-    $('input[type=\"search\"]').hide();  // Hide any search inputs
-" . (($_SESSION['source'] == 'alapSzo' || $_SESSION['source'] == 'szo') ? "    $('#nyelvtansorminta').hide();\n" : "") . "
+    $("#ajaxMeaningSearch").hide();
+    $("#nyelvtansorminta").hide();
+    $(".search-box").hide();
+    $("input[type=search]").hide();
+HTML;
+
+if ($_SESSION['source'] == 'alapSzo' || $_SESSION['source'] == 'szo') {
+    echo '    $("#nyelvtansorminta").hide();' . "\n";
+}
+
+echo <<<'HTML'
 });
-</script>";
+</script>
+HTML;
 
 ?>
 <link href="js/jquery-ui.min.css" rel="stylesheet" type="text/css">
