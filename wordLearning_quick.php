@@ -89,7 +89,7 @@ if (isset($_REQUEST['store']) && $_REQUEST['store'] == 1) {
         || $_REQUEST['selectedLevel'] == 'listAll'
         || $_REQUEST['selectedLevel'] == 'mumus'
         || $_REQUEST['selectedLevel'] == 'tananyagAll'))
-    || $againPractise
+    || (isset($_REQUEST['againPractise']) && $_REQUEST['againPractise'])
     && (!isset($_REQUEST['isOtherPackage']) || !$_SESSION['cbMultiPractice'])
 ) {
     if (isset($_REQUEST['selectedLevel']) && (in_array($_REQUEST['selectedLevel'], array('list1', 'list2'))
@@ -171,11 +171,12 @@ if (isset($_REQUEST['store']) && $_REQUEST['store'] == 1) {
     } else {
         $_REQUEST['source'] = $_SESSION['source'];
     }
-    if ($_REQUEST['againPractise']) {
+    if (isset($_REQUEST['againPractise']) && $_REQUEST['againPractise']) {
         $wordsGroupBy = $_SESSION['origChosenWords'];
     } else {
-        $wordsGroupBy = getIntelligentFilteredWords($_REQUEST['filter']);
-        $_SESSION['intelligentFilterWord'] = $_REQUEST['filter'];
+        $filter = isset($_REQUEST['filter']) ? $_REQUEST['filter'] : '';
+        $wordsGroupBy = getIntelligentFilteredWords($filter);
+        $_SESSION['intelligentFilterWord'] = $filter;
         $_SESSION['origChosenWords'] = $wordsGroupBy;
     }
     $words = $wordsGroupBy;
