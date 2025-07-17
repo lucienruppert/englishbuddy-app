@@ -1,7 +1,7 @@
 <?php
 include_once('topPHP.php');
+// This file is the main entry point for the EnglishBuddy application.
 ?>
-
 <HTML>
 
 <HEAD>
