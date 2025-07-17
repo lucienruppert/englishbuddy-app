@@ -86,11 +86,11 @@ if (isset($_REQUEST['store']) && $_REQUEST['store'] == 1) {
 } else if ((isset($_REQUEST['selectedLevel']) && ($_REQUEST['selectedLevel'] > 0
         || in_array($_REQUEST['selectedLevel'], array('list1', 'list2'))
         || (is_string($_REQUEST['selectedLevel']) && startsWith($_REQUEST['selectedLevel'], 'listFract_'))
-        || $_REQUEST['selectedLevel'] == 'listAll'
-        || $_REQUEST['selectedLevel'] == 'mumus'
-        || $_REQUEST['selectedLevel'] == 'tananyagAll'))
+        || (isset($_REQUEST['selectedLevel']) && $_REQUEST['selectedLevel'] == 'listAll')
+        || (isset($_REQUEST['selectedLevel']) && $_REQUEST['selectedLevel'] == 'mumus')
+        || (isset($_REQUEST['selectedLevel']) && $_REQUEST['selectedLevel'] == 'tananyagAll')))
     || (isset($_REQUEST['againPractise']) && $_REQUEST['againPractise'])
-    && (!isset($_REQUEST['isOtherPackage']) || !$_SESSION['cbMultiPractice'])
+    && (!isset($_REQUEST['isOtherPackage']) || !isset($_SESSION['cbMultiPractice']) || !$_SESSION['cbMultiPractice'])
 ) {
     if (isset($_REQUEST['selectedLevel']) && (in_array($_REQUEST['selectedLevel'], array('list1', 'list2'))
         || (is_string($_REQUEST['selectedLevel']) && startsWith($_REQUEST['selectedLevel'], 'listFract_'))
