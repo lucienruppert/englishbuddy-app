@@ -159,11 +159,16 @@ if (isset($_REQUEST['store']) && $_REQUEST['store'] == 1) {
     } else {
         $showNumber = count($words);
         $_SESSION['wordLearning_words_groupby'] = $wordsGroupBy;
-        if ($_REQUEST['selectedLevel'] > 0 || in_array($_REQUEST['selectedLevel'], array('list1', 'list2')) || startsWith($_REQUEST['selectedLevel'], 'listFract_')) {
+        if (
+            isset($_REQUEST['selectedLevel']) &&
+            ($_REQUEST['selectedLevel'] > 0 ||
+                in_array($_REQUEST['selectedLevel'], array('list1', 'list2')) ||
+                (is_string($_REQUEST['selectedLevel']) && startsWith($_REQUEST['selectedLevel'], 'listFract_')))
+        ) {
             $_SESSION['wordLearning_direction'] = $defaultDirection;
         }
     }
-    if (!$_REQUEST['againPractise'])
+    if (!isset($_REQUEST['againPractise']) || !$_REQUEST['againPractise'])
         $_SESSION['cbMultiPractice'] = null;
 } else if ($clickSource == 'intelligent' && $filterChanged) {
     if (isset($_REQUEST['source']) && $_REQUEST['source']) {
@@ -252,7 +257,7 @@ if (isset($_REQUEST['store']) && $_REQUEST['store'] == 1) {
     if ($_SESSION['wordLearning_direction'] != 1) {
         $words = $_SESSION['wordLearning_words_groupby'];
     }
-    if ($_REQUEST['inbetween'] == 1 && count($words) > 0) {
+    if (isset($_REQUEST['inbetween']) && $_REQUEST['inbetween'] == 1 && count($words) > 0) {
         $userHits = incUserWordHitByDay($userObject);
     }
 
