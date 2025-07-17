@@ -308,16 +308,17 @@ $(document).ready(function() {
     $("#nyelvtansorminta").hide();
     $(".search-box").hide();
     $("input[type=search]").hide();
-HTML;
-
-if ($_SESSION['source'] == 'alapSzo' || $_SESSION['source'] == 'szo') {
-    echo '    $("#nyelvtansorminta").hide();' . "\n";
-}
-
-echo <<<'HTML'
 });
 </script>
 HTML;
+
+if ($_SESSION['source'] == 'alapSzo' || $_SESSION['source'] == 'szo') {
+    echo '<script type="text/javascript">
+    $(document).ready(function() {
+        $("#nyelvtansorminta").hide();
+    });
+    </script>';
+}
 
 ?>
 <link href="js/jquery-ui.min.css" rel="stylesheet" type="text/css">
