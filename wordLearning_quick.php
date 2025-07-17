@@ -739,12 +739,14 @@ $selectedLevel = ($selectedLevel ? $selectedLevel : (isset($_REQUEST['selectedLe
 $selectedLevel = ($selectedLevel ? $selectedLevel : (isset($_SESSION['selectedLevel2']) ? $_SESSION['selectedLevel2'] : ''));
 $source = (isset($_REQUEST['source']) ? $_REQUEST['source'] : (isset($_SESSION['source']) ? $_SESSION['source'] : ''));
 
-print "<script>selectedLevel = '" . htmlspecialchars($selectedLevel, ENT_QUOTES) . "';";
+print "<script type='text/javascript'>\n" .
+    "var selectedLevel = " . json_encode($selectedLevel ?: '') . ";";
 
-if (!isPrevArrow($selectedLevel, $userObject, ($_REQUEST['clickSource'] == "sentencePractice2")) || $source != 'tananyag') {
+$clickSourceValue = isset($_REQUEST['clickSource']) ? $_REQUEST['clickSource'] : '';
+if (!isPrevArrow($selectedLevel, $userObject, ($clickSourceValue == "sentencePractice2")) || $source != 'tananyag') {
     print "\ndocument.getElementById('prevLevelSpan').innerHTML = '';";
 }
-if (!isNextArrow($selectedLevel, $userObject, ($_REQUEST['clickSource'] == "sentencePractice2")) || $source != 'tananyag') {
+if (!isNextArrow($selectedLevel, $userObject, ($clickSourceValue == "sentencePractice2")) || $source != 'tananyag') {
     print "\ndocument.getElementById('nextLevelSpan').innerHTML = '';";
 }
 print "</script>";
