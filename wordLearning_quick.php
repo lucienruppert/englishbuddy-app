@@ -457,7 +457,7 @@ $wordAdd_foreign = '';
 $title_hun = '';
 $title_foreign = '';
 
-if ($words[0]['pronunc_' . $ext] && trim($words[0]['pronunc_' . $ext]) != '/') {
+if (!empty($words) && isset($words[0]['pronunc_' . $ext]) && $words[0]['pronunc_' . $ext] && trim($words[0]['pronunc_' . $ext]) != '/') {
     $pieces = explode("/", trim($words[0]['pronunc_' . $ext]));
     $needTo = false;
     foreach ($pieces as $piece) {
@@ -473,29 +473,34 @@ if ($words[0]['pronunc_' . $ext] && trim($words[0]['pronunc_' . $ext]) != '/') {
     }
 }
 
-if ($words[0]['comment_' . $forras_nyelv_ext]) {
+if (!empty($words) && isset($words[0]['comment_' . $forras_nyelv_ext]) && $words[0]['comment_' . $forras_nyelv_ext]) {
     $wordAdd_hun = '*';
     $titleText = $words[0]['comment_' . $forras_nyelv_ext];
-    //$title_hun = "title='{$titleText}, " . $levels[$words[0]['level']][0] . "'";
-    $title_hun = "(" . $levels[$words[0]['level']][0] . ", {$titleText})";
+    //$title_hun = "title='{$titleText}, " . (isset($levels[$words[0]['level']]) ? $levels[$words[0]['level']][0] : '') . "'";
+    $title_hun = "(" . (isset($levels[$words[0]['level']]) ? $levels[$words[0]['level']][0] : '') . ", {$titleText})";
 } else {
-    $title_hun = "" . $levels[$words[0]['level']][0] . "";
+    $title_hun = "" . (isset($levels[$words[0]['level']]) ? $levels[$words[0]['level']][0] : '') . "";
 }
 
-if ($_SESSION['wordLearning_direction'] == 1) {
-    $word1 = $words[0]['word_' . $ext];
-    $word2 = $words[0]["word_{$forras_nyelv_ext}"];
-    $title1 = $title_foreign;
-    $title2 = $title_hun;
-    $audio_word = $words[0]["word_{$forras_nyelv_ext}"];
-    $isNeedAudioPart = ($levels[$words[0]["level"]][1] == 1) && ($forras_nyelv_ext == "angol");
+if (!empty($words)) {
+    if ($_SESSION['wordLearning_direction'] == 1) {
+        $word1 = isset($words[0]['word_' . $ext]) ? $words[0]['word_' . $ext] : '';
+        $word2 = isset($words[0]["word_{$forras_nyelv_ext}"]) ? $words[0]["word_{$forras_nyelv_ext}"] : '';
+        $title1 = isset($title_foreign) ? $title_foreign : '';
+        $title2 = isset($title_hun) ? $title_hun : '';
+        $audio_word = isset($words[0]["word_{$forras_nyelv_ext}"]) ? $words[0]["word_{$forras_nyelv_ext}"] : '';
+        $isNeedAudioPart = isset($levels[$words[0]["level"]][1]) && ($levels[$words[0]["level"]][1] == 1) && ($forras_nyelv_ext == "angol");
+    } else {
+        $word2 = isset($words[0]['word_' . $ext]) ? $words[0]['word_' . $ext] : '';
+        $word1 = isset($words[0]["word_{$forras_nyelv_ext}"]) ? $words[0]["word_{$forras_nyelv_ext}"] : '';
+        $title1 = isset($title_hun) ? $title_hun : '';
+        $title2 = isset($title_foreign) ? $title_foreign : '';
+        $audio_word = isset($words[0]['word_' . $ext]) ? $words[0]['word_' . $ext] : '';
+        $isNeedAudioPart = isset($levels[$words[0]["level"]][1]) && ($levels[$words[0]["level"]][1] == 1) && ($ext == "angol");
+    }
 } else {
-    $word2 = $words[0]['word_' . $ext];
-    $word1 = $words[0]["word_{$forras_nyelv_ext}"];
-    $title1 = $title_hun;
-    $title2 = $title_foreign;
-    $audio_word = $words[0]['word_' . $ext];
-    $isNeedAudioPart = ($levels[$words[0]["level"]][1] == 1) && ($ext == "angol");
+    $word1 = $word2 = $title1 = $title2 = $audio_word = '';
+    $isNeedAudioPart = false;
 }
 if (($showNumber == $KESZ_UGYES_VAGY) && $seconds > 0) {
     print "<span id='origSpan' style='font-size:20pt;color:$highlight;' title=\"$title1\" onclick=\"event.stopPropagation();\">{$seconds} " . translate('masodperc') . "</span>";
@@ -510,7 +515,7 @@ if (($showNumber == $KESZ_UGYES_VAGY) && $seconds > 0) {
     }
 }
 print "</td><td></td></tr><tr><td height='$MiddleHeight' colspan='5' align='center' valign='center'>";
-print "<script>var jelentes = \"{$word2}\";</script>";
+print "<script>var jelentes = \"" . (isset($word2) ? htmlspecialchars($word2, ENT_QUOTES) : '') . "\";</script>";
 ?>
 <script>
     function mumus2_Click() {
