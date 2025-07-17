@@ -102,13 +102,13 @@ if (isset($_REQUEST['store']) && $_REQUEST['store'] == 1) {
         $_SESSION['selectedLevel2'] = $_REQUEST['selectedLevel'];
         $_SESSION['wordLearning_level_rule'] = getLevelComment($selectedLevel, $userObject['nyelv'], false);
     } else {
-        $selectedLevel = $_SESSION['selectedLevel2'];
+        $selectedLevel = isset($_SESSION['selectedLevel2']) ? $_SESSION['selectedLevel2'] : '';
     }
 
-    if ($_REQUEST['source']) {
+    if (isset($_REQUEST['source']) && $_REQUEST['source']) {
         $_SESSION['source'] = $_REQUEST['source'];
     } else {
-        $_REQUEST['source'] = $_SESSION['source'];
+        $_REQUEST['source'] = isset($_SESSION['source']) ? $_SESSION['source'] : '';
     }
     if ($clickSource == 'sentencePractice2') {
         $count = 10;
@@ -166,10 +166,10 @@ if (isset($_REQUEST['store']) && $_REQUEST['store'] == 1) {
     if (!$_REQUEST['againPractise'])
         $_SESSION['cbMultiPractice'] = null;
 } else if ($clickSource == 'intelligent' && $filterChanged) {
-    if (isset($_REQUEST['source'])) {
+    if (isset($_REQUEST['source']) && $_REQUEST['source']) {
         $_SESSION['source'] = $_REQUEST['source'];
     } else {
-        $_REQUEST['source'] = $_SESSION['source'];
+        $_REQUEST['source'] = isset($_SESSION['source']) ? $_SESSION['source'] : '';
     }
     if (isset($_REQUEST['againPractise']) && $_REQUEST['againPractise']) {
         $wordsGroupBy = $_SESSION['origChosenWords'];
@@ -199,13 +199,13 @@ if (isset($_REQUEST['store']) && $_REQUEST['store'] == 1) {
     $COUNT = 6;
 
     if (!isset($_REQUEST['isOtherPackage']) || !$_REQUEST['isOtherPackage']) {
-        $_SESSION['cbMultiPractice'] = $_REQUEST['cbMultiPractice'];
+        $_SESSION['cbMultiPractice'] = isset($_REQUEST['cbMultiPractice']) ? $_REQUEST['cbMultiPractice'] : false;
     }
 
-    if ($_REQUEST['source']) {
+    if (isset($_REQUEST['source']) && $_REQUEST['source']) {
         $_SESSION['source'] = $_REQUEST['source'];
     } else {
-        $_REQUEST['source'] = $_SESSION['source'];
+        $_REQUEST['source'] = isset($_SESSION['source']) ? $_SESSION['source'] : '';
     }
     $count = 10;
     if ($againPractise) {
