@@ -41,10 +41,11 @@ $nemtudtamFontSize = 'font-size:20pt;color:white;';
 $MiddleHeight = '100px';
 
 // ha mondatokat gyakorlok
-if ($selLevel == 'list2' || $levels[$selLevel][1] == 2) {
+$isSentence = false;
+if ($selLevel == 'list2') {
     $isSentence = true;
-} else {
-    $isSentence = false;
+} else if (isset($levels[$selLevel]) && is_array($levels[$selLevel]) && isset($levels[$selLevel][1])) {
+    $isSentence = ($levels[$selLevel][1] == 2);
 }
 
 $userHits = getUserWordHitByDay($userObject);
