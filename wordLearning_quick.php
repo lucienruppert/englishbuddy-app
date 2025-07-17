@@ -271,26 +271,13 @@ if (isset($_REQUEST['store']) && $_REQUEST['store'] == 1) {
     $_SESSION['cbMultiPractice'] = null;
 }
 
-print "
-<script type='text/javascript'>
-$(document).ready(function () {
-";
-
-print "
-        $('#ajaxMeaningSearch').hide();
-        $('#nyelvtansorminta').hide();
-    ";
-
-if ($_SESSION['source'] == 'alapSzo' || $_SESSION['source'] == 'szo') {
-    print "
-        $('#nyelvtansorminta').hide();
-    ";
-}
-
-print "
-    });
-    </script>
-    ";
+print "<script type='text/javascript'>
+$(document).ready(function() {
+    $('#ajaxMeaningSearch').hide();
+    $('#nyelvtansorminta').hide();
+" . (($_SESSION['source'] == 'alapSzo' || $_SESSION['source'] == 'szo') ? "    $('#nyelvtansorminta').hide();\n" : "") . "
+});
+</script>";
 
 ?>
 <link href="js/jquery-ui.min.css" rel="stylesheet" type="text/css">
