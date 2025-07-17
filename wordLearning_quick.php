@@ -94,9 +94,9 @@ if (isset($_REQUEST['store']) && $_REQUEST['store'] == 1) {
 ) {
     if (isset($_REQUEST['selectedLevel']) && (in_array($_REQUEST['selectedLevel'], array('list1', 'list2'))
         || (is_string($_REQUEST['selectedLevel']) && startsWith($_REQUEST['selectedLevel'], 'listFract_'))
-        || $_REQUEST['selectedLevel'] == 'listAll'
-        || $_REQUEST['selectedLevel'] == 'mumus'
-        || $_REQUEST['selectedLevel'] == 'tananyagAll')) {
+        || (isset($_REQUEST['selectedLevel']) && $_REQUEST['selectedLevel'] == 'listAll')
+        || (isset($_REQUEST['selectedLevel']) && $_REQUEST['selectedLevel'] == 'mumus')
+        || (isset($_REQUEST['selectedLevel']) && $_REQUEST['selectedLevel'] == 'tananyagAll'))) {
         $_SESSION['selectedLevel2'] = $_REQUEST['selectedLevel'];
     } else if (isset($_REQUEST['selectedLevel']) && $_REQUEST['selectedLevel'] > 0) {
         $_SESSION['selectedLevel2'] = $_REQUEST['selectedLevel'];
