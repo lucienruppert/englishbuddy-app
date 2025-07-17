@@ -530,14 +530,17 @@ print "<script>var jelentes = \"" . (isset($word2) ? htmlspecialchars($word2, EN
             },
             dataType: "json",
             success: function(response) {
-                if (response.success) {
+                if (response && response.success) {
                     location.href = 'main.php?content=wordLearning_quick&inbetween=1';
                 } else {
-                    alert(response.error || 'An error occurred');
+                    console.error('Server response:', response);
+                    alert(response && response.error ? response.error : 'An error occurred');
                 }
             },
-            error: function() {
-                alert('An error occurred');
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.error('AJAX error:', textStatus, errorThrown);
+                console.error('Response:', jqXHR.responseText);
+                alert('Communication error occurred');
             }
         });
     }
@@ -551,14 +554,17 @@ print "<script>var jelentes = \"" . (isset($word2) ? htmlspecialchars($word2, EN
             },
             dataType: "json",
             success: function(response) {
-                if (response.success) {
+                if (response && response.success) {
                     location.href = 'main.php?content=wordLearning_quick&inbetween=1';
                 } else {
-                    alert(response.error || 'An error occurred');
+                    console.error('Server response:', response);
+                    alert(response && response.error ? response.error : 'An error occurred');
                 }
             },
-            error: function() {
-                alert('An error occurred');
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.error('AJAX error:', textStatus, errorThrown);
+                console.error('Response:', jqXHR.responseText);
+                alert('Communication error occurred');
             }
         });
     }
