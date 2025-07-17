@@ -740,7 +740,7 @@ $selectedLevel = ($selectedLevel ? $selectedLevel : (isset($_SESSION['selectedLe
 $source = (isset($_REQUEST['source']) ? $_REQUEST['source'] : (isset($_SESSION['source']) ? $_SESSION['source'] : ''));
 
 print "<script type='text/javascript'>\n" .
-    "var selectedLevel = " . json_encode($selectedLevel ?: '') . ";";
+    "var selectedLevel = " . json_encode($selectedLevel ?: '-1') . ";";
 
 $clickSourceValue = isset($_REQUEST['clickSource']) ? $_REQUEST['clickSource'] : '';
 if (!isPrevArrow($selectedLevel, $userObject, ($clickSourceValue == "sentencePractice2")) || $source != 'tananyag') {
