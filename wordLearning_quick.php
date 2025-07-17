@@ -473,13 +473,29 @@ if (!empty($words) && isset($words[0]['pronunc_' . $ext]) && $words[0]['pronunc_
     }
 }
 
-if (!empty($words) && isset($words[0]['comment_' . $forras_nyelv_ext]) && $words[0]['comment_' . $forras_nyelv_ext]) {
-    $wordAdd_hun = '*';
-    $titleText = $words[0]['comment_' . $forras_nyelv_ext];
-    //$title_hun = "title='{$titleText}, " . (isset($levels[$words[0]['level']]) ? $levels[$words[0]['level']][0] : '') . "'";
-    $title_hun = "(" . (isset($levels[$words[0]['level']]) ? $levels[$words[0]['level']][0] : '') . ", {$titleText})";
-} else {
-    $title_hun = "" . (isset($levels[$words[0]['level']]) ? $levels[$words[0]['level']][0] : '') . "";
+// Initialize default values
+$wordAdd_hun = '';
+$title_hun = '';
+
+// Check if we have valid words data
+if (!empty($words) && isset($words[0])) {
+    // Check for comment in source language
+    if (isset($words[0]['comment_' . $forras_nyelv_ext]) && $words[0]['comment_' . $forras_nyelv_ext]) {
+        $wordAdd_hun = '*';
+        $titleText = $words[0]['comment_' . $forras_nyelv_ext];
+
+        // Check if level exists and has required data
+        if (isset($words[0]['level']) && isset($levels[$words[0]['level']]) && isset($levels[$words[0]['level']][0])) {
+            $title_hun = "(" . $levels[$words[0]['level']][0] . ", {$titleText})";
+        } else {
+            $title_hun = "({$titleText})";
+        }
+    } else {
+        // Only show level if it exists
+        if (isset($words[0]['level']) && isset($levels[$words[0]['level']]) && isset($levels[$words[0]['level']][0])) {
+            $title_hun = "" . $levels[$words[0]['level']][0] . "";
+        }
+    }
 }
 
 if (!empty($words)) {
