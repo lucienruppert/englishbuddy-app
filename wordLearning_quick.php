@@ -19,6 +19,9 @@ $selLevel = isset($_REQUEST['selectedLevel']) ? $_REQUEST['selectedLevel'] : (is
 $clickSource = isset($_REQUEST['clickSource']) ? $_REQUEST['clickSource'] : (isset($_SESSION['clickSource']) ? $_SESSION['clickSource'] : null);
 $_SESSION['clickSource'] = $clickSource;
 
+// Initialize againPractise
+$againPractise = isset($_REQUEST['againPractise']) ? $_REQUEST['againPractise'] : false;
+
 // Initialize filter with proper checks
 $filter = isset($_REQUEST['filter']) ? $_REQUEST['filter'] : (isset($_SESSION['intelligentFilterWord']) ? $_SESSION['intelligentFilterWord'] : '');
 $filterChanged = !isset($_SESSION['intelligentFilterWord']) || $filter != $_SESSION['intelligentFilterWord'];
@@ -85,7 +88,7 @@ if (isset($_REQUEST['store']) && $_REQUEST['store'] == 1) {
         || $_REQUEST['selectedLevel'] == 'listAll'
         || $_REQUEST['selectedLevel'] == 'mumus'
         || $_REQUEST['selectedLevel'] == 'tananyagAll'))
-    || (isset($_REQUEST['againPractise']) && $_REQUEST['againPractise'])
+    || $againPractise
     && (!isset($_REQUEST['isOtherPackage']) || !$_SESSION['cbMultiPractice'])
 ) {
     if (isset($_REQUEST['selectedLevel']) && (in_array($_REQUEST['selectedLevel'], array('list1', 'list2'))
@@ -111,7 +114,7 @@ if (isset($_REQUEST['store']) && $_REQUEST['store'] == 1) {
     } else {
         $count = 300;
     }
-    if ($_REQUEST['againPractise']) {
+    if ($againPractise) {
         $wordsGroupBy = $_SESSION['origChosenWords'];
     } else {
         $records = getFirstNWordsByLevelGroupBy($count, $selectedLevel, $ext, $userObject, $_SESSION['source']);
@@ -203,7 +206,7 @@ if (isset($_REQUEST['store']) && $_REQUEST['store'] == 1) {
         $_REQUEST['source'] = $_SESSION['source'];
     }
     $count = 10;
-    if ($_REQUEST['againPractise']) {
+    if ($againPractise) {
         $wordsGroupBy = $_SESSION['origChosenWords'];
     } else {
         $records = getFirstNWordsForMultiplePractice($COUNT, $_SESSION['cbMultiPractice'], $ext);
