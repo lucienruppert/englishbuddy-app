@@ -522,18 +522,44 @@ print "<script>var jelentes = \"" . (isset($word2) ? htmlspecialchars($word2, EN
 ?>
 <script>
     function mumus2_Click() {
-        $.post("mumus_store.php", {
-            wordId: <?php print "\"{$words[0]['id']}\""; ?>
-        }, function() {
-            location.href = 'main.php?content=wordLearning_quick&inbetween=1';
+        $.ajax({
+            url: "mumus_store.php",
+            type: "POST",
+            data: {
+                wordId: <?php print "\"{$words[0]['id']}\""; ?>
+            },
+            dataType: "json",
+            success: function(response) {
+                if (response.success) {
+                    location.href = 'main.php?content=wordLearning_quick&inbetween=1';
+                } else {
+                    alert(response.error || 'An error occurred');
+                }
+            },
+            error: function() {
+                alert('An error occurred');
+            }
         });
     }
 
     function remove_Click() {
-        $.post("remove_word.php", {
-            wordId: <?php print "\"{$words[0]['id']}\""; ?>
-        }, function() {
-            location.href = 'main.php?content=wordLearning_quick&inbetween=1';
+        $.ajax({
+            url: "remove_word.php",
+            type: "POST",
+            data: {
+                wordId: <?php print "\"{$words[0]['id']}\""; ?>
+            },
+            dataType: "json",
+            success: function(response) {
+                if (response.success) {
+                    location.href = 'main.php?content=wordLearning_quick&inbetween=1';
+                } else {
+                    alert(response.error || 'An error occurred');
+                }
+            },
+            error: function() {
+                alert('An error occurred');
+            }
         });
     }
 </script>
