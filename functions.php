@@ -2118,8 +2118,16 @@ function getWordMeaningAjaxObject($userObject, $txt, $lang)
 function routeHitArray($hitArray, $levelToTheEnd, &$array1, &$array2, &$array3, &$array4)
 {
     foreach ((array)$hitArray as $curRec) {
+        // Check if required keys exist
+        if (!isset($curRec['word_hun']) || !isset($curRec['word_foreign']) || !isset($curRec['level'])) {
+            continue;
+        }
+
         // kit�lt�tt
-        if ($curRec['word_hun'] != null && $curRec['word_hun'] != '' && $curRec['word_hun'] != '...' && $curRec['word_foreign'] != null && $curRec['word_foreign'] != '' && $curRec['word_foreign'] != '...') {
+        if (
+            $curRec['word_hun'] != null && $curRec['word_hun'] != '' && $curRec['word_hun'] != '...' &&
+            $curRec['word_foreign'] != null && $curRec['word_foreign'] != '' && $curRec['word_foreign'] != '...'
+        ) {
             // kifejez�s
             if ($curRec['level'] == $levelToTheEnd) {
                 $array1[] = $curRec;
