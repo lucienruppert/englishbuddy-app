@@ -278,6 +278,40 @@ if (isset($_REQUEST['store']) && $_REQUEST['store'] == 1) {
 }
 
 print "<script type='text/javascript'>
+function getAjaxResponse(target, callbackFunction) {
+    if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp = new XMLHttpRequest();
+    } else { // code for IE6, IE5
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            var responseObject = JSON.parse(xmlhttp.responseText);
+            if (callbackFunction != null) {
+                callbackFunction(responseObject);
+            }
+        }
+    }
+    xmlhttp.open("GET", target, true);
+    xmlhttp.setRequestHeader("Content-Type", "text/plain;charset=ISO-8859-2");
+    xmlhttp.send();
+}
+
+var xmlhttp;
+function getAjaxResponse(target, callbackFunction) {
+    $.ajax({
+        url: target,
+        type: 'GET',
+        contentType: 'text/plain;charset=ISO-8859-2',
+        success: function(data) {
+            var responseObject = JSON.parse(data);
+            if (callbackFunction != null) {
+                callbackFunction(responseObject);
+            }
+        }
+    });
+}
+
 $(document).ready(function() {
     $('#ajaxMeaningSearch').hide();
     $('#nyelvtansorminta').hide();
@@ -305,6 +339,7 @@ $(document).ready(function() {
     } */
 </style>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/ajax-functions.js"></script>
 <script>
     $(document).ready(function() {
         $("#jelentesSpan, #origSpan").dblclick(function() {
