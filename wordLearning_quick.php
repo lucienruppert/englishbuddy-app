@@ -647,11 +647,11 @@ print "</tr>";
 print "</table>";
 
 print "</div>";
-$selectedLevel = ($selectedLevel ? $selectedLevel : $_REQUEST['selectedLevel']);
-$selectedLevel = ($selectedLevel ? $selectedLevel : $_SESSION['selectedLevel2']);
-$source = ($_REQUEST['source'] ? $_REQUEST['source'] : $_SESSION['source']);
+$selectedLevel = ($selectedLevel ? $selectedLevel : (isset($_REQUEST['selectedLevel']) ? $_REQUEST['selectedLevel'] : null));
+$selectedLevel = ($selectedLevel ? $selectedLevel : (isset($_SESSION['selectedLevel2']) ? $_SESSION['selectedLevel2'] : ''));
+$source = (isset($_REQUEST['source']) ? $_REQUEST['source'] : (isset($_SESSION['source']) ? $_SESSION['source'] : ''));
 
-print "<script>selectedLevel = '{$selectedLevel}';";
+print "<script>selectedLevel = '" . htmlspecialchars($selectedLevel, ENT_QUOTES) . "';";
 
 if (!isPrevArrow($selectedLevel, $userObject, ($_REQUEST['clickSource'] == "sentencePractice2")) || $source != 'tananyag') {
     print "\ndocument.getElementById('prevLevelSpan').innerHTML = '';";
@@ -663,7 +663,7 @@ print "</script>";
 
 
 // a kikommentezés azért kellett, mert az utolsó csomagban lehet, hogy soha nincs annyi sz�, amennyi a $GLOBALS...-ban van, ez�rt annak soha nem mérték az idejét
-if ($_REQUEST['packageStart'] && ((($source == 'szo' || $source == 'alapSzo') /*&& $showNumber == $GLOBALS['szoPackageSize']*/) || ($source == 'mondat' /*&& $showNumber == $GLOBALS['mondatPackageSize']*/))) {
+if (isset($_REQUEST['packageStart']) && $_REQUEST['packageStart'] && ((($source == 'szo' || $source == 'alapSzo') /*&& $showNumber == $GLOBALS['szoPackageSize']*/) || ($source == 'mondat' /*&& $showNumber == $GLOBALS['mondatPackageSize']*/))) {
     //print "<script>alert('learningStartTime');</script>";
     $_SESSION['learningStartTime'] = time();
 }
