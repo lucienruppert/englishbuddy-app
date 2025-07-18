@@ -11,12 +11,12 @@ $link = "index.php?audioszoba=" . $lang;
 <form action="<? echo $link; ?>" method="POST">
 	<table border='0' align='center' cellspacing='10'>
 		<tr>
-			<td width='120' height='50'> <input style=<?php print "'width:100%;height:100%;background:" . $globalcolor . ";color:white;font-size:15pt;'" ?> type="submit" name="spanish" value="<?php print translate("Spanyol") ?>" /></td>
-			<td width='120' height='50'> <input style=<?php print "'width:100%;height:100%;background:" . $globalcolor . ";color:white;font-size:15pt;'" ?> type="submit" name="angol_01" value="<?php print translate("Angol kezdo") ?>" /></td>
-			<td width='120' height='50'> <input style=<?php print "'width:100%;height:100%;background:" . $globalcolor . ";color:white;font-size:15pt;'" ?> type="submit" name="angol_02" value="<?php print translate("Angol brit") ?>" /></td>
-			<td width='120' height='50'> <input style=<?php print "'width:100%;height:100%;background:" . $globalcolor . ";color:white;font-size:15pt;'" ?> type="submit" name="angol_03" value="<?php print translate("Angol halado") ?>" /></td>
-			<td width='120' height='50'> <input style=<?php print "'width:100%;height:100%;background:" . $globalcolor . ";color:white;font-size:15pt;'" ?> type="submit" name="angol_04" value="<?php print translate("Angol BP") ?>" /></td>
-			<td width='120' height='50'> <input style=<?php print "'width:100%;height:100%;background:" . $globalcolor . ";color:white;font-size:15pt;'" ?> type="submit" name="angol_05" value="<?php print translate("Angol ECL") ?>" /></td>
+			<td width='120' height='50'> <input style=<?php print "'width:100%;height:100%;background:" . $globalcolor . ";color:white;font-size:15pt;border:none;border-radius:10px;'" ?> type="submit" name="spanish" value="<?php print translate("Spanyol") ?>" /></td>
+			<td width='120' height='50'> <input style=<?php print "'width:100%;height:100%;background:" . $globalcolor . ";color:white;font-size:15pt;border:none;border-radius:10px;'" ?> type="submit" name="angol_01" value="<?php print translate("Angol kezdo") ?>" /></td>
+			<td width='120' height='50'> <input style=<?php print "'width:100%;height:100%;background:" . $globalcolor . ";color:white;font-size:15pt;border:none;border-radius:10px;'" ?> type="submit" name="angol_02" value="<?php print translate("Angol brit") ?>" /></td>
+			<td width='120' height='50'> <input style=<?php print "'width:100%;height:100%;background:" . $globalcolor . ";color:white;font-size:15pt;border:none;border-radius:10px;'" ?> type="submit" name="angol_03" value="<?php print translate("Angol halado") ?>" /></td>
+			<td width='120' height='50'> <input style=<?php print "'width:100%;height:100%;background:" . $globalcolor . ";color:white;font-size:15pt;border:none;border-radius:10px;'" ?> type="submit" name="angol_04" value="<?php print translate("Angol BP") ?>" /></td>
+			<td width='120' height='50'> <input style=<?php print "'width:100%;height:100%;background:" . $globalcolor . ";color:white;font-size:15pt;border:none;border-radius:10px;'" ?> type="submit" name="angol_05" value="<?php print translate("Angol ECL") ?>" /></td>
 		</tr>
 </form>
 
@@ -55,6 +55,16 @@ $link = "index.php?audioszoba=" . $lang;
 		<tr>
 			<td style="text-align:center;">
 				<a href="https://drive.google.com/file/d/1VS1I5rHooC-m692SmJLWRefvuIy7nXtW/view?usp=sharing" target="_blank" style="font-size:16px;color:<?php print $globalcolor; ?>;text-decoration:underline;">K07</a>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">
+				<a href="https://drive.google.com/file/d/1odlZixvQVZar9CSnM3Dmw2J9rjtuZ2Zf/view?usp=sharing" target="_blank" style="font-size:16px;color:<?php print $globalcolor; ?>;text-decoration:underline;">K08</a>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">
+				<a href="https://drive.google.com/file/d/1JdIpJi1c-D9-mIeTOkDmjq3keOSXgxQ-/view?usp=sharing" target="_blank" style="font-size:16px;color:<?php print $globalcolor; ?>;text-decoration:underline;">K09</a>
 			</td>
 		</tr>
 	<?php } ?>
