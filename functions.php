@@ -2640,6 +2640,9 @@ function getUsersByStatusArray($statusArray)
 
 function startsWith($haystack, $needle)
 {
+    if (!is_string($haystack) || !is_string($needle)) {
+        return false;
+    }
     $length = strlen($needle);
     return (substr($haystack, 0, $length) === $needle);
 }

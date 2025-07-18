@@ -670,7 +670,7 @@ if ($showNumber != $KESZ_UGYES_VAGY) {
         $newSelectedLevel = (int)$forSortArray[0]['szam'];
         print "\n<br><a href='#' style=" . $nemtudtamFontSize . " onclick=\"event.stopPropagation(); location.href='main.php?content=wordLearning_quick&packageStart=1&selectedLevel=listFract_{$newSelectedLevel}&source=alapSzo&clickSource={$clickSource}';\">" . translate('masik_csomag') . "</a>";
     } else {
-        if (startsWith($_SESSION['selectedLevel2'], 'listFract_') && $_SESSION["source"] == "szo" && $clickSource == "wordPractice") {
+        if (isset($_SESSION['selectedLevel2']) && startsWith($_SESSION['selectedLevel2'], 'listFract_') && $_SESSION["source"] == "szo" && $clickSource == "wordPractice") {
             $goodLevelArray = array();
             foreach ($levels as $key => $value) {
                 if ($value[1] == 1 && $key != 0) {
@@ -696,7 +696,7 @@ if ($showNumber != $KESZ_UGYES_VAGY) {
             $forSortArray = array_sort($forSortArray, 'ido', SORT_DESC);
             //deb($forSortArray);
             $newSelectedLevel = 'listFract_' . (int)$forSortArray[0]['szam'];
-        } else if (startsWith($_SESSION['selectedLevel2'], 'listFract_') && $_SESSION["source"] == "mondat" && $clickSource == "sentencePractice") {
+        } else if (isset($_SESSION['selectedLevel2']) && startsWith($_SESSION['selectedLevel2'], 'listFract_') && $_SESSION["source"] == "mondat" && $clickSource == "sentencePractice") {
             $goodLevelArray = array();
             foreach ($levels as $key => $value) {
                 if ($value[1] == 2 && $key != 0) {
@@ -721,10 +721,12 @@ if ($showNumber != $KESZ_UGYES_VAGY) {
             }
             $forSortArray = array_sort($forSortArray, 'ido', SORT_DESC);
             $newSelectedLevel = 'listFract_' . (int)$forSortArray[0]['szam'];
-        } else if (startsWith($_SESSION['selectedLevel2'], 'listFract_')) {
+        } else if (isset($_SESSION['selectedLevel2']) && startsWith($_SESSION['selectedLevel2'], 'listFract_')) {
             $newSelectedLevel = 'listFract_' . (int)(substr($_SESSION['selectedLevel2'], 10) + 1);
-        } else {
+        } else if (isset($_SESSION['selectedLevel2'])) {
             $newSelectedLevel = (int)($_SESSION['selectedLevel2']);
+        } else {
+            $newSelectedLevel = 1; // fallback default value
         }
         if ($clickSource != "intelligent")
             print "\n<br><a href='#' style=" . $nemtudtamFontSize . " onclick=\"event.stopPropagation(); location.href='main.php?content=wordLearning_quick&packageStart=1&selectedLevel={$newSelectedLevel}&source={$_SESSION['source']}&clickSource={$clickSource}&isOtherPackage=1';\">" . translate('masik_csomag') . "</a><br><br>";
