@@ -19,6 +19,7 @@ $link = "index.php?audioszoba=" . $lang;
 			<td width='120' height='50'> <input class="main-select-btn" style=<?php print "'width:100%;height:100%;background:" . $globalcolor . ";color:white;font-size:15pt;border:none;border-radius:10px;'" ?> type="submit" name="angol_05" value="<?php print translate("Angol ECL") ?>" /></td>
 		</tr>
 
+	</table>
 </form>
 
 <?php if (isset($_POST['angol_01'])) { ?>
