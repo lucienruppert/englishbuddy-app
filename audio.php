@@ -20,6 +20,20 @@ $link = "index.php?audioszoba=" . $lang;
 		</tr>
 </form>
 
+<?php if (isset($_POST['angol_01'])) { ?>
+	<div class="audio-grid">
+		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/12Bog9R49ok54xAxBBNjAS92FKAuQ3rIk/view?usp=drive_link','_blank');return false;">K01</button>
+		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1zoq7dFpFFr-8MuMEo3hsKKBd-7jTPi8b/view?usp=sharing','_blank');return false;">K02</button>
+		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1VHxgabMvldA7qziTzFhEomu4yMoaJXzQ/view?usp=sharing','_blank');return false;">K03</button>
+		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1ROm8ccULkrMBJptD7bgPwgzfr1syTF7P/view?usp=sharing','_blank');return false;">K04</button>
+		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1WuozLWE6yRbEUXLWBEepo4aY28EW6rtD/view?usp=sharing','_blank');return false;">K05</button>
+		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1Of-2pn-n5bsz75XGPd1vpor7qG58gDvx/view?usp=sharing','_blank');return false;">K06</button>
+		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1VS1I5rHooC-m692SmJLWRefvuIy7nXtW/view?usp=sharing','_blank');return false;">K07</button>
+		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1odlZixvQVZar9CSnM3Dmw2J9rjtuZ2Zf/view?usp=sharing','_blank');return false;">K08</button>
+		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1JdIpJi1c-D9-mIeTOkDmjq3keOSXgxQ-/view?usp=sharing','_blank');return false;">K09</button>
+	</div>
+<?php } ?>
+
 <style>
 	.main-select-btn:hover,
 	.main-select-btn:active {
@@ -51,17 +65,3 @@ $link = "index.php?audioszoba=" . $lang;
 		background: <?php print $highlight; ?>;
 	}
 </style>
-
-<?php if (isset($_POST['angol_01'])) { ?>
-	<div class="audio-grid">
-		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/12Bog9R49ok54xAxBBNjAS92FKAuQ3rIk/view?usp=drive_link','_blank');return false;">K01</button>
-		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1zoq7dFpFFr-8MuMEo3hsKKBd-7jTPi8b/view?usp=sharing','_blank');return false;">K02</button>
-		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1VHxgabMvldA7qziTzFhEomu4yMoaJXzQ/view?usp=sharing','_blank');return false;">K03</button>
-		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1ROm8ccULkrMBJptD7bgPwgzfr1syTF7P/view?usp=sharing','_blank');return false;">K04</button>
-		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1WuozLWE6yRbEUXLWBEepo4aY28EW6rtD/view?usp=sharing','_blank');return false;">K05</button>
-		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1Of-2pn-n5bsz75XGPd1vpor7qG58gDvx/view?usp=sharing','_blank');return false;">K06</button>
-		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1VS1I5rHooC-m692SmJLWRefvuIy7nXtW/view?usp=sharing','_blank');return false;">K07</button>
-		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1odlZixvQVZar9CSnM3Dmw2J9rjtuZ2Zf/view?usp=sharing','_blank');return false;">K08</button>
-		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1JdIpJi1c-D9-mIeTOkDmjq3keOSXgxQ-/view?usp=sharing','_blank');return false;">K09</button>
-	</div>
-<?php } ?>
