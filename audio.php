@@ -40,6 +40,7 @@ $link = "index.php?audioszoba=" . $lang;
 	.main-select-btn {
 		cursor: pointer;
 		font-size: 13px !important;
+		text-transform: capitalize;
 	}
 
 	.main-select-btn:hover,
