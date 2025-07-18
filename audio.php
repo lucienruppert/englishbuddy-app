@@ -23,7 +23,7 @@ $link = "index.php?audioszoba=" . $lang;
 <table border='0' align='center' width='95%' cellspacing='0'>
 	<?php if (isset($_POST['angol_01'])) { ?>
 		<tr>
-			<td>
+			<td style="text-align:center;">
 				<a href="https://drive.google.com/file/d/12Bog9R49ok54xAxBBNjAS92FKAuQ3rIk/view?usp=drive_link" target="_blank" style="font-size:16px;color:<?php print $globalcolor; ?>;text-decoration:underline;">K01</a>
 			</td>
 		</tr>
