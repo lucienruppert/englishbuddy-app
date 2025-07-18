@@ -35,8 +35,6 @@ $link = "index.php?audioszoba=" . $lang;
 	</div>
 <?php } ?>
 
-
-border: none;
 border-radius: 10px;
 padding: 18px 0;
 cursor: pointer;
@@ -44,6 +42,7 @@ transition: background 0.2s;
 width: 100%;
 box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
 </style>
+*** End Patch
 <style>
 	.main-select-btn {
 		cursor: pointer;
