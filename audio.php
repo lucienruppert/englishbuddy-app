@@ -18,6 +18,7 @@ $link = "index.php?audioszoba=" . $lang;
 			<td width='120' height='50'> <input class="main-select-btn" style=<?php print "'width:100%;height:100%;background:" . $globalcolor . ";color:white;font-size:15pt;border:none;border-radius:10px;'" ?> type="submit" name="angol_04" value="<?php print translate("Angol BP") ?>" /></td>
 			<td width='120' height='50'> <input class="main-select-btn" style=<?php print "'width:100%;height:100%;background:" . $globalcolor . ";color:white;font-size:15pt;border:none;border-radius:10px;'" ?> type="submit" name="angol_05" value="<?php print translate("Angol ECL") ?>" /></td>
 		</tr>
+
 </form>
 
 <?php if (isset($_POST['angol_01'])) { ?>
@@ -35,27 +36,6 @@ $link = "index.php?audioszoba=" . $lang;
 <?php } ?>
 
 
-.main-select-btn {
-cursor: pointer;
-font-size: 13px !important;
-}
-.main-select-btn:hover,
-.main-select-btn:active {
-background: <?php print $highlight; ?> !important;
-}
-
-.audio-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-gap: 16px;
-max-width: 600px;
-margin: 30px auto 0 auto;
-}
-
-.audio-btn {
-background: <?php print $globalcolor; ?>;
-color: white;
-font-size: 16px;
 border: none;
 border-radius: 10px;
 padding: 18px 0;
@@ -63,9 +43,41 @@ cursor: pointer;
 transition: background 0.2s;
 width: 100%;
 box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-}
+</style>
+<style>
+	.main-select-btn {
+		cursor: pointer;
+		font-size: 13px !important;
+	}
 
-.audio-btn:hover {
-background: <?php print $highlight; ?>;
-}
+	.main-select-btn:hover,
+	.main-select-btn:active {
+		background: <?php print $highlight; ?> !important;
+	}
+
+	.audio-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+		gap: 16px;
+		max-width: 600px;
+		margin: 30px auto 0 auto;
+	}
+
+	.audio-btn {
+		background: <?php print $globalcolor; ?>;
+		color: white;
+		font-size: 16px;
+		border: none;
+		border-radius: 10px;
+		padding: 18px 0;
+		cursor: pointer;
+		transition: background 0.2s;
+		width: 100%;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+	}
+
+	.audio-btn:hover {
+		background: <?php print $highlight; ?>;
+	}
+</style>
 </style>
