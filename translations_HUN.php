@@ -236,12 +236,12 @@ $trans["showmewhatitis"] = "MUTASD, MIT TUD<br>A LINGOCASA";
 $trans["iwilltryit"] = "KIPRï¿½Bï¿½LOM";
 
 $trans["Spanyol"] = "SPANYOL";
-$trans["Angol kezdo"] = "ANGOL KEZDÅ";
+$trans["Angol kezdo"] = "ANGOL KEZDÕ";
 $trans["Angol brit"] = "ANGOL BRIT";
-$trans["Angol halado"] = "ANGOL HALADÃ“";
+$trans["Angol halado"] = "ANGOL HALADÓ";
 $trans["Angol BP"] = "ANGOL BP";
 $trans["Angol ECL"] = "ANGOL ECL";
-$trans["legujabb_szavak"] = "Legï¿½jabb szavak";
+$trans["legujabb_szavak"] = "Legújabb szavak";
 
-$trans["tandijak"] = "Tandï¿½j";
-$trans["tanulok"] = "Tanulï¿½k";
+$trans["tandijak"] = "Tandíj";
+$trans["tanulok"] = "Tanulók";
