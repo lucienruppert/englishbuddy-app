@@ -34,34 +34,38 @@ $link = "index.php?audioszoba=" . $lang;
 	</div>
 <?php } ?>
 
-<style>
-	.main-select-btn:hover,
-	.main-select-btn:active {
-		background: <?php print $highlight; ?> !important;
-	}
 
-	.audio-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-		gap: 16px;
-		max-width: 600px;
-		margin: 30px auto 0 auto;
-	}
+.main-select-btn {
+cursor: pointer;
+font-size: 13px !important;
+}
+.main-select-btn:hover,
+.main-select-btn:active {
+background: <?php print $highlight; ?> !important;
+}
 
-	.audio-btn {
-		background: <?php print $globalcolor; ?>;
-		color: white;
-		font-size: 16px;
-		border: none;
-		border-radius: 10px;
-		padding: 18px 0;
-		cursor: pointer;
-		transition: background 0.2s;
-		width: 100%;
-		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-	}
+.audio-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+gap: 16px;
+max-width: 600px;
+margin: 30px auto 0 auto;
+}
 
-	.audio-btn:hover {
-		background: <?php print $highlight; ?>;
-	}
+.audio-btn {
+background: <?php print $globalcolor; ?>;
+color: white;
+font-size: 16px;
+border: none;
+border-radius: 10px;
+padding: 18px 0;
+cursor: pointer;
+transition: background 0.2s;
+width: 100%;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.audio-btn:hover {
+background: <?php print $highlight; ?>;
+}
 </style>
