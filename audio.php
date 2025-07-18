@@ -72,12 +72,17 @@ $link = "index.php?audioszoba=" . $lang;
 		color: white;
 		font-size: 16px;
 		border: none;
-		border-radius: 10px;
-		padding: 18px 0;
+		border-radius: 50%;
+		width: 64px;
+		height: 64px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		cursor: pointer;
 		transition: background 0.2s;
-		width: 100%;
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+		margin: 0 auto;
+		padding: 0;
 	}
 
 	.audio-btn:hover {
