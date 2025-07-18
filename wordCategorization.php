@@ -29,8 +29,14 @@ $wordCount = is_array($_SESSION['wordCategorization']) ? count($_SESSION['wordCa
 $currentWordId = ($wordCount > 0) ? array_shift($_SESSION['wordCategorization']) : null;
 $currentWord = ($currentWordId !== null) ? getWordById($currentWordId) : null;
 
+
 $wordOrig = ($currentWord && isset($currentWord['word_' . $forras_nyelv_ext])) ? $currentWord['word_' . $forras_nyelv_ext] : '';
 $wordForeign = ($currentWord && isset($currentWord['word_' . $ext])) ? $currentWord['word_' . $ext] : '';
+
+// Prevent undefined variable warning for $audio_part
+if (!isset($audio_part)) {
+    $audio_part = '';
+}
 
 ?>
 
