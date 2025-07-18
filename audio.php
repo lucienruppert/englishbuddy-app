@@ -52,5 +52,10 @@ $link = "index.php?audioszoba=" . $lang;
 				<a href="https://drive.google.com/file/d/1Of-2pn-n5bsz75XGPd1vpor7qG58gDvx/view?usp=sharing" target="_blank" style="font-size:16px;color:<?php print $globalcolor; ?>;text-decoration:underline;">K06</a>
 			</td>
 		</tr>
+		<tr>
+			<td style="text-align:center;">
+				<a href="https://drive.google.com/file/d/1VS1I5rHooC-m692SmJLWRefvuIy7nXtW/view?usp=sharing" target="_blank" style="font-size:16px;color:<?php print $globalcolor; ?>;text-decoration:underline;">K07</a>
+			</td>
+		</tr>
 	<?php } ?>
 </table>
