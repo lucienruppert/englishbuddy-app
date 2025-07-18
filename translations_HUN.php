@@ -3,7 +3,7 @@
 global $trans;
 
 $trans['copyright'] = "2005 &copy; Lucien del Mar. Artisjus #1158";
-$trans['kijelentkezes'] = "Kijelentkez�s";
+$trans['kijelentkezes'] = "Kijelentkezés";
 $trans['enter'] = "BEL�P�S";
 $trans['szia'] = "Szia";
 $trans['felhasznalt_ido'] = "Tanul�ssal t�lt�tt id�";
@@ -41,19 +41,19 @@ $trans['rogzitem_hazimba'] = "R�gz�tem a h�zimba";
 $trans['kovetkezo_ora'] = "K�vetkez� �ra";
 
 $trans['sajat_mondatok'] = "Mondataim";
-$trans['sajat_mondatok_10'] = "Saj�t mondatok";
+$trans['sajat_mondatok_10'] = "Saját mondatok";
 $trans['sajat_mondatok_all'] = "(�SSZES)";
 
-$trans['feltoltes'] = "sz�t�rfelt�lt�s";
-$trans['kategorizalas'] = "sz�list�k";
+$trans['feltoltes'] = "szótárfeltöltés";
+$trans['kategorizalas'] = "szólisták";
 $trans['peldamondatok'] = "(�SSZES)";
 $trans['peldamondatok_all'] = "P�ldamondatok (�sszes)";
-$trans['tudastar_title'] = "tud�st�r";
-$trans['tudastar'] = "Nyelvtani p�ldat�r";
-$trans['tudastar2'] = "Nyelvtani p�ldat�r";
-$trans['tanuloszoba'] = "Tanul�szoba";
-$trans['kitolto'] = "kit�lt�";
-$trans['sajat_mondat_szo'] = "�sszgyakorl�";
+$trans['tudastar_title'] = "tudástár";
+$trans['tudastar'] = "Nyelvtani példatár";
+$trans['tudastar2'] = "Nyelvtani példatár";
+$trans['tanuloszoba'] = "Tanulószoba";
+$trans['kitolto'] = "kitöltő";
+$trans['sajat_mondat_szo'] = "Összgyakorló";
 
 $trans['funkcio_skype'] = "A funkci� csak Skype-os tanul�k sz�m�ra �rhet� el!";
 
@@ -90,12 +90,12 @@ $trans['remove'] = "kivesz";
 
 $trans['ajaxDivSave'] = "Ment";
 $trans['ajaxDivSaveLoginMessage'] = "Be kell l�pned a szavak ment�s�hez.";
-$trans['audioszoba'] = "Audi�szoba";
-$trans['increasevocabulary'] = "Saj�t sz�t�r";
-$trans['increasevocabulary2'] = "Saj�t sz�t�r";
-$trans['increasevocabulary_android'] = "Saj�t sz�t�r";
-$trans['intelligensgyakorlo'] = "Intelligens gyakorl�";
-$trans['intelligensgyakorlo2'] = "Intelligens gyakorl�";
+$trans['audioszoba'] = "Audiószoba";
+$trans['increasevocabulary'] = "Saját szótár";
+$trans['increasevocabulary2'] = "Saját szótár";
+$trans['increasevocabulary_android'] = "Saját szótár";
+$trans['intelligensgyakorlo'] = "Intelligens gyakorló";
+$trans['intelligensgyakorlo2'] = "Intelligens gyakorló";
 
 $trans['myperformance'] = "Szorgalom mutat�";
 $trans['szotar'] = "Sz�t�r";
@@ -108,14 +108,14 @@ $trans['dailyclicks'] = "napi klikkek sz�ma";
 $trans['useofdictionary'] = "Sz�t�rhaszn�lat";
 $trans['napikviz'] = "Napi Kv�z";
 $trans['napikviz_br'] = "Napi<br>Kv�z";
-$trans['basicvocabulary'] = "Alap sz�kincs";
-$trans['basicvocabulary2'] = "Alap sz�kincs";
+$trans['basicvocabulary'] = "Alap szókincs";
+$trans['basicvocabulary2'] = "Alap szókincs";
 $trans['kikerdezo'] = "lingocasa";
 $trans['onlinetutor'] = "�LETSZAG� NYELVGYAKORL�S";
 
-$trans['basicvocabulary_android'] = "Alap sz�kincs";
-$trans['tudastar_android'] = "Nyelvtani p�ldat�r";
-$trans['intelligensgyakorlo_android'] = "Intelligens gyakorl�";
+$trans['basicvocabulary_android'] = "Alap szókincs";
+$trans['tudastar_android'] = "Nyelvtani példatár";
+$trans['intelligensgyakorlo_android'] = "Intelligens gyakorló";
 
 $trans['subscribe'] = "REGISZTR�CI�";
 
@@ -236,12 +236,12 @@ $trans["showmewhatitis"] = "MUTASD, MIT TUD<br>A LINGOCASA";
 $trans["iwilltryit"] = "KIPR�B�LOM";
 
 $trans["Spanyol"] = "SPANYOL";
-$trans["Angol kezdo"] = "ANGOL KEZD�";
+$trans["Angol kezdo"] = "ANGOL KEZD�";
 $trans["Angol brit"] = "ANGOL BRIT";
-$trans["Angol halado"] = "ANGOL HALAD�";
+$trans["Angol halado"] = "ANGOL HALAD�";
 $trans["Angol BP"] = "ANGOL BP";
 $trans["Angol ECL"] = "ANGOL ECL";
-$trans["legujabb_szavak"] = "Leg�jabb szavak";
+$trans["legujabb_szavak"] = "Leg�jabb szavak";
 
-$trans["tandijak"] = "Tand�j";
-$trans["tanulok"] = "Tanul�k";
+$trans["tandijak"] = "Tandíj";
+$trans["tanulok"] = "Tanulók";
