@@ -6,19 +6,19 @@ $trans['copyright'] = "2005 &copy; Lucien del Mar. Artisjus #1158";
 $trans['kijelentkezes'] = "Kijelentkezés";
 $trans['enter'] = "BELÉPÉS";
 $trans['szia'] = "Szia";
-$trans['felhasznalt_ido'] = "Tanulással töltött id?";
+$trans['felhasznalt_ido'] = "Tanulással töltött idõ";
 $trans['szo_gyakorlas'] = "szógyakorlás";
 $trans['mondat_gyakorlas'] = "mondatgyakorlás";
 $trans['utoljara_vett_tananyag'] = "Utolsó vett tananyag";
 $trans['feladatok_kovetkezo_orara'] = "Házifeladat";
 
-$trans['fooldal'] = "F?oldal";
+$trans['fooldal'] = "Fõoldal";
 $trans['igeragozas'] = "Igeragozás";
 $trans['abece'] = "Ábécé";
 $trans['kiejtes'] = "Kiejtés";
 $trans['szorend'] = "Szórend";
 $trans['szorend2'] = "Szórend";
-$trans['nevmasok'] = "Névmasok";
+$trans['nevmasok'] = "Névmások";
 $trans['rendhagyo_igek'] = "Igealakok";
 
 $trans['ment'] = "Ment";
@@ -38,7 +38,7 @@ $trans['nincs_talalat'] = 'Nincs találat';
 $trans['szo_mondatba'] = "OPCIÓ: a szó mondatba foglalása";
 $trans['rogzitem_hazimba'] = "Rögzítem a házimba";
 
-$trans['kovetkezo_ora'] = "Következ? óra";
+$trans['kovetkezo_ora'] = "Következõ óra";
 
 $trans['sajat_mondatok'] = "Mondataim";
 $trans['sajat_mondatok_10'] = "Saját mondatok";
@@ -52,10 +52,10 @@ $trans['tudastar_title'] = "tudástár";
 $trans['tudastar'] = "Nyelvtani példatár";
 $trans['tudastar2'] = "Nyelvtani példatár";
 $trans['tanuloszoba'] = "Tanulószoba";
-$trans['kitolto'] = "kitölt?";
+$trans['kitolto'] = "kitöltõ";
 $trans['sajat_mondat_szo'] = "Összgyakorló";
 
-$trans['funkcio_skype'] = "A funkció csak Skype-os tanulók számára érhet? el!";
+$trans['funkcio_skype'] = "A funkció csak Skype-os tanulók számára érhetõ el!";
 
 $trans['vocabulary'] = "Alapszókincs";
 $trans['mumus'] = "MUMUS";
@@ -65,8 +65,8 @@ $trans['meg_egyszer'] = "Még egyszer";
 $trans['kesz_ugyes_vagy'] = "";
 $trans['masik_csomag'] = "Másik csomag";
 $trans['masodperc'] = "másodperc";
-$trans['vissza_a_fooldalra'] = "Vissza a f?oldalra";
-$trans['required_fields'] = "A mez?k kitöltése kötelez?!";
+$trans['vissza_a_fooldalra'] = "Vissza a fõoldalra";
+$trans['required_fields'] = "A mezõk kitöltése kötelezõ!";
 $trans['magyar'] = "magyar";
 $trans['angol'] = "angol";
 $trans['spanyol'] = "spanyol";
@@ -80,11 +80,11 @@ $trans['word_exists_in_dictionary'] = "Ez a szó már megtalálható a tudástárban, 
 $trans['word_save_error'] = "Rögzítés nem sikerült!";
 $trans['word_delete_error'] = "Törlés nem sikerült!";
 $trans['word_exists_in_other_lang'] = "Ki van töltve valamilyen másik nyelven!";
-$trans['both_field_required'] = "Mindkét mez?t töltsd ki!";
+$trans['both_field_required'] = "Mindkét mezõt töltsd ki!";
 $trans['word_saved'] = "Elmentve!";
 $trans['not_successful'] = "Nem sikerült!";
 
-$trans['betu1'] = "bet?";
+$trans['betu1'] = "betû";
 $trans['mumus2'] = "mumus";
 $trans['remove'] = "kivesz";
 
@@ -103,7 +103,7 @@ $trans['savedwords'] = "Mentett Szavaim";
 $trans['words'] = "szó";
 $trans['basicwords'] = "a leggyakoribb 3000 szó";
 $trans['free'] = "INGYENES";
-$trans['subscription'] = "EL?FIZETÉS";
+$trans['subscription'] = "ELÕFIZETÉS";
 $trans['dailyclicks'] = "napi klikkek száma";
 $trans['useofdictionary'] = "Szótárhasználat";
 $trans['napikviz'] = "Napi Kvíz";
@@ -126,7 +126,7 @@ $trans['subs_Keresztnév'] = "Keresztnév";
 $trans['subs_E-mail'] = "E-mail";
 $trans['subs_Jelszó'] = "Jelszó";
 $trans['subs_Tanulandó nyelv'] = "Tanulandó nyelv";
-$trans['subs_El?fizetési id?'] = "El?fizetési id?";
+$trans['subs_Elõfizetési idõ'] = "Elõfizetési idõ";
 $trans['subs_hónap'] = "hónap";
 $trans['subs_text2'] = "Eredményes tanulást kíván,<br>a lingocasa csapata";
 $trans['subs_Elküld'] = "Elküld";
@@ -145,14 +145,14 @@ $trans["Keresztnev_2"] = "Keresztnév";
 $trans["sendMeQuotes"] = "Kérek napi kvízt";
 $trans["oldPassword"] = "Régi jelszó";
 $trans["newPassword"] = "Új jelszó";
-$trans["confirmNewPassword"] = "Új jelszó meger?sítése";
+$trans["confirmNewPassword"] = "Új jelszó megerõsítése";
 $trans["set"] = "Beállít";
 $trans["changePassword"] = "Jelszó módosítása";
 $trans["deleteMe"] = "Törlöm a regisztrációmat";
 
 $trans["sureWannaDelete"] = "Biztos törölni akarod a regisztrációdat?";
 $trans["origPwBad"] = "Az eredeti jelszó nem jó!";
-$trans["passwordMismatch"] = "Az új jelszó meger?sítése eltér az új jelszótól!";
+$trans["passwordMismatch"] = "Az új jelszó megerõsítése eltér az új jelszótól!";
 $trans["unsuccessfulSettingchange"] = "Beállításaid módosítása nem sikerült, kérlek próbáld újra!";
 $trans["successfulSettingchange"] = "Beállításaid módosítása sikeresen megtörtént!";
 
@@ -181,63 +181,63 @@ $trans["info_szorgalommutato"] = "<b>Szorgalom mutat</b>
 A program szmolja a gyakorl funkcikon belli klikkelseid szmt, azaz hogy mennyit gyakorolsz.
 Tzz ki egy relis, napi clt, s jtszd azt, hogy elred.";
 
-$trans["SajatSzotar_Div"] = "<b>A kikrdez funkci</b>
-. A mentett szavaidat itt tzes csomagokban lthatod.
-. A kikrdez mri az iddet, gy trekedhetsz majd az egyre jobb id elrsre.
-. Gyakorls utn, a teljestmny (a mrt id) megjelenik a tblzatban.
-. A (P) (Print) betre kattintva a sz/mondat csomag nyomtatsi kpe jelenik meg, hogy ha szeretnd kinyomtathasd ket.
-. Kezdshez klikkelj brmely szmra (csomagra)!";
+$trans["SajatSzotar_Div"] = "<b>A kikérdezõ funkció</b>
+. A mentett szavaidat itt tízes csomagokban láthatod.
+. A kikérdezõ méri az idõdet, így törekedhetsz majd az egyre jobb idõ elérésére.
+. Gyakorlás után, a teljesítmény (a mért idõ) megjelenik a táblázatban.
+. A (P) (Print) betûre kattintva a szó/mondat csomag nyomtatási képe jelenik meg, hogy ha szeretnéd kinyomtathasd õket.
+. Kezdéshez klikkelj bármely számra (csomagra)!";
 
-$trans["alapszokincs_Div"] = "<b>A kikrdez funkci</b>
-. Az alapszkincset tzes szcsomagokban lthatod.
-. A kikrdez mri az iddet, gy trekedhetsz majd az egyre jobb id elrsre.
-. Gyakorls utn, a teljestmny (a mrt id) megjelenik a tblzatban.
-. A (P) (Print) betre kattintva a sz/mondat csomag nyomtatsi kpe jelenik meg, hogy ha szeretnd kinyomtathasd ket.
-. Kezdshez klikkelj brmely szmra (csomagra)!";
+$trans["alapszokincs_Div"] = "<b>A kikérdezõ funkció</b>
+. Az alapszókincset tízes szócsoportokban láthatod.
+. A kikérdezõ méri az idõdet, így törekedhetsz majd az egyre jobb idõ elérésére.
+. Gyakorlás után, a teljesítmény (a mért idõ) megjelenik a táblázatban.
+. A (P) (Print) betûre kattintva a szó/mondat csomag nyomtatási képe jelenik meg, hogy ha szeretnéd kinyomtathasd õket.
+. Kezdéshez klikkelj bármely számra (csomagra)!";
 
-$trans["kikerdezo_info"] = "<b>Hogyan hasznld a kikrdezt?</b>
-Ahogy ltod, mr meg is jelent az els kikrdezett sz/mondat. a kvetkezket teheted:
-1. <b>Bet</b>: Ezzel a gombbal a sz betit jelentheted meg egyenknt segtsgnek.
-2. <b>Fehr httr</b>: A megolds megjelentshez klikkelj a fehr felleten brhova. Javasoljuk, hogy mondd ki hangosan a megoldst, ez is segti a memorizlst!
-3. <b>Nem tudom</b>: Ha nem tudtad vagy nem voltl biztos benne, a megolds megjelentse <u>utn</u> nyomd meg ezt a gombot. Ekkor a rendszer visszadobja a kikrdezendk kz s automatikusan megjelenti a kvetkezt.
-4. Ha tudtad a szt, akkor csak klikkelj a fehr httrre s megkapod a kvetkezt.
-5. Javasoljuk, hogy addig Nem tudomozd a krdezett szavakat/mondatokat, amg egyszer vgig nem tudsz menni rajtuk hibtlanul.
-6. Ha begyakoroltl egy csomagot, vlaszthatod a <b>Msik csomag</b> vagy a <b>Mg egyszer</b> lehetsget.
-- A fenti szrke szm a fennmarad szavak/mondatok szmt jelzi.
-- A fels barna cskon esetlegesen megjelen nyilakkal msik kategrira ugorhatsz.
-- A <b>Kivesz</b> gombbal trlheted a szt a Sajt Sztradbl.
-lvezetes gyakorlst!";
+$trans["kikerdezo_info"] = "<b>Hogyan használd a kikérdezõt?</b>
+Ahogy látod, már meg is jelent az elsõ kikérdezett szó/mondat. a következõket teheted:
+1. <b>Betû</b>: Ezzel a gombbal a szó betûit jelenítheted meg egyenként segítségnek.
+2. <b>Fehér háttér</b>: A megoldás megjelenítéséhez klikkelj a fehér felületen bárhova. Javasoljuk, hogy mondd ki hangosan a megoldást, ez is segíti a memorizálást!
+3. <b>Nem tudom</b>: Ha nem tudtad vagy nem voltál biztos benne, a megoldás megjelenítése <u>után</u> nyomd meg ezt a gombot. Ekkor a rendszer visszadobja a kikérdezendõk közé és automatikusan megjeleníti a következõt.
+4. Ha tudtad a szót, akkor csak klikkelj a fehér háttérre és megkapod a következõt.
+5. Javasoljuk, hogy addig Nem tudomozd a kérdezett szavakat/mondatokat, amíg egyszer végig nem tudsz menni rajtuk hibátlanul.
+6. Ha begyakoroltál egy csomagot, választhatod a <b>Másik csomag</b> vagy a <b>Még egyszer</b> lehetõséget.
+- A fenti szürke szám a fennmaradó szavak/mondatok számát jelzi.
+- A felsõ barna sávon esetlegesen megjelenõ nyilakkal másik kategóriára ugorhatsz.
+- A <b>Kivesz</b> gombbal törölheted a szót a Saját Szótáradból.
+Élvezetes gyakorlást!";
 
-$trans["registration_mail_subject"] = "dvzl a lingocasa!";
+$trans["registration_mail_subject"] = "Üdvözl a lingocasa!";
 
 $trans["csomag"] = "csomag";
-$trans["masodperc"] = "msodperc";
+$trans["masodperc"] = "másodperc";
 
-$trans["reg_succes_supscribepage"] = "Regisztrcid sikerlt, krlek ellenrizd a berkez leveleidet!";
-$trans["reg_error_underSub_supscribepage"] = "Feliratkozs kzben hiba trtnt, krlek prblkozz jra!";
-$trans["missing_field"] = "Nincs kitltve az sszes ktelez mez!";
-$trans["not_valid_email"] = "Az email cm nem rvnyes!";
+$trans["reg_succes_supscribepage"] = "Regisztrációd sikerült, kérlek ellenõrizd a beérkezett leveleidet!";
+$trans["reg_error_underSub_supscribepage"] = "Feliratkozás közben hiba történt, kérlek próbálkozz újra!";
+$trans["missing_field"] = "Nincs kitöltve az összes kötelezõ mezõ!";
+$trans["not_valid_email"] = "Az email cím nem érvényes!";
 
-$trans["intro_1"] = "Szia! n egy tanrok s tanulk egyttmkdsbl megszletett izgalmas nyelvtanul eszkz vagyok.
-<br>me a funkciim.";
+$trans["intro_1"] = "Szia! Én egy tanárok és tanulók együttmûködésbõl megszületett izgalmas nyelvtanuló eszköz vagyok.
+<br>Íme a funkcióim.";
 $trans["service_alap"] = "ALAP";
 $trans["service_free"] = "ingyenes";
-$trans["service_premium"] = "PRMIUM";
-$trans["service_fee"] = "1.000Ft/h";
-$trans["functions_some"] = "nhny funkci";
-$trans["functions_all"] = "minden funkci";
-$trans["quiz"] = "NAPI KVZ";
-$trans["searchbox"] = "KERES";
+$trans["service_premium"] = "PRÉMIUM";
+$trans["service_fee"] = "1.000Ft/hó";
+$trans["functions_some"] = "néhány funkció";
+$trans["functions_all"] = "minden funkció";
+$trans["quiz"] = "NAPI KVÍZ";
+$trans["searchbox"] = "KERESÕ";
 $trans["showmewhatitis"] = "MUTASD, MIT TUD<br>A LINGOCASA";
-$trans["iwilltryit"] = "KIPRBLOM";
+$trans["iwilltryit"] = "KIPRÓBÁLOM";
 
 $trans["Spanyol"] = "SPANYOL";
-$trans["Angol kezdo"] = "ANGOL KEZD";
+$trans["Angol kezdo"] = "ANGOL KEZDÕ";
 $trans["Angol brit"] = "ANGOL BRIT";
-$trans["Angol halado"] = "ANGOL HALAD";
+$trans["Angol halado"] = "ANGOL HALADÓ";
 $trans["Angol BP"] = "ANGOL BP";
 $trans["Angol ECL"] = "ANGOL ECL";
-$trans["legujabb_szavak"] = "Legjabb szavak";
+$trans["legujabb_szavak"] = "Legújabb szavak";
 
 $trans["tandijak"] = "Tandíj";
 $trans["tanulok"] = "Tanulók";
