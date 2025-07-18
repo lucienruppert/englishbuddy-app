@@ -119,8 +119,8 @@ $trans['intelligensgyakorlo_android'] = "Intelligens gyakorló";
 
 $trans['subscribe'] = "REGISZTRÁCIÓ";
 
-$trans['subs_dvzljk!'] = "Szia!";
-$trans['subs_Krjk, tltse ki adatait!'] = "Itt az ingyenes funkcik hasznlathoz<br>iratkozhatsz fel.";
+$trans['subs_Üdvözöljük!'] = "Szia!";
+$trans['subs_Kérjük, töltse ki adatait!'] = "Itt az ingyenes funkciók használatához<br>iratkozhatsz fel.";
 $trans['subs_Vezetéknév'] = "Vezetéknév";
 $trans['subs_Keresztnév'] = "Keresztnév";
 $trans['subs_E-mail'] = "E-mail";
@@ -136,25 +136,25 @@ $trans['magyar1'] = "magyar";
 $trans['angol1'] = "angol";
 $trans['spanyol1'] = "spanyol";
 
-$trans["subs_SendMail"] = "Krek napi kvzt";
+$trans["subs_SendMail"] = "Kérek napi kvízt";
 
-$trans["beallitasok"] = "Belltsok";
+$trans["beallitasok"] = "Beállítások";
 
-$trans["usersettings_header_3"] = "Belltsok";
-$trans["Keresztnev_2"] = "Keresztnv";
-$trans["sendMeQuotes"] = "Krek napi kvzt";
-$trans["oldPassword"] = "Rgi jelsz";
-$trans["newPassword"] = "j jelsz";
-$trans["confirmNewPassword"] = "j jelsz megerstse";
-$trans["set"] = "Bellt";
-$trans["changePassword"] = "Jelsz mdostsa";
-$trans["deleteMe"] = "Trlm a regisztrcimat";
+$trans["usersettings_header_3"] = "Beállítások";
+$trans["Keresztnev_2"] = "Keresztnév";
+$trans["sendMeQuotes"] = "Kérek napi kvízt";
+$trans["oldPassword"] = "Régi jelszó";
+$trans["newPassword"] = "Új jelszó";
+$trans["confirmNewPassword"] = "Új jelszó meger?sítése";
+$trans["set"] = "Beállít";
+$trans["changePassword"] = "Jelszó módosítása";
+$trans["deleteMe"] = "Törlöm a regisztrációmat";
 
-$trans["sureWannaDelete"] = "Biztos trlni akarod a regisztrcidat?";
-$trans["origPwBad"] = "Az eredeti jelsz nem j!";
-$trans["passwordMismatch"] = "Az j jelsz megerostse eltr az j jelsztl!";
-$trans["unsuccessfulSettingchange"] = "Belltsaid mdostsa nem sikerlt, krlek prbld jra!";
-$trans["successfulSettingchange"] = "Belltsaid mdostsa sikeresen megtrtnt!";
+$trans["sureWannaDelete"] = "Biztos törölni akarod a regisztrációdat?";
+$trans["origPwBad"] = "Az eredeti jelszó nem jó!";
+$trans["passwordMismatch"] = "Az új jelszó meger?sítése eltér az új jelszótól!";
+$trans["unsuccessfulSettingchange"] = "Beállításaid módosítása nem sikerült, kérlek próbáld újra!";
+$trans["successfulSettingchange"] = "Beállításaid módosítása sikeresen megtörtént!";
 
 $trans["unsuccessfulUserdelete"] = "Hozzfrsed trlse nem sikerlt, krlek prbld jra!";
 $trans["successfulUserdelete"] = "Hozzfrsed trlse sikeresen megtrtnt!";
