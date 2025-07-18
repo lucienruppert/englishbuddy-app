@@ -63,7 +63,7 @@ $link = "index.php?audioszoba=" . $lang;
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 		row-gap: 32px;
-		column-gap: 16px;
+		column-gap: 0px;
 		max-width: 600px;
 		margin: 30px auto 0 auto;
 	}
