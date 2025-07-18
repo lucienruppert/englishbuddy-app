@@ -351,7 +351,13 @@ if ($userHasAccess) { ?>
             for ($i = 0; $i < count($words); $i++) {
                 $isGood = false;
                 foreach ($_levelList as $lang => $levelArray) {
-                    if ($levelArray[$words[$i]["level_{$lang}"]][1] == 2 || $levelArray[$words[$i]["level_{$lang}"]][1] == 0) {
+                    $levelKey = $words[$i]["level_{$lang}"];
+                    if (
+                        isset($levelArray[$levelKey]) &&
+                        is_array($levelArray[$levelKey]) &&
+                        isset($levelArray[$levelKey][1]) &&
+                        ($levelArray[$levelKey][1] == 2 || $levelArray[$levelKey][1] == 0)
+                    ) {
                         $isGood = true;
                         break;
                     }
