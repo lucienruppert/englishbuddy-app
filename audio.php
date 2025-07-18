@@ -42,5 +42,15 @@ $link = "index.php?audioszoba=" . $lang;
 				<a href="https://drive.google.com/file/d/1ROm8ccULkrMBJptD7bgPwgzfr1syTF7P/view?usp=sharing" target="_blank" style="font-size:16px;color:<?php print $globalcolor; ?>;text-decoration:underline;">K04</a>
 			</td>
 		</tr>
+		<tr>
+			<td style="text-align:center;">
+				<a href="https://drive.google.com/file/d/1WuozLWE6yRbEUXLWBEepo4aY28EW6rtD/view?usp=sharing" target="_blank" style="font-size:16px;color:<?php print $globalcolor; ?>;text-decoration:underline;">K05</a>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">
+				<a href="https://drive.google.com/file/d/1Of-2pn-n5bsz75XGPd1vpor7qG58gDvx/view?usp=sharing" target="_blank" style="font-size:16px;color:<?php print $globalcolor; ?>;text-decoration:underline;">K06</a>
+			</td>
+		</tr>
 	<?php } ?>
 </table>
