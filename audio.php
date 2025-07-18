@@ -33,6 +33,7 @@ $link = "index.php?audioszoba=" . $lang;
 		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1VS1I5rHooC-m692SmJLWRefvuIy7nXtW/view?usp=sharing','_blank');return false;">K07</button>
 		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1odlZixvQVZar9CSnM3Dmw2J9rjtuZ2Zf/view?usp=sharing','_blank');return false;">K08</button>
 		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1JdIpJi1c-D9-mIeTOkDmjq3keOSXgxQ-/view?usp=sharing','_blank');return false;">K09</button>
+		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/16HKNtpA60JBB_LFbUAm8-34ThlX8mWHV/view?usp=sharing','_blank');return false;">K10</button>
 	</div>
 <?php } ?>
 
