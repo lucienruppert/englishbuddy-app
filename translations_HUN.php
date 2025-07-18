@@ -3,70 +3,70 @@
 global $trans;
 
 $trans['copyright'] = "2005 &copy; Lucien del Mar. Artisjus #1158";
-$trans['kijelentkezes'] = "KijelentkezÃ©s";
-$trans['enter'] = "BELï¿½Pï¿½S";
+$trans['kijelentkezes'] = "Kijelentkezés";
+$trans['enter'] = "BELPS";
 $trans['szia'] = "Szia";
-$trans['felhasznalt_ido'] = "Tanulï¿½ssal tï¿½ltï¿½tt idï¿½";
-$trans['szo_gyakorlas'] = "szï¿½gyakorlï¿½s";
-$trans['mondat_gyakorlas'] = "mondatgyakorlï¿½s";
-$trans['utoljara_vett_tananyag'] = "Utolsï¿½ vett tananyag";
-$trans['feladatok_kovetkezo_orara'] = "Hï¿½zi feladat";
+$trans['felhasznalt_ido'] = "Tanulssal tlttt id";
+$trans['szo_gyakorlas'] = "szgyakorls";
+$trans['mondat_gyakorlas'] = "mondatgyakorls";
+$trans['utoljara_vett_tananyag'] = "Utols vett tananyag";
+$trans['feladatok_kovetkezo_orara'] = "Hzi feladat";
 
-$trans['fooldal'] = "Fï¿½oldal";
-$trans['igeragozas'] = "Igeragozï¿½s";
-$trans['abece'] = "ï¿½bï¿½cï¿½";
-$trans['kiejtes'] = "Kiejtï¿½s";
-$trans['szorend'] = "Szï¿½rend";
-$trans['szorend2'] = "Szï¿½rend";
-$trans['nevmasok'] = "Nï¿½vmï¿½sok";
+$trans['fooldal'] = "Foldal";
+$trans['igeragozas'] = "Igeragozs";
+$trans['abece'] = "bc";
+$trans['kiejtes'] = "Kiejts";
+$trans['szorend'] = "Szrend";
+$trans['szorend2'] = "Szrend";
+$trans['nevmasok'] = "Nvmsok";
 $trans['rendhagyo_igek'] = "Igealakok";
 
 $trans['ment'] = "Ment";
-$trans['ragozas'] = "Ragozï¿½s";
-$trans['rogzit'] = "Rï¿½gzï¿½t";
-$trans['frissit'] = "Frissï¿½t";
+$trans['ragozas'] = "Ragozs";
+$trans['rogzit'] = "Rgzt";
+$trans['frissit'] = "Frisst";
 $trans['sorrend'] = "Sorrend";
 
 $trans['hun'] = 'magyar';
 $trans['angol'] = 'angol';
-$trans['nemet'] = 'nï¿½met';
+$trans['nemet'] = 'nmet';
 $trans['spanyol'] = 'spanyol';
 $trans['arab'] = 'arab';
 
-$trans['nincs_talalat'] = 'Nincs talï¿½lat';
+$trans['nincs_talalat'] = 'Nincs tallat';
 
-$trans['szo_mondatba'] = "OPCIï¿½: a szï¿½ mondatba foglalï¿½sa";
-$trans['rogzitem_hazimba'] = "Rï¿½gzï¿½tem a hï¿½zimba";
+$trans['szo_mondatba'] = "OPCI: a sz mondatba foglalsa";
+$trans['rogzitem_hazimba'] = "Rgztem a hzimba";
 
-$trans['kovetkezo_ora'] = "Kï¿½vetkezï¿½ ï¿½ra";
+$trans['kovetkezo_ora'] = "Kvetkez ra";
 
 $trans['sajat_mondatok'] = "Mondataim";
-$trans['sajat_mondatok_10'] = "SajÃ¡t mondatok";
-$trans['sajat_mondatok_all'] = "(ï¿½SSZES)";
+$trans['sajat_mondatok_10'] = "Saját mondatok";
+$trans['sajat_mondatok_all'] = "(SSZES)";
 
-$trans['feltoltes'] = "szÃ³tÃ¡rfeltÃ¶ltÃ©s";
-$trans['kategorizalas'] = "szÃ³listÃ¡k";
-$trans['peldamondatok'] = "(ï¿½SSZES)";
-$trans['peldamondatok_all'] = "Pï¿½ldamondatok (ï¿½sszes)";
-$trans['tudastar_title'] = "tudÃ¡stÃ¡r";
-$trans['tudastar'] = "Nyelvtani pÃ©ldatÃ¡r";
-$trans['tudastar2'] = "Nyelvtani pÃ©ldatÃ¡r";
-$trans['tanuloszoba'] = "TanulÃ³szoba";
-$trans['kitolto'] = "kitÃ¶ltÅ‘";
-$trans['sajat_mondat_szo'] = "Ã–sszgyakorlÃ³";
+$trans['feltoltes'] = "szótárfeltöltés";
+$trans['kategorizalas'] = "szólisták";
+$trans['peldamondatok'] = "(SSZES)";
+$trans['peldamondatok_all'] = "Pldamondatok (sszes)";
+$trans['tudastar_title'] = "tudástár";
+$trans['tudastar'] = "Nyelvtani példatár";
+$trans['tudastar2'] = "Nyelvtani példatár";
+$trans['tanuloszoba'] = "Tanulószoba";
+$trans['kitolto'] = "kitölt?";
+$trans['sajat_mondat_szo'] = "Összgyakorló";
 
-$trans['funkcio_skype'] = "A funkciï¿½ csak Skype-os tanulï¿½k szï¿½mï¿½ra ï¿½rhetï¿½ el!";
+$trans['funkcio_skype'] = "A funkci csak Skype-os tanulk szmra rhet el!";
 
-$trans['vocabulary'] = "Alapszï¿½kincs";
+$trans['vocabulary'] = "Alapszkincs";
 $trans['mumus'] = "MUMUS";
-$trans['sajat_szavak_all'] = "ï¿½SSZES";
+$trans['sajat_szavak_all'] = "SSZES";
 $trans['nem_tudtam'] = "nem tudtam";
-$trans['meg_egyszer'] = "Mï¿½g egyszer";
+$trans['meg_egyszer'] = "Mg egyszer";
 $trans['kesz_ugyes_vagy'] = "";
-$trans['masik_csomag'] = "Mï¿½sik csomag";
-$trans['masodperc'] = "mï¿½sodperc";
-$trans['vissza_a_fooldalra'] = "Vissza a fï¿½oldalra";
-$trans['required_fields'] = "A mezï¿½k kitï¿½ltï¿½se kï¿½telezï¿½!";
+$trans['masik_csomag'] = "Msik csomag";
+$trans['masodperc'] = "msodperc";
+$trans['vissza_a_fooldalra'] = "Vissza a foldalra";
+$trans['required_fields'] = "A mezk kitltse ktelez!";
 $trans['magyar'] = "magyar";
 $trans['angol'] = "angol";
 $trans['spanyol'] = "spanyol";
@@ -74,174 +74,174 @@ $trans['nemet'] = "nemet";
 $trans['francia'] = "francia";
 $trans['arab'] = "arab";
 $trans['hun'] = "magyar";
-$trans['cel_komment'] = "Cï¿½l komment";
-$trans['forras_komment'] = "Forrï¿½s komment";
-$trans['word_exists_in_dictionary'] = "Ez a szï¿½ mï¿½r megtalï¿½lhatï¿½ a tudï¿½stï¿½rban, onnan kimentheted a szï¿½tï¿½radba!";
-$trans['word_save_error'] = "Rï¿½gzï¿½tï¿½s nem sikerï¿½lt!";
-$trans['word_delete_error'] = "Tï¿½rlï¿½s nem sikerï¿½lt!";
-$trans['word_exists_in_other_lang'] = "Ki van tï¿½ltve valamilyen mï¿½sik nyelven!";
-$trans['both_field_required'] = "Mindkï¿½t mezï¿½t tï¿½ltsd ki!";
+$trans['cel_komment'] = "Cl komment";
+$trans['forras_komment'] = "Forrs komment";
+$trans['word_exists_in_dictionary'] = "Ez a sz mr megtallhat a tudstrban, onnan kimentheted a sztradba!";
+$trans['word_save_error'] = "Rgzts nem sikerlt!";
+$trans['word_delete_error'] = "Trls nem sikerlt!";
+$trans['word_exists_in_other_lang'] = "Ki van tltve valamilyen msik nyelven!";
+$trans['both_field_required'] = "Mindkt mezt tltsd ki!";
 $trans['word_saved'] = "Elmentve!";
-$trans['not_successful'] = "Nem sikerï¿½lt!";
+$trans['not_successful'] = "Nem sikerlt!";
 
-$trans['betu1'] = "betï¿½";
+$trans['betu1'] = "bet";
 $trans['mumus2'] = "mumus";
 $trans['remove'] = "kivesz";
 
 $trans['ajaxDivSave'] = "Ment";
-$trans['ajaxDivSaveLoginMessage'] = "Be kell lï¿½pned a szavak mentï¿½sï¿½hez.";
-$trans['audioszoba'] = "AudiÃ³szoba";
-$trans['increasevocabulary'] = "SajÃ¡t szÃ³tÃ¡r";
-$trans['increasevocabulary2'] = "SajÃ¡t szÃ³tÃ¡r";
-$trans['increasevocabulary_android'] = "SajÃ¡t szÃ³tÃ¡r";
-$trans['intelligensgyakorlo'] = "Intelligens gyakorlÃ³";
-$trans['intelligensgyakorlo2'] = "Intelligens gyakorlÃ³";
+$trans['ajaxDivSaveLoginMessage'] = "Be kell lpned a szavak mentshez.";
+$trans['audioszoba'] = "Audiószoba";
+$trans['increasevocabulary'] = "Saját szótár";
+$trans['increasevocabulary2'] = "Saját szótár";
+$trans['increasevocabulary_android'] = "Saját szótár";
+$trans['intelligensgyakorlo'] = "Intelligens gyakorló";
+$trans['intelligensgyakorlo2'] = "Intelligens gyakorló";
 
-$trans['myperformance'] = "Szorgalom mutatï¿½";
-$trans['szotar'] = "Szï¿½tï¿½r";
+$trans['myperformance'] = "Szorgalom mutat";
+$trans['szotar'] = "Sztr";
 $trans['savedwords'] = "Mentett Szavaim";
-$trans['words'] = "szï¿½";
-$trans['basicwords'] = "a leggyakoribb 3000 szï¿½";
+$trans['words'] = "sz";
+$trans['basicwords'] = "a leggyakoribb 3000 sz";
 $trans['free'] = "INGYENES";
-$trans['subscription'] = "ELï¿½FIZETï¿½S";
-$trans['dailyclicks'] = "napi klikkek szï¿½ma";
-$trans['useofdictionary'] = "Szï¿½tï¿½rhasznï¿½lat";
-$trans['napikviz'] = "Napi Kvï¿½z";
-$trans['napikviz_br'] = "Napi<br>Kvï¿½z";
-$trans['basicvocabulary'] = "Alap szÃ³kincs";
-$trans['basicvocabulary2'] = "Alap szÃ³kincs";
+$trans['subscription'] = "ELFIZETS";
+$trans['dailyclicks'] = "napi klikkek szma";
+$trans['useofdictionary'] = "Sztrhasznlat";
+$trans['napikviz'] = "Napi Kvz";
+$trans['napikviz_br'] = "Napi<br>Kvz";
+$trans['basicvocabulary'] = "Alap szókincs";
+$trans['basicvocabulary2'] = "Alap szókincs";
 $trans['kikerdezo'] = "lingocasa";
-$trans['onlinetutor'] = "ï¿½LETSZAGï¿½ NYELVGYAKORLï¿½S";
+$trans['onlinetutor'] = "LETSZAG NYELVGYAKORLS";
 
-$trans['basicvocabulary_android'] = "Alap szÃ³kincs";
-$trans['tudastar_android'] = "Nyelvtani pÃ©ldatÃ¡r";
-$trans['intelligensgyakorlo_android'] = "Intelligens gyakorlÃ³";
+$trans['basicvocabulary_android'] = "Alap szókincs";
+$trans['tudastar_android'] = "Nyelvtani példatár";
+$trans['intelligensgyakorlo_android'] = "Intelligens gyakorló";
 
-$trans['subscribe'] = "REGISZTRï¿½CIï¿½";
+$trans['subscribe'] = "REGISZTRCI";
 
-$trans['subs_ï¿½dvï¿½zï¿½ljï¿½k!'] = "Szia!";
-$trans['subs_Kï¿½rjï¿½k, tï¿½ltse ki adatait!'] = "Itt az ingyenes funkciï¿½k hasznï¿½latï¿½hoz<br>iratkozhatsz fel.";
-$trans['subs_Vezetï¿½knï¿½v'] = "Vezetï¿½knï¿½v";
-$trans['subs_Keresztnï¿½v'] = "Keresztnï¿½v";
+$trans['subs_dvzljk!'] = "Szia!";
+$trans['subs_Krjk, tltse ki adatait!'] = "Itt az ingyenes funkcik hasznlathoz<br>iratkozhatsz fel.";
+$trans['subs_Vezetknv'] = "Vezetknv";
+$trans['subs_Keresztnv'] = "Keresztnv";
 $trans['subs_E-mail'] = "E-mail";
-$trans['subs_Jelszo'] = "Jelszï¿½";
-$trans['subs_Tanulandï¿½ nyelv'] = "Tanulandï¿½ nyelv";
-$trans['subs_Elï¿½fizetï¿½si idï¿½'] = "Elï¿½fizetï¿½si idï¿½";
-$trans['subs_hï¿½nap'] = "hï¿½nap";
-$trans['subs_text2'] = "Eredmï¿½nyes tanulï¿½st kï¿½vï¿½n,<br>a lingocasa csapata";
-$trans['subs_Elkï¿½ld'] = "Elkï¿½ld";
+$trans['subs_Jelszo'] = "Jelsz";
+$trans['subs_Tanuland nyelv'] = "Tanuland nyelv";
+$trans['subs_Elfizetsi id'] = "Elfizetsi id";
+$trans['subs_hnap'] = "hnap";
+$trans['subs_text2'] = "Eredmnyes tanulst kvn,<br>a lingocasa csapata";
+$trans['subs_Elkld'] = "Elkld";
 
-$trans['search'] = "Keresï¿½s";
+$trans['search'] = "Keress";
 $trans['magyar1'] = "magyar";
 $trans['angol1'] = "angol";
 $trans['spanyol1'] = "spanyol";
 
-$trans["subs_SendMail"] = "Kï¿½rek napi kvï¿½zt";
+$trans["subs_SendMail"] = "Krek napi kvzt";
 
-$trans["beallitasok"] = "Beï¿½llï¿½tï¿½sok";
+$trans["beallitasok"] = "Belltsok";
 
-$trans["usersettings_header_3"] = "Beï¿½llï¿½tï¿½sok";
-$trans["Keresztnev_2"] = "Keresztnï¿½v";
-$trans["sendMeQuotes"] = "Kï¿½rek napi kvï¿½zt";
-$trans["oldPassword"] = "Rï¿½gi jelszï¿½";
-$trans["newPassword"] = "ï¿½j jelszï¿½";
-$trans["confirmNewPassword"] = "ï¿½j jelszï¿½ megerï¿½sï¿½tï¿½se";
-$trans["set"] = "Beï¿½llï¿½t";
-$trans["changePassword"] = "Jelszï¿½ mï¿½dosï¿½tï¿½sa";
-$trans["deleteMe"] = "Tï¿½rlï¿½m a regisztrï¿½ciï¿½mat";
+$trans["usersettings_header_3"] = "Belltsok";
+$trans["Keresztnev_2"] = "Keresztnv";
+$trans["sendMeQuotes"] = "Krek napi kvzt";
+$trans["oldPassword"] = "Rgi jelsz";
+$trans["newPassword"] = "j jelsz";
+$trans["confirmNewPassword"] = "j jelsz megerstse";
+$trans["set"] = "Bellt";
+$trans["changePassword"] = "Jelsz mdostsa";
+$trans["deleteMe"] = "Trlm a regisztrcimat";
 
-$trans["sureWannaDelete"] = "Biztos tï¿½rï¿½lni akarod a regisztrï¿½ciï¿½dat?";
-$trans["origPwBad"] = "Az eredeti jelszï¿½ nem jï¿½!";
-$trans["passwordMismatch"] = "Az ï¿½j jelszï¿½ megerosï¿½tï¿½se eltï¿½r az ï¿½j jelszï¿½tï¿½l!";
-$trans["unsuccessfulSettingchange"] = "Beï¿½llï¿½tï¿½said mï¿½dosï¿½tï¿½sa nem sikerï¿½lt, kï¿½rlek prï¿½bï¿½ld ï¿½jra!";
-$trans["successfulSettingchange"] = "Beï¿½llï¿½tï¿½said mï¿½dosï¿½tï¿½sa sikeresen megtï¿½rtï¿½nt!";
+$trans["sureWannaDelete"] = "Biztos trlni akarod a regisztrcidat?";
+$trans["origPwBad"] = "Az eredeti jelsz nem j!";
+$trans["passwordMismatch"] = "Az j jelsz megerostse eltr az j jelsztl!";
+$trans["unsuccessfulSettingchange"] = "Belltsaid mdostsa nem sikerlt, krlek prbld jra!";
+$trans["successfulSettingchange"] = "Belltsaid mdostsa sikeresen megtrtnt!";
 
-$trans["unsuccessfulUserdelete"] = "Hozzï¿½fï¿½rï¿½sed tï¿½rlï¿½se nem sikerï¿½lt, kï¿½rlek prï¿½bï¿½ld ï¿½jra!";
-$trans["successfulUserdelete"] = "Hozzï¿½fï¿½rï¿½sed tï¿½rlï¿½se sikeresen megtï¿½rtï¿½nt!";
+$trans["unsuccessfulUserdelete"] = "Hozzfrsed trlse nem sikerlt, krlek prbld jra!";
+$trans["successfulUserdelete"] = "Hozzfrsed trlse sikeresen megtrtnt!";
 
-$trans["unsuccessfulPwchange"] = "Jelszavad megvï¿½ltoztatï¿½sa nem sikerï¿½lt, kï¿½rlek prï¿½bï¿½ld ï¿½jra!";
-$trans["passwordChanged"] = "Jelszavad megvï¿½ltozott!";
+$trans["unsuccessfulPwchange"] = "Jelszavad megvltoztatsa nem sikerlt, krlek prbld jra!";
+$trans["passwordChanged"] = "Jelszavad megvltozott!";
 
-$trans["info_ajax"] = "<b>Keresï¿½s a szï¿½- ï¿½s mondattï¿½rban</b>
-. Tï¿½bb, mint 30.000 szï¿½, kifejezï¿½s ï¿½s mondat kï¿½zï¿½tt kereshetsz kï¿½t nyelven.
-. Miutï¿½n beï¿½rod a keresett szï¿½t, vï¿½rj egy picit ï¿½s a talï¿½latok automatikusan megjelennek: felï¿½l a szï¿½ jelentï¿½sei, alatta pedig azok a mondatok, amelyekben a szï¿½ szerepel.
-. A megjelenï¿½ Ment gombbal az ï¿½sszes jelentï¿½st elmentheted a szï¿½tï¿½radba, a szavak mellettivel pedig az egyes szavakat. A mentï¿½shez be kell lï¿½pned.
-. Bezï¿½rï¿½shoz klikkelj bï¿½rhol a talï¿½lati listï¿½ra.";
+$trans["info_ajax"] = "<b>Keress a sz- s mondattrban</b>
+. Tbb, mint 30.000 sz, kifejezs s mondat kztt kereshetsz kt nyelven.
+. Miutn berod a keresett szt, vrj egy picit s a tallatok automatikusan megjelennek: fell a sz jelentsei, alatta pedig azok a mondatok, amelyekben a sz szerepel.
+. A megjelen Ment gombbal az sszes jelentst elmentheted a sztradba, a szavak mellettivel pedig az egyes szavakat. A mentshez be kell lpned.
+. Bezrshoz klikkelj brhol a tallati listra.";
 
-$trans["info_sajatszotar"] = "<b>Sajï¿½t szï¿½tï¿½r</b>
-A rendszer az elmentett szavaidat tï¿½zes csomagokban tï¿½rolja, egyenkï¿½nt kikï¿½rdezi ï¿½ket ï¿½s mï¿½ri az idï¿½det, ï¿½gy motivï¿½lva a gyakorlï¿½sra.";
+$trans["info_sajatszotar"] = "<b>Sajt sztr</b>
+A rendszer az elmentett szavaidat tzes csomagokban trolja, egyenknt kikrdezi ket s mri az iddet, gy motivlva a gyakorlsra.";
 
-$trans["info_alapszokincs"] = "<b>Alapszï¿½kincs</b>
-2500-3000 szï¿½val a beszï¿½lt nyelv 90%-ï¿½t megï¿½rtheted. Itt ezeket a szavakat gyakorolhatod be tï¿½zes csoportokba osztva.";
+$trans["info_alapszokincs"] = "<b>Alapszkincs</b>
+2500-3000 szval a beszlt nyelv 90%-t megrtheted. Itt ezeket a szavakat gyakorolhatod be tzes csoportokba osztva.";
 
-$trans["info_nyelvtanipeldatar"] = "<b>Nyelvtani pï¿½ldatï¿½r</b>
-Tï¿½bb ezer pï¿½ldamondatunkkal minden fontos nyelvtani jelensï¿½get kï¿½lï¿½n ï¿½s cï¿½lzottan gyakorolhatsz, hatï¿½konyan erï¿½sï¿½tve ï¿½gy a gyengï¿½bb pontjaidat.";
+$trans["info_nyelvtanipeldatar"] = "<b>Nyelvtani pldatr</b>
+Tbb ezer pldamondatunkkal minden fontos nyelvtani jelensget kln s clzottan gyakorolhatsz, hatkonyan erstve gy a gyengbb pontjaidat.";
 
-$trans["info_intelligensgyakorlo"] = "<b>Intelligens gyakorlï¿½</b>
-. Itt mï¿½r nem csak konkrï¿½t nyelvtani kategï¿½riï¿½kat, hanem bï¿½rmilyen, szï¿½modra nehï¿½zsï¿½get okozï¿½ dolgot gyakorolhatsz: <u>szavakra</u>, <u>mondatok rï¿½szeire</u> tudsz rï¿½keresni mindkï¿½t nyelven. Pï¿½ldï¿½ul: van, want to, been, milyen, hogyan stb.
-. Ha beï¿½rtad a keresendï¿½ szï¿½t/szavakat, nyomj egy entert.";
+$trans["info_intelligensgyakorlo"] = "<b>Intelligens gyakorl</b>
+. Itt mr nem csak konkrt nyelvtani kategrikat, hanem brmilyen, szmodra nehzsget okoz dolgot gyakorolhatsz: <u>szavakra</u>, <u>mondatok rszeire</u> tudsz rkeresni mindkt nyelven. Pldul: van, want to, been, milyen, hogyan stb.
+. Ha bertad a keresend szt/szavakat, nyomj egy entert.";
 
-$trans["info_szorgalommutato"] = "<b>Szorgalom mutatï¿½</b>
-A program szï¿½molja a gyakorlï¿½ funkciï¿½kon belï¿½li klikkelï¿½seid szï¿½mï¿½t, azaz hogy mennyit gyakorolsz.
-Tï¿½zz ki egy reï¿½lis, napi cï¿½lt, ï¿½s jï¿½tszd azt, hogy elï¿½red.";
+$trans["info_szorgalommutato"] = "<b>Szorgalom mutat</b>
+A program szmolja a gyakorl funkcikon belli klikkelseid szmt, azaz hogy mennyit gyakorolsz.
+Tzz ki egy relis, napi clt, s jtszd azt, hogy elred.";
 
-$trans["SajatSzotar_Div"] = "<b>A kikï¿½rdezï¿½ funkciï¿½</b>
-. A mentett szavaidat itt tï¿½zes csomagokban lï¿½thatod.
-. A kikï¿½rdezï¿½ mï¿½ri az idï¿½det, ï¿½gy tï¿½rekedhetsz majd az egyre jobb idï¿½ elï¿½rï¿½sï¿½re.
-. Gyakorlï¿½s utï¿½n, a teljesï¿½tmï¿½ny (a mï¿½rt idï¿½) megjelenik a tï¿½blï¿½zatban.
-. A (P) (Print) betï¿½re kattintva a szï¿½/mondat csomag nyomtatï¿½si kï¿½pe jelenik meg, hogy ha szeretnï¿½d kinyomtathasd ï¿½ket.
-. Kezdï¿½shez klikkelj bï¿½rmely szï¿½mra (csomagra)!";
+$trans["SajatSzotar_Div"] = "<b>A kikrdez funkci</b>
+. A mentett szavaidat itt tzes csomagokban lthatod.
+. A kikrdez mri az iddet, gy trekedhetsz majd az egyre jobb id elrsre.
+. Gyakorls utn, a teljestmny (a mrt id) megjelenik a tblzatban.
+. A (P) (Print) betre kattintva a sz/mondat csomag nyomtatsi kpe jelenik meg, hogy ha szeretnd kinyomtathasd ket.
+. Kezdshez klikkelj brmely szmra (csomagra)!";
 
-$trans["alapszokincs_Div"] = "<b>A kikï¿½rdezï¿½ funkciï¿½</b>
-. Az alapszï¿½kincset tï¿½zes szï¿½csomagokban lï¿½thatod.
-. A kikï¿½rdezï¿½ mï¿½ri az idï¿½det, ï¿½gy tï¿½rekedhetsz majd az egyre jobb idï¿½ elï¿½rï¿½sï¿½re.
-. Gyakorlï¿½s utï¿½n, a teljesï¿½tmï¿½ny (a mï¿½rt idï¿½) megjelenik a tï¿½blï¿½zatban.
-. A (P) (Print) betï¿½re kattintva a szï¿½/mondat csomag nyomtatï¿½si kï¿½pe jelenik meg, hogy ha szeretnï¿½d kinyomtathasd ï¿½ket.
-. Kezdï¿½shez klikkelj bï¿½rmely szï¿½mra (csomagra)!";
+$trans["alapszokincs_Div"] = "<b>A kikrdez funkci</b>
+. Az alapszkincset tzes szcsomagokban lthatod.
+. A kikrdez mri az iddet, gy trekedhetsz majd az egyre jobb id elrsre.
+. Gyakorls utn, a teljestmny (a mrt id) megjelenik a tblzatban.
+. A (P) (Print) betre kattintva a sz/mondat csomag nyomtatsi kpe jelenik meg, hogy ha szeretnd kinyomtathasd ket.
+. Kezdshez klikkelj brmely szmra (csomagra)!";
 
-$trans["kikerdezo_info"] = "<b>Hogyan hasznï¿½ld a kikï¿½rdezï¿½t?</b>
-Ahogy lï¿½tod, mï¿½r meg is jelent az elsï¿½ kikï¿½rdezett szï¿½/mondat. a kï¿½vetkezï¿½ket teheted:
-1. <b>Betï¿½</b>: Ezzel a gombbal a szï¿½ betï¿½it jelenï¿½theted meg egyenkï¿½nt segï¿½tsï¿½gnek.
-2. <b>Fehï¿½r hï¿½ttï¿½r</b>: A megoldï¿½s megjelenï¿½tï¿½sï¿½hez klikkelj a fehï¿½r felï¿½leten bï¿½rhova. Javasoljuk, hogy mondd ki hangosan a megoldï¿½st, ez is segï¿½ti a memorizï¿½lï¿½st!
-3. <b>Nem tudom</b>: Ha nem tudtad vagy nem voltï¿½l biztos benne, a megoldï¿½s megjelenï¿½tï¿½se <u>utï¿½n</u> nyomd meg ezt a gombot. Ekkor a rendszer visszadobja a kikï¿½rdezendï¿½k kï¿½zï¿½ ï¿½s automatikusan megjelenï¿½ti a kï¿½vetkezï¿½t.
-4. Ha tudtad a szï¿½t, akkor csak klikkelj a fehï¿½r hï¿½ttï¿½rre ï¿½s megkapod a kï¿½vetkezï¿½t.
-5. Javasoljuk, hogy addig Nem tudomozd a kï¿½rdezett szavakat/mondatokat, amï¿½g egyszer vï¿½gig nem tudsz menni rajtuk hibï¿½tlanul.
-6. Ha begyakoroltï¿½l egy csomagot, vï¿½laszthatod a <b>Mï¿½sik csomag</b> vagy a <b>Mï¿½g egyszer</b> lehetï¿½sï¿½get.
-- A fenti szï¿½rke szï¿½m a fennmaradï¿½ szavak/mondatok szï¿½mï¿½t jelzi.
-- A felsï¿½ barna csï¿½kon esetlegesen megjelenï¿½ nyilakkal mï¿½sik kategï¿½riï¿½ra ugorhatsz.
-- A <b>Kivesz</b> gombbal tï¿½rï¿½lheted a szï¿½t a Sajï¿½t Szï¿½tï¿½radbï¿½l.
-ï¿½lvezetes gyakorlï¿½st!";
+$trans["kikerdezo_info"] = "<b>Hogyan hasznld a kikrdezt?</b>
+Ahogy ltod, mr meg is jelent az els kikrdezett sz/mondat. a kvetkezket teheted:
+1. <b>Bet</b>: Ezzel a gombbal a sz betit jelentheted meg egyenknt segtsgnek.
+2. <b>Fehr httr</b>: A megolds megjelentshez klikkelj a fehr felleten brhova. Javasoljuk, hogy mondd ki hangosan a megoldst, ez is segti a memorizlst!
+3. <b>Nem tudom</b>: Ha nem tudtad vagy nem voltl biztos benne, a megolds megjelentse <u>utn</u> nyomd meg ezt a gombot. Ekkor a rendszer visszadobja a kikrdezendk kz s automatikusan megjelenti a kvetkezt.
+4. Ha tudtad a szt, akkor csak klikkelj a fehr httrre s megkapod a kvetkezt.
+5. Javasoljuk, hogy addig Nem tudomozd a krdezett szavakat/mondatokat, amg egyszer vgig nem tudsz menni rajtuk hibtlanul.
+6. Ha begyakoroltl egy csomagot, vlaszthatod a <b>Msik csomag</b> vagy a <b>Mg egyszer</b> lehetsget.
+- A fenti szrke szm a fennmarad szavak/mondatok szmt jelzi.
+- A fels barna cskon esetlegesen megjelen nyilakkal msik kategrira ugorhatsz.
+- A <b>Kivesz</b> gombbal trlheted a szt a Sajt Sztradbl.
+lvezetes gyakorlst!";
 
-$trans["registration_mail_subject"] = "ï¿½dvï¿½zï¿½l a lingocasa!";
+$trans["registration_mail_subject"] = "dvzl a lingocasa!";
 
 $trans["csomag"] = "csomag";
-$trans["masodperc"] = "mï¿½sodperc";
+$trans["masodperc"] = "msodperc";
 
-$trans["reg_succes_supscribepage"] = "Regisztrï¿½ciï¿½d sikerï¿½lt, kï¿½rlek ellenï¿½rizd a beï¿½rkezï¿½ leveleidet!";
-$trans["reg_error_underSub_supscribepage"] = "Feliratkozï¿½s kï¿½zben hiba tï¿½rtï¿½nt, kï¿½rlek prï¿½bï¿½lkozz ï¿½jra!";
-$trans["missing_field"] = "Nincs kitï¿½ltve az ï¿½sszes kï¿½telezï¿½ mezï¿½!";
-$trans["not_valid_email"] = "Az email cï¿½m nem ï¿½rvï¿½nyes!";
+$trans["reg_succes_supscribepage"] = "Regisztrcid sikerlt, krlek ellenrizd a berkez leveleidet!";
+$trans["reg_error_underSub_supscribepage"] = "Feliratkozs kzben hiba trtnt, krlek prblkozz jra!";
+$trans["missing_field"] = "Nincs kitltve az sszes ktelez mez!";
+$trans["not_valid_email"] = "Az email cm nem rvnyes!";
 
-$trans["intro_1"] = "Szia! ï¿½n egy tanï¿½rok ï¿½s tanulï¿½k egyï¿½ttmï¿½kï¿½dï¿½sï¿½bï¿½l megszï¿½letett izgalmas nyelvtanulï¿½ eszkï¿½z vagyok.
-<br>ï¿½me a funkciï¿½im.";
+$trans["intro_1"] = "Szia! n egy tanrok s tanulk egyttmkdsbl megszletett izgalmas nyelvtanul eszkz vagyok.
+<br>me a funkciim.";
 $trans["service_alap"] = "ALAP";
 $trans["service_free"] = "ingyenes";
-$trans["service_premium"] = "PRï¿½MIUM";
-$trans["service_fee"] = "1.000Ft/hï¿½";
-$trans["functions_some"] = "nï¿½hï¿½ny funkciï¿½";
-$trans["functions_all"] = "minden funkciï¿½";
-$trans["quiz"] = "NAPI KVï¿½Z";
-$trans["searchbox"] = "KERESï¿½";
+$trans["service_premium"] = "PRMIUM";
+$trans["service_fee"] = "1.000Ft/h";
+$trans["functions_some"] = "nhny funkci";
+$trans["functions_all"] = "minden funkci";
+$trans["quiz"] = "NAPI KVZ";
+$trans["searchbox"] = "KERES";
 $trans["showmewhatitis"] = "MUTASD, MIT TUD<br>A LINGOCASA";
-$trans["iwilltryit"] = "KIPRï¿½Bï¿½LOM";
+$trans["iwilltryit"] = "KIPRBLOM";
 
 $trans["Spanyol"] = "SPANYOL";
-$trans["Angol kezdo"] = "ANGOL KEZDï¿½";
+$trans["Angol kezdo"] = "ANGOL KEZD";
 $trans["Angol brit"] = "ANGOL BRIT";
-$trans["Angol halado"] = "ANGOL HALADï¿½";
+$trans["Angol halado"] = "ANGOL HALAD";
 $trans["Angol BP"] = "ANGOL BP";
 $trans["Angol ECL"] = "ANGOL ECL";
-$trans["legujabb_szavak"] = "Legï¿½jabb szavak";
+$trans["legujabb_szavak"] = "Legjabb szavak";
 
-$trans["tandijak"] = "TandÃ­j";
-$trans["tanulok"] = "TanulÃ³k";
+$trans["tandijak"] = "Tandíj";
+$trans["tanulok"] = "Tanulók";
