@@ -208,36 +208,36 @@ Ahogy l�tod, m�r meg is jelent az els� kik�rdezett sz�/mondat. a k�v
 - A <b>Kivesz</b> gombbal t�r�lheted a sz�t a Saj�t Sz�t�radb�l.
 �lvezetes gyakorl�st!";
 
-$trans["registration_mail_subject"] = "�dv�zl a lingocasa!";
+$trans["registration_mail_subject"] = "Üdvözöl a lingocasa!";
 
 $trans["csomag"] = "csomag";
-$trans["masodperc"] = "m�sodperc";
+$trans["masodperc"] = "másodperc";
 
-$trans["reg_succes_supscribepage"] = "Regisztr�ci�d siker�lt, k�rlek ellen�rizd a be�rkezett leveleidet!";
-$trans["reg_error_underSub_supscribepage"] = "Feliratkoz�s k�zben hiba t�rt�nt, k�rlek pr�b�lkozz �jra!";
-$trans["missing_field"] = "Nincs kit�ltve az �sszes k�telez� mez�!";
-$trans["not_valid_email"] = "Az email c�m nem �rv�nyes!";
+$trans["reg_succes_supscribepage"] = "Regisztrációd sikerült, kérlek ellenőrizd a beérkezett leveleidet!";
+$trans["reg_error_underSub_supscribepage"] = "Feliratkozás közben hiba történt, kérlek próbálkozz újra!";
+$trans["missing_field"] = "Nincs kitöltve az összes kötelező mező!";
+$trans["not_valid_email"] = "Az email cím nem érvényes!";
 
-$trans["intro_1"] = "Szia! �n egy tan�rok �s tanul�k egy�ttm�k�d�sb�l megsz�letett izgalmas nyelvtanul� eszk�z vagyok.
-<br>�me a funkci�im.";
+$trans["intro_1"] = "Szia! Én egy tanárok és tanulók együttműködéséből megszületett izgalmas nyelvtanuló eszköz vagyok.<br>Íme a funkcióim.";
+$trans["intro_1"] = "Szia! Én egy tanárok és tanulók együttműködéséből megszületett izgalmas nyelvtanuló eszköz vagyok. Íme a funkcióim.";
 $trans["service_alap"] = "ALAP";
 $trans["service_free"] = "ingyenes";
-$trans["service_premium"] = "PR�MIUM";
-$trans["service_fee"] = "1.000Ft/h�";
-$trans["functions_some"] = "n�h�ny funkci�";
-$trans["functions_all"] = "minden funkci�";
-$trans["quiz"] = "NAPI KV�Z";
-$trans["searchbox"] = "KERES�";
+$trans["service_premium"] = "PRÉMIUM";
+$trans["service_fee"] = "1.000Ft/hó";
+$trans["functions_some"] = "néhány funkció";
+$trans["functions_all"] = "minden funkció";
+$trans["quiz"] = "NAPI KVÍZ";
+$trans["searchbox"] = "KERESŐ";
 $trans["showmewhatitis"] = "MUTASD, MIT TUD<br>A LINGOCASA";
-$trans["iwilltryit"] = "KIPR�B�LOM";
+$trans["iwilltryit"] = "KIPRÓBÁLOM";
 
 $trans["Spanyol"] = "SPANYOL";
-$trans["Angol kezdo"] = "ANGOL KEZD�";
+$trans["Angol kezdo"] = "ANGOL KEZDŐ";
 $trans["Angol brit"] = "ANGOL BRIT";
-$trans["Angol halado"] = "ANGOL HALAD�";
+$trans["Angol halado"] = "ANGOL HALADÓ";
 $trans["Angol BP"] = "ANGOL BP";
 $trans["Angol ECL"] = "ANGOL ECL";
-$trans["legujabb_szavak"] = "Leg�jabb szavak";
+$trans["legujabb_szavak"] = "Legújabb szavak";
 
-$trans["tandijak"] = "Tand�j";
-$trans["tanulok"] = "Tanul�k";
+$trans["tandijak"] = "Tandíj";
+$trans["tanulok"] = "Tanulók";
