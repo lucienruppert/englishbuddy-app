@@ -167,46 +167,38 @@ $trans["info_ajax"] = "<b>Keresés a szó- és mondattárban</b>\n. Több, mint 
 
 $trans["info_sajatszotar"] = "<b>Saját szótár</b>\nA rendszer az elmentett szavaidat tízes csomagokban tárolja, egyenként kikérdezi őket és méri az idődet, így motiválva a gyakorlásra.";
 
-$trans["info_alapszokincs"] = "<b>Alapsz�kincs</b>
-2500-3000 sz�val a besz�lt nyelv 90%-�t meg�rtheted. Itt ezeket a szavakat gyakorolhatod be t�zes csoportokba osztva.";
+$trans["info_sajatszotar2"] = "<b>Saját szótár</b>\nA rendszer az elmentett szavaidat tízes csomagokban tárolja, egyenként kikérdezi őket és méri az idődet, így motiválva a gyakorlásra.\nA (P) gombra kattintva nyomtathatod ki a szavakat.";
 
-$trans["info_nyelvtanipeldatar"] = "<b>Nyelvtani p�ldat�r</b>
-T�bb ezer p�ldamondatunkkal minden fontos nyelvtani jelens�get k�l�n �s c�lzottan gyakorolhatsz, hat�konyan er�s�tve �gy a gyeng�bb pontjaidat.";
+$trans["info_szorgalommutato"] = "<b>Szorgalom mutató</b>
+A program számolja a gyakorló funkciókon belüli klikkeléseid számát, azaz hogy mennyit gyakorolsz.
+Tűzz ki egy reális, napi célt, és játsszd azt, hogy eléred.";
 
-$trans["info_intelligensgyakorlo"] = "<b>Intelligens gyakorl�</b>
-. Itt m�r nem csak konkr�t nyelvtani kateg�ri�kat, hanem b�rmilyen, sz�modra neh�zs�get okoz� dolgot gyakorolhatsz: <u>szavakra</u>, <u>mondatok r�szeire</u> tudsz r�keresni mindk�t nyelven. P�ld�ul: van, want to, been, milyen, hogyan stb.
-. Ha be�rtad a keresend� sz�t/szavakat, nyomj egy entert.";
+$trans["SajatSzotar_Div"] = "<b>A kikérdező funkció</b>
+. A mentett szavaidat itt tízes csomagokban láthatod.
+. A kikérdező méri az idődet, így törekedhetsz majd az egyre jobb idő elérésére.
+. Gyakorlás után, a teljesítmény (a mért idő) megjelenik a táblázatban.
+. A (P) (Print) betűre kattintva a szó/mondat csomag nyomtatási képe jelenik meg, hogy ha szeretnéd kinyomtathasd őket.
+. Kezdéshez klikkelj bármely számra (csomagra)!";
 
-$trans["info_szorgalommutato"] = "<b>Szorgalom mutat�</b>
-A program sz�molja a gyakorl� funkci�kon bel�li klikkel�seid sz�m�t, azaz hogy mennyit gyakorolsz.
-T�zz ki egy re�lis, napi c�lt, �s j�tszd azt, hogy el�red.";
+$trans["alapszokincs_Div"] = "<b>A kikérdező funkció</b>
+. Az alapszókincset tízes szócsoportokban láthatod.
+. A kikérdező méri az idődet, így törekedhetsz majd az egyre jobb idő elérésére.
+. Gyakorlás után, a teljesítmény (a mért idő) megjelenik a táblázatban.
+. A (P) (Print) betűre kattintva a szó/mondat csomag nyomtatási képe jelenik meg, hogy ha szeretnéd kinyomtathasd őket.
+. Kezdéshez klikkelj bármely számra (csomagra)!";
 
-$trans["SajatSzotar_Div"] = "<b>A kik�rdez� funkci�</b>
-. A mentett szavaidat itt t�zes csomagokban l�thatod.
-. A kik�rdez� m�ri az id�det, �gy t�rekedhetsz majd az egyre jobb id� el�r�s�re.
-. Gyakorl�s ut�n, a teljes�tm�ny (a m�rt id�) megjelenik a t�bl�zatban.
-. A (P) (Print) bet�re kattintva a sz�/mondat csomag nyomtat�si k�pe jelenik meg, hogy ha szeretn�d kinyomtathasd �ket.
-. Kezd�shez klikkelj b�rmely sz�mra (csomagra)!";
-
-$trans["alapszokincs_Div"] = "<b>A kik�rdez� funkci�</b>
-. Az alapsz�kincset t�zes sz�csoportokban l�thatod.
-. A kik�rdez� m�ri az id�det, �gy t�rekedhetsz majd az egyre jobb id� el�r�s�re.
-. Gyakorl�s ut�n, a teljes�tm�ny (a m�rt id�) megjelenik a t�bl�zatban.
-. A (P) (Print) bet�re kattintva a sz�/mondat csomag nyomtat�si k�pe jelenik meg, hogy ha szeretn�d kinyomtathasd �ket.
-. Kezd�shez klikkelj b�rmely sz�mra (csomagra)!";
-
-$trans["kikerdezo_info"] = "<b>Hogyan haszn�ld a kik�rdez�t?</b>
-Ahogy l�tod, m�r meg is jelent az els� kik�rdezett sz�/mondat. a k�vetkez�ket teheted:
-1. <b>Bet�</b>: Ezzel a gombbal a sz� bet�it jelen�theted meg egyenk�nt seg�ts�gnek.
-2. <b>Feh�r h�tt�r</b>: A megold�s megjelen�t�s�hez klikkelj a feh�r fel�leten b�rhova. Javasoljuk, hogy mondd ki hangosan a megold�st, ez is seg�ti a memoriz�l�st!
-3. <b>Nem tudom</b>: Ha nem tudtad vagy nem volt�l biztos benne, a megold�s megjelen�t�se <u>ut�n</u> nyomd meg ezt a gombot. Ekkor a rendszer visszadobja a kik�rdezend�k k�z� �s automatikusan megjelen�ti a k�vetkez�t.
-4. Ha tudtad a sz�t, akkor csak klikkelj a feh�r h�tt�rre �s megkapod a k�vetkez�t.
-5. Javasoljuk, hogy addig Nem tudomozd a k�rdezett szavakat/mondatokat, am�g egyszer v�gig nem tudsz menni rajtuk hib�tlanul.
-6. Ha begyakorolt�l egy csomagot, v�laszthatod a <b>M�sik csomag</b> vagy a <b>M�g egyszer</b> lehet�s�get.
-- A fenti sz�rke sz�m a fennmarad� szavak/mondatok sz�m�t jelzi.
-- A fels� barna s�von esetlegesen megjelen� nyilakkal m�sik kateg�ri�ra ugorhatsz.
-- A <b>Kivesz</b> gombbal t�r�lheted a sz�t a Saj�t Sz�t�radb�l.
-�lvezetes gyakorl�st!";
+$trans["kikerdezo_info"] = "<b>Hogyan használd a kikérdezőt?</b>
+Ahogy látod, már meg is jelent az első kikérdezett szó/mondat. a következőket teheted:
+1. <b>Betű</b>: Ezzel a gombbal a szó betűit jelenítheted meg egyenként segítségnek.
+2. <b>Fehér háttér</b>: A megoldás megjelenítéséhez klikkelj a fehér felületen bárhova. Javasoljuk, hogy mondd ki hangosan a megoldást, ez is segíti a memorizálást!
+3. <b>Nem tudom</b>: Ha nem tudtad vagy nem voltál biztos benne, a megoldás megjelenítése <u>után</u> nyomd meg ezt a gombot. Ekkor a rendszer visszadobja a kikérdezendők közé és automatikusan megjeleníti a következőt.
+4. Ha tudtad a szót, akkor csak klikkelj a fehér háttérre és megkapod a következőt.
+5. Javasoljuk, hogy addig Nem tudomozd a kérdezett szavakat/mondatokat, amíg egyszer végig nem tudsz menni rajtuk hibátlanul.
+6. Ha begyakoroltál egy csomagot, választhatod a <b>Másik csomag</b> vagy a <b>Még egyszer</b> lehetőséget.
+- A fenti szürke szám a fennmaradó szavak/mondatok számát jelzi.
+- A felső barna sávon esetlegesen megjelenő nyilakkal másik kategóriára ugorhatsz.
+- A <b>Kivesz</b> gombbal törölheted a szót a Saját Szótárdból.
+Élvezetes gyakorlást!";
 
 $trans["registration_mail_subject"] = "Üdvözöl a lingocasa!";
 
