@@ -136,23 +136,23 @@ $trans['magyar1'] = "magyar";
 $trans['angol1'] = "angol";
 $trans['spanyol1'] = "spanyol";
 
-$trans["subs_SendMail"] = "K�rek napi kv�zt";
+$trans["subs_SendMail"] = "Kérek napi kvízt";
 
-$trans["beallitasok"] = "Be�ll�t�sok";
+$trans["beallitasok"] = "Beállítások";
 
-$trans["usersettings_header_3"] = "Be�ll�t�sok";
-$trans["Keresztnev_2"] = "Keresztn�v";
-$trans["sendMeQuotes"] = "K�rek napi kv�zt";
-$trans["oldPassword"] = "R�gi jelsz�";
-$trans["newPassword"] = "�j jelsz�";
-$trans["confirmNewPassword"] = "�j jelsz� meger�s�t�se";
-$trans["set"] = "Be�ll�t";
-$trans["changePassword"] = "Jelsz� m�dos�t�sa";
-$trans["deleteMe"] = "T�rl�m a regisztr�ci�mat";
+$trans["usersettings_header_3"] = "Beállítások";
+$trans["Keresztnev_2"] = "Keresztnév";
+$trans["sendMeQuotes"] = "Kérek napi kvízt";
+$trans["oldPassword"] = "Régi jelszó";
+$trans["newPassword"] = "Új jelszó";
+$trans["confirmNewPassword"] = "Új jelszó megerősítése";
+$trans["set"] = "Beállít";
+$trans["changePassword"] = "Jelszó módosítása";
+$trans["deleteMe"] = "Törlöm a regisztrációmat";
 
-$trans["sureWannaDelete"] = "Biztos t�r�lni akarod a regisztr�ci�dat?";
-$trans["origPwBad"] = "Az eredeti jelsz� nem j�!";
-$trans["passwordMismatch"] = "Az �j jelsz� meger�s�t�se elt�r az �j jelsz�t�l!";
+$trans["sureWannaDelete"] = "Biztos törölni akarod a regisztrációdat?";
+$trans["origPwBad"] = "Az eredeti jelszó nem jó!";
+$trans["passwordMismatch"] = "Az új jelszó megerősítése eltér az új jelszótól!";
 $trans["unsuccessfulSettingchange"] = "Be�ll�t�said m�dos�t�sa nem siker�lt, k�rlek pr�b�ld �jra!";
 $trans["successfulSettingchange"] = "Be�ll�t�said m�dos�t�sa sikeresen megt�rt�nt!";
 
