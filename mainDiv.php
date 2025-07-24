@@ -12,10 +12,47 @@
       </span>
       <span class='hamburger'><img src='images/hamburger.svg' width="30px" height="30px" onclick="toggleMenu();"></span>
       <span style="display:<?php echo $_SESSION['isShown'] ? 'none' : 'flex'; ?>" class="welcome submenu">
-        <a href='#' class="medium-color" onclick="sajatSzavak();"><? print translate("increasevocabulary"); ?></a>
-        <a href='#' class="medium-color" onclick="alapszokincs();"><? print translate("basicvocabulary"); ?></a>
+        <div class="dropdown" style="display:inline-block;">
+          <a href="#" class="medium-color" onclick="event.preventDefault();document.getElementById('szogyakorlas-submenu').classList.toggle('show');">Szógyakorlás &#9662;</a>
+          <div id="szogyakorlas-submenu" class="dropdown-content" style="display:none;position:absolute;z-index:100;background:#222;padding:5px 0;border-radius:6px;min-width:160px;">
+            <a href="#" class="medium-color" onclick="sajatSzavak();">Saját szótár</a>
+            <a href="#" class="medium-color" onclick="alapszokincs();">Alap szókincs</a>
+          </div>
+        </div>
         <a href='#' class="medium-color" onclick="peldamondatok();"><? print translate("tudastar"); ?></a>
         <a href='#' class="medium-color show-menu" onclick="intelligensGyakorlo()"><? print translate("intelligensgyakorlo"); ?></a>
+        <style>
+          .dropdown-content a {
+            display: block;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+          }
+
+          .dropdown-content a:hover {
+            background: #444;
+          }
+
+          .dropdown .medium-color {
+            cursor: pointer;
+          }
+
+          .dropdown-content {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          }
+
+          .dropdown .show {
+            display: block !important;
+          }
+        </style>
+        <script>
+          document.addEventListener('click', function(e) {
+            var submenu = document.getElementById('szogyakorlas-submenu');
+            if (submenu && !e.target.closest('.dropdown')) {
+              submenu.classList.remove('show');
+            }
+          });
+        </script>
       <?php } ?>
       <?php if ($userObject && !in_array($userObject["status"], array(1, 2))) { ?>
         <a href='#' class="medium-color" onclick=<?php print $onclick1; ?>><? print translate("sajat_mondatok_10"); ?></a>
