@@ -2,20 +2,20 @@
 AddHandler application/x-httpd-php .php
 
 # Set default charset
-AddDefaultCharset ISO-8859-2
-AddCharset ISO-8859-2 .html .php .css .js
+AddDefaultCharset UTF-8
+AddCharset UTF-8 .html .php .css .js
 
 # Set content types with proper charset
 <FilesMatch "\.(html|php)$">
-    Header set Content-Type "text/html; charset=ISO-8859-2"
+    Header set Content-Type "text/html; charset=UTF-8"
 </FilesMatch>
 
 <FilesMatch "\.css$">
-    Header set Content-Type "text/css; charset=ISO-8859-2"
+    Header set Content-Type "text/css; charset=UTF-8"
 </FilesMatch>
 
 <FilesMatch "\.js$">
-    Header set Content-Type "application/javascript; charset=ISO-8859-2"
+    Header set Content-Type "application/javascript; charset=UTF-8"
 </FilesMatch>
 
 # Prevent MIME type sniffing
@@ -27,4 +27,4 @@ Header always set X-Content-Type-Options "nosniff"
 </FilesMatch>
 
 # Force PHP to use ISO-8859-2
-php_value default_charset "ISO-8859-2"
+php_value default_charset "UTF-8"

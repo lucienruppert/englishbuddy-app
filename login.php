@@ -1,13 +1,5 @@
 <meta charset="UTF-8">
-<meta charset="UTF-8">
 <div class="login">
-  <!-- DEBUG: Encoding investigation -->
-  <div style="background: #ffe0e0; color: #900; padding: 8px; margin-bottom: 8px;">
-    <strong>Debug: Raw BELÉPÉS text:</strong> BELÉPÉS<br>
-    <strong>Debug: PHP translation:</strong> <?php print translate('enter'); ?><br>
-    <strong>Debug: PHP encoding:</strong> <?php print mb_internal_encoding(); ?><br>
-    <strong>Debug: HTTP header:</strong> <?php print isset($_SERVER['HTTP_ACCEPT_CHARSET']) ? $_SERVER['HTTP_ACCEPT_CHARSET'] : 'N/A'; ?><br>
-  </div>
   <?php
   if (!$userObject) {
   ?>
