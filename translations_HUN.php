@@ -119,17 +119,17 @@ $trans['intelligensgyakorlo_android'] = "Intelligens gyakorló";
 
 $trans['subscribe'] = "REGISZTRÁCIÓ";
 
-$trans['subs_�dv�z�lj�k!'] = "Szia!";
-$trans['subs_K�rj�k, t�ltse ki adatait!'] = "Itt az ingyenes funkci�k haszn�lat�hoz<br>iratkozhatsz fel.";
-$trans['subs_Vezet�kn�v'] = "Vezet�kn�v";
-$trans['subs_Keresztn�v'] = "Keresztn�v";
+$trans['subs_üdvözöljük!'] = "Szia!";
+$trans['subs_Kérjük, töltse ki adatait!'] = "Itt az ingyenes funkciók használatához<br>iratkozhatsz fel.";
+$trans['subs_Vezetéknév'] = "Vezetéknév";
+$trans['subs_Keresztnév'] = "Keresztnév";
 $trans['subs_E-mail'] = "E-mail";
-$trans['subs_Jelsz�'] = "Jelsz�";
-$trans['subs_Tanuland� nyelv'] = "Tanuland� nyelv";
-$trans['subs_El�fizet�si id�'] = "El�fizet�si id�";
-$trans['subs_h�nap'] = "h�nap";
-$trans['subs_text2'] = "Eredm�nyes tanul�st k�v�n,<br>a lingocasa csapata";
-$trans['subs_Elk�ld'] = "Elk�ld";
+$trans['subs_Jelszó'] = "Jelszó";
+$trans['subs_Tanulandó nyelv'] = "Tanulandó nyelv";
+$trans['subs_Előfizetési idő'] = "Előfizetési idő";
+$trans['subs_hónap'] = "hónap";
+$trans['subs_text2'] = "Eredményes tanulást kíván,<br>a lingocasa csapata";
+$trans['subs_Elküld'] = "Elküld";
 
 $trans['search'] = "Keres�s";
 $trans['magyar1'] = "magyar";
