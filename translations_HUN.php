@@ -97,27 +97,27 @@ $trans['increasevocabulary_android'] = "Saját szótár";
 $trans['intelligensgyakorlo'] = "Intelligens gyakorló";
 $trans['intelligensgyakorlo2'] = "Intelligens gyakorló";
 
-$trans['myperformance'] = "Szorgalom mutat�";
-$trans['szotar'] = "Sz�t�r";
+$trans['myperformance'] = "Szorgalom mutató";
+$trans['szotar'] = "Szótár";
 $trans['savedwords'] = "Mentett Szavaim";
-$trans['words'] = "sz�";
-$trans['basicwords'] = "a leggyakoribb 3000 sz�";
+$trans['words'] = "szó";
+$trans['basicwords'] = "a leggyakoribb 3000 szó";
 $trans['free'] = "INGYENES";
-$trans['subscription'] = "EL�FIZET�S";
-$trans['dailyclicks'] = "napi klikkek sz�ma";
-$trans['useofdictionary'] = "Sz�t�rhaszn�lat";
-$trans['napikviz'] = "Napi Kv�z";
+$trans['subscription'] = "ELŐFIZETÉS";
+$trans['dailyclicks'] = "napi klikkek száma";
+$trans['useofdictionary'] = "Szótárhasználat";
+$trans['napikviz'] = "Napi Kvíz";
 $trans['napikviz_br'] = "Napi<br>Kv�z";
-$trans['basicvocabulary'] = "Alap sz�kincs";
-$trans['basicvocabulary2'] = "Alap sz�kincs";
+$trans['basicvocabulary'] = "Alap szókincs";
+$trans['basicvocabulary2'] = "Alap szókincs";
 $trans['kikerdezo'] = "lingocasa";
-$trans['onlinetutor'] = "�LETSZAG� NYELVGYAKORL�S";
+$trans['onlinetutor'] = "ÉLETSZAGÚ NYELVGYAKORLÁS";
 
-$trans['basicvocabulary_android'] = "Alap sz�kincs";
-$trans['tudastar_android'] = "Nyelvtani p�ldat�r";
-$trans['intelligensgyakorlo_android'] = "Intelligens gyakorl�";
+$trans['basicvocabulary_android'] = "Alap szókincs";
+$trans['tudastar_android'] = "Nyelvtani példatár";
+$trans['intelligensgyakorlo_android'] = "Intelligens gyakorló";
 
-$trans['subscribe'] = "REGISZTR�CI�";
+$trans['subscribe'] = "REGISZTRÁCIÓ";
 
 $trans['subs_�dv�z�lj�k!'] = "Szia!";
 $trans['subs_K�rj�k, t�ltse ki adatait!'] = "Itt az ingyenes funkci�k haszn�lat�hoz<br>iratkozhatsz fel.";
