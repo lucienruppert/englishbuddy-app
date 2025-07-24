@@ -3,22 +3,22 @@
 global $trans;
 
 $trans['copyright'] = "2005 &copy; Lucien del Mar. Artisjus #1158";
-$trans['kijelentkezes'] = "Kijelentkez�s";
-$trans['enter'] = "BEL�P�S";
+$trans['kijelentkezes'] = "Kijelentkezés";
+$trans['enter'] = "BELÉPÉS";
 $trans['szia'] = "Szia";
-$trans['felhasznalt_ido'] = "Tanul�ssal t�lt�tt id�";
-$trans['szo_gyakorlas'] = "sz�gyakorl�s";
-$trans['mondat_gyakorlas'] = "mondatgyakorl�s";
-$trans['utoljara_vett_tananyag'] = "Utols� vett tananyag";
-$trans['feladatok_kovetkezo_orara'] = "H�zifeladat";
+$trans['felhasznalt_ido'] = "Tanulással töltött idő";
+$trans['szo_gyakorlas'] = "szógyakorlás";
+$trans['mondat_gyakorlas'] = "mondatgyakorlás";
+$trans['utoljara_vett_tananyag'] = "Utolsó vett tananyag";
+$trans['feladatok_kovetkezo_orara'] = "Házi feladat";
 
-$trans['fooldal'] = "F�oldal";
-$trans['igeragozas'] = "Igeragoz�s";
-$trans['abece'] = "�b�c�";
-$trans['kiejtes'] = "Kiejt�s";
-$trans['szorend'] = "Sz�rend";
-$trans['szorend2'] = "Sz�rend";
-$trans['nevmasok'] = "N�vm�sok";
+$trans['fooldal'] = "Főoldal";
+$trans['igeragozas'] = "Igeragozás";
+$trans['abece'] = "Ábécé";
+$trans['kiejtes'] = "Kiejtés";
+$trans['szorend'] = "Szórend";
+$trans['szorend2'] = "Szórend";
+$trans['nevmasok'] = "Névmások";
 $trans['rendhagyo_igek'] = "Igealakok";
 
 $trans['ment'] = "Ment";
