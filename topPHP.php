@@ -1,5 +1,5 @@
 <?php
-// Set proper character encoding
+// Set proper character encoding...
 header('Content-Type: text/html; charset=UTF-8');
 ini_set('default_charset', 'UTF-8');
 mb_internal_encoding('UTF-8');
