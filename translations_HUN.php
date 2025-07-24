@@ -153,19 +153,19 @@ $trans["deleteMe"] = "Törlöm a regisztrációmat";
 $trans["sureWannaDelete"] = "Biztos törölni akarod a regisztrációdat?";
 $trans["origPwBad"] = "Az eredeti jelszó nem jó!";
 $trans["passwordMismatch"] = "Az új jelszó megerősítése eltér az új jelszótól!";
-$trans["unsuccessfulSettingchange"] = "Be�ll�t�said m�dos�t�sa nem siker�lt, k�rlek pr�b�ld �jra!";
-$trans["successfulSettingchange"] = "Be�ll�t�said m�dos�t�sa sikeresen megt�rt�nt!";
+$trans["info_sajatszotar"] = "<b>Saját szótár</b>\nA rendszer az elmentett szavaidat tízes csomagokban tárolja, egyenként kikérdezi őket és méri az idődet, így motiválva a gyakorlásra.";
+$trans["unsuccessfulSettingchange"] = "Beállításaid módosítása nem sikerült, kérlek próbáld újra!";
+$trans["successfulSettingchange"] = "Beállításaid módosítása sikeresen megtörtént!";
 
-$trans["unsuccessfulUserdelete"] = "Hozz�f�r�sed t�rl�se nem siker�lt, k�rlek pr�b�ld �jra!";
-$trans["successfulUserdelete"] = "Hozz�f�r�sed t�rl�se sikeresen megt�rt�nt!";
+$trans["unsuccessfulUserdelete"] = "Hozzáférésed törlése nem sikerült, kérlek próbáld újra!";
+$trans["successfulUserdelete"] = "Hozzáférésed törlése sikeresen megtörtént!";
 
-$trans["unsuccessfulPwchange"] = "Jelszavad megv�ltoztat�sa nem siker�lt, k�rlek pr�b�ld �jra!";
-$trans["passwordChanged"] = "Jelszavad megv�ltozott!";
+$trans["unsuccessfulPwchange"] = "Jelszavad megváltoztatása nem sikerült, kérlek próbáld újra!";
+$trans["passwordChanged"] = "Jelszavad megváltozott!";
 
-$trans["info_ajax"] = "<b>Keres�s a sz�- �s mondatt�rban</b>\n. T�bb, mint 30.000 sz�, kifejez�s �s mondat k�z�tt kereshetsz k�t nyelven.\n. Miut�n be�rod a keresett sz�t, v�rj egy picit �s a tal�latok automatikusan megjelennek: fel�l a sz� jelent�sei, alatta pedig azok a mondatok, amelyekben a sz� szerepel.\n. A megjelen? Ment gombbal az �sszes jelent�st elmentheted a sz�t�radba, a szavak mellettivel pedig az egyes szavakat. A ment�shez be kell l�pned.\n. Bez�r�shoz klikkelj b�rhol a tal�lati list�ra.";
+$trans["info_ajax"] = "<b>Keresés a szó- és mondattárban</b>\n. Több, mint 30.000 szó, kifejezés és mondat között kereshetsz két nyelven.\n. Miután beírod a keresett szót, várj egy picit és a találatok automatikusan megjelennek: felül a szó jelentései, alatta pedig azok a mondatok, amelyekben a szó szerepel.\n. A megjelenő Ment gombbal az összes jelentést elmentheted a szótáradba, a szavak mellettivel pedig az egyes szavakat. A mentéshez be kell lépned.\n. Bezáráshoz klikkelj bárhol a találati listára.";
 
-$trans["info_sajatszotar"] = "<b>Saj�t sz�t�r</b>
-A rendszer az elmentett szavaidat t�zes csomagokban t�rolja, egyenk�nt kik�rdezi �ket �s m�ri az id�det, �gy motiv�lva a gyakorl�sra.";
+$trans["info_sajatszotar"] = "<b>Saját szótár</b>\nA rendszer az elmentett szavaidat tízes csomagokban tárolja, egyenként kikérdezi őket és méri az idődet, így motiválva a gyakorlásra.";
 
 $trans["info_alapszokincs"] = "<b>Alapsz�kincs</b>
 2500-3000 sz�val a besz�lt nyelv 90%-�t meg�rtheted. Itt ezeket a szavakat gyakorolhatod be t�zes csoportokba osztva.";
