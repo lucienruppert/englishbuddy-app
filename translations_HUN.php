@@ -22,51 +22,51 @@ $trans['nevmasok'] = "Névmások";
 $trans['rendhagyo_igek'] = "Igealakok";
 
 $trans['ment'] = "Ment";
-$trans['ragozas'] = "Ragoz�s";
-$trans['rogzit'] = "R�gz�t";
-$trans['frissit'] = "Friss�t";
+$trans['ragozas'] = "Ragozás";
+$trans['rogzit'] = "Rögzít";
+$trans['frissit'] = "Frissít";
 $trans['sorrend'] = "Sorrend";
 
 $trans['hun'] = 'magyar';
 $trans['angol'] = 'angol';
-$trans['nemet'] = 'n�met';
+$trans['nemet'] = 'német';
 $trans['spanyol'] = 'spanyol';
 $trans['arab'] = 'arab';
 
-$trans['nincs_talalat'] = 'Nincs tal�lat';
+$trans['nincs_talalat'] = 'Nincs találat';
 
-$trans['szo_mondatba'] = "OPCI�: a sz� mondatba foglal�sa";
-$trans['rogzitem_hazimba'] = "R�gz�tem a h�zimba";
+$trans['szo_mondatba'] = "OPCIÓ: a szó mondatba foglalása";
+$trans['rogzitem_hazimba'] = "Rögzítem a házimba";
 
-$trans['kovetkezo_ora'] = "K�vetkez� �ra";
+$trans['kovetkezo_ora'] = "Következő óra";
 
 $trans['sajat_mondatok'] = "Mondataim";
-$trans['sajat_mondatok_10'] = "Saj�t mondatok";
-$trans['sajat_mondatok_all'] = "(�SSZES)";
+$trans['sajat_mondatok_10'] = "Saját mondatok";
+$trans['sajat_mondatok_all'] = "(ÖSSZES)";
 
-$trans['feltoltes'] = "sz�t�rfelt�lt�s";
-$trans['kategorizalas'] = "sz�list�k";
-$trans['peldamondatok'] = "(�SSZES)";
-$trans['peldamondatok_all'] = "P�ldamondatok (�sszes)";
-$trans['tudastar_title'] = "tud�st�r";
-$trans['tudastar'] = "Nyelvtani p�ldat�r";
-$trans['tudastar2'] = "Nyelvtani p�ldat�r";
-$trans['tanuloszoba'] = "Tanul�szoba";
-$trans['kitolto'] = "kit�lt�";
-$trans['sajat_mondat_szo'] = "�sszgyakorl�";
+$trans['feltoltes'] = "szótárfeltöltés";
+$trans['kategorizalas'] = "szólisták";
+$trans['peldamondatok'] = "(ÖSSZES)";
+$trans['peldamondatok_all'] = "Példamondatok (összes)";
+$trans['tudastar_title'] = "tudástár";
+$trans['tudastar'] = "Nyelvtani példatár";
+$trans['tudastar2'] = "Nyelvtani példatár";
+$trans['tanuloszoba'] = "Tanulószoba";
+$trans['kitolto'] = "kitöltő";
+$trans['sajat_mondat_szo'] = "Összgyakorló";
 
-$trans['funkcio_skype'] = "A funkci� csak Skype-os tanul�k sz�m�ra �rhet� el!";
+$trans['funkcio_skype'] = "A funkció csak Skype-os tanulók számára érhető el!";
 
-$trans['vocabulary'] = "Alapsz�kincs";
+$trans['vocabulary'] = "Alapszókincs";
 $trans['mumus'] = "MUMUS";
-$trans['sajat_szavak_all'] = "�SSZES";
+$trans['sajat_szavak_all'] = "ÖSSZES";
 $trans['nem_tudtam'] = "nem tudtam";
-$trans['meg_egyszer'] = "M�g egyszer";
+$trans['meg_egyszer'] = "Még egyszer";
 $trans['kesz_ugyes_vagy'] = "";
-$trans['masik_csomag'] = "M�sik csomag";
+$trans['masik_csomag'] = "Másik csomag";
 $trans['masodperc'] = "m�sodperc";
-$trans['vissza_a_fooldalra'] = "Vissza a f�oldalra";
-$trans['required_fields'] = "A mez�k kit�lt�se k�telez�!";
+$trans['vissza_a_fooldalra'] = "Vissza a főoldalra";
+$trans['required_fields'] = "A mezők kitöltése kötelező!";
 $trans['magyar'] = "magyar";
 $trans['angol'] = "angol";
 $trans['spanyol'] = "spanyol";
@@ -74,28 +74,28 @@ $trans['nemet'] = "n�met";
 $trans['francia'] = "francia";
 $trans['arab'] = "arab";
 $trans['hun'] = "magyar";
-$trans['cel_komment'] = "C�l komment";
-$trans['forras_komment'] = "Forr�s komment";
-$trans['word_exists_in_dictionary'] = "Ez a sz� m�r megtal�lhat� a tud�st�rban, onnan kimentheted a sz�t�radba!";
-$trans['word_save_error'] = "R�gz�t�s nem siker�lt!";
-$trans['word_delete_error'] = "T�rl�s nem siker�lt!";
-$trans['word_exists_in_other_lang'] = "Ki van t�ltve valamilyen m�sik nyelven!";
-$trans['both_field_required'] = "Mindk�t mez�t t�ltsd ki!";
+$trans['cel_komment'] = "Cél komment";
+$trans['forras_komment'] = "Forrás komment";
+$trans['word_exists_in_dictionary'] = "Ez a szó már megtalálható a tudástárban, onnan kimentheted a szótáradba!";
+$trans['word_save_error'] = "Rögzítés nem sikerült!";
+$trans['word_delete_error'] = "Törlés nem sikerült!";
+$trans['word_exists_in_other_lang'] = "Ki van töltve valamilyen másik nyelven!";
+$trans['both_field_required'] = "Mindkét mezőt töltsd ki!";
 $trans['word_saved'] = "Elmentve!";
-$trans['not_successful'] = "Nem siker�lt!";
+$trans['not_successful'] = "Nem sikerült!";
 
-$trans['betu1'] = "bet�";
+$trans['betu1'] = "betű";
 $trans['mumus2'] = "mumus";
 $trans['remove'] = "kivesz";
 
 $trans['ajaxDivSave'] = "Ment";
-$trans['ajaxDivSaveLoginMessage'] = "Be kell l�pned a szavak ment�s�hez.";
-$trans['audioszoba'] = "Audi�szoba";
-$trans['increasevocabulary'] = "Saj�t sz�t�r";
-$trans['increasevocabulary2'] = "Saj�t sz�t�r";
-$trans['increasevocabulary_android'] = "Saj�t sz�t�r";
-$trans['intelligensgyakorlo'] = "Intelligens gyakorl�";
-$trans['intelligensgyakorlo2'] = "Intelligens gyakorl�";
+$trans['ajaxDivSaveLoginMessage'] = "Be kell lépned a szavak mentéséhez.";
+$trans['audioszoba'] = "Audiószoba";
+$trans['increasevocabulary'] = "Saját szótár";
+$trans['increasevocabulary2'] = "Saját szótár";
+$trans['increasevocabulary_android'] = "Saját szótár";
+$trans['intelligensgyakorlo'] = "Intelligens gyakorló";
+$trans['intelligensgyakorlo2'] = "Intelligens gyakorló";
 
 $trans['myperformance'] = "Szorgalom mutat�";
 $trans['szotar'] = "Sz�t�r";
