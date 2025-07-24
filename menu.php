@@ -46,6 +46,15 @@ if ($userObject['id'] == 1) {
 
 <div class="navigation-menu">
   <a href="index.php" class="home mobile-menu"><?php print translate('fooldal'); ?></a>
+  <ul class="sf-menu" style="display:inline-block;vertical-align:middle;">
+    <li>
+      <a href="#">Szógyakorlás</a>
+      <ul>
+        <li><a href="wordManagement.php">Saját szótár</a></li>
+        <li><a href="wordLearning_list.php">Alap szókincs</a></li>
+      </ul>
+    </li>
+  </ul>
   <?php
   $upperRowObject = getLinksForPractice();
   if (is_array($upperRowObject) && !in_array($userObject["status"], array(1, 2))) {
