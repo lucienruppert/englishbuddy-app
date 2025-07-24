@@ -13,6 +13,7 @@
       <div class="navigation-mainDiv">
         <span class="welcome hello">
           <?php
+          header('Content-Type: text/html; charset=UTF-8');
           if ($userObject)
             print translate('szia') . "&nbsp;" . $userObject['keresztnev'] . "!";
           else
