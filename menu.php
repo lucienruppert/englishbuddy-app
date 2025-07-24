@@ -17,6 +17,7 @@ $quickLearningStyle = 'position:absolute;top:0px;';
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 
 <head>
+  <meta charset="UTF-8">
   <?php
   include_once('style-menu.php');
   include_once('style-navigation.php');
