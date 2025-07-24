@@ -1,8 +1,8 @@
 <?php
 // Set proper character encoding
-header('Content-Type: text/html; charset=ISO-8859-2');
-ini_set('default_charset', 'ISO-8859-2');
-mb_internal_encoding('ISO-8859-2');
+header('Content-Type: text/html; charset=UTF-8');
+ini_set('default_charset', 'UTF-8');
+mb_internal_encoding('UTF-8');
 
 error_reporting(0);
 ini_set('display_errors', 0);
