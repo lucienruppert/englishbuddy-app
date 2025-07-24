@@ -28,7 +28,7 @@ try {
         throw new Exception(mysql_error());
     }
 
-    if (!@mysql_query("SET NAMES 'latin2'")) {
+    if (!@mysql_query("SET NAMES 'utf8'")) {
         throw new Exception(mysql_error());
     }
 } catch (Exception $e) {
