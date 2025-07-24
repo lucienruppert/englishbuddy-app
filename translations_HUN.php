@@ -91,9 +91,9 @@ $trans['remove'] = "kivesz";
 $trans['ajaxDivSave'] = "Ment";
 $trans['ajaxDivSaveLoginMessage'] = "Be kell l�pned a szavak ment�s�hez.";
 $trans['audioszoba'] = "Audi�szoba";
-$trans['increasevocabulary'] = "Saját szótár";
-$trans['increasevocabulary2'] = "Saját szótár";
-$trans['increasevocabulary_android'] = "Saját szótár";
+$trans['increasevocabulary'] = "Saj�t sz�t�r";
+$trans['increasevocabulary2'] = "Saj�t sz�t�r";
+$trans['increasevocabulary_android'] = "Saj�t sz�t�r";
 $trans['intelligensgyakorlo'] = "Intelligens gyakorl�";
 $trans['intelligensgyakorlo2'] = "Intelligens gyakorl�";
 
@@ -108,12 +108,12 @@ $trans['dailyclicks'] = "napi klikkek sz�ma";
 $trans['useofdictionary'] = "Sz�t�rhaszn�lat";
 $trans['napikviz'] = "Napi Kv�z";
 $trans['napikviz_br'] = "Napi<br>Kv�z";
-$trans['basicvocabulary'] = "Alap szókincs";
-$trans['basicvocabulary2'] = "Alap szókincs";
+$trans['basicvocabulary'] = "Alap sz�kincs";
+$trans['basicvocabulary2'] = "Alap sz�kincs";
 $trans['kikerdezo'] = "lingocasa";
 $trans['onlinetutor'] = "�LETSZAG� NYELVGYAKORL�S";
 
-$trans['basicvocabulary_android'] = "Alap szókincs";
+$trans['basicvocabulary_android'] = "Alap sz�kincs";
 $trans['tudastar_android'] = "Nyelvtani p�ldat�r";
 $trans['intelligensgyakorlo_android'] = "Intelligens gyakorl�";
 
