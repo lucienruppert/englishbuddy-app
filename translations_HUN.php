@@ -218,7 +218,7 @@ $trans["reg_error_underSub_supscribepage"] = "Feliratkozás közben hiba törté
 $trans["missing_field"] = "Nincs kitöltve az összes kötelező mező!";
 $trans["not_valid_email"] = "Az email cím nem érvényes!";
 
-$trans["intro_1"] = "Szia! Én egy tanárok és tanulók együttműködéséből megszületett izgalmas nyelvtanuló eszköz vagyok.<br>Íme a funkcióim.";
+$trans["intro_1"] = "Szia! Én egy tanárok és tanulók együttműködéséből megszületett izgalmas nyelvtanuló eszköz vagyok. Íme a funkcióim.";
 $trans["intro_1"] = "Szia! Én egy tanárok és tanulók együttműködéséből megszületett izgalmas nyelvtanuló eszköz vagyok. Íme a funkcióim.";
 $trans["service_alap"] = "ALAP";
 $trans["service_free"] = "ingyenes";
