@@ -1592,7 +1592,7 @@ function ajaxSearchPrint($lang)
                 }
             }
             xmlhttp.open("GET", target, true);
-            xmlhttp.setRequestHeader("Content-Type", "text/plain;charset=ISO-8859-2");
+            // Removed Content-Type header for GET request to ensure UTF-8 compatibility
             xmlhttp.send();
         }
 
