@@ -2826,7 +2826,7 @@ Idioma: $nyelv";
 function array_utf8_encode_recursive($dat)
 {
     if (is_string($dat)) {
-        return mb_convert_encoding($dat, 'UTF-8', 'ISO-8859-2');
+        return $dat;
     }
     if (is_object($dat)) {
         $ovs = get_object_vars($dat);
