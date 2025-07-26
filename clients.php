@@ -3,114 +3,103 @@
 include_once('functions.php');
 include_once('functions_levels.php');
 
-if(!$userObject || !in_array($userObject['status'], array(4, 5, 6))){
+if (!$userObject || !in_array($userObject['status'], array(4, 5, 6))) {
     include_once('index.php');
     exit;
 }
 
 $localLangs = getClientsLocalLangs();
 
-if($userObject['status'] == 6){
+if ($userObject['status'] == 6) {
     $canEdit = true;
-}
-else{
+} else {
     $canEdit = false;
 }
 
-if($_POST['actionType'] == "saveForm"){
+if ($_POST['actionType'] == "saveForm") {
     $storeArray = array();
     $storeArray['id'] = $_POST['userId'];
-    if(isset($_POST['email'])) $storeArray['email'] = $_POST['email'];
-    if(isset($_POST['username'])) $storeArray['jelszo'] = $_POST['username'];
-    if(isset($_POST['max_level'])) $storeArray['max_level'] = $_POST['max_level'];
-    if(isset($_POST['status'])) $storeArray['status'] = $_POST['status'];
-    if(isset($_POST['tanar'])) $storeArray['tanar'] = $_POST['tanar'];
-    if(isset($_POST['vezeteknev'])) $storeArray['vezeteknev'] = $_POST['vezeteknev'];
-    if(isset($_POST['keresztnev'])) $storeArray['keresztnev'] = $_POST['keresztnev'];
-    if(isset($_POST['forras_nyelv'])) $storeArray['forras_nyelv'] = $_POST['forras_nyelv'];
-    if(isset($_POST['nyelv'])) $storeArray['nyelv'] = $_POST['nyelv'];
-    if(isset($_POST['program_start_date'])) $storeArray['program_start_date'] = $_POST['program_start_date'];
-    if(isset($_POST['program_end_date'])) $storeArray['program_end_date'] = $_POST['program_end_date'];
+    if (isset($_POST['email'])) $storeArray['email'] = $_POST['email'];
+    if (isset($_POST['username'])) $storeArray['jelszo'] = $_POST['username'];
+    if (isset($_POST['max_level'])) $storeArray['max_level'] = $_POST['max_level'];
+    if (isset($_POST['status'])) $storeArray['status'] = $_POST['status'];
+    if (isset($_POST['tanar'])) $storeArray['tanar'] = $_POST['tanar'];
+    if (isset($_POST['vezeteknev'])) $storeArray['vezeteknev'] = $_POST['vezeteknev'];
+    if (isset($_POST['keresztnev'])) $storeArray['keresztnev'] = $_POST['keresztnev'];
+    if (isset($_POST['forras_nyelv'])) $storeArray['forras_nyelv'] = $_POST['forras_nyelv'];
+    if (isset($_POST['nyelv'])) $storeArray['nyelv'] = $_POST['nyelv'];
+    if (isset($_POST['program_start_date'])) $storeArray['program_start_date'] = $_POST['program_start_date'];
+    if (isset($_POST['program_end_date'])) $storeArray['program_end_date'] = $_POST['program_end_date'];
     $storeArray['client_data'] = $_POST['comment'];
-    if(isset($_POST['payment'])) $storeArray['payment'] = $_POST['payment'];
+    if (isset($_POST['payment'])) $storeArray['payment'] = $_POST['payment'];
     $storeArray['hazi_feladat'] = $_POST['hazi_feladat'];
     $storeArray['next_lesson'] = $_POST['next_lesson'];
-    if($canEdit) $storeArray['send_mail'] = ($_POST['send_mail'] ? '1' : '0');
-    if($_POST['isNewRecord']){
+    if ($canEdit) $storeArray['send_mail'] = ($_POST['send_mail'] ? '1' : '0');
+    if ($_POST['isNewRecord']) {
         $storeArray['max_level'] = $_POST['max_level'] = 1000;
         $_POST['userId'] = createUser($storeArray, $message);
-		$langTitles = getLangTitles();
-		$nev = $_POST['vezeteknev'];
-		$nev.= " ";
-		$nev.= $_POST['keresztnev'];
-		
-		
-		if($_POST['forras_nyelv'] == 0) {
-			$subject = "�dv�z�l a lingocasa!";
-			$body = subscribeBody($nev, htmlspecialchars($_POST['email']), htmlspecialchars($_POST['username']), $langTitles[$_POST['nyelv']], (int)$_POST['subscribe_length']);
-			
-		}
-		else if($_POST['forras_nyelv'] == 1) {
-			$subject = "Welcome to lingocasa";
-			$body = subscribeBodyENG($nev, htmlspecialchars($_POST['email']), htmlspecialchars($_POST['username']), $langTitles[$_POST['nyelv']], (int)$_POST['subscribe_length']);
-	   
-		}
-		else if($_POST['forras_nyelv'] == 2) {
-			$subject = "Bienvenido a lingocasa";
-			$body = subscribeBodyESP($nev, htmlspecialchars($_POST['email']), htmlspecialchars($_POST['username']), $langTitles[$_POST['nyelv']], (int)$_POST['subscribe_length']);
-		}
-        if(!$_POST['userId']){
-            print "<script>alert('{$message}');</script>";
+        $langTitles = getLangTitles();
+        $nev = $_POST['vezeteknev'];
+        $nev .= " ";
+        $nev .= $_POST['keresztnev'];
+
+
+        if ($_POST['forras_nyelv'] == 0) {
+            $subject = "�dv�z�l a lingocasa!";
+            $body = subscribeBody($nev, htmlspecialchars($_POST['email']), htmlspecialchars($_POST['username']), $langTitles[$_POST['nyelv']], (int)$_POST['subscribe_length']);
+        } else if ($_POST['forras_nyelv'] == 1) {
+            $subject = "Welcome to lingocasa";
+            $body = subscribeBodyENG($nev, htmlspecialchars($_POST['email']), htmlspecialchars($_POST['username']), $langTitles[$_POST['nyelv']], (int)$_POST['subscribe_length']);
+        } else if ($_POST['forras_nyelv'] == 2) {
+            $subject = "Bienvenido a lingocasa";
+            $body = subscribeBodyESP($nev, htmlspecialchars($_POST['email']), htmlspecialchars($_POST['username']), $langTitles[$_POST['nyelv']], (int)$_POST['subscribe_length']);
         }
-        else{
+        if (!$_POST['userId']) {
+            print "<script>alert('{$message}');</script>";
+        } else {
             $_POST['isNewRecord'] = "0";
         }
-		//DEBUG($_POST);
-		
-		$to = $_POST['email'];
-		if(strlen($body) > 0){
-                endiMail($to, $subject, $body, "lingocasa.com", "lingocasa.com");
-                endiMail('luciendelmar@gmail.com', $subject, $body, "lingocasa.com", "hello@lingocasa.com");
+        //DEBUG($_POST);
+
+        $to = $_POST['email'];
+        if (strlen($body) > 0) {
+            endiMail($to, $subject, $body, "lingocasa.com", "lingocasa.com");
+            endiMail('luciendelmar@gmail.com', $subject, $body, "lingocasa.com", "hello@lingocasa.com");
         }
-    }
-    else{
-        if(!modifyUser($storeArray, $message)){
+    } else {
+        if (!modifyUser($storeArray, $message)) {
             print "<script>alert('{$message}');</script>";
         }
     }
-}
-else if($_POST['actionType'] == "deleteForm"){
-    if(!deleteUser($_POST['userId'])){
+} else if ($_POST['actionType'] == "deleteForm") {
+    if (!deleteUser($_POST['userId'])) {
         print "<script>alert('Felhaszn�l� t�rl�se nem siker�lt');</script>";
-    }
-    else{
+    } else {
         $_POST['userId'] = null;
     }
-}
-else if($_POST['actionType'] == "newRecord"){
+} else if ($_POST['actionType'] == "newRecord") {
     $_POST['userId'] = 0;
     $selectedUser['send_mail'] = 1;
 }
 
-if(!$_POST['userId']){
+if (!$_POST['userId']) {
     $_POST['isNewRecord'] = "1";
 }
 
 $userProgress = "";
-if($_POST['userId'] > 0){
+if ($_POST['userId'] > 0) {
     $selectedUser = getUserObjById($_POST['userId']);
     $userProgress = getUserProgress($selectedUser);
-}
-else{
+} else {
     $selectedUser['program_start_date'] = date("Y-m-d H");
-    $selectedUser['program_end_date'] = date('Y-m-d H',strtotime(date("Y-m-d", time()) . " + 365 day"));
-    if($_POST['actionType'] == "saveForm" && $_POST['isNewRecord']){
+    $selectedUser['program_end_date'] = date('Y-m-d H', strtotime(date("Y-m-d", time()) . " + 365 day"));
+    if ($_POST['actionType'] == "saveForm" && $_POST['isNewRecord']) {
         $selectedUser['vezeteknev'] = $_POST['vezeteknev'];
         $selectedUser['keresztnev'] = $_POST['keresztnev'];
         $selectedUser['forras_nyelv'] = $_POST['forras_nyelv'];
         $selectedUser['nyelv'] = $_POST['nyelv'];
         $selectedUser['max_level'] = $_POST['max_level'];
-        $selectedUser['status'] = $_POST['status'];        
+        $selectedUser['status'] = $_POST['status'];
         $selectedUser['program_start_date'] = $_POST['program_start_date'];
         $selectedUser['program_end_date'] = $_POST['program_end_date'];
         $selectedUser['email'] = $_POST['email'];
@@ -122,10 +111,9 @@ else{
         $selectedUser['send_mail'] = $_POST['send_mail'];
     }
 }
-if($userObject['status'] == 6){
+if ($userObject['status'] == 6) {
     $jelentkezok = getUsersByLanguage(0);
-}
-else{
+} else {
     $jelentkezok = getUsersByTeacher($userObject['id']);
 }
 
@@ -140,12 +128,14 @@ $selectedUser['program_start_date'] = substr($selectedUser['program_start_date']
 $selectedUser['program_end_date'] = substr($selectedUser['program_end_date'], 0, 13);
 
 ?>
-<script>window.jQuery || document.write("<script src='js/jquery-1.11.1.min.js' type='text/javascript'>\x3C/script>")</script>
+<script>
+    window.jQuery || document.write("<script src='js/jquery-1.11.1.min.js' type='text/javascript'>\x3C/script>")
+</script>
 <script src="js/jquery.maskedinput.min.js" type="text/javascript"></script>
 <script>
-jQuery(function($){
-   $("#txtNextLesson").mask("9999.99.99 99:99");
-});
+    jQuery(function($) {
+        $("#txtNextLesson").mask("9999.99.99 99:99");
+    });
 </script>
 <?php
 
@@ -158,7 +148,7 @@ print "<input type='hidden' name='isNewRecord' value='{$_POST['isNewRecord']}'>"
 print "<input type='hidden' name='comment' value=''>";
 print "<input type='hidden' name='dictionaryUser' value=''>";
 print "<input type='hidden' name='homeWorkOrder' value=''>";
-if($userObject['status'] == 6){
+if ($userObject['status'] == 6) {
     print "<input type='hidden' name='payment' value=''>";
 }
 print "<input type='hidden' name='hazi_feladat' value=''>";
@@ -166,16 +156,16 @@ print "<input type='hidden' name='next_lesson' value=''>";
 print "<table style='border: 1px solid' align='center' width='700'><tr><td colspan=3>";
 print "<table border='1' style='border: 1px solid'>";
 print "<tr>
-        <th>&nbsp;Vezet�kn�v</th>
-        <th>&nbsp;Keresztn�v</th>
-        <th>&nbsp;Forr�s nyelv</th>
-        <th>&nbsp;Nyelv</th>
-        <th>&nbsp;Start/Limit</th>
-        <th>&nbsp;Email</th>
-        <th>&nbsp;Jelsz�</th>
-        <th>&nbsp;St�tusz</th>";
-if($userObject['status'] == 6){
-    print "<th>&nbsp;Tan�r</th>";
+    <th>&nbsp;Vezetéknév</th>
+    <th>&nbsp;Keresztnév</th>
+    <th>&nbsp;Forrás nyelv</th>
+    <th>&nbsp;Nyelv</th>
+    <th>&nbsp;Start/Limit</th>
+    <th>&nbsp;Email</th>
+    <th>&nbsp;Jelszó</th>
+    <th>&nbsp;Státusz</th>";
+if ($userObject['status'] == 6) {
+    print "<th>&nbsp;Tanár</th>";
 }
 print "<th><input type='button' value='Ment' onclick=\"
     this.form.actionType.value='saveForm';
@@ -190,21 +180,21 @@ print "<th><input type='button' value='Ment' onclick=\"
     }
     this.form.submit();\"></th>";
 
-if($userObject['status'] == 6){
+if ($userObject['status'] == 6) {
     print "<th><input type='button' value='�j' onclick=\"this.form.actionType.value='newRecord';this.form.submit();\"></th>";
 }
 print "</tr>";
 
-if($canEdit){
+if ($canEdit) {
     $vezetekNevText = "<input type='text' name='vezeteknev' value='{$selectedUser['vezeteknev']}' size='4'>";
     $keresztNevText = "<input type='text' name='keresztnev' value='{$selectedUser['keresztnev']}' size='4'>";
     $forrasNyelvText = "\n<select name='forras_nyelv'>";
-    foreach($localLangs as $key => $value){
+    foreach ($localLangs as $key => $value) {
         $forrasNyelvText .= "\n<option value='{$key}' " . ($selectedUser['forras_nyelv'] == $key ? 'selected' : '') . ">{$value}";
     }
     $forrasNyelvText .= "\n</select>";
     $nyelvText = "\n<select name='nyelv'>";
-    foreach($localLangs as $key => $value){
+    foreach ($localLangs as $key => $value) {
         $nyelvText .= "\n<option value='{$key}' " . ($selectedUser['nyelv'] == $key ? 'selected' : '') . ">{$value}";
     }
     $nyelvText .= "\n</select>";
@@ -213,11 +203,10 @@ if($canEdit){
     $emailText = "<input type='text' name='email' value='{$selectedUser['email']}' style='width:100px'>";
     $jelszoText = "<input type='text' name='username' value='{$selectedUser['jelszo']}' size='4'>";
     $statusText = "<select name='status'>";
-    foreach($statusList as $status => $statusName){
-        if($selectedUser['status'] == $status){
+    foreach ($statusList as $status => $statusName) {
+        if ($selectedUser['status'] == $status) {
             $selected = 'selected';
-        }
-        else{
+        } else {
             $selected = '';
         }
         $statusText .= "\n<option value='{$status}' $selected>{$statusName}";
@@ -225,18 +214,16 @@ if($canEdit){
     $statusText .= "\n</select>";
 
     $tanarText = "<select name='tanar' style='width:60px'>\n<option value='0'>";
-    foreach($tanarok as $tanar_id => $tanar){
-        if($selectedUser['tanar_id'] == $tanar_id){
+    foreach ($tanarok as $tanar_id => $tanar) {
+        if ($selectedUser['tanar_id'] == $tanar_id) {
             $selected = 'selected';
-        }
-        else{
+        } else {
             $selected = '';
         }
         $tanarText .= "\n<option value='{$tanar_id}' $selected>{$tanar['keresztnev']}";
     }
     $tanarText .= "\n</select>";
-}
-else{
+} else {
     $vezetekNevText = $selectedUser['vezeteknev'];
     $keresztNevText = $selectedUser['keresztnev'];
     $forrasNyelvText = $localLangs[$selectedUser['forras_nyelv']];
@@ -258,10 +245,10 @@ print "<td>$programStartDateText<br>$programEndDateText</td>
         <td>&nbsp;$emailText</td>
         <td>&nbsp;$jelszoText</td>";
 print "<td>$statusText</td>";
-if($userObject['status'] == 6){
+if ($userObject['status'] == 6) {
     print "<td>$tanarText</td>";
 }
-if($userObject['status'] == 6){
+if ($userObject['status'] == 6) {
     print "<td><input type='button' name='deleteBtn' value='T�r�l' onclick=\"
         if(confirm('Biztos szeretn�d t�r�lni a felhaszn�l�t?')){
             this.form.actionType.value='deleteForm';
@@ -289,50 +276,46 @@ print "<table border=1 cellpadding=0 style='width:100%'>";
 $sorszam = count($jelentkezok);
 $jelentkezok_ordered = array();
 
-foreach($jelentkezok as $jelentkezo){
-    if($jelentkezo['status'] == 1){
-         $jelentkezok_ordered[] = $jelentkezo;
+foreach ($jelentkezok as $jelentkezo) {
+    if ($jelentkezo['status'] == 1) {
+        $jelentkezok_ordered[] = $jelentkezo;
     }
 }
-foreach($jelentkezok as $jelentkezo){
-    if($jelentkezo['status'] == 2){
-         $jelentkezok_ordered[] = $jelentkezo;
+foreach ($jelentkezok as $jelentkezo) {
+    if ($jelentkezo['status'] == 2) {
+        $jelentkezok_ordered[] = $jelentkezo;
     }
 }
-foreach($jelentkezok as $jelentkezo){
-    if($jelentkezo['status'] != 1 && $jelentkezo['status'] != 2){
-         $jelentkezok_ordered[] = $jelentkezo;
+foreach ($jelentkezok as $jelentkezo) {
+    if ($jelentkezo['status'] != 1 && $jelentkezo['status'] != 2) {
+        $jelentkezok_ordered[] = $jelentkezo;
     }
 }
 
-foreach($jelentkezok_ordered as $jelentkezo){
+foreach ($jelentkezok_ordered as $jelentkezo) {
     $jelentkezo['program_start_date'] = substr($jelentkezo['program_start_date'], 0, 10);
     $jelentkezo['program_end_date'] = substr($jelentkezo['program_end_date'], 0, 10);
-    if($jelentkezo['status'] == 2){
+    if ($jelentkezo['status'] == 2) {
         $bgcolor = 'green';
-    }
-    else if($jelentkezo['status'] == 1){
+    } else if ($jelentkezo['status'] == 1) {
         $bgcolor = 'grey';
-    }
-    else if($jelentkezo['send_mail']){
+    } else if ($jelentkezo['send_mail']) {
         $bgcolor = 'red';
-    }
-    else{
+    } else {
         $bgcolor = 'red';
     }
 
-    if($jelentkezo['last_login_date']){
+    if ($jelentkezo['last_login_date']) {
         $eltelt_mpek = abs(strtotime(date("Y-m-d H:i:s")) - strtotime($jelentkezo['last_login_date']));
-        $napja = floor($eltelt_mpek/60/60/24);
-        $oraja = floor(($eltelt_mpek/60/60) % 24);
-        $perce = floor(($eltelt_mpek/60) % 60);
+        $napja = floor($eltelt_mpek / 60 / 60 / 24);
+        $oraja = floor(($eltelt_mpek / 60 / 60) % 24);
+        $perce = floor(($eltelt_mpek / 60) % 60);
         $ideje = (int)$napja . " napja " . (int)$oraja . " oraja " . (int)$perce . " perce";
-    }
-    else{
+    } else {
         $ideje = "M�g soha.";
     }
 
-//    $timeFromLastLogin =
+    //    $timeFromLastLogin =
     print "<tr>
         <td height='28' align='right' style='font-size:15px;font-weight:500;background-color:{$bgcolor};color:white;'width='22'>{$sorszam}</td>
         <td>&nbsp;<a href='#' style='font-weight:bold;' onclick=\"
@@ -401,7 +384,7 @@ print "<input type='button' name='payments' id='payments' value='Befizet�sek' 
 print "<span style='margin-left:20px;font-weight:bold'>{$userProgress}%</span>";
 print "</td>";
 
-if($userObject['status'] == 6){
+if ($userObject['status'] == 6) {
     print "<td>";
     print "<textarea name='taPayment' style='font-size:14px;font-weight:300;background-color:WHITE;color:BLACK' id='taPayment' cols='48', rows='1'>{$selectedUser['payment']}</textarea>";
     print "</td></tr>";
