@@ -25,8 +25,8 @@
           <div class="dropdown" style="display:inline-block;">
             <a href="#" class="medium-color" onclick="event.preventDefault();document.getElementById('szogyakorlas-submenu').classList.toggle('show');"><?php print translate('szo_gyakorlas'); ?> &#9662;</a>
             <div id="szogyakorlas-submenu" class="dropdown-content" style="display:none;position:absolute;z-index:100;background:#222;padding:5px 0;border-radius:6px;min-width:160px;">
-              <a href="#" class="medium-color" onclick="sajatSzavak();"><?php print translate('increasevocabulary'); ?></a>
-              <a href="#" class="medium-color" onclick="alapszokincs();"><?php print translate('basicvocabulary'); ?></a>
+              <a href="#" class="medium-color" onclick="document.getElementById('szogyakorlas-submenu').classList.remove('show');sajatSzavak();"><?php print translate('increasevocabulary'); ?></a>
+              <a href="#" class="medium-color" onclick="document.getElementById('szogyakorlas-submenu').classList.remove('show');alapszokincs();"><?php print translate('basicvocabulary'); ?></a>
             </div>
           </div>
           <a href='#' class="medium-color" onclick="peldamondatok();"><? print translate("tudastar"); ?></a>
