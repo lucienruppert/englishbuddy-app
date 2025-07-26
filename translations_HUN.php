@@ -131,7 +131,7 @@ $trans['subs_hónap'] = "hónap";
 $trans['subs_text2'] = "Eredményes tanulást kíván,<br>a lingocasa csapata";
 $trans['subs_Elküld'] = "Elküld";
 
-$trans['search'] = "Keres�s";
+$trans['search'] = "Keresés";
 $trans['magyar1'] = "magyar";
 $trans['angol1'] = "angol";
 $trans['spanyol1'] = "spanyol";
