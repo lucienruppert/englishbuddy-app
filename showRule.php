@@ -41,9 +41,11 @@ foreach ($level as $key => $value) {
 $title = $i . '. ' . $level[$_REQUEST['selectedLevel']][0];
 
 if (!$text) {
-    $text = "Nincs sz�veg";
+    $text = "Nincs szöveg";
 }
 
+// Output meta charset for UTF-8
+echo "<head><meta charset=\"utf-8\"></head>\n";
 ?>
 <style>
     .envelopeTable table {
