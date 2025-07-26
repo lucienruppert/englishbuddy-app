@@ -1,4 +1,8 @@
 <?php
+// Force UTF-8 output for all browsers
+if (!headers_sent()) {
+    header('Content-Type: text/html; charset=utf-8');
+}
 if (!$_SESSION['userObject']) {
     session_start();
 }
