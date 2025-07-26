@@ -7,8 +7,8 @@ $trans['kijelentkezes'] = "Kijelentkezés";
 $trans['enter'] = "BELÉPÉS";
 $trans['szia'] = "Szia";
 $trans['felhasznalt_ido'] = "Tanulással töltött idő";
-$trans['szo_gyakorlas'] = "szógyakorlás";
-$trans['mondat_gyakorlas'] = "mondatgyakorlás";
+$trans['szo_gyakorlas'] = "Szógyakorlás";
+$trans['mondat_gyakorlas'] = "Mondatgyakorlás";
 $trans['utoljara_vett_tananyag'] = "Utolsó vett tananyag";
 $trans['feladatok_kovetkezo_orara'] = "Házi feladat";
 
