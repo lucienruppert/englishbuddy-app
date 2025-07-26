@@ -580,8 +580,8 @@ function getLevelList($lang)
         '59' => array('Birtokos szerkezetek', 2),
         '127' => array('A "milyen" k�rd�sek', 3),
         '36' => array('Milyen-k�rd�sek', 2),
-        '157' => array('Hat�
-        '38' => array(' L�tig�s mondatok (halad�bb)', 2),
+        '157' => array('Határozók sorrendje', 3),
+        '38' => array('Létigés mondatok (haladóbb)', 2),
         '97' => array('Sz�mok', 3),
         '11' => array('sz�m', 1),
         '98' => array('Az �ra, napszakok', 3),
