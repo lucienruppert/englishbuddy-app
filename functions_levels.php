@@ -548,7 +548,7 @@ function getLevelList($lang)
 
     $list['francia'] = array(
         '0'  => array('Level 0', 1),
-        '153' => array('Angol fonetikus �t�r�s, kiejt�s', 3),
+        '153' => array('Angol fonetikus átírás, kiejtés', 3),
         '74' => array('A f�nevek', 3),
         '60' => array('A n�vel�k', 3),
         '75' => array('A f�nevek megsz�ml�lhat�s�ga', 3),
