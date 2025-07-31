@@ -215,6 +215,16 @@
     <?php } ?>
   }
 
+  function osszgyakorlo() {
+    <?php if ($userObject && $userObject['status'] != 1) { ?>
+      location.href = 'main.php?content=wordLearning_quick&packageStart=1&source=mondat&clickSource=osszgyakorlo';
+    <?php } else if ($userObject['status'] == 1) { ?>
+      alert(premiumUserOnlyMessage);
+    <?php } else { ?>
+      alert(notLoggedInMessage);
+    <?php } ?>
+  }
+
   function peldamondatok() {
     <?php if ($userObject && $userObject['status'] != 1) { ?>
       document.getElementById('sentencePracticeDiv2').style.display = 'block';
