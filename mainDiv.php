@@ -72,7 +72,6 @@
           </script>
         <?php } ?>
         <?php if ($userObject && !in_array($userObject["status"], array(1, 2))) { ?>
-          <a href='#' class="medium-color" onclick=<?php print $onclick1; ?>><? print translate("sajat_mondatok_10"); ?></a>
           <a href='#' class="medium-color" onclick=<?php print $onclick4; ?>><? print translate("sajat_mondat_szo"); ?></a>
           <a class="medium-color show-menu" onclick="audioSzoba();" href="#"><? print translate("audioszoba"); ?></a>
           <?php
