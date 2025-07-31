@@ -76,15 +76,15 @@ echo "<head><meta charset=\"utf-8\"></head>\n";
                 <td align='left' valign='top' style='font-size:12pt;color:white;background-color:#003366;' height='300'>";
     if ($userHasAccess) {
         if (!isset($_REQUEST['isRuleEdit']) || empty($_REQUEST['isRuleEdit'])) {
-            print "<span onclick=\"document.forms['ruleForm'].isRuleEdit.value=1; document.forms['ruleForm'].submit();\">{$text}</span>";
+            print "<span style='background-color:#003366;display:block;padding:10px;border-radius:6px;' onclick=\"document.forms['ruleForm'].isRuleEdit.value=1; document.forms['ruleForm'].submit();\">{$text}</span>";
         } else {
             $text = str_replace("<br>", chr(13) . chr(10), $text);
-            print "<textarea name='txtRule' style='color:white' rows=15 cols=100>{$text}</textarea>";
+            print "<div style='background-color:#003366;padding:10px;border-radius:6px;'><textarea name='txtRule' style='color:white;background-color:#003366;' rows=15 cols=100>{$text}</textarea></div>";
             print "<br><input type='submit' value='Rögzít'>";
             print "<input type='hidden' name='storeRule' value='1'>";
         }
     } else {
-        print "<span><div style='position:absolute;top:50;left:0;width:100%;height:100%;'></div>{$text}</span>";
+        print "<span style='background-color:#003366;display:block;padding:10px;border-radius:6px;'><div style='position:absolute;top:50;left:0;width:100%;height:100%;'></div>{$text}</span>";
     }
 
     print "</td><td width='100'></td>
