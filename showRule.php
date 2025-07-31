@@ -62,9 +62,9 @@ echo "<head><meta charset=\"utf-8\"></head>\n";
 
     print "<table width='800px' border='0' cellspacing='0' cellpadding='0'>
             <tr>
-                <td align='left' valign='middle' width='70px' style='background-color:grey;'><span id=\"prevLevelSpan\" style='background-color:grey;font-size:40pt;font-weight:bold;color:white;cursor:pointer' onclick=\"event.stopPropagation();location.href='main.php?content=changeLevelPage&direction=prev&selectedLevel=' + document.forms['ruleForm'].selectedLevel.value + '&source=' + document.forms['ruleForm'].source.value;\">&nbsp;&laquo;</span></td>
-                <td style='background-color:grey;font-size:20pt;color:white;' height='50' align='center'>{$title}</td>
-                <td align='right' valign='middle' width='70px' style='background-color:grey;'><span id=\"nextLevelSpan\" style='background-color:grey;font-size:40pt;font-weight:bold;color:white;cursor:pointer' onclick=\"event.stopPropagation();location.href='main.php?content=changeLevelPage&direction=next&selectedLevel=' + document.forms['ruleForm'].selectedLevel.value + '&source=' + document.forms['ruleForm'].source.value;\">&raquo;&nbsp;</span></td>
+                <td align='left' valign='middle' width='70px' style='background-color:orange;'><span id=\"prevLevelSpan\" style='background-color:orange;font-size:40pt;font-weight:bold;color:white;cursor:pointer' onclick=\"event.stopPropagation();location.href='main.php?content=changeLevelPage&direction=prev&selectedLevel=' + document.forms['ruleForm'].selectedLevel.value + '&source=' + document.forms['ruleForm'].source.value;\">&nbsp;&laquo;</span></td>
+                <td style='background-color:orange;font-size:20pt;color:white;' height='50' align='center'>{$title}</td>
+                <td align='right' valign='middle' width='70px' style='background-color:orange;'><span id=\"nextLevelSpan\" style='background-color:orange;font-size:40pt;font-weight:bold;color:white;cursor:pointer' onclick=\"event.stopPropagation();location.href='main.php?content=changeLevelPage&direction=next&selectedLevel=' + document.forms['ruleForm'].selectedLevel.value + '&source=' + document.forms['ruleForm'].source.value;\">&raquo;&nbsp;</span></td>
             </tr>
             <tr>
                 <td height='25' colspan='3'></td>
@@ -73,7 +73,7 @@ echo "<head><meta charset=\"utf-8\"></head>\n";
             <table width='800px' border='0' class='envelopeTable'>
             <tr>
                 <td width='100'></td>
-                <td align='left' valign='top' style='font-size:12pt;color:white' height='300'>";
+                <td align='left' valign='top' style='font-size:12pt;color:white;background-color:#003366;' height='300'>";
     if ($userHasAccess) {
         if (!isset($_REQUEST['isRuleEdit']) || empty($_REQUEST['isRuleEdit'])) {
             print "<span onclick=\"document.forms['ruleForm'].isRuleEdit.value=1; document.forms['ruleForm'].submit();\">{$text}</span>";
