@@ -72,7 +72,7 @@
           </script>
         <?php } ?>
         <?php if ($userObject && !in_array($userObject["status"], array(1, 2))) { ?>
-          <a href='#' class="medium-color" onclick=<?php print $onclick4; ?>><? print translate("sajat_mondat_szo"); ?></a>
+          <!-- Removed old Összgyakorló link as requested -->
           <a class="medium-color show-menu" onclick="audioSzoba();" href="#"><? print translate("audioszoba"); ?></a>
           <?php
           if ($userObject && in_array($userObject['status'], array(4, 5, 6))) {
