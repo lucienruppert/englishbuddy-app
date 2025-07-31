@@ -77,7 +77,7 @@
           <?php
           if ($userObject && in_array($userObject['status'], array(4, 5, 6))) {
           ?>
-            <a href='#' class="white-color" onclick="p_Click(event)"><?php print translate('tandijak'); ?></a>
+            <!-- <a href='#' class="white-color" onclick="p_Click(event)"><?php print translate('tandijak'); ?></a> -->
             <a href='#' class="white-color" onclick="t_Click(event)"><?php print translate('tanulok'); ?></a>
           <?php }
           if ($userObject) {
