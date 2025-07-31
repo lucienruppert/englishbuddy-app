@@ -1722,7 +1722,11 @@ function ajaxSearchPrint($lang)
         }
 
         function decode_utf8(s) {
-            return s;
+            try {
+                return decodeURIComponent(escape(s));
+            } catch (e) {
+                return s;
+            }
         }
 
         function moreMeaningWordMouseOver(str) {
