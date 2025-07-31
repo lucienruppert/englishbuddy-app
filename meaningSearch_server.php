@@ -49,10 +49,11 @@ if ($_REQUEST['getMeaning']) {
     $list = getLevelList($userObject['nyelv']);
     $text = getLevelComment($_REQUEST['selectedLevel'], $userObject['nyelv'], true);
     if (!$text) {
-        $text = "Nincs sz�veg";
+        $text = "Nincs szöveg";
     }
-    //    $record = array_utf8_encode_recursive(array('title' => $list[$_REQUEST['selectedLevel']][0], 'text' => $text, 'id' => $_REQUEST['selectedLevel'], 'sorsz' => $_REQUEST['sorsz']));
-    $record = array_utf8_encode_recursive(array('title' => mb_convert_encoding($list[$_REQUEST['selectedLevel']][0], "UTF-8", "iso-8859-2"), 'text' => $text, 'id' => $_REQUEST['selectedLevel'], 'sorsz' => $_REQUEST['sorsz']));
+    // DEBUG: Output raw title at the top of the screen
+    echo '<div style="position:fixed;top:0;left:0;width:100%;background:#fff;color:#000;z-index:9999;padding:10px;border-bottom:2px solid #000;font-size:16px;">DEBUG TITLE: ' . htmlspecialchars($list[$_REQUEST['selectedLevel']][0], ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') . '</div>';
+    $record = array_utf8_encode_recursive(array('title' => $list[$_REQUEST['selectedLevel']][0], 'text' => $text, 'id' => $_REQUEST['selectedLevel'], 'sorsz' => $_REQUEST['sorsz']));
 
     print json_encode($record);
 } else if ($_REQUEST['setUserTime']) {
