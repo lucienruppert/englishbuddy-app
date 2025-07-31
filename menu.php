@@ -234,7 +234,7 @@ if ($_REQUEST['content'] == "wordLearning_quick") {
     </tr>
     <tr>
       <td width='100'></td>
-      <td align='left' valign='top' style='color:black;font-size:12pt;' height='300'>
+      <td align='left' valign='top' style='background-color:#003366;color:white;font-size:12pt;' height='300'>
         <span id='ruleTextContainer'></span>
       </td>
       <td width='100'></td>
