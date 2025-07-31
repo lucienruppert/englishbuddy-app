@@ -34,7 +34,7 @@
             <div id="mondatgyakorlas-submenu" class="dropdown-content" style="display:none;position:absolute;z-index:100;background:#222;padding:5px 0;border-radius:6px;min-width:180px;">
               <a href="#" class="medium-color" onclick="document.getElementById('mondatgyakorlas-submenu').classList.remove('show');peldamondatok();">Nyelvtani Példatár</a>
               <a href="#" class="medium-color" onclick="document.getElementById('mondatgyakorlas-submenu').classList.remove('show');intelligensGyakorlo();">Intelligens gyakorló</a>
-              <a href="#" class="medium-color" onclick="document.getElementById('mondatgyakorlas-submenu').classList.remove('show');" <?php print 'onclick=' . $onclick1 . ';'; ?>>Saját Mondatok</a>
+              <a href='#' class="medium-color" <?php print 'onclick=' . $onclick1 . ';'; ?>>Saját Mondatok</a>
               <a href="#" class="medium-color" onclick="document.getElementById('mondatgyakorlas-submenu').classList.remove('show');osszgyakorlo();">Összgyakorló</a>
             </div>
           </div>
