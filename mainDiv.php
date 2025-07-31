@@ -38,7 +38,6 @@
               <a href="#" class="medium-color" onclick="document.getElementById('mondatgyakorlas-submenu').classList.remove('show');osszgyakorlo();">Összgyakorló</a>
             </div>
           </div>
-          <a href='#' class="medium-color show-menu" onclick="intelligensGyakorlo()"><? print translate("intelligensgyakorlo"); ?></a>
           <style>
             .dropdown-content a {
               display: block;
