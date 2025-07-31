@@ -32,10 +32,10 @@
           <div class="dropdown" style="display:inline-block;margin-left:20px;">
             <a href="#" class="medium-color" onclick="event.preventDefault();document.getElementById('mondatgyakorlas-submenu').classList.toggle('show');">Mondatgyakorlás &#9662;</a>
             <div id="mondatgyakorlas-submenu" class="dropdown-content" style="display:none;position:absolute;z-index:100;background:#222;padding:5px 0;border-radius:6px;min-width:180px;">
-              <a href="showRule.php" class="medium-color" onclick="document.getElementById('mondatgyakorlas-submenu').classList.remove('show');">Nyelvtani Példatár</a>
-              <a href="sentenceLearning.php" class="medium-color" onclick="document.getElementById('mondatgyakorlas-submenu').classList.remove('show');">Intelligens gyakorló</a>
-              <a href="sentencePracticeDiv.php" class="medium-color" onclick="document.getElementById('mondatgyakorlas-submenu').classList.remove('show');">Saját Mondatok</a>
-              <a href="sentencePracticeDiv2.php" class="medium-color" onclick="document.getElementById('mondatgyakorlas-submenu').classList.remove('show');">Összgyakorló</a>
+              <a href="#" class="medium-color" onclick="document.getElementById('mondatgyakorlas-submenu').classList.remove('show');peldamondatok();">Nyelvtani Példatár</a>
+              <a href="#" class="medium-color" onclick="document.getElementById('mondatgyakorlas-submenu').classList.remove('show');intelligensGyakorlo();">Intelligens gyakorló</a>
+              <a href="#" class="medium-color" onclick="document.getElementById('mondatgyakorlas-submenu').classList.remove('show');sajatMondatok();">Saját Mondatok</a>
+              <a href="#" class="medium-color" onclick="document.getElementById('mondatgyakorlas-submenu').classList.remove('show');osszgyakorlo();">Összgyakorló</a>
             </div>
           </div>
           <a href='#' class="medium-color" onclick="peldamondatok();"><? print translate("tudastar"); ?></a>
