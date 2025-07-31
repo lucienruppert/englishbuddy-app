@@ -47,17 +47,19 @@ if ($userObject['id'] == 1) {
 
 <div class="navigation-menu">
   <a href="index.php" class="home mobile-menu"><?php print translate('fooldal'); ?></a>
-  <ul class="sf-menu" style="display:inline-block;vertical-align:middle;margin-left:20px;">
-    <li>
-      <a href="#" onclick="event.stopPropagation();">Mondatgyakorlás</a>
-      <ul>
-        <li><a href="showRule.php">Nyelvtani Példatár</a></li>
-        <li><a href="sentenceLearning.php">Intelligens gyakorló</a></li>
-        <li><a href="sentencePracticeDiv.php">Saját Mondatok</a></li>
-        <li><a href="sentencePracticeDiv2.php">Összgyakorló</a></li>
-      </ul>
-    </li>
-  </ul>
+  <?php
+  print '<ul class="sf-menu" style="display:inline-block;vertical-align:middle;margin-left:20px;">';
+  print '<li>';
+  print '<a href="#" onclick="event.stopPropagation();">Mondatgyakorlás</a>';
+  print '<ul>';
+  print '<li><a href="showRule.php">Nyelvtani Példatár</a></li>';
+  print '<li><a href="sentenceLearning.php">Intelligens gyakorló</a></li>';
+  print '<li><a href="sentencePracticeDiv.php">Saját Mondatok</a></li>';
+  print '<li><a href="sentencePracticeDiv2.php">Összgyakorló</a></li>';
+  print '</ul>';
+  print '</li>';
+  print '</ul>';
+  ?>
   <?php
   $upperRowObject = getLinksForPractice();
   if (is_array($upperRowObject) && !in_array($userObject["status"], array(1, 2))) {
