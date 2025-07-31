@@ -41,6 +41,7 @@ include_once('topPHP.php');
 <BODY style='margin:0px;'>
 
     <?php
+    include_once('menu.php');
     include_once('ifElse.php');
     // include_once('ajaxDiv.php');
     include_once('mainDiv.php');
