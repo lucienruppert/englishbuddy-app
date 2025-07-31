@@ -115,7 +115,7 @@ function getLevelList($lang)
             '81' => array('Ábécé', 1),
             '82' => array('Kiejtés', 3),
             '174' => array('Hangsúly', 3),
-            '84' => array('Névelő', 3),
+            '84' => array('Névelők', 3),
             '176' => array('Főnév', 3),
             '85' => array('Melléknév', 3),
             '86' => array('Személyes névmás alany eset + a "ser" ige', 3),
