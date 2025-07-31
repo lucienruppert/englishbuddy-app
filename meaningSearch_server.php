@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once('functions.php');
-header('Content-Type: application/json');
+header('Content-Type: application/json; charset=utf-8');
 error_reporting(0);
 ini_set('display_errors', 0);
 
