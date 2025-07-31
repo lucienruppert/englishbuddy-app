@@ -42,7 +42,7 @@ foreach ($level as $key => $value) {
         }
     }
 }
-$title = $i . '. ' . $level[$_REQUEST['selectedLevel']][0];
+$title = $i . '. ' . mb_convert_encoding($level[$_REQUEST['selectedLevel']][0], 'UTF-8', 'auto');
 
 if (!$text) {
     $text = "Nincs szöveg";
