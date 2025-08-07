@@ -979,6 +979,7 @@ function storeWord($id, $hunWord, $nyelv, $foreignWord, $foreignComm, $sourceCom
         }
         list($letezik) = mysql_fetch_row($result);
         if ($letezik) {
+            $addPart = "";
             if ($forceChangeUserId) {
                 $addPart = ", level_{$ext} = {$level}, user_id = " . (int)$userId . ", crdti = NOW()";
             }
@@ -998,6 +999,7 @@ function storeWord($id, $hunWord, $nyelv, $foreignWord, $foreignComm, $sourceCom
     }
     // update
     else {
+        $addPart = "";
         if ($forceChangeUserId) {
             $addPart = ", user_id = " . (int)$userId . ", crdti = NOW()";
         }
