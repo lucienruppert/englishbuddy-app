@@ -194,6 +194,15 @@ if ($userHasAccess) {
 }
 print "</table></td><td valign='top'>";
 
+?>
+<script type="text/javascript">
+    function wordLink(wordId, count) {
+        document.forms['wordManagement'].wordIdToEdit.value = wordId;
+        document.forms['wordManagement'].submit();
+    }
+</script>
+<?php
+
 if (!$_REQUEST['dictionaryShow']) {
     $_REQUEST['dictionaryShow'] = ($_REQUEST['kitolto'] ? 1 : ($userHasAccess ? 4 : 2));
 }
