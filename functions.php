@@ -26,14 +26,14 @@ ini_set('memory_limit', '1024M');
 $ext = "";
 $GLOBALS['szoPackageSize'] = 10;
 $GLOBALS['szoPackageRecordMpLimit'] = 20;
-$GLOBALS['szoPackageRecordBg'] = "#e97816";
+$GLOBALS['szoPackageRecordBg'] = "white";
 
 $GLOBALS['mondatPackageSize'] = 10;
 $GLOBALS['mondatPackageRecordMpLimit'] = 100;
 $GLOBALS['mondatPackageRecordBg'] = "transparent";
 
 $dark = "#334155"; // slate-700 color
-$highlight = "#e97816"; // orange
+$highlight = "white"; // changed from orange to white
 
 $tdValue = "background-color:#334155";
 $colorValue = "#334155"; // slate-700 color
