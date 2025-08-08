@@ -68,7 +68,7 @@ if (!isset($audio_part)) {
         <tr>
             <td align='center' valign='top' style='height:40px;white-space: nowrap;' onclick="event.stopPropagation();">
                 <input type="button" style=<?php print "'background:" . $globalcolor . ";color:white;font-weight:plain;font-size:18px;border: 0px solid;cursor:pointer;'"; ?> class="btnCategory" value="alap" onclick="store(1)">&nbsp;
-                <input type="button" style=<?php print "'background:" . $globalcolor . ";color:white;font-weight:plain;font-size:18px;border: 0px solid;cursor:pointer;'"; ?> class="btnCategory" value="v�laszt�kos" onclick="store(2)">&nbsp;
+                <input type="button" style=<?php print "'background:" . $globalcolor . ";color:white;font-weight:plain;font-size:18px;border: 0px solid;cursor:pointer;'"; ?> class="btnCategory" value="választékos" onclick="store(2)">&nbsp;
                 <input type="button" style=<?php print "'background:" . $globalcolor . ";color:white;font-weight:plain;font-size:18px;border: 0px solid;cursor:pointer;'"; ?> class="btnCategory" value="ritka" onclick="store(3)">
             </td>
         </tr>
