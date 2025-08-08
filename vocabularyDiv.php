@@ -3,7 +3,7 @@
         <tr>
             <td></td>
             <td></td>
-            <td align='center' width=<?php echo "\"{$xWidth}\"" ?> style=<?php print "'background:" . $globalcolor . "'"; ?>><a href='#' onmouseover="document.getElementById('vocabularyDiv').style.display = 'none';" style=<?php echo "\"{$xSize}\"" ?>>&nbsp;X&nbsp;</a></td>
+            <td align='center' width=<?php echo "\"{$xWidth}\"" ?> style="background:#334155;"><a href='#' onmouseover="document.getElementById('vocabularyDiv').style.display = 'none';" style=<?php echo "\"{$xSize}\"" ?>>&nbsp;X&nbsp;</a></td>
         </tr>
         <tr>
             <td colspan='3'>
