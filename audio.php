@@ -62,8 +62,8 @@ $link = "index.php?audioszoba=" . $lang;
 
 	.main-select-btn:hover,
 	.main-select-btn:active {
-		background: #f8fafc !important;
-		color: #334155 !important;
+		background: #334155 !important;
+		color: white !important;
 	}
 
 	.audio-grid {
@@ -94,8 +94,8 @@ $link = "index.php?audioszoba=" . $lang;
 	}
 
 	.audio-btn:hover {
-		background: #f8fafc;
-		color: #334155;
+		background: #334155;
+		color: white;
 	}
 </style>
 </style>
