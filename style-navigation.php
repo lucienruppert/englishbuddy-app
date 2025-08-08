@@ -100,11 +100,13 @@
   }
 
   .classroom-button {
-    color: white;
+    color: #334155;
+    background: white;
     padding: 7px 10px;
     letter-spacing: 1px;
     border-radius: 3px;
     font-size: 14px;
+    border: 2px solid #334155;
   }
 
   .navigation-mainDiv {
