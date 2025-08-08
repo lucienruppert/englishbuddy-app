@@ -1498,7 +1498,7 @@ function getUserWords($userObject, $level, $orderLang, $useMarked = false)
 
     $return = array();
     while ($row = mysql_fetch_assoc($result)) {
-        if ($levelList[$row['level']][1] == $level) {
+        if (isset($levelList[$row['level']]) && isset($levelList[$row['level']][1]) && $levelList[$row['level']][1] == $level) {
             $return[] = $row;
         }
     }
