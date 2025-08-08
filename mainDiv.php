@@ -23,14 +23,14 @@
         <span class='hamburger'><img src='images/hamburger.svg' width="30px" height="30px" onclick="toggleMenu();"></span>
         <span style="display:<?php echo $_SESSION['isShown'] ? 'none' : 'flex'; ?>" class="welcome submenu">
           <div class="dropdown" style="display:inline-block;">
-            <a href="#" class="medium-color" onclick="event.preventDefault();document.getElementById('szogyakorlas-submenu').classList.toggle('show');"><?php print translate('szo_gyakorlas'); ?> &#9662;</a>
+            <a href="#" class="medium-color" onclick="event.preventDefault();document.getElementById('mondatgyakorlas-submenu').classList.remove('show');document.getElementById('szogyakorlas-submenu').classList.toggle('show');"><?php print translate('szo_gyakorlas'); ?> &#9662;</a>
             <div id="szogyakorlas-submenu" class="dropdown-content" style="display:none;position:absolute;z-index:100;background:white;border:1px solid #334155;padding:5px 0;border-radius:6px;min-width:160px;">
               <a href="#" class="medium-color" onclick="document.getElementById('szogyakorlas-submenu').classList.remove('show');sajatSzavak();"><?php print translate('increasevocabulary'); ?></a>
               <a href="#" class="medium-color" onclick="document.getElementById('szogyakorlas-submenu').classList.remove('show');alapszokincs();"><?php print translate('basicvocabulary'); ?></a>
             </div>
           </div>
           <div class="dropdown" style="display:inline-block;margin-left:20px;">
-            <a href="#" class="medium-color" onclick="event.preventDefault();document.getElementById('mondatgyakorlas-submenu').classList.toggle('show');">Mondatgyakorlás &#9662;</a>
+            <a href="#" class="medium-color" onclick="event.preventDefault();document.getElementById('szogyakorlas-submenu').classList.remove('show');document.getElementById('mondatgyakorlas-submenu').classList.toggle('show');">Mondatgyakorlás &#9662;</a>
             <div id="mondatgyakorlas-submenu" class="dropdown-content" style="display:none;position:absolute;z-index:100;background:white;border:1px solid #334155;padding:5px 0;border-radius:6px;min-width:180px;">
               <a href="#" class="medium-color" onclick="document.getElementById('mondatgyakorlas-submenu').classList.remove('show');peldamondatok();">Nyelvtani Példatár</a>
               <a href="#" class="medium-color" onclick="document.getElementById('mondatgyakorlas-submenu').classList.remove('show');intelligensGyakorlo();">Intelligens gyakorló</a>
