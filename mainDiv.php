@@ -64,9 +64,17 @@
           </style>
           <script>
             document.addEventListener('click', function(e) {
-              var submenu = document.getElementById('szogyakorlas-submenu');
-              if (submenu && !e.target.closest('.dropdown')) {
-                submenu.classList.remove('show');
+              var szogyakorlasSubmenu = document.getElementById('szogyakorlas-submenu');
+              var mondatgyakorlasSubmenu = document.getElementById('mondatgyakorlas-submenu');
+
+              // Check if click is outside any dropdown
+              if (!e.target.closest('.dropdown')) {
+                if (szogyakorlasSubmenu) {
+                  szogyakorlasSubmenu.classList.remove('show');
+                }
+                if (mondatgyakorlasSubmenu) {
+                  mondatgyakorlasSubmenu.classList.remove('show');
+                }
               }
             });
           </script>
