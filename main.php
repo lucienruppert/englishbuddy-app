@@ -36,7 +36,7 @@ $_SESSION['isShown'] = false;
 </HEAD>
 <style>
     body {
-        background-color: white;
+        background-color: #334155;
         margin: 0;
         padding: 0;
     }

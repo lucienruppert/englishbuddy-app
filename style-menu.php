@@ -1,6 +1,6 @@
 <style>
   body {
-    background: <? print $dark ?>;
+    background: #334155;
     font-family: arial;
     margin: 0;
   }
@@ -232,7 +232,7 @@
   #clientDiv {
     color: black;
   }
-  
+
   #financeDiv {
     position: absolute;
     top: 35px;
