@@ -216,7 +216,7 @@
   .login {
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 50px;
     width: 100vw;
     background: #334155;
     min-height: 400px;
@@ -253,7 +253,6 @@
     border-radius: 15px;
     padding: 30px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-    border: 3px solid white;
   }
 
   @media (max-width: 768px) {
@@ -312,7 +311,6 @@
     border-radius: 8px;
     padding: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    border: 2px solid white;
     display: none;
   }
 
