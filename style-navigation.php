@@ -11,19 +11,41 @@
     text-decoration: none;
   }
 
-  .white-color,
-  .white-color:link,
-  .white-color:active,
-  .white-color:visited,
-  .white-color:hover {
+  a.white-color,
+  a.white-color:link,
+  a.white-color:active,
+  a.white-color:visited,
+  a.white-color:hover,
+  .submenu a.white-color,
+  .submenu a.white-color:link,
+  .submenu a.white-color:active,
+  .submenu a.white-color:visited,
+  .submenu a.white-color:hover {
     color: #334155 !important;
+    text-decoration: none !important;
   }
 
-  .medium-color,
-  .medium-color:link,
-  .medium-color:active,
-  .medium-color:visited,
-  .medium-color:hover {
+  a.medium-color,
+  a.medium-color:link,
+  a.medium-color:active,
+  a.medium-color:visited,
+  a.medium-color:hover,
+  .submenu a.medium-color,
+  .submenu a.medium-color:link,
+  .submenu a.medium-color:active,
+  .submenu a.medium-color:visited,
+  .submenu a.medium-color:hover {
+    color: #334155 !important;
+    text-decoration: none !important;
+  }
+
+  /* Override any superfish menu colors */
+  .sf-menu a.medium-color,
+  .sf-menu a.medium-color:visited,
+  .sf-menu a.medium-color:hover,
+  .sf-menu a.white-color,
+  .sf-menu a.white-color:visited,
+  .sf-menu a.white-color:hover {
     color: #334155 !important;
   }
 
