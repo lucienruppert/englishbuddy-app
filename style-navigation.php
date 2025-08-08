@@ -12,11 +12,11 @@
   }
 
   .white-color {
-    color: white;
+    color: #1e293b;
   }
 
   .medium-color {
-    color: <?php print $colorValue ?>;
+    color: #1e293b;
   }
 
   .welcome {
