@@ -216,12 +216,13 @@
   .login {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     margin-top: 50px;
     width: 100vw;
     background: #334155;
     min-height: 400px;
-    align-items: center;
     padding: 20px 0;
+    padding-top: calc(50vh - 150px);
   }
 
   /* .login * {
