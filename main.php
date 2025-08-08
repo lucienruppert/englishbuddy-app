@@ -102,6 +102,18 @@ $_SESSION['isShown'] = false;
         border-color: #334155 !important;
     }
 
+    /* Specific styling for search box and input fields */
+    #txtListFilter {
+        background-color: #334155 !important;
+        color: white !important;
+        border: 1px solid #475569 !important;
+    }
+
+    /* Override any table borders that might be using default colors */
+    table[style*="border"] {
+        border-color: #334155 !important;
+    }
+
     /* Override jQuery UI blue colors with slate-700 theme */
     .ui-state-active,
     .ui-widget-content .ui-state-active,

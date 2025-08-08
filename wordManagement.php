@@ -222,7 +222,7 @@ if (!$_REQUEST['orderLang']) {
 $wordUsers = getWordUsers($_SESSION['userObject']);
 
 /* Sz�t�r r�sz */
-print "<table width='400' align='center' style='border: 1px solid'><tr>";
+print "<table width='400' align='center' style='border: 1px solid #334155; border-collapse: collapse;'><tr>";
 
 if (!$userHasAccess) {
 ?>
