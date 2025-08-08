@@ -93,6 +93,15 @@ $_SESSION['isShown'] = false;
         color: white;
     }
 
+    /* Fix table borders to use slate-700 theme */
+    table {
+        border-color: #334155 !important;
+    }
+
+    table td {
+        border-color: #334155 !important;
+    }
+
     /* Override jQuery UI blue colors with slate-700 theme */
     .ui-state-active,
     .ui-widget-content .ui-state-active,
