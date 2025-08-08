@@ -218,7 +218,7 @@
     justify-content: center;
     margin-top: 100px;
     width: 100vw;
-    background: linear-gradient(135deg, <?php print $dark ?> 0%, #0a2a4a 100%);
+    background: white;
     min-height: 400px;
     align-items: center;
     padding: 20px 0;
@@ -248,12 +248,11 @@
 
   .login-controls {
     width: 300px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
+    background: #334155;
     border-radius: 15px;
     padding: 30px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    border: 1px solid #475569;
   }
 
   @media (max-width: 768px) {
@@ -281,9 +280,9 @@
     font-size: 1.2rem;
     border-radius: 8px;
     color: white;
-    border: 2px solid rgba(60, 120, 216, 0.3);
+    border: 2px solid #475569;
     width: 100%;
-    background: rgba(3, 21, 37, 0.8);
+    background: #1e293b;
     padding: 12px 15px;
     transition: all 0.3s ease;
     box-sizing: border-box;
@@ -291,7 +290,7 @@
 
   .login-field:focus {
     border-color: <?php print $highlight ?>;
-    background: rgba(3, 21, 37, 0.9);
+    background: #0f172a;
     outline: none;
     box-shadow: 0 0 0 3px rgba(233, 120, 22, 0.2);
   }
