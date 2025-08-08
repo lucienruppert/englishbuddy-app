@@ -35,6 +35,12 @@ $_SESSION['isShown'] = false;
     <?php ajaxTimerPrint(); ?>
 </HEAD>
 <style>
+    body {
+        background-color: white;
+        margin: 0;
+        padding: 0;
+    }
+
     #content {
         position: absolute;
         top: 57px;
