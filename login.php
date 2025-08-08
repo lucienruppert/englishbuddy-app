@@ -34,7 +34,7 @@
             <input class="login-field" type='text' name='email' placeholder="Email" onclick="event.stopPropagation();clearit(this, 0);">
           </div>
           <div>
-            <input class="login-field" type='password' name='username' placeholder="<?php print translate('subs_Jelszo'); ?>" id='username'>
+            <input class="login-field" type='password' name='username' placeholder="<?php print translate('subs_Jelszó'); ?>" id='username'>
           </div>
         </div>
       </div>
