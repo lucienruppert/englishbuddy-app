@@ -622,8 +622,8 @@ print "<script type='text/javascript'>var jelentes = \"" . (isset($word2) ? html
 // Initialize audio_part variable
 $audio_part = '';
 
-print "<span id='elsoBetuSpan' style='display:none;$solutionlineFontSize;color:$globalcolor;' onclick=\"event.stopPropagation();\"></span>";
-print "<span id='jelentesSpan' style='display:none;$solutionlineFontSize;color:$globalcolor;' onclick=\"event.stopPropagation();\">{$word2} {$title2}{$audio_part}</span>";
+print "<span id='elsoBetuSpan' style='display:none;$solutionlineFontSize;color:white;' onclick=\"event.stopPropagation();\"></span>";
+print "<span id='jelentesSpan' style='display:none;$solutionlineFontSize;color:white;' onclick=\"event.stopPropagation();\">{$word2} {$title2}{$audio_part}</span>";
 print "</td></tr>";
 
 print "<tr><td></td>";
