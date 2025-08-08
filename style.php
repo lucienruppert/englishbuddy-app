@@ -218,7 +218,7 @@
     justify-content: center;
     margin-top: 100px;
     width: 100vw;
-    background: white;
+    background: #334155;
     min-height: 400px;
     align-items: center;
     padding: 20px 0;
@@ -252,7 +252,7 @@
     border-radius: 15px;
     padding: 30px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-    border: 1px solid #475569;
+    border: 3px solid white;
   }
 
   @media (max-width: 768px) {
