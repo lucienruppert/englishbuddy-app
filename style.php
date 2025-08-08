@@ -5,7 +5,7 @@
   }
 
   body {
-    background: <? print $dark ?>;
+    background: white;
     font-family: arial;
     margin: 0;
   }
