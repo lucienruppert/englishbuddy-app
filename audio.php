@@ -11,12 +11,12 @@ $link = "index.php?audioszoba=" . $lang;
 <form action="<? echo $link; ?>" method="POST">
 	<table border='0' align='center' cellspacing='10'>
 		<tr>
-			<td width='120' height='50'> <input class="main-select-btn" style=<?php print "'width:100%;height:100%;background:" . $globalcolor . ";color:white;font-size:15pt;border:none;border-radius:10px;'" ?> type="submit" name="spanish" value="<?php print translate("Spanyol") ?>" /></td>
-			<td width='120' height='50'> <input class="main-select-btn" style=<?php print "'width:100%;height:100%;background:" . $globalcolor . ";color:white;font-size:15pt;border:none;border-radius:10px;'" ?> type="submit" name="angol_01" value="<?php print translate("Angol kezdo") ?>" /></td>
-			<td width='120' height='50'> <input class="main-select-btn" style=<?php print "'width:100%;height:100%;background:" . $globalcolor . ";color:white;font-size:15pt;border:none;border-radius:10px;'" ?> type="submit" name="angol_02" value="<?php print translate("Angol brit") ?>" /></td>
-			<td width='120' height='50'> <input class="main-select-btn" style=<?php print "'width:100%;height:100%;background:" . $globalcolor . ";color:white;font-size:15pt;border:none;border-radius:10px;'" ?> type="submit" name="angol_03" value="<?php print translate("Angol halado") ?>" /></td>
-			<td width='120' height='50'> <input class="main-select-btn" style=<?php print "'width:100%;height:100%;background:" . $globalcolor . ";color:white;font-size:15pt;border:none;border-radius:10px;'" ?> type="submit" name="angol_04" value="<?php print translate("Angol BP") ?>" /></td>
-			<td width='120' height='50'> <input class="main-select-btn" style=<?php print "'width:100%;height:100%;background:" . $globalcolor . ";color:white;font-size:15pt;border:none;border-radius:10px;'" ?> type="submit" name="angol_05" value="<?php print translate("Angol ECL") ?>" /></td>
+			<td width='120' height='50'> <input class="main-select-btn" style="width:100%;height:100%;background:white;color:#334155;font-size:15pt;border:none;border-radius:10px;" type="submit" name="spanish" value="<?php print translate("Spanyol") ?>" /></td>
+			<td width='120' height='50'> <input class="main-select-btn" style="width:100%;height:100%;background:white;color:#334155;font-size:15pt;border:none;border-radius:10px;" type="submit" name="angol_01" value="<?php print translate("Angol kezdo") ?>" /></td>
+			<td width='120' height='50'> <input class="main-select-btn" style="width:100%;height:100%;background:white;color:#334155;font-size:15pt;border:none;border-radius:10px;" type="submit" name="angol_02" value="<?php print translate("Angol brit") ?>" /></td>
+			<td width='120' height='50'> <input class="main-select-btn" style="width:100%;height:100%;background:white;color:#334155;font-size:15pt;border:none;border-radius:10px;" type="submit" name="angol_03" value="<?php print translate("Angol halado") ?>" /></td>
+			<td width='120' height='50'> <input class="main-select-btn" style="width:100%;height:100%;background:white;color:#334155;font-size:15pt;border:none;border-radius:10px;" type="submit" name="angol_04" value="<?php print translate("Angol BP") ?>" /></td>
+			<td width='120' height='50'> <input class="main-select-btn" style="width:100%;height:100%;background:white;color:#334155;font-size:15pt;border:none;border-radius:10px;" type="submit" name="angol_05" value="<?php print translate("Angol ECL") ?>" /></td>
 		</tr>
 
 	</table>
@@ -48,15 +48,22 @@ $link = "index.php?audioszoba=" . $lang;
 <?php } ?>
 
 <style>
+	body {
+		background: #334155;
+	}
+
 	.main-select-btn {
 		cursor: pointer;
 		font-size: 13px !important;
 		text-transform: capitalize;
+		background: white !important;
+		color: #334155 !important;
 	}
 
 	.main-select-btn:hover,
 	.main-select-btn:active {
-		background: <?php print $highlight; ?> !important;
+		background: #f8fafc !important;
+		color: #334155 !important;
 	}
 
 	.audio-grid {
@@ -69,8 +76,8 @@ $link = "index.php?audioszoba=" . $lang;
 	}
 
 	.audio-btn {
-		background: <?php print $globalcolor; ?>;
-		color: white;
+		background: white;
+		color: #334155;
 		font-size: 16px;
 		border: none;
 		border-radius: 50%;
@@ -87,7 +94,8 @@ $link = "index.php?audioszoba=" . $lang;
 	}
 
 	.audio-btn:hover {
-		background: <?php print $highlight; ?>;
+		background: #f8fafc;
+		color: #334155;
 	}
 </style>
 </style>
