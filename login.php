@@ -17,10 +17,10 @@
             if (loginButton) {
               loginButton.addEventListener('click', function(e) {
                 e.preventDefault();
-                var loginInputs = document.querySelectorAll('.login-input');
-                if (loginInputs.length > 0) {
-                  if (window.getComputedStyle(loginInputs[0]).display === 'none') {
-                    loginInputs[0].style.display = 'block';
+                var loginInputs = document.querySelector('.login-input');
+                if (loginInputs) {
+                  if (loginInputs.style.display === 'none' || loginInputs.style.display === '') {
+                    loginInputs.style.display = 'block';
                   } else {
                     document.getElementById('login-form').submit();
                   }

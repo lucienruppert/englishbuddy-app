@@ -247,6 +247,7 @@
   }
 
   .login-controls {
+    position: relative;
     width: 300px;
     background: #334155;
     border-radius: 15px;
@@ -301,8 +302,18 @@
   }
 
   .login-input {
-    margin-top: 15px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 10px;
     animation: slideDown 0.3s ease;
+    background: #334155;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid white;
+    display: none;
   }
 
   .login-input>div {
