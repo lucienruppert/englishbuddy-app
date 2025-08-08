@@ -32,7 +32,7 @@ $GLOBALS['mondatPackageSize'] = 10;
 $GLOBALS['mondatPackageRecordMpLimit'] = 100;
 $GLOBALS['mondatPackageRecordBg'] = "transparent";
 
-$dark = "#031525"; // dark blue
+$dark = "#334155"; // slate-700 color
 $highlight = "#e97816"; // orange
 
 $tdValue = "background-color:#334155";

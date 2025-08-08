@@ -225,7 +225,7 @@ if ($_REQUEST['content'] == "wordLearning_quick") {
 
 <div id='ruleDiv' onclick="event.stopPropagation();this.style.display='none'">
   <input type='hidden' name='ruleId' id='ruleId' value=''>
-  <table width='100%' border='0' cellspacing='0' cellpadding='0' style='background-color:#031525;'>
+  <table width='100%' border='0' cellspacing='0' cellpadding='0' style='background-color:#334155;'>
     <tr>
       <td style='background-color:<?php print $highlight ?>;' height='50' align='center' colspan='3'><span id='ruleTitleSpan' style='font-size:20pt;color:white;'></span></td>
     </tr>
@@ -234,8 +234,8 @@ if ($_REQUEST['content'] == "wordLearning_quick") {
     </tr>
     <tr>
       <td width='100'></td>
-      <td align='left' valign='top' style='background-color:#031525;color:white;font-size:12pt;' height='300'>
-        <span id='ruleTextContainer' style='display:block;background-color:#031525;color:white;'></span>
+      <td align='left' valign='top' style='background-color:#334155;color:white;font-size:12pt;' height='300'>
+        <span id='ruleTextContainer' style='display:block;background-color:#334155;color:white;'></span>
       </td>
       <td width='100'></td>
     </tr>

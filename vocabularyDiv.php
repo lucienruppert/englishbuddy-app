@@ -1,4 +1,4 @@
-<div id='vocabularyDiv' style='background-color:#031525;position:absolute;top:100px;left:50%;margin-left:-180px;filter:alpha(opacity=100);opacity:1;z-index:99;display:none;border: 1px solid grey;'>
+<div id='vocabularyDiv' style='background-color:#334155;position:absolute;top:100px;left:50%;margin-left:-180px;filter:alpha(opacity=100);opacity:1;z-index:99;display:none;border: 1px solid grey;'>
     <table border='0'>
         <tr>
             <td></td>
