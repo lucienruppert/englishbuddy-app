@@ -12,11 +12,11 @@
   }
 
   .white-color {
-    color: #1e293b;
+    color: #334155;
   }
 
   .medium-color {
-    color: #1e293b;
+    color: #334155;
   }
 
   .welcome {

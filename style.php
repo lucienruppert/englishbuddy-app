@@ -230,19 +230,19 @@
 
   .button {
     text-align: center;
-    background: linear-gradient(135deg, <?php print $highlight ?> 0%, #d16a0f 100%);
+    background: white;
     border-radius: 8px;
     padding: 15px 12px;
     cursor: pointer;
     letter-spacing: 2px;
-    box-shadow: 0 4px 15px rgba(233, 120, 22, 0.3);
+    box-shadow: 0 4px 15px rgba(51, 65, 85, 0.3);
     transition: all 0.3s ease;
-    border: none;
+    border: 2px solid #334155;
   }
 
   .button:hover {
-    background: linear-gradient(135deg, #d16a0f 0%, <?php print $highlight ?> 100%);
-    box-shadow: 0 6px 20px rgba(233, 120, 22, 0.4);
+    background: #f8fafc;
+    box-shadow: 0 6px 20px rgba(51, 65, 85, 0.4);
     transform: translateY(-2px);
   }
 
@@ -265,10 +265,11 @@
 
   .login-button {
     font-size: 20px;
-    color: white;
+    color: #334155;
+    background: white;
     text-decoration: none;
     font-weight: 600;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: none;
   }
 
   .menu-link {
