@@ -35,7 +35,7 @@ $GLOBALS['mondatPackageRecordBg'] = "transparent";
 $dark = "#031525"; // dark blue
 $highlight = "#e97816"; // orange
 
-$tdValue = "background-color:#031525";
+$tdValue = "background-color:#334155";
 $colorValue = "#334155"; // slate-700 color
 $GLOBALS['TDBgGlobalColor'] = $tdValue;
 $GLOBALS['globalcolor'] = $colorValue;
