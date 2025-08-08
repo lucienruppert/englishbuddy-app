@@ -250,6 +250,7 @@
   .login-controls {
     position: relative;
     width: 300px;
+    max-width: 90vw;
     background: #334155;
     border-radius: 15px;
     padding: 30px;
@@ -258,9 +259,23 @@
 
   @media (max-width: 768px) {
     .login-controls {
-      width: 95vw;
+      width: 90vw;
+      max-width: 400px;
       margin: 0 10px;
-      padding: 20px;
+      padding: 20px 15px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .login-controls {
+      width: 95vw;
+      padding: 15px 10px;
+      border-radius: 10px;
+    }
+
+    .login {
+      padding: 10px 0;
+      padding-top: calc(50vh - 120px);
     }
   }
 
@@ -288,6 +303,17 @@
     padding: 12px 15px;
     transition: all 0.3s ease;
     box-sizing: border-box;
+  }
+
+  @media (max-width: 480px) {
+    .login-field {
+      font-size: 1rem;
+      padding: 10px 12px;
+    }
+
+    .login-button {
+      font-size: 18px;
+    }
   }
 
   .login-field:focus {
