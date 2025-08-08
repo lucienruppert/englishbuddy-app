@@ -557,7 +557,7 @@ if (($showNumber == $KESZ_UGYES_VAGY) && $seconds > 0) {
     ";
     if ($title1 != "()" && !$_SESSION['cbMultiPractice']) {
         print "
-            <div style='$questionedlineFontSize2;'><br><font color='$globalcolor'>$title1</font></div>
+            <div style='$questionedlineFontSize2;'><br><font color='white'>$title1</font></div>
         ";
     }
 }
