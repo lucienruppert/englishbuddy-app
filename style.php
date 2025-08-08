@@ -290,10 +290,10 @@
   }
 
   .login-field:focus {
-    border-color: <?php print $highlight ?>;
+    border-color: #6b7280;
     background: #334155;
     outline: none;
-    box-shadow: 0 0 0 3px rgba(233, 120, 22, 0.2);
+    box-shadow: 0 0 0 3px rgba(107, 114, 128, 0.2);
   }
 
   .login-field::placeholder {
