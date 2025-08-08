@@ -85,6 +85,36 @@ $_SESSION['isShown'] = false;
     .allWordsTable * {
         color: white;
     }
+
+    /* Override jQuery UI blue colors with slate-700 theme */
+    .ui-state-active,
+    .ui-widget-content .ui-state-active,
+    .ui-widget-header .ui-state-active,
+    a.ui-button:active,
+    .ui-button:active,
+    .ui-button.ui-state-active:hover {
+        border: 1px solid #334155 !important;
+        background: #334155 !important;
+        font-weight: normal;
+        color: #fff !important;
+    }
+
+    .ui-icon-background,
+    .ui-state-active .ui-icon-background {
+        border: #334155 !important;
+        background-color: #fff !important;
+    }
+
+    .ui-state-active a,
+    .ui-state-active a:link,
+    .ui-state-active a:visited {
+        color: #fff !important;
+        text-decoration: none;
+    }
+
+    .ui-visual-focus {
+        box-shadow: 0 0 3px 1px rgba(51, 65, 85, 0.5) !important;
+    }
 </style>
 
 <BODY>

@@ -1,7 +1,7 @@
 <?php
 // Force UTF-8 output for all browsers
 if (!headers_sent()) {
-    header            print "<div style='background-color:#334155;padding:10px;border-radius:6px;'><textarea name='txtRule' style='color:white;background-color:#334155;' rows=15 cols=100>{$text}</textarea></div>";'Content-Type: text/html; charset=utf-8');
+    header('Content-Type: text/html; charset=utf-8');
 }
 if (!$_SESSION['userObject']) {
     session_start();
