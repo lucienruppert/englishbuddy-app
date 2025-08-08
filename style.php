@@ -24,7 +24,7 @@
   }
 
   input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 1000px <? print $globalcolor ?> inset;
+    -webkit-box-shadow: 0 0 0 1000px #334155 inset;
     -webkit-text-fill-color: #FFFFFF;
   }
 
