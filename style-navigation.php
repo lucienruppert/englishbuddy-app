@@ -50,7 +50,7 @@
   }
 
   .welcome {
-    color: <?php print $highlight ?>;
+    color: #334155;
     font-size: 14px;
     text-align: left;
     font-weight: bold;

@@ -403,7 +403,7 @@
 
   .logout,
   .home {
-    color: <?php print $highlight ?>;
+    color: #334155;
   }
 
   .grammar-examples * {
