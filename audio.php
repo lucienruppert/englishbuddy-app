@@ -5,7 +5,7 @@ if (isset($_GET['audioszoba'])) {
 }
 $link = "index.php?audioszoba=" . $lang;
 ?>
-<div style='width:100%;text-align:center;margin-top:20px;margin-bottom:20px;'><a href='index.php' style='font-size:14px;color:<?php print $globalcolor; ?>;'><?php print translate("vissza_a_fooldalra") ?></a></div>
+<div style='width:100%;text-align:center;margin-top:20px;margin-bottom:20px;'><a href='index.php' style='font-size:14px;color:white;'><?php print translate("vissza_a_fooldalra") ?></a></div>
 
 
 <form action="<? echo $link; ?>" method="POST">
