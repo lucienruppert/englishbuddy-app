@@ -255,26 +255,29 @@
     border-radius: 15px;
     padding: 30px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
   }
 
   @media (max-width: 768px) {
     .login-controls {
       width: 90vw;
       max-width: 400px;
-      margin: 0 10px;
+      margin: 0 auto;
       padding: 20px 15px;
     }
   }
 
   @media (max-width: 480px) {
     .login-controls {
-      width: 95vw;
+      width: calc(100vw - 20px);
+      max-width: calc(100vw - 20px);
+      margin: 0 10px;
       padding: 15px 10px;
       border-radius: 10px;
     }
 
     .login {
-      padding: 10px 0;
+      padding: 10px 5px;
       padding-top: calc(50vh - 120px);
     }
   }
