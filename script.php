@@ -286,10 +286,20 @@
     if (document.getElementById('clientDiv').style.display == 'none') {
       document.getElementById('clientDiv').style.display = 'block';
       document.getElementById('financeDiv').style.display = 'none';
-      document.getElementById('mainDiv').style.display = 'none';
+      // Hide only the content part of mainDiv, not the navigation
+      var mainDivChildren = document.getElementById('mainDiv').children;
+      for (var i = 0; i < mainDivChildren.length; i++) {
+        if (!mainDivChildren[i].classList.contains('navigation-mainDiv')) {
+          mainDivChildren[i].style.display = 'none';
+        }
+      }
     } else {
       document.getElementById('clientDiv').style.display = 'none';
-      document.getElementById('mainDiv').style.display = 'block';
+      // Show all mainDiv children again
+      var mainDivChildren = document.getElementById('mainDiv').children;
+      for (var i = 0; i < mainDivChildren.length; i++) {
+        mainDivChildren[i].style.display = '';
+      }
     }
   }
 
