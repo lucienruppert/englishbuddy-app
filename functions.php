@@ -36,7 +36,7 @@ $dark = "#031525"; // dark blue
 $highlight = "#e97816"; // orange
 
 $tdValue = "background-color:#031525";
-$colorValue = "#3c78d8"; // brighter blue for better readability
+$colorValue = "#334155"; // slate-700 color
 $GLOBALS['TDBgGlobalColor'] = $tdValue;
 $GLOBALS['globalcolor'] = $colorValue;
 
