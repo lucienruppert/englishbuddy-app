@@ -218,6 +218,10 @@
     justify-content: center;
     margin-top: 100px;
     width: 100vw;
+    background: linear-gradient(135deg, <?php print $dark ?> 0%, #0a2a4a 100%);
+    min-height: 400px;
+    align-items: center;
+    padding: 20px 0;
   }
 
   /* .login * {
@@ -226,26 +230,46 @@
 
   .button {
     text-align: center;
-    background-color: <?php print $highlight ?>;
-    border-radius: 5px;
-    padding: 12px;
+    background: linear-gradient(135deg, <?php print $highlight ?> 0%, #d16a0f 100%);
+    border-radius: 8px;
+    padding: 15px 12px;
     cursor: pointer;
     letter-spacing: 2px;
+    box-shadow: 0 4px 15px rgba(233, 120, 22, 0.3);
+    transition: all 0.3s ease;
+    border: none;
+  }
+
+  .button:hover {
+    background: linear-gradient(135deg, #d16a0f 0%, <?php print $highlight ?> 100%);
+    box-shadow: 0 6px 20px rgba(233, 120, 22, 0.4);
+    transform: translateY(-2px);
   }
 
   .login-controls {
     width: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   @media (max-width: 768px) {
     .login-controls {
       width: 95vw;
+      margin: 0 10px;
+      padding: 20px;
     }
   }
 
   .login-button {
     font-size: 20px;
     color: white;
+    text-decoration: none;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
 
   .menu-link {
@@ -253,13 +277,76 @@
   }
 
   .login-field {
-    margin-top: 5px;
+    margin-top: 8px;
     font-size: 1.2rem;
-    border-radius: 5px;
-    color: grey;
-    border: 1px solid grey;
+    border-radius: 8px;
+    color: white;
+    border: 2px solid rgba(60, 120, 216, 0.3);
     width: 100%;
-    background-color: <?php print $dark ?>;
+    background: rgba(3, 21, 37, 0.8);
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+  }
+
+  .login-field:focus {
+    border-color: <?php print $highlight ?>;
+    background: rgba(3, 21, 37, 0.9);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(233, 120, 22, 0.2);
+  }
+
+  .login-field::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .login-input {
+    margin-top: 15px;
+    animation: slideDown 0.3s ease;
+  }
+
+  .login-input>div {
+    margin-bottom: 10px;
+  }
+
+  .login-input>div:last-child {
+    margin-bottom: 0;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Add some polish to the login toggle button */
+  .login-toggle {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .login-toggle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+
+  .login-toggle:active::before {
+    width: 300px;
+    height: 300px;
   }
 
   table {
