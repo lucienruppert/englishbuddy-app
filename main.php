@@ -68,7 +68,8 @@ $_SESSION['isShown'] = false;
 
     textarea,
     input[type='text'] {
-        background-color: <?php print $dark ?>;
+        background-color: #334155;
+        color: white;
     }
 
     input[type='text'] {
@@ -78,7 +79,7 @@ $_SESSION['isShown'] = false;
 
     input[type='button'] {
         text-align: center;
-        background-color: <?php echo $dark; ?>;
+        background-color: #334155;
         border: 1px solid <?php echo $highlight; ?>;
         border-radius: 2px;
         padding: 2px 12px;
