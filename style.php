@@ -282,7 +282,7 @@
     color: white;
     border: 2px solid #475569;
     width: 100%;
-    background: #1e293b;
+    background: #334155;
     padding: 12px 15px;
     transition: all 0.3s ease;
     box-sizing: border-box;
@@ -290,7 +290,7 @@
 
   .login-field:focus {
     border-color: <?php print $highlight ?>;
-    background: #0f172a;
+    background: #334155;
     outline: none;
     box-shadow: 0 0 0 3px rgba(233, 120, 22, 0.2);
   }
