@@ -11,12 +11,20 @@
     text-decoration: none;
   }
 
-  .white-color {
-    color: #334155;
+  .white-color,
+  .white-color:link,
+  .white-color:active,
+  .white-color:visited,
+  .white-color:hover {
+    color: #334155 !important;
   }
 
-  .medium-color {
-    color: #334155;
+  .medium-color,
+  .medium-color:link,
+  .medium-color:active,
+  .medium-color:visited,
+  .medium-color:hover {
+    color: #334155 !important;
   }
 
   .welcome {
