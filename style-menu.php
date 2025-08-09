@@ -323,6 +323,8 @@
     filter: alpha(opacity=100);
     opacity: 1;
     z-index: 99;
+    border: 2px solid white;
+    border-radius: 6px;
   }
 
   #ajaxTable #ajaxTableFirstTd {
