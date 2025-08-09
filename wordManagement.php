@@ -91,6 +91,7 @@ if ($_REQUEST['wordIdToEdit'] > 0) {
 $nyelvText = ucfirst(translate(getLangExtByLangId($userObject['nyelv'])));
 $forrasNyelvText = ucfirst(translate(getLangExtByLangId($userObject['forras_nyelv'])));
 
+print "<div style='border: 2px solid white; border-radius: 8px; padding: 20px; margin: 20px;'>";
 print "<form id='wordManagement' name='wordManagement' method='post'>";
 print "<input type='hidden' name='userId' value='" . (isset($_POST['userId']) ? htmlspecialchars($_POST['userId']) : '') . "'>";
 print "<input type='hidden' name='recordId' value='" . $wordRecord['id'] . "'>";
@@ -605,6 +606,7 @@ print "\n<input type='hidden' name='actionType' value=''>";
 print "\n<input type='hidden' name='content' value='wordManagement'>";
 print "\n<input type='hidden' name='wordIdToEdit' value='" . $_REQUEST['wordIdToEdit'] . "'>";
 print "</form>";
+print "</div>";
 
 //if(!$userHasAccess){
 $wordCount = $hfCount;
