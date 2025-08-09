@@ -294,6 +294,8 @@
     left: 50%;
     margin-left: -400px;
     height: 400px;
+    border: 2px solid white;
+    border-radius: 8px;
   }
 
   .btnAjaxDivSave {
@@ -316,15 +318,18 @@
     /* top: 8px; */
     left: 50%;
     margin-left: -100px;
-    width: 100px;
-    height: 22px;
+    width: 200px;
+    height: 40px;
     text-align: center;
+    background-color: #334155;
     color: white;
     filter: alpha(opacity=100);
     opacity: 1;
     z-index: 99;
     border: 2px solid white !important;
     border-radius: 6px !important;
+    padding: 8px;
+    font-size: 14px;
   }
 
   #ajaxTable #ajaxTableFirstTd {
