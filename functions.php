@@ -1823,7 +1823,7 @@ function ajaxSearchPrint($lang)
             <td style='<? print $GLOBALS['TDBgGlobalColor']; ?>;width:150px;' align='left'>
                 <div class='ajaxSearchTxtContainer'>
                     <span class="fa fa-search"></span>
-                    <input type='text' name='ajaxSearchInput' id='ajaxSearchInput' placeholder=<?php print "'" . translate('search') . "...'"; ?> style='font-size: 16px; height: 40px; padding: 10px; width: 200px;' onclick="event.stopPropagation();" onblur="this.value = '';$('#ajaxSearchOutput').hide();" onkeyup="
+                    <input type='text' name='ajaxSearchInput' id='ajaxSearchInput' placeholder=<?php print "'" . translate('search') . "...'"; ?> style='font-size: 16px; height: 40px; padding: 10px; width: 160px; border-radius: 8px; border: 1px solid #ccc;' onclick="event.stopPropagation();" onblur="this.value = '';$('#ajaxSearchOutput').hide();" onkeyup="
                     if (searchTimeout != undefined){
                         clearTimeout(searchTimeout);
                     }
