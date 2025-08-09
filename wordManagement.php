@@ -227,7 +227,7 @@ print "<table width='400' align='center' style='border: 1px solid #334155; borde
 
 if (!$userHasAccess) {
 ?>
-    <td><input type='textbox' name='txtListFilter' id='txtListFilter' size='17'></td>
+    <td><input type='textbox' name='txtListFilter' id='txtListFilter' size='25' style='font-size: 16px; height: 40px; padding: 8px;'></td>
 <?php } ?>
 <td width='75'>
     <input type='button' name='orderButton' value=<?php
