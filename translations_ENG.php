@@ -241,5 +241,5 @@ $trans["Angol brit"] = "English British";
 $trans["Angol halado"] = "English Advanced";
 $trans["Angol BP"] = "English BP";
 $trans["Angol ECL"] = "English ECL";
-$trans["available_content"] = "Available Content";
+$trans["available_content"] = "Practice Content";
 $trans["sentences"] = "sentences";

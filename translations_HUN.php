@@ -233,5 +233,5 @@ $trans["legujabb_szavak"] = "Legújabb szavak";
 
 $trans["tandijak"] = "Tandíj";
 $trans["tanulok"] = "Tanulók";
-$trans["available_content"] = "Elérhető tartalom";
-$trans["sentences"] = "mondatok";
+$trans["available_content"] = "Gyakorló tartalom";
+$trans["sentences"] = "mondat";
