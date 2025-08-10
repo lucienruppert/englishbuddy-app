@@ -55,7 +55,7 @@ $trans['tanuloszoba'] = "Classroom";
 $trans['kitolto'] = "translate";
 $trans['sajat_mondat_szo'] = "All my stuff";
 
-$trans['funkcio_skype'] = "A funkció csak Skype-os tanulók számára érhetõ el!";
+$trans['funkcio_skype'] = "A funkciï¿½ csak Skype-os tanulï¿½k szï¿½mï¿½ra ï¿½rhetï¿½ el!";
 
 $trans['vocabulary'] = "BASIC<br>VOCABULARY";
 $trans['mumus'] = "HARD WORDS";
@@ -119,18 +119,18 @@ $trans['intelligensgyakorlo_android'] = "INTELLIGENT PRACTICE";
 
 $trans['subscribe'] = "SUBSCRIBE";
 
-$trans['subs_Üdvözöljük!'] = "Hello,";
-$trans['subs_Kérjük, töltse ki adatait!'] = "You can subscribe to the free functions here";
-$trans['subs_Vezetéknév'] = "Last name";
-$trans['subs_Keresztnév'] = "First name";
+$trans['subs_ï¿½dvï¿½zï¿½ljï¿½k!'] = "Hello,";
+$trans['subs_Kï¿½rjï¿½k, tï¿½ltse ki adatait!'] = "You can subscribe to the free functions here";
+$trans['subs_Vezetï¿½knï¿½v'] = "Last name";
+$trans['subs_Keresztnï¿½v'] = "First name";
 $trans['subs_E-mail'] = "E-mail";
-$trans['subs_Jelszó'] = "Password";
-$trans['subs_Tanulandó nyelv'] = "Language to learn";
-$trans['subs_Elõfizetési idõ'] = "Subscription period";
-$trans['subs_hónap'] = "month";
+$trans['subs_Jelszï¿½'] = "Password";
+$trans['subs_Tanulandï¿½ nyelv'] = "Language to learn";
+$trans['subs_Elï¿½fizetï¿½si idï¿½'] = "Subscription period";
+$trans['subs_hï¿½nap'] = "month";
 
 $trans['subs_text2'] = "We wish you fun with learning,<br>lingocasa";
-$trans['subs_Elküld'] = "Send";
+$trans['subs_Elkï¿½ld'] = "Send";
 
 $trans['search'] = "Search";
 $trans['magyar1'] = "Hungarian";
@@ -241,5 +241,5 @@ $trans["Angol brit"] = "English British";
 $trans["Angol halado"] = "English Advanced";
 $trans["Angol BP"] = "English BP";
 $trans["Angol ECL"] = "English ECL";
-
-?>
+$trans["available_content"] = "Available Content";
+$trans["sentences"] = "sentences";

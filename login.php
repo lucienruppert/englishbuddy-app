@@ -39,5 +39,33 @@
         </div>
       </div>
     </form>
+
+    <!-- Word and Sentence Counter Display -->
+    <div class="content-stats" style="text-align: center; margin-top: 20px; padding: 15px; background-color: rgba(255,255,255,0.1); border-radius: 8px;">
+      <?php
+      $totalCounts = getTotalWordAndSentenceCounts();
+      ?>
+      <div style="color: white; font-size: 14px; margin-bottom: 5px;">
+        <strong><?php print translate('available_content'); ?>:</strong>
+      </div>
+      <div style="display: flex; justify-content: center; gap: 30px; color: white;">
+        <div style="text-align: center;">
+          <div style="font-size: 24px; font-weight: bold; color: #4CAF50;">
+            <?php echo number_format($totalCounts['words']); ?>
+          </div>
+          <div style="font-size: 12px; opacity: 0.8;">
+            <?php print translate('words'); ?>
+          </div>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 24px; font-weight: bold; color: #2196F3;">
+            <?php echo number_format($totalCounts['sentences']); ?>
+          </div>
+          <div style="font-size: 12px; opacity: 0.8;">
+            <?php print translate('sentences'); ?>
+          </div>
+        </div>
+      </div>
+    </div>
   <?php } ?>
 </div>

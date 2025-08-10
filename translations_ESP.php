@@ -15,7 +15,7 @@ $trans['feladatok_kovetkezo_orara'] = "Homework for the next lesson";
 $trans['fooldal'] = "Inicio";
 $trans['igeragozas'] = "Conjugation";
 $trans['abece'] = "Alphabet";
-$trans['kiejtes'] = "Pronunciación";
+$trans['kiejtes'] = "Pronunciaciï¿½n";
 $trans['szorend'] = "Sintaxis";
 $trans['szorend2'] = "Sintaxis";
 $trans['nevmasok'] = "Pronombres";
@@ -27,15 +27,15 @@ $trans['rogzit'] = "Guardar";
 $trans['frissit'] = "Actualizar";
 $trans['sorrend'] = "Orden";
 
-$trans['hun'] = 'úngaro';
-$trans['angol'] = 'inglés';
-$trans['nemet'] = 'alemán';
+$trans['hun'] = 'ï¿½ngaro';
+$trans['angol'] = 'inglï¿½s';
+$trans['nemet'] = 'alemï¿½n';
 $trans['spanyol'] = 'espa&#241;ol';
-$trans['arab'] = 'árabe';
+$trans['arab'] = 'ï¿½rabe';
 
 $trans['nincs_talalat'] = 'No encontrado';
 
-$trans['szo_mondatba'] = "OPCIÓN: Haz una frase con esta palabra.";
+$trans['szo_mondatba'] = "OPCIï¿½N: Haz una frase con esta palabra.";
 $trans['rogzitem_hazimba'] = "Guardar como ejercicio";
 
 $trans['kovetkezo_ora'] = "Proxima clase";
@@ -52,40 +52,40 @@ $trans['kategorizalas'] = "categorias";
 $trans['peldamondatok'] = "(TODO)";
 $trans['peldamondatok_all'] = "Frases (todo)";
 $trans['tudastar_title'] = "Banco de conocimientos";
-$trans['tudastar'] = "PRACTICAR<br>GRAMÁTICA";
-$trans['tudastar2'] = "PRACTICAR GRAMÁTICA";
+$trans['tudastar'] = "PRACTICAR<br>GRAMï¿½TICA";
+$trans['tudastar2'] = "PRACTICAR GRAMï¿½TICA";
 $trans['tanuloszoba'] = "Sala de Estudios";
 $trans['kitolto'] = "traducir";
 $trans['sajat_mondat_szo'] = "Practica todo";
 
-$trans['funkcio_skype'] = "A funkció csak Skype-os tanulók számára érhetõ el!";
+$trans['funkcio_skype'] = "A funkciï¿½ csak Skype-os tanulï¿½k szï¿½mï¿½ra ï¿½rhetï¿½ el!";
 
-$trans['vocabulary'] = "VOCABULARIO BÁSICO";
-$trans['mumus'] = "PALABRAS DIFÍCILES";
+$trans['vocabulary'] = "VOCABULARIO Bï¿½SICO";
+$trans['mumus'] = "PALABRAS DIFï¿½CILES";
 $trans['sajat_szavak_all'] = "TODAS";
-$trans['nem_tudtam'] = "no lo sabía";
-$trans['meg_egyszer'] = "una vez más";
+$trans['nem_tudtam'] = "no lo sabï¿½a";
+$trans['meg_egyszer'] = "una vez mï¿½s";
 $trans['kesz_ugyes_vagy'] = "Bien hecho!";
 $trans['masik_csomag'] = "otro grupo";
 $trans['masodperc'] = "segundo";
 $trans['vissza_a_fooldalra'] = "Inicio";
 $trans['required_fields'] = "Debes completar los espacios en blanco.";
-$trans['magyar'] = "húngaro";
-$trans['angol'] = "inglés";
+$trans['magyar'] = "hï¿½ngaro";
+$trans['angol'] = "inglï¿½s";
 $trans['spanyol'] = "espanol";
-$trans['nemet'] = "alemán";
-$trans['francia'] = "francés";
-$trans['arab'] = "árabe";
-$trans['hun'] = "húngaro";
+$trans['nemet'] = "alemï¿½n";
+$trans['francia'] = "francï¿½s";
+$trans['arab'] = "ï¿½rabe";
+$trans['hun'] = "hï¿½ngaro";
 $trans['cel_komment'] = "Comentario";
 $trans['forras_komment'] = "Comentario";
 $trans['word_exists_in_dictionary'] = "Esta palabra ya existe en el sistema.";
-$trans['word_save_error'] = "El guardado falló. Inténtalo de nuevo.";
-$trans['word_delete_error'] = "El borrado falló. Inténtalo de nuevo.";
+$trans['word_save_error'] = "El guardado fallï¿½. Intï¿½ntalo de nuevo.";
+$trans['word_delete_error'] = "El borrado fallï¿½. Intï¿½ntalo de nuevo.";
 $trans['word_exists_in_other_lang'] = "Esta completado en otro idioma.";
 $trans['both_field_required'] = "Debes completar ambos espacios.";
 $trans['word_saved'] = "Guardado";
-$trans['not_successful'] = "Falló";
+$trans['not_successful'] = "Fallï¿½";
 
 $trans['betu1'] = "letra";
 $trans['mumus2'] = "palabras complicadas";
@@ -97,92 +97,92 @@ $trans['audioszoba'] = "Sala de Audio";
 $trans['increasevocabulary'] = "MIS PALABRAS";
 $trans['increasevocabulary2'] = "MIS PALABRAS";
 $trans['increasevocabulary_android'] = "MIS PALABRAS";
-$trans['intelligensgyakorlo'] = "PRÁCTICA<br>INTELIGENTE";
-$trans['intelligensgyakorlo2'] = "PRÁCTICA INTELIGENTE";
+$trans['intelligensgyakorlo'] = "PRï¿½CTICA<br>INTELIGENTE";
+$trans['intelligensgyakorlo2'] = "PRï¿½CTICA INTELIGENTE";
 
 $trans['myperformance'] = "Mi desempe&#241;o";
 $trans['szotar'] = "DICCIONARIO";
 $trans['savedwords'] = "Mis Palabras";
 $trans['words'] = "palabras";
-$trans['basicwords'] = "Las 3000 palabras<br>más frecuentes";
+$trans['basicwords'] = "Las 3000 palabras<br>mï¿½s frecuentes";
 $trans['free'] = "GRATIS";
-$trans['subscription'] = "SUBSCRIPCIÓN";
+$trans['subscription'] = "SUBSCRIPCIï¿½N";
 $trans['dailyclicks'] = "Clicks a diario";
 $trans['useofdictionary'] = "Diccionario";
-$trans['napikviz'] = "Reto del día";
-$trans['napikviz_br'] = "Reto del día";
-$trans['basicvocabulary'] = "VOCABULARIO<br>BÁSICO";
-$trans['basicvocabulary2'] = "VOCABULARIO BÁSICO";
+$trans['napikviz'] = "Reto del dï¿½a";
+$trans['napikviz_br'] = "Reto del dï¿½a";
+$trans['basicvocabulary'] = "VOCABULARIO<br>Bï¿½SICO";
+$trans['basicvocabulary2'] = "VOCABULARIO Bï¿½SICO";
 $trans['kikerdezo'] = "lingocasa";
 $trans['onlinetutor'] = "EL PROFESOR ONLINE";
 
-$trans['basicvocabulary_android'] = "VOCABULARIO BÁSICO";
-$trans['tudastar_android'] = "GRAMÁTICA";
-$trans['intelligensgyakorlo_android'] = "PRÁCTICA INTELIGENTE";
+$trans['basicvocabulary_android'] = "VOCABULARIO Bï¿½SICO";
+$trans['tudastar_android'] = "GRAMï¿½TICA";
+$trans['intelligensgyakorlo_android'] = "PRï¿½CTICA INTELIGENTE";
 
 $trans['subscribe'] = "SUBSCRIBIRSE";
 
-$trans['subs_Üdvözöljük!'] = "Hola";
-$trans['subs_Kérjük, töltse ki adatait!'] = "Aquí te puedes registrar para las funciones gratuitas";
-$trans['subs_Vezetéknév'] = "Apellidos";
-$trans['subs_Keresztnév'] = "Nombre(s)";
+$trans['subs_ï¿½dvï¿½zï¿½ljï¿½k!'] = "Hola";
+$trans['subs_Kï¿½rjï¿½k, tï¿½ltse ki adatait!'] = "Aquï¿½ te puedes registrar para las funciones gratuitas";
+$trans['subs_Vezetï¿½knï¿½v'] = "Apellidos";
+$trans['subs_Keresztnï¿½v'] = "Nombre(s)";
 $trans['subs_E-mail'] = "E-mail";
-$trans['subs_Jelszó'] = "Contrase&#241;a";
-$trans['subs_Tanulandó nyelv'] = "Idioma para aprender";
-$trans['subs_Elõfizetési idõ'] = "Periódo de subscribción";
-$trans['subs_hónap'] = "mes";
+$trans['subs_Jelszï¿½'] = "Contrase&#241;a";
+$trans['subs_Tanulandï¿½ nyelv'] = "Idioma para aprender";
+$trans['subs_Elï¿½fizetï¿½si idï¿½'] = "Periï¿½do de subscribciï¿½n";
+$trans['subs_hï¿½nap'] = "mes";
 $trans['subs_text2'] = "Que disfrutes aprendendiendo,<br>lingocasa";
-$trans['subs_Elküld'] = "Enviar";
+$trans['subs_Elkï¿½ld'] = "Enviar";
 
 $trans['search'] = "Buscar";
-$trans['magyar1'] = "húngaro";
-$trans['angol1'] = "inglés";
+$trans['magyar1'] = "hï¿½ngaro";
+$trans['angol1'] = "inglï¿½s";
 $trans['spanyol1'] = "espa&#241;ol";
 
-$trans["subs_SendMail"] = "Envia me Reto del día";
+$trans["subs_SendMail"] = "Envia me Reto del dï¿½a";
 
 $trans["beallitasok"] = "Ajustes";
 
 $trans["usersettings_header_3"] = "Ajustes";
 $trans["Keresztnev_2"] = "Nombre";
-$trans["sendMeQuotes"] = "Envia me Reto del día";
+$trans["sendMeQuotes"] = "Envia me Reto del dï¿½a";
 $trans["oldPassword"] = "Contrase&#241;a vieja";
 $trans["newPassword"] = "Contrase&#241;a nueva";
 $trans["confirmNewPassword"] = "Contrase&#241;a nueva otra vez";
 $trans["set"] = "Ajustar";
 $trans["changePassword"] = "Cambiar contrase&#241;a";
-$trans["deleteMe"] = "Cancelar suscripción";
+$trans["deleteMe"] = "Cancelar suscripciï¿½n";
 
 $trans["sureWannaDelete"] = "Seguro que quieres borrar tu cuenta?";
 $trans["origPwBad"] = "La contrasena original no es correcta.";
 $trans["passwordMismatch"] = "Error al confirmar la contrase&#241;a.";
-$trans["unsuccessfulSettingchange"] = "Se ha producido un error al cambiar los ajustes. Por favor inténtalo de nuevo.";
+$trans["unsuccessfulSettingchange"] = "Se ha producido un error al cambiar los ajustes. Por favor intï¿½ntalo de nuevo.";
 $trans["successfulSettingchange"] = "Los ajustes se han cambiado correctamente.";
 
-$trans["unsuccessfulUserdelete"] = "Se ha producido un error al borrar tu cuenta. Por favor inténtalo de nuevo.";
+$trans["unsuccessfulUserdelete"] = "Se ha producido un error al borrar tu cuenta. Por favor intï¿½ntalo de nuevo.";
 $trans["successfulUserdelete"] = "Tu cuenta se ha borrado correctamente.";
 
-$trans["unsuccessfulPwchange"] = "Se ha producido un error al cambiar tu contrase&#241;a. Por favor inténtalo de nuevo.";
+$trans["unsuccessfulPwchange"] = "Se ha producido un error al cambiar tu contrase&#241;a. Por favor intï¿½ntalo de nuevo.";
 $trans["passwordChanged"] = "Has cambiado la contrase&#241;a.";
 
-$trans["info_ajax"] = "<b>Buscar en el diccionario y en la colección de frases</b>
-. Puedes buscar entre más de 30.000 palabras, expresiones y frases en dos idiomas.
-. Después de escribir la palabra en el buscador espera un momento y los resultados saldrán automaticamente:
+$trans["info_ajax"] = "<b>Buscar en el diccionario y en la colecciï¿½n de frases</b>
+. Puedes buscar entre mï¿½s de 30.000 palabras, expresiones y frases en dos idiomas.
+. Despuï¿½s de escribir la palabra en el buscador espera un momento y los resultados saldrï¿½n automaticamente:
 primero los significados de la palabra y debajo las frases que la contienen.
-. Con el botón <i>Guardar</i> puedes guardar todos los significados en tu vocabulario. Para guardar solamente algunos pulsa los botones <i>Guardar</i>.  al lado de cada palabra. Para guardar palabras tienes que iniciar sesión.
+. Con el botï¿½n <i>Guardar</i> puedes guardar todos los significados en tu vocabulario. Para guardar solamente algunos pulsa los botones <i>Guardar</i>.  al lado de cada palabra. Para guardar palabras tienes que iniciar sesiï¿½n.
 Para cerrar la ventana haz clic en cualquier lugar dentro de ella.";
 
 $trans["info_sajatszotar"] = "<b>Mi vocabulario</b><br>
 Tus palabras se guardan en grupos de 10. Puedes practicarlas uno a uno mientras el sistema mide tu tiempo para motivarte.";
 
-$trans["info_alapszokincs"] = "<b>Vocabulario Básico</b><br>
-Con un vocabulario de 2500-3000 palabras puedes entender el 90% de la communicación oral. Aquí puedes practicarlas en grupos de 10.";
+$trans["info_alapszokincs"] = "<b>Vocabulario Bï¿½sico</b><br>
+Con un vocabulario de 2500-3000 palabras puedes entender el 90% de la communicaciï¿½n oral. Aquï¿½ puedes practicarlas en grupos de 10.";
 
-$trans["info_nyelvtanipeldatar"] = "<b>Gramática</b><br>
-Tienes miles de frases para practicar cada parte de la gramática así desarollando tus destrezas.";
+$trans["info_nyelvtanipeldatar"] = "<b>Gramï¿½tica</b><br>
+Tienes miles de frases para practicar cada parte de la gramï¿½tica asï¿½ desarollando tus destrezas.";
 
-$trans["info_intelligensgyakorlo"] = "<b>Práctica inteligente</b><br>
-. Aquí puedes practicar no solo la gramática usual sino cualquier cosas que resulte difícil como palabras, expresiones.
+$trans["info_intelligensgyakorlo"] = "<b>Prï¿½ctica inteligente</b><br>
+. Aquï¿½ puedes practicar no solo la gramï¿½tica usual sino cualquier cosas que resulte difï¿½cil como palabras, expresiones.
 Puedes buscar en ambos idiomas, p.ej <i>want to, been, me gusta</i> etc.
 . Al entrar las palabras que quieres practicar click <u>Enter</u>.";
 
@@ -193,27 +193,27 @@ $trans["SajatSzotar_Div"] = "<b>Como practicar</b><br>
 . Tus palabras se guardan en gruposed de 10.
 . El sistema mide tu tiempo para motivarte a ti mismo.
 . Despues de practicar tu resultado aparecera en tu lista de grupos.
-. Tienes Vista de Impresión disponible en la lista (P - Print).
+. Tienes Vista de Impresiï¿½n disponible en la lista (P - Print).
 . Para empezar haz click en cualquier grupo.";
 
 $trans["alapszokincs_Div"] = "<b>Como practicar</b><br>
 . Tus palabras se guardan en gruposed de 10.
 . El sistema mide tu tiempo para motivarte a ti mismo.
 . Despues de practicar tu resultado aparecera en tu lista de grupos.
-. Tienes Vista de Impresión disponible en la lista (P - Print).
+. Tienes Vista de Impresiï¿½n disponible en la lista (P - Print).
 . Para empezar haz click en cualquier grupo.";
 
 $trans["kikerdezo_info"] = "<b>Como practicar</b><br>
 La primera palabra/frase ya ha aparecido. Las funciones son:
 1. <b>Letra</b>: Te va ense&#241;nando las letras uno por uno.
-2. <b>El fondo</b>: Para ver la solución haz click en cualquier lugar en el fondo. Es mejor pronunciarlas en voz alta.
-3. <b>No lo sabía</b>: Si no te la sabes o no estás seguro de la solución haz click aquí. El sistema va a preguntártela otra vez.
+2. <b>El fondo</b>: Para ver la soluciï¿½n haz click en cualquier lugar en el fondo. Es mejor pronunciarlas en voz alta.
+3. <b>No lo sabï¿½a</b>: Si no te la sabes o no estï¿½s seguro de la soluciï¿½n haz click aquï¿½. El sistema va a preguntï¿½rtela otra vez.
 4. Para ver la palabra siquiente haz click en el fondo.
-5. Haz click <b>no lo sabía</b> hasta que te acuerdas de todas las soluciones perfectamente.
-6. Cuando termines un grupo elije <b>otro grupo</b> o <b>uno vez más</b>.
+5. Haz click <b>no lo sabï¿½a</b> hasta que te acuerdas de todas las soluciones perfectamente.
+6. Cuando termines un grupo elije <b>otro grupo</b> o <b>uno vez mï¿½s</b>.
 - The gray number on the top indicates the number of remaining cards.
 - In case an arrow appears on the top brown stripe you can use it to jump to another category of grammar.
-- Con el botón <b>remover</b> puedes borrar la palabra de tu vocabulario.
+- Con el botï¿½n <b>remover</b> puedes borrar la palabra de tu vocabulario.
 &iexcl;Que disfrutes con lingocasa!";
 
 $trans["registration_mail_subject"] = "Bienvenido a lingocasa";
@@ -221,21 +221,21 @@ $trans["registration_mail_subject"] = "Bienvenido a lingocasa";
 $trans["csomag"] = "grupo";
 $trans["masodperc"] = "segundos";
 
-$trans["reg_succes_supscribepage"] = "Tu subscribción ha sido correcto, chequea tus mensajes.";
-$trans["reg_error_underSub_supscribepage"] = "Se ha producido un error al subscribir. Por favor inténtalo de nuevo.";
+$trans["reg_succes_supscribepage"] = "Tu subscribciï¿½n ha sido correcto, chequea tus mensajes.";
+$trans["reg_error_underSub_supscribepage"] = "Se ha producido un error al subscribir. Por favor intï¿½ntalo de nuevo.";
 $trans["missing_field"] = "No se han rellenado todos los campos obligatorios.";
-$trans["not_valid_email"] = "El email no es válido.";
+$trans["not_valid_email"] = "El email no es vï¿½lido.";
 
-$trans["intro_1"] = "Hola! Soy una fastinante aplicación para aprender idiomas que fue desarrollada por profesores y alumnos. Aquí están mis funciones.";
-$trans["service_alap"] = "BÁSICO";
+$trans["intro_1"] = "Hola! Soy una fastinante aplicaciï¿½n para aprender idiomas que fue desarrollada por profesores y alumnos. Aquï¿½ estï¿½n mis funciones.";
+$trans["service_alap"] = "Bï¿½SICO";
 $trans["service_free"] = "gratuito";
 $trans["service_premium"] = "VIP";
 $trans["service_fee"] = "3USD/mes";
 $trans["functions_some"] = "algunas funciones";
 $trans["functions_all"] = "todas las funciones";
-$trans["quiz"] = "RETO DEL DÍA";
+$trans["quiz"] = "RETO DEL Dï¿½A";
 $trans["searchbox"] = "BUSCADOR";
-$trans["showmewhatitis"] = "ENSÉ&#209;AME<BR>LINGOCASA";
+$trans["showmewhatitis"] = "ENSï¿½&#209;AME<BR>LINGOCASA";
 $trans["iwilltryit"] = "VOY A PROBARLO";
 
 
@@ -245,5 +245,5 @@ $trans["Angol brit"] = "English British";
 $trans["Angol halado"] = "English Advanced";
 $trans["Angol BP"] = "English BP";
 $trans["Angol ECL"] = "English ECL";
-
-?>
+$trans["available_content"] = "Contenido disponible";
+$trans["sentences"] = "oraciones";

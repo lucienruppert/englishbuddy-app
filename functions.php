@@ -3057,4 +3057,61 @@ function changePassword($userId, $settingArray)
     }
     return true;
 }
+
+function getTotalWordAndSentenceCounts()
+{
+    // Get the level list to differentiate between words and sentences
+    $list = getLevelList('angol'); // Using English as default for public display
+
+    $wordLevels = array();
+    $sentenceLevels = array();
+
+    // Separate word levels (type 1) from sentence levels (type 2)
+    foreach ($list as $key => $value) {
+        if ($value[1] == 1 && $key != 0) {
+            $wordLevels[] = $key;
+        } else if ($value[1] == 2 && $key != 0) {
+            $sentenceLevels[] = $key;
+        }
+    }
+
+    // Count words (English-Hungarian pairs)
+    $wordCount = 0;
+    if (count($wordLevels) > 0) {
+        $wordLevelsStr = implode(", ", $wordLevels);
+        $query = "SELECT count(distinct w.word_angol)
+                    from words w
+                    where w.level_angol in ($wordLevelsStr)
+                        and w.word_angol is not null and w.word_angol != '' and w.word_angol != '...'
+                        and w.word_hun is not null and w.word_hun != '' and w.word_hun != '...'";
+
+        $result = mysql_query($query);
+        if ($result) {
+            $row = mysql_fetch_row($result);
+            $wordCount = $row[0];
+        }
+    }
+
+    // Count sentences (English-Hungarian pairs)
+    $sentenceCount = 0;
+    if (count($sentenceLevels) > 0) {
+        $sentenceLevelsStr = implode(", ", $sentenceLevels);
+        $query = "SELECT count(distinct w.word_angol)
+                    from words w
+                    where w.level_angol in ($sentenceLevelsStr)
+                        and w.word_angol is not null and w.word_angol != '' and w.word_angol != '...'
+                        and w.word_hun is not null and w.word_hun != '' and w.word_hun != '...'";
+
+        $result = mysql_query($query);
+        if ($result) {
+            $row = mysql_fetch_row($result);
+            $sentenceCount = $row[0];
+        }
+    }
+
+    return array(
+        'words' => $wordCount,
+        'sentences' => $sentenceCount
+    );
+}
 ?>
