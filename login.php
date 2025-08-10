@@ -1,10 +1,10 @@
 <meta charset="UTF-8">
-<div class="login">
+<div class="login" style="display: block; width: 100%;">
   <?php
   if (!$userObject) {
   ?>
     <!-- Word and Sentence Counter Display -->
-    <div class="content-stats" style="text-align: center; margin-bottom: 20px; padding: 15px; background-color: rgba(255,255,255,0.1); border-radius: 8px;">
+    <div class="content-stats" style="display: block; width: 100%; text-align: center; margin-bottom: 20px; padding: 15px; background-color: rgba(255,255,255,0.1); border-radius: 8px; clear: both;">
       <?php
       $totalCounts = getTotalWordAndSentenceCounts();
       ?>
@@ -31,7 +31,7 @@
       </div>
     </div>
 
-    <form id="login-form" action='index.php' method='POST'>
+    <form id="login-form" action='index.php' method='POST' style="display: block; width: 100%; clear: both;">
       <div class="login-controls">
         <div class="button login-toggle">
           <input type='hidden' name='actionType' value='login'>
