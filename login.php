@@ -1,15 +1,15 @@
 <meta charset="UTF-8">
-<div class="login" style="display: flex !important; flex-direction: column !important; justify-content: flex-start !important; align-items: center !important; width: 100vw;">
+<div class="login" style="display: flex !important; flex-direction: column !important; justify-content: flex-start !important; align-items: center !important; width: 100vw; margin-top: 20px !important; padding-top: 20px !important;">
   <?php
   if (!$userObject) {
   ?>
     <!-- Word and Sentence Counter Display -->
-    <div class="content-stats" style="display: block; width: 100%; max-width: 600px; text-align: center; margin-bottom: 20px; padding: 15px; background-color: rgba(255,255,255,0.1); border-radius: 8px; order: 1;">
+    <div class="content-stats" style="display: block; width: 300px; max-width: 90vw; text-align: center; margin-bottom: 20px; padding: 30px; background-color: rgba(255,255,255,0.1); border-radius: 15px; order: 1; box-sizing: border-box;">
       <?php
       $totalCounts = getTotalWordAndSentenceCounts();
       ?>
       <div style="color: white; font-size: 14px; margin-bottom: 5px;">
-        <strong><?php print translate('available_content'); ?>:</strong>
+        <strong><?php print translate('available_content'); ?></strong>
       </div>
       <div style="display: flex; justify-content: center; gap: 30px; color: white;">
         <div style="text-align: center;">
