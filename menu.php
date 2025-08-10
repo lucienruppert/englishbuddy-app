@@ -227,7 +227,7 @@ if ($_REQUEST['content'] == "wordLearning_quick") {
   <input type='hidden' name='ruleId' id='ruleId' value=''>
   <table width='100%' border='0' cellspacing='0' cellpadding='0' style='background-color:#334155;'>
     <tr>
-      <td style='background-color:<?php print $highlight ?>;' height='50' align='center' colspan='3'><span id='ruleTitleSpan' style='font-size:20pt;color:white;'></span></td>
+      <td style='background-color:<?php print $highlight ?>;' height='50' align='center' colspan='3'><span id='ruleTitleSpan' style='font-size:20pt;color:#334155;'></span></td>
     </tr>
     <tr>
       <td height='50' colspan='3'></td>
