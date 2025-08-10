@@ -3114,4 +3114,79 @@ function getTotalWordAndSentenceCounts()
         'sentences' => $sentenceCount
     );
 }
+
+function analyzeWordDatabase()
+{
+    // Get the level list to understand categories
+    $list = getLevelList('angol');
+
+    // Get total record count
+    $query = "SELECT count(*) from words";
+    $result = mysql_query($query);
+    $totalRecords = 0;
+    if ($result) {
+        $row = mysql_fetch_row($result);
+        $totalRecords = $row[0];
+    }
+
+    // Analyze by level_angol and categorize
+    $query = "SELECT 
+                w.level_angol, 
+                count(*) as record_count,
+                count(distinct w.word_angol) as unique_english_words,
+                count(case when w.word_hun is not null and w.word_hun != '' and w.word_hun != '...' then 1 end) as has_hungarian
+              FROM words w 
+              WHERE w.word_angol is not null and w.word_angol != '' and w.word_angol != '...'
+              GROUP BY w.level_angol 
+              ORDER BY w.level_angol";
+
+    $result = mysql_query($query);
+    $analysis = array();
+    $analysis['total_records'] = $totalRecords;
+    $analysis['levels'] = array();
+
+    if ($result) {
+        while ($row = mysql_fetch_assoc($result)) {
+            $level = $row['level_angol'];
+            $levelName = isset($list[$level]) ? $list[$level][0] : 'Unknown Level';
+            $levelType = isset($list[$level]) ? $list[$level][1] : 'Unknown';
+
+            $typeLabel = '';
+            if ($levelType == 1) $typeLabel = 'Words';
+            else if ($levelType == 2) $typeLabel = 'Sentences';
+            else if ($levelType == 3) $typeLabel = 'Grammar Rules';
+            else $typeLabel = 'Unknown Type';
+
+            $analysis['levels'][] = array(
+                'level' => $level,
+                'name' => $levelName,
+                'type' => $levelType,
+                'type_label' => $typeLabel,
+                'record_count' => $row['record_count'],
+                'unique_english_words' => $row['unique_english_words'],
+                'has_hungarian' => $row['has_hungarian']
+            );
+        }
+    }
+
+    // Count records with no level or level 0
+    $query = "SELECT count(*) from words WHERE level_angol = 0 OR level_angol IS NULL";
+    $result = mysql_query($query);
+    if ($result) {
+        $row = mysql_fetch_row($result);
+        $analysis['no_level_count'] = $row[0];
+    }
+
+    // Count records without proper English-Hungarian pairs
+    $query = "SELECT count(*) from words WHERE 
+              word_angol is null or word_angol = '' or word_angol = '...' or
+              word_hun is null or word_hun = '' or word_hun = '...'";
+    $result = mysql_query($query);
+    if ($result) {
+        $row = mysql_fetch_row($result);
+        $analysis['incomplete_pairs'] = $row[0];
+    }
+
+    return $analysis;
+}
 ?>
