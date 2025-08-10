@@ -223,7 +223,7 @@ if ($_REQUEST['content'] == "wordLearning_quick") {
   ?>
 </div>
 
-<div id='ruleDiv' onclick="event.stopPropagation();this.style.display='none'">
+<div id='ruleDiv' onclick="event.stopPropagation();this.style.display='none'" style="border: 2px solid white;">
   <input type='hidden' name='ruleId' id='ruleId' value=''>
   <table width='100%' border='0' cellspacing='0' cellpadding='0' style='background-color:#334155;'>
     <tr>
