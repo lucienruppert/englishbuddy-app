@@ -3060,53 +3060,46 @@ function changePassword($userId, $settingArray)
 
 function getTotalWordAndSentenceCounts()
 {
+    // Count all words and sentences directly based on level types
+    // This matches the analysis breakdown exactly
+
+    // Initialize a temporary global userObject to avoid warnings in getLevelList
+    $originalUserObject = isset($GLOBALS['userObject']) ? $GLOBALS['userObject'] : null;
+    if (!$GLOBALS['userObject']) {
+        $GLOBALS['userObject'] = array('forras_nyelv' => 0); // Default to Hungarian source
+    }
+
     // Get the level list to differentiate between words and sentences
     $list = getLevelList('angol'); // Using English as default for public display
 
-    $wordLevels = array();
-    $sentenceLevels = array();
+    // Restore original userObject
+    $GLOBALS['userObject'] = $originalUserObject;
 
-    // Separate word levels (type 1) from sentence levels (type 2)
-    foreach ($list as $key => $value) {
-        if ($value[1] == 1 && $key != 0) {
-            $wordLevels[] = $key;
-        } else if ($value[1] == 2 && $key != 0) {
-            $sentenceLevels[] = $key;
-        }
-    }
+    // Count words (Type 1) - including level 0 which contains words
+    $query = "SELECT count(*) FROM words w WHERE 
+              (w.level_angol = 0 OR 
+               w.level_angol IN (1, 2, 3, 5, 6, 11, 39, 46, 205))
+              AND w.word_angol IS NOT NULL AND w.word_angol != '' AND w.word_angol != '...'
+              AND w.word_hun IS NOT NULL AND w.word_hun != '' AND w.word_hun != '...'";
 
-    // Count words (English-Hungarian pairs)
+    $result = mysql_query($query);
     $wordCount = 0;
-    if (count($wordLevels) > 0) {
-        $wordLevelsStr = implode(", ", $wordLevels);
-        $query = "SELECT count(distinct w.word_angol)
-                    from words w
-                    where w.level_angol in ($wordLevelsStr)
-                        and w.word_angol is not null and w.word_angol != '' and w.word_angol != '...'
-                        and w.word_hun is not null and w.word_hun != '' and w.word_hun != '...'";
-
-        $result = mysql_query($query);
-        if ($result) {
-            $row = mysql_fetch_row($result);
-            $wordCount = $row[0];
-        }
+    if ($result) {
+        $row = mysql_fetch_row($result);
+        $wordCount = $row[0];
     }
 
-    // Count sentences (English-Hungarian pairs)
-    $sentenceCount = 0;
-    if (count($sentenceLevels) > 0) {
-        $sentenceLevelsStr = implode(", ", $sentenceLevels);
-        $query = "SELECT count(distinct w.word_angol)
-                    from words w
-                    where w.level_angol in ($sentenceLevelsStr)
-                        and w.word_angol is not null and w.word_angol != '' and w.word_angol != '...'
-                        and w.word_hun is not null and w.word_hun != '' and w.word_hun != '...'";
+    // Count sentences (Type 2)
+    $query = "SELECT count(*) FROM words w WHERE 
+              w.level_angol IN (13, 15, 18, 21, 24, 27, 30, 31, 34, 36, 37, 38, 41, 49, 59, 64, 69, 70, 125, 139, 181, 188, 190, 193, 195, 200, 208, 224, 355, 356, 369, 999)
+              AND w.word_angol IS NOT NULL AND w.word_angol != '' AND w.word_angol != '...'
+              AND w.word_hun IS NOT NULL AND w.word_hun != '' AND w.word_hun != '...'";
 
-        $result = mysql_query($query);
-        if ($result) {
-            $row = mysql_fetch_row($result);
-            $sentenceCount = $row[0];
-        }
+    $result = mysql_query($query);
+    $sentenceCount = 0;
+    if ($result) {
+        $row = mysql_fetch_row($result);
+        $sentenceCount = $row[0];
     }
 
     return array(
