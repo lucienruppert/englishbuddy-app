@@ -432,7 +432,7 @@ print "<td width='20px' align='left' valign='middle' style='background-color:$co
                 location.href='main.php?content=changeLevelPage&direction=prev&selectedLevel=' + selectedLevel + '&source=' + source + '&clickSource=" . (isset($_REQUEST['clickSource']) ? $_REQUEST['clickSource'] : '') . "';
             \">&nbsp;&laquo;</span>
         </td>";
-print "<td  colspan='3' align='center' height='50' valign='center' style='font-size:20pt;color:white;background-color:$colorValue'>";
+print "<td  colspan='3' align='center' height='50' valign='center' style='font-size:20pt;color:#334155;background-color:white'>";
 if ($clickSource == "intelligent") {
     print "<input type='text'  size='15' style='border:1px solid #ffffff;background:grey;color:#ffffff;font-size:16pt' id='txtIntelligent' value='" . htmlentities($filter, ENT_QUOTES) . "'>";
 } else {
