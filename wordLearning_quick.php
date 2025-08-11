@@ -408,10 +408,8 @@ if ($_SESSION['source'] == 'alapSzo' || $_SESSION['source'] == 'szo') {
 
     /* Remove only the top border, keep left, right, and bottom */
     #quickLearning table {
+        border: 1px solid white !important;
         border-top: none !important;
-        border-left: 1px solid white !important;
-        border-right: 1px solid white !important;
-        border-bottom: 1px solid white !important;
         border-collapse: collapse !important;
         margin: 0 !important;
         padding: 0 !important;
@@ -440,6 +438,15 @@ if ($_SESSION['source'] == 'alapSzo' || $_SESSION['source'] == 'szo') {
     /* Force remove any borders that might be added by other CSS */
     #quickLearning * {
         border-top: none !important;
+    }
+
+    /* Override any global table border styles specifically for quickLearning */
+    #quickLearning table,
+    #quickLearning table td,
+    #quickLearning table tr {
+        border-top-width: 0 !important;
+        border-top-style: none !important;
+        border-top-color: transparent !important;
     }
 
     #quickLearning table td {
