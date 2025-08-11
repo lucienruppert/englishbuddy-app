@@ -426,8 +426,8 @@ else
 
 print "<tr>";
 
-print "<td width='20px' align='left' valign='middle' style='background-color:$colorValue;'>
-            <span id=\"prevLevelSpan\" style='background-color:$colorValue;$ArrowFontSize;font-weight:bold;color:white;cursor:pointer;$style' onclick=\"
+print "<td width='20px' align='left' valign='middle' style='background-color:white;'>
+            <span id=\"prevLevelSpan\" style='background-color:white;$ArrowFontSize;font-weight:bold;color:#334155;cursor:pointer;$style' onclick=\"
                 event.stopPropagation();
                 location.href='main.php?content=changeLevelPage&direction=prev&selectedLevel=' + selectedLevel + '&source=' + source + '&clickSource=" . (isset($_REQUEST['clickSource']) ? $_REQUEST['clickSource'] : '') . "';
             \">&nbsp;&laquo;</span>
@@ -459,8 +459,8 @@ if ($clickSource == "intelligent") {
     }
 }
 print "</td>";
-print "<td width='20px' align='right' valign='middle' style='background-color:$colorValue;'>
-            <span id=\"nextLevelSpan\" style='background-color:$colorValue;$ArrowFontSize;font-weight:bold;color:white;cursor:pointer;$style' onclick=\"
+print "<td width='20px' align='right' valign='middle' style='background-color:white;'>
+            <span id=\"nextLevelSpan\" style='background-color:white;$ArrowFontSize;font-weight:bold;color:#334155;cursor:pointer;$style' onclick=\"
                 event.stopPropagation();
                 location.href='main.php?content=changeLevelPage&direction=next&selectedLevel=' + selectedLevel + '&source=' + source + '&clickSource=" . (isset($_REQUEST['clickSource']) ? $_REQUEST['clickSource'] : '') . "';
             \">&raquo;&nbsp;</span>
