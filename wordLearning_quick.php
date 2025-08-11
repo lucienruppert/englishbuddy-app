@@ -282,6 +282,48 @@ if (isset($_REQUEST['store']) && $_REQUEST['store'] == 1) {
 
 echo <<<'HTML'
 <script type="text/javascript">
+// Immediate hiding script - runs before DOM is ready
+(function() {
+    function hideElements() {
+        var elementsToHide = [
+            '#ajaxMeaningSearch', '#nyelvtansorminta', '.search-box', 'input[type=search]',
+            '#ajaxTable', '#ajaxSearchInput', '#moreMeaningDiv', '#ajax_other_langs',
+            '.ajaxSearchTxtContainer', '#ajaxSearchOutput', '#ragozas', '#spec_chars_ajax'
+        ];
+        
+        elementsToHide.forEach(function(selector) {
+            var elements = document.querySelectorAll(selector);
+            elements.forEach(function(el) {
+                if (el) {
+                    el.style.display = 'none';
+                    el.style.visibility = 'hidden';
+                    el.style.opacity = '0';
+                    el.style.zIndex = '-1';
+                    el.style.position = 'absolute';
+                    el.style.left = '-9999px';
+                    el.style.top = '-9999px';
+                }
+            });
+        });
+    }
+    
+    // Hide immediately
+    hideElements();
+    
+    // Hide when DOM loads
+    if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', hideElements);
+    }
+    
+    // Hide periodically to catch any dynamically added elements
+    var interval = setInterval(hideElements, 100);
+    
+    // Stop the interval after 5 seconds
+    setTimeout(function() {
+        clearInterval(interval);
+    }, 5000);
+})();
+
 function getAjaxResponse(target, callbackFunction) {
     $.ajax({
         url: target,
@@ -304,34 +346,40 @@ function getAjaxResponse(target, callbackFunction) {
 }
 
 $(document).ready(function() {
-    $("#ajaxMeaningSearch").hide();
-    $("#nyelvtansorminta").hide();
-    $(".search-box").hide();
-    $("input[type=search]").hide();
+    // Aggressive hiding function
+    function forceHideElements() {
+        var elementsToHide = [
+            "#ajaxMeaningSearch", "#nyelvtansorminta", ".search-box", "input[type=search]",
+            "#ajaxTable", "#ajaxSearchInput", "#moreMeaningDiv", "#ajax_other_langs",
+            ".ajaxSearchTxtContainer", "#ajaxSearchOutput", "#ragozas", "#spec_chars_ajax"
+        ];
+        
+        elementsToHide.forEach(function(selector) {
+            $(selector).each(function() {
+                $(this).hide()
+                       .css({
+                           'display': 'none !important',
+                           'visibility': 'hidden !important',
+                           'opacity': '0 !important',
+                           'z-index': '-1 !important',
+                           'position': 'absolute !important',
+                           'left': '-9999px !important',
+                           'top': '-9999px !important',
+                           'width': '0 !important',
+                           'height': '0 !important'
+                       })
+                       .remove(); // Actually remove from DOM
+            });
+        });
+    }
     
-    // Ensure all search-related elements are completely hidden
-    $("#ajaxTable").hide();
-    $("#ajaxSearchInput").hide();
-    $("#moreMeaningDiv").hide();
-    $("#ajax_other_langs").hide();
-    $(".ajaxSearchTxtContainer").hide();
-    $("#ajaxSearchOutput").hide();
+    // Execute immediately
+    forceHideElements();
     
-    // Hide menu elements that might appear
-    $(".sf-menu").hide();
-    $("ul.sf-menu").hide();
-    $(".navigation-menu").hide();
-    $("#ragozas").hide();
-    $("#spec_chars_ajax").hide();
-    $(".superfish").hide();
-    
-    // Force hide with CSS as well
-    $(".sf-menu, ul.sf-menu, .navigation-menu").css({
-        'display': 'none',
-        'visibility': 'hidden',
-        'opacity': '0',
-        'z-index': '-1'
-    });
+    // Execute again after a small delay
+    setTimeout(forceHideElements, 50);
+    setTimeout(forceHideElements, 200);
+    setTimeout(forceHideElements, 500);
 });
 </script>
 HTML;
@@ -365,16 +413,28 @@ if ($_SESSION['source'] == 'alapSzo' || $_SESSION['source'] == 'szo') {
     #ajaxSearchOutput,
     #ajaxMeaningSearch,
     #nyelvtansorminta,
-    .sf-menu,
-    ul.sf-menu,
-    .navigation-menu,
     #ragozas,
-    #spec_chars_ajax,
-    .superfish {
+    #spec_chars_ajax {
         display: none !important;
         visibility: hidden !important;
         opacity: 0 !important;
         z-index: -1 !important;
+        position: absolute !important;
+        left: -9999px !important;
+        top: -9999px !important;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+    }
+
+    /* Hide only the grammar menu specifically */
+    #nyelvtansorminta .sf-menu,
+    #nyelvtansorminta ul.sf-menu,
+    #nyelvtansorminta .sf-menu li,
+    #nyelvtansorminta .sf-menu ul,
+    #nyelvtansorminta .sf-menu a {
+        display: none !important;
+        visibility: hidden !important;
     }
 
     /* 
