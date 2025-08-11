@@ -37,7 +37,7 @@ $questionedlineFontSize = 'font-size:20pt';
 $questionedlineFontSize2 = 'font-size:10pt';
 $solutionlineFontSize = 'font-size:30pt';
 $ArrowFontSize = 'font-size:40pt';
-$nemtudtamFontSize = 'font-size:20pt;color:white;';
+$nemtudtamFontSize = 'font-size:20pt;color:#334155;';
 $MiddleHeight = '100px';
 
 // ha mondatokat gyakorlok
@@ -740,8 +740,8 @@ if ($showNumber != $KESZ_UGYES_VAGY) {
     }
     print "<td align='center' valign='center'>";
     print "<table><tr>";
-    print "\n<td align='center' valign='center' style='background-color:$colorValue;padding:10px 10px;cursor:pointer;width:150px;height:70px;border-radius:20px;border: 5px solid " . $dark . "' onclick=\"event.stopPropagation();betu1_Click();\"><span style=" . $nemtudtamFontSize . ">" . translate('betu1') . "</span></td>";
-    print "\n<td align='center' valign='center' style='background-color:$globalcolor;padding:10px 10px;cursor:pointer;border-radius:20px;width:150px;border: 5px solid " . $dark . "' onclick=\"event.stopPropagation();location.href='main.php?content=wordLearning_quick&inbetween=1&stillPract=1';\"><span style=" . $nemtudtamFontSize . ">" . translate('nem_tudtam') . "</span></td>";
+    print "\n<td align='center' valign='center' style='background-color:white;padding:10px 10px;cursor:pointer;width:150px;height:70px;border-radius:20px;border: 5px solid " . $dark . "' onclick=\"event.stopPropagation();betu1_Click();\"><span style=" . $nemtudtamFontSize . ">" . translate('betu1') . "</span></td>";
+    print "\n<td align='center' valign='center' style='background-color:white;padding:10px 10px;cursor:pointer;border-radius:20px;width:150px;border: 5px solid " . $dark . "' onclick=\"event.stopPropagation();location.href='main.php?content=wordLearning_quick&inbetween=1&stillPract=1';\"><span style=" . $nemtudtamFontSize . ">" . translate('nem_tudtam') . "</span></td>";
     if ($clickSource != "sentencePractice" && $clickSource != "basicWordPractice" && $clickSource != "sentencePractice2" && $clickSource != "intelligent") {
         print "\n<td align='center' valign='center' class='show-button' style='background-color:$colorValue;padding:10px 10px;cursor:pointer;width:150px;border-radius:20px;border: 5px solid " . $dark . "' onclick=\"event.stopPropagation();mumus2_Click();\"><span style=" . $nemtudtamFontSize . ">" . translate('mumus2') . "</span></td>";
         print "\n<td align='center' valign='center' class='show-button' style='background-color:$colorValue;padding:10px 10px;cursor:pointer;width:150px;border-radius:20px;border: 5px solid " . $dark . "' onclick=\"event.stopPropagation();remove_Click();\"><span style=" . $nemtudtamFontSize . ">" . translate('remove') . "</span></td>";
