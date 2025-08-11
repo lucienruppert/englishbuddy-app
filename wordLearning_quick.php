@@ -417,6 +417,16 @@ if ($_SESSION['source'] == 'alapSzo' || $_SESSION['source'] == 'szo') {
         padding: 0 !important;
     }
 
+    /* Remove top border from first table row */
+    #quickLearning table tr:first-child {
+        border-top: none !important;
+    }
+
+    /* Remove top border from all cells in the first row */
+    #quickLearning table tr:first-child td {
+        border-top: none !important;
+    }
+
     /* Also remove any potential top borders from the content wrapper */
     #content {
         border-top: none !important;
@@ -424,6 +434,11 @@ if ($_SESSION['source'] == 'alapSzo' || $_SESSION['source'] == 'szo') {
 
     /* Remove top border from the main div container */
     #quickLearning {
+        border-top: none !important;
+    }
+
+    /* Force remove any borders that might be added by other CSS */
+    #quickLearning * {
         border-top: none !important;
     }
 
