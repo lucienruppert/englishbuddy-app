@@ -402,6 +402,23 @@ if ($_SESSION['source'] == 'alapSzo' || $_SESSION['source'] == 'szo') {
 
     #quickLearning {
         width: 100vw;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Remove only the top border, keep left, right, and bottom */
+    #quickLearning table {
+        border-top: none !important;
+        border-left: 1px solid white !important;
+        border-right: 1px solid white !important;
+        border-bottom: 1px solid white !important;
+        border-collapse: collapse !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    #quickLearning table td {
+        border: none !important;
     }
 
     /* Force hide all search-related elements on this page */
