@@ -316,6 +316,22 @@ $(document).ready(function() {
     $("#ajax_other_langs").hide();
     $(".ajaxSearchTxtContainer").hide();
     $("#ajaxSearchOutput").hide();
+    
+    // Hide menu elements that might appear
+    $(".sf-menu").hide();
+    $("ul.sf-menu").hide();
+    $(".navigation-menu").hide();
+    $("#ragozas").hide();
+    $("#spec_chars_ajax").hide();
+    $(".superfish").hide();
+    
+    // Force hide with CSS as well
+    $(".sf-menu, ul.sf-menu, .navigation-menu").css({
+        'display': 'none',
+        'visibility': 'hidden',
+        'opacity': '0',
+        'z-index': '-1'
+    });
 });
 </script>
 HTML;
@@ -347,7 +363,14 @@ if ($_SESSION['source'] == 'alapSzo' || $_SESSION['source'] == 'szo') {
     #ajax_other_langs,
     .ajaxSearchTxtContainer,
     #ajaxSearchOutput,
-    #ajaxMeaningSearch {
+    #ajaxMeaningSearch,
+    #nyelvtansorminta,
+    .sf-menu,
+    ul.sf-menu,
+    .navigation-menu,
+    #ragozas,
+    #spec_chars_ajax,
+    .superfish {
         display: none !important;
         visibility: hidden !important;
         opacity: 0 !important;
