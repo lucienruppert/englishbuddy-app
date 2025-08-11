@@ -308,6 +308,14 @@ $(document).ready(function() {
     $("#nyelvtansorminta").hide();
     $(".search-box").hide();
     $("input[type=search]").hide();
+    
+    // Ensure all search-related elements are completely hidden
+    $("#ajaxTable").hide();
+    $("#ajaxSearchInput").hide();
+    $("#moreMeaningDiv").hide();
+    $("#ajax_other_langs").hide();
+    $(".ajaxSearchTxtContainer").hide();
+    $("#ajaxSearchOutput").hide();
 });
 </script>
 HTML;
@@ -330,6 +338,20 @@ if ($_SESSION['source'] == 'alapSzo' || $_SESSION['source'] == 'szo') {
 
     #quickLearning {
         width: 100vw;
+    }
+
+    /* Force hide all search-related elements on this page */
+    #ajaxTable,
+    #ajaxSearchInput,
+    #moreMeaningDiv,
+    #ajax_other_langs,
+    .ajaxSearchTxtContainer,
+    #ajaxSearchOutput,
+    #ajaxMeaningSearch {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        z-index: -1 !important;
     }
 
     /* 
