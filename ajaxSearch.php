@@ -1,26 +1,30 @@
 <?php
-    $isAndroid = false;
-    $ua = strtolower($_SERVER['HTTP_USER_AGENT']);
-    if(stripos($ua,'android') !== false) { // && stripos($ua,'mobile') !== false) {
-        $isAndroid = true;
-    }
+$isAndroid = false;
+$ua = strtolower($_SERVER['HTTP_USER_AGENT']);
+if (stripos($ua, 'android') !== false) { // && stripos($ua,'mobile') !== false) {
+    $isAndroid = true;
+}
 ?>
 <style>
-    .meaningTableClass{
-        color:white;font-size:14px;font-weight:bold;background:<?php print "" . $globalcolor . ""; ?>;width:100%
+    .meaningTableClass {
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+        background: #334155;
+        width: 100%
     }
-    .meaningTableClass td{
-        vertical-align:top;
+
+    .meaningTableClass td {
+        vertical-align: top;
     }
 </style>
 
 <div id='ajaxMeaningSearch'>
     <script>
-        function ajaxSearchCallback(responseObject)
-        {
+        function ajaxSearchCallback(responseObject) {
             ragozasWord = '';
-            for(var i = 0; i < responseObject.items.length; i++){
-                if(responseObject.items[i].level_category == 1 || responseObject.items[i].level_category == 0){
+            for (var i = 0; i < responseObject.items.length; i++) {
+                if (responseObject.items[i].level_category == 1 || responseObject.items[i].level_category == 0) {
                     ragozasWord = responseObject.items[i].word_foreign;
                     break;
                 }
@@ -28,6 +32,6 @@
         }
     </script>
     <?php
-        ajaxSearchPrint($userObject ? $userObject['nyelv'] : $defaultNyelv);
+    ajaxSearchPrint($userObject ? $userObject['nyelv'] : $defaultNyelv);
     ?>
 </div>
