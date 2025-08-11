@@ -1,5 +1,5 @@
 <meta charset="UTF-8">
-<div class="login" style="display: flex !important; flex-direction: column !important; justify-content: flex-start !important; align-items: center !important; width: 100vw; margin-top: 50px !important; padding-top: 50vh !important;">
+<div class="login" style="display: flex !important; flex-direction: column !important; justify-content: flex-start !important; align-items: center !important; width: 100vw; margin-top: 50px !important; padding-top: 100px !important;">
   <?php
   if (!$userObject) {
   ?>
