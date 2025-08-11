@@ -417,6 +417,16 @@ if ($_SESSION['source'] == 'alapSzo' || $_SESSION['source'] == 'szo') {
         padding: 0 !important;
     }
 
+    /* Also remove any potential top borders from the content wrapper */
+    #content {
+        border-top: none !important;
+    }
+
+    /* Remove top border from the main div container */
+    #quickLearning {
+        border-top: none !important;
+    }
+
     #quickLearning table td {
         border: none !important;
     }
