@@ -1839,7 +1839,7 @@ function ajaxSearchPrint($lang)
             </td>
         </tr>
     </table>
-    <div id='moreMeaningDiv' style='position:absolute;left:50%;margin-left:-250px;width:500px;display:none;z-index:100;' onclick="event.stopPropagation();this.style.display = 'none';$('#linkSave').hide();$('#ajaxSearchOutput').hide();"></div>
+    <div id='moreMeaningDiv' style='position:absolute;left:50%;margin-left:-250px;width:500px;display:none;z-index:100;background-color:<?php print $GLOBALS['globalcolor']; ?>;' onclick="event.stopPropagation();this.style.display = 'none';$('#linkSave').hide();$('#ajaxSearchOutput').hide();"></div>
     <div id='ajax_other_langs' style='<? echo $GLOBALS['TDBgGlobalColor']; ?>color:white;position:absolute;top:10px;left:50%;margin-left:-190px;width:550px;filter:alpha(opacity=100);opacity:1;z-index:101;font-size:10pt;'></div>
 <?php
 }
