@@ -198,7 +198,7 @@ $_SESSION['isShown'] = false;
             case 'changeLevelPage':
                 $selectedLevel = $_REQUEST['selectedLevel'];
                 $levelList = getLevelList($_SESSION['userObject']['nyelv']);
-                if ($_REQUEST['clickSource'] == "sentencePractice2") {
+                if (isset($_REQUEST['clickSource']) && $_REQUEST['clickSource'] == "sentencePractice2") {
                     $goodArray = array(2);
                 } else {
                     $goodArray = array(1, 2, 3);

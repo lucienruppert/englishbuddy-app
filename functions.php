@@ -278,6 +278,11 @@ function getFirstNWordsByLevelGroupBy($topN, $actLevel, $langExt, $userObject, $
         $where_level = "w.level_{$langExt} = $actLevel";
     }
 
+    // Initialize left_join if not set
+    if (!isset($left_join)) {
+        $left_join = "";
+    }
+
     $query = "SELECT w.*, level_{$langExt} as level
                 from words w
                 $left_join
@@ -1352,7 +1357,9 @@ function getLevelComment($selectedLevel, $lang, $needEncode)
 function setLevelComment($selectedLevel, $rule, $lang)
 {
     $langExt = getLangExtByLangId($lang);
-    $langSource = getLangExtByLangId($GLOBALS['userObject']['forras_nyelv']);
+    $langSource = isset($GLOBALS['userObject']) && isset($GLOBALS['userObject']['forras_nyelv'])
+        ? getLangExtByLangId($GLOBALS['userObject']['forras_nyelv'])
+        : getLangExtByLangId(0);
     $rule = str_replace(chr(13) . chr(10), "<br>", $rule);
     $rule = aposztrofRepToDb($rule);
 
