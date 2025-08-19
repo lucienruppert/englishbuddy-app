@@ -404,52 +404,36 @@ if ($_SESSION['source'] == 'alapSzo' || $_SESSION['source'] == 'szo') {
         width: 100vw;
         margin: 0 !important;
         padding: 0 !important;
+        border: none !important;
     }
 
-    /* Remove only the top border, keep left, right, and bottom */
+    /* Remove all borders from tables and cells */
     #quickLearning table {
-        border: 1px solid white !important;
-        border-top: none !important;
+        border: none !important;
         border-collapse: collapse !important;
         margin: 0 !important;
         padding: 0 !important;
     }
 
-    /* Remove top border from first table row */
-    #quickLearning table tr:first-child {
-        border-top: none !important;
-    }
-
-    /* Remove top border from all cells in the first row */
-    #quickLearning table tr:first-child td {
-        border-top: none !important;
-    }
-
-    /* Also remove any potential top borders from the content wrapper */
-    #content {
-        border-top: none !important;
-    }
-
-    /* Remove top border from the main div container */
-    #quickLearning {
-        border-top: none !important;
-    }
-
-    /* Force remove any borders that might be added by other CSS */
-    #quickLearning * {
-        border-top: none !important;
-    }
-
-    /* Override any global table border styles specifically for quickLearning */
-    #quickLearning table,
-    #quickLearning table td,
     #quickLearning table tr {
-        border-top-width: 0 !important;
-        border-top-style: none !important;
-        border-top-color: transparent !important;
+        border: none !important;
     }
 
     #quickLearning table td {
+        border: none !important;
+    }
+
+    /* Remove borders from button containers */
+    #quickLearning table table {
+        border: none !important;
+    }
+
+    #quickLearning table table td {
+        border: none !important;
+    }
+
+    /* Remove borders from all nested elements */
+    #quickLearning * {
         border: none !important;
     }
 
@@ -789,11 +773,11 @@ if ($showNumber != $KESZ_UGYES_VAGY) {
     }
     print "<td align='center' valign='center'>";
     print "<table><tr>";
-    print "\n<td align='center' valign='center' style='background-color:white;padding:10px 10px;cursor:pointer;width:150px;height:70px;border-radius:20px;border: 5px solid " . $dark . "' onclick=\"event.stopPropagation();betu1_Click();\"><span style=" . $nemtudtamFontSize . ">" . translate('betu1') . "</span></td>";
-    print "\n<td align='center' valign='center' style='background-color:white;padding:10px 10px;cursor:pointer;border-radius:20px;width:150px;border: 5px solid " . $dark . "' onclick=\"event.stopPropagation();location.href='main.php?content=wordLearning_quick&inbetween=1&stillPract=1';\"><span style=" . $nemtudtamFontSize . ">" . translate('nem_tudtam') . "</span></td>";
+    print "\n<td align='center' valign='center' style='background-color:white;padding:10px 10px;cursor:pointer;width:150px;height:70px;border-radius:20px;' onclick=\"event.stopPropagation();betu1_Click();\"><span style=" . $nemtudtamFontSize . ">" . translate('betu1') . "</span></td>";
+    print "\n<td align='center' valign='center' style='background-color:white;padding:10px 10px;cursor:pointer;border-radius:20px;width:150px;' onclick=\"event.stopPropagation();location.href='main.php?content=wordLearning_quick&inbetween=1&stillPract=1';\"><span style=" . $nemtudtamFontSize . ">" . translate('nem_tudtam') . "</span></td>";
     if ($clickSource != "sentencePractice" && $clickSource != "basicWordPractice" && $clickSource != "sentencePractice2" && $clickSource != "intelligent") {
-        print "\n<td align='center' valign='center' class='show-button' style='background-color:$colorValue;padding:10px 10px;cursor:pointer;width:150px;border-radius:20px;border: 5px solid " . $dark . "' onclick=\"event.stopPropagation();mumus2_Click();\"><span style=" . $nemtudtamFontSize . ">" . translate('mumus2') . "</span></td>";
-        print "\n<td align='center' valign='center' class='show-button' style='background-color:$colorValue;padding:10px 10px;cursor:pointer;width:150px;border-radius:20px;border: 5px solid " . $dark . "' onclick=\"event.stopPropagation();remove_Click();\"><span style=" . $nemtudtamFontSize . ">" . translate('remove') . "</span></td>";
+        print "\n<td align='center' valign='center' class='show-button' style='background-color:$colorValue;padding:10px 10px;cursor:pointer;width:150px;border-radius:20px;' onclick=\"event.stopPropagation();mumus2_Click();\"><span style=" . $nemtudtamFontSize . ">" . translate('mumus2') . "</span></td>";
+        print "\n<td align='center' valign='center' class='show-button' style='background-color:$colorValue;padding:10px 10px;cursor:pointer;width:150px;border-radius:20px;' onclick=\"event.stopPropagation();remove_Click();\"><span style=" . $nemtudtamFontSize . ">" . translate('remove') . "</span></td>";
     }
     print "</tr>";
     print "</table>";
