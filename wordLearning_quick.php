@@ -774,6 +774,7 @@ if ($showNumber != $KESZ_UGYES_VAGY) {
     print "<td align='center' valign='center'>";
     print "<table><tr>";
     print "\n<td align='center' valign='center' style='background-color:white;padding:10px 10px;cursor:pointer;width:150px;height:70px;border-radius:20px;' onclick=\"event.stopPropagation();betu1_Click();\"><span style=" . $nemtudtamFontSize . ">" . translate('betu1') . "</span></td>";
+    print "\n<td style='width:20px;'></td>"; // Gap between buttons
     print "\n<td align='center' valign='center' style='background-color:white;padding:10px 10px;cursor:pointer;border-radius:20px;width:150px;' onclick=\"event.stopPropagation();location.href='main.php?content=wordLearning_quick&inbetween=1&stillPract=1';\"><span style=" . $nemtudtamFontSize . ">" . translate('nem_tudtam') . "</span></td>";
     if ($clickSource != "sentencePractice" && $clickSource != "basicWordPractice" && $clickSource != "sentencePractice2" && $clickSource != "intelligent") {
         print "\n<td align='center' valign='center' class='show-button' style='background-color:$colorValue;padding:10px 10px;cursor:pointer;width:150px;border-radius:20px;' onclick=\"event.stopPropagation();mumus2_Click();\"><span style=" . $nemtudtamFontSize . ">" . translate('mumus2') . "</span></td>";
