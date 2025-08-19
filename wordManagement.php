@@ -43,17 +43,33 @@ if ($_POST['actionType'] == 'store') {
 
     $level = 0;
     $category = null;
-    if ((int)$_POST['levelSelection'] >= 0) {
+    if (isset($_POST['levelSelection']) && (int)$_POST['levelSelection'] >= 0) {
         $level = (int)$_POST['levelSelection'];
-    } else if ((int)$_POST['levelSelection2'] >= 0) {
+    } else if (isset($_POST['levelSelection2']) && (int)$_POST['levelSelection2'] >= 0) {
         $level = (int)$_POST['levelSelection2'];
-        $category = $_POST['categorySelection'];
+        $category = isset($_POST['categorySelection']) ? $_POST['categorySelection'] : null;
     }
-    if (!checkWord((int)$_POST['recordId'], $_POST['hunWord'], $_SESSION['userObject']['nyelv'], $_POST['foreignWord'])) {
+    if (!checkWord(
+        isset($_POST['recordId']) ? (int)$_POST['recordId'] : 0,
+        isset($_POST['hunWord']) ? $_POST['hunWord'] : '',
+        $_SESSION['userObject']['nyelv'],
+        isset($_POST['foreignWord']) ? $_POST['foreignWord'] : ''
+    )) {
         if ($_REQUEST['kitolto']) {
             $level = 0;
         }
-        if (!storeWord((int)$_POST['recordId'], $_POST['hunWord'], $_SESSION['userObject']['nyelv'], $_POST['foreignWord'], $_POST['foreignComm'], $_POST['sourceComm'], $level, $userId, $category, $_REQUEST['kitolto'])) {
+        if (!storeWord(
+            isset($_POST['recordId']) ? (int)$_POST['recordId'] : 0,
+            isset($_POST['hunWord']) ? $_POST['hunWord'] : '',
+            $_SESSION['userObject']['nyelv'],
+            isset($_POST['foreignWord']) ? $_POST['foreignWord'] : '',
+            isset($_POST['foreignComm']) ? $_POST['foreignComm'] : '',
+            isset($_POST['sourceComm']) ? $_POST['sourceComm'] : '',
+            $level,
+            $userId,
+            $category,
+            $_REQUEST['kitolto']
+        )) {
             print "<script>alert('" . translate("word_save_error") . "')</script>";
         } else {
             $_REQUEST['wordIdToEdit'] = 0;
@@ -62,7 +78,12 @@ if ($_POST['actionType'] == 'store') {
         print "<script>alert('" . translate('word_exists_in_dictionary') . "')</script>";
     }
 } else if ($_POST['actionType'] == 'delete') {
-    $deleteReturn = deleteWord((int)$_POST['recordId'], $_SESSION['userObject']['nyelv'], $_SESSION['userObject']['forras_nyelv'], ($_SESSION['userObject']['status'] != 6 && $_SESSION['userObject']['status'] != 5));
+    $deleteReturn = deleteWord(
+        isset($_POST['recordId']) ? (int)$_POST['recordId'] : 0,
+        $_SESSION['userObject']['nyelv'],
+        $_SESSION['userObject']['forras_nyelv'],
+        ($_SESSION['userObject']['status'] != 6 && $_SESSION['userObject']['status'] != 5)
+    );
     if ($deleteReturn === -1) {
         print "<script>alert('" . translate('word_delete_error') . "')</script>";
     } else if ($deleteReturn === 0) {
