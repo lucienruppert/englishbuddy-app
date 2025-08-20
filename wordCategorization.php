@@ -10,7 +10,7 @@ if (!$userObject) {
 $ext = getLangExtByLangId($userObject['nyelv']);
 $forras_nyelv_ext = getLangExtByLangId($GLOBALS['userObject']['forras_nyelv']);
 
-if (!is_array($_SESSION['wordCategorization']) || (isset($_REQUEST['source']) && $_REQUEST['source'] == 'welcome')) {
+if (!isset($_SESSION['wordCategorization']) || !is_array($_SESSION['wordCategorization']) || (isset($_REQUEST['source']) && $_REQUEST['source'] == 'welcome')) {
     $_SESSION['wordCategorization'] = getNotCategorizedWordIds();
 }
 if (isset($_REQUEST['store']) && $_REQUEST['store'] == 1) {
@@ -52,7 +52,7 @@ if (!isset($audio_part)) {
         <tr>
             <td width='50' align='left' valign='middle' style='background-color:grey;'>
         <tr>
-            <td align='center' height='50' valign='center' style='width:100%;font-size:20pt;color:white;background-color:<?php print $colorValue; ?>'>Kategoriz�l�s</td>
+            <td align='center' height='50' valign='center' style='width:100%;font-size:20pt;color:white;background-color:<?php print $colorValue; ?>'>Kategorizálás</td>
         </tr>
         <tr>
             <td align='center' valign='center' height='40' style='font-size:16pt;color:grey;font-weight:bold;'><?php print $wordCount; ?></td>
