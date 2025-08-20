@@ -32,12 +32,14 @@
                                 $addText = '';
                             }
                             $recordBg = 'color:white;';
+                            $textColor = 'white';
                             if ($packageRecords[$i]['best_time'] > 0 && $packageRecords[$i]['best_time'] < $GLOBALS['szoPackageRecordMpLimit']) {
                                 $recordBg = 'color:#334155;background:' . $GLOBALS['szoPackageRecordBg'];
+                                $textColor = '#334155';
                             }
                             $cell = "
-                <td style='{$recordBg}'><a href='#' style='{$worddivFontSize};color:white;white-space:nowrap;' onclick=\"lowerSelectOnChange('listFract_{$i}', 'szo', 'wordPractice');\">{$text}</a></td>
-                <td align='right' style='{$worddivFontSize};color:white;{$recordBg};white-space:nowrap;'>{$addText}</td>
+                <td style='{$recordBg}'><a href='#' style='{$worddivFontSize};color:{$textColor};white-space:nowrap;' onclick=\"lowerSelectOnChange('listFract_{$i}', 'szo', 'wordPractice');\">{$text}</a></td>
+                <td align='right' style='{$worddivFontSize};color:{$textColor};{$recordBg};white-space:nowrap;'>{$addText}</td>
                 ";
                             if (!$isAndroid) {
                                 $cell .= "<td style='{$recordBg}'>{$printLink}</td>
