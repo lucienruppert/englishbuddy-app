@@ -75,7 +75,7 @@ if ($userObject['id'] == 1) {
     var ragozasWord = '';
   </script>
 
-  <?php if ($_REQUEST['content'] !== 'wordLearning_quick') {
+  <?php if ($_REQUEST['content'] !== 'wordLearning_quick' && $_REQUEST['content'] !== 'wordCategorize') {
     include("ajaxSearch.php");
   } ?>
 
@@ -156,7 +156,7 @@ if (in_array($userObject['status'], array(5, 6))) {
   print "\n</div>";
 }
 
-if ($_REQUEST['content'] == "wordLearning_quick") {
+if ($_REQUEST['content'] == "wordLearning_quick" || $_REQUEST['content'] == "wordCategorize") {
   $style = "style='display:none'";
 } else
   $style = "";
