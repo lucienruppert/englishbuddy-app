@@ -33,7 +33,7 @@
                             }
                             $recordBg = 'color:white;';
                             if ($packageRecords[$i]['best_time'] > 0 && $packageRecords[$i]['best_time'] < $GLOBALS['szoPackageRecordMpLimit']) {
-                                $recordBg .= 'background:' . $GLOBALS['szoPackageRecordBg'];
+                                $recordBg = 'color:#334155;background:' . $GLOBALS['szoPackageRecordBg'];
                             }
                             $cell = "
                 <td style='{$recordBg}'><a href='#' style='{$worddivFontSize};color:white;white-space:nowrap;' onclick=\"lowerSelectOnChange('listFract_{$i}', 'szo', 'wordPractice');\">{$text}</a></td>
