@@ -37,7 +37,7 @@ $questionedlineFontSize = 'font-size:20pt';
 $questionedlineFontSize2 = 'font-size:10pt';
 $solutionlineFontSize = 'font-size:30pt';
 $ArrowFontSize = 'font-size:40pt';
-$nemtudtamFontSize = 'font-size:20pt;color:#334155;';
+$nemtudtamFontSize = 'font-size:16pt;color:#334155;';
 $MiddleHeight = '100px';
 
 // ha mondatokat gyakorlok
