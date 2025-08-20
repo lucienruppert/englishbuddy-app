@@ -829,8 +829,9 @@ if ($showNumber != $KESZ_UGYES_VAGY) {
                 if (('listFract_' . $i) == $selLevel)
                     continue;
 
+                $best_time = isset($packageRecordsWords[$i]) && isset($packageRecordsWords[$i]['best_time']) ? $packageRecordsWords[$i]['best_time'] : 0;
                 $forSortArray[] = array(
-                    'ido' => $packageRecordsWords[$i]['best_time'] > 0 ? $packageRecordsWords[$i]['best_time'] : 999999,
+                    'ido' => $best_time > 0 ? $best_time : 999999,
                     'szam' => $i
                 );
             }
@@ -855,8 +856,9 @@ if ($showNumber != $KESZ_UGYES_VAGY) {
                 if (('listFract_' . $i) == $selLevel)
                     continue;
 
+                $best_time = isset($packageRecordsWords[$i]) && isset($packageRecordsWords[$i]['best_time']) ? $packageRecordsWords[$i]['best_time'] : 0;
                 $forSortArray[] = array(
-                    'ido' => $packageRecordsWords[$i]['best_time'] > 0 ? $packageRecordsWords[$i]['best_time'] : 999999,
+                    'ido' => $best_time > 0 ? $best_time : 999999,
                     'szam' => $i
                 );
             }
