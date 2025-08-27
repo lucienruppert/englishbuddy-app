@@ -473,7 +473,13 @@ if ($userHasAccess) { ?>
                     // 1-es level�ek
                     for ($i = 0; $i < count($words); $i++) {
                         $forrasWord = $words[$i]["word_{$forras_nyelv_ext}"];
-                        if ($forrasWord && $words[$i]['word_foreign'] && $optionArray[$words[$i]['level']][1] == 1 && ($_REQUEST['dictionaryLevel'] <= 0 || $_REQUEST['dictionaryLevel'] == $words[$i]['level'])) {
+                        if (
+                            $forrasWord &&
+                            $words[$i]['word_foreign'] &&
+                            isset($optionArray[$words[$i]['level']]) &&
+                            $optionArray[$words[$i]['level']][1] == 1 &&
+                            ($_REQUEST['dictionaryLevel'] <= 0 || $_REQUEST['dictionaryLevel'] == $words[$i]['level'])
+                        ) {
                             $allWordCount = $wordCount + $hfCount;
                             $title = '';
                             if ($words[$i]['pronunc_foreign'] || $words[$i]['comment_foreign']) {
@@ -515,7 +521,13 @@ if ($userHasAccess) { ?>
                     // 2-es level�ek
                     for ($i = 0; $i < count($words); $i++) {
                         $forrasWord = $words[$i]["word_{$forras_nyelv_ext}"];
-                        if ($forrasWord && $words[$i]['word_foreign'] && $optionArray[$words[$i]['level']][1] == 2 && ($_REQUEST['dictionaryLevel'] <= 0 || $_REQUEST['dictionaryLevel'] == $words[$i]['level'])) {
+                        if (
+                            $forrasWord &&
+                            $words[$i]['word_foreign'] &&
+                            isset($optionArray[$words[$i]['level']]) &&
+                            $optionArray[$words[$i]['level']][1] == 2 &&
+                            ($_REQUEST['dictionaryLevel'] <= 0 || $_REQUEST['dictionaryLevel'] == $words[$i]['level'])
+                        ) {
                             $allWordCount = $wordCount + $hfCount;
                             if ($userHasAccess) {
                                 if ($_REQUEST['orderLang'] == 'hun') {
