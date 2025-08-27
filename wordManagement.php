@@ -479,6 +479,8 @@ if ($userHasAccess) { ?>
                             $forrasWord &&
                             $words[$i]['word_foreign'] &&
                             isset($optionArray[$words[$i]['level']]) &&
+                            is_array($optionArray[$words[$i]['level']]) &&
+                            isset($optionArray[$words[$i]['level']][1]) &&
                             $optionArray[$words[$i]['level']][1] == 1 &&
                             ($_REQUEST['dictionaryLevel'] <= 0 || $_REQUEST['dictionaryLevel'] == $words[$i]['level'])
                         ) {
@@ -527,6 +529,8 @@ if ($userHasAccess) { ?>
                             $forrasWord &&
                             $words[$i]['word_foreign'] &&
                             isset($optionArray[$words[$i]['level']]) &&
+                            is_array($optionArray[$words[$i]['level']]) &&
+                            isset($optionArray[$words[$i]['level']][1]) &&
                             $optionArray[$words[$i]['level']][1] == 2 &&
                             ($_REQUEST['dictionaryLevel'] <= 0 || $_REQUEST['dictionaryLevel'] == $words[$i]['level'])
                         ) {
