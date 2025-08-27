@@ -283,7 +283,7 @@
   #moreMeaningDiv {
     position: absolute;
     overflow: auto;
-    top: 30px;
+    top: 50px;
     background: <?php print "'" . $globalcolor . "'"; ?>;
     color: white;
     filter: alpha(opacity=100);
