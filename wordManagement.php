@@ -131,14 +131,14 @@
     $forWord = $wordRecord['word_foreign'];
     if ($userObject['nyelv'] == 2) {
         if (!$forWord) {
-            $forWord = "&iquest;&iexcl;&ntilde;";
+            $forWord = "¿¡ñ";
         }
     }
 
     $sourceWord = $wordRecord["word_{$forras_nyelv_ext}"];
     if ($userObject['forras_nyelv'] == 2) {
         if (!$sourceWord) {
-            $sourceWord = "&iquest;&iexcl;&ntilde;";
+            $sourceWord = "¿¡ñ";
         }
     }
 
