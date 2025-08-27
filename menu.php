@@ -263,7 +263,7 @@ function getLinksForPractice()
             </div>";
 
     // az elso index a celnyelv, a masodik a forrasnyelv
-    $obj['igeragozas']['langs'][2][0] = 'verbos.html';
+    $obj['igeragozas']['langs'][2][0] = 'verbos_eng.html';
     $obj['igeragozas']['langs'][2][1] = 'verbos_eng.php';
 
     $obj['igeragozas']['langs'][3][0] = 'conjugation_arab3.php';
