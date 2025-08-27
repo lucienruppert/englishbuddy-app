@@ -67,7 +67,7 @@
 
   .navigation-menu {
     position: absolute;
-    flex: display;
+    display: flex;
     flex-direction: row;
     top: 20px;
     left: 50%;
@@ -87,7 +87,7 @@
 
     .navigation-menu {
       position: absolute;
-      flex: display;
+      display: flex;
       flex-direction: row;
       top: 20px;
       left: 0;
