@@ -73,6 +73,7 @@
     left: 50%;
     margin-left: -428px;
     padding-left: 30px;
+    gap: 30px;
   }
 
   @media (max-width: 768px) {
@@ -92,6 +93,7 @@
       top: 20px;
       left: 0;
       margin-left: 0;
+      gap: 30px;
     }
   }
 
