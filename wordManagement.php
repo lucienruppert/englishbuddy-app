@@ -336,7 +336,7 @@ if ($userHasAccess) { ?>
             print "\n<select name='dictionaryLevel' onchange='this.form.submit();' style='width:140px'>";
             print "\n<option value='-1'>";
             foreach ($optionArray as $key => $value) {
-                if ($value[1] != 1 || $key == 0) {
+                if (!isset($optionArray[$key]) || $value[1] != 1 || $key == 0) {
                     continue;
                 }
                 if ($key == (int)$_REQUEST['dictionaryLevel']) {
@@ -348,7 +348,7 @@ if ($userHasAccess) { ?>
                 print "<option value='{$key}' $selected>{$value[0]} (" . $count . ")";
             }
             foreach ($optionArray as $key => $value) {
-                if ($value[1] != 2 || $key == 0) {
+                if (!isset($optionArray[$key]) || $value[1] != 2 || $key == 0) {
                     continue;
                 }
                 if ($key == (int)$_REQUEST['dictionaryLevel']) {
