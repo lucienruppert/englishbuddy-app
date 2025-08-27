@@ -177,11 +177,12 @@ if ($userHasAccess) {
         } else {
             $selected = '';
         }
+        $count = isset($countOptionList[$key]) ? (int)$countOptionList[$key] : 0;
         if ($key > 0) {
-            //print "<option value='{$key}' $selected>(" . (int)$countOptionList[$key] . ") {$value[0]} ";
-            print "<option value='{$key}' $selected> {$value[0]} - " . (int)$countOptionList[$key] . " ";
+            //print "<option value='{$key}' $selected>(" . $count . ") {$value[0]} ";
+            print "<option value='{$key}' $selected> {$value[0]} - " . $count . " ";
         } else {
-            print "<option value='{$key}' $selected>{$value[0]}";
+            print "<option value='{$key}' $selected>{$value[0]} - " . $count;
         }
     }
     print "</select>
