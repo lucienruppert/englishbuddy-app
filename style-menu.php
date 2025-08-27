@@ -9,12 +9,12 @@
     border: none;
   }
 
-  #ragozas {
+  /* #ragozas {
     position: absolute;
     top: 44px;
     left: 50%;
     margin-left: -190px;
-  }
+  } */
 
   #spec_chars_ajax {
     position: absolute;
