@@ -269,9 +269,9 @@
 
   #ajaxMeaningSearch {
     position: absolute;
-    top: 40px;
+    top: 50px;
     left: 50%;
-    margin-left: -160px;
+    margin-left: -400px;
     /* EZT NE VÁLTOZTASD MEG! */
     z-index: 60;
   }
