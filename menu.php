@@ -75,9 +75,7 @@ if ($userObject['id'] == 1) {
     var ragozasWord = '';
   </script>
 
-  <?php if ($_REQUEST['content'] !== 'wordLearning_quick' && $_REQUEST['content'] !== 'wordCategorize') {
-    include("ajaxSearch.php");
-  } ?>
+  <!-- ajaxMeaningSearch will be included after navigation-menu -->
 
   <?php if ($userObject['nyelv'] == 2 || $userObject['forras_nyelv'] == 2) { ?>
     <div id='ragozas'><a href='#' onclick="window.open('http://www.wordreference.com/conj/ESverbs.aspx?v=' + ragozasWord,'Ragoz�s','fullscreen=yes,toolbar=no,status=no,menubar=no,resizable=yes,location=no,scrollbars=yes')">
@@ -89,7 +87,14 @@ if ($userObject['id'] == 1) {
   <?php
   }
   ?>
+
 </div>
+
+<?php if ($_REQUEST['content'] !== 'wordLearning_quick' && $_REQUEST['content'] !== 'wordCategorize') {
+  echo "<div id='ajaxMeaningSearch'>";
+  include("ajaxSearch.php");
+  echo "</div>";
+} ?>
 
 <?php if (in_array($userObject['status'], array(5, 6)) && $_REQUEST['content'] != 'wordLearning_quick') { ?>
   <div id='tanitvanyok'>

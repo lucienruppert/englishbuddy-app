@@ -19,19 +19,17 @@ if (stripos($ua, 'android') !== false) { // && stripos($ua,'mobile') !== false) 
     }
 </style>
 
-<div id='ajaxMeaningSearch'>
-    <script>
-        function ajaxSearchCallback(responseObject) {
-            ragozasWord = '';
-            for (var i = 0; i < responseObject.items.length; i++) {
-                if (responseObject.items[i].level_category == 1 || responseObject.items[i].level_category == 0) {
-                    ragozasWord = responseObject.items[i].word_foreign;
-                    break;
-                }
+<script>
+    function ajaxSearchCallback(responseObject) {
+        ragozasWord = '';
+        for (var i = 0; i < responseObject.items.length; i++) {
+            if (responseObject.items[i].level_category == 1 || responseObject.items[i].level_category == 0) {
+                ragozasWord = responseObject.items[i].word_foreign;
+                break;
             }
         }
-    </script>
-    <?php
-    ajaxSearchPrint($userObject ? $userObject['nyelv'] : $defaultNyelv);
-    ?>
-</div>
+    }
+</script>
+<?php
+ajaxSearchPrint($userObject ? $userObject['nyelv'] : $defaultNyelv);
+?>
