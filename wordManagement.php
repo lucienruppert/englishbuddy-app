@@ -210,7 +210,8 @@ if ($userHasAccess) {
         } else {
             $selected = '';
         }
-        print "<option value='{$key}' $selected>{$value[0]} - " . (int)$countOptionList[$key] . "";
+        $count = isset($countOptionList[$key]) ? (int)$countOptionList[$key] : 0;
+        print "<option value='{$key}' $selected>{$value[0]} - " . $count . "";
     }
     print "</select></td></tr>";
 }
