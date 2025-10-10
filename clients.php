@@ -44,10 +44,7 @@ if ($_POST['actionType'] == "saveForm") {
         $nev .= $_POST['keresztnev'];
 
 
-        if ($_POST['forras_nyelv'] == 0) {
-            $subject = "�dv�z�l a lingocasa!";
-            $body = subscribeBody($nev, htmlspecialchars($_POST['email']), htmlspecialchars($_POST['username']), $langTitles[$_POST['nyelv']], (int)$_POST['subscribe_length']);
-        } else if ($_POST['forras_nyelv'] == 1) {
+        if ($_POST['forras_nyelv'] == 1) {
             $subject = "Welcome to lingocasa";
             $body = subscribeBodyENG($nev, htmlspecialchars($_POST['email']), htmlspecialchars($_POST['username']), $langTitles[$_POST['nyelv']], (int)$_POST['subscribe_length']);
         } else if ($_POST['forras_nyelv'] == 2) {

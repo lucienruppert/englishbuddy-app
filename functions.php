@@ -2760,33 +2760,7 @@ function endiMail($to, $subject, $body, $fromName, $fromEmail, $hiddenAddresses 
     return true;
 }
 
-function subscribeBody($nev, $email, $jelszo, $nyelv, $subscribe_length)
-{
-    return "
-Szia!
 
-�dv�zl�nk nyelvgyakorl�ink t�bor�ban!
-
-Javasoljuk, hogy sz�nj id�t a program megismer�s�re, ha valami nem megy, a kis k�rd�jelekkel felhozhat� instrukci�k seg�thetnek.
-Ha ezen k�v�l van k�rd�sed, �rj emailt nyugodtan, minden visszajelz�st megk�sz�n�nk, hiszen folyamatosan t�reksz�nk a m�g jobb
-felhaszn�l�i �lm�ny l�trehoz�s�ra.
-
-A weboldal Google Chrome, Mozilla Firefox �s Microsoft Edge B�ng�sz�kre van optimaliz�lva, az Internet Explorert
-nem aj�nljuk haszn�latra.
-
-Ha a regisztr�ci�n�l bejel�lted, minden reggel a Napi Kv�zzel k�sz�nt�nk emailben. Ezt a be�ll�t�sokban b�rmikor kikapcsolhatod.
-
-Ha androidos (pl. Samsung) okostelefonod van, a regisztr�c�ddal a Google Playb�l let�lthet� lingocasa alkalmaz�s haszn�lat�ra is jogosult lett�l.
-
-Eredm�nyes tanul�st k�v�n,
-A <a href='https://www.lingocasa.com'>lingocasa.com</a> csapata
-
-<u>Adataid</u><br>
-N�v: $nev
-E-mail: $email
-Jelsz�: $jelszo
-V�lasztott nyelv: $nyelv";
-}
 
 function subscribeBodyENG($nev, $email, $jelszo, $nyelv, $subscribe_length)
 {

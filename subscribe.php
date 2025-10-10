@@ -40,7 +40,7 @@ if ($_POST['actionType'] == 'subscribe') {
     $GLOBALS['nyelv'] = $_SESSION["page_nyelv"];
     include("functions_translation.php");
     print "<script>alert('" . translate('missing_field') . "');</script>";
-  } else if (!eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$", $_POST['email'])) {
+  } else if (!preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i", $_POST['email'])) {
     $GLOBALS['nyelv'] = $_SESSION["page_nyelv"];
     include("functions_translation.php");
     print "<script>alert('" . translate('not_valid_email') . "');</script>";
@@ -49,10 +49,7 @@ if ($_POST['actionType'] == 'subscribe') {
     //$subject = "�dv�z�l a lingocasa";
     $langTitles = getLangTitles();
     $nyelv = $user['forras_nyelv'];
-    if ($nyelv == 0) {
-      $subject = "�dv�z�l a lingocasa!";
-      $body = subscribeBody($user['vezeteknev'] . ' ' . $user['keresztnev'], htmlspecialchars($user['email']), htmlspecialchars($user['jelszo']), $langTitles[$user['nyelv']], (int)$user['subscribe_length']);
-    } else if ($nyelv == 1) {
+    if ($nyelv == 1) {
       $subject = "Welcome to Lingocasa,";
       $body = subscribeBodyENG($user['vezeteknev'] . ' ' . $user['keresztnev'], htmlspecialchars($user['email']), htmlspecialchars($user['jelszo']), $langTitles[$user['nyelv']], (int)$user['subscribe_length']);
     } else if ($nyelv == 2) {
