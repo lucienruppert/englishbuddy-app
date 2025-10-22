@@ -574,10 +574,10 @@ print "<td  colspan='3' align='center' height='50' valign='center' style='font-s
 if ($clickSource == "intelligent") {
     print "<input type='text'  size='15' style='border:1px solid #ffffff;background:grey;color:#ffffff;font-size:16pt' id='txtIntelligent' value='" . htmlentities($filter, ENT_QUOTES) . "'>";
 } else {
-    if (in_array($_SESSION['selectedLevel2'], array('list1', 'list2'))) {
+    if (isset($_SESSION['selectedLevel2']) && in_array($_SESSION['selectedLevel2'], array('list1', 'list2'))) {
         print "�sszes";
     }
-    if (startsWith($_SESSION['selectedLevel2'], 'listFract_')) {
+    if (isset($_SESSION['selectedLevel2']) && startsWith($_SESSION['selectedLevel2'], 'listFract_')) {
         $i = (int)substr($_SESSION['selectedLevel2'], 10);
         if ($_SESSION['source'] == 'szo' || $_SESSION['source'] == 'alapSzo') {
             $mult = $GLOBALS['szoPackageSize'];
