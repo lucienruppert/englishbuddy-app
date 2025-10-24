@@ -1351,7 +1351,7 @@ function getLevelComment($selectedLevel, $lang, $needEncode)
         exit("Nem siker�lt: " . $query);
     }
     $row = mysql_fetch_row($result);
-    return $row[0];
+    return $row ? $row[0] : null;
 }
 
 function setLevelComment($selectedLevel, $rule, $lang)
