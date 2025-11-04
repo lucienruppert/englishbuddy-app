@@ -321,7 +321,7 @@ foreach ($jelentkezok_ordered as $jelentkezo) {
                 document.forms['userSelectForm'].dictionaryUser.value = document.forms['wordManagement'].dictionaryUser.value;
                 document.forms['userSelectForm'].homeWorkOrder.value = document.forms['wordManagement'].homeWorkOrder.value;
             }
-            document.forms['userSelectForm'].submit();" title="{$ideje}">{$jelentkezo['vezeteknev']} {$jelentkezo['keresztnev']} (" . (isset($userWordCounts[$jelentkezo['id']]) ? (int)$userWordCounts[$jelentkezo['id']] : 0) . ")</a></td>
+            document.forms['userSelectForm'].submit();\" title=\"" . htmlspecialchars($ideje, ENT_QUOTES) . "\">{$jelentkezo['vezeteknev']} {$jelentkezo['keresztnev']} (" . (isset($userWordCounts[$jelentkezo['id']]) ? (int)$userWordCounts[$jelentkezo['id']] : 0) . ")</a></td>
         <td style='font-weight:bold'>&nbsp;" . getUsedTime($jelentkezo['id']) . "</td>
         </tr>";
     $sorszam--;
