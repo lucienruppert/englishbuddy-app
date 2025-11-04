@@ -68,13 +68,13 @@ if (isset($_POST['actionType']) && $_POST['actionType'] == "saveForm") {
             print "<script>alert('{$message}');</script>";
         }
     }
-} else if ($_POST['actionType'] == "deleteForm") {
+} else if (isset($_POST['actionType']) && $_POST['actionType'] == "deleteForm") {
     if (!deleteUser($_POST['userId'])) {
         print "<script>alert('Felhaszn�l� t�rl�se nem siker�lt');</script>";
     } else {
         $_POST['userId'] = null;
     }
-} else if ($_POST['actionType'] == "newRecord") {
+} else if (isset($_POST['actionType']) && $_POST['actionType'] == "newRecord") {
     $_POST['userId'] = 0;
     $selectedUser['send_mail'] = 1;
 }
