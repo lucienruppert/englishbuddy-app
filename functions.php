@@ -2594,6 +2594,7 @@ function getBalance($userId)
 
 function getUsersByLanguage($lang)
 {
+    $where = "";
     if ($lang > 0) {
         $where = "where nyelv = {$lang}";
     }

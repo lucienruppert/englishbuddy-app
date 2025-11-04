@@ -79,18 +79,18 @@ if (isset($_POST['actionType']) && $_POST['actionType'] == "saveForm") {
     $selectedUser['send_mail'] = 1;
 }
 
-if (!$_POST['userId']) {
+if (!isset($_POST['userId']) || !$_POST['userId']) {
     $_POST['isNewRecord'] = "1";
 }
 
 $userProgress = "";
-if ($_POST['userId'] > 0) {
+if (isset($_POST['userId']) && $_POST['userId'] > 0) {
     $selectedUser = getUserObjById($_POST['userId']);
     $userProgress = getUserProgress($selectedUser);
 } else {
     $selectedUser['program_start_date'] = date("Y-m-d H");
     $selectedUser['program_end_date'] = date('Y-m-d H', strtotime(date("Y-m-d", time()) . " + 365 day"));
-    if ($_POST['actionType'] == "saveForm" && $_POST['isNewRecord']) {
+    if (isset($_POST['actionType']) && $_POST['actionType'] == "saveForm" && $_POST['isNewRecord']) {
         $selectedUser['vezeteknev'] = $_POST['vezeteknev'];
         $selectedUser['keresztnev'] = $_POST['keresztnev'];
         $selectedUser['forras_nyelv'] = $_POST['forras_nyelv'];
@@ -116,7 +116,7 @@ if ($userObject['status'] == 6) {
 
 $tanarok = getUsersByStatusArray(array(4, 5));
 
-$levelList = getLevelList($selectedUser['nyelv']);
+$levelList = getLevelList(isset($selectedUser['nyelv']) ? $selectedUser['nyelv'] : 0);
 $statusList = array(1 => 'Free trial', 2 => 'Course student', 3 => 'Skype student', 4 => 'Tan�r', 5 => 'Curriculum �r�', 6 => 'Admin');
 
 $userWordCounts = getAllUserOwnWordCount();
