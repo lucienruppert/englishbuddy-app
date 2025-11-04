@@ -13,7 +13,7 @@ if (!$userObject || !in_array($userObject['status'], array(4, 5, 6))) {
     $(document).ready(function() {
         $("#btnDeleteMulti").click(function() {
             $(".deleteInputGhost").remove();
-            if (!confirm('Biztos szeretnéd törölni a becheck-elt finance rekordokat?')) {
+            if (!confirm('Biztos szeretnï¿½d tï¿½rï¿½lni a becheck-elt finance rekordokat?')) {
                 return false;
             }
             var isChecked = false;
@@ -72,11 +72,11 @@ if ($_POST['actionType'] == "saveFinanceForm") {
     }
 } else if ($_POST['actionType'] == "deleteFinanceForm") {
     if (!deleteFinance($_POST['financeId'])) {
-        print "<script>alert('Finance rekord törlése nem sikerï¿½lt');</script>";
+        print "<script>alert('Finance rekord tï¿½rlï¿½se nem sikerï¿½lt');</script>";
     }
 } else if ($_POST['actionType'] == "deleteMultiFinanceForm") {
     if (!deleteFinance($_POST['idsToDelete'])) {
-        print "<script>alert('Finance rekord törlése nem sikerï¿½lt');</script>";
+        print "<script>alert('Finance rekord tï¿½rlï¿½se nem sikerï¿½lt');</script>";
     }
 } else if ($_POST['actionType'] == "newFinanceRecord") {
     $_POST['financeId'] = 0;
@@ -192,8 +192,8 @@ if ($userObject['status'] == 6) {
 }
 if ($userObject['status'] == 6) {
     print "<tr>
-            <th>&nbsp;Név</th>
-            <th>&nbsp;Fizetési dátum</th>";
+            <th>&nbsp;Nï¿½v</th>
+            <th>&nbsp;Fizetï¿½si dï¿½tum</th>";
     if (!$selectedFinance['id']) {
         print "<th>&nbsp;Csomag db</th>";
     }
@@ -205,15 +205,15 @@ if ($userObject['status'] == 6) {
         var curr_month = d.getMonth() + 1; //Months are zero based
         var curr_year = d.getFullYear();
         document.getElementById('lesson_date_text').value = curr_year + '-' + curr_month + '-' + curr_date;
-    \">Letanítva</a></th>";
+    \">Letanï¿½tva</a></th>";
     print "<th>$mentGomb</th>";
-    print "<th><input type='button' value='Új' onclick=\"this.form.actionType.value='newFinanceRecord';this.form.submit();\"></th>";
+    print "<th><input type='button' value='ï¿½j' onclick=\"this.form.actionType.value='newFinanceRecord';this.form.submit();\"></th>";
     print "<th rowspan=2 style='font-size:16px;color:red;'>&nbsp;Balance: {$balance}</th>";
     print "</tr>";
 } else {
     print "<tr>
-            <th>&nbsp;Név</th>
-            <th>&nbsp;Fizetési dátum</th>
+            <th>&nbsp;Nï¿½v</th>
+            <th>&nbsp;Fizetï¿½si dï¿½tum</th>
             <th>&nbsp;Skype perc</th>
             <th>&nbsp;Kinek utalva</th>
             <th>&nbsp;<a href='#' onclick=\"
@@ -222,7 +222,7 @@ if ($userObject['status'] == 6) {
                 var curr_month = d.getMonth() + 1; //Months are zero based
                 var curr_year = d.getFullYear();
                 document.getElementById('lesson_date_text').value = curr_year + '-' + curr_month + '-' + curr_date;
-            \">Letanítva</a></th>
+            \">Letanï¿½tva</a></th>
             <th>$mentGomb</th>
             <th></th>
             <th rowspan=2 style='font-size:16px;color:red;'>&nbsp;Balance: {$balance}</th>
@@ -264,13 +264,13 @@ if ($userObject['status'] == 6) {
     $skypePercText .= "\n<option value='2' " . ($selectedFinance['time_package'] != '1' ? 'selected' : '') . ">90";
     $skypePercText .= "\n</select>";
     $kinekUtalvaText = "\n<select name='paid_to_who'>";
-    $kinekUtalvaText .= "\n<option value='1' " . ($selectedFinance['paid_to_who'] == '1' ? 'selected' : '') . ">Tanár";
-    $kinekUtalvaText .= "\n<option value='2' " . ($selectedFinance['paid_to_who'] != '1' ? 'selected' : '') . ">Kikérdezõ";
+    $kinekUtalvaText .= "\n<option value='1' " . ($selectedFinance['paid_to_who'] == '1' ? 'selected' : '') . ">Tanï¿½r";
+    $kinekUtalvaText .= "\n<option value='2' " . ($selectedFinance['paid_to_who'] != '1' ? 'selected' : '') . ">Kikï¿½rdezï¿½";
     $kinekUtalvaText .= "\n</select>";
 } else {
     $programStartDateText = substr($selectedFinance['payment_date'], 0, 10);
     $skypePercText = $selectedFinance['time_package'] == 1 ? '60' : ($selectedFinance['time_package'] == 2 ? '90' : '-');
-    $kinekUtalvaText = $selectedFinance['paid_to_who'] == 1 ? 'Tanár' : ($selectedFinance['paid_to_who'] == 2 ? 'Kikérdezõ' : '-');
+    $kinekUtalvaText = $selectedFinance['paid_to_who'] == 1 ? 'Tanï¿½r' : ($selectedFinance['paid_to_who'] == 2 ? 'Kikï¿½rdezï¿½' : '-');
 }
 if ($userObject['status'] != 6 && !$selectedFinance['id']) {
     $disabled = "disabled";
@@ -291,8 +291,8 @@ print "<td>&nbsp;$skypePercText</td>";
 print "<td>&nbsp;$kinekUtalvaText</td>";
 print "<td>&nbsp;$lessonDateText</td>";
 if ($userObject['status'] == 6) {
-    print "<td><input type='button' name='deleteBtn' value='Töröl' onclick=\"
-        if(confirm('Biztos szeretnéd törölni a finance rekordot?')){
+    print "<td><input type='button' name='deleteBtn' value='Tï¿½rï¿½l' onclick=\"
+        if(confirm('Biztos szeretnï¿½d tï¿½rï¿½lni a finance rekordot?')){
             this.form.actionType.value='deleteFinanceForm';
             this.form.submit();
         }
@@ -314,7 +314,7 @@ print "<form id='userSelectFormForFinance' name='userSelectFormForFinance' actio
             <input type='hidden' name='comment' value=''>";
 print "\n<table style='width:100%'><tr><td><select name='selectedStudent' onchange=\"document.forms['userSelectFormForFinance'].submit();\"><option value=''>";
 foreach ($jelentkezokForFilter as $jelentkezo) {
-    if ($_POST['selectedStudent'] == $jelentkezo['id']) {
+    if (isset($_POST['selectedStudent']) && $_POST['selectedStudent'] == $jelentkezo['id']) {
         $selected = 'selected';
     } else {
         $selected = '';
@@ -344,7 +344,7 @@ if ($userObject['status'] == 6) {
     print "</select></td>";
 }
 print "\n<td>";
-print "\n<input type='button' name='students' id='students' value='Tanítványok' onclick=\"document.forms['userSelectForm'].userId.value=" . (int)$_POST['selectedStudent'] . ";
+print "\n<input type='button' name='students' id='students' value='Tanï¿½tvï¿½nyok' onclick=\"document.forms['userSelectForm'].userId.value=" . (int)$_POST['selectedStudent'] . ";
                                                                                             if(document.forms['wordManagement']){
                                                                                                 document.forms['userSelectForm'].dictionaryUser.value = document.forms['wordManagement'].dictionaryUser.value;
                                                                                                 document.forms['userSelectForm'].homeWorkOrder.value = document.forms['wordManagement'].homeWorkOrder.value;
@@ -352,7 +352,7 @@ print "\n<input type='button' name='students' id='students' value='Tanítványok' 
                                                                                             document.forms['userSelectForm'].submit();\">";
 print "\n</td>";
 print "\n<td style='text-align:right;width:100%'>";
-print "\n<input type='button' id='btnDeleteMulti' value='Kijelöltek törlése'>";
+print "\n<input type='button' id='btnDeleteMulti' value='Kijelï¿½ltek tï¿½rlï¿½se'>";
 print "\n</td>";
 
 print "</tr></table>";
@@ -360,14 +360,14 @@ print "</form>";
 
 print "<table border=1 cellpadding=2 width='100%'>";
 print "<tr>
-        <th>Névv</th>
-        <th>Fizetetésitum</th>
-        <th>Összeg</th>
+        <th>Nï¿½vv</th>
+        <th>Fizetetï¿½situm</th>
+        <th>ï¿½sszeg</th>
         <th>Skype perc</th>
         <th>Kinek utalva</th>
-        <th>Tanár része</th>
-        <th>Kikérdezõ része</th>
-        <th>Letanítva</th>
+        <th>Tanï¿½r rï¿½sze</th>
+        <th>Kikï¿½rdezï¿½ rï¿½sze</th>
+        <th>Letanï¿½tva</th>
         <th></th>
         </tr>";
 
@@ -378,8 +378,8 @@ foreach ((array)$finances as $finance) {
     else $time_package_text = 'Namostmivan?';
 
     if (!$finance['paid_to_who']) $paid_to_who_text = '-';
-    else if ($finance['paid_to_who'] == 1) $paid_to_who_text = 'tanár';
-    else if ($finance['paid_to_who'] == 2) $paid_to_who_text = 'kikérdezõ½';
+    else if ($finance['paid_to_who'] == 1) $paid_to_who_text = 'tanï¿½r';
+    else if ($finance['paid_to_who'] == 2) $paid_to_who_text = 'kikï¿½rdezï¿½ï¿½';
     else $paid_to_who_text = 'Namostmivan?';
 
     if (strlen($finance['lesson_date']) > 4 && $finance['lesson_date'][0] != '0') {

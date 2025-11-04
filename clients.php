@@ -140,8 +140,8 @@ $selectedUser['program_end_date'] = substr($selectedUser['program_end_date'], 0,
 print "<form action='$formAction' method='post'>";
 print "<input type='hidden' name='actionType' value=''>";
 print "<input type='hidden' name='sourcePage' value='clients'>";
-print "<input type='hidden' name='userId' value='{$_POST['userId']}'>";
-print "<input type='hidden' name='isNewRecord' value='{$_POST['isNewRecord']}'>";
+print "<input type='hidden' name='userId' value='" . (isset($_POST['userId']) ? $_POST['userId'] : '') . "'>";
+print "<input type='hidden' name='isNewRecord' value='" . (isset($_POST['isNewRecord']) ? $_POST['isNewRecord'] : '') . "'>";
 print "<input type='hidden' name='comment' value=''>";
 print "<input type='hidden' name='dictionaryUser' value=''>";
 print "<input type='hidden' name='homeWorkOrder' value=''>";
@@ -183,25 +183,25 @@ if ($userObject['status'] == 6) {
 print "</tr>";
 
 if ($canEdit) {
-    $vezetekNevText = "<input type='text' name='vezeteknev' value='{$selectedUser['vezeteknev']}' size='4'>";
-    $keresztNevText = "<input type='text' name='keresztnev' value='{$selectedUser['keresztnev']}' size='4'>";
+    $vezetekNevText = "<input type='text' name='vezeteknev' value='" . (isset($selectedUser['vezeteknev']) ? $selectedUser['vezeteknev'] : '') . "' size='4'>";
+    $keresztNevText = "<input type='text' name='keresztnev' value='" . (isset($selectedUser['keresztnev']) ? $selectedUser['keresztnev'] : '') . "' size='4'>";
     $forrasNyelvText = "\n<select name='forras_nyelv'>";
     foreach ($localLangs as $key => $value) {
-        $forrasNyelvText .= "\n<option value='{$key}' " . ($selectedUser['forras_nyelv'] == $key ? 'selected' : '') . ">{$value}";
+        $forrasNyelvText .= "\n<option value='{$key}' " . (isset($selectedUser['forras_nyelv']) && $selectedUser['forras_nyelv'] == $key ? 'selected' : '') . ">{$value}";
     }
     $forrasNyelvText .= "\n</select>";
     $nyelvText = "\n<select name='nyelv'>";
     foreach ($localLangs as $key => $value) {
-        $nyelvText .= "\n<option value='{$key}' " . ($selectedUser['nyelv'] == $key ? 'selected' : '') . ">{$value}";
+        $nyelvText .= "\n<option value='{$key}' " . (isset($selectedUser['nyelv']) && $selectedUser['nyelv'] == $key ? 'selected' : '') . ">{$value}";
     }
     $nyelvText .= "\n</select>";
-    $programStartDateText = "<input type='text' name='program_start_date' value='{$selectedUser['program_start_date']}' size='6'>";
-    $programEndDateText = "<input type='text' name='program_end_date' value='{$selectedUser['program_end_date']}' size='6'>";
-    $emailText = "<input type='text' name='email' value='{$selectedUser['email']}' style='width:100px'>";
-    $jelszoText = "<input type='text' name='username' value='{$selectedUser['jelszo']}' size='4'>";
-    $statusText = "<select name='status'>";
+    $programStartDateText = "<input type='text' name='program_start_date' value='" . (isset($selectedUser['program_start_date']) ? $selectedUser['program_start_date'] : '') . "' size='6'>";
+    $programEndDateText = "<input type='text' name='program_end_date' value='" . (isset($selectedUser['program_end_date']) ? $selectedUser['program_end_date'] : '') . "' size='6'>";
+    $emailText = "<input type='text' name='email' value='" . (isset($selectedUser['email']) ? $selectedUser['email'] : '') . "' style='width:100px'>";
+    $jelszoText = "<input type='text' name='username' value='" . (isset($selectedUser['jelszo']) ? $selectedUser['jelszo'] : '') . "' size='4'>";
+    $statusText = "<select name='status'>';
     foreach ($statusList as $status => $statusName) {
-        if ($selectedUser['status'] == $status) {
+        if (isset($selectedUser['status']) && $selectedUser['status'] == $status) {
             $selected = 'selected';
         } else {
             $selected = '';
@@ -252,7 +252,7 @@ if ($userObject['status'] == 6) {
             this.form.submit();
         }
         \"></td>";
-    print "<td><input type='checkbox' name='send_mail' value='1' " . ($selectedUser['send_mail'] ? 'checked' : '') . "></td>";
+    print "<td><input type='checkbox' name='send_mail' value='1' " . (isset($selectedUser['send_mail']) && $selectedUser['send_mail'] ? 'checked' : '') . "></td>";
 }
 
 print "</tr></table>";
@@ -304,10 +304,10 @@ foreach ($jelentkezok_ordered as $jelentkezo) {
 
     if ($jelentkezo['last_login_date']) {
         $eltelt_mpek = abs(strtotime(date("Y-m-d H:i:s")) - strtotime($jelentkezo['last_login_date']));
-        $napja = floor($eltelt_mpek / 60 / 60 / 24);
-        $oraja = floor(($eltelt_mpek / 60 / 60) % 24);
-        $perce = floor(($eltelt_mpek / 60) % 60);
-        $ideje = (int)$napja . " napja " . (int)$oraja . " oraja " . (int)$perce . " perce";
+        $napja = intdiv($eltelt_mpek, 60 * 60 * 24);
+        $oraja = intdiv($eltelt_mpek, 60 * 60) % 24;
+        $perce = intdiv($eltelt_mpek, 60) % 60;
+        $ideje = $napja . " napja " . $oraja . " oraja " . $perce . " perce";
     } else {
         $ideje = "M�g soha.";
     }
@@ -321,7 +321,7 @@ foreach ($jelentkezok_ordered as $jelentkezo) {
                 document.forms['userSelectForm'].dictionaryUser.value = document.forms['wordManagement'].dictionaryUser.value;
                 document.forms['userSelectForm'].homeWorkOrder.value = document.forms['wordManagement'].homeWorkOrder.value;
             }
-            document.forms['userSelectForm'].submit();\" title=\"{$ideje}\">{$jelentkezo['vezeteknev']} {$jelentkezo['keresztnev']} (" . (int)$userWordCounts[$jelentkezo['id']] . ")</a></td>
+            document.forms['userSelectForm'].submit();" title="{$ideje}">{$jelentkezo['vezeteknev']} {$jelentkezo['keresztnev']} (" . (isset($userWordCounts[$jelentkezo['id']]) ? (int)$userWordCounts[$jelentkezo['id']] : 0) . ")</a></td>
         <td style='font-weight:bold'>&nbsp;" . getUsedTime($jelentkezo['id']) . "</td>
         </tr>";
     $sorszam--;

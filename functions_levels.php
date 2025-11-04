@@ -681,8 +681,9 @@ function getLevelList($lang)
 
     $langArray = getLangArray();
     if (array_key_exists($lang, $langArray)) {
-        return $list[$langArray[$lang]];
+        $langKey = $langArray[$lang];
+        return isset($list[$langKey]) ? $list[$langKey] : array();
     } else {
-        return $list[$lang];
+        return isset($list[$lang]) ? $list[$lang] : array();
     }
 }

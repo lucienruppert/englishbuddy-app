@@ -1468,6 +1468,9 @@ function getAllUserOwnWordCount()
     }
     $return = array();
     while (list($id, $count) = mysql_fetch_row($result)) {
+        if (!isset($return[$id])) {
+            $return[$id] = 0;
+        }
         $return[$id] += $count;
     }
     return $return;
