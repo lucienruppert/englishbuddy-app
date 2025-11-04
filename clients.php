@@ -199,7 +199,7 @@ if ($canEdit) {
     $programEndDateText = "<input type='text' name='program_end_date' value='" . (isset($selectedUser['program_end_date']) ? $selectedUser['program_end_date'] : '') . "' size='6'>";
     $emailText = "<input type='text' name='email' value='" . (isset($selectedUser['email']) ? $selectedUser['email'] : '') . "' style='width:100px'>";
     $jelszoText = "<input type='text' name='username' value='" . (isset($selectedUser['jelszo']) ? $selectedUser['jelszo'] : '') . "' size='4'>";
-    $statusText = "<select name='status'>';
+    $statusText = "<select name='status'>";
     foreach ($statusList as $status => $statusName) {
         if (isset($selectedUser['status']) && $selectedUser['status'] == $status) {
             $selected = 'selected';
