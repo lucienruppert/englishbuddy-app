@@ -16,7 +16,7 @@ if ($userObject['status'] == 6) {
     $canEdit = false;
 }
 
-if ($_POST['actionType'] == "saveForm") {
+if (isset($_POST['actionType']) && $_POST['actionType'] == "saveForm") {
     $storeArray = array();
     $storeArray['id'] = $_POST['userId'];
     if (isset($_POST['email'])) $storeArray['email'] = $_POST['email'];
