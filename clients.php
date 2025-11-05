@@ -360,19 +360,19 @@ foreach((array)$levelList as $level => $levelName){
     $text .= $levelName[0];
     print "\n<option value='{$level}' $selected>{$text}";
 }
-print "</select></td>";
+print "</select></td>;
 */
-print "<td valign='top'><textarea name='taComment' style='font-size:14px;font-weight:300;background-color:WHITE;color:BLACK' id='taComment' cols='46', rows='17'>{$selectedUser['client_data']}</textarea></td>";
+print "<td valign='top'><textarea name='taComment' style='font-size:14px;font-weight:300;background-color:WHITE;color:BLACK' id='taComment' cols='46', rows='17'>" . (isset($selectedUser['client_data']) ? $selectedUser['client_data'] : '') . "</textarea></td>";
 print "</tr>";
 
 print "<tr><td>";
-print "<textarea name='taHaziFeladat' style='font-size:1px;font-weight:10;background-color:WHITE;color:BLACK' id='taHaziFeladat' cols='45'>{$selectedUser['hazi_feladat']}</textarea>";
+print "<textarea name='taHaziFeladat' style='font-size:1px;font-weight:10;background-color:WHITE;color:BLACK' id='taHaziFeladat' cols='45'>" . (isset($selectedUser['hazi_feladat']) ? $selectedUser['hazi_feladat'] : '') . "</textarea>";
 print "</td></tr>";
 
 print "<tr><td colspan='2'>";
-print "<input type='text' name='txtNextLesson' size='25' style='font-size:14px;font-weight:300;background-color:WHITE;color:BLACK' id='txtNextLesson' value='{$selectedUser['next_lesson']}'>";
+print "<input type='text' name='txtNextLesson' size='25' style='font-size:14px;font-weight:300;background-color:WHITE;color:BLACK' id='txtNextLesson' value='" . (isset($selectedUser['next_lesson']) ? $selectedUser['next_lesson'] : '') . "'>";
 print "<input type='button' name='payments' id='payments' value='Befizet�sek' onclick=\"
-        document.forms['userSelectFormForFinance'].selectedStudent.value = " . (int)$selectedUser['id'] . ";
+        document.forms['userSelectFormForFinance'].selectedStudent.value = " . (isset($selectedUser['id']) ? (int)$selectedUser['id'] : 0) . ";
         if(document.forms['wordManagement']){
             document.forms['userSelectFormForFinance'].dictionaryUser.value = document.forms['wordManagement'].dictionaryUser.value;
             document.forms['userSelectFormForFinance'].homeWorkOrder.value = document.forms['wordManagement'].homeWorkOrder.value;
@@ -383,7 +383,7 @@ print "</td>";
 
 if ($userObject['status'] == 6) {
     print "<td>";
-    print "<textarea name='taPayment' style='font-size:14px;font-weight:300;background-color:WHITE;color:BLACK' id='taPayment' cols='48', rows='1'>{$selectedUser['payment']}</textarea>";
+    print "<textarea name='taPayment' style='font-size:14px;font-weight:300;background-color:WHITE;color:BLACK' id='taPayment' cols='48', rows='1'>" . (isset($selectedUser['payment']) ? $selectedUser['payment'] : '') . "</textarea>";
     print "</td></tr>";
 }
 
