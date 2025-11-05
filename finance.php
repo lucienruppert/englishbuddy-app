@@ -45,19 +45,20 @@ if ($userObject['status'] == 6) {
     $canEdit = false;
 }
 
-if ($_POST['actionType'] == "saveFinanceForm") {
+if (isset($_POST['actionType']) && $_POST['actionType'] == "saveFinanceForm") {
     $storeArray = array();
-    $storeArray['id'] = $_POST['financeId'];
+    $storeArray['id'] = isset($_POST['financeId']) ? $_POST['financeId'] : 0;
     if (isset($_POST['user_id'])) $storeArray['user_id'] = $_POST['user_id'];
     if (isset($_POST['payment_date'])) $storeArray['payment_date'] = $_POST['payment_date'];
     if (isset($_POST['time_package'])) $storeArray['time_package'] = $_POST['time_package'];
     if (isset($_POST['paid_to_who'])) $storeArray['paid_to_who'] = $_POST['paid_to_who'];
-    $storeArray['lesson_date'] = $_POST['lesson_date'];
+    $storeArray['lesson_date'] = isset($_POST['lesson_date']) ? $_POST['lesson_date'] : '';
     if (strlen($storeArray['lesson_date']) === 0)
         $storeArray['lesson_date'] = "00-00-00";
-    if ($_POST['isNewFinanceRecord']) {
+    if (isset($_POST['isNewFinanceRecord']) && $_POST['isNewFinanceRecord']) {
         $storeArray['amount'] = 5000;
-        for ($i = 0; $i < $_POST['package_number']; $i++) {
+        $packageNumber = isset($_POST['package_number']) ? (int)$_POST['package_number'] : 1;
+        for ($i = 0; $i < $packageNumber; $i++) {
             $_POST['financeId'] = createFinance($storeArray, $message);
             if (!$_POST['financeId']) {
                 print "<script>alert('{$message}');</script>";
@@ -70,52 +71,52 @@ if ($_POST['actionType'] == "saveFinanceForm") {
             print "<script>alert('{$message}');</script>";
         }
     }
-} else if ($_POST['actionType'] == "deleteFinanceForm") {
-    if (!deleteFinance($_POST['financeId'])) {
+} else if (isset($_POST['actionType']) && $_POST['actionType'] == "deleteFinanceForm") {
+    if (isset($_POST['financeId']) && !deleteFinance($_POST['financeId'])) {
         print "<script>alert('Finance rekord t�rl�se nem siker�lt');</script>";
     }
-} else if ($_POST['actionType'] == "deleteMultiFinanceForm") {
-    if (!deleteFinance($_POST['idsToDelete'])) {
+} else if (isset($_POST['actionType']) && $_POST['actionType'] == "deleteMultiFinanceForm") {
+    if (isset($_POST['idsToDelete']) && !deleteFinance($_POST['idsToDelete'])) {
         print "<script>alert('Finance rekord t�rl�se nem siker�lt');</script>";
     }
-} else if ($_POST['actionType'] == "newFinanceRecord") {
+} else if (isset($_POST['actionType']) && $_POST['actionType'] == "newFinanceRecord") {
     $_POST['financeId'] = 0;
     $selectedFinance['send_mail'] = 1;
 }
 
-if (!$_POST['financeId']) {
+if (!isset($_POST['financeId']) || !$_POST['financeId']) {
     $_POST['isNewFinanceRecord'] = "1";
 }
 
-if ($_POST['financeId'] > 0) {
+if (isset($_POST['financeId']) && $_POST['financeId'] > 0) {
     $selectedFinance = getFinanceById($_POST['financeId']);
 } else {
     $selectedFinance['payment_date'] = date("Y-m-d H");
-    if ($_POST['actionType'] == "saveFinanceForm" && $_POST['isNewFinanceRecord']) {
-        $selectedFinance['nev'] = $_POST['nev'];
-        $selectedFinance['forras_nyelv'] = $_POST['forras_nyelv'];
-        $selectedFinance['nyelv'] = $_POST['nyelv'];
-        $selectedFinance['max_level'] = $_POST['max_level'];
-        $selectedFinance['status'] = $_POST['status'];
-        $selectedFinance['payment_date'] = $_POST['payment_date'];
-        $selectedFinance['email'] = $_POST['email'];
-        $selectedFinance['username'] = $_POST['username'];
-        $selectedFinance['client_data'] = $_POST['taComment'];
-        $selectedFinance['payment'] = $_POST['taPayment'];
-        $selectedFinance['hazi_feladat'] = $_POST['taHaziFeladat'];
-        $selectedFinance['next_lesson'] = $_POST['txtNextLesson'];
-        $selectedFinance['send_mail'] = $_POST['send_mail'];
+    if (isset($_POST['actionType']) && $_POST['actionType'] == "saveFinanceForm" && isset($_POST['isNewFinanceRecord']) && $_POST['isNewFinanceRecord']) {
+        if (isset($_POST['nev'])) $selectedFinance['nev'] = $_POST['nev'];
+        if (isset($_POST['forras_nyelv'])) $selectedFinance['forras_nyelv'] = $_POST['forras_nyelv'];
+        if (isset($_POST['nyelv'])) $selectedFinance['nyelv'] = $_POST['nyelv'];
+        if (isset($_POST['max_level'])) $selectedFinance['max_level'] = $_POST['max_level'];
+        if (isset($_POST['status'])) $selectedFinance['status'] = $_POST['status'];
+        if (isset($_POST['payment_date'])) $selectedFinance['payment_date'] = $_POST['payment_date'];
+        if (isset($_POST['email'])) $selectedFinance['email'] = $_POST['email'];
+        if (isset($_POST['username'])) $selectedFinance['username'] = $_POST['username'];
+        if (isset($_POST['taComment'])) $selectedFinance['client_data'] = $_POST['taComment'];
+        if (isset($_POST['taPayment'])) $selectedFinance['payment'] = $_POST['taPayment'];
+        if (isset($_POST['taHaziFeladat'])) $selectedFinance['hazi_feladat'] = $_POST['taHaziFeladat'];
+        if (isset($_POST['txtNextLesson'])) $selectedFinance['next_lesson'] = $_POST['txtNextLesson'];
+        if (isset($_POST['send_mail'])) $selectedFinance['send_mail'] = $_POST['send_mail'];
         $selectedFinance['lesson_date'] = date("Y-m-d");
     }
 }
 
 $jelentkezokForFilter = array();
 if (in_array($userObject['status'], array(6))) {
-    if ($_POST['selectedStudent'] > 0) {
+    if (isset($_POST['selectedStudent']) && $_POST['selectedStudent'] > 0) {
         $jelentkezok = array();
         $jelentkezok[] = getUserObjById($_POST['selectedStudent']);
         $finances = getFinancesByStudent($_POST['selectedStudent']);
-    } else if ($_POST['selectedTeacher'] > 0) {
+    } else if (isset($_POST['selectedTeacher']) && $_POST['selectedTeacher'] > 0) {
         $jelentkezok = getUsersByTeacher($_POST['selectedTeacher']);
         $finances = getFinances($_POST['selectedTeacher']);
     } else {
@@ -124,7 +125,7 @@ if (in_array($userObject['status'], array(6))) {
     }
     $jelentkezokForFilter = getUsersByLanguage(0);
 } else if (in_array($userObject['status'], array(4, 5))) {
-    if ($_POST['selectedStudent'] > 0) {
+    if (isset($_POST['selectedStudent']) && $_POST['selectedStudent'] > 0) {
         $jelentkezok = array();
         $jelentkezok[] = getUserObjById($_POST['selectedStudent']);
         $finances = getFinancesByStudent($_POST['selectedStudent']);
@@ -135,7 +136,9 @@ if (in_array($userObject['status'], array(6))) {
     $jelentkezokForFilter = getUsersByTeacher($userObject['id']);
 }
 
-$selectedFinance['payment_date'] = substr($selectedFinance['payment_date'], 0, 13);
+if (isset($selectedFinance['payment_date'])) {
+    $selectedFinance['payment_date'] = substr($selectedFinance['payment_date'], 0, 13);
+}
 
 ?>
 <script>
@@ -153,13 +156,13 @@ $selectedFinance['payment_date'] = substr($selectedFinance['payment_date'], 0, 1
 print "<form id='formSelectedRecord' action='$formAction' method='post'>";
 print "<input type='hidden' id='actionType' name='actionType' value=''>";
 print "<input type='hidden' name='sourcePage' value='finance'>";
-print "<input type='hidden' name='financeId' value='{$_POST['financeId']}'>";
-print "<input type='hidden' name='isNewFinanceRecord' value='{$_POST['isNewFinanceRecord']}'>";
+print "<input type='hidden' name='financeId' value='" . (isset($_POST['financeId']) ? $_POST['financeId'] : '') . "'>";
+print "<input type='hidden' name='isNewFinanceRecord' value='" . (isset($_POST['isNewFinanceRecord']) ? $_POST['isNewFinanceRecord'] : '') . "'>";
 print "<input type='hidden' name='comment' value=''>";
 print "<input type='hidden' name='dictionaryUser' value=''>";
 print "<input type='hidden' name='homeWorkOrder' value=''>";
-print "<input type='hidden' name='selectedTeacher' value='{$_POST['selectedTeacher']}'>";
-print "<input type='hidden' name='selectedStudent' value='{$_POST['selectedStudent']}'>";
+print "<input type='hidden' name='selectedTeacher' value='" . (isset($_POST['selectedTeacher']) ? $_POST['selectedTeacher'] : '') . "'>";
+print "<input type='hidden' name='selectedStudent' value='" . (isset($_POST['selectedStudent']) ? $_POST['selectedStudent'] : '') . "'>";
 if ($userObject['status'] == 6) {
     print "<input type='hidden' name='payment' value=''>";
 }
@@ -182,7 +185,7 @@ $mentGomb = "<input type='button' value='Ment' $disabled onclick=\"
         }
         this.form.submit();\">";
 if ($userObject['status'] == 6) {
-    if ($_POST['selectedTeacher'] > 0) {
+    if (isset($_POST['selectedTeacher']) && $_POST['selectedTeacher'] > 0) {
         $balance = getBalance($_POST['selectedTeacher']);
     } else {
         $balance = 0;
@@ -194,7 +197,7 @@ if ($userObject['status'] == 6) {
     print "<tr>
             <th>&nbsp;N�v</th>
             <th>&nbsp;Fizet�si d�tum</th>";
-    if (!$selectedFinance['id']) {
+    if (!isset($selectedFinance['id'])) {
         print "<th>&nbsp;Csomag db</th>";
     }
     print "<th>&nbsp;Skype perc</th>";
@@ -237,12 +240,12 @@ else{
     print "\n</select></tr>";
 }
 */
-if (!$_POST['financeId'] && $userObject['status'] == 6) {
+if ((!isset($_POST['financeId']) || !$_POST['financeId']) && $userObject['status'] == 6) {
 
     $nevText = "<select name='user_id' id='nev'>\n<option value='0'>";
     $selected = '';
     foreach ($jelentkezok as $jelentkezo) {
-        if ($selectedFinance['user_id'] == $jelentkezo['id']) {
+        if (isset($selectedFinance['user_id']) && $selectedFinance['user_id'] == $jelentkezo['id']) {
             $selected = "selected";
         } else {
             $selected = "";
@@ -250,40 +253,40 @@ if (!$_POST['financeId'] && $userObject['status'] == 6) {
         $nevText .= "\n<option value='{$jelentkezo['id']}' {$selected}>{$jelentkezo['vezeteknev']} {$jelentkezo['keresztnev']}";
     }
 } else {
-    $nevText = $selectedFinance['vezeteknev'] . ' ' . $selectedFinance['keresztnev'];
+    $nevText = (isset($selectedFinance['vezeteknev']) ? $selectedFinance['vezeteknev'] : '') . ' ' . (isset($selectedFinance['keresztnev']) ? $selectedFinance['keresztnev'] : '');
 }
 if ($userObject['status'] == 6) {
-    $programStartDateText = "\n<input type='text' name='payment_date' value='" . substr($selectedFinance['payment_date'], 0, 10) . "' size='8'>";
+    $programStartDateText = "\n<input type='text' name='payment_date' value='" . (isset($selectedFinance['payment_date']) ? substr($selectedFinance['payment_date'], 0, 10) : '') . "' size='8'>";
     $csomagSzamText = "\n<select name='package_number'>";
     for ($i = 1; $i <= 20; $i++) {
         $csomagSzamText .= "\n<option value='{$i}'>{$i}";
     }
     $csomagSzamText .= "\n</select>";
     $skypePercText = "\n<select name='time_package'>";
-    $skypePercText .= "\n<option value='1' " . ($selectedFinance['time_package'] == '1' ? 'selected' : '') . ">60";
-    $skypePercText .= "\n<option value='2' " . ($selectedFinance['time_package'] != '1' ? 'selected' : '') . ">90";
+    $skypePercText .= "\n<option value='1' " . (isset($selectedFinance['time_package']) && $selectedFinance['time_package'] == '1' ? 'selected' : '') . ">60";
+    $skypePercText .= "\n<option value='2' " . (!isset($selectedFinance['time_package']) || $selectedFinance['time_package'] != '1' ? 'selected' : '') . ">90";
     $skypePercText .= "\n</select>";
     $kinekUtalvaText = "\n<select name='paid_to_who'>";
-    $kinekUtalvaText .= "\n<option value='1' " . ($selectedFinance['paid_to_who'] == '1' ? 'selected' : '') . ">Tan�r";
-    $kinekUtalvaText .= "\n<option value='2' " . ($selectedFinance['paid_to_who'] != '1' ? 'selected' : '') . ">Kik�rdez�";
+    $kinekUtalvaText .= "\n<option value='1' " . (isset($selectedFinance['paid_to_who']) && $selectedFinance['paid_to_who'] == '1' ? 'selected' : '') . ">Tan�r";
+    $kinekUtalvaText .= "\n<option value='2' " . (!isset($selectedFinance['paid_to_who']) || $selectedFinance['paid_to_who'] != '1' ? 'selected' : '') . ">Kik�rdez�";
     $kinekUtalvaText .= "\n</select>";
 } else {
-    $programStartDateText = substr($selectedFinance['payment_date'], 0, 10);
-    $skypePercText = $selectedFinance['time_package'] == 1 ? '60' : ($selectedFinance['time_package'] == 2 ? '90' : '-');
-    $kinekUtalvaText = $selectedFinance['paid_to_who'] == 1 ? 'Tan�r' : ($selectedFinance['paid_to_who'] == 2 ? 'Kik�rdez�' : '-');
+    $programStartDateText = isset($selectedFinance['payment_date']) ? substr($selectedFinance['payment_date'], 0, 10) : '';
+    $skypePercText = isset($selectedFinance['time_package']) && $selectedFinance['time_package'] == 1 ? '60' : (isset($selectedFinance['time_package']) && $selectedFinance['time_package'] == 2 ? '90' : '-');
+    $kinekUtalvaText = isset($selectedFinance['paid_to_who']) && $selectedFinance['paid_to_who'] == 1 ? 'Tan�r' : (isset($selectedFinance['paid_to_who']) && $selectedFinance['paid_to_who'] == 2 ? 'Kik�rdez�' : '-');
 }
-if ($userObject['status'] != 6 && !$selectedFinance['id']) {
+if ($userObject['status'] != 6 && !isset($selectedFinance['id'])) {
     $disabled = "disabled";
 } else {
     $disabled = "";
 }
-$lessonDateText = "\n<input type='text' name='lesson_date' id='lesson_date_text' value='" . substr($selectedFinance['lesson_date'], 0, 10) . "' size='13' {$disabled}>";
+$lessonDateText = "\n<input type='text' name='lesson_date' id='lesson_date_text' value='" . (isset($selectedFinance['lesson_date']) ? substr($selectedFinance['lesson_date'], 0, 10) : '') . "' size='13' {$disabled}>";
 
 print "<tr>
         <td>&nbsp;$nevText</td>";
 print "<td>&nbsp;$programStartDateText</td>";
 if ($userObject['status'] == 6) {
-    if (!$selectedFinance['id']) {
+    if (!isset($selectedFinance['id'])) {
         print "<td>&nbsp;$csomagSzamText</td>";
     }
 }
@@ -291,7 +294,7 @@ print "<td>&nbsp;$skypePercText</td>";
 print "<td>&nbsp;$kinekUtalvaText</td>";
 print "<td>&nbsp;$lessonDateText</td>";
 if ($userObject['status'] == 6) {
-    print "<td><input type='button' name='deleteBtn' value='T�r�l' onclick=\"
+    print "<td><input type='button' name='deleteBtn' value='T�r�l' " . (!isset($selectedFinance['id']) ? 'disabled' : '') . " onclick=\"
         if(confirm('Biztos szeretn�d t�r�lni a finance rekordot?')){
             this.form.actionType.value='deleteFinanceForm';
             this.form.submit();
@@ -334,7 +337,7 @@ if ($userObject['status'] == 6) {
      \">
         <option value=''>";
     foreach ($teachers as $teacher) {
-        if ($_POST['selectedTeacher'] > 0 && $teacher['id'] == $_POST['selectedTeacher']) {
+        if (isset($_POST['selectedTeacher']) && $_POST['selectedTeacher'] > 0 && $teacher['id'] == $_POST['selectedTeacher']) {
             $selected = 'selected';
         } else {
             $selected = '';
@@ -344,7 +347,7 @@ if ($userObject['status'] == 6) {
     print "</select></td>";
 }
 print "\n<td>";
-print "\n<input type='button' name='students' id='students' value='Tan�tv�nyok' onclick=\"document.forms['userSelectForm'].userId.value=" . (int)$_POST['selectedStudent'] . ";
+print "\n<input type='button' name='students' id='students' value='Tan�tv�nyok' onclick=\"document.forms['userSelectForm'].userId.value=" . (isset($_POST['selectedStudent']) ? (int)$_POST['selectedStudent'] : 0) . ";
                                                                                             if(document.forms['wordManagement']){
                                                                                                 document.forms['userSelectForm'].dictionaryUser.value = document.forms['wordManagement'].dictionaryUser.value;
                                                                                                 document.forms['userSelectForm'].homeWorkOrder.value = document.forms['wordManagement'].homeWorkOrder.value;
