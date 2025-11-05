@@ -710,7 +710,7 @@ print "<script type='text/javascript'>var jelentes = \"" . (isset($word2) ? html
             url: "mumus_store.php",
             type: "POST",
             data: {
-                wordId: <?php print "\"{$words[0]['id']}\""; ?>
+                wordId: <?php print(isset($words[0]['id']) ? "\"{$words[0]['id']}\"" : "null"); ?>
             },
             dataType: "json",
             success: function(response) {
@@ -735,7 +735,7 @@ print "<script type='text/javascript'>var jelentes = \"" . (isset($word2) ? html
             url: "remove_word.php",
             type: "POST",
             data: {
-                wordId: <?php print "\"{$words[0]['id']}\""; ?>
+                wordId: <?php print(isset($words[0]['id']) ? "\"{$words[0]['id']}\"" : "null"); ?>
             },
             dataType: "json",
             success: function(response) {
