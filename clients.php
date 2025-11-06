@@ -60,8 +60,8 @@ if (isset($_POST['actionType']) && $_POST['actionType'] == "saveForm") {
 
         $to = $_POST['email'];
         if (strlen($body) > 0) {
-            endiMail($to, $subject, $body, "lingocasa.com", "lingocasa.com");
-            endiMail('luciendelmar@gmail.com', $subject, $body, "lingocasa.com", "hello@lingocasa.com");
+            endiMail($to, $subject, $body, "englishbuddy.hu", "englishbuddy.hu");
+            endiMail('luciendelmar@gmail.com', $subject, $body, "englishbuddy.hu", "hello@englishbuddy.hu");
         }
     } else {
         if (!modifyUser($storeArray, $message)) {
@@ -150,7 +150,6 @@ if ($userObject['status'] == 6) {
 }
 print "<input type='hidden' name='hazi_feladat' value=''>";
 print "<input type='hidden' name='next_lesson' value=''>";
-print "<br><br>";
 print "<table style='border: 1px solid' align='center' width='700'><tr><td colspan=3>";
 print "<table border='1' style='border: 1px solid'>";
 print "<tr>
