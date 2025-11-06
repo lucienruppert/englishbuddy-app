@@ -95,6 +95,7 @@
               <a href="#" class="white-color" onclick="event.preventDefault();var a=document.getElementById('admin-submenu');if(a)a.classList.toggle('show');">Admin &#9662;</a>
               <div id="admin-submenu" class="dropdown-content" style="display:none;position:absolute;z-index:100;background:white;border:1px solid #334155;padding:5px 0;border-radius:6px;min-width:160px;">
                 <a href='#' class="medium-color" onclick=<?php print $onclick2; ?>><?php print translate("kitolto"); ?></a>
+                <a href='#' class="medium-color" onclick="tudastar();"><?php print translate("tudastar_title"); ?></a>
               </div>
             </div>
           <?php }
@@ -109,7 +110,6 @@
 
     <?php if ($userObject['status'] == 6) { ?>
       <div class="submenu admin-menu">
-        <a href='#' class="menu-link" onclick="tudastar();"><? print translate("tudastar_title"); ?></a>
         <a href='#' class="menu-link" onclick="szotarFeltoltes();"><? print translate("feltoltes"); ?></a>
         <a href='#' class="menu-link" onclick="location.href='main.php?content=wordCategorize&source=welcome'"><? print translate("kategorizalas"); ?></a>
       </div>
