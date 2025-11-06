@@ -150,7 +150,7 @@ if ($userObject['status'] == 6) {
 }
 print "<input type='hidden' name='hazi_feladat' value=''>";
 print "<input type='hidden' name='next_lesson' value=''>";
-print "<table style='border: 1px solid;margin-top:20px' align='center' width='700'><tr><td colspan=3>";
+print "<table style='border: 1px solid' align='center' width='700'><tr><td colspan=3>";
 print "<table border='1' style='border: 1px solid'>";
 print "<tr>
     <th>&nbsp;Vezetéknév</th>
