@@ -2365,6 +2365,8 @@ function createUser2($userArray, &$message)
 
 function modifyUser($storeArray, &$message)
 {
+    error_log("DEBUG modifyUser: START - userId = " . (isset($storeArray['id']) ? $storeArray['id'] : 'NOT SET'));
+
     if (isset($storeArray['email'])) $fields['email'] = "'" . $storeArray['email'] . "'";
     if (isset($storeArray['jelszo'])) $fields['jelszo'] = "'" . $storeArray['jelszo'] . "'";
     if (isset($storeArray['vezeteknev'])) $fields['vezeteknev'] = "'" . $storeArray['vezeteknev'] . "'";
@@ -2382,11 +2384,15 @@ function modifyUser($storeArray, &$message)
     if (isset($storeArray['hazi_feladat'])) $fields['hazi_feladat'] = "'" . $storeArray['hazi_feladat'] . "'";
     if (isset($storeArray['next_lesson'])) $fields['next_lesson'] = "'" . $storeArray['next_lesson'] . "'";
 
+    error_log("DEBUG modifyUser: Fields built, count = " . count($fields));
+
     if (isset($storeArray['email'])) {
+        error_log("DEBUG modifyUser: Checking email uniqueness");
         $query = "select count(*) as nr from lmjelentkezok where email = '{$storeArray['email']}' and id != " . (int)$storeArray['id'];
 
         $result = mysql_query($query);
         if (!$result) {
+            error_log("DEBUG modifyUser: Email check query FAILED - " . mysql_error());
             print mysql_error();
             exit("Nem siker�lt: " . $query);
         }
@@ -2395,6 +2401,7 @@ function modifyUser($storeArray, &$message)
             $number = $row['nr'];
         }
         if ($number > 0) {
+            error_log("DEBUG modifyUser: Email already exists");
             $message = "Ezzel az e-mail c�mmel m�r van regisztr�lt felhaszn�l�!";
             return false;
         }
@@ -2407,11 +2414,16 @@ function modifyUser($storeArray, &$message)
     $sql = "update lmjelentkezok set " . implode(', ', $sqlString) . "
                 where id = " . (int)$storeArray['id'];
 
+    error_log("DEBUG modifyUser: Executing UPDATE query");
+    error_log("DEBUG modifyUser: SQL = " . $sql);
+
     $result = mysql_query($sql);
     if (!$result) {
+        error_log("DEBUG modifyUser: UPDATE query FAILED - " . mysql_error());
         print mysql_error();
         return false;
     }
+    error_log("DEBUG modifyUser: SUCCESS - returning true");
     return true;
 }
 
