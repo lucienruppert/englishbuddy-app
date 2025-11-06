@@ -257,8 +257,8 @@ if ($userObject['status'] == 6) {
 
 print "</tr></table>";
 print "</form>";
-print "</td></tr>";
-print "<tr><td valign='top' rowspan='2' colspan='2'>";
+print "</td>";
+print "<td valign='top'>";
 print "<div style='width:390;height:300;overflow:auto'>";
 print "<form id='userSelectForm' name='userSelectForm' action='$formAction' method='post'>
             <input type='hidden' name='actionType' value='selectRecord'>
