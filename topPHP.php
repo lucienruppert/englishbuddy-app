@@ -35,6 +35,11 @@ if (isset($_REQUEST['actionType']) && $_REQUEST['actionType'] == 'login') {
         } else if ($userObject['program_end_date'] >= date("Y-m-d 00:00:00")) {
             $GLOBALS['welcomeText'] = true;
             $GLOBALS['userObject']['forras_nyelv'] = $_SESSION['userObject']['forras_nyelv'];
+            // Redirect directly to classroom after successful login
+            if (!in_array($userObject['status'], array(1, 2))) {
+                header("Location: main.php?content=wordManagement");
+                exit;
+            }
         } else {
             print "<script>alert('El�fizet�sed lej�rt, k�rlek l�pj kapcsolatba a program �zemeltet�j�vel!');</script>";
         }
