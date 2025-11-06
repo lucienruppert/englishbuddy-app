@@ -2418,6 +2418,8 @@ function modifyUser($storeArray, &$message)
     error_log("DEBUG modifyUser: SQL = " . $sql);
 
     $result = mysql_query($sql);
+    error_log("DEBUG modifyUser: Query executed, result = " . ($result ? 'TRUE' : 'FALSE'));
+
     if (!$result) {
         error_log("DEBUG modifyUser: UPDATE query FAILED - " . mysql_error());
         print mysql_error();

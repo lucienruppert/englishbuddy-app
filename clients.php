@@ -73,14 +73,18 @@ if (isset($_POST['actionType']) && $_POST['actionType'] == "saveForm") {
         }
     } else {
         error_log("DEBUG clients.php: Calling modifyUser for userId = " . $storeArray['id']);
-        if (!modifyUser($storeArray, $message)) {
+        $modifyResult = modifyUser($storeArray, $message);
+        error_log("DEBUG clients.php: modifyUser returned: " . ($modifyResult ? 'TRUE' : 'FALSE'));
+        
+        if (!$modifyResult) {
             error_log("DEBUG clients.php: modifyUser FAILED - " . $message);
             print "<script>alert('{$message}');</script>";
         } else {
             error_log("DEBUG clients.php: modifyUser SUCCESS");
         }
     }
-} else if (isset($_POST['actionType']) && $_POST['actionType'] == "deleteForm") {
+}
+error_log("DEBUG clients.php: After saveForm block - continuing execution"); else if (isset($_POST['actionType']) && $_POST['actionType'] == "deleteForm") {
     if (!deleteUser($_POST['userId'])) {
         print "<script>alert('Felhaszn�l� t�rl�se nem siker�lt');</script>";
     } else {
