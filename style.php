@@ -186,21 +186,19 @@
 
   #clientDiv {
     position: absolute;
-    top: 35px;
+    top: 50px;
     left: 50%;
     margin-left: -405px;
     display: none;
-    background-color: white;
+    background-color: <?php print $globalcolor; ?>;
     filter: alpha(opacity=100);
     /* IE's opacity*/
     opacity: 1;
     z-index: 99;
     padding: 5px;
-    border: 1px solid grey;
-  }
-
-  #clientDiv {
+    /* border: 1px solid grey; */
     color: black;
+  }
   }
 
   #financeDiv {
