@@ -169,8 +169,6 @@ print "<th><input type='button' value='Ment' onclick=\"
     this.form.comment.value=document.getElementById('taComment').value;
     if(document.getElementById('taPayment'))
         this.form.payment.value=document.getElementById('taPayment').value;
-    this.form.hazi_feladat.value=document.getElementById('taHaziFeladat').value;
-    this.form.next_lesson.value=document.getElementById('txtNextLesson').value;
     if(document.forms['wordManagement']){
         this.form.dictionaryUser.value = document.forms['wordManagement'].dictionaryUser.value;
         this.form.homeWorkOrder.value = document.forms['wordManagement'].homeWorkOrder.value;
