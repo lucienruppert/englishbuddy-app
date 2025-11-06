@@ -2381,8 +2381,8 @@ function modifyUser($storeArray, &$message)
     if (isset($storeArray['status'])) $fields['status'] = (int)$storeArray['status'];
     if (isset($storeArray['tanar'])) $fields['tanar_id'] = (int)$storeArray['tanar'];
     if (isset($storeArray['payment'])) $fields['payment'] = "'" . mysql_real_escape_string($storeArray['payment']) . "'";
-    if (isset($storeArray['hazi_feladat'])) $fields['hazi_feladat'] = "'" . mysql_real_escape_string($storeArray['hazi_feladat']) . "'";
-    if (isset($storeArray['next_lesson'])) $fields['next_lesson'] = "'" . mysql_real_escape_string($storeArray['next_lesson']) . "'";
+    if (isset($storeArray['hazi_feladat']) && $storeArray['hazi_feladat'] !== '') $fields['hazi_feladat'] = "'" . mysql_real_escape_string($storeArray['hazi_feladat']) . "'";
+    if (isset($storeArray['next_lesson']) && $storeArray['next_lesson'] !== '') $fields['next_lesson'] = "'" . mysql_real_escape_string($storeArray['next_lesson']) . "'";
     error_log("DEBUG modifyUser: Fields built, count = " . count($fields));
 
     if (isset($storeArray['email'])) {

@@ -78,7 +78,8 @@ if (isset($_POST['actionType']) && $_POST['actionType'] == "saveForm") {
 
         if (!$modifyResult) {
             error_log("DEBUG clients.php: modifyUser FAILED - " . $message);
-            print "<script>alert('{$message}');</script>";
+            $escapedMessage = addslashes($message);
+            print "<script>alert('{$escapedMessage}');</script>";
         } else {
             error_log("DEBUG clients.php: modifyUser SUCCESS");
         }
