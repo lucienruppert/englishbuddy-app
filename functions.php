@@ -2417,11 +2417,21 @@ function modifyUser($storeArray, &$message)
     error_log("DEBUG modifyUser: SQL = " . $sql);
     error_log("DEBUG modifyUser: MySQL connection test: " . (function_exists('mysql_query') ? 'EXISTS' : 'NOT EXISTS'));
 
+    // Check if database connection exists
+    global $vts_mysqli;
+    error_log("DEBUG modifyUser: Database connection is: " . ($vts_mysqli ? 'VALID' : 'NULL'));
+
     // Try to execute query
     error_log("DEBUG modifyUser: About to call mysql_query");
-    $result = @mysql_query($sql);
-    error_log("DEBUG modifyUser: mysql_query returned");
-    error_log("DEBUG modifyUser: Query executed, result = " . ($result ? 'TRUE' : 'FALSE'));
+    try {
+        $result = @mysql_query($sql);
+        error_log("DEBUG modifyUser: mysql_query returned");
+        error_log("DEBUG modifyUser: Query executed, result = " . ($result ? 'TRUE' : 'FALSE'));
+    } catch (Exception $e) {
+        error_log("DEBUG modifyUser: Exception caught: " . $e->getMessage());
+        $message = "Database error: " . $e->getMessage();
+        return false;
+    }
 
     if (!$result) {
         $error = @mysql_error();
