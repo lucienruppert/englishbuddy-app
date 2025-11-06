@@ -258,7 +258,7 @@ if ($userObject['status'] == 6) {
 print "</tr></table>";
 print "</form>";
 print "</td></tr>";
-print "<tr><td valign='top' rowspan='2' colspan='2'>";
+print "<tr><td valign='top' colspan='2'>";
 print "<div style='width:390;height:300;overflow:auto'>";
 print "<form id='userSelectForm' name='userSelectForm' action='$formAction' method='post'>
             <input type='hidden' name='actionType' value='selectRecord'>
@@ -328,7 +328,42 @@ foreach ($jelentkezok_ordered as $jelentkezo) {
 }
 print "</table><a name='bottom'>";
 print "</div>";
-print "</td></tr>";
+print "</td>";
+/*
+print "<td valign='top' rowspan='2'><select name='max_level' size='12' style='width:100px'>";
+
+foreach((array)$levelList as $level => $levelName){
+    if($selectedUser['max_level'] == 1000){
+        $usedMaxLevel = $level;
+    }
+    else{
+        if($selectedUser['max_level'] >= $level && $level > $usedMaxLevel){
+            $usedMaxLevel = $level;
+        }
+    }
+}
+
+$i = 1;
+foreach((array)$levelList as $level => $levelName){
+    if($usedMaxLevel == $level){
+        $selected = 'selected';
+    }
+    else{
+        $selected = '';
+    }
+    if(!in_array($levelName[1], array(1, 2))){
+        $text = $i++ . ". ";
+    }
+    else{
+        $text = "&nbsp;&nbsp;&nbsp;&#8627 ";
+    }
+    $text .= $levelName[0];
+    print "\n<option value='{$level}' $selected>{$text}";
+}
+print "</select></td>;
+*/
+print "<td valign='top'><textarea name='taComment' style='font-size:14px;font-weight:300;background-color:WHITE;color:BLACK' id='taComment' cols='46', rows='17'>" . (isset($selectedUser['client_data']) ? $selectedUser['client_data'] : '') . "</textarea></td>";
+print "</tr>";
 
 print "</table>";
 ?>
