@@ -2417,15 +2417,16 @@ function modifyUser($storeArray, &$message)
     error_log("DEBUG modifyUser: SQL = " . $sql);
     error_log("DEBUG modifyUser: MySQL connection test: " . (function_exists('mysql_query') ? 'EXISTS' : 'NOT EXISTS'));
 
-    // Suppress errors to capture them in log
+    // Try to execute query
+    error_log("DEBUG modifyUser: About to call mysql_query");
     $result = @mysql_query($sql);
+    error_log("DEBUG modifyUser: mysql_query returned");
     error_log("DEBUG modifyUser: Query executed, result = " . ($result ? 'TRUE' : 'FALSE'));
 
     if (!$result) {
-        $error = mysql_error();
+        $error = @mysql_error();
         error_log("DEBUG modifyUser: UPDATE query FAILED - " . $error);
-        print "<script>console.error('SQL Error: " . addslashes($error) . "');</script>";
-        print mysql_error();
+        $message = $error;
         return false;
     }
     error_log("DEBUG modifyUser: SUCCESS - returning true");
