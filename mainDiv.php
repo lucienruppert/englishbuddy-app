@@ -97,23 +97,17 @@
                 <a href='#' class="medium-color" onclick=<?php print $onclick2; ?>><?php print translate("kitolto"); ?></a>
                 <a href='#' class="medium-color" onclick="tudastar();"><?php print translate("tudastar_title"); ?></a>
                 <a href='#' class="medium-color" onclick="szotarFeltoltes();"><?php print translate("feltoltes"); ?></a>
+                <a href='#' class="medium-color" onclick="location.href='main.php?content=wordCategorize&source=welcome'"><?php print translate("kategorizalas"); ?></a>
               </div>
             </div>
-          <?php }
-          if ($userObject) {
-          ?>
+          <?php } ?>
+          <?php if ($userObject) { ?>
             <a href='#' class="logout" onclick="event.stopPropagation();location.href='logout.php'"><?php print translate('kijelentkezes'); ?>
             </a>
           <?php } ?>
         </span>
       </div>
     <?php } ?>
-
-    <?php if ($userObject['status'] == 6) { ?>
-      <div class="submenu admin-menu">
-        <a href='#' class="menu-link" onclick="location.href='main.php?content=wordCategorize&source=welcome'"><? print translate("kategorizalas"); ?></a>
-      </div>
-    <?php }  ?>
 
     <?php if ($userObject) { ?>
       <span class="classroom submenu">
