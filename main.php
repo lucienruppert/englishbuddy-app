@@ -147,6 +147,8 @@ $_SESSION['isShown'] = false;
 
 <BODY>
     <?php
+    error_log("DEBUG main.php: content = " . ($_REQUEST['content'] ?? 'NOT SET'));
+    error_log("DEBUG main.php: sourcePage = " . ($_REQUEST['sourcePage'] ?? 'NOT SET'));
     include('menu.php');
     ?>
     <div id="content">

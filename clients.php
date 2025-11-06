@@ -16,7 +16,15 @@ if ($userObject['status'] == 6) {
     $canEdit = false;
 }
 
+// DEBUG: Log form submission
+if (isset($_POST['actionType'])) {
+    error_log("DEBUG clients.php: actionType = " . $_POST['actionType']);
+    error_log("DEBUG clients.php: userId = " . (isset($_POST['userId']) ? $_POST['userId'] : 'NOT SET'));
+    error_log("DEBUG clients.php: sourcePage = " . (isset($_POST['sourcePage']) ? $_POST['sourcePage'] : 'NOT SET'));
+}
+
 if (isset($_POST['actionType']) && $_POST['actionType'] == "saveForm") {
+    error_log("DEBUG clients.php: Entering saveForm block");
     $storeArray = array();
     $storeArray['id'] = $_POST['userId'];
     if (isset($_POST['email'])) $storeArray['email'] = $_POST['email'];
@@ -64,8 +72,12 @@ if (isset($_POST['actionType']) && $_POST['actionType'] == "saveForm") {
             endiMail('luciendelmar@gmail.com', $subject, $body, "englishbuddy.hu", "hello@englishbuddy.hu");
         }
     } else {
+        error_log("DEBUG clients.php: Calling modifyUser for userId = " . $storeArray['id']);
         if (!modifyUser($storeArray, $message)) {
+            error_log("DEBUG clients.php: modifyUser FAILED - " . $message);
             print "<script>alert('{$message}');</script>";
+        } else {
+            error_log("DEBUG clients.php: modifyUser SUCCESS");
         }
     }
 } else if (isset($_POST['actionType']) && $_POST['actionType'] == "deleteForm") {
