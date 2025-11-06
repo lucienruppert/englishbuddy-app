@@ -259,7 +259,7 @@ print "</tr></table>";
 print "</form>";
 print "</td></tr>";
 print "<tr><td valign='top' colspan='2'>";
-print "<div style='width:390;height:300;overflow:auto'>";
+print "<div style='width:390;overflow:auto'>";
 print "<form id='userSelectForm' name='userSelectForm' action='$formAction' method='post'>
             <input type='hidden' name='actionType' value='selectRecord'>
             <input type='hidden' name='isNewRecord' value='0'>
