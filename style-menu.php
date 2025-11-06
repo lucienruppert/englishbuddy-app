@@ -216,7 +216,7 @@
 
   #clientDiv {
     position: absolute;
-    top: 35px;
+    top: 50px;
     left: 50%;
     margin-left: -500px;
     display: none;
@@ -227,9 +227,6 @@
     z-index: 99;
     padding: 5px;
     border: 1px solid grey;
-  }
-
-  #clientDiv {
     color: black;
   }
 

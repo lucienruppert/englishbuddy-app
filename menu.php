@@ -134,7 +134,7 @@ if (!isset($_REQUEST['sourcePage'])) {
 }
 
 if ($_REQUEST['sourcePage'] == 'clients') {
-  $clientStyleText = "style='display:block;margin-top:20px;'";
+  $clientStyleText = "style='display:block;'";
   $mainStyleText = "style='display:none'";
   $financeStyleText = "style='display:none'";
 } else if ($_REQUEST['sourcePage'] == 'finance') {
