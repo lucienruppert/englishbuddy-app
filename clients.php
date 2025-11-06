@@ -365,9 +365,5 @@ print "</select></td>;
 print "<td valign='top'><textarea name='taComment' style='font-size:14px;font-weight:300;background-color:WHITE;color:BLACK' id='taComment' cols='46', rows='17'>" . (isset($selectedUser['client_data']) ? $selectedUser['client_data'] : '') . "</textarea></td>";
 print "</tr>";
 
-print "<tr><td>";
-print "<textarea name='taHaziFeladat' style='font-size:1px;font-weight:10;background-color:WHITE;color:BLACK' id='taHaziFeladat' cols='45'>" . (isset($selectedUser['hazi_feladat']) ? $selectedUser['hazi_feladat'] : '') . "</textarea>";
-print "</td></tr>";
-
 print "</table>";
 ?>
