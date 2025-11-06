@@ -150,13 +150,15 @@ if ($_REQUEST['sourcePage'] == 'clients') {
 //    if(in_array($userObject['status'], array(5, 6))){
 if (in_array($userObject['status'], array(5, 6))) {
   print "\n<div id='clientDiv' {$clientStyleText}>\n";
-  $formAction = "main.php?content=" . $_REQUEST['content'];
+  $contentParam = isset($_REQUEST['content']) && $_REQUEST['content'] ? $_REQUEST['content'] : 'wordManagement';
+  $formAction = "main.php?content=" . $contentParam;
   include('clients.php');
   print "\n</div>";
 }
 if (in_array($userObject['status'], array(5, 6))) {
   print "\n<div id='financeDiv' {$financeStyleText}>\n";
-  $formAction = "main.php?content=" . $_REQUEST['content'];
+  $contentParam = isset($_REQUEST['content']) && $_REQUEST['content'] ? $_REQUEST['content'] : 'wordManagement';
+  $formAction = "main.php?content=" . $contentParam;
   include('finance.php');
   print "\n</div>";
 }
