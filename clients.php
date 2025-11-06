@@ -362,7 +362,7 @@ foreach((array)$levelList as $level => $levelName){
 }
 print "</select></td>;
 */
-print "<td valign='top'><textarea name='taComment' style='font-size:14px;font-weight:300;background-color:WHITE;color:BLACK' id='taComment' cols='46', rows='17'>" . (isset($selectedUser['client_data']) ? $selectedUser['client_data'] : '') . "</textarea></td>";
+print "<td valign='top'><textarea name='taComment' style='font-size:14px;font-weight:300;background-color:WHITE;color:BLACK' id='taComment' cols='46', rows='16'>" . (isset($selectedUser['client_data']) ? $selectedUser['client_data'] : '') . "</textarea></td>";
 print "</tr>";
 
 print "</table>";
