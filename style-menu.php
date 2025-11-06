@@ -220,13 +220,13 @@
     left: 50%;
     margin-left: -500px;
     display: none;
-    background-color: white;
+    background-color: <?php print $globalcolor; ?>;
     filter: alpha(opacity=100);
     /* IE's opacity*/
     opacity: 1;
     z-index: 99;
     padding: 5px;
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
     color: black;
   }
 
