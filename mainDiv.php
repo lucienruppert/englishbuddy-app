@@ -66,6 +66,7 @@
             document.addEventListener('click', function(e) {
               var szogyakorlasSubmenu = document.getElementById('szogyakorlas-submenu');
               var mondatgyakorlasSubmenu = document.getElementById('mondatgyakorlas-submenu');
+              var adminSubmenu = document.getElementById('admin-submenu');
 
               // Check if click is outside any dropdown
               if (!e.target.closest('.dropdown')) {
@@ -74,6 +75,9 @@
                 }
                 if (mondatgyakorlasSubmenu) {
                   mondatgyakorlasSubmenu.classList.remove('show');
+                }
+                if (adminSubmenu) {
+                  adminSubmenu.classList.remove('show');
                 }
               }
             });
@@ -87,7 +91,12 @@
           ?>
             <!-- <a href='#' class="white-color" onclick="p_Click(event)"><?php print translate('tandijak'); ?></a> -->
             <a href='#' class="white-color" onclick="t_Click(event)"><?php print translate('tanulok'); ?></a>
-            <a href='#' class="white-color" onclick="location.href='main.php?content=admin'">Admin</a>
+            <div class="dropdown" style="display:inline-block;margin-left:20px;">
+              <a href="#" class="white-color" onclick="event.preventDefault();var a=document.getElementById('admin-submenu');if(a)a.classList.toggle('show');">Admin &#9662;</a>
+              <div id="admin-submenu" class="dropdown-content" style="display:none;position:absolute;z-index:100;background:white;border:1px solid #334155;padding:5px 0;border-radius:6px;min-width:160px;">
+                <a href='#' class="medium-color" onclick="var a=document.getElementById('admin-submenu');if(a)a.classList.remove('show');<?php print $onclick2; ?>"><?php print translate("kitolto"); ?></a>
+              </div>
+            </div>
           <?php }
           if ($userObject) {
           ?>
@@ -100,7 +109,6 @@
 
     <?php if ($userObject['status'] == 6) { ?>
       <div class="submenu admin-menu">
-        <a href='#' class="menu-link" onclick=<?php print $onclick2; ?>><? print translate("kitolto"); ?></a>
         <a href='#' class="menu-link" onclick="tudastar();"><? print translate("tudastar_title"); ?></a>
         <a href='#' class="menu-link" onclick="szotarFeltoltes();"><? print translate("feltoltes"); ?></a>
         <a href='#' class="menu-link" onclick="location.href='main.php?content=wordCategorize&source=welcome'"><? print translate("kategorizalas"); ?></a>
