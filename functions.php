@@ -2367,23 +2367,22 @@ function modifyUser($storeArray, &$message)
 {
     error_log("DEBUG modifyUser: START - userId = " . (isset($storeArray['id']) ? $storeArray['id'] : 'NOT SET'));
 
-    if (isset($storeArray['email'])) $fields['email'] = "'" . $storeArray['email'] . "'";
-    if (isset($storeArray['jelszo'])) $fields['jelszo'] = "'" . $storeArray['jelszo'] . "'";
-    if (isset($storeArray['vezeteknev'])) $fields['vezeteknev'] = "'" . $storeArray['vezeteknev'] . "'";
-    if (isset($storeArray['keresztnev'])) $fields['keresztnev'] = "'" . $storeArray['keresztnev'] . "'";
-    if (isset($storeArray['program_start_date'])) $fields['program_start_date'] = "'" . $storeArray['program_start_date'] . "'";
-    if (isset($storeArray['program_end_date'])) $fields['program_end_date'] = "'" . $storeArray['program_end_date'] . "'";
-    if (isset($storeArray['client_data'])) $fields['client_data'] = "'" . $storeArray['client_data'] . "'";
+    if (isset($storeArray['email'])) $fields['email'] = "'" . mysql_real_escape_string($storeArray['email']) . "'";
+    if (isset($storeArray['jelszo'])) $fields['jelszo'] = "'" . mysql_real_escape_string($storeArray['jelszo']) . "'";
+    if (isset($storeArray['vezeteknev'])) $fields['vezeteknev'] = "'" . mysql_real_escape_string($storeArray['vezeteknev']) . "'";
+    if (isset($storeArray['keresztnev'])) $fields['keresztnev'] = "'" . mysql_real_escape_string($storeArray['keresztnev']) . "'";
+    if (isset($storeArray['program_start_date'])) $fields['program_start_date'] = "'" . mysql_real_escape_string($storeArray['program_start_date']) . "'";
+    if (isset($storeArray['program_end_date'])) $fields['program_end_date'] = "'" . mysql_real_escape_string($storeArray['program_end_date']) . "'";
+    if (isset($storeArray['client_data'])) $fields['client_data'] = "'" . mysql_real_escape_string($storeArray['client_data']) . "'";
     if (isset($storeArray['send_mail'])) $fields['send_mail'] = (int)$storeArray['send_mail'];
     if (isset($storeArray['forras_nyelv'])) $fields['forras_nyelv'] = (int)$storeArray['forras_nyelv'];
     if (isset($storeArray['nyelv'])) $fields['nyelv'] = (int)$storeArray['nyelv'];
     if (isset($storeArray['max_level'])) $fields['max_level'] = (int)$storeArray['max_level'];
     if (isset($storeArray['status'])) $fields['status'] = (int)$storeArray['status'];
     if (isset($storeArray['tanar'])) $fields['tanar_id'] = (int)$storeArray['tanar'];
-    if (isset($storeArray['payment'])) $fields['payment'] = "'" . $storeArray['payment'] . "'";
-    if (isset($storeArray['hazi_feladat'])) $fields['hazi_feladat'] = "'" . $storeArray['hazi_feladat'] . "'";
-    if (isset($storeArray['next_lesson'])) $fields['next_lesson'] = "'" . $storeArray['next_lesson'] . "'";
-
+    if (isset($storeArray['payment'])) $fields['payment'] = "'" . mysql_real_escape_string($storeArray['payment']) . "'";
+    if (isset($storeArray['hazi_feladat'])) $fields['hazi_feladat'] = "'" . mysql_real_escape_string($storeArray['hazi_feladat']) . "'";
+    if (isset($storeArray['next_lesson'])) $fields['next_lesson'] = "'" . mysql_real_escape_string($storeArray['next_lesson']) . "'";
     error_log("DEBUG modifyUser: Fields built, count = " . count($fields));
 
     if (isset($storeArray['email'])) {
@@ -2416,12 +2415,16 @@ function modifyUser($storeArray, &$message)
 
     error_log("DEBUG modifyUser: Executing UPDATE query");
     error_log("DEBUG modifyUser: SQL = " . $sql);
+    error_log("DEBUG modifyUser: MySQL connection test: " . (function_exists('mysql_query') ? 'EXISTS' : 'NOT EXISTS'));
 
-    $result = mysql_query($sql);
+    // Suppress errors to capture them in log
+    $result = @mysql_query($sql);
     error_log("DEBUG modifyUser: Query executed, result = " . ($result ? 'TRUE' : 'FALSE'));
 
     if (!$result) {
-        error_log("DEBUG modifyUser: UPDATE query FAILED - " . mysql_error());
+        $error = mysql_error();
+        error_log("DEBUG modifyUser: UPDATE query FAILED - " . $error);
+        print "<script>console.error('SQL Error: " . addslashes($error) . "');</script>";
         print mysql_error();
         return false;
     }
