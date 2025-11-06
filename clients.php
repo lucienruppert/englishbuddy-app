@@ -369,24 +369,5 @@ print "<tr><td>";
 print "<textarea name='taHaziFeladat' style='font-size:1px;font-weight:10;background-color:WHITE;color:BLACK' id='taHaziFeladat' cols='45'>" . (isset($selectedUser['hazi_feladat']) ? $selectedUser['hazi_feladat'] : '') . "</textarea>";
 print "</td></tr>";
 
-print "<tr><td colspan='2'>";
-print "<input type='text' name='txtNextLesson' size='25' style='font-size:14px;font-weight:300;background-color:WHITE;color:BLACK' id='txtNextLesson' value='" . (isset($selectedUser['next_lesson']) ? $selectedUser['next_lesson'] : '') . "'>";
-print "<input type='button' name='payments' id='payments' value='Befizet�sek' onclick=\"
-        document.forms['userSelectFormForFinance'].selectedStudent.value = " . (isset($selectedUser['id']) ? (int)$selectedUser['id'] : 0) . ";
-        if(document.forms['wordManagement']){
-            document.forms['userSelectFormForFinance'].dictionaryUser.value = document.forms['wordManagement'].dictionaryUser.value;
-            document.forms['userSelectFormForFinance'].homeWorkOrder.value = document.forms['wordManagement'].homeWorkOrder.value;
-        }
-        document.forms['userSelectFormForFinance'].submit();\">";
-print "<span style='margin-left:20px;font-weight:bold'>{$userProgress}%</span>";
-print "</td>";
-
-if ($userObject['status'] == 6) {
-    print "<td>";
-    print "<textarea name='taPayment' style='font-size:14px;font-weight:300;background-color:WHITE;color:BLACK' id='taPayment' cols='48', rows='1'>" . (isset($selectedUser['payment']) ? $selectedUser['payment'] : '') . "</textarea>";
-    print "</td></tr>";
-}
-
-
 print "</table>";
 ?>
