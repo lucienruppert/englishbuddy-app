@@ -87,6 +87,7 @@
           ?>
             <!-- <a href='#' class="white-color" onclick="p_Click(event)"><?php print translate('tandijak'); ?></a> -->
             <a href='#' class="white-color" onclick="t_Click(event)"><?php print translate('tanulok'); ?></a>
+            <a href='#' class="white-color" onclick="location.href='main.php?content=admin'">Admin</a>
           <?php }
           if ($userObject) {
           ?>
