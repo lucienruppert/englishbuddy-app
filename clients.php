@@ -32,8 +32,8 @@ if (isset($_POST['actionType']) && $_POST['actionType'] == "saveForm") {
     if (isset($_POST['program_end_date'])) $storeArray['program_end_date'] = $_POST['program_end_date'];
     $storeArray['client_data'] = $_POST['comment'];
     if (isset($_POST['payment'])) $storeArray['payment'] = $_POST['payment'];
-    $storeArray['hazi_feladat'] = $_POST['hazi_feladat'];
-    $storeArray['next_lesson'] = $_POST['next_lesson'];
+    if (isset($_POST['hazi_feladat'])) $storeArray['hazi_feladat'] = $_POST['hazi_feladat'];
+    if (isset($_POST['next_lesson'])) $storeArray['next_lesson'] = $_POST['next_lesson'];
     if ($canEdit) $storeArray['send_mail'] = ($_POST['send_mail'] ? '1' : '0');
     if ($_POST['isNewRecord']) {
         $storeArray['max_level'] = $_POST['max_level'] = 1000;

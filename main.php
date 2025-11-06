@@ -151,7 +151,7 @@ $_SESSION['isShown'] = false;
     ?>
     <div id="content">
         <?php
-        switch ($_REQUEST['content']) {
+        switch ($_REQUEST['content'] ?? '') {
             case 'wordLearning_old':
                 $includeFile = 'wordLearning_old.php';
                 break;
