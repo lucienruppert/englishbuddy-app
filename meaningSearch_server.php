@@ -53,9 +53,13 @@ if ($_REQUEST['getMeaning']) {
     }
     // DEBUG: Log raw title to PHP error log
     error_log('DEBUG TITLE: ' . $list[$_REQUEST['selectedLevel']][0]);
-    $record = array_utf8_encode_recursive(array('title' => $list[$_REQUEST['selectedLevel']][0], 'text' => $text, 'id' => $_REQUEST['selectedLevel'], 'sorsz' => $_REQUEST['sorsz']));
 
-    print json_encode($record);
+    // Properly escape the title for JSON encoding
+    $title = $list[$_REQUEST['selectedLevel']][0];
+
+    $record = array_utf8_encode_recursive(array('title' => $title, 'text' => $text, 'id' => $_REQUEST['selectedLevel'], 'sorsz' => $_REQUEST['sorsz']));
+
+    print json_encode($record, JSON_UNESCAPED_UNICODE);
 } else if ($_REQUEST['setUserTime']) {
     print json_encode(true);
 }
