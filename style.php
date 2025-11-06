@@ -199,7 +199,6 @@
     /* border: 1px solid grey; */
     color: black;
   }
-  }
 
   #financeDiv {
     position: absolute;
