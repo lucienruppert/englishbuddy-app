@@ -315,7 +315,7 @@ foreach ($jelentkezok_ordered as $jelentkezo) {
     //    $timeFromLastLogin =
     print "<tr>
         <td height='28' align='right' style='font-size:15px;font-weight:500;background-color:{$bgcolor};color:white;'width='22'>{$sorszam}</td>
-        <td>&nbsp;<a href='#' style='font-weight:bold;' onclick=\"
+        <td>&nbsp;<a href='#' style='font-weight:bold;color:white' onclick=\"
             document.forms['userSelectForm'].userId.value={$jelentkezo['id']};
             if(document.forms['wordManagement']){
                 document.forms['userSelectForm'].dictionaryUser.value = document.forms['wordManagement'].dictionaryUser.value;
