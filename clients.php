@@ -178,7 +178,7 @@ print "<th><input type='button' value='Ment' onclick=\"
     this.form.submit();\"></th>";
 
 if ($userObject['status'] == 6) {
-    print "<th><input type='button' value='�j' onclick=\"this.form.actionType.value='newRecord';this.form.submit();\"></th>";
+    print "<th><input type='button' value='Új' onclick=\"this.form.actionType.value='newRecord';this.form.submit();\"></th>";
 }
 print "</tr>";
 
@@ -246,7 +246,7 @@ if ($userObject['status'] == 6) {
     print "<td>$tanarText</td>";
 }
 if ($userObject['status'] == 6) {
-    print "<td><input type='button' name='deleteBtn' value='T�r�l' onclick=\"
+    print "<td><input type='button' name='deleteBtn' value='Töröl' onclick=\"
         if(confirm('Biztos szeretn�d t�r�lni a felhaszn�l�t?')){
             this.form.actionType.value='deleteForm';
             this.form.submit();
