@@ -47,10 +47,10 @@ $link = "index.php?audioszoba=" . $lang;
 		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1kooXarGpAsYcrbiuW0ExLQsoX9KUyIIF/view?usp=drive_link','_blank');return false;">21</button>
 		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1sJ0waPCUMLiUknFGv2D588SbMqzPCW4I/view?usp=drive_link','_blank');return false;">22</button>
 		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1Avcbq1L_9Kyk6QuuLKdal5pyBikrm-Q5/view?usp=drive_link','_blank');return false;">23</button>
-		<button class="audio-btn" onclick="window.open('','_blank');return false;">24</button>
-		<button class="audio-btn" onclick="window.open('','_blank');return false;">25</button>
-		<button class="audio-btn" onclick="window.open('','_blank');return false;">26</button>
-		<button class="audio-btn" onclick="window.open('','_blank');return false;">27</button>
+		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1jz8dD9RgGLDEFomKUqk4g3uTu8gpDcu4/view?usp=drive_link','_blank');return false;">24</button>
+		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1XO8N_oViIaypFW12-ZScr8IeGUIMph7V/view?usp=drive_link','_blank');return false;">25</button>
+		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1U19B9cur9-naeWS2ceaQJuR6236PPKev/view?usp=drive_link','_blank');return false;">26</button>
+		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1KgHVp6F2XrbiFJ-cpOcSodoElFRqd-_f/view?usp=drive_link','_blank');return false;">27</button>
 		<button class="audio-btn" onclick="window.open('','_blank');return false;">28</button>
 		<button class="audio-btn" onclick="window.open('','_blank');return false;">29</button>
 		<button class="audio-btn" onclick="window.open('','_blank');return false;">30</button>
@@ -89,10 +89,10 @@ $link = "index.php?audioszoba=" . $lang;
 
 	.audio-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-		row-gap: 32px;
-		column-gap: 0px;
-		max-width: 600px;
+		grid-template-columns: repeat(7, 1fr);
+		row-gap: 16px;
+		column-gap: 12px;
+		max-width: 650px;
 		margin: 30px auto 0 auto;
 	}
 
