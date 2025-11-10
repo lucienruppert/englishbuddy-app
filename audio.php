@@ -44,6 +44,26 @@ $link = "index.php?audioszoba=" . $lang;
 		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1VXeRjZl5F3ETkoPMSWEsaT81Vq-Q_3hV/view?usp=sharing','_blank');return false;">18</button>
 		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1292D5hBczKQaZD3euq2qCakVUFjwtTbx/view?usp=sharing','_blank');return false;">19</button>
 		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1evNi84i_s7sgURm5v08PL8GWp3h1pIls/view?usp=sharing','_blank');return false;">20</button>
+		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1kooXarGpAsYcrbiuW0ExLQsoX9KUyIIF/view?usp=drive_link','_blank');return false;">21</button>
+		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1sJ0waPCUMLiUknFGv2D588SbMqzPCW4I/view?usp=drive_link','_blank');return false;">22</button>
+		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1Avcbq1L_9Kyk6QuuLKdal5pyBikrm-Q5/view?usp=drive_link','_blank');return false;">23</button>
+		<button class="audio-btn" onclick="window.open('','_blank');return false;">24</button>
+		<button class="audio-btn" onclick="window.open('','_blank');return false;">25</button>
+		<button class="audio-btn" onclick="window.open('','_blank');return false;">26</button>
+		<button class="audio-btn" onclick="window.open('','_blank');return false;">27</button>
+		<button class="audio-btn" onclick="window.open('','_blank');return false;">28</button>
+		<button class="audio-btn" onclick="window.open('','_blank');return false;">29</button>
+		<button class="audio-btn" onclick="window.open('','_blank');return false;">30</button>
+		<button class="audio-btn" onclick="window.open('','_blank');return false;">31</button>
+		<button class="audio-btn" onclick="window.open('','_blank');return false;">32</button>
+		<button class="audio-btn" onclick="window.open('','_blank');return false;">33</button>
+		<button class="audio-btn" onclick="window.open('','_blank');return false;">34</button>
+		<button class="audio-btn" onclick="window.open('','_blank');return false;">35</button>
+		<button class="audio-btn" onclick="window.open('','_blank');return false;">36</button>
+		<button class="audio-btn" onclick="window.open('','_blank');return false;">37</button>
+		<button class="audio-btn" onclick="window.open('','_blank');return false;">38</button>
+		<button class="audio-btn" onclick="window.open('','_blank');return false;">39</button>
+		<button class="audio-btn" onclick="window.open('','_blank');return false;">40</button>
 	</div>
 <?php } ?>
 
