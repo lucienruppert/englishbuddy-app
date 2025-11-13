@@ -53,7 +53,7 @@ $seconds = 0;
 
 //print "SESSIONDIRECTION: " . $_SESSION['wordLearning_direction'];
 if (isset($_REQUEST['store']) && $_REQUEST['store'] == 1) {
-    if ($_SESSION['wordLearning_direction'] == 1) {
+    if (($_SESSION['wordLearning_direction'] ?? 0) == 1) {
         $hunWord = $_REQUEST['sentenceHun'];
         $forWord = $_REQUEST['sentence']; //$_SESSION['wordLearning_words_simple'][0]['word_'. $ext];
     } else {
@@ -73,7 +73,7 @@ if (isset($_REQUEST['store']) && $_REQUEST['store'] == 1) {
     } else {
         print "<script>alert('Ez a sz� m�r megtal�lhat� a tud�st�rban, onnan kimentheted a sz�t�radba!')</script>";
     }
-    if ($_SESSION['wordLearning_direction'] == 1) {
+    if (($_SESSION['wordLearning_direction'] ?? 0) == 1) {
         //$words = $_SESSION['wordLearning_words_simple'];
     } else {
         $words = $_SESSION['wordLearning_words_groupby'];
@@ -247,17 +247,17 @@ if (isset($_REQUEST['store']) && $_REQUEST['store'] == 1) {
     }
 } else if (is_array($_SESSION['wordLearning_words_groupby'])) {
     if (isset($_REQUEST['inbetween']) && $_REQUEST['inbetween'] == 1) {
-        if ($_SESSION['wordLearning_direction'] != 1) {
+        if (($_SESSION['wordLearning_direction'] ?? 0) != 1) {
             $current_word = array_shift($_SESSION['wordLearning_words_groupby']);
             if (isset($_REQUEST['stillPract']) && $_REQUEST['stillPract'] == 1) {
                 $_SESSION['wordLearning_words_groupby'][] = $current_word;
             }
         }
     } else if (isset($_REQUEST['directionChange']) && $_REQUEST['directionChange'] == 1) {
-        $_SESSION['wordLearning_direction'] = 1 - $_SESSION['wordLearning_direction'];
+        $_SESSION['wordLearning_direction'] = 1 - ($_SESSION['wordLearning_direction'] ?? 0);
     }
 
-    if ($_SESSION['wordLearning_direction'] != 1) {
+    if (($_SESSION['wordLearning_direction'] ?? 0) != 1) {
         $words = $_SESSION['wordLearning_words_groupby'];
     }
     if (isset($_REQUEST['inbetween']) && $_REQUEST['inbetween'] == 1 && count($words) > 0) {
@@ -668,7 +668,7 @@ if (!empty($words) && isset($words[0])) {
 }
 
 if (!empty($words)) {
-    if ($_SESSION['wordLearning_direction'] == 1) {
+    if (($_SESSION['wordLearning_direction'] ?? 0) == 1) {
         $word1 = isset($words[0]['word_' . $ext]) ? $words[0]['word_' . $ext] : '';
         $word2 = isset($words[0]["word_{$forras_nyelv_ext}"]) ? $words[0]["word_{$forras_nyelv_ext}"] : '';
         $title1 = isset($title_foreign) ? $title_foreign : '';

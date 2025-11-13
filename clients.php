@@ -157,7 +157,7 @@ $selectedUser['program_end_date'] = substr($selectedUser['program_end_date'], 0,
 print "<form action='$formAction' method='post'>";
 print "<input type='hidden' name='actionType' value=''>";
 print "<input type='hidden' name='sourcePage' value='clients'>";
-print "<input type='hidden' name='userId' value='" . (isset($_POST['userId']) ? $_POST['userId'] : '') . "'>";
+print "<input type='hidden' name='userId' value='" . (string)($_POST['userId'] ?? '') . "'>";
 print "<input type='hidden' name='isNewRecord' value='" . (isset($_POST['isNewRecord']) ? $_POST['isNewRecord'] : '') . "'>";
 print "<input type='hidden' name='comment' value=''>";
 print "<input type='hidden' name='dictionaryUser' value=''>";
