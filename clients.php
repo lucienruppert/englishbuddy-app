@@ -25,24 +25,26 @@ if (isset($_POST['actionType'])) {
 
 if (isset($_POST['actionType']) && $_POST['actionType'] == "saveForm") {
     error_log("DEBUG clients.php: Entering saveForm block");
+    $message = '';
     $storeArray = array();
     $storeArray['id'] = $_POST['userId'];
-    if (isset($_POST['email'])) $storeArray['email'] = $_POST['email'];
-    if (isset($_POST['username'])) $storeArray['jelszo'] = $_POST['username'];
-    if (isset($_POST['max_level'])) $storeArray['max_level'] = $_POST['max_level'];
-    if (isset($_POST['status'])) $storeArray['status'] = $_POST['status'];
-    if (isset($_POST['tanar'])) $storeArray['tanar'] = $_POST['tanar'];
-    if (isset($_POST['vezeteknev'])) $storeArray['vezeteknev'] = $_POST['vezeteknev'];
-    if (isset($_POST['keresztnev'])) $storeArray['keresztnev'] = $_POST['keresztnev'];
-    if (isset($_POST['forras_nyelv'])) $storeArray['forras_nyelv'] = $_POST['forras_nyelv'];
-    if (isset($_POST['nyelv'])) $storeArray['nyelv'] = $_POST['nyelv'];
-    if (isset($_POST['program_start_date'])) $storeArray['program_start_date'] = $_POST['program_start_date'];
-    if (isset($_POST['program_end_date'])) $storeArray['program_end_date'] = $_POST['program_end_date'];
-    $storeArray['client_data'] = $_POST['comment'];
-    if (isset($_POST['payment'])) $storeArray['payment'] = $_POST['payment'];
-    if (isset($_POST['hazi_feladat'])) $storeArray['hazi_feladat'] = $_POST['hazi_feladat'];
-    if (isset($_POST['next_lesson'])) $storeArray['next_lesson'] = $_POST['next_lesson'];
+    $storeArray['email'] = $_POST['email'] ?? '';
+    $storeArray['jelszo'] = $_POST['username'] ?? '';
+    $storeArray['max_level'] = $_POST['max_level'] ?? '';
+    $storeArray['status'] = $_POST['status'] ?? '';
+    $storeArray['tanar'] = $_POST['tanar'] ?? '0';
+    $storeArray['vezeteknev'] = $_POST['vezeteknev'] ?? '';
+    $storeArray['keresztnev'] = $_POST['keresztnev'] ?? '';
+    $storeArray['forras_nyelv'] = $_POST['forras_nyelv'] ?? '';
+    $storeArray['nyelv'] = $_POST['nyelv'] ?? '';
+    $storeArray['program_start_date'] = $_POST['program_start_date'] ?? '';
+    $storeArray['program_end_date'] = $_POST['program_end_date'] ?? '';
+    $storeArray['client_data'] = $_POST['comment'] ?? '';
+    $storeArray['payment'] = $_POST['payment'] ?? '';
+    $storeArray['hazi_feladat'] = $_POST['hazi_feladat'] ?? '';
+    $storeArray['next_lesson'] = $_POST['next_lesson'] ?? '';
     if ($canEdit) $storeArray['send_mail'] = ($_POST['send_mail'] ? '1' : '0');
+    else $storeArray['send_mail'] = '0';
     if ($_POST['isNewRecord']) {
         $storeArray['max_level'] = $_POST['max_level'] = 1000;
         $_POST['userId'] = createUser($storeArray, $message);
@@ -51,13 +53,16 @@ if (isset($_POST['actionType']) && $_POST['actionType'] == "saveForm") {
         $nev .= " ";
         $nev .= $_POST['keresztnev'];
 
+        $body = '';
+        $subject = '';
+        $subscribe_length = isset($_POST['subscribe_length']) ? (int)$_POST['subscribe_length'] : 365;
 
         if ($_POST['forras_nyelv'] == 1) {
             $subject = "Welcome to lingocasa";
-            $body = subscribeBodyENG($nev, htmlspecialchars($_POST['email']), htmlspecialchars($_POST['username']), $langTitles[$_POST['nyelv']], (int)$_POST['subscribe_length']);
+            $body = subscribeBodyENG($nev, htmlspecialchars($_POST['email']), htmlspecialchars($_POST['username']), $langTitles[$_POST['nyelv']], $subscribe_length);
         } else if ($_POST['forras_nyelv'] == 2) {
             $subject = "Bienvenido a lingocasa";
-            $body = subscribeBodyESP($nev, htmlspecialchars($_POST['email']), htmlspecialchars($_POST['username']), $langTitles[$_POST['nyelv']], (int)$_POST['subscribe_length']);
+            $body = subscribeBodyESP($nev, htmlspecialchars($_POST['email']), htmlspecialchars($_POST['username']), $langTitles[$_POST['nyelv']], $subscribe_length);
         }
         if (!$_POST['userId']) {
             print "<script>alert('{$message}');</script>";
