@@ -2292,8 +2292,14 @@ function createUser($userArray, &$message)
 
     // Suppress errors and catch them
     error_log("DEBUG createUser: Calling mysql_query now...");
-    $result = @mysql_query($query);
-    error_log("DEBUG createUser: AFTER mysql_query call");
+    try {
+        $result = @mysql_query($query);
+        error_log("DEBUG createUser: AFTER mysql_query call");
+    } catch (Exception $e) {
+        error_log("ERROR createUser: Exception in mysql_query: " . $e->getMessage());
+        $message = "Adatbázis hiba: " . $e->getMessage();
+        return false;
+    }
     flush();
     ob_flush();
 
