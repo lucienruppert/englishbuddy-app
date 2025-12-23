@@ -40,36 +40,10 @@ if (isset($_POST['actionType']) && $_POST['actionType'] == "saveForm") {
     if ($_POST['isNewRecord']) {
         $storeArray['max_level'] = $_POST['max_level'] = 1000;
         $_POST['userId'] = createUser($storeArray, $message);
-        $langTitles = getLangTitles();
-        $nev = $_POST['vezeteknev'];
-        $nev .= " ";
-        $nev .= $_POST['keresztnev'];
-
-        $body = '';
-        $subject = '';
-        $subscribe_length = isset($_POST['subscribe_length']) ? (int)$_POST['subscribe_length'] : 365;
-
-        if ($_POST['forras_nyelv'] == 1) {
-            $subject = "Welcome to lingocasa";
-            if (isset($langTitles[$_POST['nyelv']])) {
-                $body = subscribeBodyENG($nev, htmlspecialchars($_POST['email']), htmlspecialchars($_POST['username']), $langTitles[$_POST['nyelv']], $subscribe_length);
-            }
-        } else if ($_POST['forras_nyelv'] == 2) {
-            $subject = "Bienvenido a lingocasa";
-            if (isset($langTitles[$_POST['nyelv']])) {
-                $body = subscribeBodyESP($nev, htmlspecialchars($_POST['email']), htmlspecialchars($_POST['username']), $langTitles[$_POST['nyelv']], $subscribe_length);
-            }
-        }
         if (!$_POST['userId']) {
             print "<script>alert('{$message}');</script>";
         } else {
             $_POST['isNewRecord'] = "0";
-        }
-
-        $to = $_POST['email'];
-        if (strlen($body) > 0) {
-            endiMail($to, $subject, $body, "englishbuddy.hu", "englishbuddy.hu");
-            endiMail('luciendelmar@gmail.com', $subject, $body, "englishbuddy.hu", "hello@englishbuddy.hu");
         }
     } else {
         $modifyResult = modifyUser($storeArray, $message);

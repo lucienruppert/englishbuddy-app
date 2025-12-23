@@ -32,7 +32,7 @@ if (isset($_REQUEST['actionType']) && $_REQUEST['actionType'] == 'login') {
     if ((isset($_GET['h']) && ($_SESSION['userObject'] = $GLOBALS['userObject'] = $userObject = getUserObjByHash($_GET['h']))) || ($_SESSION['userObject'] = $GLOBALS['userObject'] = $userObject = getUserObj($_REQUEST['email'], $_REQUEST['username']))) {
         if ($userObject['status'] == 1) {
             //print "<script>alert('El�fizet�sed m�g nem ker�lt aktiv�l�sra!');</script>";
-        } else if ($userObject['program_end_date'] >= date("Y-m-d 00:00:00")) {
+        } else {
             $GLOBALS['welcomeText'] = true;
             $GLOBALS['userObject']['forras_nyelv'] = $_SESSION['userObject']['forras_nyelv'];
             // Redirect directly to classroom after successful login
@@ -40,8 +40,6 @@ if (isset($_REQUEST['actionType']) && $_REQUEST['actionType'] == 'login') {
                 header("Location: main.php?content=wordManagement");
                 exit;
             }
-        } else {
-            print "<script>alert('El�fizet�sed lej�rt, k�rlek l�pj kapcsolatba a program �zemeltet�j�vel!');</script>";
         }
     } else {
         print "<script>alert('A megadott felhasználó nem létezik!');</script>";
