@@ -16,15 +16,7 @@ if ($userObject['status'] == 6) {
     $canEdit = false;
 }
 
-// DEBUG: Log form submission
-if (isset($_POST['actionType'])) {
-    error_log("DEBUG clients.php: actionType = " . $_POST['actionType']);
-    error_log("DEBUG clients.php: userId = " . (isset($_POST['userId']) ? $_POST['userId'] : 'NOT SET'));
-    error_log("DEBUG clients.php: sourcePage = " . (isset($_POST['sourcePage']) ? $_POST['sourcePage'] : 'NOT SET'));
-}
-
 if (isset($_POST['actionType']) && $_POST['actionType'] == "saveForm") {
-    error_log("DEBUG clients.php: Entering saveForm block");
     $message = '';
     $storeArray = array();
     $storeArray['id'] = $_POST['userId'];
@@ -46,12 +38,9 @@ if (isset($_POST['actionType']) && $_POST['actionType'] == "saveForm") {
     if ($canEdit) $storeArray['send_mail'] = ($_POST['send_mail'] ? '1' : '0');
     else $storeArray['send_mail'] = '0';
     if ($_POST['isNewRecord']) {
-        error_log("DEBUG clients.php: isNewRecord is TRUE, calling createUser");
         $storeArray['max_level'] = $_POST['max_level'] = 1000;
         $_POST['userId'] = createUser($storeArray, $message);
-        error_log("DEBUG clients.php: createUser returned: " . ($_POST['userId'] ? $_POST['userId'] : 'FALSE'));
         $langTitles = getLangTitles();
-        error_log("DEBUG clients.php: getLangTitles completed");
         $nev = $_POST['vezeteknev'];
         $nev .= " ";
         $nev .= $_POST['keresztnev'];
@@ -60,56 +49,36 @@ if (isset($_POST['actionType']) && $_POST['actionType'] == "saveForm") {
         $subject = '';
         $subscribe_length = isset($_POST['subscribe_length']) ? (int)$_POST['subscribe_length'] : 365;
 
-        error_log("DEBUG clients.php: forras_nyelv = " . $_POST['forras_nyelv']);
-        error_log("DEBUG clients.php: nyelv = " . $_POST['nyelv']);
-        error_log("DEBUG clients.php: langTitles = " . print_r($langTitles, true));
         if ($_POST['forras_nyelv'] == 1) {
             $subject = "Welcome to lingocasa";
-            error_log("DEBUG clients.php: Calling subscribeBodyENG");
             if (isset($langTitles[$_POST['nyelv']])) {
                 $body = subscribeBodyENG($nev, htmlspecialchars($_POST['email']), htmlspecialchars($_POST['username']), $langTitles[$_POST['nyelv']], $subscribe_length);
-            } else {
-                error_log("ERROR clients.php: Language not found in langTitles: " . $_POST['nyelv']);
             }
-            error_log("DEBUG clients.php: subscribeBodyENG completed");
         } else if ($_POST['forras_nyelv'] == 2) {
             $subject = "Bienvenido a lingocasa";
-            error_log("DEBUG clients.php: Calling subscribeBodyESP");
             if (isset($langTitles[$_POST['nyelv']])) {
                 $body = subscribeBodyESP($nev, htmlspecialchars($_POST['email']), htmlspecialchars($_POST['username']), $langTitles[$_POST['nyelv']], $subscribe_length);
-            } else {
-                error_log("ERROR clients.php: Language not found in langTitles: " . $_POST['nyelv']);
             }
-            error_log("DEBUG clients.php: subscribeBodyESP completed");
         }
         if (!$_POST['userId']) {
             print "<script>alert('{$message}');</script>";
         } else {
             $_POST['isNewRecord'] = "0";
         }
-        //DEBUG($_POST);
 
         $to = $_POST['email'];
         if (strlen($body) > 0) {
-            error_log("DEBUG clients.php: Sending emails");
             endiMail($to, $subject, $body, "englishbuddy.hu", "englishbuddy.hu");
             endiMail('luciendelmar@gmail.com', $subject, $body, "englishbuddy.hu", "hello@englishbuddy.hu");
-            error_log("DEBUG clients.php: Emails sent");
         }
     } else {
-        error_log("DEBUG clients.php: Calling modifyUser for userId = " . $storeArray['id']);
         $modifyResult = modifyUser($storeArray, $message);
-        error_log("DEBUG clients.php: modifyUser returned: " . ($modifyResult ? 'TRUE' : 'FALSE'));
 
         if (!$modifyResult) {
-            error_log("DEBUG clients.php: modifyUser FAILED - " . $message);
             $escapedMessage = addslashes($message);
             print "<script>alert('{$escapedMessage}');</script>";
-        } else {
-            error_log("DEBUG clients.php: modifyUser SUCCESS");
         }
     }
-    error_log("DEBUG clients.php: After saveForm block - continuing execution");
 } else if (isset($_POST['actionType']) && $_POST['actionType'] == "deleteForm") {
     if (!deleteUser($_POST['userId'])) {
         print "<script>alert('Felhaszn�l� t�rl�se nem siker�lt');</script>";
@@ -225,8 +194,8 @@ if ($userObject['status'] == 6) {
 print "</tr>";
 
 if ($canEdit) {
-    $vezetekNevText = "<input type='text' name='vezeteknev' value='" . (isset($selectedUser['vezeteknev']) ? $selectedUser['vezeteknev'] : '') . "' size='8'>";
-    $keresztNevText = "<input type='text' name='keresztnev' value='" . (isset($selectedUser['keresztnev']) ? $selectedUser['keresztnev'] : '') . "' size='8'>";
+    $vezetekNevText = "<input type='text' name='vezeteknev' value='" . (isset($selectedUser['vezeteknev']) ? $selectedUser['vezeteknev'] : '') . "' size='12'>";
+    $keresztNevText = "<input type='text' name='keresztnev' value='" . (isset($selectedUser['keresztnev']) ? $selectedUser['keresztnev'] : '') . "' size='12'>";
     $forrasNyelvText = "\n<select name='forras_nyelv'>";
     foreach ($localLangs as $key => $value) {
         $forrasNyelvText .= "\n<option value='{$key}' " . (isset($selectedUser['forras_nyelv']) && $selectedUser['forras_nyelv'] == $key ? 'selected' : '') . ">{$value}";

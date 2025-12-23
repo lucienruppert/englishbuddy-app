@@ -2291,50 +2291,30 @@ function createUser($userArray, &$message)
                 values('{$userArray['jelszo']}', '{$userArray['vezeteknev']}', '{$userArray['keresztnev']}', '{$userArray['email']}'
                     , '{$userArray['program_start_date']}', '{$userArray['program_end_date']}', {$client_data_value}, {$userArray['send_mail']}, {$userArray['forras_nyelv']}, {$userArray['nyelv']}, {$userArray['max_level']}, {$userArray['status']}, " . (int)$userArray['tanar'] . ", {$payment_value}, {$hazi_feladat_value}, {$next_lesson_value}, '{$hash}')";
 
-    error_log("DEBUG createUser: INSERT query = " . $query);
-    error_log("DEBUG createUser: About to execute mysql_query");
-    error_log("DEBUG createUser: mysql_query about to be called - flushing logs");
-    flush();
-    ob_flush();
-
-    // Suppress errors and catch them
-    error_log("DEBUG createUser: Calling mysql_query now...");
     try {
         $result = @mysql_query($query);
-        error_log("DEBUG createUser: AFTER mysql_query call");
     } catch (Exception $e) {
-        error_log("ERROR createUser: Exception in mysql_query: " . $e->getMessage());
         $message = "Adatbázis hiba: " . $e->getMessage();
         return false;
     }
-    flush();
-    ob_flush();
 
-    error_log("DEBUG createUser: mysql_query completed, result = " . ($result ? "TRUE" : "FALSE or NULL"));
     if (!$result) {
         $error = @mysql_error();
-        error_log("ERROR createUser: INSERT failed: " . $error);
         $message = "Adatbázis hiba: " . $error;
         return false;
     }
-    error_log("DEBUG createUser: INSERT successful, now selecting ID");
     $query = "select id from lmjelentkezok where email = '{$userArray['email']}'";
 
     $result = @mysql_query($query);
-    error_log("DEBUG createUser: SELECT ID executed, result = " . ($result ? "TRUE" : "FALSE or NULL"));
     if (!$result) {
         $error = @mysql_error();
-        error_log("ERROR createUser: SELECT ID failed: " . $error);
         $message = "Adatbázis hiba: " . $error;
         return false;
     }
-    error_log("DEBUG createUser: About to fetch ID row");
     $id = 0;
     while ($row = mysql_fetch_row($result)) {
         $id = $row[0];
-        error_log("DEBUG createUser: Fetched id = " . $id);
     }
-    error_log("DEBUG createUser: Successfully created user with id = " . $id);
 
     return $id;
 }
