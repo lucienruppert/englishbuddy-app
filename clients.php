@@ -46,9 +46,12 @@ if (isset($_POST['actionType']) && $_POST['actionType'] == "saveForm") {
     if ($canEdit) $storeArray['send_mail'] = ($_POST['send_mail'] ? '1' : '0');
     else $storeArray['send_mail'] = '0';
     if ($_POST['isNewRecord']) {
+        error_log("DEBUG clients.php: isNewRecord is TRUE, calling createUser");
         $storeArray['max_level'] = $_POST['max_level'] = 1000;
         $_POST['userId'] = createUser($storeArray, $message);
+        error_log("DEBUG clients.php: createUser returned: " . ($_POST['userId'] ? $_POST['userId'] : 'FALSE'));
         $langTitles = getLangTitles();
+        error_log("DEBUG clients.php: getLangTitles completed");
         $nev = $_POST['vezeteknev'];
         $nev .= " ";
         $nev .= $_POST['keresztnev'];
@@ -57,12 +60,27 @@ if (isset($_POST['actionType']) && $_POST['actionType'] == "saveForm") {
         $subject = '';
         $subscribe_length = isset($_POST['subscribe_length']) ? (int)$_POST['subscribe_length'] : 365;
 
+        error_log("DEBUG clients.php: forras_nyelv = " . $_POST['forras_nyelv']);
+        error_log("DEBUG clients.php: nyelv = " . $_POST['nyelv']);
+        error_log("DEBUG clients.php: langTitles = " . print_r($langTitles, true));
         if ($_POST['forras_nyelv'] == 1) {
             $subject = "Welcome to lingocasa";
-            $body = subscribeBodyENG($nev, htmlspecialchars($_POST['email']), htmlspecialchars($_POST['username']), $langTitles[$_POST['nyelv']], $subscribe_length);
+            error_log("DEBUG clients.php: Calling subscribeBodyENG");
+            if (isset($langTitles[$_POST['nyelv']])) {
+                $body = subscribeBodyENG($nev, htmlspecialchars($_POST['email']), htmlspecialchars($_POST['username']), $langTitles[$_POST['nyelv']], $subscribe_length);
+            } else {
+                error_log("ERROR clients.php: Language not found in langTitles: " . $_POST['nyelv']);
+            }
+            error_log("DEBUG clients.php: subscribeBodyENG completed");
         } else if ($_POST['forras_nyelv'] == 2) {
             $subject = "Bienvenido a lingocasa";
-            $body = subscribeBodyESP($nev, htmlspecialchars($_POST['email']), htmlspecialchars($_POST['username']), $langTitles[$_POST['nyelv']], $subscribe_length);
+            error_log("DEBUG clients.php: Calling subscribeBodyESP");
+            if (isset($langTitles[$_POST['nyelv']])) {
+                $body = subscribeBodyESP($nev, htmlspecialchars($_POST['email']), htmlspecialchars($_POST['username']), $langTitles[$_POST['nyelv']], $subscribe_length);
+            } else {
+                error_log("ERROR clients.php: Language not found in langTitles: " . $_POST['nyelv']);
+            }
+            error_log("DEBUG clients.php: subscribeBodyESP completed");
         }
         if (!$_POST['userId']) {
             print "<script>alert('{$message}');</script>";
@@ -73,8 +91,10 @@ if (isset($_POST['actionType']) && $_POST['actionType'] == "saveForm") {
 
         $to = $_POST['email'];
         if (strlen($body) > 0) {
+            error_log("DEBUG clients.php: Sending emails");
             endiMail($to, $subject, $body, "englishbuddy.hu", "englishbuddy.hu");
             endiMail('luciendelmar@gmail.com', $subject, $body, "englishbuddy.hu", "hello@englishbuddy.hu");
+            error_log("DEBUG clients.php: Emails sent");
         }
     } else {
         error_log("DEBUG clients.php: Calling modifyUser for userId = " . $storeArray['id']);
