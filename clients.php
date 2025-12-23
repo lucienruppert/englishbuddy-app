@@ -119,6 +119,9 @@ if (isset($_POST['actionType']) && $_POST['actionType'] == "saveForm") {
 } else if (isset($_POST['actionType']) && $_POST['actionType'] == "newRecord") {
     $_POST['userId'] = 0;
     $selectedUser['send_mail'] = 1;
+    $selectedUser['forras_nyelv'] = 1;  // Default to first language
+    $selectedUser['nyelv'] = 2;  // Default to second language
+    $selectedUser['status'] = 1;  // Default to Free trial
 }
 
 if (!isset($_POST['userId']) || !$_POST['userId']) {

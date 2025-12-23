@@ -2285,20 +2285,25 @@ function createUser($userArray, &$message)
                     , '{$userArray['program_start_date']}', '{$userArray['program_end_date']}', '{$userArray['client_data']}', {$userArray['send_mail']}, {$userArray['forras_nyelv']}, {$userArray['nyelv']}, {$userArray['max_level']}, {$userArray['status']}, " . (int)$userArray['tanar'] . ", '{$userArray['payment']}', '{$userArray['hazi_feladat']}', '{$userArray['next_lesson']}', '{$hash}')";
 
     error_log("DEBUG createUser: INSERT query = " . $query);
+    error_log("DEBUG createUser: About to execute mysql_query");
     $result = mysql_query($query);
+    error_log("DEBUG createUser: mysql_query completed, result = " . ($result ? "TRUE" : "FALSE"));
     if (!$result) {
         error_log("ERROR createUser: INSERT failed: " . mysql_error());
         $message = "Adatbázis hiba: " . mysql_error();
         return false;
     }
+    error_log("DEBUG createUser: INSERT successful, now selecting ID");
     $query = "select id from lmjelentkezok where email = '{$userArray['email']}'";
 
     $result = mysql_query($query);
+    error_log("DEBUG createUser: SELECT ID executed, result = " . ($result ? "TRUE" : "FALSE"));
     if (!$result) {
         error_log("ERROR createUser: SELECT ID failed: " . mysql_error());
         $message = "Adatbázis hiba: " . mysql_error();
         return false;
     }
+    error_log("DEBUG createUser: About to fetch ID row");
     $id = 0;
     while ($row = mysql_fetch_row($result)) {
         $id = $row[0];
