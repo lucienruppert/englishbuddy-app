@@ -2267,8 +2267,9 @@ function createUser($userArray, &$message)
 
     $result = mysql_query($query);
     if (!$result) {
-        print mysql_error();
-        exit("Nem siker�lt: " . $query);
+        error_log("ERROR createUser: SELECT COUNT failed: " . mysql_error());
+        $message = "Adatbázis hiba: " . mysql_error();
+        return false;
     }
     $number = 0;
     while ($row = mysql_fetch_assoc($result)) {
@@ -2283,22 +2284,26 @@ function createUser($userArray, &$message)
                 values('{$userArray['jelszo']}', '{$userArray['vezeteknev']}', '{$userArray['keresztnev']}', '{$userArray['email']}'
                     , '{$userArray['program_start_date']}', '{$userArray['program_end_date']}', '{$userArray['client_data']}', {$userArray['send_mail']}, {$userArray['forras_nyelv']}, {$userArray['nyelv']}, {$userArray['max_level']}, {$userArray['status']}, " . (int)$userArray['tanar'] . ", '{$userArray['payment']}', '{$userArray['hazi_feladat']}', '{$userArray['next_lesson']}', '{$hash}')";
 
+    error_log("DEBUG createUser: INSERT query = " . $query);
     $result = mysql_query($query);
     if (!$result) {
-        print mysql_error();
+        error_log("ERROR createUser: INSERT failed: " . mysql_error());
+        $message = "Adatbázis hiba: " . mysql_error();
         return false;
     }
     $query = "select id from lmjelentkezok where email = '{$userArray['email']}'";
 
     $result = mysql_query($query);
     if (!$result) {
-        print mysql_error();
-        exit("Nem siker�lt: " . $query);
+        error_log("ERROR createUser: SELECT ID failed: " . mysql_error());
+        $message = "Adatbázis hiba: " . mysql_error();
+        return false;
     }
     $id = 0;
     while ($row = mysql_fetch_row($result)) {
         $id = $row[0];
     }
+    error_log("DEBUG createUser: Successfully created user with id = " . $id);
 
     return $id;
 }
