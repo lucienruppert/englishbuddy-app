@@ -2280,9 +2280,16 @@ function createUser($userArray, &$message)
         return false;
     }
     $hash = bin2hex(random_bytes(22));
+
+    // Convert empty strings to NULL for datetime columns
+    $next_lesson_value = empty($userArray['next_lesson']) ? 'NULL' : "'{$userArray['next_lesson']}'";
+    $payment_value = empty($userArray['payment']) ? "NULL" : "'{$userArray['payment']}'";
+    $hazi_feladat_value = empty($userArray['hazi_feladat']) ? "NULL" : "'{$userArray['hazi_feladat']}'";
+    $client_data_value = empty($userArray['client_data']) ? "NULL" : "'{$userArray['client_data']}'";
+
     $query = "insert into lmjelentkezok (jelszo, vezeteknev, keresztnev, email, program_start_date, program_end_date, client_data, send_mail, forras_nyelv, nyelv, max_level, status, tanar_id, payment, hazi_feladat, next_lesson, hash)
                 values('{$userArray['jelszo']}', '{$userArray['vezeteknev']}', '{$userArray['keresztnev']}', '{$userArray['email']}'
-                    , '{$userArray['program_start_date']}', '{$userArray['program_end_date']}', '{$userArray['client_data']}', {$userArray['send_mail']}, {$userArray['forras_nyelv']}, {$userArray['nyelv']}, {$userArray['max_level']}, {$userArray['status']}, " . (int)$userArray['tanar'] . ", '{$userArray['payment']}', '{$userArray['hazi_feladat']}', '{$userArray['next_lesson']}', '{$hash}')";
+                    , '{$userArray['program_start_date']}', '{$userArray['program_end_date']}', {$client_data_value}, {$userArray['send_mail']}, {$userArray['forras_nyelv']}, {$userArray['nyelv']}, {$userArray['max_level']}, {$userArray['status']}, " . (int)$userArray['tanar'] . ", {$payment_value}, {$hazi_feladat_value}, {$next_lesson_value}, '{$hash}')";
 
     error_log("DEBUG createUser: INSERT query = " . $query);
     error_log("DEBUG createUser: About to execute mysql_query");
