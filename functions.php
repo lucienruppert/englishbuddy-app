@@ -2286,9 +2286,16 @@ function createUser($userArray, &$message)
 
     error_log("DEBUG createUser: INSERT query = " . $query);
     error_log("DEBUG createUser: About to execute mysql_query");
+    error_log("DEBUG createUser: mysql_query about to be called - flushing logs");
+    flush();
+    ob_flush();
 
     // Suppress errors and catch them
+    error_log("DEBUG createUser: Calling mysql_query now...");
     $result = @mysql_query($query);
+    error_log("DEBUG createUser: AFTER mysql_query call");
+    flush();
+    ob_flush();
 
     error_log("DEBUG createUser: mysql_query completed, result = " . ($result ? "TRUE" : "FALSE or NULL"));
     if (!$result) {
