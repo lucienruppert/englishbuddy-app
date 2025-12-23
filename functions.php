@@ -2286,27 +2286,33 @@ function createUser($userArray, &$message)
 
     error_log("DEBUG createUser: INSERT query = " . $query);
     error_log("DEBUG createUser: About to execute mysql_query");
-    $result = mysql_query($query);
-    error_log("DEBUG createUser: mysql_query completed, result = " . ($result ? "TRUE" : "FALSE"));
+
+    // Suppress errors and catch them
+    $result = @mysql_query($query);
+
+    error_log("DEBUG createUser: mysql_query completed, result = " . ($result ? "TRUE" : "FALSE or NULL"));
     if (!$result) {
-        error_log("ERROR createUser: INSERT failed: " . mysql_error());
-        $message = "Adatbázis hiba: " . mysql_error();
+        $error = @mysql_error();
+        error_log("ERROR createUser: INSERT failed: " . $error);
+        $message = "Adatbázis hiba: " . $error;
         return false;
     }
     error_log("DEBUG createUser: INSERT successful, now selecting ID");
     $query = "select id from lmjelentkezok where email = '{$userArray['email']}'";
 
-    $result = mysql_query($query);
-    error_log("DEBUG createUser: SELECT ID executed, result = " . ($result ? "TRUE" : "FALSE"));
+    $result = @mysql_query($query);
+    error_log("DEBUG createUser: SELECT ID executed, result = " . ($result ? "TRUE" : "FALSE or NULL"));
     if (!$result) {
-        error_log("ERROR createUser: SELECT ID failed: " . mysql_error());
-        $message = "Adatbázis hiba: " . mysql_error();
+        $error = @mysql_error();
+        error_log("ERROR createUser: SELECT ID failed: " . $error);
+        $message = "Adatbázis hiba: " . $error;
         return false;
     }
     error_log("DEBUG createUser: About to fetch ID row");
     $id = 0;
     while ($row = mysql_fetch_row($result)) {
         $id = $row[0];
+        error_log("DEBUG createUser: Fetched id = " . $id);
     }
     error_log("DEBUG createUser: Successfully created user with id = " . $id);
 
