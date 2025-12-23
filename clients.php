@@ -207,7 +207,6 @@ print "<tr>
     <th>&nbsp;Jelszó</th>
     <th>&nbsp;Státusz</th>";
 if ($userObject['status'] == 6) {
-    print "<th>&nbsp;Tanár</th>";
 }
 print "<th><input type='button' value='Ment' onclick=\"
     this.form.actionType.value='saveForm';
@@ -226,8 +225,8 @@ if ($userObject['status'] == 6) {
 print "</tr>";
 
 if ($canEdit) {
-    $vezetekNevText = "<input type='text' name='vezeteknev' value='" . (isset($selectedUser['vezeteknev']) ? $selectedUser['vezeteknev'] : '') . "' size='4'>";
-    $keresztNevText = "<input type='text' name='keresztnev' value='" . (isset($selectedUser['keresztnev']) ? $selectedUser['keresztnev'] : '') . "' size='4'>";
+    $vezetekNevText = "<input type='text' name='vezeteknev' value='" . (isset($selectedUser['vezeteknev']) ? $selectedUser['vezeteknev'] : '') . "' size='8'>";
+    $keresztNevText = "<input type='text' name='keresztnev' value='" . (isset($selectedUser['keresztnev']) ? $selectedUser['keresztnev'] : '') . "' size='8'>";
     $forrasNyelvText = "\n<select name='forras_nyelv'>";
     foreach ($localLangs as $key => $value) {
         $forrasNyelvText .= "\n<option value='{$key}' " . (isset($selectedUser['forras_nyelv']) && $selectedUser['forras_nyelv'] == $key ? 'selected' : '') . ">{$value}";
@@ -252,17 +251,6 @@ if ($canEdit) {
         $statusText .= "\n<option value='{$status}' $selected>{$statusName}";
     }
     $statusText .= "\n</select>";
-
-    $tanarText = "<select name='tanar' style='width:60px'>\n<option value='0'>";
-    foreach ($tanarok as $tanar_id => $tanar) {
-        if ($selectedUser['tanar_id'] == $tanar_id) {
-            $selected = 'selected';
-        } else {
-            $selected = '';
-        }
-        $tanarText .= "\n<option value='{$tanar_id}' $selected>{$tanar['keresztnev']}";
-    }
-    $tanarText .= "\n</select>";
 } else {
     $vezetekNevText = $selectedUser['vezeteknev'];
     $keresztNevText = $selectedUser['keresztnev'];
@@ -273,7 +261,6 @@ if ($canEdit) {
     $emailText = $selectedUser['email'];
     $jelszoText = $selectedUser['jelszo'];
     $statusText = $statusList[$selectedUser['status']];
-    $tanarText = $tanarok[$selectedUser['tanar_id']];
 }
 
 print "<tr>
@@ -285,9 +272,6 @@ print "<td>$programStartDateText<br>$programEndDateText</td>
         <td>&nbsp;$emailText</td>
         <td>&nbsp;$jelszoText</td>";
 print "<td>$statusText</td>";
-if ($userObject['status'] == 6) {
-    print "<td>$tanarText</td>";
-}
 if ($userObject['status'] == 6) {
     print "<td><input type='button' name='deleteBtn' value='Töröl' onclick=\"
         if(confirm('Biztos szeretn�d t�r�lni a felhaszn�l�t?')){
