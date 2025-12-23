@@ -2381,8 +2381,6 @@ function createUser2($userArray, &$message)
 
 function modifyUser($storeArray, &$message)
 {
-    error_log("DEBUG modifyUser: START - userId = " . (isset($storeArray['id']) ? $storeArray['id'] : 'NOT SET'));
-
     if (isset($storeArray['email'])) $fields['email'] = "'" . mysql_real_escape_string($storeArray['email']) . "'";
     if (isset($storeArray['jelszo'])) $fields['jelszo'] = "'" . mysql_real_escape_string($storeArray['jelszo']) . "'";
     if (isset($storeArray['vezeteknev'])) $fields['vezeteknev'] = "'" . mysql_real_escape_string($storeArray['vezeteknev']) . "'";
@@ -2399,15 +2397,12 @@ function modifyUser($storeArray, &$message)
     if (isset($storeArray['payment'])) $fields['payment'] = "'" . mysql_real_escape_string($storeArray['payment']) . "'";
     if (isset($storeArray['hazi_feladat']) && $storeArray['hazi_feladat'] !== '') $fields['hazi_feladat'] = "'" . mysql_real_escape_string($storeArray['hazi_feladat']) . "'";
     if (isset($storeArray['next_lesson']) && $storeArray['next_lesson'] !== '') $fields['next_lesson'] = "'" . mysql_real_escape_string($storeArray['next_lesson']) . "'";
-    error_log("DEBUG modifyUser: Fields built, count = " . count($fields));
 
     if (isset($storeArray['email'])) {
-        error_log("DEBUG modifyUser: Checking email uniqueness");
         $query = "select count(*) as nr from lmjelentkezok where email = '{$storeArray['email']}' and id != " . (int)$storeArray['id'];
 
         $result = mysql_query($query);
         if (!$result) {
-            error_log("DEBUG modifyUser: Email check query FAILED - " . mysql_error());
             print mysql_error();
             exit("Nem siker�lt: " . $query);
         }
@@ -2416,7 +2411,6 @@ function modifyUser($storeArray, &$message)
             $number = $row['nr'];
         }
         if ($number > 0) {
-            error_log("DEBUG modifyUser: Email already exists");
             $message = "Ezzel az e-mail c�mmel m�r van regisztr�lt felhaszn�l�!";
             return false;
         }
@@ -2429,33 +2423,18 @@ function modifyUser($storeArray, &$message)
     $sql = "update lmjelentkezok set " . implode(', ', $sqlString) . "
                 where id = " . (int)$storeArray['id'];
 
-    error_log("DEBUG modifyUser: Executing UPDATE query");
-    error_log("DEBUG modifyUser: SQL = " . $sql);
-    error_log("DEBUG modifyUser: MySQL connection test: " . (function_exists('mysql_query') ? 'EXISTS' : 'NOT EXISTS'));
-
-    // Check if database connection exists
-    global $vts_mysqli;
-    error_log("DEBUG modifyUser: Database connection is: " . ($vts_mysqli ? 'VALID' : 'NULL'));
-
-    // Try to execute query
-    error_log("DEBUG modifyUser: About to call mysql_query");
     try {
         $result = @mysql_query($sql);
-        error_log("DEBUG modifyUser: mysql_query returned");
-        error_log("DEBUG modifyUser: Query executed, result = " . ($result ? 'TRUE' : 'FALSE'));
     } catch (Exception $e) {
-        error_log("DEBUG modifyUser: Exception caught: " . $e->getMessage());
         $message = "Database error: " . $e->getMessage();
         return false;
     }
 
     if (!$result) {
         $error = @mysql_error();
-        error_log("DEBUG modifyUser: UPDATE query FAILED - " . $error);
         $message = $error;
         return false;
     }
-    error_log("DEBUG modifyUser: SUCCESS - returning true");
     return true;
 }
 
