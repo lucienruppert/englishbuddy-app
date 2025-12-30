@@ -217,13 +217,10 @@ if ($userObject && $activeCategory) {
 
 		// Add right-click handler to all audio buttons
 		const buttons = document.querySelectorAll('.audio-btn');
-		console.log('AudioProgress: Found ' + buttons.length + ' audio buttons');
-
 		buttons.forEach(button => {
 			// Check if marked as completed on page load
 			if (button.getAttribute('data-completed') === 'true') {
 				button.classList.add('completed');
-				console.log('AudioProgress: Button marked as completed on load:', button.getAttribute('data-category'), button.getAttribute('data-number'));
 			}
 
 			// Right-click to mark as completed
@@ -232,11 +229,6 @@ if ($userObject && $activeCategory) {
 				const category = this.getAttribute('data-category');
 				const audioNumber = this.getAttribute('data-number');
 				const isCompleted = this.classList.contains('completed');
-				console.log('AudioProgress: Right-click detected', {
-					category,
-					audioNumber,
-					currentlyCompleted: isCompleted
-				});
 
 				toggleAudioCompletion(category, audioNumber, !isCompleted);
 			});
@@ -248,11 +240,6 @@ if ($userObject && $activeCategory) {
 					const category = this.getAttribute('data-category');
 					const audioNumber = this.getAttribute('data-number');
 					const isCompleted = this.classList.contains('completed');
-					console.log('AudioProgress: Alt+click detected', {
-						category,
-						audioNumber,
-						currentlyCompleted: isCompleted
-					});
 
 					toggleAudioCompletion(category, audioNumber, !isCompleted);
 				}
@@ -268,8 +255,6 @@ if ($userObject && $activeCategory) {
 			completed: completed ? 1 : 0
 		};
 
-		console.log('AudioProgress: Sending toggle request', data);
-
 		fetch('audioProgress.php', {
 				method: 'POST',
 				headers: {
@@ -277,41 +262,22 @@ if ($userObject && $activeCategory) {
 				},
 				body: Object.keys(data).map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])).join('&')
 			})
-			.then(response => {
-				console.log('AudioProgress: Response status', response.status);
-				return response.text();
-			})
-			.then(text => {
-				console.log('AudioProgress: Raw response text:', text);
-				try {
-					const result = JSON.parse(text);
-					console.log('AudioProgress: Parsed JSON response:', result);
-
-					if (result.success) {
-						// Toggle the button class
-						const button = document.querySelector(`[data-category="${category}"][data-number="${audioNumber}"]`);
-						if (button) {
-							console.log('AudioProgress: Found button, toggling class');
-							if (completed) {
-								button.classList.add('completed');
-							} else {
-								button.classList.remove('completed');
-							}
+			.then(response => response.json())
+			.then(result => {
+				if (result.success) {
+					// Toggle the button class
+					const button = document.querySelector(`[data-category="${category}"][data-number="${audioNumber}"]`);
+					if (button) {
+						if (completed) {
+							button.classList.add('completed');
 						} else {
-							console.error('AudioProgress: Button not found for selector', `[data-category="${category}"][data-number="${audioNumber}"]`);
+							button.classList.remove('completed');
 						}
-					} else {
-						console.error('AudioProgress: Request failed', result);
-						alert('Failed to update progress: ' + (result.message || result.error || 'Unknown error'));
 					}
-				} catch (e) {
-					console.error('AudioProgress: JSON parse error:', e, 'Text was:', text);
-					alert('Error parsing response');
+				} else {
+					alert('Failed to update progress');
 				}
 			})
-			.catch(error => {
-				console.error('AudioProgress: Fetch error:', error);
-				alert('Network error: ' + error.message);
-			});
+			.catch(error => console.error('Error:', error));
 	}
 </script>
