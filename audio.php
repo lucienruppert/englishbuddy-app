@@ -128,7 +128,7 @@ if ($userObject) {
 	.main-select-btn.active {
 		background: #334155 !important;
 		color: white !important;
-		border: 2px solid #10b981 !important;
+		border: 1px solid white !important;
 	}
 
 	.audio-grid {
@@ -182,32 +182,25 @@ if ($userObject) {
 	// Handle marking audio as completed
 	document.addEventListener('DOMContentLoaded', function() {
 		// Highlight active category button based on which content is showing
-		const audioGrids = document.querySelectorAll('.audio-grid');
-		if (audioGrids.length > 0) {
-			// Find which category is active by checking which grid is visible
-			let activeCategory = null;
-			audioGrids.forEach(grid => {
-				const buttons = grid.querySelectorAll('.audio-btn');
-				if (buttons.length > 0) {
-					const category = buttons[0].getAttribute('data-category');
-					if (category) {
-						activeCategory = category;
-					}
-				}
-			});
+		// Determine which category is active based on visible content
+		const categoryButtons = document.querySelectorAll('.main-select-btn');
+		categoryButtons.forEach(btn => {
+			const category = btn.getAttribute('data-category');
+			// Find all grids with audio buttons from this category
+			const grids = document.querySelectorAll(`.audio-grid [data-category="${category}"]`);
 
-			// Mark the active category button
-			if (activeCategory) {
-				const categoryButtons = document.querySelectorAll('.main-select-btn');
-				categoryButtons.forEach(btn => {
-					if (btn.getAttribute('data-category') === activeCategory) {
-						btn.classList.add('active');
-					} else {
-						btn.classList.remove('active');
-					}
-				});
+			if (grids.length > 0) {
+				const parentGrid = grids[0].closest('.audio-grid');
+				// Check if this grid has content (height > 0 or display != none)
+				if (parentGrid && parentGrid.children.length > 0) {
+					btn.classList.add('active');
+				} else {
+					btn.classList.remove('active');
+				}
+			} else {
+				btn.classList.remove('active');
 			}
-		}
+		});
 
 		// Add right-click handler to all audio buttons
 		const buttons = document.querySelectorAll('.audio-btn');
