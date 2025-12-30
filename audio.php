@@ -149,5 +149,12 @@ $link = "index.php?audioszoba=" . $lang;
 		color: white;
 		border: 1px solid white;
 	}
+
+	.audio-btn:active {
+		background: #1e293b;
+		color: white;
+		border: 2px solid white;
+		transform: scale(0.95);
+	}
 </style>
 </style>
