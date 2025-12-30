@@ -1,9 +1,16 @@
-<?
+<?php
+include_once('audioProgress.php');
 
 if (isset($_GET['audioszoba'])) {
 	$lang = $_GET['audioszoba'];
 }
 $link = "index.php?audioszoba=" . $lang;
+
+// Get user's completed audio for this category
+$completedAudio = array();
+if ($userObject) {
+	$completedAudio = getAudioProgress($userObject['id'], isset($_POST) && isset($_POST['angol_01']) ? 'angol_01' : (isset($_POST['bad_pharma']) ? 'bad_pharma' : (isset($_POST['british']) ? 'british' : (isset($_POST['ecl']) ? 'ecl' : (isset($_POST['think_grow_rich']) ? 'think_grow_rich' : '')))));
+}
 ?>
 <div style='width:100%;text-align:center;margin-top:20px;margin-bottom:20px;'><a href='index.php' style='font-size:14px;color:white;'><?php print translate("vissza_a_fooldalra") ?></a></div>
 
@@ -28,8 +35,8 @@ $link = "index.php?audioszoba=" . $lang;
 
 <?php if (isset($_POST['angol_01'])) { ?>
 	<div class="audio-grid">
-		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/12Bog9R49ok54xAxBBNjAS92FKAuQ3rIk/view?usp=drive_link','_blank');return false;">1</button>
-		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1zoq7dFpFFr-8MuMEo3hsKKBd-7jTPi8b/view?usp=sharing','_blank');return false;">2</button>
+		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/12Bog9R49ok54xAxBBNjAS92FKAuQ3rIk/view?usp=drive_link','_blank');return false;" data-category="angol_01" data-number="1" <?php if (in_array(1, $completedAudio)) echo 'data-completed="true"'; ?>>1</button>
+		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1zoq7dFpFFr-8MuMEo3hsKKBd-7jTPi8b/view?usp=sharing','_blank');return false;" data-category="angol_01" data-number="2" <?php if (in_array(2, $completedAudio)) echo 'data-completed="true"'; ?>>2</button>
 		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1VHxgabMvldA7qziTzFhEomu4yMoaJXzQ/view?usp=sharing','_blank');return false;">3</button>
 		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1ROm8ccULkrMBJptD7bgPwgzfr1syTF7P/view?usp=sharing','_blank');return false;">4</button>
 		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1WuozLWE6yRbEUXLWBEepo4aY28EW6rtD/view?usp=sharing','_blank');return false;">5</button>
@@ -150,11 +157,84 @@ $link = "index.php?audioszoba=" . $lang;
 		border: 1px solid white;
 	}
 
-	.audio-btn:active {
-		background: #1e293b;
+	.audio-btn.completed {
+		background: #10b981;
 		color: white;
 		border: 2px solid white;
-		transform: scale(0.95);
+	}
+
+	.audio-btn.completed::after {
+		content: '✓';
+		font-weight: bold;
 	}
 </style>
-</style>
+
+<script>
+	// Handle marking audio as completed
+	document.addEventListener('DOMContentLoaded', function() {
+		// Add right-click handler to all audio buttons
+		const buttons = document.querySelectorAll('.audio-btn');
+		buttons.forEach(button => {
+			// Check if marked as completed on page load
+			if (button.getAttribute('data-completed') === 'true') {
+				button.classList.add('completed');
+			}
+
+			// Right-click to mark as completed
+			button.addEventListener('contextmenu', function(e) {
+				e.preventDefault();
+				const category = this.getAttribute('data-category');
+				const audioNumber = this.getAttribute('data-number');
+				const isCompleted = this.classList.contains('completed');
+
+				toggleAudioCompletion(category, audioNumber, !isCompleted);
+			});
+
+			// Alt+click as alternative way to mark
+			button.addEventListener('click', function(e) {
+				if (e.altKey) {
+					e.preventDefault();
+					const category = this.getAttribute('data-category');
+					const audioNumber = this.getAttribute('data-number');
+					const isCompleted = this.classList.contains('completed');
+
+					toggleAudioCompletion(category, audioNumber, !isCompleted);
+				}
+			});
+		});
+	});
+
+	function toggleAudioCompletion(category, audioNumber, completed) {
+		const data = {
+			action: 'toggleAudio',
+			category: category,
+			audio_number: audioNumber,
+			completed: completed ? 1 : 0
+		};
+
+		fetch('audioProgress.php', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/x-www-form-urlencoded',
+				},
+				body: Object.keys(data).map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])).join('&')
+			})
+			.then(response => response.json())
+			.then(result => {
+				if (result.success) {
+					// Toggle the button class
+					const button = document.querySelector(`[data-category="${category}"][data-number="${audioNumber}"]`);
+					if (button) {
+						if (completed) {
+							button.classList.add('completed');
+						} else {
+							button.classList.remove('completed');
+						}
+					}
+				} else {
+					alert('Failed to update progress');
+				}
+			})
+			.catch(error => console.error('Error:', error));
+	}
+</script>
