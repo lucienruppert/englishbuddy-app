@@ -253,7 +253,7 @@
 
   function audioSzoba() {
     <?php if ($userObject && $userObject['status'] != 1) { ?>
-      location.href = 'index.php?audioszoba=1'
+      location.href = 'index.php?audioszoba'
     <?php } else if ($userObject['status'] == 1) { ?>
       alert(premiumUserOnlyMessage);
     <?php } else { ?>
