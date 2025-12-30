@@ -104,8 +104,19 @@ function getAudioStats($user_id)
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['action']) && $_POST['action'] == 'toggleAudio') {
   header('Content-Type: application/json');
 
+  // DEBUG: Log the incoming request
+  $debug = [
+    'timestamp' => date('Y-m-d H:i:s'),
+    'post_data' => $_POST,
+    'session_data' => $_SESSION ? 'Session exists' : 'No session',
+    'userObject_exists' => isset($userObject) ? 'Yes' : 'No',
+    'userObject_value' => isset($userObject) ? ($userObject ? 'Truthy' : 'Falsy (0 or empty)') : 'Not set'
+  ];
+  error_log('AudioProgress AJAX Request: ' . json_encode($debug));
+
   if (!isset($userObject) || !$userObject) {
-    echo json_encode(['success' => false, 'message' => 'User not logged in']);
+    error_log('AudioProgress: User not logged in - userObject: ' . var_export($userObject, true));
+    echo json_encode(['success' => false, 'message' => 'User not logged in', 'debug' => $debug]);
     exit;
   }
 
@@ -114,17 +125,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['action']) && $_POST['a
   $audio_number = isset($_POST['audio_number']) ? intval($_POST['audio_number']) : 0;
   $completed = isset($_POST['completed']) ? intval($_POST['completed']) : 0;
 
+  error_log("AudioProgress: user_id=$user_id, category=$category, audio_number=$audio_number, completed=$completed");
+
   if (!$category || !$audio_number) {
+    error_log('AudioProgress: Invalid parameters - category: ' . var_export($category, true) . ', audio_number: ' . var_export($audio_number, true));
     echo json_encode(['success' => false, 'message' => 'Invalid parameters']);
     exit;
   }
 
   if ($completed) {
+    error_log("AudioProgress: Marking audio as completed - user_id=$user_id, category=$category, audio_number=$audio_number");
     $success = markAudioCompleted($user_id, $category, $audio_number);
+    error_log("AudioProgress: markAudioCompleted result: " . ($success ? 'success' : 'failed'));
   } else {
+    error_log("AudioProgress: Marking audio as incomplete - user_id=$user_id, category=$category, audio_number=$audio_number");
     $success = unmarkAudioCompleted($user_id, $category, $audio_number);
+    error_log("AudioProgress: unmarkAudioCompleted result: " . ($success ? 'success' : 'failed'));
   }
 
-  echo json_encode(['success' => $success]);
+  if (!$success) {
+    $last_error = mysql_error();
+    error_log("AudioProgress: Database error: " . $last_error);
+    echo json_encode(['success' => $success, 'error' => $last_error]);
+  } else {
+    echo json_encode(['success' => $success]);
+  }
   exit;
 }
