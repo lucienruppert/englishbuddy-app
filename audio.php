@@ -73,6 +73,12 @@ $link = "index.php?audioszoba=" . $lang;
 	</div>
 <?php } ?>
 
+<?php if (isset($_POST['bad_pharma'])) { ?>
+	<div class="audio-grid">
+		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1-kdLRxvGnSHM7dIGCMEjeuQfxH1pVNET/view?usp=drive_link','_blank');return false;">1</button>
+	</div>
+<?php } ?>
+
 <style>
 	body {
 		background: #334155;
