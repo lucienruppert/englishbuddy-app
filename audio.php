@@ -6,13 +6,32 @@ if (isset($_GET['audioszoba'])) {
 }
 $link = "index.php?audioszoba=" . $lang;
 
+// Determine active category
+$activeCategory = '';
+if (isset($_POST['angol_01'])) {
+	$activeCategory = 'angol_01';
+} elseif (isset($_POST['bad_pharma'])) {
+	$activeCategory = 'bad_pharma';
+} elseif (isset($_POST['british'])) {
+	$activeCategory = 'british';
+} elseif (isset($_POST['ecl'])) {
+	$activeCategory = 'ecl';
+} elseif (isset($_POST['think_grow_rich'])) {
+	$activeCategory = 'think_grow_rich';
+}
+
 // Get user's completed audio for this category
 $completedAudio = array();
-if ($userObject) {
-	$completedAudio = getAudioProgress($userObject['id'], isset($_POST) && isset($_POST['angol_01']) ? 'angol_01' : (isset($_POST['bad_pharma']) ? 'bad_pharma' : (isset($_POST['british']) ? 'british' : (isset($_POST['ecl']) ? 'ecl' : (isset($_POST['think_grow_rich']) ? 'think_grow_rich' : '')))));
+if ($userObject && $activeCategory) {
+	$completedAudio = getAudioProgress($userObject['id'], $activeCategory);
 }
 ?>
 <div style='width:100%;text-align:center;margin-top:20px;margin-bottom:20px;'><a href='index.php' style='font-size:14px;color:white;'><?php print translate("vissza_a_fooldalra") ?></a></div>
+
+<script>
+	// Set active category for JavaScript use
+	window.activeCategory = '<?php echo $activeCategory; ?>';
+</script>
 
 
 <form action="<? echo $link; ?>" method="POST">
@@ -181,26 +200,20 @@ if ($userObject) {
 <script>
 	// Handle marking audio as completed
 	document.addEventListener('DOMContentLoaded', function() {
-		// Highlight active category button based on which content is showing
-		// Determine which category is active based on visible content
-		const categoryButtons = document.querySelectorAll('.main-select-btn');
-		categoryButtons.forEach(btn => {
-			const category = btn.getAttribute('data-category');
-			// Find all grids with audio buttons from this category
-			const grids = document.querySelectorAll(`.audio-grid [data-category="${category}"]`);
+		// Get active category from global variable
+		const activeCategory = window.activeCategory;
 
-			if (grids.length > 0) {
-				const parentGrid = grids[0].closest('.audio-grid');
-				// Check if this grid has content (height > 0 or display != none)
-				if (parentGrid && parentGrid.children.length > 0) {
+		// Mark the active category button
+		if (activeCategory) {
+			const categoryButtons = document.querySelectorAll('.main-select-btn');
+			categoryButtons.forEach(btn => {
+				if (btn.getAttribute('data-category') === activeCategory) {
 					btn.classList.add('active');
 				} else {
 					btn.classList.remove('active');
 				}
-			} else {
-				btn.classList.remove('active');
-			}
-		});
+			});
+		}
 
 		// Add right-click handler to all audio buttons
 		const buttons = document.querySelectorAll('.audio-btn');
