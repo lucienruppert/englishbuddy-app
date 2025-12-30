@@ -19,11 +19,11 @@ if ($userObject) {
 	<table border='0' align='center' cellspacing='10'>
 		<tr>
 			<!-- <td width='120' height='50'> <input class="main-select-btn" style="width:100%;height:100%;background:white;color:#334155;font-size:15pt;border:none;border-radius:10px;" type="submit" name="spanish" value="<?php print translate("Spanyol") ?>" /></td> -->
-			<td width='150' height='50'> <input class="main-select-btn" style="width:100%;height:100%;background:white;color:#334155;font-size:15pt;border:none;border-radius:10px;" type="submit" name="angol_01" value="<?php print translate("Angol kezdo") ?>" /></td>
-			<td width='150' height='50'> <input class="main-select-btn" style="width:100%;height:100%;background:white;color:#334155;font-size:15pt;border:none;border-radius:10px;" type="submit" name="bad_pharma" value="BAD PHARMA" /></td>
-			<td width='150' height='50'> <input class="main-select-btn" style="width:100%;height:100%;background:white;color:#334155;font-size:15pt;border:none;border-radius:10px;" type="submit" name="british" value="BRITISH" /></td>
-			<td width='150' height='50'> <input class="main-select-btn" style="width:100%;height:100%;background:white;color:#334155;font-size:15pt;border:none;border-radius:10px;" type="submit" name="ecl" value="ECL" /></td>
-			<td width='150' height='50'> <input class="main-select-btn" style="width:100%;height:100%;background:white;color:#334155;font-size:15pt;border:none;border-radius:10px;" type="submit" name="think_grow_rich" value="THINK AND GROW RICH" /></td>
+			<td width='150' height='50'> <input class="main-select-btn" style="width:100%;height:100%;background:white;color:#334155;font-size:15pt;border:none;border-radius:10px;" type="submit" name="angol_01" value="<?php print translate("Angol kezdo") ?>" data-category="angol_01" /></td>
+			<td width='150' height='50'> <input class="main-select-btn" style="width:100%;height:100%;background:white;color:#334155;font-size:15pt;border:none;border-radius:10px;" type="submit" name="bad_pharma" value="BAD PHARMA" data-category="bad_pharma" /></td>
+			<td width='150' height='50'> <input class="main-select-btn" style="width:100%;height:100%;background:white;color:#334155;font-size:15pt;border:none;border-radius:10px;" type="submit" name="british" value="BRITISH" data-category="british" /></td>
+			<td width='150' height='50'> <input class="main-select-btn" style="width:100%;height:100%;background:white;color:#334155;font-size:15pt;border:none;border-radius:10px;" type="submit" name="ecl" value="ECL" data-category="ecl" /></td>
+			<td width='150' height='50'> <input class="main-select-btn" style="width:100%;height:100%;background:white;color:#334155;font-size:15pt;border:none;border-radius:10px;" type="submit" name="think_grow_rich" value="THINK AND GROW RICH" data-category="think_grow_rich" /></td>
 			<!-- <td width='120' height='50'> <input class="main-select-btn" style="width:100%;height:100%;background:white;color:#334155;font-size:15pt;border:none;border-radius:10px;" type="submit" name="angol_02" value="<?php print translate("Angol brit") ?>" /></td>
 			<td width='120' height='50'> <input class="main-select-btn" style="width:100%;height:100%;background:white;color:#334155;font-size:15pt;border:none;border-radius:10px;" type="submit" name="angol_03" value="<?php print translate("Angol halado") ?>" /></td>
 			<td width='120' height='50'> <input class="main-select-btn" style="width:100%;height:100%;background:white;color:#334155;font-size:15pt;border:none;border-radius:10px;" type="submit" name="angol_04" value="<?php print translate("Angol BP") ?>" /></td>
@@ -118,10 +118,17 @@ if ($userObject) {
 	}
 
 	.main-select-btn:hover,
-	.main-select-btn:active {
+	.main-select-btn:active,
+	.main-select-btn:focus {
 		background: #334155 !important;
 		color: white !important;
 		border: 1px solid white !important;
+	}
+
+	.main-select-btn.active {
+		background: #334155 !important;
+		color: white !important;
+		border: 2px solid #10b981 !important;
 	}
 
 	.audio-grid {
@@ -161,17 +168,47 @@ if ($userObject) {
 		background: #10b981;
 		color: white;
 		border: 2px solid white;
+		position: relative;
+		font-weight: bold;
 	}
 
-	.audio-btn.completed::after {
-		content: '✓';
-		font-weight: bold;
+	.audio-btn.completed::before {
+		content: '✓ ';
+		font-size: 20px;
 	}
 </style>
 
 <script>
 	// Handle marking audio as completed
 	document.addEventListener('DOMContentLoaded', function() {
+		// Highlight active category button based on which content is showing
+		const audioGrids = document.querySelectorAll('.audio-grid');
+		if (audioGrids.length > 0) {
+			// Find which category is active by checking which grid is visible
+			let activeCategory = null;
+			audioGrids.forEach(grid => {
+				const buttons = grid.querySelectorAll('.audio-btn');
+				if (buttons.length > 0) {
+					const category = buttons[0].getAttribute('data-category');
+					if (category) {
+						activeCategory = category;
+					}
+				}
+			});
+
+			// Mark the active category button
+			if (activeCategory) {
+				const categoryButtons = document.querySelectorAll('.main-select-btn');
+				categoryButtons.forEach(btn => {
+					if (btn.getAttribute('data-category') === activeCategory) {
+						btn.classList.add('active');
+					} else {
+						btn.classList.remove('active');
+					}
+				});
+			}
+		}
+
 		// Add right-click handler to all audio buttons
 		const buttons = document.querySelectorAll('.audio-btn');
 		buttons.forEach(button => {
