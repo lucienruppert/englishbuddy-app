@@ -101,25 +101,25 @@ if ($userObject && $activeCategory) {
 
 <?php if (isset($_POST['bad_pharma'])) { ?>
 	<div class="audio-grid">
-		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1-kdLRxvGnSHM7dIGCMEjeuQfxH1pVNET/view?usp=drive_link','_blank');return false;">1</button>
+		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1-kdLRxvGnSHM7dIGCMEjeuQfxH1pVNET/view?usp=drive_link','_blank');return false;" data-category="bad_pharma" data-number="1" <?php if (in_array(1, $completedAudio)) echo 'data-completed="true"'; ?>>1</button>
 	</div>
 <?php } ?>
 
 <?php if (isset($_POST['british'])) { ?>
 	<div class="audio-grid">
-		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1v9n-scL2E_S1_0UgTl1RWccdiXPDQGT_/view?usp=drive_link','_blank');return false;">1</button>
+		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1v9n-scL2E_S1_0UgTl1RWccdiXPDQGT_/view?usp=drive_link','_blank');return false;" data-category="british" data-number="1" <?php if (in_array(1, $completedAudio)) echo 'data-completed="true"'; ?>>1</button>
 	</div>
 <?php } ?>
 
 <?php if (isset($_POST['ecl'])) { ?>
 	<div class="audio-grid">
-		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/13TMy3m7JvjAcfqcXg10fqWjmlkavMYMD/view?usp=drive_link','_blank');return false;">1</button>
+		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/13TMy3m7JvjAcfqcXg10fqWjmlkavMYMD/view?usp=drive_link','_blank');return false;" data-category="ecl" data-number="1" <?php if (in_array(1, $completedAudio)) echo 'data-completed="true"'; ?>>1</button>
 	</div>
 <?php } ?>
 
 <?php if (isset($_POST['think_grow_rich'])) { ?>
 	<div class="audio-grid">
-		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1j7FO0gz2CnnMTqSPzxIa7P5-E2AqZ_OJ/view?usp=drive_link','_blank');return false;">1</button>
+		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1j7FO0gz2CnnMTqSPzxIa7P5-E2AqZ_OJ/view?usp=drive_link','_blank');return false;" data-category="think_grow_rich" data-number="1" <?php if (in_array(1, $completedAudio)) echo 'data-completed="true"'; ?>>1</button>
 	</div>
 <?php } ?>
 

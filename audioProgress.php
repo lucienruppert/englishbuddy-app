@@ -1,5 +1,20 @@
 <?php
 
+// Initialize session if not already started
+if (session_status() === PHP_SESSION_NONE) {
+  ini_set('session.cookie_lifetime', 0);
+  ini_set('session.gc_maxlifetime', 3600);
+  session_start();
+}
+
+// Include necessary files for database connection
+include_once('php7/config.php');
+include_once('functions.php');
+include_once('functions_userObj.php');
+
+// Get user object from session
+$userObject = isset($_SESSION['userObject']) ? $_SESSION['userObject'] : null;
+
 /**
  * Audio Progress Functions
  * Handles tracking of user audio completion progress
