@@ -30,6 +30,9 @@ This document provides a high-level overview of the EnglishBuddy database struct
 
 9. **level_rules** - Rules for language levels
    Grammar rules and examples for each language level
+
+10. **audio_progress** - User progress tracking for audio files
+   Tracks which audio files users have completed in each category
 ## Database Relationships
 
 **Key Relationships:**
@@ -42,6 +45,7 @@ This document provides a high-level overview of the EnglishBuddy database struct
 - `word_records.user_id` → `lmjelentkezok.id`
 - `user_hits.user_id` → `lmjelentkezok.id`
 - `lmjelentkezok.tanar_id` → `lmjelentkezok.id` (self-referencing for teachers)
+- `audio_progress.user_id` → `lmjelentkezok.id`
 
 ## SQL Definitions
 

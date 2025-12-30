@@ -4,26 +4,29 @@
 -- ============================================================
 -- lmjelentkezok: User/registration management
 CREATE TABLE IF NOT EXISTS `lmjelentkezok` (
-  `id` INT AUTO_INCREMENT PRIMARY KEY,
-  `jelszo` VARCHAR(255) NOT NULL,
+  `id` INT(11) AUTO_INCREMENT PRIMARY KEY,
   `vezeteknev` VARCHAR(100) NOT NULL,
   `keresztnev` VARCHAR(100) NOT NULL,
-  `email` VARCHAR(255) NOT NULL UNIQUE,
+  `email` VARCHAR(100) UNIQUE,
+  `forras_nyelv` INT(11) NOT NULL DEFAULT 0,
+  `nyelv` INT(11) NOT NULL DEFAULT 1,
+  `jelszo` VARCHAR(30) NOT NULL,
   `program_start_date` DATETIME,
   `program_end_date` DATETIME,
   `client_data` TEXT,
-  `send_mail` BOOLEAN DEFAULT 0,
-  `forras_nyelv` INT NOT NULL,
-  `nyelv` INT NOT NULL,
-  `max_level` INT DEFAULT 1000,
-  `status` INT NOT NULL,
-  `tanar_id` INT,
+  `send_mail` TINYINT(1) NOT NULL DEFAULT 1,
+  `max_level` INT(11) NOT NULL DEFAULT 1,
+  `status` INT(11) NOT NULL DEFAULT 1,
+  `word_hits` INT(11) NOT NULL DEFAULT 0,
+  `sentence_hits` INT(11) NOT NULL DEFAULT 0,
+  `time_used` DECIMAL(20, 0) NOT NULL DEFAULT 0,
+  `tanar_id` INT(11) NOT NULL DEFAULT 0,
   `payment` TEXT,
   `hazi_feladat` TEXT,
-  `next_lesson` VARCHAR(255),
-  `hash` VARCHAR(44),
-  `word_hits` INT DEFAULT 0,
-  `sentence_hits` INT DEFAULT 0,
+  `next_lesson` DATETIME,
+  `last_login_date` DATETIME,
+  `subscribe_length` INT(11),
+  `hash` VARCHAR(128),
   FOREIGN KEY (`tanar_id`) REFERENCES `lmjelentkezok`(`id`)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 
@@ -119,6 +122,16 @@ CREATE TABLE IF NOT EXISTS `level_rules` (
   `rule_text` TEXT NOT NULL,
   `examples` TEXT,
   `crdti` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
+
+-- audio_progress: User progress tracking for audio files
+CREATE TABLE IF NOT EXISTS `audio_progress` (
+  `user_id` INT NOT NULL,
+  `category` VARCHAR(50) NOT NULL,
+  `audio_number` INT NOT NULL,
+  `completed` BOOLEAN DEFAULT 0,
+  PRIMARY KEY (`user_id`, `category`, `audio_number`),
+  FOREIGN KEY (`user_id`) REFERENCES `lmjelentkezok`(`id`) ON DELETE CASCADE
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 
 -- ============================================================
