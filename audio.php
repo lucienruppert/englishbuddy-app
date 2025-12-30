@@ -79,6 +79,24 @@ $link = "index.php?audioszoba=" . $lang;
 	</div>
 <?php } ?>
 
+<?php if (isset($_POST['british'])) { ?>
+	<div class="audio-grid">
+		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1v9n-scL2E_S1_0UgTl1RWccdiXPDQGT_/view?usp=drive_link','_blank');return false;">1</button>
+	</div>
+<?php } ?>
+
+<?php if (isset($_POST['ecl'])) { ?>
+	<div class="audio-grid">
+		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/13TMy3m7JvjAcfqcXg10fqWjmlkavMYMD/view?usp=drive_link','_blank');return false;">1</button>
+	</div>
+<?php } ?>
+
+<?php if (isset($_POST['think_grow_rich'])) { ?>
+	<div class="audio-grid">
+		<button class="audio-btn" onclick="window.open('https://drive.google.com/file/d/1j7FO0gz2CnnMTqSPzxIa7P5-E2AqZ_OJ/view?usp=drive_link','_blank');return false;">1</button>
+	</div>
+<?php } ?>
+
 <style>
 	body {
 		background: #334155;
