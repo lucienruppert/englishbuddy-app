@@ -137,8 +137,13 @@ if ($userObject && $activeCategory) {
 	}
 
 	.main-select-btn:hover,
-	.main-select-btn:active,
 	.main-select-btn:focus {
+		background: #64748b !important;
+		color: white !important;
+		border: 1px solid #64748b !important;
+	}
+
+	.main-select-btn:active {
 		background: #334155 !important;
 		color: white !important;
 		border: 1px solid white !important;
