@@ -224,7 +224,7 @@ $trans["showmewhatitis"] = "MUTASD, MIT TUD<br>A LINGOCASA";
 $trans["iwilltryit"] = "KIPRÓBÁLOM";
 
 $trans["Spanyol"] = "SPANYOL";
-$trans["Angol kezdo"] = "ANGOL KEZDŐ";
+$trans["Angol kezdo"] = "KEZDŐ";
 $trans["Angol brit"] = "ANGOL BRIT";
 $trans["Angol halado"] = "ANGOL HALADÓ";
 $trans["Angol BP"] = "ANGOL BP";
