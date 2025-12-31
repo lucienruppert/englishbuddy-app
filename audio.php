@@ -178,9 +178,9 @@ if ($userObject && $activeCategory) {
 	}
 
 	.audio-btn:hover {
-		background: #334155;
-		color: white;
-		border: 1px solid white;
+		background: #cbd5e1;
+		color: #334155;
+		border: 1px solid #cbd5e1;
 	}
 
 	.audio-btn.completed {
