@@ -46,35 +46,13 @@ if ($_REQUEST['getMeaning']) {
     }
     print json_encode($result);
 } else if ($_REQUEST['getLevel']) {
-    // DEBUG: Log input parameters
-    error_log('DEBUG getLevel - selectedLevel: ' . var_export($_REQUEST['selectedLevel'], true));
-    error_log('DEBUG getLevel - userObject nyelv: ' . var_export($userObject['nyelv'], true));
-
     $list = getLevelList($userObject['nyelv']);
-
-    // DEBUG: Log list array structure
-    error_log('DEBUG getLevel - list array count: ' . count($list));
-    error_log('DEBUG getLevel - list keys: ' . var_export(array_keys($list), true));
-
     $selectedLevel = (int)$_REQUEST['selectedLevel'];
-    error_log('DEBUG getLevel - selectedLevel as int: ' . $selectedLevel);
-    error_log('DEBUG getLevel - key exists in list: ' . (isset($list[$selectedLevel]) ? 'YES' : 'NO'));
-
-    if (isset($list[$selectedLevel]) && isset($list[$selectedLevel][0])) {
-        error_log('DEBUG TITLE: ' . $list[$selectedLevel][0]);
-    } else {
-        error_log('DEBUG getLevel - ERROR: selectedLevel ' . $selectedLevel . ' not found or no title at index [0]');
-        if (isset($list[$selectedLevel])) {
-            error_log('DEBUG getLevel - list[$selectedLevel] structure: ' . var_export($list[$selectedLevel], true));
-        }
-    }
-
     $text = getLevelComment($_REQUEST['selectedLevel'], $userObject['nyelv'], true);
     if (!$text) {
         $text = "Nincs szöveg";
     }
 
-    // Properly escape the title for JSON encoding
     $title = isset($list[$selectedLevel][0]) ? $list[$selectedLevel][0] : 'Unknown';
 
     $record = array_utf8_encode_recursive(array('title' => $title, 'text' => $text, 'id' => $_REQUEST['selectedLevel'], 'sorsz' => $_REQUEST['sorsz']));
