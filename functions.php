@@ -1754,11 +1754,45 @@ function ajaxSearchPrint($lang)
             document.getElementById('ajax_other_langs').style.display = "none";
         }
 
+        function handleLevelClick(level, sorsz) {
+            console.log('handleLevelClick called for level:', level, 'sorsz:', sorsz);
+            try {
+                var ruleIdElement = document.getElementById('ruleId');
+                var ruleDiv = document.getElementById('ruleDiv');
+                console.log('ruleIdElement found:', !!ruleIdElement);
+                console.log('ruleDiv found:', !!ruleDiv);
+                if (!ruleIdElement) {
+                    console.error('ERROR: ruleId element not found!');
+                    return false;
+                }
+                if (!ruleDiv) {
+                    console.error('ERROR: ruleDiv element not found!');
+                    return false;
+                }
+                console.log('ruleId current value:', ruleIdElement.value);
+                if(ruleIdElement.value == level){
+                    console.log('Closing existing rule div for level', level);
+                    ruleDiv.style.display = 'none';
+                    ruleIdElement.value = '';
+                }
+                else{
+                    console.log('Opening rule div for level', level, 'sorsz', sorsz);
+                    getLevelInfo(level, sorsz);
+                }
+            } catch(e) {
+                console.error('Exception in handleLevelClick:', e);
+            }
+            return false;
+        }
+
         function getLevelInfo(level, sorsz) {
+            console.log('getLevelInfo called with level:', level, 'sorsz:', sorsz);
             if (!(level > 0)) {
+                console.log('Invalid level (not > 0)');
                 getLevelInfoCallback(null);
                 return;
             }
+            console.log('Making AJAX request to meaningSearch_server.php');
             getAjaxResponse('meaningSearch_server.php?getLevel=1&selectedLevel=' + level + '&sorsz=' + sorsz, getLevelInfoCallback);
         }
 
