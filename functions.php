@@ -1859,15 +1859,17 @@ function ajaxTimerPrint()
 ?>
     <script type="text/javascript">
         function setUserTimeoutAjax() {
-            return "getAjaxResponse('meaningSearch_server.php?setUserTime=1', setUserTimeoutCallback)";
+            getAjaxResponse('meaningSearch_server.php?setUserTime=1', setUserTimeoutCallback);
         }
 
         function setUserTimeoutCallback(responseObject) {
-            bodyOnload();
+            // Schedule the next timeout instead of calling bodyOnload recursively
+            setTimeout(setUserTimeoutAjax, 20000);
         }
 
         function bodyOnload() {
-            setTimeout(setUserTimeoutAjax(), 20000);
+            // Schedule the first timeout check after 20 seconds
+            setTimeout(setUserTimeoutAjax, 20000);
         }
 
         window.onload = bodyOnload;
