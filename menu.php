@@ -204,7 +204,7 @@ if ($_REQUEST['content'] == "wordLearning_quick" || $_REQUEST['content'] == "wor
       print "\n<li><a href=\"#\" ";
       if (!$sublevel[2]) {
         $styleText = "style=\"color:#fff\"";
-        print "onmousedown=\"console.log('mousedown on level {$sublevel[0]}');\" onclick=\"console.log('onclick fired for {$sublevel[0]}'); return handleLevelClick('{$sublevel[0]}', {$i});\" onmouseover=\"console.log('mouseover level {$sublevel[0]}');\" ontouchstart=\"console.log('touchstart level {$sublevel[0]}');\"";
+        print "data-level=\"{$sublevel[0]}\" data-sorsz=\"{$i}\" class=\"level-link\"";
       } else {
         $styleText = "style=\"color:#aaa\"";
       }
@@ -222,41 +222,54 @@ if ($_REQUEST['content'] == "wordLearning_quick" || $_REQUEST['content'] == "wor
 </div>
 
 <script>
-  // Diagnostic script to find what might be blocking clicks
+  // Event delegation approach - works even if inline handlers are blocked
   document.addEventListener('DOMContentLoaded', function() {
-    console.log('=== MENU DIAGNOSTIC ===');
-    var menu = document.querySelector('div[id^="menu"]') || document.querySelector('ul.superfish');
-    console.log('Menu element found:', !!menu);
-    if (menu) {
-      console.log('Menu display:', window.getComputedStyle(menu).display);
-      console.log('Menu pointer-events:', window.getComputedStyle(menu).pointerEvents);
-      console.log('Menu z-index:', window.getComputedStyle(menu).zIndex);
-      console.log('Menu visibility:', window.getComputedStyle(menu).visibility);
+    console.log('=== MENU INITIALIZATION ===');
 
-      // Check all parent elements for pointer-events: none
-      var parent = menu;
-      var level = 0;
-      while (parent && level < 10) {
-        var pe = window.getComputedStyle(parent).pointerEvents;
-        if (pe === 'none') {
-          console.warn('WARNING: Parent element has pointer-events: none at level', level);
-        }
-        parent = parent.parentElement;
-        level++;
-      }
-    }
+    // Find all level links and attach event listeners
+    var levelLinks = document.querySelectorAll('a.level-link');
+    console.log('Level links found:', levelLinks.length);
 
-    // Check for overlays
-    var overlays = document.querySelectorAll('[class*="modal"], [class*="overlay"], [id*="modal"], [id*="overlay"]');
-    console.log('Found potential overlays:', overlays.length);
-    overlays.forEach(function(el) {
-      console.log('Overlay:', el.id || el.className, 'display:', window.getComputedStyle(el).display, 'z-index:', window.getComputedStyle(el).zIndex);
+    levelLinks.forEach(function(link) {
+      var level = link.getAttribute('data-level');
+      var sorsz = link.getAttribute('data-sorsz');
+
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('Level link clicked:', level, 'sorsz:', sorsz);
+        handleLevelClick(level, sorsz);
+        return false;
+      });
+
+      link.addEventListener('mousedown', function() {
+        console.log('mousedown on level', level);
+      });
+
+      link.addEventListener('mouseover', function() {
+        console.log('mouseover level', level);
+      });
+
+      link.addEventListener('touchstart', function() {
+        console.log('touchstart level', level);
+      });
     });
 
-    // Add click tracking to the entire document
+    console.log('Event listeners attached to all level links');
+
+    // Global click tracking
     document.addEventListener('click', function(e) {
-      console.log('Click detected on:', e.target.tagName, 'content:', e.target.textContent ? e.target.textContent.substring(0, 30) : '');
+      if (e.target.tagName === 'A') {
+        console.log('Click detected on A tag, text:', e.target.textContent ? e.target.textContent.substring(0, 50) : '(no text)');
+      }
     }, true);
+
+    // Test function
+    window.testClickHandler = function() {
+      console.log('Manually calling handleLevelClick(999, 0)...');
+      handleLevelClick('999', 0);
+    };
+    console.log('Test available as: testClickHandler()');
   }, false);
 </script>
 
