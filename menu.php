@@ -204,7 +204,7 @@ if ($_REQUEST['content'] == "wordLearning_quick" || $_REQUEST['content'] == "wor
       print "\n<li><a href=\"#\" ";
       if (!$sublevel[2]) {
         $styleText = "style=\"color:#fff\"";
-        print "onclick=\"return handleLevelClick('{$sublevel[0]}', {$i});\" onmousedown=\"console.log('mousedown on level {$sublevel[0]}');\"";
+        print "onmousedown=\"console.log('mousedown on level {$sublevel[0]}');\" onclick=\"console.log('onclick fired for {$sublevel[0]}'); return handleLevelClick('{$sublevel[0]}', {$i});\" onmouseover=\"console.log('mouseover level {$sublevel[0]}');\" ontouchstart=\"console.log('touchstart level {$sublevel[0]}');\"";
       } else {
         $styleText = "style=\"color:#aaa\"";
       }
@@ -220,6 +220,45 @@ if ($_REQUEST['content'] == "wordLearning_quick" || $_REQUEST['content'] == "wor
   print "\n</ul>";
   ?>
 </div>
+
+<script>
+  // Diagnostic script to find what might be blocking clicks
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log('=== MENU DIAGNOSTIC ===');
+    var menu = document.querySelector('div[id^="menu"]') || document.querySelector('ul.superfish');
+    console.log('Menu element found:', !!menu);
+    if (menu) {
+      console.log('Menu display:', window.getComputedStyle(menu).display);
+      console.log('Menu pointer-events:', window.getComputedStyle(menu).pointerEvents);
+      console.log('Menu z-index:', window.getComputedStyle(menu).zIndex);
+      console.log('Menu visibility:', window.getComputedStyle(menu).visibility);
+
+      // Check all parent elements for pointer-events: none
+      var parent = menu;
+      var level = 0;
+      while (parent && level < 10) {
+        var pe = window.getComputedStyle(parent).pointerEvents;
+        if (pe === 'none') {
+          console.warn('WARNING: Parent element has pointer-events: none at level', level);
+        }
+        parent = parent.parentElement;
+        level++;
+      }
+    }
+
+    // Check for overlays
+    var overlays = document.querySelectorAll('[class*="modal"], [class*="overlay"], [id*="modal"], [id*="overlay"]');
+    console.log('Found potential overlays:', overlays.length);
+    overlays.forEach(function(el) {
+      console.log('Overlay:', el.id || el.className, 'display:', window.getComputedStyle(el).display, 'z-index:', window.getComputedStyle(el).zIndex);
+    });
+
+    // Add click tracking to the entire document
+    document.addEventListener('click', function(e) {
+      console.log('Click detected on:', e.target.tagName, 'content:', e.target.textContent ? e.target.textContent.substring(0, 30) : '');
+    }, true);
+  }, false);
+</script>
 
 <div id='ruleDiv' onclick="event.stopPropagation();this.style.display='none'" style="border: 2px solid white;">
   <input type='hidden' name='ruleId' id='ruleId' value=''>

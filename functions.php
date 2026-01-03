@@ -1770,16 +1770,15 @@ function ajaxSearchPrint($lang)
                     return false;
                 }
                 console.log('ruleId current value:', ruleIdElement.value);
-                if(ruleIdElement.value == level){
+                if (ruleIdElement.value == level) {
                     console.log('Closing existing rule div for level', level);
                     ruleDiv.style.display = 'none';
                     ruleIdElement.value = '';
-                }
-                else{
+                } else {
                     console.log('Opening rule div for level', level, 'sorsz', sorsz);
                     getLevelInfo(level, sorsz);
                 }
-            } catch(e) {
+            } catch (e) {
                 console.error('Exception in handleLevelClick:', e);
             }
             return false;
