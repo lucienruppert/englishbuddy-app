@@ -201,14 +201,13 @@ if ($_REQUEST['content'] == "wordLearning_quick" || $_REQUEST['content'] == "wor
     print "\n<a href=\"#\" onclick=\"event.stopPropagation();\">" . ($key * 10 + 1) . " - " . ($key * 10 + $bontasLimit) . "</a>";
     print "\n<ul>";
     foreach ($level as $sublevel) {
-      print "\n<li><a href=\"#\" ";
+      print "\n<li><a href=\"#\" data-level=\"{$sublevel[0]}\" data-sorsz=\"{$i}\" class=\"level-link\" ";
       if (!$sublevel[2]) {
         $styleText = "style=\"color:#fff\"";
-        print "data-level=\"{$sublevel[0]}\" data-sorsz=\"{$i}\" class=\"level-link\"";
       } else {
         $styleText = "style=\"color:#aaa\"";
       }
-      print " {$styleText}>" . ($i++) . ". {$sublevel[1]}</a></li>";
+      print "{$styleText}>" . ($i++) . ". {$sublevel[1]}</a></li>";
       /*
             if($sublevel[0] == $userObject['max_level']){
                 $isUserLevelGood = false;
@@ -224,8 +223,6 @@ if ($_REQUEST['content'] == "wordLearning_quick" || $_REQUEST['content'] == "wor
 <script>
   // Event delegation approach - intercept ALL A tag clicks
   document.addEventListener('DOMContentLoaded', function() {
-    console.log('=== MENU INITIALIZATION ===');
-
     // Global delegate handler for ALL A tag clicks
     document.addEventListener('click', function(e) {
       var target = e.target.closest('a');
@@ -234,26 +231,14 @@ if ($_REQUEST['content'] == "wordLearning_quick" || $_REQUEST['content'] == "wor
       var level = target.getAttribute('data-level');
       var sorsz = target.getAttribute('data-sorsz');
 
-      console.log('A tag clicked, level:', level, 'sorsz:', sorsz, 'text:', target.textContent.substring(0, 40));
-
       // If this is a level link (has data-level and data-sorsz)
       if (level && sorsz) {
         e.preventDefault();
         e.stopPropagation();
-        console.log('Calling handleLevelClick with level:', level, 'sorsz:', sorsz);
         handleLevelClick(level, sorsz);
         return false;
       }
     }, true);
-
-    console.log('Global A tag click handler installed');
-
-    // Test function
-    window.testClickHandler = function() {
-      console.log('Manually calling handleLevelClick(999, 0)...');
-      handleLevelClick('999', 0);
-    };
-    console.log('Test available as: testClickHandler()');
   }, false);
 </script>
 
