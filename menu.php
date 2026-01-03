@@ -206,12 +206,32 @@ if ($_REQUEST['content'] == "wordLearning_quick" || $_REQUEST['content'] == "wor
         $styleText = "style=\"color:#fff\"";
         print "onclick=\"
                         event.stopPropagation();
-                        if(document.getElementById('ruleId').value == '{$sublevel[0]}'){
-                            document.getElementById('ruleDiv').style.display = 'none';
-                            document.getElementById('ruleId').value = '';
-                        }
-                        else{
-                            getLevelInfo('{$sublevel[0]}', {$i});
+                        console.log('Click handler fired for level: {$sublevel[0]}');
+                        try {
+                            var ruleIdElement = document.getElementById('ruleId');
+                            var ruleDiv = document.getElementById('ruleDiv');
+                            console.log('ruleIdElement found:', !!ruleIdElement);
+                            console.log('ruleDiv found:', !!ruleDiv);
+                            if (!ruleIdElement) {
+                                console.error('ERROR: ruleId element not found!');
+                                return;
+                            }
+                            if (!ruleDiv) {
+                                console.error('ERROR: ruleDiv element not found!');
+                                return;
+                            }
+                            console.log('ruleId current value:', ruleIdElement.value);
+                            if(ruleIdElement.value == '{$sublevel[0]}'){
+                                console.log('Closing existing rule div for level {$sublevel[0]}');
+                                ruleDiv.style.display = 'none';
+                                ruleIdElement.value = '';
+                            }
+                            else{
+                                console.log('Opening rule div for level {$sublevel[0]}, sorsz {$i}');
+                                getLevelInfo('{$sublevel[0]}', {$i});
+                            }
+                        } catch(e) {
+                            console.error('Exception in click handler:', e);
                         }
                 \"";
       } else {
