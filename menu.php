@@ -222,47 +222,31 @@ if ($_REQUEST['content'] == "wordLearning_quick" || $_REQUEST['content'] == "wor
 </div>
 
 <script>
-  // Event delegation approach - works even if inline handlers are blocked
+  // Event delegation approach - intercept ALL A tag clicks
   document.addEventListener('DOMContentLoaded', function() {
     console.log('=== MENU INITIALIZATION ===');
 
-    // Find all level links and attach event listeners
-    var levelLinks = document.querySelectorAll('a.level-link');
-    console.log('Level links found:', levelLinks.length);
+    // Global delegate handler for ALL A tag clicks
+    document.addEventListener('click', function(e) {
+      var target = e.target.closest('a');
+      if (!target) return;
 
-    levelLinks.forEach(function(link) {
-      var level = link.getAttribute('data-level');
-      var sorsz = link.getAttribute('data-sorsz');
+      var level = target.getAttribute('data-level');
+      var sorsz = target.getAttribute('data-sorsz');
 
-      link.addEventListener('click', function(e) {
+      console.log('A tag clicked, level:', level, 'sorsz:', sorsz, 'text:', target.textContent.substring(0, 40));
+
+      // If this is a level link (has data-level and data-sorsz)
+      if (level && sorsz) {
         e.preventDefault();
         e.stopPropagation();
-        console.log('Level link clicked:', level, 'sorsz:', sorsz);
+        console.log('Calling handleLevelClick with level:', level, 'sorsz:', sorsz);
         handleLevelClick(level, sorsz);
         return false;
-      });
-
-      link.addEventListener('mousedown', function() {
-        console.log('mousedown on level', level);
-      });
-
-      link.addEventListener('mouseover', function() {
-        console.log('mouseover level', level);
-      });
-
-      link.addEventListener('touchstart', function() {
-        console.log('touchstart level', level);
-      });
-    });
-
-    console.log('Event listeners attached to all level links');
-
-    // Global click tracking
-    document.addEventListener('click', function(e) {
-      if (e.target.tagName === 'A') {
-        console.log('Click detected on A tag, text:', e.target.textContent ? e.target.textContent.substring(0, 50) : '(no text)');
       }
     }, true);
+
+    console.log('Global A tag click handler installed');
 
     // Test function
     window.testClickHandler = function() {
