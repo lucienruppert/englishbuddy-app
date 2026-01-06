@@ -1,4 +1,5 @@
 <div id='sentencePracticeDiv2' style='background-color:<?php print $dark ?>;position:absolute;top:90px;left:50%;margin-left:-200px;filter:alpha(opacity=100);opacity:1;z-index:99;display:none;border: 1px solid grey'>
+    <?php error_log("===== sentencePracticeDiv2.php START ====="); ?>
     <form method='post' action='main.php'>
         <input type='hidden' name='content' value='wordLearning_quick'>
         <input type='hidden' name='packageStart' value='1'>
