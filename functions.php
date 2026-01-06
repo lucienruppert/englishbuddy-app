@@ -1590,17 +1590,30 @@ function ajaxSearchPrint($lang)
         var responseObject = null;
 
         function getAjaxResponse(target, callbackFunction) {
+            console.log('getAjaxResponse called with target=' + target);
             if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
                 xmlhttp = new XMLHttpRequest();
             } else { // code for IE6, IE5
                 xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
             }
             xmlhttp.onreadystatechange = function() {
+                console.log('AJAX readyState=' + xmlhttp.readyState + ', status=' + xmlhttp.status);
                 if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                    responseObject = JSON.parse(xmlhttp.responseText);
-                    if (callbackFunction != null) {
-                        callbackFunction(responseObject);
+                    console.log('AJAX success, response text length=' + xmlhttp.responseText.length);
+                    console.log('AJAX response: ' + xmlhttp.responseText.substring(0, 200));
+                    try {
+                        responseObject = JSON.parse(xmlhttp.responseText);
+                        console.log('JSON parsed successfully');
+                        if (callbackFunction != null) {
+                            console.log('Calling callback function');
+                            callbackFunction(responseObject);
+                        }
+                    } catch (e) {
+                        console.error('Error parsing JSON:', e);
+                        console.error('Response text:', xmlhttp.responseText);
                     }
+                } else if (xmlhttp.readyState == 4) {
+                    console.error('AJAX error: status=' + xmlhttp.status);
                 }
             }
             xmlhttp.open("GET", target, true);
@@ -1755,19 +1768,23 @@ function ajaxSearchPrint($lang)
         }
 
         function handleLevelClick(level, sorsz) {
+            console.log('handleLevelClick called with level=' + level + ', sorsz=' + sorsz);
             try {
                 var ruleIdElement = document.getElementById('ruleId');
                 var ruleDiv = document.getElementById('ruleDiv');
                 if (!ruleIdElement) {
+                    console.log('ruleIdElement not found!');
                     return false;
                 }
                 if (!ruleDiv) {
+                    console.log('ruleDiv not found!');
                     return false;
                 }
                 if (ruleIdElement.value == level) {
                     ruleDiv.style.display = 'none';
                     ruleIdElement.value = '';
                 } else {
+                    console.log('Calling getLevelInfo with level=' + level);
                     getLevelInfo(level, sorsz);
                 }
             } catch (e) {
@@ -1777,11 +1794,15 @@ function ajaxSearchPrint($lang)
         }
 
         function getLevelInfo(level, sorsz) {
+            console.log('getLevelInfo called with level=' + level + ', sorsz=' + sorsz);
             if (!(level > 0)) {
+                console.log('Invalid level, aborting');
                 getLevelInfoCallback(null);
                 return;
             }
-            getAjaxResponse('meaningSearch_server.php?getLevel=1&selectedLevel=' + level + '&sorsz=' + sorsz, getLevelInfoCallback);
+            var url = 'meaningSearch_server.php?getLevel=1&selectedLevel=' + level + '&sorsz=' + sorsz;
+            console.log('Making AJAX request to: ' + url);
+            getAjaxResponse(url, getLevelInfoCallback);
         }
 
         function setUserWord(word) {
@@ -1826,11 +1847,15 @@ function ajaxSearchPrint($lang)
         }
 
         function getLevelInfoCallback(responseObject) {
+            console.log('getLevelInfoCallback called with responseObject:', responseObject);
             if (responseObject) {
+                console.log('Response received, updating UI');
                 document.getElementById("ruleTitleSpan").innerHTML = responseObject.sorsz + '. ' + decode_utf8(responseObject.title);
                 document.getElementById("ruleTextContainer").innerHTML = "<div style='position:absolute;top:0;left:0;width:100%;height:100%;color:white'></div>" + decode_utf8(responseObject.text);
                 document.getElementById("ruleId").value = responseObject.id;
                 document.getElementById("ruleDiv").style.display = 'block';
+            } else {
+                console.log('No response received or responseObject is null!');
             }
         }
 
