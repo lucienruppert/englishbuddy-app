@@ -1,5 +1,5 @@
 <div id='sentencePracticeDiv2' style='background-color:<?php print $dark ?>;position:absolute;top:90px;left:50%;margin-left:-200px;filter:alpha(opacity=100);opacity:1;z-index:99;display:none;border: 1px solid grey'>
-    <?php error_log("===== sentencePracticeDiv2.php START ====="); ?>
+
     <form method='post' action='main.php'>
         <input type='hidden' name='content' value='wordLearning_quick'>
         <input type='hidden' name='packageStart' value='1'>
@@ -21,10 +21,8 @@
                                     <table cellspacing='0' cellpadding='10' border='0'>
                                         <tr>
                                             <?php
-                                            error_log("sentencePracticeDiv2.php: list size = " . count((array)$list));
-                                            error_log("sentencePracticeDiv2.php: countList size = " . count((array)$countList));
                                             $i = 1;
-                                            $isLink = ($userObject['max_level'] > 0);
+                                            $isLink = true; // Allow all users to see grammar levels
                                             $cellBlocks = array();
                                             $cellText = '';
                                             $countAll = 0;
@@ -39,7 +37,6 @@
                                             $_SESSION["AccessableTananyagLevels"] = array();
                                             foreach ((array)$list as $key => $value) {
                                                 if (in_array($value[1], array(2)) && $key > 0) {
-                                                    error_log("sentencePracticeDiv2.php: Processing level $key = " . $value[0] . ", type = " . $value[1]);
                                                     $text2 = "";
                                                     $text3 = "";
                                                     $style2Add = "";

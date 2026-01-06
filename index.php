@@ -1,7 +1,5 @@
 <?php
-error_log("index.php loaded, userObject = " . json_encode($userObject ?? null));
 include_once('topPHP.php');
-error_log("topPHP.php included, list = " . json_encode(array_keys((array)$list ?? array())));
 // This file is the main entry point for the EnglishBuddy application. Now.
 ?>
 <HTML>
