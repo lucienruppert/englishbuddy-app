@@ -20,6 +20,8 @@
                                     <table cellspacing='0' cellpadding='10' border='0'>
                                         <tr>
                                             <?php
+                                            error_log("sentencePracticeDiv2.php: list size = " . count((array)$list));
+                                            error_log("sentencePracticeDiv2.php: countList size = " . count((array)$countList));
                                             $i = 1;
                                             $isLink = ($userObject['max_level'] > 0);
                                             $cellBlocks = array();
@@ -36,6 +38,7 @@
                                             $_SESSION["AccessableTananyagLevels"] = array();
                                             foreach ((array)$list as $key => $value) {
                                                 if (in_array($value[1], array(2)) && $key > 0) {
+                                                    error_log("sentencePracticeDiv2.php: Processing level $key = " . $value[0] . ", type = " . $value[1]);
                                                     $text2 = "";
                                                     $text3 = "";
                                                     $style2Add = "";
