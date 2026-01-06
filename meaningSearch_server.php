@@ -5,9 +5,9 @@ header('Content-Type: application/json; charset=utf-8');
 error_reporting(0);
 ini_set('display_errors', 0);
 
-$_SESSION['lastMessageUpdateTime'] = setUserTime($userObject, $_SESSION['lastMessageUpdateTime']);
 if (!$userObject)
     $userObject = $_SESSION['userObject'];
+$_SESSION['lastMessageUpdateTime'] = setUserTime($userObject, $_SESSION['lastMessageUpdateTime']);
 
 if ($_REQUEST['getMeaning']) {
     if (!$userObject) {
@@ -46,6 +46,13 @@ if ($_REQUEST['getMeaning']) {
     }
     print json_encode($result);
 } else if ($_REQUEST['getLevel']) {
+    if (!$userObject) {
+        $userObject["forras_nyelv"] = 0;
+        $userObject["nyelv"] = 1;
+        $GLOBALS["userObject"] = $userObject;
+    } else {
+        $GLOBALS["userObject"] = $userObject;
+    }
     $list = getLevelList($userObject['nyelv']);
     $selectedLevel = (int)$_REQUEST['selectedLevel'];
     $text = getLevelComment($_REQUEST['selectedLevel'], $userObject['nyelv'], true);
