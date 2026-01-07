@@ -31,13 +31,13 @@ $_SESSION['isShown'] = false;
 <HEAD>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="/images/lingocasa.ico">
-    <link href="/js/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" type="image/x-icon" href="<?php print BASE_PATH; ?>/images/lingocasa.ico">
+    <link href="<?php print BASE_PATH; ?>/js/jquery-ui.min.css" rel="stylesheet" type="text/css">
     <?php
     include_once('../styles/style.php');
     include_once('../styles/style-navigation.php');
     ?>
-    <script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="<?php print BASE_PATH; ?>/js/jquery-1.11.1.min.js"></script>
     <script>
         // Check if jQuery loaded correctly
         window.addEventListener('load', function() {
@@ -55,7 +55,7 @@ $_SESSION['isShown'] = false;
             }
         });
     </script>
-    <script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="<?php print BASE_PATH; ?>/js/jquery-ui.min.js"></script>
     <?php
     include_once('./script.php');
     ajaxTimerPrint();

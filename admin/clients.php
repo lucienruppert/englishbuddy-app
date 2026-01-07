@@ -114,9 +114,9 @@ $selectedUser['program_end_date'] = substr($selectedUser['program_end_date'], 0,
 
 ?>
 <script>
-    window.jQuery || document.write("<script src='/js/jquery-1.11.1.min.js' type='text/javascript'>\x3C/script>")
+    window.jQuery || document.write("<script src='<?php print BASE_PATH; ?>/js/jquery-1.11.1.min.js' type='text/javascript'>\x3C/script>")
 </script>
-<script src="/js/jquery.maskedinput.min.js" type="text/javascript"></script>
+<script src="<?php print BASE_PATH; ?>/js/jquery.maskedinput.min.js" type="text/javascript"></script>
 <script>
     jQuery(function($) {
         $("#txtNextLesson").mask("9999.99.99 99:99");

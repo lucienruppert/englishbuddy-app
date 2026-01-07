@@ -475,8 +475,8 @@ if ($_SESSION['source'] == 'alapSzo' || $_SESSION['source'] == 'szo') {
         border: 1px solid red;
     } */
 </style>
-<script type="text/javascript" src="/js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="/js/ajax-functions.js"></script>
+<script type="text/javascript" src="<?php print BASE_PATH; ?>/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="<?php print BASE_PATH; ?>/js/ajax-functions.js"></script>
 <script>
     $(document).ready(function() {
         $("#jelentesSpan, #origSpan").dblclick(function() {

@@ -22,11 +22,11 @@ $quickLearningStyle = 'position:absolute;top:0px;';
   include_once('../styles/style-menu.php');
   include_once('../styles/style-navigation.php');
   ?>
-  <link rel="stylesheet" type="text/css" href="/css/superfish.css" />
+  <link rel="stylesheet" type="text/css" href="<?php print BASE_PATH; ?>/css/superfish.css" />
 </head>
-<script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="/js/hoverIntent.js"></script>
-<script type="text/javascript" src="/js/superfish.js"></script>
+<script type="text/javascript" src="<?php print BASE_PATH; ?>/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="<?php print BASE_PATH; ?>/js/hoverIntent.js"></script>
+<script type="text/javascript" src="<?php print BASE_PATH; ?>/js/superfish.js"></script>
 <script type="text/javascript">
   $(document).ready(function() {
     if (typeof($('ul.sf-menu').superfish) == "function") {
