@@ -1,15 +1,18 @@
 <?php
 if ($_REQUEST['sourcePage'] == 'clients') {
     $clientStyleText = "style='display:block'";
-    $mainStyleText = "display:none;";
+    $mainStyleText = "display:block;";
+    $mainContentStyleText = "display:none;";
     $financeStyleText = "style='display:none'";
 } else if ($_REQUEST['sourcePage'] == 'finance') {
     $clientStyleText = "style='display:none;";
-    $mainStyleText = "display:none;";
+    $mainStyleText = "display:block;";
+    $mainContentStyleText = "display:none;";
     $financeStyleText = "style='display:block'";
 } else {
     $clientStyleText = "style='display:none'";
     $mainStyleText = "display:block;";
+    $mainContentStyleText = "display:block;";
     $financeStyleText = "style='display:none'";
 }
 

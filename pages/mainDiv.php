@@ -93,7 +93,7 @@
           </div>
         <?php } ?>
         <?php if ($userObject) { ?>
-          <a href='#' class="logout" onclick="event.stopPropagation();location.href='/app/auth/logout.php'"><?php print translate('kijelentkezes'); ?>
+          <a href='#' class="logout" onclick="event.stopPropagation();location.href='<?php print BASE_PATH; ?>/auth/logout.php'"><?php print translate('kijelentkezes'); ?>
           </a>
         <?php } ?>
       </span>
@@ -101,7 +101,7 @@
   <?php } ?>
 
   <?php if ($userObject) { ?>
-    <span class="classroom submenu">
+    <span class="classroom submenu" style='<?php print $mainContentStyleText; ?>'>
       <a id="aTanuloszoba" href='#' class="button classroom-button" title=<?php print "'" . translate("") . "'" ?> onclick="<?php print $onclick3; ?>"><?php print translate("tanuloszoba"); ?></a>
     </span>
   <?php } ?>

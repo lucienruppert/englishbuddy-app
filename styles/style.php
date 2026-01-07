@@ -333,6 +333,19 @@
     color: rgba(255, 255, 255, 0.6);
   }
 
+  /* Override Chrome autofill styling */
+  .login-field:-webkit-autofill,
+  .login-field:-webkit-autofill:hover,
+  .login-field:-webkit-autofill:focus,
+  .login-field:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #334155 inset !important;
+    box-shadow: 0 0 0 30px #334155 inset !important;
+  }
+
+  .login-field:-webkit-autofill {
+    -webkit-text-fill-color: white !important;
+  }
+
   .login-input {
     position: absolute;
     top: 100%;
