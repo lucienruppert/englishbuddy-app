@@ -809,7 +809,7 @@ if ($showNumber != $KESZ_UGYES_VAGY) {
         }
         $forSortArray = array_sort($forSortArray, 'ido', SORT_DESC);
         $newSelectedLevel = (int)$forSortArray[0]['szam'];
-        print "\n<br><div align='center' valign='center' style='background-color:white;padding:0;cursor:pointer;width:150px;height:70px;border-radius:20px;display:table-cell;vertical-align:middle;margin:0 auto;' onclick=\"event.stopPropagation(); location.href='/pages/main.php?content=wordLearning_quick&packageStart=1&selectedLevel=listFract_{$newSelectedLevel}&source=alapSzo&clickSource={$clickSource}';\"><span style=\"" . $nemtudtamFontSize . "\">" . translate('masik_csomag') . "</span></div>";
+        print "\n<br><div align='center' valign='center' style='background-color:white;padding:0;cursor:pointer;width:150px;height:70px;border-radius:20px;display:table-cell;vertical-align:middle;margin:0 auto;' onclick=\"event.stopPropagation(); location.href='" . BASE_PATH . "/pages/main.php?content=wordLearning_quick&packageStart=1&selectedLevel=listFract_{$newSelectedLevel}&source=alapSzo&clickSource={$clickSource}';\"><span style=\"" . $nemtudtamFontSize . "\">." . translate('masik_csomag') . ".</span></div>";
     } else {
         if (isset($_SESSION['selectedLevel2']) && startsWith($_SESSION['selectedLevel2'], 'listFract_') && $_SESSION["source"] == "szo" && $clickSource == "wordPractice") {
             $goodLevelArray = array();
@@ -872,7 +872,7 @@ if ($showNumber != $KESZ_UGYES_VAGY) {
             $newSelectedLevel = 1; // fallback default value
         }
         if ($clickSource != "intelligent")
-            print "\n<br><div align='center' valign='center' style='background-color:white;padding:0;cursor:pointer;width:150px;height:70px;border-radius:20px;display:table-cell;vertical-align:middle;margin:0 auto;' onclick=\"event.stopPropagation(); location.href='/pages/main.php?content=wordLearning_quick&packageStart=1&selectedLevel={$newSelectedLevel}&source={$_SESSION['source']}&clickSource={$clickSource}&isOtherPackage=1';\"><span style=" . $nemtudtamFontSize . ">" . translate('masik_csomag') . "</span></div><br><br>";
+            print "\n<br><div align='center' valign='center' style='background-color:white;padding:0;cursor:pointer;width:150px;height:70px;border-radius:20px;display:table-cell;vertical-align:middle;margin:0 auto;' onclick=\"event.stopPropagation(); location.href='" . BASE_PATH . "/pages/main.php?content=wordLearning_quick&packageStart=1&selectedLevel={$newSelectedLevel}&source={$_SESSION['source']}&clickSource={$clickSource}&isOtherPackage=1';\"><span style=" . $nemtudtamFontSize . ">" . translate('masik_csomag') . "</span></div><br><br>";
     }
     print "</td><td></td>";
 }

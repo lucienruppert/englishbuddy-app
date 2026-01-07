@@ -301,7 +301,7 @@ $_SESSION['isShown'] = false;
     </div>
 
     <!-- Ez itt kell, hogy a tanulószoba működjön! -->
-    <form name='submitForm' id='submitForm' action='/pages/main.php' method='post'>
+    <form name='submitForm' id='submitForm' action='<?php print BASE_PATH; ?>/pages/main.php' method='post'>
         <input type='hidden' name='firstVisit' value='1'>
         <input type='hidden' name='content' value=''>
     </form>

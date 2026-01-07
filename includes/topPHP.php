@@ -1,4 +1,13 @@
 <?php
+// Define the application base path (works for both localhost and /app/ on live server)
+if (!defined('BASE_PATH')) {
+    if (strpos($_SERVER['REQUEST_URI'], '/app/') !== false) {
+        define('BASE_PATH', '/app');
+    } else {
+        define('BASE_PATH', '');
+    }
+}
+
 // Set proper character encoding...
 header('Content-Type: text/html; charset=UTF-8');
 ini_set('default_charset', 'UTF-8');

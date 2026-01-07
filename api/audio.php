@@ -4,7 +4,7 @@ include_once(__DIR__ . '/audioProgress.php');
 if (isset($_GET['audioszoba'])) {
 	$lang = $_GET['audioszoba'];
 }
-$link = "/pages/index.php?audioszoba=" . $lang;
+$link = BASE_PATH . "/pages/index.php?audioszoba=" . $lang;
 
 // Determine active category
 $activeCategory = '';
@@ -26,7 +26,7 @@ if ($userObject && $activeCategory) {
 	$completedAudio = getAudioProgress($userObject['id'], $activeCategory);
 }
 ?>
-<div style='width:100%;text-align:center;margin-top:20px;margin-bottom:20px;'><a href='/pages/index.php' style='font-size:14px;color:white;'><?php print translate("vissza_a_fooldalra") ?></a></div>
+<div style='width:100%;text-align:center;margin-top:20px;margin-bottom:20px;'><a href='<?php print BASE_PATH; ?>/pages/index.php' style='font-size:14px;color:white;'><?php print translate("vissza_a_fooldalra") ?></a></div>
 
 <script>
 	// Set active category for JavaScript use

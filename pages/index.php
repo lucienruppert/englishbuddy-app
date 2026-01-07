@@ -61,7 +61,7 @@ include_once(__DIR__ . '/../includes/topPHP.php');
     ?>
 
     <!-- Ez itt kell, hogy a tanul�szoba m�k�dj�n! -->
-    <form name='submitForm' id='submitForm' action='/pages/main.php' method='post'>
+    <form name='submitForm' id='submitForm' action='<?php print BASE_PATH; ?>/pages/main.php' method='post'>
         <input type='hidden' name='firstVisit' value='1'>
         <input type='hidden' name='content' value=''>
     </form>

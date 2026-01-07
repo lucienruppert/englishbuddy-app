@@ -1,4 +1,5 @@
 <script>
+  var basePath = "<?php print BASE_PATH; ?>";
   $(document).ready(function() {
     $("#ajax").tooltip({
       position: {
@@ -172,9 +173,9 @@
   function lowerSelectOnChange(val, src, clickSource) {
     <?php if ($userObject) { ?>
       if (level3Array.indexOf(val.toString()) > -1) {
-        location.href = '/pages/main.php?content=showRule&selectedLevel=' + val + '&source=' + src + '&clickSource=' + clickSource;
+        location.href = basePath + '/pages/main.php?content=showRule&selectedLevel=' + val + '&source=' + src + '&clickSource=' + clickSource;
       } else {
-        location.href = '/pages/main.php?content=wordLearning_quick&packageStart=1&selectedLevel=' + val + '&source=' + src + '&clickSource=' + clickSource;
+        location.href = basePath + '/pages/main.php?content=wordLearning_quick&packageStart=1&selectedLevel=' + val + '&source=' + src + '&clickSource=' + clickSource;
       }
     <?php } else { ?>
       alert(notLoggedInMessage);
@@ -208,7 +209,7 @@
 
   function intelligensGyakorlo() {
     <?php if ($userObject && $userObject['status'] != 1) { ?>
-      location.href = '/pages/main.php?content=wordLearning_quick&packageStart=1&source=mondat&clickSource=intelligent';
+      location.href = basePath + '/pages/main.php?content=wordLearning_quick&packageStart=1&source=mondat&clickSource=intelligent';
     <?php } else if ($userObject['status'] == 1) { ?>
       alert(premiumUserOnlyMessage);
     <?php } else { ?>
@@ -218,7 +219,7 @@
 
   function osszgyakorlo() {
     <?php if ($userObject && $userObject['status'] != 1) { ?>
-      location.href = '/pages/main.php?content=wordLearning_quick&packageStart=1&source=mondat&clickSource=osszgyakorlo';
+      location.href = basePath + '/pages/main.php?content=wordLearning_quick&packageStart=1&source=mondat&clickSource=osszgyakorlo';
     <?php } else if ($userObject['status'] == 1) { ?>
       alert(premiumUserOnlyMessage);
     <?php } else { ?>
@@ -254,7 +255,7 @@
 
   function audioSzoba() {
     <?php if ($userObject && $userObject['status'] != 1) { ?>
-      location.href = '/pages/index.php?audioszoba'
+      location.href = basePath + '/pages/index.php?audioszoba'
     <?php } else if ($userObject['status'] == 1) { ?>
       alert(premiumUserOnlyMessage);
     <?php } else { ?>
@@ -274,7 +275,7 @@
 
   function szotarFeltoltes() {
     <?php if ($userObject && $userObject['status'] != 1) { ?>
-      location.href = '/pages/main.php?content=wordLearning_kikerdezo&source=welcome'
+      location.href = basePath + '/pages/main.php?content=wordLearning_kikerdezo&source=welcome'
     <?php } else if ($userObject['status'] == 1) { ?>
       alert(premiumUserOnlyMessage);
     <?php } else { ?>
@@ -317,6 +318,6 @@
   }
 
   function goToRegistration() {
-    location.href = '/pages/subscribe.php?nyelv=' + nyelv;
+    location.href = basePath + '/pages/subscribe.php?nyelv=' + nyelv;
   }
 </script>

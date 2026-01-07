@@ -88,12 +88,12 @@
               <a href='#' class="medium-color" onclick=<?php print $onclick2; ?>><?php print translate("kitolto"); ?></a>
               <a href='#' class="medium-color" onclick="tudastar();"><?php print translate("tudastar_title"); ?></a>
               <a href='#' class="medium-color" onclick="szotarFeltoltes();"><?php print translate("feltoltes"); ?></a>
-              <a href='#' class="medium-color" onclick="location.href='main.php?content=wordCategorize&source=welcome'"><?php print translate("kategorizalas"); ?></a>
+              <a href='#' class="medium-color" onclick="location.href='<?php print BASE_PATH; ?>/pages/main.php?content=wordCategorize&source=welcome'"><?php print translate("kategorizalas"); ?></a>
             </div>
           </div>
         <?php } ?>
         <?php if ($userObject) { ?>
-          <a href='#' class="logout" onclick="event.stopPropagation();location.href='auth/logout.php'"><?php print translate('kijelentkezes'); ?>
+          <a href='#' class="logout" onclick="event.stopPropagation();location.href='/app/auth/logout.php'"><?php print translate('kijelentkezes'); ?>
           </a>
         <?php } ?>
       </span>
