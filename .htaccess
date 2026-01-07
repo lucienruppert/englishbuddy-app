@@ -5,6 +5,18 @@ AddHandler application/x-httpd-php .php
 AddDefaultCharset UTF-8
 AddCharset UTF-8 .html .php .css .js
 
+# Enable mod_rewrite
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # If the request is for a real file or directory, serve it directly
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    
+    # Otherwise, route to index.php
+    RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>
+
 # Set content types with proper charset
 <FilesMatch "\.(html|php)$">
     Header set Content-Type "text/html; charset=UTF-8"
