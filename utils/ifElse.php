@@ -15,13 +15,13 @@ if ($_REQUEST['sourcePage'] == 'clients') {
 
 if (in_array($userObject['status'], array(5, 6))) {
     print "\n<div id='clientDiv' {$clientStyleText}>\n";
-    $formAction = "index.php";
+    $formAction = BASE_PATH . "/pages/index.php";
     include('../admin/clients.php');
     print "\n</div>";
 }
 if (in_array($userObject['status'], array(5, 6))) {
     print "\n<div id='financeDiv' {$financeStyleText}>\n";
-    $formAction = "index.php";
+    $formAction = BASE_PATH . "/pages/index.php";
     include('../admin/finance.php');
     print "\n</div>";
 }
