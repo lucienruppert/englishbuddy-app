@@ -1818,7 +1818,7 @@ function ajaxSearchPrint($lang)
                 getLevelInfoCallback(null);
                 return;
             }
-            var url = '/dictionary/meaningSearch_server.php?getLevel=1&selectedLevel=' + level + '&sorsz=' + sorsz;
+            var url = basePath + '/dictionary/meaningSearch_server.php?getLevel=1&selectedLevel=' + level + '&sorsz=' + sorsz;
             console.log('Making AJAX request to: ' + url);
             getAjaxResponse(url, getLevelInfoCallback);
         }
@@ -1828,7 +1828,7 @@ function ajaxSearchPrint($lang)
                 setUserWordCallback(null);
                 return;
             }
-            var url = '/dictionary/meaningSearch_server.php?setUserWord=1&word=' + encodeURIComponent(word) + '&lang=' + <?php print $lang; ?>;
+            var url = basePath + '/dictionary/meaningSearch_server.php?setUserWord=1&word=' + encodeURIComponent(word) + '&lang=' + <?php print $lang; ?>;
             if (typeof(dictionaryUser) !== 'undefined' && dictionaryUser > 0) {
                 url += "&dictionaryUser=" + dictionaryUser;
             }
@@ -1846,7 +1846,7 @@ function ajaxSearchPrint($lang)
             if (isNaN(id)) {
                 return;
             }
-            var url = '/dictionary/meaningSearch_server.php?setUserWord=1&id=' + id;
+            var url = basePath + '/dictionary/meaningSearch_server.php?setUserWord=1&id=' + id;
             if (typeof dictionaryUser !== 'undefined' && dictionaryUser > 0) {
                 url += "&dictionaryUser=" + dictionaryUser;
             }
@@ -1888,7 +1888,7 @@ function ajaxSearchPrint($lang)
             $('#linkSave').hide();
             $('#ajaxSearchOutput').hide();
             lastWordLookedUp = val;
-            return "getAjaxResponse(\"/dictionary/meaningSearch_server.php?getMeaning=1&txt=" + encodeURIComponent(val) + "&lang=" + <?php print $lang; ?> + "\", getMeaning)";
+            return "getAjaxResponse(\"" + basePath + "/dictionary/meaningSearch_server.php?getMeaning=1&txt=" + encodeURIComponent(val) + "&lang=" + <?php print $lang; ?> + "\", getMeaning)";
         }
         var lastWordLookedUp = null;
     </script>
@@ -1925,7 +1925,7 @@ function ajaxTimerPrint()
 ?>
     <script type="text/javascript">
         function setUserTimeoutAjax() {
-            getAjaxResponse('/dictionary/meaningSearch_server.php?setUserTime=1', setUserTimeoutCallback);
+            getAjaxResponse(basePath + '/dictionary/meaningSearch_server.php?setUserTime=1', setUserTimeoutCallback);
         }
 
         function setUserTimeoutCallback(responseObject) {

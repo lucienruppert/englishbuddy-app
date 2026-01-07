@@ -707,7 +707,7 @@ print "<script type='text/javascript'>var jelentes = \"" . (isset($word2) ? html
 <script type="text/javascript">
     function mumus2_Click() {
         $.ajax({
-            url: "mumus_store.php",
+            url: basePath + "/modules/mumus_store.php",
             type: "POST",
             data: {
                 wordId: <?php print(isset($words[0]['id']) ? "\"{$words[0]['id']}\"" : "null"); ?>
@@ -715,7 +715,7 @@ print "<script type='text/javascript'>var jelentes = \"" . (isset($word2) ? html
             dataType: "json",
             success: function(response) {
                 if (response && response.success) {
-                    location.href = 'main.php?content=wordLearning_quick&inbetween=1';
+                    location.href = basePath + '/pages/main.php?content=wordLearning_quick&inbetween=1';
                 } else {
                     console.error('Server response:', response);
                     alert(response && response.error ? response.error : 'An error occurred');
@@ -732,7 +732,7 @@ print "<script type='text/javascript'>var jelentes = \"" . (isset($word2) ? html
     // DEBUG MARKER 2
     function remove_Click() {
         $.ajax({
-            url: "remove_word.php",
+            url: basePath + "/modules/remove_word.php",
             type: "POST",
             data: {
                 wordId: <?php print(isset($words[0]['id']) ? "\"{$words[0]['id']}\"" : "null"); ?>
@@ -740,7 +740,7 @@ print "<script type='text/javascript'>var jelentes = \"" . (isset($word2) ? html
             dataType: "json",
             success: function(response) {
                 if (response && response.success) {
-                    location.href = 'main.php?content=wordLearning_quick&inbetween=1';
+                    location.href = basePath + '/pages/main.php?content=wordLearning_quick&inbetween=1';
                 } else {
                     console.error('Server response:', response);
                     alert(response && response.error ? response.error : 'An error occurred');
