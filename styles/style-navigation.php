@@ -51,7 +51,7 @@
 
   .welcome {
     color: #334155;
-    font-size: 14px;
+    font-size: 18px;
     text-align: left;
     font-weight: bold;
   }
@@ -74,6 +74,7 @@
     margin-left: -428px;
     padding-left: 30px;
     gap: 30px;
+    font-size: 18px;
   }
 
   @media (max-width: 768px) {
@@ -104,10 +105,10 @@
   .classroom-button {
     color: #334155;
     background: white;
-    padding: 7px 10px;
+    padding: 14px 20px;
     letter-spacing: 1px;
     border-radius: 3px;
-    font-size: 14px;
+    font-size: 28px;
     border: 2px solid #334155;
   }
 
