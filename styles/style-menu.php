@@ -152,7 +152,7 @@
     position: absolute;
     top: 57px;
     left: 50%;
-    margin-left: -110px;
+    margin-left: -200px;
     padding-top: 7px;
     z-index: 60;
   }
