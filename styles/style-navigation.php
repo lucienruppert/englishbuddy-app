@@ -107,7 +107,7 @@
     background: white;
     padding: 11.2px 16px;
     letter-spacing: 1px;
-    border-radius: 3px;
+    border-radius: 10px;
     font-size: 22.4px;
     border: 2px solid #334155;
   }
@@ -132,7 +132,7 @@
   }
 
   .classroom {
-    margin: 30px 0 100px 0;
+    margin: 300px 0 100px 0;
     display: flex;
     align-items: center;
     justify-content: center;

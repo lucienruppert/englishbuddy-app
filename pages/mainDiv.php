@@ -101,7 +101,7 @@
   <?php } ?>
 
   <?php if ($userObject) { ?>
-    <span class="classroom submenu" style='<?php print $mainContentStyleText; ?>'>
+    <span class="classroom submenu inline-block" style='<?php print $mainContentStyleText; ?>'>
       <a id="aTanuloszoba" href='#' class="button classroom-button" title=<?php print "'" . translate("") . "'" ?> onclick="<?php print $onclick3; ?>"><?php print translate("tanuloszoba"); ?></a>
     </span>
   <?php } ?>
