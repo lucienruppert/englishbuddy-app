@@ -100,6 +100,30 @@ function getAudioStats($user_id)
 }
 
 /**
+ * Handle AJAX request to get audio progress
+ */
+if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['action']) && $_GET['action'] == 'getProgress') {
+  header('Content-Type: application/json');
+
+  if (!isset($userObject) || !$userObject) {
+    echo json_encode(['success' => false, 'message' => 'User not logged in', 'completed' => []]);
+    exit;
+  }
+
+  $user_id = $userObject['id'];
+  $category = isset($_GET['category']) ? $_GET['category'] : '';
+
+  if (!$category) {
+    echo json_encode(['success' => false, 'message' => 'Category not specified', 'completed' => []]);
+    exit;
+  }
+
+  $completed = getAudioProgress($user_id, $category);
+  echo json_encode(['success' => true, 'completed' => $completed]);
+  exit;
+}
+
+/**
  * Handle AJAX request to mark audio
  */
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['action']) && $_POST['action'] == 'toggleAudio') {

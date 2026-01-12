@@ -220,6 +220,9 @@ if ($userObject && $activeCategory) {
 			});
 		}
 
+		// Fetch audio completion statuses for all categories
+		fetchAudioCompletionStatuses();
+
 		// Add right-click handler to all audio buttons
 		const buttons = document.querySelectorAll('.audio-btn');
 		buttons.forEach(button => {
@@ -251,6 +254,38 @@ if ($userObject && $activeCategory) {
 			});
 		});
 	});
+
+	function fetchAudioCompletionStatuses() {
+		// Get all unique categories from visible buttons
+		const buttons = document.querySelectorAll('.audio-btn');
+		const categories = new Set();
+
+		buttons.forEach(button => {
+			const category = button.getAttribute('data-category');
+			if (category) {
+				categories.add(category);
+			}
+		});
+
+		// Fetch completion status for each category
+		categories.forEach(category => {
+			fetch('/api/audioProgress.php?action=getProgress&category=' + encodeURIComponent(category))
+				.then(response => response.json())
+				.then(data => {
+					if (data.success && data.completed) {
+						// Mark completed buttons
+						data.completed.forEach(audioNumber => {
+							const button = document.querySelector(`[data-category="${category}"][data-number="${audioNumber}"]`);
+							if (button) {
+								button.setAttribute('data-completed', 'true');
+								button.classList.add('completed');
+							}
+						});
+					}
+				})
+				.catch(error => console.error('Error fetching audio progress:', error));
+		});
+	}
 
 	function toggleAudioCompletion(category, audioNumber, completed) {
 		const data = {
