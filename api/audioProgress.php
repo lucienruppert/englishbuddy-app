@@ -1,5 +1,11 @@
 <?php
 
+// Suppress errors for API response
+error_reporting(0);
+
+// Start output buffering to clean any stray output
+ob_start();
+
 // Set JSON header immediately for API responses
 header('Content-Type: application/json');
 
@@ -12,6 +18,9 @@ if (session_status() === PHP_SESSION_NONE) {
 
 // Include necessary files for database connection
 include_once(__DIR__ . '/../includes/apiInit.php');
+
+// Clear any buffered output that might have been sent
+ob_clean();
 
 // Get user object from session
 $userObject = isset($_SESSION['userObject']) ? $_SESSION['userObject'] : null;
@@ -103,6 +112,8 @@ function getAudioStats($user_id)
  * Handle AJAX request to get audio progress
  */
 if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['action']) && $_GET['action'] == 'getProgress') {
+  // Clear any output that might have been buffered
+  ob_clean();
   header('Content-Type: application/json');
 
   if (!isset($userObject) || !$userObject) {
@@ -127,6 +138,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['action']) && $_GET['acti
  * Handle AJAX request to mark audio
  */
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['action']) && $_POST['action'] == 'toggleAudio') {
+  // Clear any output that might have been buffered
+  ob_clean();
   header('Content-Type: application/json');
 
   if (!isset($userObject) || !$userObject) {

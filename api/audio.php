@@ -269,21 +269,7 @@ if ($userObject && $activeCategory) {
 
 		// Fetch completion status for each category
 		categories.forEach(category => {
-			fetch('/api/audioProgress.php?action=getProgress&category=' + encodeURIComponent(category))
-				.then(response => response.json())
-				.then(data => {
-					if (data.success && data.completed) {
-						// Mark completed buttons
-						data.completed.forEach(audioNumber => {
-							const button = document.querySelector(`[data-category="${category}"][data-number="${audioNumber}"]`);
-							if (button) {
-								button.setAttribute('data-completed', 'true');
-								button.classList.add('completed');
-							}
-						});
-					}
-				})
-				.catch(error => console.error('Error fetching audio progress:', error));
+			fetch(basePath + '/api/audioProgress.php?action=getProgress&category=' + encodeURIComponent(category))
 		});
 	}
 
@@ -295,7 +281,7 @@ if ($userObject && $activeCategory) {
 			completed: completed ? 1 : 0
 		};
 
-		fetch('/api/audioProgress.php', {
+		fetch(basePath + '/api/audioProgress.php', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/x-www-form-urlencoded',
